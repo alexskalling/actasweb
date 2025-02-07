@@ -81,24 +81,27 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 }
 
 export async function autenticarGoogleDrive() {
-  writeLog(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
+  console.log(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
 
-  // Verifica que las variables de entorno estén definidas
-  const privateKey = process.env.GOOGLE_CLOUD_PRIVATE_KEY;
-  const clientEmail = process.env.GOOGLE_CLOUD_CLIENT_EMAIL;
+  const credentials = {
+    type: "service_account",
+    project_id: "actas-442811",
+    private_key_id: "6a6aef9eee79ba60b248691d33f2fbd324e36256",
+    private_key:
+      "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+8A1/vjlvYvS3\nfAPGdh+Wpd/YGAPsInFwf2V0WEROUTz2SVNs0sZ94RE+eamW/D1puGl7ZeMFz4tg\njF1HdwZvlwcsb5WWZqLp2pS17gRRrU8MSCO6ZvYec078FSUX1+ubKH/eC2Bu6NgL\nhnfpVoVEGyQJeqlHQdP0iNJL9uLhkM30dlM293TJFuhfDZU5T7mqLqgNbHGD9amF\nwV4G9Y2yG2NAz7Aldt2p+TAc3+3ARYp6fAVMmhJi8jjY7rslX3rXbHP3UCgyUc2M\njJ/BDCnKkv7HxA/DOriaQxDllUsKkSRuqnCuGPbBxUfmQyS0OO/PoPGiR7si3rVX\nYLUeiohtAgMBAAECggEAXOS0ZJRbJB5sOcKLoagBeU0NKPiSG/Wr5BQO+3ogDUxH\n0PjeriCjskVoGtGdGRhyFnfCVec9equ9PwU7MpQtXOgI9Oz6xXf8xbJyzEpW7pfX\nT/3e6AbEsg7efBUbfUyu00dyYkh9q6f7yCutNihCYN6lezkil0jnAl74lT2xpxRw\ntpQ3npA3ekglyYRGr/wGvw1C5UuSvuisEZF7fuJZfjHTk3Vanj+rRLTUY107pwvD\nWyv84MbMoPBOvF5laQJeWVe4m1dYnLq5b6WoCFeQSHac6aVs6UORw/c1z1HpvDYf\nbHta1KY8RbDEKtnxfzwV+tHmap9438sQkSojDlEaDwKBgQDxJgpOmc1NJ3geq9e4\nqkJXfSwdtcTt8LMD+UnZeR7dgtLzUgTyzT1GofLJX+Ct0dUk7ht9IEbnauIJWYO2\nXfenX+YujR7xhlGoFCg0dq7HXFUpMSP8m714Pg8z7hLcuO0hVq8IdB03Moaoy9/J\nUyBiK7yzbvmQD/IzxR16DfCMqwKBgQDKsmKjeiGr/0HaFft+RbvjM23VAu7MhtUG\n9l5i9j2d4NZW2RQA4jJX+xPWSY83nHOpRv7zid58yljDGNjFx8GxCG1MI3o1m4CY\nv1Thr5LEpybbPBRsHBzDTfSSj+G13DGjYBeUDHNVIMP635U+AgIO8ZOxwNhY1kPx\nXnhVJsCPRwKBgBEx1jBOlS34L394X1Rih4J3gWrI6DbTH+CbqOFh2oqO5n3FDmdF\nrSXZLFehh4K9YIZWmA0u/P9JRr7F7DdXse30T5RoKZmtKyth7I/5GnNKqSPbxiYf\n8L2fJzRbuGqWoQnshWSD6wVhi+qDRvyy+a8mUTk2I4NbL7jzSCvIzKsrAoGBAJH2\nHPOtqfuqR2hdNgn6+06jpS6j+wQK//IQjW1j9oDu/Enz7eSo/im+4s0HkXsxTVST\njFohaLaiG4L6LHdX3lG2SMZwMbvSq6rS9LPD88Nqvp9WxzoGkGvPghPcSmPkGVaV\nhsUUpiSiAJ5yTI0ncwYBziJNRT3LpYd1SN/AlR9XAoGAeCtjUo5CnB+C5t3m59Wd\nt0WgJcS6CmtReXLSaK2yjtRPckKjzLjGRZC+Lx6r8q1e2SuOtzzWGf5D/7w4owfn\nRXYciTVtNs8mD3BRJL74XYoA10POa6mwHkiFhzJU4bqRAailXaFG1WovlmAH8xOY\ntaVh6yEdv3F7NaxlK0e1R2U=\n-----END PRIVATE KEY-----\n",
+    client_email: "actasnextjs@actas-442811.iam.gserviceaccount.com",
+    client_id: "102261341883094311574",
+    auth_uri: "https://accounts.google.com/o/oauth2/auth",
+    token_uri: "https://oauth2.googleapis.com/token",
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    client_x509_cert_url:
+      "https://www.googleapis.com/robot/v1/metadata/x509/actasnextjs%40actas-442811.iam.gserviceaccount.com",
+    universe_domain: "googleapis.com",
+  };
 
-  if (!privateKey || !clientEmail) {
-    throw new Error(
-      "Faltan las variables de entorno para la autenticación de Google Drive"
-    );
-  }
-
-  // Configuración de la autenticación
+  // Configuración de la autenticación con GoogleAuth
   const auth = new google.auth.GoogleAuth({
-    credentials: {
-      private_key: privateKey.replace(/\\n/g, "\n"), // Asegúrate de restaurar los saltos de línea correctamente
-      client_email: clientEmail,
-    },
+    credentials, // Se pasa directamente el objeto credentials
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
