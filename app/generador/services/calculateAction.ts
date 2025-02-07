@@ -12,6 +12,7 @@ export async function CalculateAction(formData: unknown) {
     //@ts-expect-error revisar despues
     const archivo = formData.get("file");
     const nombreNormalizado = await normalizarNombreArchivo(archivo.name);
+    console.log("nombre ok");
     const upload = await uploadFileAction(formData, nombreNormalizado);
     if (upload?.status === "success") {
       console.log("Nombre normalizado y guardado correctamente.");

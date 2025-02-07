@@ -1,0 +1,12 @@
+[2025-02-07T13:32:21.503Z] Verificando existencia del archivo: consejo_arandanos_financiero_noviembre_1__catalina_rodriguez.m4a.
+[2025-02-07T13:32:21.503Z] Verificando o creando carpeta.
+[2025-02-07T13:32:22.034Z] Carpeta existente con ID: 1Bp-lfe1k04fTpx4PZ2XLdIuvoWBrJVPL.
+[2025-02-07T13:32:22.034Z] Verificando existencia del archivo.
+[2025-02-07T13:32:22.599Z] Archivo ya existe. URL: 1fcn3vSDDzpNdduM1LDP1F6l7jn-BKniD.
+[2025-02-07T13:32:22.599Z] El archivo ya existe.
+[2025-02-07T13:47:27.028Z] Verificando existencia del archivo: Reunión consejo villa verde 05 de febrero EDISON RAMIREZ.m4a.
+[2025-02-07T13:47:27.029Z] Verificando o creando carpeta.
+[2025-02-07T13:47:27.351Z] Carpeta existente con ID: 1pBlFHAUgY9K2-r2p1Upl6RRf5wHltUff.
+[2025-02-07T13:47:27.351Z] Verificando existencia del archivo.
+[2025-02-07T13:47:27.601Z] Archivo ya existe. URL: 1LMma2gw4CeS_xSlcytIf0Ce4Tq_k57U5.
+[2025-02-07T13:47:27.601Z] El archivo ya existe.

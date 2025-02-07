@@ -24,7 +24,7 @@ export async function uploadFileAction(
         archivo.name
       }.`
     );
-
+    console.log("validando existencia");
     const idCarpeta = await obtenerOCrearCarpeta(drive, nombreNormalizado);
     const archivoExistente = await verificarArchivoExistente(
       drive,
@@ -33,10 +33,12 @@ export async function uploadFileAction(
     );
 
     if (archivoExistente) {
+      console.log("archivo exite");
       writeLog(`[${new Date().toISOString()}] El archivo ya existe.`);
       return { status: "success", message: "El archivo ya existía." };
     }
 
+    console.log("subiendo archivo");
     const idArchivoNuevo = await subirArchivo(
       drive,
       archivo,
@@ -44,6 +46,7 @@ export async function uploadFileAction(
       idCarpeta
     );
     if (idArchivoNuevo) {
+      console.log("archivo subido");
       writeLog(
         `[${new Date().toISOString()}] Archivo subido correctamente: ${
           archivo.name
