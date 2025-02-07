@@ -83,11 +83,15 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 
 export async function autenticarGoogleDrive() {
   writeLog(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
-  const rutaLlave = path.join(process.cwd(), "/lib/key.json");
+
   const auth = new google.auth.GoogleAuth({
-    keyFile: rutaLlave,
+    credentials: {
+      private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
+      client_email: process.env.GOOGLE_CLOUD_CLIENT_EMAIL,
+    },
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
+
   return google.drive({ version: "v3", auth });
 }
 
