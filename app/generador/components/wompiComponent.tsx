@@ -19,7 +19,7 @@ const createCheckoutInstance = (amount, reference, integrityHash, name) => {
     reference: reference,
     publicKey: process.env.NEXT_PUBLIC_KEY_WOMPI,
     signature: { integrity: integrityHash },
-    redirectUrl: "http://localhost:3000?name=" + name,
+    redirectUrl: "https://generador.actasdereuniones.ai?name=" + name,
   });
 };
 

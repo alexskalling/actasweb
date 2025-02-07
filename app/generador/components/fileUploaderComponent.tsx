@@ -402,13 +402,7 @@ export default function FileUploaderComponent() {
                   >
                     Cancelar
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="w-full"
-                    onClick={handlePayment}
-                  >
-                    Test
-                  </Button>
+
                   <WompiComponent
                     costo={tokens}
                     duracion={duration}
