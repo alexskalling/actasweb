@@ -99,7 +99,6 @@ export async function autenticarGoogleDrive() {
     universe_domain: "googleapis.com",
   };
 
-  // Configuración de la autenticación con GoogleAuth
   const auth = new google.auth.GoogleAuth({
     credentials, // Se pasa directamente el objeto credentials
     scopes: ["https://www.googleapis.com/auth/drive"],
