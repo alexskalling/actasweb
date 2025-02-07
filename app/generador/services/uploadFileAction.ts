@@ -14,6 +14,7 @@ export async function uploadFileAction(
   nombreNormalizado: string
 ) {
   try {
+    console.log(nombreNormalizado);
     const drive = await autenticarGoogleDrive();
     //@ts-expect-error revisar despues
     const archivo = formData.get("file");
@@ -24,8 +25,9 @@ export async function uploadFileAction(
         archivo.name
       }.`
     );
-    console.log("validando existencia");
+
     const idCarpeta = await obtenerOCrearCarpeta(drive, nombreNormalizado);
+    console.log(idCarpeta);
     const archivoExistente = await verificarArchivoExistente(
       drive,
       nombreNormalizado,
@@ -33,12 +35,10 @@ export async function uploadFileAction(
     );
 
     if (archivoExistente) {
-      console.log("archivo exite");
       writeLog(`[${new Date().toISOString()}] El archivo ya existe.`);
       return { status: "success", message: "El archivo ya existía." };
     }
 
-    console.log("subiendo archivo");
     const idArchivoNuevo = await subirArchivo(
       drive,
       archivo,
@@ -46,7 +46,6 @@ export async function uploadFileAction(
       idCarpeta
     );
     if (idArchivoNuevo) {
-      console.log("archivo subido");
       writeLog(
         `[${new Date().toISOString()}] Archivo subido correctamente: ${
           archivo.name

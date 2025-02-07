@@ -1,6 +1,4 @@
 "use server";
-import path from "path";
-
 import { google } from "googleapis";
 import { Readable } from "stream";
 import fs from "fs";
@@ -83,13 +81,39 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 }
 
 export async function autenticarGoogleDrive() {
-  writeLog(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
-  const rutaLlave = path.join(process.cwd(), "/lib/driveConnect.json");
+  console.log(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
+
+  const credentials = {
+    type: "service_account",
+    project_id: "actas-442811",
+    private_key_id: "d3f1665a74897165a117093779b6e3187d025e88",
+    private_key:
+      "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCmmOkLFhbSY+FA\nXE/Jt00HuNSv47RpmXKpOlqmPx4L7kPvPt2vUiHr3rNMhPtiICuMBW126+z7jS4u\nv1WqtSMthx63HylcSWxF/UDUdw+2E9tuysu5r4nadqgcw3qHjK/BtgIFNNYShYva\nAHq9lcMrngt3I0nHdTL3a/abpKfP9B3SlC5AYmLjWZykQ4garWi0z6exefmafvOP\npCZMBu4bhamWbK3sQ3pl118ooCzeoCf9O0RDU7o+bJI4gkVvly9mNA4mBVoESPdS\nncwOYVlcQ8QPyKatEk6CJfvHNNRpuEM/QhejLDsRn3Y9U3ZJxMv6dtsIZjmBbUd8\ntxe0Ji71AgMBAAECggEAIHDYun+t6ICqEYAYSmGfBqCri+elj0Wh8gmqssJKLc0T\nHgCqJvRxpg5a8EzZ7cDxceXxq61j25Uhl9lKy3/Tzo8IAGU5Rt8GTjezWtwna0+B\nFJk5ZBpmV+vwrw8yqjgPVoOEb7Ka+AbY1ZXv0MCbvX/cYDH3MTeledAkeKjuw5vH\nC0u8/E0+3LqGYkC+T9YqF9P4SX46QSa/tFziETQmxUGynSMu3LMqR6mQvFXpmChA\nAQpDw2XT8l9kEa7/gugy/8m9v+yHh06gejSx0NdjGyVNhc336VtNNcOUju6eJ2b0\niPI93/u6x1fpgQW1PxJUUUWZbGgEZdSZzs0myRQesQKBgQDnVM5nx8sU6+K3VOt+\ny8Rgw/VYY92IrvNalNWj/EJkRLFy6Hxr9ThQQ6P1YU1a7+AoWxe/O8dz83H7cc6g\n3fAV3GA+XTHBE1mC8sZAMMHQmHCmEcLaSHYcEwhxruKIOZzt+a3N7aEywyRoDwlW\nTc9XkQTQCMhR2PDdDvx+Iw9lZQKBgQC4XOig+SP7Th7ir8EjnsoZmUeiWNlxhPGR\n924JgkTuwKiJIQ57plT15BQKnwkAODPd2Ln7s2tzGQcgqq/JlNpj0MtuTMPmxuqs\ns3frj5sh06D0Mfpj1s1XsGZQwifMhBh3PYJ1Tg/QYgua+55vvznOY4T5wwq/xFlr\nG4yUoy4SUQKBgDuamEwZKHRNiu7dzIexDPo5w19w68Wp/j3al2lXN+wJ3wbSbCyM\n1GOp6fbxiTLjF4iOYAH/7xYrJbU5z5mXVaLsU0f+TzGGQMwCrZ4gce/DN1MyxFfl\nz7jQFp7kBq4+2fZfHK8wiRZBPYIqTaeVCNVxIiJQAP1FvlnW4KvHcNIZAoGAWiKK\nVVEZJ189OGTnD2wtsLBA1n2L6bUuicenk5yN6RBmFY0E0K00cndM2RiBxQq1SOwR\nmZ5RlRcSZgUtJmfREeXd35JGYMi1qTOhGJjAJpyZ32mj2jYFdK64hxk1bgbTE1EO\nPB2rG50jwWTtRAMA1wfO1nFmCvWLJhN0+qKA/tECgYAkf/+XWEBOf1bSGoU+qQMH\nEVLWJVui/Bu0KBHPbVnvth82hpdagYO035pg3MzewGd3EKN2zTgC2IyNj3tHG9n3\nA94Ytr1Nnlrz/ePw4tsl7X1kqn18aw4yddoz2Q+LF0qvaBCV//08CzPv/MxBDpDP\nc4izuBX1wNVXgas5LNWw+Q==\n-----END PRIVATE KEY-----\n",
+    client_email: "actasweb@actas-442811.iam.gserviceaccount.com",
+    client_id: "113429413505474543142",
+    auth_uri: "https://accounts.google.com/o/oauth2/auth",
+    token_uri: "https://oauth2.googleapis.com/token",
+    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    client_x509_cert_url:
+      "https://www.googleapis.com/robot/v1/metadata/x509/actasweb%40actas-442811.iam.gserviceaccount.com",
+    universe_domain: "googleapis.com",
+  };
+
+  // Configuración de la autenticación con GoogleAuth
   const auth = new google.auth.GoogleAuth({
-    keyFile: rutaLlave,
+    credentials, // Se pasa directamente el objeto credentials
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
-  return google.drive({ version: "v3", auth });
+
+  try {
+    // Retorna la instancia autenticada de Google Drive
+    const drive = google.drive({ version: "v3", auth });
+    console.log("Autenticación exitosa");
+    return drive;
+  } catch (error) {
+    console.error("Error al autenticar con Google Drive:", error);
+    throw error;
+  }
 }
 
 export async function obtenerOCrearCarpeta(

@@ -10,3 +10,69 @@
 [2025-02-07T14:41:20.400Z] Verificando existencia del archivo.
 [2025-02-07T14:41:20.639Z] Archivo ya existe. URL: 1qTb6k9wpa6weFJO2KC-Az8nU9a46L4ml.
 [2025-02-07T14:41:20.639Z] El archivo ya existe.
+[2025-02-07T15:19:26.615Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:19:26.616Z] Verificando o creando carpeta.
+[2025-02-07T15:19:26.706Z] Error en uploadFileAction: invalid_grant: Invalid JWT Signature..
+[2025-02-07T15:19:26.706Z] Error: Error: invalid_grant: Invalid JWT Signature.
+[2025-02-07T15:19:49.979Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:19:49.979Z] Verificando o creando carpeta.
+[2025-02-07T15:19:50.040Z] Error en uploadFileAction: invalid_grant: Invalid JWT Signature..
+[2025-02-07T15:19:50.040Z] Error: Error: invalid_grant: Invalid JWT Signature.
+[2025-02-07T15:25:41.175Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:25:41.176Z] Verificando o creando carpeta.
+[2025-02-07T15:25:41.257Z] Error en uploadFileAction: invalid_grant: Invalid JWT Signature..
+[2025-02-07T15:25:41.257Z] Error: Error: invalid_grant: Invalid JWT Signature.
+[2025-02-07T15:29:30.708Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:29:30.708Z] Verificando o creando carpeta.
+[2025-02-07T15:29:30.783Z] Error en uploadFileAction: invalid_grant: Invalid JWT Signature..
+[2025-02-07T15:29:30.783Z] Error: Error: invalid_grant: Invalid JWT Signature.
+[2025-02-07T15:35:14.508Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:35:14.508Z] Verificando o creando carpeta.
+[2025-02-07T15:35:15.453Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:35:15.453Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:35:51.177Z] Verificando existencia del archivo: consejo_arandanos_financiero_noviembre_1__catalina_rodriguez.m4a.
+[2025-02-07T15:35:51.178Z] Verificando o creando carpeta.
+[2025-02-07T15:35:51.688Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:35:51.688Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:37:19.307Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:37:19.307Z] Verificando o creando carpeta.
+[2025-02-07T15:37:20.285Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:37:20.285Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:39:55.648Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:39:55.648Z] Verificando o creando carpeta.
+[2025-02-07T15:39:56.894Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:39:56.894Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:40:35.598Z] Verificando existencia del archivo: arandanos2.mp3.
+[2025-02-07T15:40:35.598Z] Verificando o creando carpeta.
+[2025-02-07T15:40:36.565Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:40:36.565Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:42:07.261Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:42:07.261Z] Verificando o creando carpeta.
+[2025-02-07T15:42:08.271Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:42:08.271Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:55:13.287Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:55:13.287Z] Verificando o creando carpeta.
+[2025-02-07T15:55:13.366Z] Error en uploadFileAction: invalid_grant: Invalid JWT Signature..
+[2025-02-07T15:55:13.366Z] Error: Error: invalid_grant: Invalid JWT Signature.
+[2025-02-07T15:57:37.379Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T15:57:37.380Z] Verificando o creando carpeta.
+[2025-02-07T15:57:37.995Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:57:37.995Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T15:58:33.558Z] Verificando existencia del archivo: consejo_arandanos_financiero_noviembre_1__catalina_rodriguez.m4a.
+[2025-02-07T15:58:33.559Z] Verificando o creando carpeta.
+[2025-02-07T15:58:34.179Z] Error en uploadFileAction: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9..
+[2025-02-07T15:58:34.179Z] Error: Error: File not found: 1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9.
+[2025-02-07T16:02:29.453Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T16:02:29.453Z] Verificando o creando carpeta.
+[2025-02-07T16:02:30.728Z] Carpeta creada con ID: 1rBjIqi9zf_-wtoYNDwBxVRJQWU0LaxJy.
+[2025-02-07T16:02:30.729Z] Verificando existencia del archivo.
+[2025-02-07T16:02:31.266Z] Archivo no encontrado.
+[2025-02-07T16:02:31.266Z] Iniciando subida de archivo.
+[2025-02-07T16:02:36.038Z] Archivo subido con éxito. ID: 1tiPQt3YTzuH77tIHDPQYTjZmfA9EfYLh y permisos de lectura pública asignados.
+[2025-02-07T16:02:36.038Z] Archivo subido correctamente: testboticelli.m4a.
+[2025-02-07T16:03:08.728Z] Verificando existencia del archivo: consejo_arandanos_financiero_noviembre_1__catalina_rodriguez.m4a.
+[2025-02-07T16:03:08.728Z] Verificando o creando carpeta.
+[2025-02-07T16:03:09.203Z] Carpeta existente con ID: 1Bp-lfe1k04fTpx4PZ2XLdIuvoWBrJVPL.
+[2025-02-07T16:03:09.203Z] Verificando existencia del archivo.
+[2025-02-07T16:03:09.512Z] Archivo ya existe. URL: 1fcn3vSDDzpNdduM1LDP1F6l7jn-BKniD.
+[2025-02-07T16:03:09.512Z] El archivo ya existe.
