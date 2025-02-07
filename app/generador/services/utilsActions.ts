@@ -83,14 +83,26 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 export async function autenticarGoogleDrive() {
   writeLog(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
 
+  // Verifica que las variables de entorno estén definidas
+  const privateKey = process.env.GOOGLE_CLOUD_PRIVATE_KEY;
+  const clientEmail = process.env.GOOGLE_CLOUD_CLIENT_EMAIL;
+
+  if (!privateKey || !clientEmail) {
+    throw new Error(
+      "Faltan las variables de entorno para la autenticación de Google Drive"
+    );
+  }
+
+  // Configuración de la autenticación
   const auth = new google.auth.GoogleAuth({
     credentials: {
-      private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
-      client_email: process.env.GOOGLE_CLOUD_CLIENT_EMAIL,
+      private_key: privateKey.replace(/\\n/g, "\n"), // Asegúrate de restaurar los saltos de línea correctamente
+      client_email: clientEmail,
     },
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
+  // Retorna la instancia autenticada de Google Drive
   return google.drive({ version: "v3", auth });
 }
 
