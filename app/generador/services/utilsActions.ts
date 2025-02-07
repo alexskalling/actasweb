@@ -79,8 +79,13 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 
   return name;
 }
+//@ts-expect-error revisar despues
+let driveInstance = null;
 
 export async function autenticarGoogleDrive() {
+  //@ts-expect-error revisar despues
+  if (driveInstance) return driveInstance; // Reutilizar si ya está autenticado
+
   console.log(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
 
   const credentials = {
@@ -100,12 +105,12 @@ export async function autenticarGoogleDrive() {
   };
 
   const auth = new google.auth.GoogleAuth({
-    credentials, // Se pasa directamente el objeto credentials
+    credentials,
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
-  // Retorna la instancia autenticada de Google Drive
-  return google.drive({ version: "v3", auth });
+  driveInstance = google.drive({ version: "v3", auth });
+  return driveInstance;
 }
 
 export async function obtenerOCrearCarpeta(

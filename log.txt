@@ -10,3 +10,23 @@
 [2025-02-07T13:47:27.351Z] Verificando existencia del archivo.
 [2025-02-07T13:47:27.601Z] Archivo ya existe. URL: 1LMma2gw4CeS_xSlcytIf0Ce4Tq_k57U5.
 [2025-02-07T13:47:27.601Z] El archivo ya existe.
+[2025-02-07T14:10:24.477Z] Verificando existencia del archivo: Reunión consejo villa verde 05 de febrero EDISON RAMIREZ.m4a.
+[2025-02-07T14:10:24.477Z] Verificando o creando carpeta.
+[2025-02-07T14:10:25.119Z] Carpeta existente con ID: 1pBlFHAUgY9K2-r2p1Upl6RRf5wHltUff.
+[2025-02-07T14:10:25.119Z] Verificando existencia del archivo.
+[2025-02-07T14:10:25.341Z] Archivo ya existe. URL: 1LMma2gw4CeS_xSlcytIf0Ce4Tq_k57U5.
+[2025-02-07T14:10:25.341Z] El archivo ya existe.
+[2025-02-07T14:10:37.422Z] Verificando existencia del archivo: 241203_1904 URBANIZACION PARQUES DE ALTAMIRA.mp3.
+[2025-02-07T14:10:37.422Z] Verificando o creando carpeta.
+[2025-02-07T14:10:38.034Z] Carpeta existente con ID: 1V_cqzsu0p5P-zoknGAqSqUzncpwZJaFt.
+[2025-02-07T14:10:38.034Z] Verificando existencia del archivo.
+[2025-02-07T14:10:38.637Z] Archivo ya existe. URL: 1R9nea8eapSYwKHRy4Uvb2_PxAYbjZMim.
+[2025-02-07T14:10:38.637Z] El archivo ya existe.
+[2025-02-07T14:10:55.190Z] Verificando existencia del archivo: Montecarmelo5Horas(1).mp3.
+[2025-02-07T14:10:55.190Z] Verificando o creando carpeta.
+[2025-02-07T14:10:56.041Z] Carpeta creada con ID: 1g4ETHqyP8loF769WNOoCWvuf6r8_FnG8.
+[2025-02-07T14:10:56.041Z] Verificando existencia del archivo.
+[2025-02-07T14:10:56.264Z] Archivo no encontrado.
+[2025-02-07T14:10:56.264Z] Iniciando subida de archivo.
+[2025-02-07T14:11:09.391Z] Archivo subido con éxito. ID: 1qr518jhCxAX1kZ3nmQ7GQSMZM4LWXKhF y permisos de lectura pública asignados.
+[2025-02-07T14:11:09.391Z] Archivo subido correctamente: Montecarmelo5Horas(1).mp3.
