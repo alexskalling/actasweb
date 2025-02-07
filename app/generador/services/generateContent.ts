@@ -79,7 +79,7 @@ export async function generateContent(nombreNormalizado: string) {
 
     console.log("Contenido obtenido, determinando necesidad de división...");
     const longitud = contenido.length;
-    let numPartes = calcularNumPartes(longitud);
+    const numPartes = calcularNumPartes(longitud);
 
     console.log("Número de partes a procesar:", numPartes);
     console.log("longitud:", contenido.length);

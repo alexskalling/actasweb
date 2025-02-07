@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function NavComponent() {
   return (
     <nav className="w-full h-16 bg-[#5F369A]">

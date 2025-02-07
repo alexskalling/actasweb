@@ -82,7 +82,7 @@ function dividirTranscripcion(transcripcion: string): string[] {
 
     // Ajustar finFragmento para no cortar palabras (buscar el último espacio en blanco antes de la longitud máxima)
     if (finFragmento < transcripcion.length) {
-      let ultimoEspacio = transcripcion.lastIndexOf(" ", finFragmento);
+      const ultimoEspacio = transcripcion.lastIndexOf(" ", finFragmento);
       if (ultimoEspacio > i) {
         // Asegurarse de que se encontró un espacio y no está al principio del fragmento
         finFragmento = ultimoEspacio;

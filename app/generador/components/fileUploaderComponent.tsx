@@ -3,7 +3,7 @@
 import type React from "react";
 import { useState, useCallback, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Upload, File } from "lucide-react";
 import { CalculateAction } from "../services/calculateAction";
 import WompiComponent from "./wompiComponent";
@@ -15,7 +15,6 @@ export default function FileUploaderComponent() {
   const [name, setName] = useState<string>("");
   const [duration, setDuration] = useState<number>(0);
   const [tokens, setTokens] = useState<string>("0");
-  const [isDragging, setIsDragging] = useState(false);
   const [calcular, setCalcular] = useState(false);
   const [calculando, setCalculando] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -75,7 +74,6 @@ export default function FileUploaderComponent() {
     setCalcular(false);
     setCalculando(false);
   };
-  ``;
 
   async function handleCalculate() {
     setCalculando(true);
@@ -283,11 +281,7 @@ export default function FileUploaderComponent() {
           {!file ? (
             <div
               ref={dropZoneRef}
-              className={`border-2 border-dashed p-6 text-center cursor-pointer transition-colors ${
-                isDragging
-                  ? "border-primary bg-primary/10"
-                  : "border-purple-400"
-              }`}
+              className={`border-2 border-dashed p-6 text-center cursor-pointer transition-colors border-purple-400`}
               onClick={() => fileInputRef.current?.click()}
             >
               <input
