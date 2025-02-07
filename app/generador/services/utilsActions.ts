@@ -1,4 +1,5 @@
 "use server";
+import path from "path";
 import { google } from "googleapis";
 import { Readable } from "stream";
 import fs from "fs";
@@ -82,17 +83,14 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
 
 export async function autenticarGoogleDrive() {
   writeLog(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
-
+  const rutaLlave = path.join(process.cwd(), "/lib/key.json");
   const auth = new google.auth.GoogleAuth({
-    credentials: {
-      private_key: process.env.GOOGLE_CLOUD_PRIVATE_KEY,
-      client_email: process.env.GOOGLE_CLOUD_CLIENT_EMAIL,
-    },
+    keyFile: rutaLlave,
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
-
   return google.drive({ version: "v3", auth });
 }
+
 export async function obtenerOCrearCarpeta(
   drive: unknown,
   nombreNormalizado: string
