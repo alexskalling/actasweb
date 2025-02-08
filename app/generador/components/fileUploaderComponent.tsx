@@ -151,7 +151,7 @@ export default function FileUploaderComponent() {
       if (idtx && idtx !== "") {
         try {
           const response = await fetch(
-            `https://sandbox.wompi.co/v1/transactions/${idtx}`
+            `https://production.wompi.co/v1/transactions/${idtx}`
           );
           const tx = await response.json();
           console.log("tx", tx.data.status);
@@ -402,7 +402,13 @@ export default function FileUploaderComponent() {
                   >
                     Cancelar
                   </Button>
-
+                  <Button
+                    variant="outline"
+                    className="w-full"
+                    onClick={handlePayment}
+                  >
+                    Test
+                  </Button>
                   <WompiComponent
                     costo={tokens}
                     duracion={duration}

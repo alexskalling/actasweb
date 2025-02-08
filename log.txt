@@ -76,3 +76,865 @@
 [2025-02-07T16:03:09.203Z] Verificando existencia del archivo.
 [2025-02-07T16:03:09.512Z] Archivo ya existe. URL: 1fcn3vSDDzpNdduM1LDP1F6l7jn-BKniD.
 [2025-02-07T16:03:09.512Z] El archivo ya existe.
+[2025-02-07T17:16:50.206Z] Verificando existencia del archivo: CONSEJO RESERVA NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:16:50.209Z] Verificando o creando carpeta.
+[2025-02-07T17:16:51.476Z] Carpeta creada con ID: 1GjOSl3PIQvH6kMLd-7pXNh1KQqpj3wSL.
+[2025-02-07T17:16:51.476Z] Verificando existencia del archivo.
+[2025-02-07T17:16:51.745Z] Archivo no encontrado.
+[2025-02-07T17:16:51.745Z] Iniciando subida de archivo.
+[2025-02-07T17:16:52.988Z] Verificando existencia del archivo: MANANTIALES NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:16:52.988Z] Verificando o creando carpeta.
+[2025-02-07T17:16:54.012Z] Carpeta creada con ID: 1V6cDtwojYdB7BxNQam1tX3Y-wVu9urkf.
+[2025-02-07T17:16:54.013Z] Verificando existencia del archivo.
+[2025-02-07T17:16:54.387Z] Archivo no encontrado.
+[2025-02-07T17:16:54.387Z] Iniciando subida de archivo.
+[2025-02-07T17:17:01.633Z] Archivo subido con éxito. ID: 1IDzQlGu3ezWxw9OLlFIz2hKI1YX8yIJT y permisos de lectura pública asignados.
+[2025-02-07T17:17:01.633Z] Archivo subido correctamente: CONSEJO RESERVA NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:17:02.304Z] Archivo subido con éxito. ID: 1Gd9JoddV8Y3V5eM5iNlgc9rkUwDMzSPD y permisos de lectura pública asignados.
+[2025-02-07T17:17:02.304Z] Archivo subido correctamente: MANANTIALES NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:18:09.659Z] Guardando transcipcion.
+[2025-02-07T17:18:11.434Z] Verificando si la transcripción ya existe.
+[2025-02-07T17:18:11.434Z] Verificando o creando carpeta.
+[2025-02-07T17:18:11.860Z] Carpeta existente con ID: 1V6cDtwojYdB7BxNQam1tX3Y-wVu9urkf.
+[2025-02-07T17:18:11.860Z] Verificando existencia del archivo.
+[2025-02-07T17:18:12.159Z] Archivo no encontrado.
+[2025-02-07T17:18:12.159Z] Verificando existencia del archivo.
+[2025-02-07T17:18:12.406Z] Archivo ya existe. URL: 1Gd9JoddV8Y3V5eM5iNlgc9rkUwDMzSPD.
+[2025-02-07T17:18:12.406Z] Iniciando proceso de transcripción.
+[2025-02-07T17:18:14.612Z] Guardando transcipcion.
+[2025-02-07T17:18:15.704Z] Verificando si la transcripción ya existe.
+[2025-02-07T17:18:15.704Z] Verificando o creando carpeta.
+[2025-02-07T17:18:16.006Z] Carpeta existente con ID: 1GjOSl3PIQvH6kMLd-7pXNh1KQqpj3wSL.
+[2025-02-07T17:18:16.006Z] Verificando existencia del archivo.
+[2025-02-07T17:18:16.260Z] Archivo no encontrado.
+[2025-02-07T17:18:16.260Z] Verificando existencia del archivo.
+[2025-02-07T17:18:16.520Z] Archivo ya existe. URL: 1IDzQlGu3ezWxw9OLlFIz2hKI1YX8yIJT.
+[2025-02-07T17:18:16.521Z] Iniciando proceso de transcripción.
+[2025-02-07T17:19:22.694Z] Guardando transcripción.
+[2025-02-07T17:19:22.695Z] Iniciando subida de archivo.
+[2025-02-07T17:19:25.362Z] Archivo subido con éxito. ID: 1Um0zWDLuBlxtKmUD7DUHIiiCqqYL_EA3 y permisos de lectura pública asignados.
+[2025-02-07T17:19:25.362Z] Transcripción completada con éxito.
+[2025-02-07T17:19:25.362Z] Iniciando generación de contenido: manantiales_nidia_m_de_gomez.mp3
+[2025-02-07T17:19:25.363Z] Verificando o creando carpeta.
+[2025-02-07T17:19:25.624Z] Carpeta existente con ID: 1V6cDtwojYdB7BxNQam1tX3Y-wVu9urkf.
+[2025-02-07T17:19:25.625Z] Verificando existencia del archivo.
+[2025-02-07T17:19:25.904Z] Archivo no encontrado.
+[2025-02-07T17:19:25.904Z] Verificando existencia del archivo.
+[2025-02-07T17:19:26.720Z] Archivo ya existe. URL: 1Um0zWDLuBlxtKmUD7DUHIiiCqqYL_EA3.
+[2025-02-07T17:19:44.645Z] Guardando transcripción.
+[2025-02-07T17:19:44.645Z] Iniciando subida de archivo.
+[2025-02-07T17:19:47.397Z] Archivo subido con éxito. ID: 1TprjgiKJLTPifz6XvfZARuvvpo_Ernqc y permisos de lectura pública asignados.
+[2025-02-07T17:19:47.397Z] Transcripción completada con éxito.
+[2025-02-07T17:19:47.397Z] Iniciando generación de contenido: consejo_reserva_nidia_m_de_gomez.mp3
+[2025-02-07T17:19:47.398Z] Verificando o creando carpeta.
+[2025-02-07T17:19:47.667Z] Carpeta existente con ID: 1GjOSl3PIQvH6kMLd-7pXNh1KQqpj3wSL.
+[2025-02-07T17:19:47.667Z] Verificando existencia del archivo.
+[2025-02-07T17:19:47.914Z] Archivo no encontrado.
+[2025-02-07T17:19:47.914Z] Verificando existencia del archivo.
+[2025-02-07T17:19:48.220Z] Archivo ya existe. URL: 1TprjgiKJLTPifz6XvfZARuvvpo_Ernqc.
+[2025-02-07T17:19:51.436Z] Iniciando subida de archivo.
+[2025-02-07T17:19:54.029Z] Archivo subido con éxito. ID: 1dZyZ_ojXY9f_JoSiNFX212wOkganb0Eo y permisos de lectura pública asignados.
+[2025-02-07T17:19:54.030Z] Iniciando formato de contenido. manantiales_nidia_m_de_gomez.mp3
+[2025-02-07T17:19:54.030Z] Verificando o creando carpeta.
+[2025-02-07T17:19:54.638Z] Carpeta existente con ID: 1V6cDtwojYdB7BxNQam1tX3Y-wVu9urkf.
+[2025-02-07T17:19:54.638Z] Verificando existencia del archivo.
+[2025-02-07T17:19:54.917Z] Archivo no encontrado.
+[2025-02-07T17:19:54.918Z] Verificando existencia del archivo.
+[2025-02-07T17:19:55.175Z] Archivo ya existe. URL: 1dZyZ_ojXY9f_JoSiNFX212wOkganb0Eo.
+[2025-02-07T17:19:55.175Z] Verificando existencia del archivo.
+[2025-02-07T17:19:55.550Z] Archivo ya existe. URL: 1Um0zWDLuBlxtKmUD7DUHIiiCqqYL_EA3.
+Formato generado:
+[2025-02-07T17:19:58.405Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión del Consejo de Administración</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: [Hora de inicio no especificada en la transcripción] - Cierre: [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Lugar:</strong> [Lugar no especificado en la transcripción]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Doña Nidia</li>
+    <li>Doña Beatriz</li>
+    <li>Don Alfonso</li>
+    <li>Doña Lilia</li>
+    <li>Carolina</li>
+    <li>Marta</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Análisis de Empresas de Vigilancia: Cotracer, Copevian y Baluarte</li>
+  <li>Alternativas a la Vigilancia Tradicional</li>
+  <li>Bonificación para Piscineros</li>
+  <li>Respuesta a Derecho de Petición</li>
+  <li>Programación de la Asamblea General</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Análisis de Empresas de Vigilancia: Cotracer, Copevian y Baluarte</h3>
+<p>Se discute la situación actual con la empresa de vigilancia Baluarte y se exploran alternativas debido a los incrementos en los costos. Se mencionan otras opciones como Copevian y Cotracer.</p>
+
+<ul>
+  <li><strong>Doña Nidia</strong> expresa que la empresa ya no es asequible para la mayoría de los edificios y se están considerando alternativas como turnos de 6:00 a.m. a 10:00 p.m. para evitar el pago de nocturnidad.</li>
+  <li>Se aclara que la decisión de la asamblea no es una camisa de fuerza y que el beneficio de las prebendas de las empresas se recibe hasta el momento en que se está con ellas.</li>
+  <li>Se explica que cuando el edificio es nuevo, las empresas instalan el sistema de cámaras sin costo, pero en este caso, se puede recibir un retorno de los 19 millones que ofrecen Cotracet y Copevian, dividiéndolo en dos años.</li>
+  <li>Se menciona que el presupuesto actual tiene un incremento del 10% debido a los gastos del año pasado, pero con Copevian y Cotracet, el aumento podría ser del 13% al 14% debido a que Baluarte es más barato, aunque con menos beneficios para los empleados.</li>
+  <li>Se discute la posibilidad de recibir solo la mitad del retorno de Cotracer este año para no comprometer el presupuesto del próximo año.</li>
+  <li><strong>Doña Lilia</strong> comenta sobre los beneficios de Copevian, destacando los descuentos por pronto pago y la motivación de los vigilantes al ser dueños de la cooperativa.</li>
+  <li>Se acuerda llamar a Afanador de Cotracer y a Paola de Copevian para obtener más información sobre los beneficios y aportes de los asociados.</li>
+  <li>Se confirma que tanto Copevian como Cotracer recibirían a Carlos, uno de los vigilantes actuales, lo cual es una condición importante.</li>
+  <li><strong>Paola de Copevian</strong> informa que los asociados deben dar dos salarios mínimos en aportes, descontados en 24 meses. Además, confirma que los porteros actuales pueden pasar por el proceso de selección de Copevian.</li>
+  <li>Se menciona que si se decide cambiar a Cotracer, se podría solicitar el 50% de la afiliación de los muchachos a través de una carta del consejo.</li>
+  <li>Se expresa preocupación por el desempeño de algunos vigilantes actuales y la necesidad de una mejor selección y capacitación del personal.</li>
+  <li>Se comenta que Carlos es quien ha entrenado a los nuevos vigilantes, complementando la capacitación de la empresa.</li>
+  <li><strong>Doña Nidia</strong> comparte su experiencia con Cotracer en otros edificios, destacando la buena selección de personal y la supervisión constante.</li>
+  <li>Se acuerda citar a Copevian y Cotracer para una próxima reunión y se entregarán los brochures de ambas empresas a Don Alfonso para su revisión.</li>
+  <li>Se enfatiza que la mayor parte del presupuesto corresponde a salarios y que los presupuestos presentados ya incluyen las cifras reales.</li>
+  <li>Se concluye que Atempi está costosa y que la decisión debe tomarse entre Copevian y Cotracer.</li>
+  <li><strong>Don Alfonso</strong> pregunta si se pueden poner condiciones a Baluarte, pero se aclara que Carlos no continuaría con ellos.</li>
+  <li>Se explica que la reinversión de Copevian y Cotracer se puede aplicar al presupuesto o a una obra pendiente, lo que permitiría reducir el incremento de la cuota.</li>
+  <li><strong>Doña Lilia</strong> expresa su preferencia por Copevian, destacando la condición de que Carlos sea sometido a un proceso de selección.</li>
+  <li>Se menciona que Copevian ofrece un descuento por pronto pago que podría cubrir parte del seguro.</li>
+  <li>Se acuerda entrevistar a Copevian y Cotracer en una próxima reunión para hacer preguntas específicas y evaluar los beneficios ofrecidos.</li>
+</ul>
+
+<h3>2. Alternativas a la Vigilancia Tradicional</h3>
+<p>Se exploran alternativas a la vigilancia tradicional, como la combinación de tecnología y turnos reducidos, o la eliminación del turno nocturno.</p>
+
+<ul>
+  <li><strong>Doña Beatriz</strong> comenta sobre las opciones de no tener vigilancia, mencionando que tiene pros y contras, siendo la sensación de seguridad el principal factor a considerar.</li>
+  <li>Se menciona un edificio administrado por Doña Nidia que utiliza una empresa llamada Gaspas, con atención virtual y un conserje.</li>
+  <li>Se describe un sistema de acceso con cámara y operador remoto que llama al apartamento para autorizar la entrada.</li>
+  <li>Se discute la posibilidad de quitar el turno nocturno y tener dos turnos de 8 horas para reducir costos.</li>
+  <li>Se advierte que la instalación inicial de sistemas de vigilancia tecnológica requiere una inversión alta y una cuota extra.</li>
+  <li>Se menciona la necesidad de colocar sensores en todo el edificio si se elimina la vigilancia física.</li>
+  <li>Se expresa preocupación por la seguridad en el parqueadero y la posibilidad de intrusiones.</li>
+  <li>Se advierte sobre los riesgos de la inteligencia artificial y la posibilidad de vulnerar la seguridad.</li>
+  <li>Se concluye que las decisiones deben tomarse con cautela y considerando todas las alternativas.</li>
+</ul>
+
+<h3>3. Bonificación para Piscineros</h3>
+<p>Se discute la necesidad de dar una bonificación a los piscineros, similar a lo que se está haciendo en otros edificios.</p>
+
+<ul>
+  <li>Se menciona que los piscineros están recibiendo bonificaciones en otros edificios debido a la necesidad de manejar químicos y tener conocimientos específicos.</li>
+  <li>Se calcula que la bonificación incrementaría los servicios de aseo en aproximadamente 3 millones.</li>
+  <li>Se propone una bonificación mensual de $142,000 para los piscineros.</li>
+  <li>Se aclara que si se da una bonificación, debe ser por medio de la empresa para evitar problemas laborales.</li>
+</ul>
+
+<h3>4. Respuesta a Derecho de Petición</h3>
+<p>Se aborda la solicitud de un propietario sobre la inclusión de sus exposiciones en el acta de la asamblea anterior y una fisura en su apartamento.</p>
+
+<ul>
+  <li>Se menciona que el propietario ha hecho varias solicitudes y se enojó porque se le pidió que quitara un armario del parqueadero.</li>
+  <li>Se acuerda revisar si la solicitud del propietario es un derecho de petición formal y, en caso contrario, responder a la carta que envió.</li>
+  <li><strong>Don Alfonso</strong> se ofrece a revisar el acta y determinar si es necesario responder formalmente.</li>
+  <li>Se acuerda que Doña Nidia prepare un informe sobre las solicitudes del propietario y las respuestas que se le han dado.</li>
+  <li>Se menciona que las actas de los edificios son impugnadas a los dos meses y que ya ha pasado casi un año desde la asamblea.</li>
+  <li>Se acuerda revisar la fisura en el apartamento del propietario y determinar si es responsabilidad de la administración.</li>
+  <li>Se delega a Doña Nidia para que revise la fisura en el apartamento y se le autoriza a entrar a mirar de qué se trata, acompañada de otra persona.</li>
+</ul>
+
+<h3>5. Programación de la Asamblea General</h3>
+<p>Se discute la programación de la asamblea general y la necesidad de tener bien definidos los temas a tratar.</p>
+
+<ul>
+  <li>Se menciona que la asamblea general debe realizarse antes del 30 de marzo.</li>
+  <li>Se acuerda organizar otra reunión para entrevistar a Copevian y Cotracer y definir los beneficios que ofrecen.</li>
+  <li>Se solicita a las empresas que traigan información sobre la afiliación de los empleados y los aportes que deben realizar.</li>
+  <li>Se menciona que Atempi ofrece una forma de bajar los costos, pero no es suficiente comparado con las otras opciones.</li>
+  <li>Se enfatiza la importancia de tener alternativas y estar preparados para cualquier decisión.</li>
+  <li>Se discuten las experiencias de otros edificios con la disminución de la vigilancia y las soluciones mixtas.</li>
+  <li>Se menciona la importancia del turno de la noche y la necesidad de evaluar todas las opciones.</li>
+  <li>Se acuerda que todos los miembros del consejo participen en la discusión y aporten sus ideas.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Acuerdos y Acciones:</strong></p>
+  <ul>
+    <li><strong>Responsable:</strong> Doña Nidia
+      <ul>
+        <li><strong>Acción:</strong> Preparar un informe sobre las solicitudes del propietario y las respuestas dadas.</li>
+        <li><strong>Acción:</strong> Revisar la fisura en el apartamento del propietario, acompañada de otra persona.</li>
+        <li><strong>Acción:</strong> Organizar otra reunión para entrevistar a Copevian y Cotracer.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Don Alfonso
+      <ul>
+        <li><strong>Acción:</strong> Revisar el acta de la asamblea anterior y determinar si es necesario responder formalmente al propietario.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Marta
+      <ul>
+        <li><strong>Acción:</strong> Solicitar a Copevian y Cotracer información sobre la afiliación de los empleados y los aportes que deben realizar.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  <ul>
+    <li>Doña Nidia</li>
+    <li>Doña Beatriz</li>
+    <li>Don Alfonso</li>
+    <li>Doña Lilia</li>
+  </ul>
+</footer>
+[2025-02-07T17:20:01.675Z] Contenido cargado con éxito. ID: 1J8dHQgxHPsMYSaKxbQdV7pZGVXW0Y0dz
+[2025-02-07T17:20:01.675Z] Acta lista y guardada como manantiales_nidia_m_de_gomez_Borrador.docx.
+[2025-02-07T17:21:45.192Z] Guardando transcripción.
+[2025-02-07T17:21:45.193Z] Iniciando subida de archivo.
+[2025-02-07T17:21:47.479Z] Archivo subido con éxito. ID: 10t2NoYfjXiajdVonytHreidY1GP_Ymp9 y permisos de lectura pública asignados.
+[2025-02-07T17:21:47.479Z] Iniciando formato de contenido. consejo_reserva_nidia_m_de_gomez.mp3
+[2025-02-07T17:21:47.479Z] Verificando o creando carpeta.
+[2025-02-07T17:21:47.753Z] Carpeta existente con ID: 1GjOSl3PIQvH6kMLd-7pXNh1KQqpj3wSL.
+[2025-02-07T17:21:47.753Z] Verificando existencia del archivo.
+[2025-02-07T17:21:48.032Z] Archivo no encontrado.
+[2025-02-07T17:21:48.033Z] Verificando existencia del archivo.
+[2025-02-07T17:21:48.348Z] Archivo ya existe. URL: 10t2NoYfjXiajdVonytHreidY1GP_Ymp9.
+[2025-02-07T17:21:48.348Z] Verificando existencia del archivo.
+[2025-02-07T17:21:48.633Z] Archivo ya existe. URL: 1TprjgiKJLTPifz6XvfZARuvvpo_Ernqc.
+Formato generado:
+[2025-02-07T17:21:51.086Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión del Consejo de Administración</h1>
+  <p><strong>Fecha:</strong> 3 de febrero de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 7:00 PM - Cierre: No especificado</p>
+  <p><strong>Lugar:</strong> Edificio Reserva de Santa Teresa</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Luz Fernell Yepes</li>
+    <li>Nidia de Gómez</li>
+    <li>Otros miembros del consejo de administración (mencionados pero no listados explícitamente)</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado (todos los miembros del consejo de administración presentes)</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura del Acta Anterior y Tareas Pendientes</li>
+  <li>Informes Financieros</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>Se constata la presencia de todos los miembros del consejo de administración, confirmando el quórum necesario para sesionar.</p>
+
+<h3>2. Lectura del Acta Anterior y Tareas Pendientes</h3>
+<p>Se procede a la lectura del acta anterior, correspondiente a la reunión número 24, realizada el 13 de agosto. Los puntos principales tratados en dicha acta fueron:</p>
+<ul>
+    <li><strong>Capacitación de los guardias de seguridad:</strong> Se informó sobre el avance en la formación en temas de seguridad, pero se mencionaron problemas internos que afectaron el ambiente laboral.</li>
+    <li><strong>Informes financieros al 30 de septiembre de 2024:</strong> La contadora indicó que la falta de pago de algunos deudores había afectado el monto de reserva, acumulando una deuda total de 20 millones de pesos. Los principales deudores identificados fueron los apartamentos 501, 701 y 1201.</li>
+    <li><strong>Proposiciones y varios:</strong> Se discutieron problemas internos entre los guardias de seguridad, específicamente entre Manuel Piña y Jefferson David Acevedo Gutiérrez.</li>
+    <li><strong>Mantenimiento del edificio:</strong> Se abordó el estado de los cortagoteras o lagrimales. La administradora explicó que no se había realizado la pintura debido a la falta de recursos. Se mencionó que se habían realizado trabajos de pintura en el piso dos, que había reportado problemas de goteras desde hacía año y medio. Se sugirió considerar la aplicación de un manto protector en las terrazas a futuro para evitar humedades. Se acordó realizar una lista de chequeo para identificar las áreas que requerían intervención urgente en términos de pintura y mantenimiento.</li>
+    <li><strong>Instalación de las Luces Navideñas:</strong> Se presentó una propuesta para la instalación de luces navideñas en el edificio. Se acordó que se instalarían en todos los balcones, con un costo estimado de $700,000 pesos, utilizando luces de color blanco.</li>
+    <li><strong>Problemas con el consumo de energía y agua:</strong> Se discutieron los problemas relacionados con el consumo de energía y agua en el edificio. Se informó que tras el cambio de las motobombas, el consumo de energía se había duplicado. Se acordó realizar un seguimiento diario del consumo de energía. En cuanto al consumo de agua, se informó que en algunos meses no se había registrado consumo en los medidores. Se acordó solicitar a EPM una revisión de estos medidores. Además, se mencionó que no se había presentado reclamación a EPM por los daños causados por el estallido del transformador que afectó las motobombas del edificio.</li>
+    <li><strong>Otros temas administrativos:</strong> Se discutieron temas administrativos, incluyendo el uso indebido del agua en las áreas comunes del edificio. Se tomó la decisión de quitar todas las llaves de todos los pisos, dejando solo una llave para la niña del aseo. Esta decisión generó inconformidad en el apartamento 402.</li>
+</ul>
+<p>Se menciona que la señora del apartamento 402 sigue ofendida por la decisión de quitar las llaves y ha tenido altercados con el hijo de la administradora. Se reitera que la decisión de cortar las llaves fue autorizada por el consejo.</p>
+
+<h3>3. Informes Financieros</h3>
+<p>Luz Fernell Yepes presenta las cifras financieras del edificio, dividiéndolas en cómo se terminó el año 2024 y la propuesta para el 2025.</p>
+<ul>
+    <li><strong>Estado de cuentas:</strong> Se informa que en Bancolombia se tienen $1,454,985 pesos y en la Fiducuenta $427,000 pesos, donde debería estar el monto de la reserva.</li>
+    <li><strong>Deudores:</strong> Se tiene una deuda de $23,000,453 pesos debido a la renovación de la póliza, que se cobrará como cuota extra.</li>
+    <li><strong>Apartamento 501:</strong> Se condonaron las multas al apartamento 501, lo que afectó el déficit en más de $2,500,000 pesos. Se está pendiente de los honorarios del abogado, ya que el caso estaba en manos de un abogado. Se espera que la abogada no cobre honorarios, ya que no hubo un proceso judicial. En caso de cobro, Juan Andrés (del apartamento 501) no asumirá ningún costo adicional.</li>
+    <li><strong>Apartamento 701 (Doña Adelaida):</strong> Se tiene la situación del apartamento 701, cuyo problema es que la propietaria abona mensualmente, lo que dificulta el cobro jurídico. Se menciona que la propietaria vendió un carro y se espera que pague la deuda. A diciembre, deben $6 millones de pesos, más la cuota de enero y la cuota extra del seguro, sumando aproximadamente $8,500,000 pesos. Se explica que mientras se abona, no se puede iniciar un cobro jurídico. La abogada ya hizo gestión y la propietaria firmó un acuerdo de pago. Se descuenta el 10% de lo abonado para la abogada. Se espera que la abogada envíe un escrito sobre la etapa del proceso.</li>
+    <li><strong>Apartamentos 1001 y 1102:</strong> No pagaron en el mes de diciembre. Se está haciendo la conciliación.</li>
+    <li><strong>Notaría Sexta y Decorador de Navidad:</strong> Se reembolsó el dinero pagado doble a la Notaría Sexta y al decorador de Navidad.</li>
+    <li><strong>Activos:</strong> Se tienen unos activos de $25,336,439 pesos, de los cuales $25,600,000 pesos están a mediano plazo (deuda de Doña Adelaida) y lo demás corresponde a la póliza.</li>
+    <li><strong>Deudas:</strong> Se debe a Avaluarte $24 millones de pesos. Se abonó en enero, pero con el incremento se volvió a subir la deuda. Se debe a la Previsora (compañía de seguros) dos cuotas, pero con lo que se va a pagar no hay problema. Se debe a EPM $1,500,000 pesos de la factura de diciembre.</li>
+</ul>
+<p>Se discute si se debe incluir en el presupuesto la deuda de la señora del apartamento 701, sabiendo que nunca llega. Se explica que sí se debe incluir por un principio de causación contable, ya que es una obligación exigible. Se menciona que cuando hay pocos apartamentos, una persona que no pague afecta significativamente. Se debe hacer un manejo de flujo de caja para cubrir las necesidades y hablar con los proveedores para que no quiten los servicios.</p>
+<p>Se comenta sobre apartamentos en cabeza de la SAE o de personas de dudosa reputación, donde los otros apartamentos deben subsidiar la cuota. Se indica que la SAE no paga los arrendamientos. Se proyecta que en la asamblea se planteará que entre todos se pague esa cuota.</p>
+<p>Se explica que el problema de no pagar es una mala costumbre en el edificio. Se indica que es importante que todos paguen para cumplir con los proveedores. Se menciona que Avaluarte está esperando el pago y que se podría perder la reinversión del otro año si no se paga.</p>
+<p>Se pregunta de dónde vienen los $24 millones que se deben a Avaluarte. Se explica que de las cuentas por cobrar, $23 millones corresponden a la cuota extra del seguro y a la deuda de terceros. Se espera recaudar la cuota extra antes de la asamblea para abonarle a Avaluarte. Se menciona que se reintegró lo de la notaría y el decorador, y que los apartamentos 902 y 1101 pagaron en enero.</p>
+<p>Se indica que se tiene un déficit a 31 de diciembre de $13,000,917.679 pesos. Este déficit viene de que los ingresos fueron menores que los gastos. Se explica que la cuota de la multa no se indexó. Se detalla que de acueducto se proyectó $1 millón y se ejecutaron $2,447,000 pesos, sobrepasando $1,447,000 pesos. En energía se proyectaron $13 millones y se ejecutaron $19,450,000 pesos, sobrepasando $6,450,000 pesos. En mantenimiento de edificios se proyectaron $3 millones y se ejecutaron $10,398,344 pesos, sobrepasando $7,398,344 pesos. Se suman $1,300,000 pesos del deducible de las motobombas. El seguro pagó $3,700,000 pesos de las motobombas, que costaron $5 millones.</p>
+<p>Se mencionan dos consignaciones sin identificar que ayudaron a minimizar el déficit. Se pregunta de cuánto eran esas consignaciones ($1,050,000 pesos del 8 de marzo y $600,000 pesos del 15 de marzo).</p>
+<p>Se sugiere traer a una persona que revise el equipo de lectura de la administración. Se comenta que el consumo de energía aumentó después de cambiar las motobombas, que son más poderosas. Se explica que cada arranque de las motobombas genera un jalón de energía. Se indica que se hizo una revisión técnica de las motobombas y se midió el consumo durante 15 días, pero no bajó nada.</p>
+<p>Se sugiere traer una persona externa para que haga un diagnóstico del consumo de energía. Se menciona que el problema podría ser con los lectores de EPM, que están cobrando por histórico. Se indica que se hará una reclamación a EPM.</p>
+<p>Se pregunta cuánto está llegando el valor del kilovatio. Se responde que no ha cambiado tanto. En enero se empezó en $884 pesos y en diciembre se terminó en $876 pesos. El mes más caro fue julio, con $943 pesos. Se indica que el consumo es de más de 1400 kilovatios.</p>
+<p>Se comenta que se presentará una gráfica comparativa de presupuesto contra ejecutado en la asamblea. Se indica que en servicios públicos se sobrepasó el presupuesto en $7,935,000 pesos y en mantenimiento y reparaciones en $12,549,848 pesos. Se explica que el déficit fue menor porque hubo gastos que no se ejecutaron al 100% y se tuvieron otros ingresos.</p>
+<p>Se pregunta cuánto fue el arreglo de arriba el año pasado. Se responde que fue de $10,300,000 pesos. Se explica que la situación del país hizo que se dispararan los costos. Se indica que las motobombas se dañaron y hubo que colocar las mejores. Se aclara que las motobombas que se dañaron eran suficientes, pero se aprovechó para poner unas más poderosas. Se pregunta cuánto es la garantía de las bombas (12 meses).</p>
+<p>Se indica que en el año 2024 se facturaron $18,800,000 pesos mensuales por administración. Con esos $18,800,000 pesos solo se podría pagar servicios públicos, aseo y vigilancia. Se presentan dos escenarios: incrementar la cuota de administración en un 10% y cobrar una cuota extra de $2,400,500 pesos, o incrementar las cuotas de administración en un 21%. Se considera que el incremento del 21% es gravísimo.</p>
+<p>Se comenta que lo más fácil sería cortar el aseo y ponerlo tres días a la semana, cambiar de proveedor de ascensor o quitar un turno de vigilancia. Se indica que se aspira a hacer eso en el futuro. Se explica que el salario mínimo incrementó el 9.54% según el estado, pero en julio hubo otra reducción de horas extras, lo que incrementó el porcentaje. Se indica que el presupuesto de las copropiedades se hace con base en lo que se necesita y los únicos ingresos son las cuotas de administración.</p>
+<p>Se indica que el edificio necesita $22,700,000 pesos mensuales en condiciones de normalidad. Esos $22,700,000 pesos representan un 21% o $2,400,500 pesos más el incremento del 10%. Se recuerda que el año pasado se cubrió el déficit con la cuota extra. Se indica que el primer incremento en enero de 2024 fue del 9.28%. Se menciona que se hizo un cálculo para aumentar el 18% y se llevó al 12% en la asamblea, dejando el resto en cuota extra.</p>
+<p>Se pregunta cuánto subió el salario mínimo el año pasado (12%). Se indica que el rubro de vigilancia es muy representativo. Se menciona que el IPC fue del 5.20%, pero se debería subir el 9.54% del salario mínimo. Se indica que la propuesta que se debe llevar es la del 10% más la cuota extra. Se comenta que no se debe hablar del 21% porque suena muy malo. Se indica que se cuenta con la reinversión para pagar el déficit. Se pregunta cuánto paga hoy un apartamento de los grandes ($5 millones). Se indica que lo justo es que los que tienen más paguen más.</p>
+<p>Se comenta que se debe hablar de una cuota extra de $2,450,000 pesos. Se explica que en este edificio no hay nada suntuario. Se sugiere mirar cuánto vale ponerle manto a la terraza. Se indica que con cualquier temblorcito salen fisuras. Se comenta que ya ellos pusieron manización en Suri. Se indica que el asentamiento de los edificios dura seis años. Se solicitan dos informes para la asamblea: el de la abogada y el de la energía.</p>
+<p>Se indica que realmente en el año 2024 se recaudaron $18,800,000 pesos mensuales por administración. Con esos $18,800,000 pesos solo daría para pagar servicios públicos, aseo y vigilancia. Se traen dos escenarios: incrementar la cuota de administración en un 10% y cobrar una cuota extra de $2,400,500 pesos, o incrementar las cuotas de administración en un 21%. Se considera que el incremento del 21% es gravísimo.</p>
+<p>Se comenta que lo más fácil sería cortar el aseo y ponerlo tres días a la semana, cambiar de proveedor de ascensor o quitar un turno de vigilancia. Se indica que se aspira a hacer eso en el futuro. Se explica que el salario mínimo incrementó el 9.54% según el estado, pero en julio hubo otra reducción de horas extras, lo que incrementó el porcentaje. Se indica que el presupuesto de las copropiedades se hace con base en lo que se necesita y los únicos ingresos son las cuotas de administración.</p>
+<p>Se indica que el edificio necesita $22,700,000 pesos mensuales en condiciones de normalidad. Esos $22,700,000 pesos representan un 21% o $2,400,500 pesos más el incremento del 10%. Se recuerda que el año pasado se cubrió el déficit con la cuota extra. Se indica que el primer incremento en enero de 2024 fue del 9.28%. Se menciona que se hizo un cálculo para aumentar el 18% y se llevó al 12% en la asamblea, dejando el resto en cuota extra.</p>
+<p>Se pregunta cuánto subió el salario mínimo el año pasado (12%). Se indica que el rubro de vigilancia es muy representativo. Se menciona que el IPC fue del 5.20%, pero se debería subir el 9.54% del salario mínimo. Se indica que la propuesta que se debe llevar es la del 10% más la cuota extra. Se comenta que no se debe hablar del 21% porque suena muy malo. Se indica que se cuenta con la reinversión para pagar el déficit. Se pregunta cuánto paga hoy un apartamento de los grandes ($5 millones). Se indica que lo justo es que los que tienen más paguen más.</p>
+<p>Se comenta que se debe hablar de una cuota extra de $2,450,000 pesos. Se explica que en este edificio no hay nada suntuario. Se sugiere mirar cuánto vale ponerle manto a la terraza. Se indica que con cualquier temblorcito salen fisuras. Se comenta que ya ellos pusieron manización en Suri. Se indica que el asentamiento de los edificios dura seis años. Se solicitan dos informes para la asamblea: el de la abogada y el de la energía.</p>
+<p>Se indica que se debe aprobar una multa por no asistencia a la asamblea. Se indica que se necesita mayoría calificada para imponer las multas en la asamblea. Se comenta que en todas las copropiedades hay apatía. Se indica que las dificultades tienen que ser comunes, no de un grupito. Se indica que se debe hacer campaña para que en esta asamblea haya muy buen quórum.</p>
+<p>Se indica que se va a subir la cuota $25,000 pesos para poner el diagnóstico del de la energía. Se indica que en enero no se ha gastado nada en diagnóstico. Se comenta que las motobombas están ahí porque no se pueden sacar hasta que el seguro no pague. Se indica que en la reclamación algo estaban echando chuzo, porque por qué rebajar $1,000,000 pesos.</p>
+<p>Se comenta sobre el 702 con las vecinas. Se indica que se habló con María Victoria y se le puso la cosa grave. La dueña dijo que iba a hablar con ellas y si no hacían caso, que se fueran. Se indica que es fiscal la que fue. Se indica que tienen un negocio de rumba por acá cerca. Se indica que cierran a las 2:00 a.m. y recogen botella a las 2:30 a.m. Se indica que se ha mejorado. Se comenta que María Victoria no fue a la asamblea de fin de año porque no la apellaron. Se indica que Alejandra la había regañado. Se indica que ella es de esas fronteras así. Se indica que para el consejo es así, por ejemplo, como ustedes que ayudan, que todo. Se indica que se llenó de sentimiento porque se sintió como esto. Se indica que a mí también me tocó muy duro ese momento, porque de todas maneras escuchaba que iban a recoger una parta para volverlo a traer. Se indica que hablé con don Alejandro una vez que no, no, es que eso hablándose. Se indica que él entra por aquí y yo salgo por aquí. Se indica que los muchachos pueden ser divinos y todo, pero tienen que tener un punto de respeto, y si no, no hubiera jefe, lo que sea. Se indica que él ya venía de un antecedente de otro edificio que fue igualísimo. Se indica que este muchacho Diego sigue digo que ella. Se indica que no se pegue tanto del ser de la mano. Se indica que mi hijo ya le ha tomado varias fotos porque porque uno se para en el vídeo y no lo ve. Se indica que uno mira afuera, usted lo ve que está mirando la pantalla y no es la pantalla, usted lleva parada un rato ahí y es que pone el celular. Se indica que yo tengo una campaña con ese celular. Se indica que este muchacho no es pendiente de la puerta, porque uno piensa que está mentira, es que es. Que bien ha visto. Se indica que usted sale y él no dice ni buenos días ni buenas tardes, entonces usted lo ve que está mirando de frente, y no está mirando de frente, sino que le está mirando el segundo. Se indica que si no está atento hay otra cosa, no, no, no, no. Se indica que lo atraquen y todo ahí esperando. Se indica que le salen con los perritos y todo. Se indica que toca tirarle las orejas, y sí que así toca. Se indica que ha estado bien, y con David no hay problema, le distra ah. Se indica que tan juiciosa, no tan juiciosa, pendiente la pantalla. Se indica que mi hijo llega y yo sé que llega porque entonces. Se indica que le manden esa fotico a doña Danilia. Se indica que contratarlo. Es para la red, el hijo tuyo hay que contratarlo para la red porque. Se indica que a madre pimpa, ah, se tapa con la pantalla, ve. Se indica que él es muy observador y él es muy serio. Se indica que mamá, pues que le mande esa fotico, doña, ni buena salud, oíste. Se indica que doña. Se indica que hoy se ha dibujado una vuelta y me la tuve. Se indica que ya no podía más, pero. Se cancel de las piernas. Se indica que ella tiene problema de la artrosis y ando yo como cojoncito porque como se cayó, entonces aquí se fisuró la cuarto útil. Se indica que altos, yo con un cojín.</p>
+
+<h3>4. Proposiciones y Varios</h3>
+<ul>
+    <li><strong>Propuesta del señor del 501 (Gustavo):</strong> El señor del apartamento 501 propone conseguir una mesa de ping pong y colocarla en el edificio para beneficio de todos. También quiere saber qué trámite debe hacer para colocar unos entrepaños con puerta en el hueco que tiene en el parqueadero, lo cual servirá como depósito. Se comenta que si se le da permiso a uno, entonces ya el otro también. Se indica que antes una bregando eso es el apartamento. Se comenta que no sé cómo quiere poner la mesa de tifiamigos. Se indica que ahí solo y el útil. Se comenta que ellos tienen única de pipo son dos. Se indica que el señor inclusive yo ya lo conocí el sábado pasado, muy formal, que vino la niña, la constructora y yo iba subiendo. Se indica que él es sueño del cuarto. Se indica que muy señor, se llama Gustavo, muy importante. Se indica que la mesita de ping pong. Se indica que los del tango pueden seguir bailando. Se indica que Gustavo. Se indica que la bolita para esas personas. Se indica que o el tres, cómo se llama. Se indica que ese golpecito. Se indica que pero de qué edificio mío vendrá. Se indica que tengo varios y se pondría. Se indica que pero hay que dejar espaciecito al señor del tango. Se indica que hay un señor. Se indica que claro, hoy ya no vio. Se indica que y estaban haciendo con el bebé acá. Se indica que claro, Daniela. Se indica que y él es Pilo. Se indica que y el muchacho dice que él quiere donar una mesa de ping pong. Se indica que así donada. Se indica que con mayor razón, si no él dice que para uso de tórax. Se indica que ah, bueno. Se indica que por ejemplo, en Puerto de San Sebastián también tenemos una mesa de ping pong. Se indica que las mantiene dobladita. Se indica que se puede recoger cuando haya una. Se indica que claro, en horario, porque el pim pum pimpa el pin. Se indica que ora lo que yo le digo. Se indica que y a los del tres también. Se indica que bueno, no se volvieron a quejar del mugrero con esa cámara que se puso. Se indica que dónde está la cámara. Se indica que al pin. Se indica que incomoda la luz. Se indica que un poquito. Se indica que pero bueno, mi hijo sabe que me. Se indica que tocó ponerle blanco porque se acuesta. Se indica que mira, es que la aguanta. Se indica que pero entonces si están molestándola, pues no la podemos mover un poquito. Se indica que es que el rollo es que la cámara cuando en la noche no es como las otras que eran con infrarrojo, sino que prende un reflector para darle. Se indica que para que la gente sepa. Se indica que ya lo vimos, el reflector es para darle luz a la cámara. Se indica que habría que preguntarle, porque si no, una que no les dé por eso, exactamente. Se indica que venga usted qué cámara me instaló. Se indica que porque no tiene cualquier cámara. Se indica que es con infrarrojo para la noche. Se indica que esa es la luz de la cámara, pero ahorita es con un reflector. Se indica que entonces claro, ella prende a las 6:30 y refleja todas las habitaciones. Se indica que pero ella. Se indica que en el caso mío, yo estoy en la habitación aquí acostada. Se indica que nosotros no dormimos con la puerta cerrada. Se indica que nunca, nunca en la vida. Se indica que pégala en toda la habitación del frente y se refleja en toda esa. Se indica que entonces si usted está no, pero muere uno despierta. Se indica que hoy por hoy ya es cierre la persiana para que no entre esa luz. Se indica que pues a mí me tocó ponerle el blackout. Se indica que a la puerta. Se indica que tú eres un ventanal. Se indica que tú eres un ventanal que sale a la terracita. Se indica que sí, él es una puerta, entonces le pusimos pero aún así pues mírela, doña. Se indica que Nidia, asómese ahí para que vea el reflector. Se indica que o sea, ella se prende cuando vemos. Se indica que el caso, mire el reflector ahí. Se indica que porque era papelige, toallita, dermatólogo. Se indica que y ayer hay unas bombas ahí estalladas. Se indica que hay otra vez un sucio. Se indica que sí, claro. Se indica que entonces se les acababa la toalla de. Se indica que maquillante y el paquete. Se indica que caballero protector. Se indica que buenas. Se indica que cómo está. Se indica que muy bien, y usted. Se indica que igualmente. Se indica que por ejemplo, el pene, eso como le da uno fastidio el de uno el de la. Se indica que basura. Se indica que yo le decía Hilda, póngale guantes con el recogedor. Se indica que pero yo decía pero cómo le vamos a recoger pues. Se indica que pero todo el año. Se indica que pero por qué esa cámara si tiene ese reflecto. Se indica que no entendí eso. Se indica que pero lo tiene, hijo. Se indica que siempre la tecnología tiene que tener culpables, no. Se indica que si se soluciona el problema, toca aguantar pues. Se indica que a mí me ha mejorado la situación pues, casi un 100 % pues. Se indica que pero por ejemplo, para este lado no sé quién hizo fiesta. Se indica que entonces ahí. Se indica que ahí le cayeron cosas, las. Se indica que bombas que explotan. Se indica que quién sabe qué le pasaría. Se indica que estaba muy animado. Se indica que imaginero que había antes de poner esa cama, cosas de jugo de hats, papitas, las cosas de los pisos, papel higiénico. Se indica que yo le decía esto parece que fuera la canica de la basura. Se indica que de más que la gente se asoma y re basura. Se indica que no, van a revisar eso. Se indica que van a revisar eso porque por ejemplo él se acuesta. Se indica que claro, obvio. Se indica que como dice Juan Guillermo, hay cámara, te traen su infrarrojo, tiene su luz propia. Se indica que la otra tiene infrarrojo y no tiene blanco. Se indica que que pongan la que bueno, de todas maneras que hay que sacar la plata, hay que buscar la plata donde sea. Se indica que que no se tiene la plata. Se indica que es como decía mi abuelo, uno vive donde puede. Se indica que yo lo único pues, como para lo de la asamblea, que la gente va a decir ah, sí, otra cota de listo. Se indica que se va a definir en cuantas cuotas y hacer como una salvedad, porque uno también tiene que mirar que la centurión está complicadita y que sean casos particulares. Se indica que vea, yo la puedo dar en tres cuotas, yo la puedo dar en cuatro, me queda fácil, cierto. Se indica que porque. Se indica que para que la gente no le. Se indica que diga, todo el mundo tiene el mismo poder. Se indica que no, es que eso es imposible. Se indica que es que pues es imposible eso si al mañoso si ya, pero hay situaciones particulares como eso. Se indica que señor Mónica, paciente, que ya se acerquen a la administración. Se indica que no, no, hemos una sala, yo me siento ahí a leer. Se indica que pero vos desplazaste solo el ventanal, aquí nomás, nada. Se indica que no, ahí había suficiente espacio. Se indica que no. Se indica que sí, no, pero hubo que sacar el ventanal o corriste a la el ventanal. Se indica que está en toda la esquina. Se indica que no, no, no. Se indica que sí, por eso está en todo el balcón. Se indica que sí me entiendes. Se indica que el único problema, sabe que nos vamos. Se indica que de y cada rato pájaros. Se indica que no, pero si hay que la pero si hay que hacerle un sí, sí. Se indica que sí, sí, sí, sí. Se indica que o que la invierta, que tenga esa luz para acá. Se indica que no, pero sabe que si la pone para allá, de pronto quién sabe para dónde va luz. Se indica que simplemente yo en mañana tiene que ir a la oficina, pregúntale. Se indica que la cámara que me puse en reserva tiene un reflector incorporado que se activa a las 6:00 p.m. o sea, como el infrarrojo.
+    </li>
+    <li><strong>Mesa de Ping Pong y Entrepaños:</strong>
+        <ul>
+            <li>Se aprueba la propuesta de la mesa de ping pong.</li>
+            <li>No se aprueban los entrepaños en el parqueadero para evitar que se convierta en depósito.</li>
+        </ul>
+    </li>
+    <li><strong>Cámara de Seguridad:</strong> Se revisará la cámara de seguridad para evitar molestias a los vecinos.</li>
+</ul>
+
+<h3>5. Programación de la Asamblea</h3>
+<ul>
+    <li><strong>Fecha Tentativa:</strong> Se propone el 18 o 19 de marzo para la asamblea.</li>
+    <li><strong>Confirmación:</strong> Se confirmará la fecha teniendo en cuenta los viajes de los miembros del consejo.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> No especificada</p>
+  <p><strong>Acuerdos y Acciones:</strong></p>
+  <ul>
+    <li><strong>Responsable:</strong> Luz Fernell Yepes
+      <ul>
+        <li><strong>Acción:</strong> Enviar a la abogada el estado del proceso del apartamento 701.</li>
+        <li><strong>Acción:</strong> Solicitar un diagnóstico del consumo de energía.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Administradora
+      <ul>
+        <li><strong>Acción:</strong> Revisar la cámara de seguridad para evitar molestias a los vecinos.</li>
+        <li><strong>Acción:</strong> Preguntar sobre la cámara que tiene reflector incorporado.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Consejo de Administración
+      <ul>
+        <li><strong>Acción:</strong> Confirmar la fecha de la asamblea entre el 18 y 19 de marzo.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  <ul>
+    <li>Luz Fernell Yepes</li>
+    <li>Nidia de Gómez</li>
+    <li>Otros miembros del consejo de administración</li>
+  </ul>
+</footer>
+[2025-02-07T17:21:54.640Z] Contenido cargado con éxito. ID: 1BJRSExBijPcpVKpg2xxmQbzsgnpCh7Kg
+[2025-02-07T17:21:54.640Z] Acta lista y guardada como consejo_reserva_nidia_m_de_gomez_Borrador.docx.
+[2025-02-07T17:26:35.846Z] Verificando existencia del archivo: MANANTIALES NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:26:35.847Z] Verificando o creando carpeta.
+[2025-02-07T17:26:36.281Z] Carpeta existente con ID: 1V6cDtwojYdB7BxNQam1tX3Y-wVu9urkf.
+[2025-02-07T17:26:36.281Z] Verificando existencia del archivo.
+[2025-02-07T17:26:36.837Z] Archivo ya existe. URL: 1Gd9JoddV8Y3V5eM5iNlgc9rkUwDMzSPD.
+[2025-02-07T17:26:36.837Z] El archivo ya existe.
+[2025-02-07T17:26:48.761Z] Verificando existencia del archivo: CONSEJO RESERVA NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:26:48.761Z] Verificando o creando carpeta.
+[2025-02-07T17:26:49.081Z] Carpeta existente con ID: 1GjOSl3PIQvH6kMLd-7pXNh1KQqpj3wSL.
+[2025-02-07T17:26:49.081Z] Verificando existencia del archivo.
+[2025-02-07T17:26:49.380Z] Archivo ya existe. URL: 1IDzQlGu3ezWxw9OLlFIz2hKI1YX8yIJT.
+[2025-02-07T17:26:49.380Z] El archivo ya existe.
+[2025-02-07T17:27:18.926Z] Verificando existencia del archivo: ASAMBLEA SAN JUAN NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:27:18.926Z] Verificando o creando carpeta.
+[2025-02-07T17:27:19.298Z] Carpeta existente con ID: 17NJcw8t9C9w3wahc3U-wyaXRvE25UjEd.
+[2025-02-07T17:27:19.299Z] Verificando existencia del archivo.
+[2025-02-07T17:27:19.969Z] Archivo ya existe. URL: 1_Zqb0cs_7OxkIX6bL7bMlznrVmez5ADD.
+[2025-02-07T17:27:19.969Z] El archivo ya existe.
+[2025-02-07T17:27:43.398Z] Guardando transcipcion.
+[2025-02-07T17:27:45.133Z] Verificando si la transcripción ya existe.
+[2025-02-07T17:27:45.133Z] Verificando o creando carpeta.
+[2025-02-07T17:27:45.437Z] Carpeta existente con ID: 17NJcw8t9C9w3wahc3U-wyaXRvE25UjEd.
+[2025-02-07T17:27:45.437Z] Verificando existencia del archivo.
+[2025-02-07T17:27:45.863Z] Archivo ya existe. URL: 1cSF7tPq5ICB5MvPppX_Cwga74D5iibE6.
+[2025-02-07T17:27:45.863Z] Verificando existencia del archivo.
+[2025-02-07T17:27:46.113Z] Archivo ya existe. URL: 1_Zqb0cs_7OxkIX6bL7bMlznrVmez5ADD.
+[2025-02-07T17:27:46.113Z] La transcripción ya existe.
+[2025-02-07T17:27:46.113Z] Iniciando generación de contenido: asamblea_san_juan_nidia_m_de_gomez.mp3
+[2025-02-07T17:27:46.114Z] Verificando o creando carpeta.
+[2025-02-07T17:27:46.408Z] Carpeta existente con ID: 17NJcw8t9C9w3wahc3U-wyaXRvE25UjEd.
+[2025-02-07T17:27:46.408Z] Verificando existencia del archivo.
+[2025-02-07T17:27:46.654Z] Archivo no encontrado.
+[2025-02-07T17:27:46.654Z] Verificando existencia del archivo.
+[2025-02-07T17:27:46.934Z] Archivo ya existe. URL: 1cSF7tPq5ICB5MvPppX_Cwga74D5iibE6.
+[2025-02-07T17:29:34.735Z] Guardando transcripción.
+[2025-02-07T17:29:34.736Z] Iniciando subida de archivo.
+[2025-02-07T17:29:37.328Z] Archivo subido con éxito. ID: 1xRPNTzR-zwkHX68jgJRjjsLT-EfVLkh1 y permisos de lectura pública asignados.
+[2025-02-07T17:29:37.328Z] Iniciando formato de contenido. asamblea_san_juan_nidia_m_de_gomez.mp3
+[2025-02-07T17:29:37.328Z] Verificando o creando carpeta.
+[2025-02-07T17:29:37.665Z] Carpeta existente con ID: 17NJcw8t9C9w3wahc3U-wyaXRvE25UjEd.
+[2025-02-07T17:29:37.666Z] Verificando existencia del archivo.
+[2025-02-07T17:29:37.932Z] Archivo no encontrado.
+[2025-02-07T17:29:37.932Z] Verificando existencia del archivo.
+[2025-02-07T17:29:38.210Z] Archivo ya existe. URL: 1xRPNTzR-zwkHX68jgJRjjsLT-EfVLkh1.
+[2025-02-07T17:29:38.210Z] Verificando existencia del archivo.
+[2025-02-07T17:29:38.524Z] Archivo ya existe. URL: 1cSF7tPq5ICB5MvPppX_Cwga74D5iibE6.
+Formato generado:
+[2025-02-07T17:29:41.365Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> 5 de mayo de 2027</p>
+  <p><strong>Hora:</strong> Inicio: No especificada - Cierre: 9:35 PM</p>
+  <p><strong>Lugar:</strong> Edificio San Juan de la Vega</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Catalina - Presidente de la reunión</li>
+    <li>Luz Fernelli Yepes - Contadora</li>
+    <li>Nidia - Administradora</li>
+    <li>Ángela Luis - Propietaria</li>
+    <li>Varios propietarios</li>
+  </ul>
+  <p><strong>Quórum:</strong> 53.60%</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum y Aprobación del Orden del Día</li>
+  <li>Elección de Presidente y Secretario de Asamblea</li>
+  <li>Elección de la Comisión para Revisar y Firmar el Acta</li>
+  <li>Lectura del Acta Anterior</li>
+  <li>Análisis y Aprobación del Balance a 31 de Diciembre de 2024</li>
+  <li>Análisis y Aprobación del Presupuesto para el Año 2025</li>
+  <li>Informe de Administración</li>
+  <li>Elección del Consejo de Administración</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum y Aprobación del Orden del Día</h3>
+<p>Se constató la verificación del quórum con un 53.60% de asistencia. Se procedió a preguntar a los asistentes si aprobaban el orden del día tal como fue enviado o si deseaban realizar alguna modificación.</p>
+
+<h3>2. Elección de Presidente y Secretario de Asamblea</h3>
+<p>Se solicitó la postulación de un propietario para presidir la reunión y moderarla, así como para dar fe de lo tratado en el acta. Se postuló a Catalina para presidir la reunión, quien aceptó la postulación.</p>
+<p>En cuanto al secretario, se indicó que la administración siempre levanta el acta en la oficina, y se preguntó si los presentes estaban de acuerdo. Se confirmó el acuerdo de los asistentes.</p>
+
+<h3>3. Elección de la Comisión para Revisar y Firmar el Acta</h3>
+<p>Se solicitó la postulación de dos propietarios para revisar y firmar el acta una vez levantada, dando fe de su corrección. Ángela Luis se postuló para revisar y firmar el acta.</p>
+
+<h3>4. Lectura del Acta Anterior</h3>
+<p>Se recordó a los presentes que el acta de la asamblea ordinaria y extraordinaria anterior fue enviada a cada uno para su revisión. Se consultó si deseaban que se leyera el acta o si, dado que ya tenían conocimiento de ella, se omitía la lectura. Se decidió omitir la lectura del acta anterior.</p>
+<p>Se recordó que el único tema tratado en la asamblea extraordinaria anterior, celebrada el 12 de noviembre, fue el tema financiero, específicamente la aprobación de cuotas extras para nivelar las finanzas.</p>
+
+<h3>5. Análisis y Aprobación del Balance a 31 de Diciembre de 2024</h3>
+<p>Se cedió la palabra a Luz Fernelli Yepes, contadora, para presentar un recuento del balance del año 2024. Se invitó a los asistentes a realizar preguntas o expresar inquietudes.</p>
+<p>Luz Fernelli Yepes presentó el balance financiero del año 2024, destacando los siguientes puntos:</p>
+<ul>
+    <li><strong>Saldo bancario:</strong> Al 31 de diciembre, el saldo en el banco a nombre del edificio San Juan de la Vega era de $2,157,750.</li>
+    <li><strong>Fiducuenta:</strong> El edificio cuenta con una fiducuenta con un saldo de $4,020,322, destinada al fondo de reserva legal. Se explicó que esta fiducuenta permite manejar los recursos como una cuenta de ahorro, pero con rendimientos mayores.</li>
+    <li><strong>Deudores:</strong> Se mencionaron los deudores al 31 de diciembre, incluyendo el apartamento 702. Se explicó que se les envía información cada tres o cuatro meses sobre su deuda.</li>
+</ul>
+<p>Se mencionó el caso del apartamento 702, cuya deuda está siendo gestionada con la SAE (Sociedad de Activos Especiales). Se explicó que, tras varios intentos, se logró establecer comunicación con un funcionario de la SAE, quien informó que el apartamento tiene un contrato de arrendamiento con fiador y codeudor. La SAE se comprometió a contactar a estas partes para asegurar el pago completo de la administración.</p>
+<p>Se aclaró que la SAE está pagando $1,400,000 correspondientes al arriendo, pero se busca que paguen el valor total de la administración. Se mencionó que la cuota de administración de este apartamento en 2024 era de $1,000,819, más $416,000 en cuotas extras y $10,000 en ahorro, sumando un total de $2,000,931.</p>
+<p>Se mencionó un saldo a favor de $9,400 para el apartamento 401, debido a un pago en exceso. Se concluyó que la situación financiera no es tan grave como se había presentado en octubre.</p>
+<p>Se detallaron las deudas del edificio, incluyendo honorarios de contabilidad por $238,000, servicios de Bioburbe (empresa de empleados) por $6,000,000, y servicios de Eficaz Amplia (empresa de aseo) y retención en la fuente por $6,662,901. Se aclaró que estas deudas ya fueron pagadas en enero.</p>
+<p>Se recordó que el fondo de ahorro se utilizó hasta octubre para apalancar la cuota extra, y que el ahorro de noviembre y diciembre suma $380,000, resultado de $10,000 mensuales por 19 apartamentos durante dos meses.</p>
+<p>Se presentó el patrimonio del edificio, que asciende a $2,000,680,930, de los cuales $1,618,927 corresponden a la reserva. Se destacó que el ejercicio de 2024 arrojó un excedente de $1,000,000 gracias a la cuota extra cobrada en octubre y a la gestión de los recursos en noviembre y diciembre.</p>
+<p>Se informó que en 2024 se facturaron $162,000,000 por cuotas de administración y $16,000,437 por cuotas extras (seguro y nivelación del presupuesto). Se recordó que al 31 de diciembre de 2023 se tenía un déficit de $9,544,502, cubierto con cuotas extras. En total, en 2025 se cobraron aproximadamente $25,000,000 en cuotas extras para cubrir el seguro, el déficit de 2023 y nivelar el presupuesto de 2024.</p>
+<p>Se mencionaron otros ingresos por aprovechamiento de $3,357,580 y se detallaron los gastos, incluyendo beneficios a empleados (con varias modalidades de contratación debido a la transición a la empresa de aseo), honorarios a la contadora por $3,000,347, póliza de seguros por $7,000,624 (cuota extra), servicios de aseo, servicios públicos (con un aumento considerable), servicios de administración, mantenimiento y reparaciones (incluyendo reparaciones de tuberías, compra de un monitor para las cámaras, y mantenimiento del edificio), y gastos diversos (elementos de aseo, papelería, bonos navideños, gastos financieros, y Fondo de Reserva del Año 2024 por $1,000,619).</p>
+<p>Se concluyó que los gastos totales sumaron $180,000,823, resultando en un excedente de $1,000,000 en el año 2000. Se presentó un panorama de cómo se ejecutó cada gasto, destacando que el mayor valor corresponde a los empleados (65.45%) y los honorarios (85%).</p>
+<p>Se preguntó si había alguna pregunta sobre el panorama financiero del año 2024. No habiendo preguntas, se procedió a la aprobación del balance 2024, que fue aprobado.</p>
+
+<h3>6. Análisis y Aprobación del Presupuesto para el Año 2025</h3>
+<p>Se indicó que la administración envió un proyecto de presupuesto junto con la citación y los documentos de la reunión. Se aclaró que es un proyecto y que se debe construir entre todos, de acuerdo con las necesidades del edificio. Se explicó que los presupuestos de las copropiedades se construyen con base en los gastos de la copropiedad, y que la sumatoria de estos gastos se divide para generar un porcentaje.</p>
+<p>Se propuso revisar el presupuesto rubro por rubro, escuchando las opiniones de los asistentes. Se mencionó que los únicos ingresos del edificio son las cuotas de administración, ya que no hay otros ingresos como parqueadero de visitantes o alquiler de zonas comunes.</p>
+<p>Se abordó el gasto de personal, indicando que a partir de enero, con los tres empleados contratados a través de la empresa, el costo mensual es de $11,341,960. Se explicó que la reducción de la jornada laboral de 48 a 44 horas semanales, implementada por el gobierno, incrementa los costos laborales debido a las horas extras y los recargos prestacionales. Se mencionó que el auxilio de transporte también incrementó en más de un 20%.</p>
+<p>Se explicó que la empresa de personal asume el riesgo de incapacidades, licencias y reemplazos, lo cual justifica el costo. Se proyecta un incremento del 16.8% en el gasto de personal de 2024 a 2025, incluyendo la reducción de la jornada laboral en julio.</p>
+<p>Se proyectó un incremento del 8% en los servicios de administración y contabilidad. En cuanto a los servicios de aseo, se proyectó un incremento del 12% con base en el histórico de 2024, debido a que la empresa de aseo debe incluir una proporción de los servicios públicos en su tarifa.</p>
+<p>Se mencionó que el gobernador creó un impuesto a los servidores, pero no ha sido aprobado, por lo que no se está incluyendo en el presupuesto. Se abordó el tema del ascensor, indicando que se está contemplando el incremento según la carta enviada por la empresa, con respecto al salario mínimo. Los extintores solo requieren una recarga anual, con un costo de $13,000. Se discutió el gasto de citofonía, indicando que no se está de acuerdo con ese gasto. Se mencionó que se mandó a revisar la cuestión de la red y que el daño en el aparato del apartamento corresponde al propietario.</p>
+<p>Se contempló un gasto de $400,000 para el mantenimiento y reparación de cámaras, debido a que el monitor es nuevo. Se discutió el mantenimiento de las puertas de garaje, indicando que la puerta de abajo tiene un mantenimiento muy bajo, mientras que la de arriba, al ser levadiza, requiere un mayor mantenimiento. Se propuso mantener el mismo presupuesto del año anterior ($1,400,000) debido a un daño reciente.</p>
+<p>Se abordó el tema de las motobombas, indicando que es un gasto fortuito e incierto. Se propuso mantener el mismo presupuesto del año anterior para evitar cuotas extras. Se acordó mantener el mismo presupuesto de 2020 para las motobombas.</p>
+<p>Se discutió el mantenimiento del edificio, indicando que se separó lo relacionado con el mantenimiento de los techos (canoas y bajantes) debido a los inconvenientes que han presentado. Se rebajó el mantenimiento del edificio debido a que ya se pintó el año pasado. Se mencionó que el mantenimiento de techos es preventivo y se realiza cada cuatro meses para revisar bajantes y canoas.</p>
+<p>Se mencionó la posibilidad de reemplazar los techos con lonas asfálticas a futuro, debido a que los techos son muy viejos. Se indicó que este año se podría cambiar la parte que más problemas tenga. Se mencionó un caso en el 701, donde hay una parte que siempre presenta problemas, y se propuso quitar las tejas y poner una lona asfáltica para solucionar el problema.</p>
+<p>Se contempló un gasto para instalaciones eléctricas, de forma preventiva, por si se daña algún sensor. Se mantuvo el mismo presupuesto del año pasado para los comparadores, debido a que se compran en una empresa que ofrece un año de garantía. Se mantuvo el mismo presupuesto para la fumigación. Se apretó el presupuesto en elementos de aseo. Se explicó el gasto de papelería y copias, indicando que se mandaron a hacer documentos equivalentes, que son necesarios para reemplazar los recibos de caja menor.</p>
+<p>Se discutieron los gastos financieros, indicando que se abrió una cuenta con app personas para reducir los costos de la sucursal virtual y los pagos. Se propuso cancelar la cuenta actual y abrir una nueva, pero se requiere el consenso de la asamblea. Se explicó que esto permitiría un ahorro gigante. Se acordó cambiar la cuenta y notificar a todos para que realicen los pagos en la nueva cuenta.</p>
+<p>Se abordó el tema de los bonos navideños para los empleados. Se propuso quitar este rubro del presupuesto y que cada propietario dé una cuota independiente a los empleados. Se acordó quitar el bono navideño del presupuesto y que cada apartamento dé un valor base de $50,000 hasta el 20 de noviembre. Se sacó el bono navideño del presupuesto.</p>
+<p>Se discutió el tema de la facturación, indicando que disminuye porque el año pasado se facturaron cuotas extras. Se aclaró que acá solo se incluye la administración y la reserva legal (1%). El seguro se paga por aparte, con cuota extra. Se mencionó que ya se tienen los valores del seguro y que se presentarán a la asamblea.</p>
+<p>Se mencionó que al contratar el seguro, se debe negociar lo que cubre y lo que no cubre. Se discutió el tema de la responsabilidad civil en caso de accidentes dentro del edificio. Se propuso aumentar el seguro o no dejar entrar a los domiciliarios. Se acordó no dejar entrar a los domiciliarios y enviar una circular con las explicaciones jurídicas. Se acordó dejar el seguro en $500 millones y evaluar la posibilidad de subirlo cuando venga el asegurador.</p>
+<p>Se acordó que cada vez que alguien entre a prestar servicios al edificio (médicos, jardinero, señor de la bomba, contratista), debe mostrar la ARL y se debe consignar en un libro. Se aclaró que los domicilios no entran al edificio. Se acordó que los trabajadores que revisen neveras o hagan mantenimiento en los apartamentos sí pueden entrar, pero deben demostrar que tienen ARL.</p>
+<p>Se preguntó cuánto quedaría con $1,000 millones de responsabilidad civil. Se preguntó en qué otro rubro se podría subir o bajar. Se concluyó que las cuotas de administración incrementarían en un 18% con respecto a lo que venían pagando. Se explicó que este incremento cubre el presupuesto que se acaba de hacer, incluyendo la seguridad con sus horas adicionales.</p>
+<p>Se preguntó si, por ejemplo, se llama a un trabajador para revisar la nevera, si se le deja entrar. Se aclaró que sí, pero debe demostrar que tiene ARL. Se preguntó si el novio también se deja entrar. Se aclaró que sí, pero también debe mostrar ARL.</p>
+<p>Se mostró lo que se está pagando actualmente con el 5.20% de incremento. Se explicó que ese es el valor de la cuota de administración para que tengan como base qué pagan y cuánto pagarán. Se aclaró que ahí no está incluido el seguro. Se explicó que el incremento del 18% cubre lo que se acaba de calcular y presupuestar, que es la seguridad con sus horas adicionales.</p>
+<p>Se mencionó que si se presenta un daño grande, se citará a asamblea extraordinaria. Se recordó que los techos y el aguacero están cubiertos por el seguro. Se mencionó que el pecado de San Juan de la Vega es que siempre se ha dejado muy poquito y se ha tenido que salir a cuotas extras.</p>
+<p>Se mencionó que el costo del personal humano es la única forma de que baje, poniendo todo tecnológico. Se recordó la asamblea de octubre, donde se explicó por qué fue necesaria la cuota de octubre, porque se hicieron cuentas muy alegres y se redujo el presupuesto.</p>
+<p>Se propuso subir más el ahorro, para tener un colchón. Se propuso subirlo a $50,000. Se explicó que el ahorro ha ayudado mucho y que con ese ahorro se podría empezar a organizar lo de los techos. Se propuso subir un poquito más ese ahorro, pero todos por igual. Se propuso subirlo a $5,000. Se propuso que sea gradual, subirle $20,000 más y después de junio subirle otro poquito más. Se propuso subirle $10,000.</p>
+<p>Se preguntó qué diferencia tiene el ahorro con la administración. Se explicó que el ahorro no es porcentual, sino que se comenzó con $3,000 y se llegó a tener $3,000,000. Se dijo que no se puede gastar en nada, sino en una necesidad que se presente y sea tomada por asamblea. Se propuso que sea por coeficiente. Se propuso que la base sea de $10,000. Se explicó que a esos $190,000 se le tendría que aplicar el coeficiente. Se propuso que sea el mismo coeficiente que se tiene aplicado en la administración. Se propuso no meterlo en la administración. Se propuso dejarlo en los $10,000. Se propuso que a partir de esos $10,000 cada uno pague por coeficiente. Se propuso que sigamos con el valor del ahorro y no lo llevemos tan arriba. Se propuso $20,000 y sigamos como va. Se propuso que quede por $20,000, pero con coeficiente. Se propuso dejar los mismos $10,000. Se propuso que en junio se suba a $20,000. Se propuso que hasta junio sean $10,000 y de junio a diciembre sean $15,000. Se propuso que sea a partir del coeficiente o $15,000 general. Se propuso que hasta junio recogeríamos $1,140,000 y a partir de julio a diciembre $1,710,000. Se propuso que el ahorro total del año quede en $2,850,000. Se propuso que sea a partir de la cuota extra de seguro, no los $10,000 como siempre lo hemos recogido. Se propuso que doña Nidia les pase el valor porque ella quedó de hacer unas averiguaciones.</p>
+<p>Se volvió al presupuesto, indicando que el tema del ahorro es algo distinto. Se propuso incrementar el 18% las cuotas de administración. Se propuso diferir el incremento en enero y febrero. Se propuso diferirlo en tres meses. Se propuso que sea en dos, porque después se va a enredar con el seguro. Se propuso que enero se cobre en marzo y febrero en abril, retroactivo. Se propuso que quede claro que lo que se dejó de pagar en enero y febrero, que fue el incremento que acabamos de hacer, se va a diferir en dos cuotas para pagarlas en abril, para que no llegue ese golpe de.</p>
+
+<h3>7. Informe de Administración</h3>
+<p>Se indicó que el informe de gestión se envió a cada uno, donde está todo lo que se hizo, el recuento de toda esa parte, que es obligatorio enviarlo.</p>
+
+<h3>8. Elección del Consejo de Administración</h3>
+<p>Se mencionaron los miembros del consejo de administración: Luis Carlos Pérez, Ángela María Ramírez, Don Diego Alejandro, Doña Catalina Roldán, Doña Luz Andrea Monsal. Doña Luz Ángela no acompaña. Se propuso que Doña Andrea nos acompañe, que nos necesita. Se propuso que Erika se estrene. Se propuso que nos acompañe. Se propuso que nos puede cantar. Se mencionaron los miembros del consejo: Doña Andrea, Doña Catalina, Doña Erika, Doña Clara María Mesa. Se propuso que alguien más participe. Se propuso que Ángela puede entrar, pero es. Se propuso que nos enlacemos por el celular. Se propuso que no sea una camisa de fuerza que si de pronto no podamos estar, nos llame por el celular. Se propuso que Doña Ángela María, realmente como está viendo en el retiro pero la última vez nos enlazamos por el celular. Se propuso que sea impar. Se propuso que Ángela puede entrar, pero es listo. Y nos enlazamos por el celular. Pero ya di la excusa que a mí me gusta mucho estar enterada, pero Doña Ángela María, realmente como está viendo en el retiro pero la última vez nos enlazamos por el celular. Y que no sea una camisa de fuerza que si de pronto no podamos estar, nos llame por el celular. Listo. Entonces qué sigue, luz? Doña Nidia?</p>
+
+<h3>9. Proposiciones y Varios</h3>
+<p>Se abrió el espacio para proposiciones y varios. La administración trajo tres propuestas.</p>
+<ul>
+    <li><strong>Petición de un propietario (303):</strong> El propietario del apartamento 303 presentó un accidente en su apartamento, debido a que la sala tiene un nivel por debajo. Solicitó permiso para rellenar ese desnivel y usar el parqueadero un solo día para hacer la mezcla. Doña Irma ofreció su parqueadero para que no saque su carro. Se acordó que puede parquear donde Doña Irma y Erika le dejó el espacio del lado suyo. Se acordó que nos avise y se pondrá aviso.</li>
+    <li><strong>Plaquitas del timbre:</strong> Se solicitó poner un letrerito que diga timbre y que quede por fuera de la ventana abierta de la portería.</li>
+    <li><strong>Tapete para el ascensor:</strong> Se solicitó poner un tapete para el ascensor, que sea atrapamugre o de cuerpo. Se propuso que tenga el nombre del edificio pequeñito que diga San Juan de la Vega.</li>
+    <li><strong>Lámparas del jardín:</strong> Se solicitó cambiar las lámparas del jardín, que están muy feitas. Se propuso poner reflectores que iluminen el jardín, en lugar de lámparas. Se mencionó que las lámparas cuestan $700,000. Se propuso conseguir los acrílicos para las lámparas actuales.</li>
+    <li><strong>Mantenimiento de la fachada:</strong> Se propuso hacer mantenimiento a la fachada, que hace como 10 años se hizo. Se propuso averiguar con el señor que trabaja con Arturos para impermeabilizar todo ese lado. Se propuso revisar por qué se han perdido las lositas a la entrada, al pie de las matas. Se propuso revisar los caminitos peatonales entre las jardineras.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 9:35 PM</p>
+  <p><strong>Acuerdos y Acciones:</strong></p>
+  <ul>
+    <li><strong>Aprobación del Orden del Día:</strong> Aprobado sin modificaciones.</li>
+    <li><strong>Elección de Presidente:</strong> Catalina fue elegida como presidente de la asamblea.</li>
+    <li><strong>Elección de Secretario:</strong> La administración continuará levantando el acta.</li>
+    <li><strong>Comisión para Revisar y Firmar el Acta:</strong> Ángela Luis se postuló para revisar y firmar el acta.</li>
+    <li><strong>Lectura del Acta Anterior:</strong> Se omitió la lectura del acta anterior.</li>
+    <li><strong>Aprobación del Balance 2024:</strong> Aprobado.</li>
+    <li><strong>Aprobación del Presupuesto 2025:</strong> Se incrementó el 18% las cuotas de administración.</li>
+    <li><strong>Domiciliarios:</strong> No se permitirán domiciliarios en el edificio.</li>
+    <li><strong>Seguro:</strong> Se dejará el seguro en $500 millones y se evaluará la posibilidad de subirlo cuando venga el asegurador.</li>
+    <li><strong>ARL:</strong> Cada vez que alguien entre a prestar servicios al edificio, debe mostrar la ARL y se debe consignar en un libro.</li>
+    <li><strong>Petición del propietario del 303:</strong> Se autorizó a rellenar el desnivel de su apartamento y usar el parqueadero un solo día.</li>
+    <li><strong>Plaquitas del timbre:</strong> Se pondrá un letrerito que diga timbre y que quede por fuera de la ventana abierta de la portería.</li>
+    <li><strong>Tapete para el ascensor:</strong> Se pondrá un tapete para el ascensor, que sea atrapamugre o de cuerpo.</li>
+    <li><strong>Lámparas del jardín:</strong> Se propuso conseguir los acrílicos para las lámparas actuales.</li>
+    <li><strong>Mantenimiento de la fachada:</strong> Se propuso averiguar con el señor que trabaja con Arturos para impermeabilizar todo ese lado.</li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  <ul>
+    <li>Catalina - Presidente de la reunión</li>
+    <li>Ángela Luis - Propietaria</li>
+  </ul>
+</footer>
+[2025-02-07T17:29:45.164Z] Contenido cargado con éxito. ID: 16GmBJXvtJC6XJ0whoIwUB90J04V-fa70
+[2025-02-07T17:29:45.164Z] Acta lista y guardada como asamblea_san_juan_nidia_m_de_gomez_Borrador.docx.
+[2025-02-07T17:30:41.888Z] Verificando existencia del archivo: ASAMBLEA SAN JUAN NIDIA M DE GOMEZ.MP3.
+[2025-02-07T17:30:41.888Z] Verificando o creando carpeta.
+[2025-02-07T17:30:42.236Z] Carpeta existente con ID: 17NJcw8t9C9w3wahc3U-wyaXRvE25UjEd.
+[2025-02-07T17:30:42.237Z] Verificando existencia del archivo.
+[2025-02-07T17:30:42.554Z] Archivo ya existe. URL: 1_Zqb0cs_7OxkIX6bL7bMlznrVmez5ADD.
+[2025-02-07T17:30:42.554Z] El archivo ya existe.
+[2025-02-07T20:01:08.722Z] Verificando existencia del archivo: testboticelli.m4a.
+[2025-02-07T20:01:08.724Z] Verificando o creando carpeta.
+[2025-02-07T20:01:09.049Z] Carpeta existente con ID: 1y5MI27NG1JhRjAVIJXp1A-9KpBEUeTcT.
+[2025-02-07T20:01:09.049Z] Verificando existencia del archivo.
+[2025-02-07T20:01:09.351Z] Archivo ya existe. URL: 1TgkECcZOHg8tgALyDT-USQfiG9SVnT7e.
+[2025-02-07T20:01:09.351Z] El archivo ya existe.
+[2025-02-08T12:20:02.094Z] Verificando existencia del archivo: audio faro seguridad Camilo Camargo.m4a.
+[2025-02-08T12:20:02.095Z] Verificando o creando carpeta.
+[2025-02-08T12:20:02.551Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:20:02.551Z] Verificando existencia del archivo.
+[2025-02-08T12:20:02.960Z] Archivo ya existe. URL: 1y3PbSa8NlbY2GnAgiepKIkyh6h-KoznN.
+[2025-02-08T12:20:02.960Z] El archivo ya existe.
+[2025-02-08T12:20:04.118Z] Verificando existencia del archivo: audio lunes acta linda villa Camilo Camargo.m4a.
+[2025-02-08T12:20:04.118Z] Verificando o creando carpeta.
+[2025-02-08T12:20:04.478Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:20:04.478Z] Verificando existencia del archivo.
+[2025-02-08T12:20:04.732Z] Archivo no encontrado.
+[2025-02-08T12:20:04.732Z] Iniciando subida de archivo.
+[2025-02-08T12:20:08.344Z] Archivo subido con éxito. ID: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt y permisos de lectura pública asignados.
+[2025-02-08T12:20:08.344Z] Archivo subido correctamente: audio lunes acta linda villa Camilo Camargo.m4a.
+[2025-02-08T12:20:10.589Z] Verificando si la transcripción ya existe.
+[2025-02-08T12:20:10.589Z] Verificando o creando carpeta.
+[2025-02-08T12:20:10.865Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:20:10.865Z] Verificando existencia del archivo.
+[2025-02-08T12:20:11.198Z] Archivo no encontrado.
+[2025-02-08T12:20:11.198Z] Verificando existencia del archivo.
+[2025-02-08T12:20:11.457Z] Archivo ya existe. URL: 1y3PbSa8NlbY2GnAgiepKIkyh6h-KoznN.
+[2025-02-08T12:20:11.457Z] Iniciando proceso de transcripción.
+[2025-02-08T12:20:15.692Z] Verificando si la transcripción ya existe.
+[2025-02-08T12:20:15.692Z] Verificando o creando carpeta.
+[2025-02-08T12:20:15.946Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:20:15.946Z] Verificando existencia del archivo.
+[2025-02-08T12:20:16.212Z] Archivo no encontrado.
+[2025-02-08T12:20:16.212Z] Verificando existencia del archivo.
+[2025-02-08T12:20:16.506Z] Archivo ya existe. URL: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt.
+[2025-02-08T12:20:16.506Z] Iniciando proceso de transcripción.
+[2025-02-08T12:20:41.549Z] Guardando transcripción.
+[2025-02-08T12:20:41.549Z] Iniciando subida de archivo.
+[2025-02-08T12:20:43.205Z] Guardando transcripción.
+[2025-02-08T12:20:43.205Z] Iniciando subida de archivo.
+[2025-02-08T12:20:43.727Z] Archivo subido con éxito. ID: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU y permisos de lectura pública asignados.
+[2025-02-08T12:20:43.727Z] Transcripción completada con éxito.
+[2025-02-08T12:20:43.727Z] Iniciando generación de contenido: audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:20:43.728Z] Verificando o creando carpeta.
+[2025-02-08T12:20:44.000Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:20:44.000Z] Verificando existencia del archivo.
+[2025-02-08T12:20:44.239Z] Archivo no encontrado.
+[2025-02-08T12:20:44.239Z] Verificando existencia del archivo.
+[2025-02-08T12:20:44.619Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:20:45.490Z] Archivo subido con éxito. ID: 16JNb2jjYbfxWv48LurwKZTx2d_fJj327 y permisos de lectura pública asignados.
+[2025-02-08T12:20:45.490Z] Transcripción completada con éxito.
+[2025-02-08T12:20:45.490Z] Iniciando generación de contenido: audio_faro_seguridad_camilo_camargo.m4a
+[2025-02-08T12:20:45.490Z] Verificando o creando carpeta.
+[2025-02-08T12:20:45.771Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:20:45.771Z] Verificando existencia del archivo.
+[2025-02-08T12:20:46.000Z] Archivo no encontrado.
+[2025-02-08T12:20:46.000Z] Verificando existencia del archivo.
+[2025-02-08T12:20:46.263Z] Archivo ya existe. URL: 16JNb2jjYbfxWv48LurwKZTx2d_fJj327.
+[2025-02-08T12:21:02.853Z] Iniciando subida de archivo.
+[2025-02-08T12:21:05.713Z] Archivo subido con éxito. ID: 1kt2_WuePeUKbPjutuPsEq-BnffIpM31B y permisos de lectura pública asignados.
+[2025-02-08T12:21:05.713Z] Iniciando formato de contenido. audio_faro_seguridad_camilo_camargo.m4a
+[2025-02-08T12:21:05.713Z] Verificando o creando carpeta.
+[2025-02-08T12:21:05.978Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:21:05.978Z] Verificando existencia del archivo.
+[2025-02-08T12:21:06.259Z] Archivo no encontrado.
+[2025-02-08T12:21:06.259Z] Verificando existencia del archivo.
+[2025-02-08T12:21:06.495Z] Archivo ya existe. URL: 1kt2_WuePeUKbPjutuPsEq-BnffIpM31B.
+[2025-02-08T12:21:06.495Z] Verificando existencia del archivo.
+[2025-02-08T12:21:06.778Z] Archivo ya existe. URL: 16JNb2jjYbfxWv48LurwKZTx2d_fJj327.
+[2025-02-08T12:21:08.496Z] Iniciando subida de archivo.
+Formato generado:
+[2025-02-08T12:21:09.249Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: [Hora no especificada en la transcripción] - Cierre: [Hora no especificada en la transcripción]</p>
+  <p><strong>Lugar:</strong> Indavilla</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>José [Cargo no especificado]</li>
+    <li>Víctor [Cargo no especificado]</li>
+    <li>Gustavo [Cargo no especificado]</li>
+    <li>Maro [Cargo no especificado]</li>
+    <li>Representante Legal de la Copropiedad [Nombre no especificado]</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Situación de Pagos Pendientes</li>
+  <li>Seguridad Social de los Empleados</li>
+  <li>Liquidaciones Pendientes</li>
+  <li>Propuesta de Acuerdo y Pagos</li>
+  <li>Compromiso de Continuidad del Servicio</li>
+  <li>Cierre de la Cuota Comercial</li>
+</ol>
+
+<h2>Situación de Pagos Pendientes</h2>
+<p>Se inició la reunión con la discusión sobre los pagos pendientes de las facturas de enero y febrero. El representante legal de la copropiedad manifestó que estos pagos han sido retenidos debido a la falta de garantía de que los empleados que prestan el servicio en Indavilla cuenten con seguridad social. Se expresó preocupación por la situación delicada de tener empleados sin seguridad social, lo cual podría generar problemas legales para la copropiedad en caso de algún accidente o eventualidad.</p>
+
+<h2>Seguridad Social de los Empleados</h2>
+<p>El principal motivo de la retención de pagos es la falta de seguridad social para la mayoría de los empleados que prestan el servicio en Indavilla. Se destacó que esta situación es muy delicada y que la copropiedad no puede realizar pagos sin garantizar que los empleados estén al día con sus obligaciones de seguridad social. Se mencionó que, aunque el servicio se supone que va hasta el 15, existe preocupación de que esta situación continúe después de la suspensión del servicio.</p>
+
+<h2>Liquidaciones Pendientes</h2>
+<p>Además de los problemas con la seguridad social, se mencionó que existen liquidaciones pendientes de pago a empleados que prestaron servicio hace cinco o seis meses. Esta situación también se considera delicada y es un factor que influye en la retención de los pagos. La copropiedad desea ponerse al día con todos los proveedores, pero no quiere realizar pagos sin la garantía de que se cumplan las obligaciones laborales pendientes.</p>
+
+<h2>Propuesta de Acuerdo y Pagos</h2>
+<p>La copropiedad propuso un acuerdo en el que se compromete a realizar los pagos directamente a las entidades financieras correspondientes a las cesantías, prestaciones y liquidaciones pendientes de los empleados. Una vez realizados estos pagos, se pagaría el valor restante a la empresa. Esta propuesta surge debido a la falta de confianza en que la empresa destine los pagos a saldar las deudas laborales pendientes, como ocurrió en noviembre, cuando se solicitó un pago rápido para liquidaciones que aún no se han realizado.</p>
+
+<p>En respuesta, se reconoció la validez de las preocupaciones planteadas. Se explicó que la empresa ha tenido afectaciones internas y que algunos problemas no eran conocidos por el personal hasta después de la inclusión de ciertos individuos. Se mencionó que hay liquidaciones pendientes de dos o tres guardas y que las prestaciones no se pagan desde noviembre. En cuanto a los salarios, se afirmó que la primera quincena está al día, pero las prestaciones no.</p>
+
+<p>Se propuso que la empresa genere las liquidaciones pendientes y las planillas de pago, para que la copropiedad realice los pagos directamente a las entidades financieras. Se argumentó que los estados financieros de la empresa no reflejan adecuadamente la situación y que es necesario garantizar que los pagos se destinen correctamente. Se sugirió que la copropiedad realice los pagos y luego se crucen las cuentas contablemente.</p>
+
+<p>Se planteó la posibilidad de realizar los pagos de seguridad social de forma inmediata, con la copropiedad realizando los pagos directamente y luego pagando el resto a la empresa. Se enfatizó que el tema más delicado en ese momento es la seguridad social, y que al resolverlo se tendría la tranquilidad de que no hay riesgos latentes en la portería. Se propuso pagar la seguridad social, luego las liquidaciones y nóminas, y finalmente el saldo del contrato.</p>
+
+<p>Se acordó que la empresa enviará las planillas completas de seguridad social pendientes desde noviembre hasta enero, para que la copropiedad realice los pagos. Se aclaró que el orden de los pagos será: prestaciones, salarios y, por último, liquidaciones. Se pagará todo hasta febrero para no dejar obligaciones vivas hasta fin de mes.</p>
+
+<h2>Compromiso de Continuidad del Servicio</h2>
+<p>Se expresó el deseo de mantener una buena relación comercial y se mencionó la posibilidad de una salida de la cuota comercial de mutuo acuerdo. Se acordó que, en caso de cualquier inconveniente, se comunicará para evitar problemas mayores. Se elaborará una carta donde se anuncien la terminación y los compromisos acordados.</p>
+
+<h2>Cierre de la Cuota Comercial</h2>
+<p>Se discutió la posibilidad de cerrar la cuota comercial de mutuo acuerdo. Se acordó que, en caso de cualquier inconveniente, se comunicará para evitar problemas mayores. Se elaborará una carta donde se anuncien la terminación y los compromisos acordados.</p>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> [Hora no especificada en la transcripción]</p>
+  <p><strong>Acuerdos y Acciones:</strong></p>
+  <ul>
+    <li><strong>Responsable:</strong> Empresa
+      <ul>
+        <li><strong>Acción:</strong> Enviar las planillas completas de seguridad social pendientes desde noviembre hasta enero.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Copropiedad
+      <ul>
+        <li><strong>Acción:</strong> Realizar los pagos de seguridad social, prestaciones, salarios y liquidaciones pendientes, y luego pagar el saldo restante a la empresa.</li>
+        <li><strong>Acción:</strong> Elaborar una carta donde se anuncien la terminación y los compromisos acordados.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  <ul>
+    <li>José [Cargo no especificado]</li>
+    <li>Víctor [Cargo no especificado]</li>
+    <li>Gustavo [Cargo no especificado]</li>
+    <li>Maro [Cargo no especificado]</li>
+    <li>Representante Legal de la Copropiedad [Nombre no especificado]</li>
+  </ul>
+</footer>
+[2025-02-08T12:21:10.705Z] Archivo subido con éxito. ID: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP y permisos de lectura pública asignados.
+[2025-02-08T12:21:10.705Z] Iniciando formato de contenido. audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:21:10.705Z] Verificando o creando carpeta.
+[2025-02-08T12:21:10.970Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:21:10.970Z] Verificando existencia del archivo.
+[2025-02-08T12:21:11.224Z] Archivo no encontrado.
+[2025-02-08T12:21:11.224Z] Verificando existencia del archivo.
+[2025-02-08T12:21:11.531Z] Archivo ya existe. URL: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP.
+[2025-02-08T12:21:11.532Z] Verificando existencia del archivo.
+[2025-02-08T12:21:11.772Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:21:11.942Z] Contenido cargado con éxito. ID: 1UgLVcS5XTmJc8wPkNx6xtNRYxFrEU9ju
+[2025-02-08T12:21:11.943Z] Acta lista y guardada como audio_faro_seguridad_camilo_camargo_Borrador.docx.
+Formato generado:
+[2025-02-08T12:21:14.702Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: [Hora de inicio no especificada en la transcripción] - Cierre: [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Lugar:</strong> [Lugar no especificado en la transcripción]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Doña Blanca - [Cargo no especificado en la transcripción]</li>
+    <li>Santiago - [Cargo no especificado en la transcripción]</li>
+    <li>John - [Cargo no especificado en la transcripción]</li>
+    <li>Estela - [Cargo no especificado en la transcripción]</li>
+    <li>Mario - [Cargo no especificado en la transcripción]</li>
+    <li>Narcayo - [Cargo no especificado en la transcripción]</li>
+    <li>Representante de Segurte - [Cargo no especificado en la transcripción]</li>
+    <li>Representante de Copebian - [Cargo no especificado en la transcripción]</li>
+    <li>Representante de Acrópolis - [Cargo no especificado en la transcripción]</li>
+    <li>Representante de Faro - [Cargo no especificado en la transcripción]</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Discrepancias Salariales</li>
+  <li>Tema de Vigilancia: Segurte, Acrópolis y Faro</li>
+  <li>Revisión del Contrato de Faro y Posibles Incumplimientos</li>
+  <li>Conciliación con Faro</li>
+  <li>Revisión de Salarios</li>
+  <li>Tema de 802</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>Discrepancias Salariales</h3>
+<p>Se discuten discrepancias salariales relacionadas con el retorno salarial. Se menciona que este año se volvió a incumplir con los pagos. Doña Blanca indica que el retorno se hizo para el año pasado, pero Santiago responde que se hizo sobre el salario aprobado por la asamblea. Doña Blanca insiste en que no se puede aplicar el salario desde enero, pero Santiago afirma que sí se hizo el récord el año pasado. Se menciona que el retorno se hizo sobre 5,000,800, no sobre 5,000,500, que era lo que se debía pagar desde marzo de 2023 a marzo de 2024. Se indica que el incremento se hizo con la cuota de administración implementada, y se le indicó a Santiago que debía seguir con el mismo salario del 2025. El salario de 5,000,800 aprobado en la asamblea de 2024 no se puede aplicar en febrero y marzo, sino en abril y mayo.</p>
+
+<h3>Tema de Vigilancia: Segurte, Acrópolis y Faro</h3>
+<p>Se aborda el tema de la vigilancia. Se informa que se cambió la reunión con Segurte y que se arrancará mañana a las 12:00 p.m. Segurte, Copebian y Acrópolis enviarán cotizaciones y vendrán a las 2:00 p.m.</p>
+
+<h4>Situación con Faro</h4>
+<p>Administraciones Urbanas reitera su desacuerdo con que Faro continúe prestando el servicio, ni hasta el 15 ni hasta el 30 de marzo, debido a que Faro está trabajando con empleados sin seguridad social. Se realizó una consulta con los abogados, quienes recomendaron retener el dinero mientras se realiza el pago por parte de Faro o mientras se envían los recibos para que la administración pague, y adicionalmente terminar el contrato de forma inmediata. Se advierte que si ocurre algún incidente (infarto, pinchazo de carro, mordedura de perro) la responsabilidad recae sobre la propiedad debido a la falta de seguridad social de los vigilantes. La administración solicita terminar el contrato de forma inmediata, liberándose de responsabilidad si no se está de acuerdo. Se menciona que esta situación se conocía desde noviembre, pero no se había comprobado. Se indica que si se permite que Faro continúe hasta el 15 o 30 de marzo por el tema de no devolver la reinversión, la responsabilidad de cualquier incidente recae sobre los presentes. Se argumenta que es preferible devolver una reinversión a pagar por un muerto o un accidentado. Se añade que si Faro se va el 15, la empresa que llegue asumirá la reinversión desde el momento en que llegue.</p>
+<p>Se discute si es correcto sacar a Faro antes de tiempo. Se argumenta que no es correcto dejar a la empresa trabajando sin seguridad social. Se menciona que aunque el contrato establezca ciertas cláusulas, la ley establece solidaridad entre las partes, y un contrato no puede ir en contra de la ley. Se deja constancia de que si se paga el reclamo, la administración no lo hará. Se pregunta quién pagará ante una equivocación, pero se responde que no es una equivocación de la administración, sino un incumplimiento de Faro. Se menciona que se envió una solicitud de revisoría fiscal a Faro, pero no respondieron. Se justifica que esto se hizo hace menos de 15 días, aunque se tenía conocimiento desde octubre. Se indica que no se ha pasado en tutela porque se dejó pasar el tiempo. Se reitera que la administración no está de acuerdo en asumir una reinversión por un incumplimiento de una empresa y no va a dejar que una empresa continúe prestando un servicio sabiendo que está incumpliendo. Se argumenta que no se está de acuerdo con la forma en que se está despidiendo a la empresa, porque no se está colocando una cláusula válida que esté escrita en el contrato. Se insiste en que no es necesario establecer en un contrato que se deben pagar la salud de los empleados, ya que es de ley. Se concluye que se debe sacar a la empresa, pero con todos los procedimientos legales. Se reitera que, de igual forma, Faro tiene que solicitar la inversión, y si se van, otra empresa no asumirá la inversión de ese tiempo. Se insiste en que la administración está dejando la salvedad porque no está de acuerdo.</p>
+<p>Se menciona que no se hicieron caso a las advertencias y que se está incurriendo en un delito, por lo que se presentará la denuncia ante la Superintendencia y la Fiscalía. Se va a solucionar primero el tema con Car y después se abordará el otro. Se menciona una cláusula penal en caso de terminación del contrato antes de lo pactado, donde la parte incumplida pagará a la otra parte. Se indica que se podría pedir a Faro el 20% del contrato porque son ellos los que están incumpliendo. Se sugiere llamar a Faro para que vengan a hablar y conciliar. Se menciona que se está reteniendo un pago sin tener una cláusula de retención. Se propone traerlos y darles un concepto. Se concluye que, de acuerdo a lo que habla del tema legal, si la empresa para, no se propone permitir que continúe, y si legalmente ya se le demostró y se le menciona en el documento anexo a la terminación, solo lo que debe hacer es la administración.</p>
+
+<h3>Revisión de Salarios</h3>
+<p>Se menciona que en enero se pagaron 5,000,800. En abril se hizo una devolución, pero sobre los 6 millones, ya que estaban pasando 6 millones y pico. Se hizo devolución en abril, mayo y un poco en junio, y se subieron a 6,000,900. Se aprobó 5,000,800. Se propone revisar las actas antes de la ciudad y no pelear sin documentos. Se acuerda conciliar si hay algo que favorezca. Se va a solucionar primero el tema de llamar al representante legal.</p>
+
+<h3>Conciliación con Faro</h3>
+<p>Se acuerda llamar al representante legal de Faro para revisar el tema, y se invita a los asistentes a participar. Se propone cancelar las citas de mañana y dedicarse a este tema. Se menciona que se está esperando demasiado tiempo y que se hubiera esperado hasta marzo para renovarlo. Se indica que si se hubieran dado cuenta antes, no hubieran esperado hasta marzo para una reforma. Se pregunta por qué no se tenían las herramientas necesarias para revisar esto y constatar que no lo hicieron. Se responde que no se tenía conocimiento de dónde se revisaban a Cuba y que se presume la buena fe. Se acuerda revisar lo del salario en buenos términos y traer a Faro para no darle una vuelta al tema. Se propone que la reunión con Faro sea mañana a primera hora, a las 8:00 a.m.</p>
+
+<h3>Tema de 802</h3>
+<p>Santiago debe el tema de 802. Hay 100,000 que están amarrados a lo de Car.</p>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Acuerdos y Acciones:</strong></p>
+  <ul>
+    <li><strong>Responsable:</strong> Administración
+      <ul>
+        <li><strong>Acción:</strong> Cambiar la reunión con Segurte para mañana a las 12:00 p.m.</li>
+        <li><strong>Acción:</strong> Recibir cotizaciones de Segurte, Copebian y Acrópolis mañana a las 2:00 p.m.</li>
+        <li><strong>Acción:</strong> Terminar el contrato con Faro de forma inmediata debido a la falta de seguridad social de los empleados.</li>
+        <li><strong>Acción:</strong> Presentar denuncia ante la Superintendencia y la Fiscalía por el incumplimiento de Faro.</li>
+        <li><strong>Acción:</strong> Llamar al representante legal de Faro para conciliar y revisar el tema de la terminación del contrato.</li>
+        <li><strong>Acción:</strong> Revisar las actas anteriores para verificar los salarios y conciliar cualquier diferencia.</li>
+      </ul>
+    </li>
+    <li><strong>Responsable:</strong> Santiago
+      <ul>
+        <li><strong>Acción:</strong> Resolver el tema de los 100,000 del 802 que están amarrados a lo de Car.</li>
+      </ul>
+    </li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  <ul>
+    <li>[Firma no especificada en la transcripción]</li>
+  </ul>
+</footer>
+[2025-02-08T12:21:17.138Z] Contenido cargado con éxito. ID: 10zVJ7aouS3YkunwCAKSOT_re2sCkw5xS
+[2025-02-08T12:21:17.139Z] Acta lista y guardada como audio_lunes_acta_linda_villa_camilo_camargo_Borrador.docx.
+[2025-02-08T12:23:33.656Z] Verificando existencia del archivo: audio faro seguridad Camilo Camargo.m4a.
+[2025-02-08T12:23:33.656Z] Verificando o creando carpeta.
+[2025-02-08T12:23:33.988Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:23:33.988Z] Verificando existencia del archivo.
+[2025-02-08T12:23:34.247Z] Archivo ya existe. URL: 1y3PbSa8NlbY2GnAgiepKIkyh6h-KoznN.
+[2025-02-08T12:23:34.247Z] El archivo ya existe.
+[2025-02-08T12:23:44.429Z] Verificando si la transcripción ya existe.
+[2025-02-08T12:23:44.429Z] Verificando o creando carpeta.
+[2025-02-08T12:23:44.718Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:23:44.719Z] Verificando existencia del archivo.
+[2025-02-08T12:23:44.964Z] Archivo ya existe. URL: 16JNb2jjYbfxWv48LurwKZTx2d_fJj327.
+[2025-02-08T12:23:44.964Z] Verificando existencia del archivo.
+[2025-02-08T12:23:45.264Z] Archivo ya existe. URL: 1y3PbSa8NlbY2GnAgiepKIkyh6h-KoznN.
+[2025-02-08T12:23:45.264Z] La transcripción ya existe.
+[2025-02-08T12:23:45.264Z] Iniciando generación de contenido: audio_faro_seguridad_camilo_camargo.m4a
+[2025-02-08T12:23:45.264Z] Verificando o creando carpeta.
+[2025-02-08T12:23:45.528Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:23:45.528Z] Verificando existencia del archivo.
+[2025-02-08T12:23:46.220Z] Archivo ya existe. URL: 1kt2_WuePeUKbPjutuPsEq-BnffIpM31B.
+[2025-02-08T12:23:46.220Z] Iniciando formato de contenido. audio_faro_seguridad_camilo_camargo.m4a
+[2025-02-08T12:23:46.220Z] Verificando o creando carpeta.
+[2025-02-08T12:23:46.474Z] Carpeta existente con ID: 1oK68kGWtpULqNXL6QOcMrXAJ7x7GEDOS.
+[2025-02-08T12:23:46.474Z] Verificando existencia del archivo.
+[2025-02-08T12:23:46.759Z] Archivo ya existe. URL: 1UgLVcS5XTmJc8wPkNx6xtNRYxFrEU9ju.
+[2025-02-08T12:23:46.759Z] Verificando existencia del archivo.
+[2025-02-08T12:23:47.039Z] Archivo ya existe. URL: 1kt2_WuePeUKbPjutuPsEq-BnffIpM31B.
+[2025-02-08T12:23:47.040Z] Verificando existencia del archivo.
+[2025-02-08T12:23:47.282Z] Archivo ya existe. URL: 16JNb2jjYbfxWv48LurwKZTx2d_fJj327.
+[2025-02-08T12:23:47.282Z] Formato ya generado.
+[2025-02-08T12:24:10.338Z] Verificando existencia del archivo: audio lunes acta linda villa Camilo Camargo.m4a.
+[2025-02-08T12:24:10.338Z] Verificando o creando carpeta.
+[2025-02-08T12:24:10.629Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:24:10.629Z] Verificando existencia del archivo.
+[2025-02-08T12:24:10.914Z] Archivo ya existe. URL: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt.
+[2025-02-08T12:24:10.914Z] El archivo ya existe.
+[2025-02-08T12:25:18.697Z] Verificando si la transcripción ya existe.
+[2025-02-08T12:25:18.697Z] Verificando o creando carpeta.
+[2025-02-08T12:25:19.046Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:25:19.046Z] Verificando existencia del archivo.
+[2025-02-08T12:25:19.284Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:25:19.284Z] Verificando existencia del archivo.
+[2025-02-08T12:25:19.538Z] Archivo ya existe. URL: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt.
+[2025-02-08T12:25:19.538Z] La transcripción ya existe.
+[2025-02-08T12:25:19.538Z] Iniciando generación de contenido: audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:25:19.539Z] Verificando o creando carpeta.
+[2025-02-08T12:25:19.820Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:25:19.821Z] Verificando existencia del archivo.
+[2025-02-08T12:25:20.081Z] Archivo ya existe. URL: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP.
+[2025-02-08T12:25:20.081Z] Iniciando formato de contenido. audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:25:20.081Z] Verificando o creando carpeta.
+[2025-02-08T12:25:20.348Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:25:20.348Z] Verificando existencia del archivo.
+[2025-02-08T12:25:20.620Z] Archivo ya existe. URL: 10zVJ7aouS3YkunwCAKSOT_re2sCkw5xS.
+[2025-02-08T12:25:20.621Z] Verificando existencia del archivo.
+[2025-02-08T12:25:20.951Z] Archivo ya existe. URL: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP.
+[2025-02-08T12:25:20.951Z] Verificando existencia del archivo.
+[2025-02-08T12:25:21.216Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:25:21.217Z] Formato ya generado.
+[2025-02-08T12:25:52.538Z] Verificando existencia del archivo: audio lunes acta linda villa Camilo Camargo.m4a.
+[2025-02-08T12:25:52.538Z] Verificando o creando carpeta.
+[2025-02-08T12:25:52.852Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:25:52.852Z] Verificando existencia del archivo.
+[2025-02-08T12:25:53.117Z] Archivo ya existe. URL: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt.
+[2025-02-08T12:25:53.118Z] El archivo ya existe.
+[2025-02-08T12:26:01.797Z] Verificando si la transcripción ya existe.
+[2025-02-08T12:26:01.797Z] Verificando o creando carpeta.
+[2025-02-08T12:26:02.345Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:26:02.346Z] Verificando existencia del archivo.
+[2025-02-08T12:26:02.591Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:26:02.591Z] Verificando existencia del archivo.
+[2025-02-08T12:26:02.873Z] Archivo ya existe. URL: 1teIiYZE536wB-cQg4RCI6vF6V8PgOpyt.
+[2025-02-08T12:26:02.873Z] La transcripción ya existe.
+[2025-02-08T12:26:02.873Z] Iniciando generación de contenido: audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:26:02.873Z] Verificando o creando carpeta.
+[2025-02-08T12:26:03.206Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:26:03.206Z] Verificando existencia del archivo.
+[2025-02-08T12:26:03.461Z] Archivo ya existe. URL: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP.
+[2025-02-08T12:26:03.461Z] Iniciando formato de contenido. audio_lunes_acta_linda_villa_camilo_camargo.m4a
+[2025-02-08T12:26:03.461Z] Verificando o creando carpeta.
+[2025-02-08T12:26:03.768Z] Carpeta existente con ID: 1LrCo-nqPJaVYOwOeyX4orS6BEQVT7mAZ.
+[2025-02-08T12:26:03.768Z] Verificando existencia del archivo.
+[2025-02-08T12:26:04.032Z] Archivo ya existe. URL: 10zVJ7aouS3YkunwCAKSOT_re2sCkw5xS.
+[2025-02-08T12:26:04.032Z] Verificando existencia del archivo.
+[2025-02-08T12:26:04.708Z] Archivo ya existe. URL: 1aprxRPavGAxsJKJ5MsL2n1HIqbcFA6vP.
+[2025-02-08T12:26:04.708Z] Verificando existencia del archivo.
+[2025-02-08T12:26:04.969Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
+[2025-02-08T12:26:04.969Z] Formato ya generado.
