@@ -938,3 +938,2392 @@ Formato generado:
 [2025-02-08T12:26:04.708Z] Verificando existencia del archivo.
 [2025-02-08T12:26:04.969Z] Archivo ya existe. URL: 1rxTMN6-KpwHQVuTtwY6g_QfBVqQM2NuU.
 [2025-02-08T12:26:04.969Z] Formato ya generado.
+[2025-02-08T16:19:42.518Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T16:19:42.519Z] Verificando o creando carpeta.
+[2025-02-08T16:19:42.887Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:19:42.888Z] Verificando existencia del archivo.
+[2025-02-08T16:19:43.562Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:19:43.562Z] El archivo ya existe.
+[2025-02-08T16:19:45.573Z] Verificando si la transcripción ya existe.
+[2025-02-08T16:19:45.573Z] Verificando o creando carpeta.
+[2025-02-08T16:19:45.884Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:19:45.884Z] Verificando existencia del archivo.
+[2025-02-08T16:19:46.429Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:19:46.429Z] Verificando existencia del archivo.
+[2025-02-08T16:19:46.694Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:19:46.694Z] La transcripción ya existe.
+[2025-02-08T16:19:46.695Z] Iniciando generación de contenido: coral_apartamentos.mp3
+[2025-02-08T16:19:46.695Z] Verificando o creando carpeta.
+[2025-02-08T16:19:47.048Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:19:47.048Z] Verificando existencia del archivo.
+[2025-02-08T16:19:47.660Z] Archivo no encontrado.
+[2025-02-08T16:19:47.660Z] Verificando existencia del archivo.
+[2025-02-08T16:19:48.273Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:23:08.182Z] Guardando transcripción.
+[2025-02-08T16:23:08.183Z] Iniciando subida de archivo.
+[2025-02-08T16:23:10.643Z] Archivo subido con éxito. ID: 1Q8GH9tQ7q3SAj4Us808gLiIcEpyhZMib y permisos de lectura pública asignados.
+[2025-02-08T16:23:10.643Z] Iniciando formato de contenido. coral_apartamentos.mp3
+[2025-02-08T16:23:10.644Z] Verificando o creando carpeta.
+[2025-02-08T16:23:11.233Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:23:11.233Z] Verificando existencia del archivo.
+[2025-02-08T16:23:11.508Z] Archivo no encontrado.
+[2025-02-08T16:23:11.509Z] Verificando existencia del archivo.
+[2025-02-08T16:23:11.904Z] Archivo ya existe. URL: 1Q8GH9tQ7q3SAj4Us808gLiIcEpyhZMib.
+[2025-02-08T16:23:11.905Z] Verificando existencia del archivo.
+[2025-02-08T16:23:12.147Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+Formato generado:
+[2025-02-08T16:23:15.226Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Asamblea General de Copropietarios</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: 2:00 PM (retrasado a 3:00 PM) - Cierre: 7:52 PM</p>
+  <p><strong>Lugar:</strong> Coral Apartamentos</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Ricardo González - Administrador Delegado</li>
+    <li>Claudia Cecilia Bonilla Agudelo - Apartamento 2608</li>
+    <li>Sebastián Moreno - Revisor Fiscal</li>
+    <li>Sergio Rodríguez - Apartamento 902</li>
+    <li>Claudia Marcela García Quintero - Apartamento 1905 (Presidenta de la Asamblea)</li>
+    <li>María Cristina Narváez - Apartamento 2508 (Comisión Verificadora del Acta)</li>
+    <li>César Tobón - Representante de Apartamentos 1101 y 1801 (Comisión Verificadora del Acta)</li>
+    <li>Jonathan González - Apartamento 2308 (Comisión Verificadora del Acta)</li>
+    <li>Joana Barrientos - Apartamento 10</li>
+    <li>Esteban Cavi - Apartamento 1302</li>
+    <li>Verónica Guzmán - Contadora de la Copropiedad</li>
+    <li>Alexander Borges - Consejo de Administración, Apartamento 1301</li>
+    <li>Karina García - Apartamento 802</li>
+    <li>Alexander Jiménez - Apartamento 1807</li>
+    <li>Alexander Bohorquez - Apartamento 1301</li>
+    <li>Fabián Gómez Morales - Apartamento 602</li>
+    <li>Lady Sánchez - Apartamento 1106</li>
+    <li>Nicolás Castrillo - Apartamento 1906</li>
+    <li>Jason Velázquez - Apartamento 2504</li>
+    <li>Didier Toro - Apartamento 2406</li>
+    <li>José Manuel Berrío - Apartamento 605</li>
+    <li>Sebastián Ortiz - Apartamento 604</li>
+    <li>Emperatriz Hidalgo - Apartamento 2104</li>
+    <li>Daisy Álvarez - Apartamento 1104</li>
+    <li>Pablo Vega - Apartamento 805</li>
+    <li>Juan Guillermo Correa - Apartamento 1405</li>
+    <li>Judy Alexandra Marulanda - Apartamento 901</li>
+    <li>Marisa Suárez</li>
+    <li>Richard Sánchez - Apartamento 707</li>
+    <li>Elkin Marín - Apartamento 2502</li>
+    <li>Carlos Mario Cruz - Apartamento 2507</li>
+    <li>Alberto</li>
+    <li>Villalba - Apartamento 2206</li>
+    <li>José Daniel Henao - Apartamento 2501</li>
+    <li>Marta Vanega - Apartamento 2804</li>
+    <li>Alejandra Sepúlveda - Apartamento 101</li>
+    <li>María Morales - Apartamento 2106</li>
+    <li>Otros copropietarios</li>
+  </ul>
+  <p><strong>Quórum:</strong> 3% a las 2:00 PM, 34.2% a las 3:06 PM</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura y Aprobación del Orden del Día</li>
+  <li>Nombramiento del Presidente y Secretario de la Asamblea</li>
+  <li>Nombramiento de la Comisión Verificadora del Acta</li>
+  <li>Informe de Gestión de la Administración y del Consejo de Administración</li>
+  <li>Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</li>
+  <li>Lectura de Estados Financieros del Periodo 2023</li>
+  <li>Dictamen de la Revisoría Fiscal</li>
+  <li>Aprobación de Estados Financieros del Periodo 2023</li>
+  <li>Aprobación del Proyecto Presupuestal</li>
+  <li>Aprobación de Cuota Extra (Punto Adicional)</li>
+  <li>Elección del Comité de Convivencia</li>
+  <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>
+  Ricardo González, Administrador Delegado, informó que a las 2:00 p.m. solo se contaba con el 3% del quórum de los copropietarios. En consecuencia, de acuerdo con el reglamento, la asamblea se inició una hora después, a las 3:00 p.m. A las 3:06 p.m., se verificó un quórum del 34.2%.
+</p>
+
+<h3>2. Lectura y Aprobación del Orden del Día</h3>
+<p>
+  El Administrador Delegado procedió a leer el orden del día propuesto, que incluía los siguientes puntos:
+</p>
+<ul>
+  <li>Verificación del quórum.</li>
+  <li>Lectura y aprobación del orden del día.</li>
+  <li>Nombramiento del presidente y secretario de la asamblea.</li>
+  <li>Nombramiento de la comisión verificadora del acta.</li>
+  <li>Informe de gestión de la administración y del consejo de administración.</li>
+  <li>Nombramiento del nuevo consejo de administración o reelección del anterior.</li>
+  <li>Lectura de estados financieros periodo 2023.</li>
+  <li>Dictamen de revisoría fiscal.</li>
+  <li>Aprobación de estados financieros del periodo 2023.</li>
+  <li>Aprobación del proyecto presupuestal.</li>
+  <li>Elección del comité de convivencia.</li>
+  <li>Elección del nuevo revisor fiscal o reelección del mismo.</li>
+  <li>Proposiciones y varios.</li>
+</ul>
+<p>
+  Se propuso incluir un punto adicional en el orden del día para tratar el tema de la cuota extra, siguiendo la recomendación de la revisoría fiscal. La asamblea aprobó por unanimidad la inclusión de este punto adicional.
+</p>
+
+<h3>3. Nombramiento del Presidente y Secretario de la Asamblea</h3>
+<p>
+  El Administrador Delegado explicó la importancia de elegir un presidente de asamblea neutral y cordial. Claudia Cecilia Bonilla Agudelo (Apartamento 2608) solicitó una aclaración sobre la legalidad de la asamblea con el quórum presente. El Revisor Fiscal, Sebastián Moreno, explicó que existían dos tipos de quórum: para deliberar y para decidir. Indicó que la asamblea se inició válidamente en segunda convocatoria y que se contaba con el quórum necesario para tomar decisiones.
+</p>
+<p>
+  Claudia Marcela García Quintero (Apartamento 1905) fue postulada y aprobada por unanimidad como Presidenta de la Asamblea. Se aprobó que la administración actuara como Secretario de la Asamblea.
+</p>
+
+<h3>4. Nombramiento de la Comisión Verificadora del Acta</h3>
+<p>
+  Se nombró la comisión verificadora del acta, integrada por:
+</p>
+<ul>
+  <li>María Cristina Narváez (Apartamento 2508)</li>
+  <li>César Tobón (Representante de Apartamentos 1101 y 1801)</li>
+  <li>Jonathan González (Apartamento 2308)</li>
+</ul>
+<p>
+  Se solicitó a los miembros de la comisión proporcionar sus nombres, teléfonos y correos electrónicos para el envío del acta.
+</p>
+
+<h3>5. Informe de Gestión de la Administración y del Consejo de Administración</h3>
+<p>
+  El Administrador Delegado, Ricardo González, presentó un informe de gestión del año 2023, destacando los siguientes puntos:
+</p>
+<ul>
+  <li><strong>Ejes Estratégicos:</strong> Cumplimiento de requisitos legales, valorización del patrimonio, sana convivencia y sostenibilidad financiera del edificio.</li>
+  <li><strong>Valorización del Patrimonio:</strong>
+    <ul>
+      <li>Impermeabilización de la terraza (piso 29) y plan de trabajo para corregir el drywall afectado.</li>
+      <li>Trabajos en los chutes de basura y llamado a mantenerlos cerrados para evitar malos olores.</li>
+      <li>Compra de mesa de concreto para el patio y posterior corrección por mal uso.</li>
+      <li>Mejoras a nivel de pintura y estética en puntos fijos, señalización, vigilancia, gimnasio y piscina.</li>
+      <li>Proyecto de instalación de cámaras en el gimnasio para evitar el mal uso de los equipos.</li>
+      <li>Cambio del 80% de los sensores de movimiento para reducir el consumo de energía.</li>
+      <li>Compra de nevera para el salón social, asoleadoras y sillas playeras para la piscina, con ingresos no operacionales.</li>
+      <li>Campañas de aseo a profundidad con hidrolavadoras y rotativas en pisos, pasillos y parqueaderos.</li>
+      <li>Cambio de empaques de canillas para evitar riesgos eléctricos en el ascensor.</li>
+      <li>Mantenimiento y restauración del turco y la zona de la piscina.</li>
+      <li>Mantenimiento de fachadas en cinco apartamentos afectados por sismos o asentamientos.</li>
+      <li>Plan de trabajo con el jardinero y mejoras en la jardinería interna y externa.</li>
+    </ul>
+  </li>
+  <li><strong>Cumplimiento de Requisitos Legales:</strong>
+    <ul>
+      <li>Lavado de tanques semestralmente (abril y septiembre).</li>
+      <li>Mantenimiento preventivo de ascensores mensualmente por la empresa Sumar.</li>
+      <li>Fumigación y refuerzo en zonas comunes (noviembre).</li>
+      <li>Mantenimiento de bombas hidráulicas bimensualmente.</li>
+      <li>Análisis de agua de la piscina mensualmente.</li>
+      <li>Sistema de Gestión de Seguridad y Salud en el Trabajo (Decreto 1072 de 2015):
+        <ul>
+          <li>Avance del 69% en 2022 al 88% actual.</li>
+          <li>Actualización de la identificación, evaluación y valoración de riesgos y peligros.</li>
+          <li>Compra de elementos de protección personal para el equipo de aseo.</li>
+          <li>Establecimiento de un plan de trabajo anual y de capacitación.</li>
+          <li>Compra de herramientas para el personal de mantenimiento y señalización de pisos mojados.</li>
+          <li>Proyección para 2024: capacitaciones de plan de emergencias, jornadas de salud, intervención del puesto de trabajo de los vigilantes y personal de oficios varios, e instalación de sensores de humo en zonas de reciclaje y cuartos de basura.</li>
+        </ul>
+      </li>
+      <li>Plan de Manejo Integral de Residuos Sólidos (PMIRs):
+        <ul>
+          <li>Separación de residuos sólidos en la fuente.</li>
+          <li>Certificado de disposición final de residuos sólidos.</li>
+          <li>Capacitación de manejo de residuos sólidos para los residentes.</li>
+          <li>Inducción cada tres meses para nuevos residentes.</li>
+          <li>Certificación final de medicamentos vencidos y elementos cortopunzantes.</li>
+          <li>Implementación de una cajonera para generar abono interno con residuos orgánicos.</li>
+          <li>Disposición adecuada de aceites quemados.</li>
+        </ul>
+      </li>
+      <li>Tratamiento de Datos Personales (Ley 1581 de 2012):
+        <ul>
+          <li>Actualización de datos personales.</li>
+          <li>Política de tratamiento de datos.</li>
+          <li>Confidencialidad de la información.</li>
+          <li>Sistematización de bases de datos con la plataforma LUCR.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Sana Convivencia:</strong>
+    <ul>
+      <li>Sanciones por mal uso de mascotas (heces en el piso 2).</li>
+      <li>Actividad de Halloween para niños (3 de noviembre).</li>
+      <li>Actividades de integración familiar en diciembre (bingo y celebración de novenas).</li>
+      <li>Compra de elementos navideños para decorar la copropiedad.</li>
+    </ul>
+  </li>
+  <li><strong>Sostenibilidad Financiera:</strong>
+    <ul>
+      <li>Recuperación de cartera de $26 millones con la empresa de abogados Ejecutamos.</li>
+      <li>Restricción de accesos a parqueaderos, zonas comunes, piscina y turco a morosos.</li>
+      <li>Fondo de imprevistos capitalizado en $14 millones a diciembre y $19 millones actualmente.</li>
+      <li>Incremento de la reserva de fachada de $28 millones a $40 millones.</li>
+      <li>Ingresos de $20 millones por alquiler de parqueaderos y salón social.</li>
+      <li>Pago a paz y salvo con todos los proveedores a 31 de diciembre.</li>
+      <li>Revisión de facturas de servicios públicos con una empresa intermediaria.</li>
+      <li>Reuniones con Arte para recuperar una deuda de $8 millones.</li>
+    </ul>
+  </li>
+  <li><strong>Encuestas de Satisfacción:</strong>
+    <ul>
+      <li>Aceptación del 98% del equipo de vigilancia y 97% del equipo de aseo.</li>
+      <li>Implementación de sugerencias y recomendaciones.</li>
+    </ul>
+  </li>
+  <li><strong>Asistente Virtual:</strong>
+    <ul>
+      <li>Implementación de una asistente virtual para responder preguntas y realizar tareas operativas a través de WhatsApp.</li>
+    </ul>
+  </li>
+</ul>
+<p>
+  César Tobón (Apartamento 1101 y 1801) solicitó aclaraciones sobre la confidencialidad de las imágenes y videos, mencionando un caso de multa por heces de mascotas sin evidencia clara. El Administrador Delegado respondió que las cartas de sanción se envían con dos fechas (generación y ocurrencia) y que las pruebas se muestran en la administración para proteger datos personales.
+</p>
+<p>
+  Joana Barrientos (Apartamento 10) preguntó por qué no se habían realizado arreglos en el parque y la piscina si las finanzas estaban saneadas. El Administrador Delegado explicó que las decisiones de inversión requieren la aprobación de la asamblea y que los recursos recuperados no eran suficientes para cubrir los proyectos.
+</p>
+<p>
+  Esteban Cavi (Apartamento 1302) preguntó por la carnetización de la piscina, pagada hace más de dos años. La Contadora, Verónica Guzmán, respondió que los dineros recaudados se encuentran en una cuenta pasivo y que se tomará una decisión sobre su destino. Alexander Borges (Consejo) añadió que solo se recaudaron $190,000 y que se convertirían en saldo a favor.
+</p>
+<p>
+  Karina García (Apartamento 802) expresó su preocupación por la falta de decisiones y la vulneración de los derechos de los niños a la recreación. El Administrador Delegado respondió que la piscina se cerró preventivamente por seguridad y que se busca una solución biométrica para el acceso.
+</p>
+<p>
+  Alexander Jiménez (Apartamento 1807) aclaró que el consejo no ejecuta el presupuesto, sino que aprueba las decisiones de la administración. Alexander Bohorquez (Apartamento 1301) añadió que la cuota de administración se dejó baja el año pasado y que la recuperación de cartera se destinó al fondo de fachada.
+</p>
+<p>
+  Fabián Gómez Morales (Apartamento 602) sugirió fijar fechas para las actividades planificadas. El Administrador Delegado respondió que se trabaja con un plan de trabajo anual derivado de las decisiones de la asamblea.
+</p>
+<p>
+  El Revisor Fiscal precisó que la aprobación y ejecución de los recursos están a cargo de la asamblea y la administración, respectivamente.
+</p>
+
+<h3>6. Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</h3>
+<p>
+  Se invitó a los copropietarios a postularse para el Consejo de Administración. El Administrador Delegado explicó que los consejeros deben ayudar a aconsejar a la administración para ejecutar los proyectos. El Revisor Fiscal aclaró que se realiza un control de legalidad a la elección del consejo, verificando que los elegidos sean propietarios o apoderados.
+</p>
+<p>
+  Sergio Rodríguez preguntó si las personas con leasing podían postularse sin el documento del banco. El Revisor Fiscal respondió que no, que debían contar con el poder antes de la votación. Se explicó que el reglamento prevé 18 miembros (9 principales y 9 suplentes) y que se pueden postular personas que no cumplan los requisitos como invitados permanentes con derecho a voz, pero sin voto.
+</p>
+<p>
+  Claudia (Apartamento 2608) informó que los que tienen leasing con el Fondo Nacional del Ahorro reciben un correo con la potestad para representarlos como propietarios. Marta Vanega (Apartamento 2804) preguntó sobre el tiempo que los consejeros pueden permanecer en el consejo. El Revisor Fiscal respondió que ni el reglamento ni la ley establecen una prohibición, y que la decisión está en manos de la asamblea.
+</p>
+<p>
+  Se explicó que la elección se realiza a través de lista única, y que si no hay conformidad, se recurre al sistema del cociente electoral (elección por planchas). Se mencionó que no existe un manual que sancione a los consejeros que no han hecho bien su papel.
+</p>
+<p>
+  Se postularon los siguientes candidatos:
+</p>
+<ul>
+  <li>Lady Sánchez (Apartamento 1106)</li>
+  <li>Alexander Jiménez (Apartamento 1807)</li>
+  <li>Nicolás Castrillo (Apartamento 1906)</li>
+  <li>Alexander Borges (Apartamento 1301)</li>
+  <li>Jason Velázquez (Apartamento 2504)</li>
+  <li>Didier Toro (Apartamento 2406)</li>
+  <li>María Cristina Narváez (Apartamento 2508)</li>
+  <li>Lady Joana Soto (Apartamento 908), apoderando a Marcela</li>
+  <li>Sebastián Ortiz (Apartamento 604)</li>
+  <li>Joana Barrientos (Apartamento 10)</li>
+  <li>Emperatriz Hidalgo (Apartamento 2104), como invitada permanente</li>
+  <li>Fabián Gómez Morales (Apartamento 602), como invitado permanente</li>
+  <li>Jonathan González (Apartamento 2308)</li>
+  <li>José Manuel Berrío (Apartamento 605), apoderando a Cristina</li>
+  <li>Sergio Rodríguez (Apartamento 902), dando su poder a Emperatriz para postularse como consejera</li>
+</ul>
+<p>
+  Se aclaró que los apoderados y propietarios tienen el mismo derecho a ser principales o suplentes, y que los suplentes son numéricos. Se sometió a votación la lista de candidatos.
+</p>
+<p>
+  Judy Alexandra Marulanda (Apartamento 901) expresó confusión sobre el proceso de votación. Se explicó que si no hay conformidad con la lista, se recurre al método del cociente electoral.
+</p>
+<p>
+  Se preguntó quién no estaba de acuerdo con el consejo propuesto. Los siguientes copropietarios manifestaron su desacuerdo:
+</p>
+<ul>
+  <li>Judy Alexandra Marulanda (Apartamento 901)</li>
+  <li>Alejandra Sepúlveda (Apartamento 101)</li>
+  <li>María Morales (Apartamento 2106)</li>
+  <li>Didier Toro (Apartamento 2406)</li>
+  <li>Elkin Marín (Apartamento 2502)</li>
+  <li>José Daniel Henao (Apartamento 2501)</li>
+  <li>Marta Vanega (Apartamento 2804)</li>
+</ul>
+<p>
+  A pesar de las objeciones, se aprobó el nuevo consejo por mayoría.
+</p>
+
+<h3>7. Lectura de Estados Financieros del Periodo 2023</h3>
+<p>
+  La Contadora, Verónica Guzmán, presentó los estados financieros del año 2023, destacando los siguientes puntos:
+</p>
+<ul>
+  <li><strong>Activo:</strong> Composición de los recursos líquidos (bancos y caja menor) y no líquidos (cuentas por cobrar).</li>
+  <li><strong>Recursos Restringidos:</strong> Reservas con destinación específica (provisión restringida, destinación de proyectos, fondo de imprevistos, cuota extra de fachadas y saldos a favor).</li>
+  <li><strong>Pasivo más Patrimonio:</strong> Deudas de la copropiedad y reservas/utilidades.</li>
+  <li><strong>Ingresos:</strong> Cuotas de administración (operacionales) e ingresos no presupuestados (intereses, sanciones, multas, aprovechamientos).</li>
+  <li><strong>Recaudo:</strong> Se recaudó el 90% de lo facturado en cuotas de administración.</li>
+  <li><strong>Cartera:</strong> Detalle de la cartera por antigüedad (corriente, entre 4 y 11 cuotas, y más de 12 cuotas).</li>
+  <li><strong>Ingresos No Presupuestados:</strong> $35,158,128 recaudados.</li>
+  <li><strong>Evolución del Gasto:</strong> Comparación entre lo presupuestado y lo ejecutado en cada rubro.</li>
+  <li><strong>Mantenimientos Representativos:</strong> Restauración del salón social, reparaciones de terraza, compra de tubería para la piscina, compra de sensores y lámparas, y dotaciones para zonas comunes.</li>
+  <li><strong>Evolución del Fondo de Reserva:</strong> Incremento de $15,429,576 en 2022 a $19,840,176 en 2023.</li>
+  <li><strong>Resultados del Ejercicio:</strong> Excedentes de ejercicios anteriores ($52,997,250) y resultado del ejercicio actual ($32,591,313), con un 25% líquido en bancos.</li>
+</ul>
+<p>
+  Se indicó que se corregirían los errores de estructura en los informes compartidos.
+</p>
+
+<h3>8. Dictamen de la Revisoría Fiscal</h3>
+<p>
+  El Revisor Fiscal, Sebastián Moreno, presentó el dictamen de los estados financieros, destacando los siguientes puntos:
+</p>
+<ul>
+  <li><strong>Dictamen sin Salvedades:</strong> Los estados financieros reflejan razonablemente la situación financiera de la copropiedad.</li>
+  <li><strong>Observaciones:</strong>
+    <ul>
+      <li>Saldos pendientes de legalización por $1,434,920 (anticipo al administrador para gastos de navidad).</li>
+      <li>Consignaciones por identificar ($5,000,689).</li>
+      <li>Falta de apropiación de la reserva de ley de forma líquida ($5,000,686).</li>
+      <li>Incumplimiento en el Sistema de Gestión de Seguridad y Salud en el Trabajo, Plan Integral de Manejo de Residuos Sólidos y Política de Tratamiento de Datos Personales.</li>
+      <li>Falta de certificación en salvamento acuático del piscinero.</li>
+    </ul>
+  </li>
+  <li><strong>Cumplimiento Normativo:</strong>
+    <ul>
+      <li>Presentación de declaraciones tributarias en debida forma.</li>
+      <li>Seguro de zonas comunes vigente.</li>
+    </ul>
+  </li>
+  <li><strong>Control Interno:</strong>
+    <ul>
+      <li>El Consejo de Administración ejerce control financiero.</li>
+      <li>Medidas de control interno en el manejo de recursos (token de validación dual).</li>
+    </ul>
+  </li>
+  <li><strong>Análisis Financiero:</strong>
+    <ul>
+      <li>Cartera con indicador de rotación por encima de 30 días.</li>
+      <li>Pago a proveedores en promedio cada 2.5 días.</li>
+      <li>No se observa riesgo de impago de obligaciones.</li>
+    </ul>
+  </li>
+</ul>
+<p>
+  Se recomendó a la administración emprender acciones de cobro jurídico para la cartera con vencimiento superior a 180 días.
+</p>
+
+<h3>9. Aprobación de Estados Financieros del Periodo 2023</h3>
+<p>
+  Se aprobaron por unanimidad los estados financieros al 31 de diciembre de 2023, con la salvedad de corregir los numerales de las notas.
+</p>
+
+<h3>10. Aprobación del Proyecto Presupuestal</h3>
+<p>
+  Se presentó el proyecto presupuestal para el año 2024, basado en el incremento del salario mínimo legal vigente. Se destacó el incremento en el rubro de vigilancia (19%) y la reducción en gastos bancarios. El porcentaje total de incremento fue del 12.07%.
+</p>
+<p>
+  Elkin Marín (Apartamento 2502) propuso un descuento por pronto pago para incentivar el pago cumplido. Se explicó que esto implicaría un gasto presupuestado. Se sometió a votación el proyecto presupuestal.
+</p>
+<p>
+  Se aprobó por unanimidad el presupuesto para el 2024 con un incremento del 12.07%.
+</p>
+
+<h3>11. Aprobación de Cuota Extra (Punto Adicional)</h3>
+<p>
+  Se discutió la necesidad de una cuota extra para cubrir proyectos de reparación, incluyendo el cable de tracción de los ascensores, la piscina y el parque infantil. Se propuso una cuota de $255,100 por apartamento.
+</p>
+<p>
+  Se propuso utilizar los excedentes financieros para cubrir estos gastos. Se discutió la posibilidad de utilizar el fondo de imprevistos, pero se aclaró que este fondo es para gastos no previsibles.
+</p>
+<p>
+  Se propuso utilizar los aprovechamientos de los parqueaderos para el parquecito. Se propuso tomar un préstamo del fondo de fachada para la piscina.
+</p>
+<p>
+  Se votó y se aprobó por mayoría no aplicar la cuota extra.
+</p>
+<p>
+  Se aprobó por unanimidad que los excedentes se dispongan para esos tres proyectos.
+</p>
+<p>
+  Se aprobó por mayoría que se tome una cuota extra para la fachada del 50% de la propuesta inicial, es decir, $150,000 en tres cuotas después del cobro del retroactivo, a partir de agosto.
+</p>
+
+<h3>12. Elección del Comité de Convivencia</h3>
+<p>
+  Se postularon los siguientes candidatos:
+</p>
+<ul>
+  <li>Sergio Rodríguez (Apartamento 902)</li>
+  <li>Jonas</li>
+  <li>Lady Sánchez (Apartamento 1106)</li>
+</ul>
+<p>
+  Se aprobó por unanimidad que estos tres copropietarios conformen el comité de convivencia.
+</p>
+
+<h3>13. Elección del Nuevo Revisor Fiscal o Reelección del Mismo</h3>
+<p>
+  No se allegaron nuevas hojas de vida, por lo cual se propuso la reelección de la firma actual. Se aprobó por unanimidad la reelección de la firma actual como revisores fiscales.
+</p>
+
+<h3>14. Proposiciones y Varios</h3>
+<ul>
+  <li>Se hizo un llamado a la responsabilidad de los dueños de mascotas, especialmente cuando los niños las sacan.</li>
+  <li>Se solicitó que la piscinera no realice labores de aseo durante el horario de piscina.</li>
+  <li>Se preguntó por el estado del lote de atrás. Se explicó que no es de la copropiedad, sino del municipio. Se propuso autorizar al consejo a retomar el caso del pedazo lindero, pero se recomendó esperar un estudio con cifras concretas.</li>
+  <li>Se propuso que la fumigación sea obligatoria y se multe a quienes no permitan la entrada. Se aclaró que no se puede cobrar una multa sin una norma previa.</li>
+  <li>Se propuso estudiar la viabilidad de la energía eólica.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 7:52 PM</p>
+  <p><strong>Acuerdos Alcanzados:</strong></p>
+  <ul>
+    <li>Aprobación del presupuesto para el 2024 con un incremento del 12.07%.</li>
+    <li>No aplicación de cuota extra para los proyectos de ascensores, piscina y parque infantil.</li>
+    <li>Disposición de los excedentes para los proyectos de ascensores, piscina y parque infantil, con prioridad en los ascensores.</li>
+    <li>Aprobación de una cuota extra para la fachada de $150,000 en tres cuotas a partir de agosto.</li>
+    <li>Conformación del comité de convivencia con Sergio Rodríguez, Jonas y Lady Sánchez.</li>
+    <li>Reelección de la firma actual como revisores fiscales.</li>
+  </ul>
+  <p><strong>Compromisos Específicos:</strong></p>
+  <ul>
+    <li>La administración realizará un estudio de la relación costo-beneficio del pedazo de lote lindero.</li>
+    <li>El consejo evaluará la prioridad de los proyectos de piscina y parque infantil.</li>
+    <li>La administración y el consejo trabajarán en el tema de la energía eólica.</li>
+  </ul>
+  <p><strong>Próximos Pasos:</strong></p>
+  <ul>
+    <li>La administración publicará el acta en 20 días.</li>
+    <li>Los copropietarios tienen dos meses para impugnar las decisiones.</li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-08T16:23:18.104Z] Contenido cargado con éxito. ID: 17ICssMOu3bYeurbwxBJTCVBEv_kdZTrN
+[2025-02-08T16:23:18.105Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
+[2025-02-08T16:28:32.501Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T16:28:32.501Z] Verificando o creando carpeta.
+[2025-02-08T16:28:32.847Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:28:32.847Z] Verificando existencia del archivo.
+[2025-02-08T16:28:33.493Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:28:33.493Z] El archivo ya existe.
+[2025-02-08T16:28:43.411Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T16:28:43.411Z] Verificando o creando carpeta.
+[2025-02-08T16:28:44.039Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:28:44.039Z] Verificando existencia del archivo.
+[2025-02-08T16:28:44.568Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:28:44.568Z] El archivo ya existe.
+[2025-02-08T16:28:45.933Z] Verificando si la transcripción ya existe.
+[2025-02-08T16:28:45.933Z] Verificando o creando carpeta.
+[2025-02-08T16:28:46.599Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:28:46.599Z] Verificando existencia del archivo.
+[2025-02-08T16:28:47.212Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:28:47.213Z] Verificando existencia del archivo.
+[2025-02-08T16:28:47.585Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:28:47.586Z] La transcripción ya existe.
+[2025-02-08T16:28:47.586Z] Iniciando generación de contenido: coral_apartamentos.mp3
+[2025-02-08T16:28:47.586Z] Verificando o creando carpeta.
+[2025-02-08T16:28:48.237Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:28:48.237Z] Verificando existencia del archivo.
+[2025-02-08T16:28:48.751Z] Archivo no encontrado.
+[2025-02-08T16:28:48.751Z] Verificando existencia del archivo.
+[2025-02-08T16:28:49.393Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:32:12.739Z] Guardando transcripción.
+[2025-02-08T16:32:12.740Z] Iniciando subida de archivo.
+[2025-02-08T16:32:15.103Z] Archivo subido con éxito. ID: 1KiEY8GRpys3qbBW5PlbNLROU6nDEv9pC y permisos de lectura pública asignados.
+[2025-02-08T16:32:15.104Z] Iniciando formato de contenido. coral_apartamentos.mp3
+[2025-02-08T16:32:15.104Z] Verificando o creando carpeta.
+[2025-02-08T16:32:15.387Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:32:15.387Z] Verificando existencia del archivo.
+[2025-02-08T16:32:15.629Z] Archivo no encontrado.
+[2025-02-08T16:32:15.629Z] Verificando existencia del archivo.
+[2025-02-08T16:32:16.212Z] Archivo ya existe. URL: 1KiEY8GRpys3qbBW5PlbNLROU6nDEv9pC.
+[2025-02-08T16:32:16.212Z] Verificando existencia del archivo.
+[2025-02-08T16:32:16.754Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+Formato generado:
+[2025-02-08T16:32:19.392Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Asamblea General de Copropietarios</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción, determinar según contexto]</p>
+  <p><strong>Hora:</strong> Inicio: 2:00 PM (retrasado a 3:00 PM) - Cierre: 7:52 PM</p>
+  <p><strong>Lugar:</strong> Coral Apartamentos</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Ricardo González - Administrador Delegado</li>
+    <li>Claudia Cecilia Bonilla Agudelo - Apartamento 2608</li>
+    <li>Sebastián Moreno - Revisor Fiscal</li>
+    <li>Sergio Rodríguez - Apartamento 902</li>
+    <li>Claudia Marcela García Quintero - Apartamento 1905 (Presidenta de la Asamblea)</li>
+    <li>María Cristina Narváez - Apartamento 2508 (Comisión Verificadora del Acta)</li>
+    <li>César Tobón - Representante de Apartamentos 1101 y 1801 (Comisión Verificadora del Acta)</li>
+    <li>Jonathan González - Apartamento 2308 (Comisión Verificadora del Acta)</li>
+    <li>Joana Barrientos - Apartamento 10</li>
+    <li>Esteban Cavi - Apartamento 1302</li>
+    <li>Verónica Guzmán - Contadora de la Copropiedad</li>
+    <li>Alexander Borges - Consejo de Administración</li>
+    <li>Karina García - Apartamento 802</li>
+    <li>Alexander Jiménez - Apartamento 1807</li>
+    <li>Alexander Bohorquez - Apartamento 1301</li>
+    <li>Fabián Gómez Morales - Apartamento 602</li>
+    <li>Judy Alexandra Marulanda - Apartamento 901</li>
+    <li>Pablo Vega - Apartamento 805</li>
+    <li>Marisa Suárez</li>
+    <li>Richard Sánchez - Apartamento 707</li>
+    <li>Lady Sánchez - Apartamento 1106</li>
+    <li>Nicolás Castrillo - Apartamento 1906</li>
+    <li>Jason Velázquez - Apartamento 2504</li>
+    <li>Didier Toro - Apartamento 2406</li>
+    <li>Lady Joana Soto - Apartamento 908</li>
+    <li>José Manuel Berrío - Apartamento 605</li>
+    <li>Cristina [Apellido no especificado]</li>
+    <li>Sebastián Ortiz - Apartamento 604</li>
+    <li>Emperatriz Hidalgo - Apartamento 2104</li>
+    <li>Daisy Álvarez - Apartamento 1104</li>
+    <li>Elkin Marín - Apartamento 2502</li>
+    <li>Carlos Mario Cruz - Apartamento 2507</li>
+    <li>Alberto [Apellido no especificado]</li>
+    <li>Alejandra Sepúlveda - Apartamento 101</li>
+    <li>María Morales - Apartamento 2106</li>
+    <li>Gabriel [Apellido no especificado]</li>
+    <li>Villalba [Apellido no especificado] - Apartamento 2206</li>
+    <li>Isa [Apellido no especificado]</li>
+    <li>Adriana [Apellido no especificado] - Apartamento 707</li>
+    <li>José Daniel Henao - Apartamento 2501</li>
+    <li>Marta Vanega - Apartamento 2804</li>
+  </ul>
+  <p><strong>Quórum:</strong> 3% a las 2:00 PM, 34.2% a las 3:06 PM</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura y Aprobación del Orden del Día</li>
+  <li>Nombramiento del Presidente y Secretario de la Asamblea</li>
+  <li>Nombramiento de la Comisión Verificadora del Acta</li>
+  <li>Informe de Gestión de la Administración y el Consejo de Administración</li>
+  <li>Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</li>
+  <li>Lectura de Estados Financieros Periodo 2023</li>
+  <li>Dictamen de Revisoría Fiscal</li>
+  <li>Aprobación de Estados Financieros del Periodo 2023</li>
+  <li>Aprobación del Proyecto Presupuestal</li>
+  <li>Aprobación de Cuota Extra (Punto Adicional)</li>
+  <li>Elección del Comité de Convivencia</li>
+  <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>
+  Ricardo González, Administrador Delegado, informó que a las 2:00 PM solo se contaba con el 3% del quórum de los copropietarios. En consecuencia, de acuerdo con el reglamento, la asamblea se inició una hora después, a las 3:00 PM. A las 3:06 PM, se verificó un quórum del 34.2%.
+</p>
+
+<h3>2. Lectura y Aprobación del Orden del Día</h3>
+<p>
+  El Administrador procedió a leer el orden del día propuesto. Se incluyó un punto adicional, sugerido por la revisoría fiscal, para la aprobación de una cuota extra. No hubo objeciones al orden del día, por lo que fue aprobado por unanimidad.
+</p>
+
+<h3>3. Nombramiento del Presidente y Secretario de la Asamblea</h3>
+<p>
+  Se explicó la importancia de elegir un presidente neutral y cordial para dirigir la asamblea. Claudia Cecilia Bonilla Agudelo, del apartamento 2608, solicitó una aclaración sobre la legalidad del quórum. El Revisor Fiscal, Sebastián Moreno, explicó que la asamblea se inició válidamente en segunda convocatoria, y que se contaba con el quórum necesario para deliberar y decidir sobre los puntos del orden del día.
+</p>
+<p>
+  Ante la falta de postulaciones, Claudia Marcela García Quintero, del apartamento 1905, fue propuesta y aprobada por unanimidad como Presidenta de la Asamblea. Se aprobó que la administración ejerciera como Secretario de la Asamblea.
+</p>
+
+<h3>4. Nombramiento de la Comisión Verificadora del Acta</h3>
+<p>
+  Se nombró a la comisión verificadora del acta, integrada por:
+</p>
+<ul>
+  <li>María Cristina Narváez, Apartamento 2508</li>
+  <li>César Tobón, Representante de los Apartamentos 1101 y 1801</li>
+  <li>Jonathan González, Apartamento 2308</li>
+</ul>
+<p>
+  Se solicitó a los miembros de la comisión proporcionar sus nombres, teléfonos y correos electrónicos para el envío del acta.
+</p>
+
+<h3>5. Informe de Gestión de la Administración y el Consejo de Administración</h3>
+<p>
+  Don Hernando, presentó a Ricardo González, el nuevo administrador de la copropiedad, quien expuso el informe de gestión del año 2023. Ricardo González, administrador de empresas con especialización en gerencia financiera y máster en inteligencia artificial y ciencia de datos, destacó la importancia del respeto y el trato digno en la copropiedad.
+</p>
+<p>
+  El informe se estructuró en torno a ejes estratégicos: cumplimiento de requisitos legales, valorización del patrimonio, sana convivencia y sostenibilidad financiera.
+</p>
+<h4>Valorización del Patrimonio</h4>
+<ul>
+  <li><strong>Impermeabilización de la terraza:</strong> Se realizó la impermeabilización para solucionar filtraciones en el piso 29. Se espera iniciar la corrección del drywall afectado entre marzo y abril.</li>
+  <li><strong>Trabajos en los shoots de basura:</strong> Se solicitó a los copropietarios mantener los shoots cerrados para evitar malos olores.</li>
+</ul>
+<h4>Cumplimiento de Requisitos Legales</h4>
+<ul>
+  <li><strong>Plan de emergencias y red contra incendios:</strong> Se continuará con la dotación de mangueras faltantes y la recarga de extintores.</li>
+</ul>
+<h4>Mejoras Locativas</h4>
+<ul>
+  <li><strong>Compra de mesa en concreto:</strong> Se instaló una mesa en el patio, que requirió una corrección debido al mal uso.</li>
+  <li><strong>Pintura:</strong> Se realizaron mejoras en la pintura de puntos fijos, ascensores, señalización, vigilancia, gimnasio y piscina.</li>
+  <li><strong>Gimnasio:</strong> Se proyecta instalar cámaras y realizar mejoras para evitar el uso inadecuado de los equipos y daños en el piso.</li>
+  <li><strong>Sensores de movimiento:</strong> Se cambió el 80% de los sensores para reducir el consumo de energía y se instalaron nuevos sensores y lámparas.</li>
+</ul>
+<h4>Ingresos No Operacionales</h4>
+<p>
+  Se utilizaron los ingresos no operacionales (reservas de salón social y parqueo de visitantes) para la compra de una nevera para el salón social, asoleadoras y sillas playeras para la piscina. Se envió un comunicado con el listado completo de la dotación adquirida.
+</p>
+<h4>Aseo y Mantenimiento</h4>
+<ul>
+  <li><strong>Campañas de aseo:</strong> Se realizaron lavados a profundidad con hidrolavadoras y rotativas en todos los pisos, patios, pasillos y parqueaderos.</li>
+  <li><strong>Cambio de empaques de canillas:</strong> Se cambiaron los empaques para evitar riesgos eléctricos en el ascensor.</li>
+  <li><strong>Mantenimiento del turco y la piscina:</strong> Se restauraron estas áreas.</li>
+  <li><strong>Mantenimiento de fachadas:</strong> Se intervinieron cinco apartamentos afectados por temas derivados de sismos o asentamientos.</li>
+  <li><strong>Jardinería:</strong> Se fortalecerá la jardinería interna y externa, recuperando la jardinera del piso seis.</li>
+</ul>
+<h4>Mantenimientos de Ley</h4>
+<ul>
+  <li><strong>Lavado de tanques:</strong> Se realizó semestralmente en abril y septiembre.</li>
+  <li><strong>Mantenimiento preventivo de ascensores:</strong> Se realiza mensualmente por la empresa Sumar.</li>
+  <li><strong>Fumigación:</strong> Se realizó fumigación y refuerzo en zonas comunes en noviembre.</li>
+  <li><strong>Mantenimiento de bombas hidráulicas:</strong> Se realiza bimensualmente.</li>
+  <li><strong>Análisis de agua de la piscina:</strong> Se realiza mensualmente.</li>
+</ul>
+<h4>Cumplimiento de Requisitos Legales</h4>
+<ul>
+  <li><strong>Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST):</strong> Se avanzó del 69% al 88% en el cumplimiento de los estándares mínimos. Se espera alcanzar el 98% este año.</li>
+  <li><strong>Actualización de la identificación, evaluación y valoración de riesgos y peligros:</strong> Se realizó con las empresas de vigilancia y aseo.</li>
+  <li><strong>Compra de elementos de protección personal:</strong> Se adquirieron elementos para el equipo de aseo.</li>
+  <li><strong>Plan de trabajo anual y de capacitación:</strong> Se estableció un plan para el personal en temas relacionados con el SG-SST.</li>
+  <li><strong>Restricción de plantas en los pisos:</strong> Se recordó que las plantas en zonas comunes están prohibidas por normatividad legal vigente.</li>
+  <li><strong>Compra de herramientas para mantenimiento y señalización de pisos mojados:</strong> Se adquirieron estos elementos.</li>
+</ul>
+<h4>Proyecciones para 2024</h4>
+<ul>
+  <li><strong>Capacitaciones en plan de emergencias:</strong> Se realizarán capacitaciones sobre qué hacer en caso de sismo e incendio, manejo de mangueras y extintores.</li>
+  <li><strong>Jornadas de salud:</strong> Se planea realizar jornadas de donación de sangre, yoga y mindfulness.</li>
+  <li><strong>Intervención del puesto de trabajo de vigilantes y personal de oficios varios:</strong> Se realizará en convenio con las empresas.</li>
+  <li><strong>Instalación de sensores de humo:</strong> Se instalarán en la zona de reciclaje y cuarto de basuras.</li>
+</ul>
+<h4>Plan de Manejo Integral de Residuos Sólidos (PMIRs)</h4>
+<ul>
+  <li><strong>Separación de residuos en la fuente:</strong> Se promoverá la separación adecuada de residuos por parte de los residentes.</li>
+  <li><strong>Certificado de disposición final de residuos sólidos:</strong> Se logró obtener este certificado con la empresa de reciclaje.</li>
+  <li><strong>Capacitación en manejo de residuos sólidos:</strong> Se realizarán inducciones trimestrales para nuevos residentes.</li>
+  <li><strong>Certificación final de medicamentos vencidos y elementos cortopunzantes:</strong> Se gestionará la disposición adecuada de estos elementos.</li>
+  <li><strong>Implementación de cajonera para abono interno:</strong> Se proyecta implementar una cajonera para generar abono con residuos orgánicos.</li>
+  <li><strong>Disposición de aceites quemados:</strong> Se solicita no arrojar aceites por la rendija de la cocina, sino llevarlos en un plástico a la administración.</li>
+</ul>
+<h4>Tratamiento de Datos Personales</h4>
+<ul>
+  <li><strong>Cumplimiento de la Ley 1581 de 2012:</strong> Se es exhaustivo con la actualización de datos personales.</li>
+  <li><strong>Política de tratamiento de datos:</strong> Se trabaja con las personas que ingresan a la copropiedad para actualizar sus datos.</li>
+  <li><strong>Confidencialidad de la información:</strong> Se realizó la primera reunión con el equipo de vigilancia sobre este tema.</li>
+  <li><strong>Sistematización de bases de datos:</strong> Se conectará con una plataforma (LUCR) para tener un censo en tiempo real de residentes, mascotas y vehículos.</li>
+</ul>
+<h4>Sanciones</h4>
+<p>
+  Se han generado sanciones por más de $2,300,000 por mal uso de mascotas, y $1,936,000 en lo que va del año. Se realizará una intervención en la zona de mascotas para mejorar el acceso y la limpieza.
+</p>
+<p>
+  César Tobón, del apartamento 1101, solicitó aclarar el tema de la confidencialidad en la entrega de imágenes o videos. Se explicó que las sanciones se mandan con dos fechas, la de la sanción y la del evento. Se muestran las evidencias en la administración, pero no se reenvían para proteger datos personales.
+</p>
+<h4>Sana Convivencia</h4>
+<ul>
+  <li><strong>Actividades de Halloween y diciembre:</strong> Se realizaron actividades para niños y familias, incluyendo una fiesta de disfraces y un bingo.</li>
+  <li><strong>Decoración navideña:</strong> Se compraron elementos navideños para decorar la copropiedad.</li>
+</ul>
+<h4>Sostenibilidad Financiera</h4>
+<ul>
+  <li><strong>Recuperación de cartera:</strong> Se recuperaron $26 millones a través de la empresa de abogados Ejecutamos.</li>
+  <li><strong>Restricción de accesos:</strong> Se restringen accesos a parqueaderos, zonas comunes, piscina y turco a personas con más de tres cuotas de administración pendientes.</li>
+  <li><strong>Fondo de imprevistos:</strong> Se capitalizó el fondo, alcanzando $14 millones a diciembre y $19 millones actualmente.</li>
+  <li><strong>Reserva de fachada:</strong> Se incrementó la reserva de $28 millones a $40 millones.</li>
+  <li><strong>Ingresos por alquiler de parqueaderos y salón social:</strong> Se obtuvieron $20 millones, que se reinvirtieron en mejoras.</li>
+  <li><strong>Pago a proveedores:</strong> Se terminó el año a paz y salvo con todos los proveedores.</li>
+  <li><strong>Revisión de facturas de servicios públicos:</strong> Se inició una revisión para identificar posibles sobrecostos.</li>
+  <li><strong>Recuperación de cartera de Arte:</strong> Se está gestionando el pago de $8 millones adeudados por Arte.</li>
+</ul>
+<h4>Encuestas de Satisfacción</h4>
+<p>
+  Se realizaron encuestas de satisfacción con el equipo de aseo (97%) y vigilancia (98%). Se están implementando mejoras basadas en las sugerencias recibidas.
+</p>
+<h4>Asistente Virtual</h4>
+<p>
+  Se implementará una asistente virtual para responder preguntas y realizar tareas operativas en tiempo real a través de WhatsApp.
+</p>
+<p>
+  Joana Barrientos, del apartamento 10, preguntó por qué no se han realizado arreglos en el parque y la piscina si hay ingresos. El Administrador respondió que se requiere la aprobación de la asamblea para la ejecución de estos proyectos, y que los recursos no alcanzan para cubrir todos los costos.
+</p>
+<p>
+  Esteban Cavi, del apartamento 1302, preguntó por la carnetización de la piscina. La Contadora, Verónica Guzmán, respondió que los dineros recaudados se encuentran en una cuenta pasivo y se tomará una decisión sobre su destino. Alexander Borges, del Consejo, añadió que solo se recaudaron $190,000 y se decidió convertirlo en saldo a favor.
+</p>
+<p>
+  Karina García, del apartamento 802, expresó su preocupación por la falta de decisiones y la vulneración de los derechos de los niños a la recreación. El Administrador respondió que se cerró la piscina preventivamente por seguridad y que se está buscando una solución biométrica para el acceso.
+</p>
+<p>
+  Alexander Jiménez, del apartamento 1807, aclaró que el Consejo no ejecuta nada, solo aprueba de acuerdo con el presupuesto. Alexander Bohorquez, del apartamento 1301, añadió que el reglamento de propiedad horizontal es la base para las decisiones y que la recuperación de cartera se destinó al fondo de fachada.
+</p>
+<p>
+  Fabián Gómez Morales, del apartamento 602, sugirió fijar fechas concretas para las actividades planificadas. El Administrador respondió que se trabaja con un plan de trabajo anual derivado de las decisiones de la asamblea.
+</p>
+<p>
+  El Revisor Fiscal precisó que la aprobación y ejecución de los recursos están a cargo de la asamblea y la administración, respectivamente.
+</p>
+
+<h3>6. Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</h3>
+<p>
+  Se invitó a los interesados a postularse para el Consejo de Administración. Se recordó que los postulantes deben ser propietarios o apoderados, no estar en mora superior a 60 días ni haber sido sancionados por convivencia en los últimos dos años.
+</p>
+<p>
+  El Revisor Fiscal aclaró que las personas con leasing deben contar con un poder del banco para postularse. Sergio Rodríguez sugirió que las personas con leasing se postulen y luego traigan el documento del banco, pero el Revisor Fiscal indicó que el poder debe existir antes del nombramiento.
+</p>
+<p>
+  Se explicó que el reglamento prevé nueve miembros principales y nueve suplentes. Las personas que no cumplan con los requisitos pueden ser invitados permanentes al Consejo, con derecho a voz pero no a voto.
+</p>
+<p>
+  Claudia, del 2608, informó que el Fondo Nacional del Ahorro da la potestad a los que tienen leasing para representarlos como propietarios. Marta Vanega, del 2804, preguntó sobre el tiempo que los consejeros pueden permanecer en el cargo. Se aclaró que ni el reglamento ni la ley establecen un límite, y que la decisión está en manos de la asamblea.
+</p>
+<p>
+  Se explicó que la elección se realiza a través de lista única, y que si no hay conformidad, se recurre al sistema del cociente electoral.
+</p>
+<p>
+  Se mencionó la falta de un manual que sancione a los consejeros que no cumplen su papel. Se sugirió que los propietarios que no puedan ser consejeros apoderen a otros.
+</p>
+<p>
+  Juan Guillermo Correa, del apartamento 1405, propuso modificar el reglamento para permitir que los que tienen leasing puedan ser consejeros. Se explicó que esto no es posible porque el reglamento no puede contradecir la ley 675. Se informó que modificar el reglamento requiere mayoría calificada y reformar la escritura, con un costo aproximado de $60,000 por apartamento.
+</p>
+<p>
+  Se reiteró la importancia de que los propietarios conozcan el reglamento y la ley 675. Se recordó que existe un trámite de impugnación para las multas impuestas sin el debido proceso.
+</p>
+<p>
+  Se insistió en que la elección del Consejo es potestad exclusiva de la asamblea, y que si no se elige un consejo hoy, seguirá vigente el anterior hasta una asamblea extraordinaria.
+</p>
+<p>
+  Se postularon las siguientes personas:
+</p>
+<ul>
+  <li>Lady Sánchez, Apartamento 1106</li>
+  <li>Alexander Jiménez, Apartamento 1807</li>
+  <li>Nicolás Castrillo, Apartamento 1906</li>
+  <li>Alexander Borges, Apartamento 1301</li>
+  <li>Jason Velázquez, Apartamento 2504</li>
+  <li>Didier Toro, Apartamento 2406</li>
+  <li>María Cristina Narváez, Apartamento 2508</li>
+  <li>Cristina [Apellido no especificado] (apoderada por Lady Joana Soto, Apartamento 908)</li>
+  <li>Sebastián Ortiz, Apartamento 604</li>
+  <li>Joana Barrientos, Apartamento 10 (como invitada permanente)</li>
+  <li>Emperatriz Hidalgo, Apartamento 2104 (como invitada permanente, apoderada por Sergio Rodríguez, Apartamento 902)</li>
+  <li>Fabián Gómez Morales, Apartamento 602 (como invitado permanente)</li>
+  <li>Jonathan González, Apartamento 2308</li>
+</ul>
+<p>
+  Se aclaró que los apoderados y propietarios tienen el mismo derecho a ser principales o suplentes, y que los miembros del Consejo se pondrán de acuerdo en la primera reunión sobre quiénes serán principales y suplentes.
+</p>
+<p>
+  Se sometió a votación la lista de postulados. Algunos asambleístas expresaron su desacuerdo con la lista. Se explicó que si no hay conformidad con la lista, se recurre al método del cociente electoral.
+</p>
+<p>
+  Finalmente, se aprobó el consejo por mayoría.
+</p>
+
+<h3>7. Lectura de Estados Financieros Periodo 2023</h3>
+<p>
+  Verónica Guzmán, contadora de la copropiedad, presentó los estados financieros del año 2023. Señaló un error de estructura en los informes compartidos, pero aseguró que no afectaba el fondo de la información.
+</p>
+<p>
+  Se detalló la composición del activo, incluyendo la parte líquida (bancos y caja menor) y la parte no líquida (deudores por cuotas de administración, multas, intereses de mora, etc.).
+</p>
+<p>
+  Se explicó la composición de los recursos restringidos, que son las reservas con proyectos destinados. Se mencionaron la reserva de provisión restringida, la reserva de destinación de proyectos, la reserva del fondo de imprevistos, la cuota extra de fachadas y los saldos a favor.
+</p>
+<p>
+  Se indicó que la copropiedad cuenta con varias consignaciones por identificar, debido a que los copropietarios no colocaron la referencia de su apartamento al realizar el pago.
+</p>
+<p>
+  Se presentó la composición del pasivo (deudas de la copropiedad) y el patrimonio (reservas y utilidades).
+</p>
+<p>
+  Se informó que los únicos ingresos operacionales son por cuotas de administración, y que también hay ingresos no operacionales (intereses, sanciones, multas por parqueadero, etc.). En 2023 se facturaron $449,359,626 y se recaudaron $405,892,910, lo que representa un 90% de lo facturado.
+</p>
+<p>
+  Se detalló la composición de la cartera, clasificándola por número de cuotas vencidas. Se indicó que 129 apartamentos se encuentran al día.
+</p>
+<p>
+  Se mencionaron los ingresos no presupuestados, que ascendieron a $35,158,128 en 2023.
+</p>
+<p>
+  Se presentó la evolución del gasto, mostrando lo presupuestado y lo ejecutado en cada rubro. Se destacaron los rubros con mayor sobreejecución y los gastos más representativos.
+</p>
+<p>
+  Se informó sobre la evolución del fondo de reserva, que terminó el año 2023 con $19,840,676.
+</p>
+<p>
+  Se presentaron los resultados del ejercicio, mostrando los excedentes de años anteriores y el resultado del ejercicio actual. Se indicó que solo el 25% de estas utilidades se encuentra líquido en bancos.
+</p>
+<p>
+  Se abrió un espacio para preguntas y dudas sobre la información financiera.
+</p>
+
+<h3>8. Dictamen de Revisoría Fiscal</h3>
+<p>
+  Sebastián Moreno, Revisor Fiscal, presentó el dictamen a los estados financieros. Explicó que la preparación de los estados financieros es responsabilidad de la administración, y que la labor del revisor fiscal es auditarlos.
+</p>
+<p>
+  El dictamen emitido fue sin salvedades de opinión, lo que significa que la información presentada por la administración refleja razonablemente la situación financiera de la copropiedad.
+</p>
+<p>
+  No obstante, se hicieron algunas observaciones:
+</p>
+<ul>
+  <li><strong>Saldos pendientes de legalización:</strong> Se identificó un saldo pendiente de legalización por $1,434,920, correspondiente a un anticipo al administrador para gastos de navidad.</li>
+  <li><strong>Consignaciones por identificar:</strong> Se señaló la existencia de consignaciones por identificar por un valor de $5,891,195. Se recomendó a los propietarios realizar sus pagos referenciados y a la administración intensificar la gestión para identificar estas consignaciones.</li>
+  <li><strong>Apropiación de la reserva de ley de forma líquida:</strong> Se indicó que la copropiedad no está cumpliendo con la apropiación de la reserva de ley de forma líquida, faltando por apropiar $5,886.</li>
+  <li><strong>Cumplimiento normativo:</strong> Se señaló que la copropiedad está cumpliendo con la presentación de declaraciones tributarias y el seguro de zonas comunes, pero no con el sistema de gestión de seguridad y salud en el trabajo, el plan integral de manejo de residuos sólidos y la política de tratamiento de datos personales.</li>
+  <li><strong>Ley de piscinas:</strong> Se advirtió que el piscinero no cuenta con certificación en salvamento acuático, lo cual es obligatorio según la ley 1209 de 2008.</li>
+  <li><strong>Control interno:</strong> Se destacó que el Consejo de Administración está ejerciendo el control financiero de la copropiedad, y que se evidencian medidas de control interno en el manejo de recursos.</li>
+</ul>
+<p>
+  Se realizó un análisis de la cartera, señalando que el indicador de rotación está por encima de 30 días. Se recomendó emprender acciones de cobro, incluso jurídicas, para la cartera adeudada por la constructora.
+</p>
+<p>
+  Se destacó que la copropiedad está pagando a sus proveedores en promedio cada 2.5 días, y que la relación entre lo que le deben a la copropiedad y lo que la copropiedad debe es favorable.
+</p>
+<p>
+  Se abrió un espacio para preguntas y dudas sobre el informe de la revisoría fiscal.
+</p>
+
+<h3>9. Aprobación de Estados Financieros del Periodo 2023</h3>
+<p>
+  Se sometieron a votación los estados financieros. Se aprobó por mayoría los estados financieros al 31 de diciembre de 2023.
+</p>
+
+<h3>10. Aprobación del Proyecto Presupuestal</h3>
+<p>
+  Se presentó el proyecto presupuestal para el año 2024, basado en el incremento del salario mínimo legal vigente. Se explicó que el presupuesto está ajustado a la realidad de las necesidades de la copropiedad.
+</p>
+<p>
+  Se destacó el incremento en el rubro de vigilancia, debido a la reforma laboral, y la reducción en los gastos bancarios. Se informó que el porcentaje total de incremento es del 12.07%.
+</p>
+<p>
+  Se propuso un descuento por pronto pago, pero se advirtió que esto implicaría un gasto adicional en el presupuesto. Se sugirió incluir un rubro específico para estos descuentos.
+</p>
+<p>
+  Se solicitó no incrementar mucho la cuota de administración y buscar alternativas para disminuir los rubros no urgentes. Se mencionó la posibilidad de utilizar paneles solares y optimizar el personal del piscinero.
+</p>
+<p>
+  Se recordó que el año pasado no hubo cuota extra y que el aumento fue inferior al salario mínimo. Se insistió en la necesidad de realizar el hidrofugado de las fachadas.
+</p>
+<p>
+  Se propuso no incrementar mucho la cuota, tratando de mantener la seguridad para los posibles riesgos que puedan existir.
+</p>
+<p>
+  Finalmente, se aprobó por mayoría el presupuesto para el 2024 con un incremento del 12.07%.
+</p>
+
+<h3>11. Aprobación de Cuota Extra (Punto Adicional)</h3>
+<p>
+  Se presentó la propuesta de una cuota extra para cubrir tres proyectos: cables de tracción del ascensor, reforma del parque infantil y embaldosado de la piscina de los niños.
+</p>
+<p>
+  Se propuso una cuota de $255,100 por apartamento, pagadera en cuotas. Se sugirió utilizar los excedentes financieros para estos proyectos.
+</p>
+<p>
+  Se propuso dividir la cuota extra en cinco o seis cuotas para facilitar el pago. Se solicitó mostrar el desglose de los $20 millones del parque infantil.
+</p>
+<p>
+  Se sugirió priorizar la vida y atender primero los ascensores, dejando el parque infantil para después. Se propuso cerrar el parque infantil por seguridad.
+</p>
+<p>
+  Se propuso invertir los ingresos de los parqueaderos en el parque infantil. Se sugirió utilizar el fondo de imprevistos para los ascensores, pero se aclaró que este fondo es para imprevistos y no para gastos previsibles.
+</p>
+<p>
+  Se propuso utilizar los aprovechamientos para la piscina y los excedentes líquidos para los ascensores. Se sugirió una cuota extra para la fachada, diferida en tres cuotas.
+</p>
+<p>
+  Se propuso realizar eventos para recaudar fondos para el parque infantil. Se sugirió que el Consejo evalúe la prioridad de los proyectos y los ejecute a medida que se recaude el dinero.
+</p>
+<p>
+  Se propuso no descartar del todo la cuota extra y provisionar la mitad para generar rentabilidad. Se propuso que la cuota extra se destine a la fachada y se meta en una fiducia.
+</p>
+<p>
+  Finalmente, se votó y se aprobó por mayoría no realizar la cuota extra. Se aprobó por unanimidad que los excedentes se utilicen para el ascensor.
+</p>
+<p>
+  Se aprobó por mayoría que los excedentes de la copropiedad sean tomados para la ejecución de los tres proyectos, y que el Consejo determine la prioridad de los mismos.
+</p>
+<p>
+  Se aprobó por mayoría pagar $150,000 para la cuota extra en tres cuotas después de que les cobren la factura del retroactivo.
+</p>
+
+<h3>12. Elección del Comité de Convivencia</h3>
+<p>
+  Se explicaron las funciones del comité de convivencia, que son acompañar a la administración en temas de convivencia y servir de enlace entre la comunidad y la administración.
+</p>
+<p>
+  Se postularon las siguientes personas:
+</p>
+<ul>
+  <li>Sergio Rodríguez, Apartamento 902</li>
+  <li>Jonas [Apellido no especificado]</li>
+  <li>Lady Sánchez, Apartamento 1106</li>
+</ul>
+<p>
+  Se aprobó por unanimidad que estas tres personas conformen el comité de convivencia.
+</p>
+
+<h3>13. Elección del Nuevo Revisor Fiscal o Reelección del Mismo</h3>
+<p>
+  Se informó que no se allegaron nuevas hojas de vida para el cargo de revisor fiscal. Se preguntó si se deseaba continuar con la firma actual.
+</p>
+<p>
+  Se aprobó por unanimidad que la firma actual continúe siendo la revisora fiscal de Coral Apartamentos.
+</p>
+
+<h3>14. Proposiciones y Varios</h3>
+<p>
+  Se abrió un espacio para proposiciones y varios.
+</p>
+<ul>
+  <li>Se hizo un llamado a los dueños de mascotas para que sean responsables al sacarlas, especialmente cuando se trata de niños.</li>
+  <li>Se solicitó que la piscinera no realice labores de aseo en zonas comunes mientras la piscina esté abierta.</li>
+  <li>Se preguntó por el estado del lote de atrás. Se explicó que el lote de la calle pertenece al municipio, y que se está estudiando la posibilidad de reclamar un pedazo de tierra internamente. Se propuso autorizar al Consejo para seguir el caso y pagar lo necesario.</li>
+  <li>Se propuso que el municipio preste el lote para que los perritos tengan un espacio más largo.</li>
+  <li>Se sugirió que la administración lleve a cabo el estudio del lote y presente la relación costo beneficio.</li>
+  <li>Se propuso que la fumigación sea obligatoria y se cobre una multa a quienes no permitan fumigar sus apartamentos. Se explicó que esto no es posible sin modificar el reglamento.</li>
+  <li>Se propuso que se trabaje en el tema de la energía eólica, ya que el edificio tiene una buena corriente de viento.</li>
+  <li>Se preguntó por qué se dañó el motor de la piscina. Se explicó que fue el filtro, y que puede ser por uso o por mal uso.</li>
+  <li>Se preguntó cuándo se tiene que hacer el proyecto de la fachada. Se respondió que el año entrante.</li>
+  <li>Se propuso que se haga una acción popular por el tema de la tasa de aseo que cobra Interaseo.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 7:52 PM</p>
+  <p><strong>Acuerdos:</strong></p>
+  <ul>
+    <li>Aprobación del presupuesto para el 2024 con un incremento del 12.07%.</li>
+    <li>No se realizará cuota extra.</li>
+    <li>Los excedentes se utilizarán para el ascensor.</li>
+    <li>Los aprovechamientos se utilizarán para la piscina.</li>
+    <li>Se pagarán $150,000 para la cuota extra en tres cuotas después de que les cobren la factura del retroactivo.</li>
+    <li>Se aprueba el comité de convivencia.</li>
+    <li>Se aprueba la reelección del revisor fiscal.</li>
+  </ul>
+  <p><strong>Compromisos:</strong></p>
+  <ul>
+    <li>La administración realizará el estudio del lote y presentará la relación costo beneficio.</li>
+    <li>La administración y el consejo trabajarán en el tema de la energía eólica.</li>
+    <li>La administración y el consejo trabajarán en el tema de la energía eólica.</li>
+    <li>La administración y el consejo trabajarán en el tema de la energía eólica.</li>
+  </ul>
+  <p><strong>Próximos pasos:</strong></p>
+  <ul>
+    <li>Realizar el estudio del lote y presentar la relación costo beneficio.</li>
+    <li>Trabajar en el tema de la energía eólica.</li>
+    <li>Realizar el estudio del lote y presentar la relación costo beneficio.</li>
+    <li>Trabajar en el tema de la energía eólica.</li>
+  </ul>
+  
+</footer>
+[2025-02-08T16:32:22.056Z] Contenido cargado con éxito. ID: 158iHkGRrOeXsmuiF4pm5W1A6mURGo2w0
+[2025-02-08T16:32:22.056Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
+[2025-02-08T16:40:05.236Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T16:40:05.238Z] Verificando o creando carpeta.
+[2025-02-08T16:40:05.596Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:40:05.596Z] Verificando existencia del archivo.
+[2025-02-08T16:40:05.849Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:40:05.849Z] El archivo ya existe.
+[2025-02-08T16:40:07.620Z] Verificando si la transcripción ya existe.
+[2025-02-08T16:40:07.621Z] Verificando o creando carpeta.
+[2025-02-08T16:40:07.914Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:40:07.914Z] Verificando existencia del archivo.
+[2025-02-08T16:40:08.157Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:40:08.157Z] Verificando existencia del archivo.
+[2025-02-08T16:40:08.413Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:40:08.413Z] La transcripción ya existe.
+[2025-02-08T16:40:08.414Z] Iniciando generación de contenido: coral_apartamentos.mp3
+[2025-02-08T16:40:08.414Z] Verificando o creando carpeta.
+[2025-02-08T16:40:09.001Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:40:09.001Z] Verificando existencia del archivo.
+[2025-02-08T16:40:09.620Z] Archivo no encontrado.
+[2025-02-08T16:40:09.620Z] Verificando existencia del archivo.
+[2025-02-08T16:40:10.231Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:43:19.940Z] Guardando transcripción.
+[2025-02-08T16:43:19.944Z] Iniciando subida de archivo.
+[2025-02-08T16:43:22.507Z] Archivo subido con éxito. ID: 1DE7Zx5vJSO_7fngzQKUeii5vbr5bXHij y permisos de lectura pública asignados.
+[2025-02-08T16:43:22.507Z] Iniciando formato de contenido. coral_apartamentos.mp3
+[2025-02-08T16:43:22.507Z] Verificando o creando carpeta.
+[2025-02-08T16:43:23.158Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:43:23.158Z] Verificando existencia del archivo.
+[2025-02-08T16:43:23.519Z] Archivo no encontrado.
+[2025-02-08T16:43:23.519Z] Verificando existencia del archivo.
+[2025-02-08T16:43:23.964Z] Archivo ya existe. URL: 1DE7Zx5vJSO_7fngzQKUeii5vbr5bXHij.
+[2025-02-08T16:43:23.965Z] Verificando existencia del archivo.
+[2025-02-08T16:43:24.202Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+Formato generado:
+[2025-02-08T16:43:26.843Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Asamblea General de Copropietarios</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción, determinar según contexto]</p>
+  <p><strong>Hora:</strong> Inicio: 2:00 PM (retrasado a 3:00 PM) - Cierre: 7:52 PM</p>
+  <p><strong>Lugar:</strong> Coral Apartamentos</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Ricardo González - Administrador Delegado</li>
+    <li>Claudia Cecilia Bonilla Agudelo - Apartamento 2608</li>
+    <li>Sebastián Moreno - Revisor Fiscal</li>
+    <li>Claudia Marcela García Quintero - Apartamento 1905 (Presidenta de la Asamblea)</li>
+    <li>María Cristina Narváez - Apartamento 2508 (Comisión Verificadora del Acta)</li>
+    <li>César Tobón - Representación Apartamentos 1101 y 1801 (Comisión Verificadora del Acta)</li>
+    <li>Jonathan González - Apartamento 2308 (Comisión Verificadora del Acta)</li>
+    <li>Joana Barrientos - Apartamento 10</li>
+    <li>Esteban Cavi - Apartamento 1302</li>
+    <li>Verónica Guzmán - Contadora de la Copropiedad</li>
+    <li>Alexander Borges - Consejo de Administración</li>
+    <li>Karina García - Apartamento 802</li>
+    <li>Alexander Jiménez - Apartamento 1807</li>
+    <li>Alexander Bohorquez - Apartamento 1301</li>
+    <li>Fabián Gómez Morales - Apartamento 602</li>
+    <li>Juan Guillermo Correa - Apartamento 1405</li>
+    <li>Judy Alexandra Marulanda - Apartamento 901</li>
+    <li>Pablo Vega - Apartamento 805</li>
+    <li>Marisa Suárez</li>
+    <li>Richard Sánchez - Apartamento 707</li>
+    <li>Lady Sánchez - Apartamento 1106 (Consejo de Administración)</li>
+    <li>Nicolás Castrillo - Apartamento 1906 (Consejo de Administración)</li>
+    <li>Jason Velázquez - Apartamento 2504 (Consejo de Administración)</li>
+    <li>Didier Toro - Apartamento 2406 (Consejo de Administración)</li>
+    <li>José Manuel Berrío - Apartamento 605</li>
+    <li>Cristina - (Consejo de Administración)</li>
+    <li>Sebastián Ortiz - Apartamento 604 (Consejo de Administración)</li>
+    <li>Emperatriz Hidalgo - Apartamento 2104 (Consejo de Administración como invitada permanente)</li>
+    <li>Daisy Álvarez - Apartamento 1104</li>
+    <li>Sergio Rodríguez - Apartamento 902 (Comité de Convivencia)</li>
+    <li>Elkin Marín - Apartamento 2502</li>
+    <li>Carlos Mario Cruz - Apartamento 2507</li>
+    <li>Alberto</li>
+    <li>Villalba - Apartamento 2206</li>
+    <li>Marta Vanega - Apartamento 2804</li>
+    <li>José Daniel Henao - Apartamento 2501</li>
+    <li>Alexander Foner</li>
+  </ul>
+  <p><strong>Quórum:</strong> 3% a las 2:00 PM, 34.2% a las 3:06 PM</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura y Aprobación del Orden del Día</li>
+  <li>Nombramiento del Presidente y Secretario de la Asamblea</li>
+  <li>Nombramiento de la Comisión Verificadora del Acta</li>
+  <li>Informe de Gestión de la Administración y el Consejo de Administración</li>
+  <li>Nombramiento o Reelección del Consejo de Administración</li>
+  <li>Lectura de Estados Financieros Periodo 2023</li>
+  <li>Dictamen de Revisoría Fiscal</li>
+  <li>Aprobación de Estados Financieros Periodo 2023</li>
+  <li>Aprobación del Proyecto Presupuestal</li>
+  <li>Aprobación de Cuota Extra (punto adicional)</li>
+  <li>Elección del Comité de Convivencia</li>
+  <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>
+  El administrador delegado, Ricardo González, informó que a las 2:00 p.m. solo se contaba con el 3% del quórum de los copropietarios. En consecuencia, de acuerdo con el reglamento, la asamblea general de copropietarios se inició una hora después, a las 3:00 p.m. A las 3:06 minutos se verificó un quórum del 34.2%.
+</p>
+
+<h3>2. Lectura y Aprobación del Orden del Día</h3>
+<p>
+  Se procedió a la lectura del orden del día propuesto. A sugerencia de la revisoría fiscal, se aprobó por unanimidad incluir como punto adicional, después del proyecto presupuestal, la aprobación de una cuota extra.
+</p>
+
+<h3>3. Nombramiento del Presidente y Secretario de la Asamblea</h3>
+<p>
+  Ricardo González explicó la importancia de elegir un presidente de asamblea neutral y cordial. Claudia Cecilia Bonilla Agudelo, del apartamento 2608, solicitó una aclaración sobre la legalidad de la asamblea con el quórum presente. El revisor fiscal, Sebastián Moreno, explicó que existen dos tipos de quórum: para deliberar y para decidir. Indicó que la asamblea se inició válidamente en segunda convocatoria con el quórum presente, y que se tenía quórum para decidir respecto a los puntos del orden del día.
+</p>
+<p>
+  Ante la falta de postulaciones, Claudia Marcela García Quintero, del apartamento 1905, se postuló como presidenta y fue aprobada por unanimidad. Se aprobó que la administración ejerciera como secretario de la asamblea.
+</p>
+
+<h3>4. Nombramiento de la Comisión Verificadora del Acta</h3>
+<p>
+  Se nombró la comisión verificadora del acta, integrada por:
+</p>
+<ul>
+  <li>María Cristina Narváez, apartamento 2508</li>
+  <li>César Tobón, en representación de los apartamentos 1101 y 1801</li>
+  <li>Jonathan González, apartamento 2308</li>
+</ul>
+<p>
+  Se solicitó a los miembros de la comisión proporcionar sus nombres, teléfonos y correos electrónicos para el envío del acta.
+</p>
+
+<h3>5. Informe de Gestión de la Administración y el Consejo de Administración</h3>
+<p>
+  Ricardo González, administrador de Cima Inmobiliaria desde octubre del año anterior, presentó el informe de gestión del año 2023, destacando los ejes estratégicos de la administración: cumplimiento de requisitos legales, valorización del patrimonio, sana convivencia y sostenibilidad financiera.
+</p>
+<p>
+  Entre las acciones realizadas, mencionó:
+</p>
+<ul>
+  <li>Impermeabilización de la terraza y plan de trabajo para corregir el drywall en el piso 29.</li>
+  <li>Trabajos en los shoots de basura, solicitando a los copropietarios mantenerlos cerrados.</li>
+  <li>Dotación de mangueras para la red contra incendios y recarga de extintores.</li>
+  <li>Compra de una mesa de concreto para el patio.</li>
+  <li>Mejoras estéticas en puntos fijos, gimnasio y piscina.</li>
+  <li>Cambio de sensores de movimiento para reducir el consumo de energía.</li>
+  <li>Compra de nevera para el salón social, asoleadoras y sillas playeras para la piscina, con ingresos no operacionales.</li>
+  <li>Campañas de aseo a profundidad en pisos, patios y parqueaderos.</li>
+  <li>Cambio de empaques de canillas para evitar riesgos eléctricos en el ascensor.</li>
+  <li>Mantenimiento del turco y la zona de la piscina.</li>
+  <li>Mantenimiento de fachadas en cinco apartamentos afectados.</li>
+  <li>Plan de trabajo con el jardinero y mejoras en la jardinería interna y externa.</li>
+  <li>Lavado de tanques semestral, mantenimiento preventivo de ascensores mensual, fumigación y análisis de agua de la piscina mensual.</li>
+</ul>
+<p>
+  En cuanto al cumplimiento de requisitos legales, se informó que el sistema de gestión de seguridad y salud en el trabajo avanzó de un 69% a un 88%, con el objetivo de alcanzar el 100% este año. Se realizaron actualizaciones en la identificación, evaluación y valoración de riesgos y peligros, compra de elementos de protección personal para el equipo de aseo, y se estableció un plan de trabajo anual y de capacitación. Se reiteró la prohibición de colocar plantas en los pasillos por temas de normatividad legal vigente y plan de emergencias.
+</p>
+<p>
+  Para el año 2024, se planean capacitaciones en plan de emergencias, jornadas de salud, intervención del puesto de trabajo de vigilantes y personal de oficios varios, e instalación de sensores de humo en la zona de reciclaje y cuarto de basura.
+</p>
+<p>
+  En cuanto al plan de manejo integral de residuos sólidos (PMIRs), se busca mejorar la separación de residuos en la fuente y obtener la certificación de disposición final de residuos sólidos. Se realizarán inducciones trimestrales para nuevos residentes y se implementará una cajonera para generar abono interno y la disposición de aceites quemados.
+</p>
+<p>
+  En tratamiento de datos personales, se es exhaustivo con el cumplimiento de la ley 1581 de 2012, actualizando datos personales y garantizando la confidencialidad de la información. Se sistematizarán las bases de datos con una plataforma llamada LUCR para tener un censo en tiempo real de residentes, mascotas y vehículos.
+</p>
+<p>
+  Se informó sobre sanciones a propietarios por heces de mascotas en el piso dos, con un total de $2,300,000 en 2023 y $1,936,000 en lo que va de 2024. Se planea una intervención en la zona de mascotas para mejorar el acceso.
+</p>
+<p>
+  En temas de sana convivencia, se realizaron actividades de Halloween y actividades familiares en diciembre.
+</p>
+<p>
+  En sostenibilidad financiera, se logró una recuperación de cartera de $26 millones con la empresa de abogados Ejecutamos. Se continúa con la restricción de accesos a morosos. El fondo imprevisto se capitalizó con $14 millones a diciembre de 2023 y se alcanzó el 100% con $19 millones. Se incrementó la reserva de la fachada en $12 millones. Se obtuvieron ingresos de $20 millones por alquiler de parqueaderos y salón social, que se reinvirtieron en mejoras. Se terminó el año a paz y salvo con todos los proveedores. Se está en proceso de revisión de facturas de servicios públicos con una empresa intermediaria y se busca recuperar una deuda de Arte.
+</p>
+<p>
+  Se realizaron encuestas de satisfacción con el equipo de aseo y vigilancia, obteniendo una aceptación del 98% y 97% respectivamente. Se implementará una asistente virtual en la copropiedad para responder consultas en tiempo real.
+</p>
+<p>
+  César Tobón, del apartamento 1101 y 1801, solicitó aclarar el tema de la confidencialidad en la entrega de imágenes o videos, mencionando un caso de multa por heces de mascotas sin evidencia clara. El administrador respondió que se muestran las evidencias en la administración, pero no se comparten por WhatsApp o correo electrónico para proteger datos personales.
+</p>
+<p>
+  Joana Barrientos, del apartamento 10, preguntó por qué no se han realizado arreglos en el parque y la piscina si hay ingresos. El administrador respondió que se requiere aprobación en asamblea para la ejecución presupuestal y que los recursos no alcanzan para todos los proyectos.
+</p>
+<p>
+  Esteban Cavi, del apartamento 1302, preguntó por la carnetización de la piscina, pagada hace más de dos años. La contadora, Verónica Guzmán, respondió que el dinero está en una cuenta pasivo y se tomará una decisión sobre su destino. Alexander Borges, del Consejo, añadió que solo se recaudaron $190,000 y se decidió convertirlo en saldo a favor.
+</p>
+<p>
+  Karina García, del apartamento 802, expresó su preocupación por la falta de decisiones y planificación, especialmente en temas de recreación para niños. El administrador respondió que se cerró la piscina preventivamente por seguridad y que se está considerando un sistema biométrico para el acceso.
+</p>
+<p>
+  Alexander Jiménez, del apartamento 1807, aclaró que el consejo no ejecuta nada, solo aprueba de acuerdo con el presupuesto. Alexander Bohorquez, del apartamento 1301, añadió que la cuota de administración se dejó baja el año pasado y que la recuperación de cartera se destinó al fondo de fachada.
+</p>
+<p>
+  Fabián Gómez Morales, del apartamento 602, sugirió fijar fechas para las actividades planificadas. El administrador respondió que se trabaja con un plan de trabajo anual derivado de las decisiones de la asamblea.
+</p>
+<p>
+  El revisor fiscal precisó que la aprobación y ejecución de recursos están a cargo de la asamblea y la administración, respectivamente, y que el consejo no puede cambiar la destinación de los recursos.
+</p>
+
+<h3>6. Nombramiento o Reelección del Consejo de Administración</h3>
+<p>
+  Se invitó a los interesados a postularse para el Consejo de Administración, destacando la importancia de su rol en el asesoramiento a la administración y la toma de decisiones. Se mencionó que las reuniones son periódicas, mínimo una vez al mes, y que se requiere un mínimo de cinco personas, idealmente diez, para asegurar el quórum.
+</p>
+<p>
+  El revisor fiscal aclaró que se realizará un control de legalidad de la elección, verificando que los elegidos sean propietarios o apoderados de propietarios. En caso de apoderados, el poder debe constar que los faculta para postularse y ser elegidos como miembros del consejo.
+</p>
+<p>
+  Sergio Rodríguez, consejero actual, invitó a los copropietarios a postularse para generar un cambio. Claudia del 2608 informó que los que tienen leasing con el Fondo Nacional del Ahorro reciben un correo donde se les da la potestad para representar a los propietarios. Marta Vanega, del 2804, preguntó sobre el tiempo que los consejeros pueden permanecer en el cargo. El revisor fiscal respondió que ni el reglamento ni la ley establecen una prohibición, siendo la asamblea quien decide.
+</p>
+<p>
+  Se aclaró que las personas en mora superior a 60 días o sancionadas por convivencia en los dos años anteriores no pueden postularse. Juan Guillermo Correa, del 1405, sugirió modificar el reglamento para permitir que los que tienen leasing puedan postularse. El revisor fiscal explicó que el reglamento no puede contradecir la ley 675, que establece que los miembros del consejo deben ser propietarios o apoderados.
+</p>
+<p>
+  Se propuso que los propietarios apoderen a personas con leasing para que puedan postularse. Se aclaró que el poder puede ser de viva voz si el propietario está presente.
+</p>
+<p>
+  Se preguntó si se puede vetar a algún miembro del consejo anterior. Se aclaró que no se puede individualizar, sino que se vota por la lista completa. Si no hay conformidad, se recurre al método del cociente electoral.
+</p>
+<p>
+  Se mencionó la posibilidad de crear un manual que sancione a los consejeros que no han hecho bien su papel. Se invitó a los interesados a postularse y nutrir el consejo.
+</p>
+<p>
+  Alexander Borges defendió la gestión del consejo, argumentando que recibieron una copropiedad endeudada y que han dado resultados. Richard Sánchez señaló que los consejeros no ejecutan, sino que asesoran a la administración.
+</p>
+<p>
+  Se procedió a la postulación de los candidatos al Consejo de Administración:
+</p>
+<ul>
+  <li>Lady Sánchez, apartamento 1106</li>
+  <li>Alexander Jiménez, apartamento 1807</li>
+  <li>Nicolás Castrillo, apartamento 1906</li>
+  <li>Alexander Borges, apartamento 1301</li>
+  <li>Jason Velázquez, apartamento 2504</li>
+  <li>Didier Toro, apartamento 2406</li>
+  <li>María Cristina Narváez, apartamento 2508</li>
+  <li>Lady Joana Soto, propietaria del apartamento 908, apodera a Marcela</li>
+  <li>Sebastián Ortiz, propietario del 604</li>
+  <li>Joana Barrientos, apartamento 10</li>
+  <li>Emperatriz Hidalgo, apartamento 2104 (como invitada permanente)</li>
+  <li>Fabián Gómez Morales, apartamento 602 (como invitado permanente)</li>
+  <li>Jonathan González, 2308</li>
+  <li>Sergio Rodríguez, propietario del 902, le da su poder a Emperatriz para postularse como consejera</li>
+</ul>
+<p>
+  José Manuel Berrío, apartamento 605, apoderó a Cristina para que haga parte del consejo de administración.
+</p>
+<p>
+  Se sometió a votación la lista de candidatos. Algunos copropietarios manifestaron su desacuerdo. Se procedió a preguntar nuevamente quiénes no estaban de acuerdo con el consejo propuesto.
+</p>
+<p>
+  Finalmente, se aprobó el nuevo consejo por mayoría.
+</p>
+
+<h3>7. Lectura de Estados Financieros Periodo 2023</h3>
+<p>
+  La contadora, Verónica Guzmán, presentó los estados financieros al año 2023, explicando la composición del activo, pasivo y patrimonio de la copropiedad. Señaló un error de estructura en los informes compartidos, pero no de fondo.
+</p>
+<p>
+  Se detallaron los saldos en bancos (Avevillas, Certivillas, fiducia), los anticipos, deudores por cuotas de administración, multas, intereses de mora y honorarios de abogados. Se explicó la jerarquía de pagos para los morosos.
+</p>
+<p>
+  Se presentó la composición de los recursos restringidos, incluyendo la reserva de provisión restringida, reserva de destinación de proyectos, reserva del fondo de imprevistos, cuota extra de fachadas y saldos a favor. Se mencionaron las consignaciones por identificar y los ingresos recibidos para terceros (carnetización).
+</p>
+<p>
+  Se detallaron los ingresos operacionales (cuotas de administración) y no operacionales (intereses, sanciones, multas por parqueadero). Se informó que se facturaron $449,359,626 y se recaudaron $405,892,910, representando un 90% de lo facturado.
+</p>
+<p>
+  Se presentó la composición de la cartera, dividida en cartera corriente (1 a 3 cuotas), cartera entre 4 y 11 cuotas, y cartera morosa (12 cuotas en adelante). Se informó que 129 apartamentos están al día de un total de 198.
+</p>
+<p>
+  Se detallaron los ingresos no presupuestados, que ascendieron a $35,158,128.
+</p>
+<p>
+  Se presentó la evolución del gasto, mostrando lo presupuestado y lo ejecutado en cada rubro. Se destacaron las sobre ejecuciones en mantenimiento de puertas e instalaciones eléctricas, y los ahorros en mantenimiento de jardín y zonas comunes. Se mencionaron gastos representativos como la restauración del salón social, reparaciones de terraza, compra de tubería para la piscina, compra de sensores y lámparas, y dotaciones para zonas comunes.
+</p>
+<p>
+  Se informó sobre la evolución del fondo de reserva, que terminó el año 2023 con $19,840,676, de los cuales el 72% está líquido.
+</p>
+<p>
+  Se presentaron los resultados del ejercicio, con excedentes de ejercicios anteriores de $52,997,250 y un resultado del ejercicio actual de $32,591,313. De este dinero, solo el 25% está líquido en bancos, mientras que el 75% está represado en cartera.
+</p>
+
+<h3>8. Dictamen de Revisoría Fiscal</h3>
+<p>
+  El revisor fiscal, Sebastián Moreno, presentó el dictamen a los estados financieros, indicando que la información reflejada corresponde a la situación financiera de la copropiedad. Señaló que la preparación de los estados financieros está a cargo de la administración, y que la labor del revisor fiscal consiste en determinar si existen incorrecciones materiales.
+</p>
+<p>
+  El dictamen emitido fue sin salvedades de opinión, considerando que los estados financieros reflejan de forma razonable la situación financiera de la copropiedad. No obstante, se hicieron algunas observaciones:
+</p>
+<ul>
+  <li>Saldos pendientes de legalización por $1,434,920, correspondientes a un anticipo al administrador para gastos de navidad.</li>
+  <li>Consignaciones por identificar, que ascendían a $5,589,195. Se recomendó a los propietarios realizar pagos referenciados y a la administración intensificar la gestión para la identificación de las consignaciones.</li>
+</ul>
+<p>
+  En cuanto al cumplimiento normativo, se señaló que:
+</p>
+<ul>
+  <li>La apropiación de la reserva de ley no se está realizando de forma líquida, faltando por apropiar $5,586,686.</li>
+  <li>El seguro de zonas comunes se encontraba vigente.</li>
+  <li>No se había acreditado el cumplimiento del sistema de gestión de seguridad y salud en el trabajo, plan integral de manejo de residuos sólidos y política de tratamiento de datos personales.</li>
+</ul>
+<p>
+  Se mencionó que el piscinero no cuenta con certificación en salvamento acuático, lo cual es un incumplimiento de la ley 1209 de 2008.
+</p>
+<p>
+  En cuanto al control interno, se destacó que el consejo de administración ejerce el control financiero de la copropiedad, revisando estados financieros y efectuando recomendaciones. Se evidenciaron medidas de control interno en el manejo de recursos, como el token de validación dual.
+</p>
+<p>
+  Se resaltó que la copropiedad tiene una cartera de $57,000,092, con un indicador de rotación por encima de 30 días. Se recomendó emprender acciones de cobro, especialmente con la constructora, que adeuda $18 millones.
+</p>
+<p>
+  Se informó que se está pagando un mes de gastos a los proveedores en promedio cada 2.5 días, y que las acreencias con proveedores son de $3,572,721. Se concluyó que no se observa riesgo de impago de obligaciones.
+</p>
+
+<h3>9. Aprobación de Estados Financieros Periodo 2023</h3>
+<p>
+  Se sometieron a aprobación los estados financieros al 31 de diciembre de 2023. Se aprobó por mayoría, con la salvedad de revisar los numerales de las notas.
+</p>
+
+<h3>10. Aprobación del Proyecto Presupuestal</h3>
+<p>
+  Se presentó el proyecto presupuestal para el año 2024, basado en el incremento del salario mínimo legal vigente. Se destacó el incremento en el rubro de vigilancia y la reducción en gastos bancarios. El porcentaje total de incremento es del 12.07%.
+</p>
+<p>
+  Se propuso un descuento por pronto pago, pero se señaló que esto implicaría un gasto adicional en el presupuesto. Se sugirió no incrementar mucho la cuota de administración y buscar alternativas para optimizar los gastos.
+</p>
+<p>
+  Se mencionó la necesidad de considerar los gastos para el curso de rescate acuático del piscinero. Se propuso utilizar paneles solares para economizar en energía y contratar personal con perfil para el aseo y la piscina.
+</p>
+<p>
+  Se recordó que el año pasado no hubo cuota extra y que algunas personas están en una situación difícil. Se sugirió no afectar tanto el bolsillo de las familias.
+</p>
+<p>
+  Se aprobó por mayoría el presupuesto para el 2024 con un incremento del 12.07%. Se acordó que el retroactivo se cobrará en abril y mayo.
+</p>
+
+<h3>11. Aprobación de Cuota Extra</h3>
+<p>
+  Se discutió la necesidad de una cuota extra para reparar el cable de tracción de los ascensores, la reforma del parque infantil y el embaldosado de la piscina de los niños. Se propuso una cuota de $255,100 por apartamento, pagaderos en cuotas.
+</p>
+<p>
+  Se sugirió dividir la cuota extra en cinco o seis cuotas para facilitar el pago. Se pidió mostrar el desglose de los $20 millones para el parque infantil y las cotizaciones realizadas.
+</p>
+<p>
+  Se propuso priorizar la vida y atender primero los ascensores, dejando el parque infantil para después. Se sugirió utilizar el fondo de imprevistos, pero se aclaró que este fondo es para gastos no previsibles.
+</p>
+<p>
+  Se propuso utilizar los aprovechamientos de los parqueaderos para el parque infantil. Se sugirió no sellar el parque, sino adecuarlo para su uso.
+</p>
+<p>
+  Se propuso realizar eventos para recaudar fondos para el parque infantil. Se sugirió que los que tienen leasing sean simplemente observadores y participar de las reuniones como visitantes.
+</p>
+<p>
+  Se propuso no descartar del todo la cuota extra y provisionarla en una fiducia. Se propuso que la cuota extra se destine a la fachada y se difiera para no afectar tanto el bolsillo.
+</p>
+<p>
+  Se propuso no incrementar mucho la cuota y tratar de sostenerla, incluso disminuirla. Se propuso que la administración busque alternativas para optimizar los gastos.
+</p>
+<p>
+  Se propuso que la administración haga un estudio de la energía eólica y solar para ahorrar en servicios públicos.
+</p>
+<p>
+  Se propuso que el consejo evalúe la prioridad de los tres proyectos y los ejecute a medida que se va logrando el recaudo.
+</p>
+<p>
+  Se propuso no tocar la plata de la fachada y que la cuota extra sea para esta ejecución de $50 millones.
+</p>
+<p>
+  Finalmente, se votó y se aprobó por mayoría no realizar la cuota extra.
+</p>
+<p>
+  Se aprobó por mayoría que los excedentes se utilicen para el ascensor.
+</p>
+<p>
+  Se aprobó por unanimidad que los aprovechamientos se utilicen para la piscina.
+</p>
+<p>
+  Se aprobó por mayoría pagar desde ya la cuota extra para la fachada, que va para el otro año, de $150,000 a tres cuotas después de que les cobren la factura del retroactivo, es decir, a partir de agosto.
+</p>
+
+<h3>12. Elección del Comité de Convivencia</h3>
+<p>
+  Se invitó a los interesados a postularse para el Comité de Convivencia, destacando su rol en la resolución de conflictos y el apoyo al consejo de administración.
+</p>
+<p>
+  Se postularon:
+</p>
+<ul>
+  <li>Sergio Rodríguez, apartamento 902</li>
+  <li>Jonas</li>
+  <li>Lady Sánchez, apartamento 1106</li>
+</ul>
+<p>
+  Se aprobó por unanimidad que los tres copropietarios conformen el comité de convivencia.
+</p>
+
+<h3>13. Elección del Nuevo Revisor Fiscal o Reelección del Mismo</h3>
+<p>
+  Se informó que no se recibieron nuevas propuestas para el cargo de revisor fiscal. Se preguntó si se deseaba continuar con la firma actual.
+</p>
+<p>
+  Se aprobó por unanimidad que la firma actual siga siendo la revisora fiscal.
+</p>
+
+<h3>14. Proposiciones y Varios</h3>
+<p>
+  Se hizo un llamado a los propietarios de mascotas para que sean responsables al sacarlas, especialmente cuando se trata de niños. Se solicitó poner bozal a los perros agresivos.
+</p>
+<p>
+  Se insistió en que la piscinera no realice labores de aseo en las zonas comunes cuando la piscina esté abierta.
+</p>
+<p>
+  Se preguntó por el lote de atrás. Se informó que no es de Coral, sino del municipio. Se propuso autorizar al consejo para que siga el caso del pedazo internamente donde está el mallado del taller. Se recomendó realizar un estudio de costo beneficio antes de tomar una decisión.
+</p>
+<p>
+  Se propuso que se cobre una multa a los que no fumiguen sus apartamentos. Se aclaró que para cobrar una multa, la conducta debe estar establecida como sancionable en el reglamento o manual de convivencia, y se debe surtir el debido proceso.
+</p>
+<p>
+  Se recomendó que en el acta queden consignadas todas las decisiones y los inmuebles que no estuvieron de acuerdo. Se recordó que la administración tiene 20 días para publicar el acta y los copropietarios tienen dos meses para impugnar las decisiones.
+</p>
+<p>
+  Se propuso trabajar en el tema de la energía eólica y solar para ahorrar en servicios públicos.
+</p>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 7:52 PM</p>
+  <p><strong>Acuerdos:</strong></p>
+  <ul>
+    <li>Aprobación del presupuesto para el 2024 con un incremento del 12.07%.</li>
+    <li>Aprobación por mayoría de no realizar la cuota extra.</li>
+    <li>Aprobación por unanimidad de que los aprovechamientos se utilicen para la piscina.</li>
+    <li>Aprobación por mayoría de pagar desde ya la cuota extra para la fachada, que va para el otro año, de $150,000 a tres cuotas después de que les cobren la factura del retroactivo, es decir, a partir de agosto.</li>
+    <li>Aprobación por unanimidad de que Sergio Rodríguez, Jonas y Lady Sánchez conformen el comité de convivencia.</li>
+    <li>Aprobación por unanimidad de que la firma actual siga siendo la revisora fiscal.</li>
+  </ul>
+  <p><strong>Compromisos:</strong></p>
+  <ul>
+    <li>La administración realizará un estudio de costo beneficio para el tema del lote de atrás.</li>
+    <li>El consejo trabajará en el tema de la energía eólica y solar.</li>
+    <li>La administración y el consejo revisarán el tema del seguro de la aseguradora.</li>
+  </ul>
+  <p><strong>Próximos pasos:</strong></p>
+  <ul>
+    <li>La administración publicará el acta en 20 días.</li>
+    <li>Los copropietarios tienen dos meses para impugnar las decisiones.</li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-08T16:43:30.832Z] Contenido cargado con éxito. ID: 1U90M4tKQoDApuoQrixnb5921h7IXwiDe
+[2025-02-08T16:43:30.833Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
+[2025-02-08T16:48:25.242Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T16:48:25.244Z] Verificando o creando carpeta.
+[2025-02-08T16:48:25.955Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:48:25.955Z] Verificando existencia del archivo.
+[2025-02-08T16:48:26.220Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:48:26.220Z] El archivo ya existe.
+[2025-02-08T16:48:41.758Z] Verificando si la transcripción ya existe.
+[2025-02-08T16:48:41.758Z] Verificando o creando carpeta.
+[2025-02-08T16:48:42.444Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:48:42.444Z] Verificando existencia del archivo.
+[2025-02-08T16:48:42.715Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:48:42.715Z] Verificando existencia del archivo.
+[2025-02-08T16:48:43.000Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T16:48:43.001Z] La transcripción ya existe.
+[2025-02-08T16:48:43.001Z] Iniciando generación de contenido: coral_apartamentos.mp3
+[2025-02-08T16:48:43.002Z] Verificando o creando carpeta.
+[2025-02-08T16:48:43.293Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:48:43.293Z] Verificando existencia del archivo.
+[2025-02-08T16:48:44.285Z] Archivo no encontrado.
+[2025-02-08T16:48:44.285Z] Verificando existencia del archivo.
+[2025-02-08T16:48:44.902Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T16:52:15.954Z] Guardando transcripción.
+[2025-02-08T16:52:15.969Z] Iniciando subida de archivo.
+[2025-02-08T16:52:18.507Z] Archivo subido con éxito. ID: 1l7_cq-MK2SWy_HdXAjG4zTAMfTbHjvT4 y permisos de lectura pública asignados.
+[2025-02-08T16:52:18.508Z] Iniciando formato de contenido. coral_apartamentos.mp3
+[2025-02-08T16:52:18.508Z] Verificando o creando carpeta.
+[2025-02-08T16:52:18.798Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T16:52:18.798Z] Verificando existencia del archivo.
+[2025-02-08T16:52:19.325Z] Archivo no encontrado.
+[2025-02-08T16:52:19.325Z] Verificando existencia del archivo.
+[2025-02-08T16:52:19.947Z] Archivo ya existe. URL: 1l7_cq-MK2SWy_HdXAjG4zTAMfTbHjvT4.
+[2025-02-08T16:52:19.947Z] Verificando existencia del archivo.
+[2025-02-08T16:52:20.200Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+Formato generado:
+[2025-02-08T16:52:23.307Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Asamblea General de Copropietarios</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada, se asume la fecha de la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: 2:00 PM (retrasado a 3:00 PM) - Cierre: 7:52 PM</p>
+  <p><strong>Lugar:</strong> Coral Apartamentos</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Ricardo González - Administrador Delegado</li>
+    <li>Claudia Cecilia Bonilla Agudelo - Apartamento 2608</li>
+    <li>Sebastián Moreno - Revisor Fiscal</li>
+    <li>Claudia Marcela García Quintero - Apartamento 1905 (Presidenta de la Asamblea)</li>
+    <li>María Cristina Narváez - Apartamento 2508 (Comisión Verificadora del Acta)</li>
+    <li>César Tobón - Representación Apartamentos 1101 y 1801 (Comisión Verificadora del Acta)</li>
+    <li>Jonathan González - Apartamento 2308 (Comisión Verificadora del Acta)</li>
+    <li>Joana Barrientos - Apartamento 10</li>
+    <li>Esteban Cavi - Apartamento 1302</li>
+    <li>Verónica Guzmán - Contadora de la Copropiedad</li>
+    <li>Alexander Borges - Consejo de Administración, Apartamento 1301</li>
+    <li>Karina García - Apartamento 802</li>
+    <li>Alexander Jiménez - Apartamento 1807</li>
+    <li>Alexander Bohorquez - Apartamento 1301</li>
+    <li>Fabián Gómez Morales - Apartamento 602</li>
+    <li>Sergio Rodríguez - Apartamento 902</li>
+    <li>Lady Sánchez - Apartamento 1106</li>
+    <li>Nicolás Castrillo - Apartamento 1906</li>
+    <li>Jason Velázquez - Apartamento 2504</li>
+    <li>Didier Toro - Apartamento 2406</li>
+    <li>José Manuel Berrío - Apartamento 605</li>
+    <li>Cristina [Apellido no especificado] - Apoderada</li>
+    <li>Sebastián Ortiz - Apartamento 604</li>
+    <li>Emperatriz Hidalgo - Apartamento 2104</li>
+    <li>Judy Alexandra Marulanda - Apartamento 901</li>
+    <li>Pablo Vega - Apartamento 805</li>
+    <li>Marisa Suárez</li>
+    <li>Richard Sánchez - Apartamento 707</li>
+    <li>Elkin Marín - Apartamento 2502</li>
+    <li>Carlos Mario Cruz - Apartamento 2507</li>
+    <li>Alejandra Sepúlveda - Apartamento 10 1</li>
+    <li>María Morales - Apartamento 2106</li>
+    <li>José Daniel Henao - Apartamento 2501</li>
+    <li>Marta Vanega - Apartamento 2804</li>
+    <li>Alberto [Apellido no especificado]</li>
+    <li>Villalba [Apellido no especificado] - Apartamento 2206</li>
+    <li>Daisy Álvarez - Apartamento 1104</li>
+  </ul>
+  <p><strong>Quórum:</strong> 3% a las 2:00 PM, 34.2% a las 3:06 PM</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura y Aprobación del Orden del Día</li>
+  <li>Nombramiento del Presidente y Secretario de la Asamblea</li>
+  <li>Nombramiento de la Comisión Verificadora del Acta</li>
+  <li>Informe de Gestión de la Administración y el Consejo de Administración (2023)</li>
+  <li>Nombramiento Nuevo Consejo de Administración o Reelección del Anterior</li>
+  <li>Lectura de Estados Financieros (Periodo 2023)</li>
+  <li>Dictamen de Revisoría Fiscal</li>
+  <li>Aprobación de Estados Financieros (Periodo 2023)</li>
+  <li>Aprobación del Proyecto Presupuestal (Enero-Diciembre 2024)</li>
+  <li>Aprobación de Cuota Extra</li>
+  <li>Elección del Comité de Convivencia</li>
+  <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>El administrador delegado, Ricardo González, informó que a las 2:00 PM solo se contaba con el 3% del quórum de los copropietarios. En consecuencia, de acuerdo con el reglamento, la asamblea se inició una hora después, a las 3:00 PM. A las 3:06 PM, se verificó un quórum del 34.2%.</p>
+
+<h3>2. Lectura y Aprobación del Orden del Día</h3>
+<p>Se procedió a la lectura del orden del día, que incluía los siguientes puntos:</p>
+<ol>
+    <li>Verificación del Quórum.</li>
+    <li>Lectura y Aprobación del Orden del Día.</li>
+    <li>Nombramiento del Presidente y Secretario de la Asamblea.</li>
+    <li>Nombramiento de la Comisión Verificadora del Acta.</li>
+    <li>Informe de Gestión de la Administración y el Consejo de Administración (2023).</li>
+    <li>Nombramiento Nuevo Consejo de Administración o Reelección del Anterior.</li>
+    <li>Lectura de Estados Financieros (Periodo 2023).</li>
+    <li>Dictamen de Revisoría Fiscal.</li>
+    <li>Aprobación de Estados Financieros (Periodo 2023).</li>
+    <li>Aprobación del Proyecto Presupuestal (Enero-Diciembre 2024).</li>
+    <li>Elección del Comité de Convivencia.</li>
+    <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo.</li>
+    <li>Proposiciones y Varios.</li>
+</ol>
+<p>Se sugirió y aprobó por unanimidad incluir un punto adicional para tratar el tema de la cuota extra, que inicialmente se había considerado dentro de "Proposiciones y Varios". El orden del día, con la adición del punto de la cuota extra, fue aprobado por unanimidad.</p>
+
+<h3>3. Nombramiento del Presidente y Secretario de la Asamblea</h3>
+<p>Ricardo González explicó la importancia de elegir a una persona neutral y cordial como presidente de la asamblea. Claudia Cecilia Bonilla Agudelo, del apartamento 2608, solicitó una aclaración sobre la legalidad de la asamblea con el quórum presente. El revisor fiscal, Sebastián Moreno, aclaró que existen dos tipos de quórum: para deliberar y para decidir. El quórum para deliberar en segunda convocatoria es válido con cualquier número de asistentes, y el quórum decisorio requiere mayoría simple (50% + 1 de los presentes) para la mayoría de las decisiones, y mayoría calificada (70% del quórum total) para decisiones específicas, que no se tomarían en esta asamblea.</p>
+<p>Ante la falta de postulaciones, Claudia Marcela García Quintero, del apartamento 1905, fue propuesta y aprobada por unanimidad como presidenta de la asamblea. Se aprobó que la administración ejerciera como secretario de la asamblea.</p>
+
+<h3>4. Nombramiento de la Comisión Verificadora del Acta</h3>
+<p>Se nombró la comisión verificadora del acta, integrada por:</p>
+<ul>
+    <li>María Cristina Narváez, apartamento 2508.</li>
+    <li>César Tobón, en representación de los apartamentos 1101 y 1801.</li>
+    <li>Jonathan González, apartamento 2308.</li>
+</ul>
+<p>Se solicitó a los miembros de la comisión proporcionar sus nombres, teléfonos y correos electrónicos para el envío del acta.</p>
+
+<h3>5. Informe de Gestión de la Administración y el Consejo de Administración (2023)</h3>
+<p>Ricardo González presentó el informe de gestión, destacando los siguientes puntos:</p>
+<ul>
+    <li><strong>Ejes Estratégicos:</strong> Cumplimiento de requisitos legales, valorización del patrimonio, sana convivencia y sostenibilidad financiera.</li>
+    <li><strong>Valorización del Patrimonio:</strong>
+        <ul>
+            <li>Impermeabilización de la terraza (piso 29) y posterior corrección del drywall afectado.</li>
+            <li>Trabajos en los chutes de basura, solicitando a los copropietarios mantenerlos cerrados para evitar malos olores.</li>
+        </ul>
+    </li>
+    <li><strong>Requisitos Legales y Plan de Emergencias:</strong>
+        <ul>
+            <li>Dotación de mangueras contra incendios (faltan ocho por instalar).</li>
+            <li>Recarga mensual de extintores.</li>
+            <li>Se enfatizó la importancia del plan de emergencias, especialmente tras el reciente sismo.</li>
+        </ul>
+    </li>
+    <li><strong>Mejoras Locativas:</strong>
+        <ul>
+            <li>Compra de mesa de concreto para el patio (requirió corrección por mal uso).</li>
+            <li>Pintura y señalización en puntos fijos, vigilancia interna y externa, gimnasio y zona de piscina.</li>
+            <li>Instalación de cámaras en el gimnasio (proyecto en curso).</li>
+            <li>Cambio de sensores de movimiento para reducir el consumo de energía.</li>
+        </ul>
+    </li>
+    <li><strong>Ingresos No Operacionales:</strong>
+        <ul>
+            <li>Inversión de ingresos por reserva de salón social y parqueaderos de visitantes en mejoras para la copropiedad (nevera para el salón social, asoleadoras y sillas playeras para la piscina).</li>
+        </ul>
+    </li>
+    <li><strong>Aseo y Mantenimiento:</strong>
+        <ul>
+            <li>Campañas de lavado a profundidad en pisos, patios y parqueaderos.</li>
+            <li>Cambio de empaques de canillas para evitar riesgos eléctricos en el ascensor.</li>
+            <li>Restauración del turco y la zona de piscina.</li>
+            <li>Mantenimiento de fachadas en cinco apartamentos afectados por sismos o asentamientos.</li>
+            <li>Plan de trabajo con el jardinero para mejorar la jardinería interna y externa.</li>
+        </ul>
+    </li>
+    <li><strong>Mantenimientos Obligatorios:</strong>
+        <ul>
+            <li>Lavado de tanques semestralmente.</li>
+            <li>Mantenimiento preventivo mensual de ascensores (empresa Sumar).</li>
+            <li>Fumigación y refuerzo en zonas comunes.</li>
+            <li>Mantenimiento bimensual de bombas hidráulicas.</li>
+            <li>Análisis mensual del agua de la piscina.</li>
+        </ul>
+    </li>
+    <li><strong>Cumplimiento de Requisitos Legales:</strong>
+        <ul>
+            <li>Sistema de Gestión de Seguridad y Salud en el Trabajo (Decreto 1072 de 2015): Avance del 69% al 88%.</li>
+            <li>Actualización de la identificación, evaluación y valoración de riesgos y peligros.</li>
+            <li>Compra de elementos de protección personal para el equipo de aseo.</li>
+            <li>Establecimiento de un plan de trabajo anual y de capacitación.</li>
+            <li>Se reiteró la prohibición de plantas en los pasillos por temas de seguridad y plan de emergencias.</li>
+            <li>Compra de herramientas para el personal de mantenimiento y señalización de pisos mojados.</li>
+        </ul>
+    </li>
+    <li><strong>Proyecciones para 2024:</strong>
+        <ul>
+            <li>Capacitaciones en plan de emergencias (sismos, incendios, manejo de mangueras y extintores).</li>
+            <li>Jornadas de salud (donación de sangre, yoga, mindfulness).</li>
+            <li>Intervención del puesto de trabajo de vigilantes y personal de oficios varios.</li>
+            <li>Instalación de sensores de humo en la zona de reciclaje y cuarto de basuras.</li>
+        </ul>
+    </li>
+    <li><strong>Plan de Manejo Integral de Residuos Sólidos (PMIRs):</strong>
+        <ul>
+            <li>Se solicitó no dejar reciclaje en las salidas de emergencia y utilizar los puntos de reciclaje designados.</li>
+            <li>Campaña de separación de residuos sólidos en la fuente.</li>
+            <li>Certificación de la disposición final de residuos sólidos.</li>
+            <li>Implementación de una cajonera para generar abono interno con residuos orgánicos.</li>
+            <li>Disposición adecuada de aceites quemados.</li>
+        </ul>
+    </li>
+    <li><strong>Tratamiento de Datos Personales (Ley 1581 de 2012):</strong>
+        <ul>
+            <li>Actualización de datos personales.</li>
+            <li>Confidencialidad de la información (acceso a cámaras limitado al equipo de vigilancia).</li>
+            <li>Sistematización de bases de datos (plataforma LUCR).</li>
+        </ul>
+    </li>
+    <li><strong>Sanciones:</strong>
+        <ul>
+            <li>Sanciones por mal uso de mascotas (heces en el piso 2): $2,300,000 en 2023 y $1,936,000 en lo que va de 2024.</li>
+            <li>Intervención en la zona de mascotas (escaleras y acceso más fácil).</li>
+        </ul>
+    </li>
+    <li><strong>Sana Convivencia:</strong>
+        <ul>
+            <li>Actividades de Halloween y bingo familiar en diciembre.</li>
+            <li>Compra de elementos navideños para decorar la copropiedad.</li>
+        </ul>
+    </li>
+    <li><strong>Sostenibilidad Financiera:</strong>
+        <ul>
+            <li>Recuperación de cartera de $26 millones (empresa Ejecutamos).</li>
+            <li>Restricción de accesos a morosos (parqueaderos, zonas comunes, piscina, turco, paquetería, domiciliarios).</li>
+            <li>Capitalización del fondo de imprevistos a $14 millones a diciembre de 2023 y $19 millones actualmente.</li>
+            <li>Incremento de la reserva de fachada a $40 millones.</li>
+            <li>Ingresos de $20 millones por alquiler de parqueaderos y salón social.</li>
+            <li>Pago a paz y salvo con todos los proveedores a 31 de diciembre.</li>
+            <li>Revisión de facturas de servicios públicos (posible devolución de EPM).</li>
+            <li>Reuniones con Arte para recuperar $8 millones adeudados.</li>
+        </ul>
+    </li>
+    <li><strong>Encuestas de Satisfacción:</strong>
+        <ul>
+            <li>Aceptación del 98% del equipo de vigilancia y 97% del equipo de aseo.</li>
+        </ul>
+    </li>
+    <li><strong>Asistente Virtual:</strong>
+        <ul>
+            <li>Implementación de asistente virtual por WhatsApp para responder preguntas y realizar tareas operativas en tiempo real.</li>
+        </ul>
+    </li>
+</ul>
+
+<p>Joana Barrientos preguntó sobre el destino de los ingresos y el estado del parque y la piscina. Ricardo González respondió que las decisiones de inversión requieren aprobación en asamblea y que los recursos no eran suficientes para cubrir todos los proyectos. Se mencionó la necesidad urgente de arreglar los cables de tracción del ascensor, con un costo aproximado de $22 millones.</p>
+<p>Esteban Cavi preguntó sobre la carnetización de la piscina, pagada hace más de dos años. Verónica Guzmán, contadora de la copropiedad, aclaró que los dineros recaudados ($190,000) se encuentran en una cuenta pasivo y que se tomará una decisión sobre su destino. Alexander Borges añadió que la administración actual no gestionó este tema y que se había decidido convertirlo en saldo a favor de cada propietario.</p>
+<p>Karina García expresó su preocupación por la falta de decisiones y la vulneración de los derechos de los niños a la recreación. Ricardo González respondió que la piscina se cerró preventivamente por seguridad y que se está considerando un sistema biométrico para el acceso. Alexander Jiménez aclaró que el consejo no ejecuta nada sin la aprobación de la asamblea.</p>
+<p>Alexander Bohorquez explicó que la cuota de administración se mantuvo baja el año anterior, resultando en ingresos insuficientes para cubrir los gastos. Fabián Gómez Morales sugirió fijar fechas concretas para las actividades planificadas. Ricardo González respondió que se trabaja con un plan de trabajo anual derivado de las decisiones de la asamblea.</p>
+<p>El revisor fiscal aclaró que la aprobación y ejecución de los recursos están a cargo de la asamblea y la administración, respectivamente, y que el consejo solo ejerce control financiero.</p>
+
+<h3>6. Nombramiento Nuevo Consejo de Administración o Reelección del Anterior</h3>
+<p>Se abrió la postulación para el nuevo consejo de administración. Se recordó que los postulados deben ser propietarios o apoderados de un propietario, no estar en mora superior a 60 días y no haber sido sancionados por convivencia en los últimos dos años. El revisor fiscal enfatizó la necesidad de contar con el poder que acredite la representación antes de la votación.</p>
+<p>Se explicó que el reglamento de Coral prevé un consejo amplio, con nueve miembros principales y nueve suplentes. Se mencionó la posibilidad de que personas que no cumplan con los requisitos sean invitadas permanentes al consejo, con derecho a voz pero sin voto.</p>
+<p>Claudia (2608) informó que quienes tienen leasing con el Fondo Nacional del Ahorro reciben un correo que les da la potestad de representar a los propietarios. Marta Vanega preguntó sobre el período que los consejeros pueden permanecer en el cargo. El revisor fiscal respondió que ni el reglamento ni la ley establecen una prohibición, siendo la asamblea quien decide.</p>
+<p>Se explicó que la elección se realiza a través de lista única, y en caso de no haber conformidad, se recurre al sistema del cociente electoral (elección por planchas). Se aclaró que no existe un manual que sancione a los consejeros que no han hecho bien su papel.</p>
+<p>Ante la dificultad para cumplir con los requisitos, se propuso mantener el consejo actual. El revisor fiscal aclaró que si no se elige un nuevo consejo, el anterior seguirá vigente provisionalmente hasta una asamblea extraordinaria. Se sugirió apoderar a personas que no cumplen con la condición de propietario para que puedan participar.</p>
+<p>Se reiteró que la elección del consejo es potestad exclusiva de la asamblea y que todos tienen derecho a postularse. Se enfatizó que el consejo es un órgano colegiado y que las decisiones se toman por votación y mayoría.</p>
+<p>Se postularon las siguientes personas:</p>
+<ul>
+    <li>Lady Sánchez, Apartamento 1106</li>
+    <li>Alexander Jiménez, Apartamento 1807</li>
+    <li>Nicolás Castrillo, Apartamento 1906</li>
+    <li>Alexander Borges, Apartamento 1301</li>
+    <li>Jason Velázquez, Apartamento 2504</li>
+    <li>Didier Toro, Apartamento 2406</li>
+    <li>María Cristina Narváez, Apartamento 2508</li>
+    <li>Claudia Marcela García, Apoderada (apoderada por Lady Joana Soto, Apartamento 908)</li>
+    <li>Sebastián Ortiz, Apartamento 604</li>
+    <li>Joana Barrientos, Apartamento 10 (como invitada permanente)</li>
+    <li>Emperatriz Hidalgo, Apartamento 2104 (como invitada permanente, apoderada por Sergio Rodríguez, Apartamento 902)</li>
+    <li>Fabián Gómez Morales, Apartamento 602 (como invitado permanente)</li>
+    <li>Jonathan González, Apartamento 2308</li>
+</ul>
+<p>Se sometió a votación la lista del consejo. Ante la falta de unanimidad, se preguntó quiénes no estaban de acuerdo con el consejo propuesto. Se registraron los nombres de quienes no estaban de acuerdo: Judy Alexandra Marulanda (Apartamento 901), Alejandra Sepúlveda (Apartamento 10 1), María Morales (Apartamento 2106).</p>
+<p>Se aprobó el nuevo consejo por mayoría.</p>
+
+<h3>7. Lectura de Estados Financieros (Periodo 2023)</h3>
+<p>Verónica Guzmán, contadora de la copropiedad, presentó los estados financieros al año 2023. Señaló un error de estructura en los informes compartidos, pero no de fondo. Destacó los siguientes puntos:</p>
+<ul>
+    <li><strong>Composición del Activo:</strong>
+        <ul>
+            <li>Caja Menor: $300,000</li>
+            <li>Banco Avebillas (Recaudo Cuotas Administración): $33,757,283</li>
+            <li>Banco Avebillas (Aprovechamientos): $9,717,198</li>
+            <li>Fiducia Abevillas (Fachadas): $39,611,711</li>
+            <li>Certivillas (Ahorro 1% Ingresos Mensuales): $14,153,991</li>
+            <li>Anticipos a Proveedores</li>
+            <li>Deudores por Cuotas de Administración: $44,659,930</li>
+            <li>Multas de Parqueaderos: $80,000</li>
+            <li>Multas de Convivencia: $389,200</li>
+            <li>Intereses de Mora: $1,772,950</li>
+            <li>Honorarios de Abogados (Morosos): $90,867</li>
+            <li>Sanciones Inasistencia Asamblea: $90,000</li>
+        </ul>
+    </li>
+    <li><strong>Recursos Restringidos:</strong>
+        <ul>
+            <li>Reserva de Provisión Restringida: $23,444,904</li>
+            <li>Reserva de Destinación de Proyectos: $3,000,600</li>
+            <li>Reserva del Fondo de Imprevistos: $19,840,676</li>
+            <li>Cuota Extra de Fachadas: $28,844,900</li>
+            <li>Saldos a Favor (Copropietarios): $1,413,947</li>
+            <li>Consignaciones por Identificar: $5,589,195</li>
+            <li>Ingresos Recibidos para Terceros (Carnetización): $190,000</li>
+        </ul>
+    </li>
+    <li><strong>Composición del Pasivo más Patrimonio:</strong>
+        <ul>
+            <li>Reserva Legal: $19,840,676</li>
+            <li>Cuentas por Pagar: $3,572,721</li>
+            <li>Saldos a Favor: $1,413,947</li>
+            <li>Otros Pasivos (Cuotas Extras y Reservas): $61,668,999</li>
+            <li>Excedentes Años Anteriores</li>
+        </ul>
+    </li>
+    <li><strong>Ingresos:</strong>
+        <ul>
+            <li>Cuotas de Administración (Operacionales): $449,359,626 (Facturado), $405,892,910 (Recaudado) - 90% de lo facturado.</li>
+            <li>Ingresos No Presupuestados (Intereses, Sanciones, Multas, Aprovechamientos): $35,158,128</li>
+        </ul>
+    </li>
+    <li><strong>Cartera:</strong>
+        <ul>
+            <li>1 a 3 Cuotas (Corriente): $15,908,160 (56 Apartamentos)</li>
+            <li>4 a 11 Cuotas: $7,816,690 (7 Apartamentos)</li>
+            <li>12+ Cuotas: $23,111,305 (6 Apartamentos) - En Proceso Jurídico</li>
+            <li>Apartamentos al Día: 129 de 198</li>
+            <li>Consignaciones por Identificar: 22</li>
+        </ul>
+    </li>
+    <li><strong>Evolución del Gasto:</strong>
+        <ul>
+            <li>Se presentó un gráfico comparando lo presupuestado vs. lo ejecutado en diferentes rubros.</li>
+            <li>Se destacaron los rubros con mayor sobreejecución y los motivos (ej: mantenimiento de ascensores, instalaciones eléctricas).</li>
+            <li>Se mencionaron mantenimientos representativos y dotaciones para zonas comunes.</li>
+        </ul>
+    </li>
+    <li><strong>Evolución del Fondo de Reserva:</strong>
+        <ul>
+            <li>2022: $15,429,576</li>
+            <li>2023 (Ahorro 1% Ingresos): $4,411,100</li>
+            <li>Saldo en Patrimonio: $19,840,176</li>
+            <li>Líquido en Bancos (Certivillas): $14,153,991 (72%)</li>
+        </ul>
+    </li>
+    <li><strong>Resultados del Ejercicio:</strong>
+        <ul>
+            <li>Resultados Ejercicios Anteriores: $52,997,250</li>
+            <li>Resultado Ejercicio Actual: $32,591,313</li>
+            <li>Líquido en Bancos: $21,971,000 (25%)</li>
+            <li>Represado en Cartera: $64,578,853 (75%)</li>
+        </ul>
+    </li>
+</ul>
+
+<p>Se abrió un espacio para preguntas y respuestas.</p>
+
+<h3>8. Dictamen de Revisoría Fiscal</h3>
+<p>Sebastián Moreno, revisor fiscal, presentó el dictamen a los estados financieros. Inicialmente, respondió a la pregunta sobre el saldo por pagar a la revisoría fiscal, explicando que correspondía a honorarios por la revisión de períodos no auditados por la revisora anterior, y que ya había sido pagado en febrero.</p>
+<p>El dictamen incluyó los siguientes componentes:</p>
+<ul>
+    <li><strong>Pronunciamiento sobre los Estados Financieros:</strong> Opinión sin salvedades, indicando que la información presentada corresponde a la situación financiera de la copropiedad.</li>
+    <li><strong>Observaciones:</strong>
+        <ul>
+            <li>Saldos pendientes de legalización por $1,434,920 (anticipo al administrador para gastos de navidad).</li>
+            <li>Consignaciones por identificar ($5,589,195): Se recomendó a los propietarios realizar pagos referenciados y a la administración intensificar la gestión para identificar las consignaciones.</li>
+        </ul>
+    </li>
+    <li><strong>Cumplimiento Normativo:</strong>
+        <ul>
+            <li>Semáforo de Cumplimiento:
+                <ul>
+                    <li>Impuestos: Cumplimiento en la presentación de declaraciones.</li>
+                    <li>Reserva Legal: Incumplimiento por falta de apropiación de forma líquida ($5,686).</li>
+                    <li>Seguro de Zonas Comunes: Vigente.</li>
+                    <li>Sistema de Gestión de Seguridad y Salud en el Trabajo, Plan Integral de Manejo de Residuos Sólidos y Política de Tratamiento de Datos Personales: Incumplimiento al cierre de diciembre.</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><strong>Ley de Piscinas (Ley 1209 de 2008):</strong>
+        <ul>
+            <li>Se señaló que el piscinero debe tener certificación en operación y mantenimiento de piscinas y salvamento acuático, especialmente en ciertos eventos (menores de 14 años, fines de semana, vacaciones escolares).</li>
+        </ul>
+    </li>
+    <li><strong>Control Interno:</strong>
+        <ul>
+            <li>Se destacó el papel del consejo de administración en el control financiero.</li>
+            <li>Se mencionaron medidas de control interno, como el token de validación dual para pagos.</li>
+        </ul>
+    </li>
+</ul>
+<p>Se abrió un espacio para preguntas sobre el informe de la revisoría fiscal.</p>
+
+<h3>9. Aprobación de Estados Financieros (Periodo 2023)</h3>
+<p>Se sometieron a votación los estados financieros. Se solicitó revisar los numerales de las notas. Los estados financieros fueron aprobados por unanimidad.</p>
+
+<h3>10. Aprobación del Proyecto Presupuestal (Enero-Diciembre 2024)</h3>
+<p>Ricardo González presentó el proyecto presupuestal para el año 2024, basado en el incremento del salario mínimo legal vigente. Se destacó el incremento en el rubro de vigilancia (19%) debido a la reforma laboral y la reducción gradual de las horas laborales. Se mencionó una reducción en los gastos bancarios. El porcentaje total de incremento fue del 12.07%.</p>
+<p>Se propuso un descuento por pronto pago para incentivar el pago oportuno de la administración. El revisor fiscal advirtió que esto implicaría un gasto adicional que debe ser presupuestado. Se sugirió incluir un rubro específico para descuentos por pronto pago y fijar un tope.</p>
+<p>Se propuso no incrementar mucho la cuota de administración y disminuir rubros no urgentes. Se sugirió considerar paneles solares para economizar en energía y optimizar el personal del piscinero. Se mencionó la importancia de contemplar gastos para fechas importantes (Día de los Niños, Navidad).</p>
+<p>Se recordó que el hidrofugado de las fachadas se debe realizar cada seis años y que se debe considerar la reserva destinada para ello. Se sugirió que los ingresos de los morosos se destinen a las fachadas.</p>
+<p>Se propuso que la administración busque alternativas para no incrementar tanto la cuota, tratando de mantener la seguridad financiera. Se sugirió que el consejo, con la asesoría de la revisoría fiscal, evalúe cómo utilizar los excedentes.</p>
+<p>Se aprobó por unanimidad el presupuesto para el 2024 con un incremento del 12.07%.</p>
+
+<h3>11. Aprobación de Cuota Extra</h3>
+<p>Se discutió la necesidad de una cuota extra para cubrir gastos no previstos, como la reparación de los cables de tracción del ascensor, la reforma del parque infantil y el embaldosado de la piscina de los niños. Se presentó un costo total de $50 millones, lo que implicaría una cuota de $255,100 por apartamento.</p>
+<p>Se propuso dividir la cuota extra en cinco o seis cuotas para facilitar el pago. Se solicitó un desglose de los $20 millones destinados al parque infantil. Se sugirió priorizar la vida y la seguridad, atendiendo primero los ascensores y luego la piscina.</p>
+<p>Se propuso utilizar el fondo de imprevistos para los ascensores. El revisor fiscal aclaró que el fondo de imprevistos no se puede utilizar para gastos previsibles, como el mantenimiento de los ascensores. Se sugirió utilizar los aprovechamientos para el parque infantil.</p>
+<p>Se propuso cerrar el parque infantil por seguridad. Se sugirió invertir los aprovechamientos de los parqueaderos en el parque infantil. Se propuso utilizar los excedentes líquidos para los ascensores y buscar financiamiento para la piscina.</p>
+<p>Se propuso realizar eventos (bazares, bingos) para recaudar fondos para el parque infantil. Se propuso que el consejo, con la asesoría de la revisoría fiscal, evalúe cómo utilizar los excedentes.</p>
+<p>Se propuso no descartar del todo la cuota extra, sino aprobar la mitad y provisionarla en una fiducia. Se propuso que la cuota extra se destine a la fachada y se difiera para no afectar tanto el bolsillo. Se propuso que la cuota extra se cobre después de la prima de mitad de año.</p>
+<p>Se propuso que el consejo de administración tenga la potestad de aprobar la disposición de los excedentes para los tres proyectos, evaluando la prioridad de cada uno. Se propuso no tocar la reserva de fachada y ejecutar los proyectos con los excedentes que estén de forma líquida o se vayan realizando de forma líquida.</p>
+<p>Se aprobó por mayoría disponer los excedentes para los tres proyectos, con prioridad en los ascensores, y que el consejo determine la ejecución de los demás. Se aprobó por mayoría una cuota extra de $150,000 en tres cuotas después de la prima de mitad de año, destinada a la fachada.</p>
+
+<h3>12. Elección del Comité de Convivencia</h3>
+<p>Se abrió la postulación para el comité de convivencia. Se explicó que el comité actúa como enlace entre la comunidad y la administración en temas de convivencia.</p>
+<p>Se postularon las siguientes personas:</p>
+<ul>
+    <li>Sergio Rodríguez, Apartamento 902</li>
+    <li>Jonas [Apellido no especificado]</li>
+    <li>Lady Sánchez, Apartamento 1106</li>
+</ul>
+<p>Se aprobó por unanimidad que los tres copropietarios conformen el comité de convivencia.</p>
+
+<h3>13. Elección del Nuevo Revisor Fiscal o Reelección del Mismo</h3>
+<p>Se informó que no se recibieron nuevas propuestas para el cargo de revisor fiscal. Se preguntó si se deseaba continuar con la firma actual. Se aprobó por unanimidad la reelección de la firma actual como revisores fiscales.</p>
+
+<h3>14. Proposiciones y Varios</h3>
+<p>Se trataron los siguientes temas:</p>
+<ul>
+    <li><strong>Responsabilidad con Mascotas:</strong> Se hizo un llamado a los propietarios de mascotas para que sean responsables al sacarlas, especialmente cuando son niños quienes las acompañan. Se solicitó poner bozal a los perros agresivos.</li>
+    <li><strong>Piscinera:</strong> Se solicitó que la piscinera no realice labores de aseo en las zonas comunes durante el horario de piscina.</li>
+    <li><strong>Lote:</strong> Se retomó el tema del lote en disputa. Se explicó que el lote externo pertenece al municipio y que se está evaluando la posibilidad de reclamar un pedazo de terreno interno. Se propuso autorizar al consejo a seguir el caso y pagar lo necesario para retomar el estudio. Se recomendó esperar a tener cifras concretas antes de tomar una decisión.</li>
+    <li><strong>Fumigaciones:</strong> Se propuso que la fumigación sea obligatoria y que se cobre una multa a quienes no permitan la fumigación en sus apartamentos. Se aclaró que para cobrar una multa, la conducta debe estar previamente establecida como sancionable en el reglamento o manual de convivencia.</li>
+    <li><strong>Servicios Públicos en Zonas Comunes:</strong> Se mencionó la posibilidad de utilizar energía eólica en la terraza para reducir los costos de servicios públicos.</li>
+    <li><strong>Interaseo:</strong> Se informó que se está liderando el tema de las tarifas de aseo y que se deben agotar todas las instancias antes de tomar acciones legales.</li>
+    <li><strong>Fachada:</strong> Se recordó que la fachada tiene una garantía de estabilidad de 10 años y que se debe reclamar a la constructora. Se aclaró que la garantía de la fachada como tal es de un año.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 7:52 PM</p>
+  <p><strong>Acuerdos:</strong></p>
+  <ul>
+    <li>Se aprueba el nuevo consejo por mayoría.</li>
+    <li>Se aprueban por unanimidad los estados financieros al 31 de diciembre de 2023.</li>
+    <li>Se aprueba por unanimidad el presupuesto para el 2024 con un incremento del 12.07%.</li>
+    <li>Se aprueba por mayoría disponer los excedentes para los tres proyectos (ascensores, piscina y parque infantil), con prioridad en los ascensores.</li>
+    <li>Se aprueba por mayoría una cuota extra de $150,000 en tres cuotas después de la prima de mitad de año, destinada a la fachada.</li>
+    <li>Se aprueba por unanimidad que Sergio Rodríguez, Jonas [Apellido no especificado] y Lady Sánchez conformen el comité de convivencia.</li>
+     <li>Se aprueba por unanimidad la reelección de la firma actual como revisores fiscales.</li>
+  </ul>
+  <p><strong>Compromisos:</strong></p>
+  <ul>
+    <li>La administración enviará el informe de la abogada sobre las gestiones de cobro.</li>
+    <li>La administración realizará el estudio para determinar la
+[2025-02-08T16:52:26.290Z] Contenido cargado con éxito. ID: 13nwFxdZNEx6nS9aGbt-Nmw7GMd_2oh7F
+[2025-02-08T16:52:26.291Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
+[2025-02-08T17:01:48.218Z] Verificando existencia del archivo: coral_apartamentos.mp3.
+[2025-02-08T17:01:48.219Z] Verificando o creando carpeta.
+[2025-02-08T17:01:48.980Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T17:01:48.981Z] Verificando existencia del archivo.
+[2025-02-08T17:01:49.593Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T17:01:49.593Z] El archivo ya existe.
+[2025-02-08T17:01:52.839Z] Verificando si la transcripción ya existe.
+[2025-02-08T17:01:52.839Z] Verificando o creando carpeta.
+[2025-02-08T17:01:53.372Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T17:01:53.372Z] Verificando existencia del archivo.
+[2025-02-08T17:01:53.946Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T17:01:53.946Z] Verificando existencia del archivo.
+[2025-02-08T17:01:54.509Z] Archivo ya existe. URL: 1uxbhpyhgDwZETZcjpitGQw74KGnuFoSm.
+[2025-02-08T17:01:54.509Z] La transcripción ya existe.
+[2025-02-08T17:01:54.510Z] Iniciando generación de contenido: coral_apartamentos.mp3
+[2025-02-08T17:01:54.510Z] Verificando o creando carpeta.
+[2025-02-08T17:01:55.124Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T17:01:55.125Z] Verificando existencia del archivo.
+[2025-02-08T17:01:55.658Z] Archivo no encontrado.
+[2025-02-08T17:01:55.658Z] Verificando existencia del archivo.
+[2025-02-08T17:01:56.067Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+[2025-02-08T17:05:25.770Z] Guardando transcripción.
+[2025-02-08T17:05:25.771Z] Iniciando subida de archivo.
+[2025-02-08T17:05:28.631Z] Archivo subido con éxito. ID: 1CTYRM7z0whO65nra0KU9mb-6AXfuenrE y permisos de lectura pública asignados.
+[2025-02-08T17:05:28.632Z] Iniciando formato de contenido. coral_apartamentos.mp3
+[2025-02-08T17:05:28.632Z] Verificando o creando carpeta.
+[2025-02-08T17:05:29.247Z] Carpeta existente con ID: 1lYummXIlgtkId5d27gjtvcY7qMKPAHZw.
+[2025-02-08T17:05:29.247Z] Verificando existencia del archivo.
+[2025-02-08T17:05:29.786Z] Archivo no encontrado.
+[2025-02-08T17:05:29.786Z] Verificando existencia del archivo.
+[2025-02-08T17:05:30.372Z] Archivo ya existe. URL: 1CTYRM7z0whO65nra0KU9mb-6AXfuenrE.
+[2025-02-08T17:05:30.372Z] Verificando existencia del archivo.
+[2025-02-08T17:05:30.632Z] Archivo ya existe. URL: 16R8QRT41BGBNqCE-tWBGf5awZVbC0gUO.
+Formato generado:
+[2025-02-08T17:05:33.652Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Asamblea General de Copropietarios de Coral Apartamentos</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: 3:00 PM - Cierre: 7:52 PM</p>
+  <p><strong>Lugar:</strong> [Lugar no especificado en la transcripción]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Ricardo González - Administrador Delegado</li>
+    <li>Claudia Cecilia Bonilla Agudelo - Apartamento 2608</li>
+    <li>Sebastián Moreno - Revisor Fiscal</li>
+    <li>Claudia Marcela García Quintero - Apartamento 1905 (Presidenta de la Asamblea)</li>
+    <li>María Cristina Narváez - Apartamento 2508 (Comisión Verificadora del Acta)</li>
+    <li>César Tobón - Representante de los Apartamentos 1101 y 1801 (Comisión Verificadora del Acta)</li>
+    <li>Jonathan González - Apartamento 2308 (Comisión Verificadora del Acta)</li>
+    <li>Sergio Rodríguez - Apartamento 902</li>
+    <li>Joana Barrientos - Apartamento 10</li>
+    <li>Verónica Guzmán - Contadora de la Copropiedad</li>
+    <li>Alexander Borges - Consejo de Administración</li>
+    <li>Karina García - Apartamento 802</li>
+    <li>Alexander Jiménez - Apartamento 1807</li>
+    <li>Alexander Bohorquez - Apartamento 1301</li>
+    <li>Fabián Gómez Morales - Apartamento 602</li>
+    <li>Esteban Cavi - Apartamento 1302</li>
+    <li>Judy Alexandra Marulanda - Apartamento 901</li>
+    <li>Pablo Vega - Apartamento 805</li>
+    <li>Marisa Suárez - [Apartamento no especificado]</li>
+    <li>Richard Sánchez - Apartamento 707</li>
+    <li>Lady Sánchez - Apartamento 1106</li>
+    <li>Nicolás Castrillo - Apartamento 1906</li>
+    <li>Jason Velázquez - Apartamento 2504</li>
+    <li>Didier Toro - Apartamento 2406</li>
+    <li>Lady Joana Soto - Apartamento 908</li>
+    <li>José Manuel Berrío - Apartamento 605</li>
+    <li>Sebastián Ortiz - Apartamento 604</li>
+    <li>Emperatriz Hidalgo - Apartamento 2104</li>
+    <li>Daisy Álvarez - Apartamento 1104</li>
+    <li>Elkin Marín - Apartamento 2502</li>
+    <li>Carlos Mario Cruz - Apartamento 2507</li>
+    <li>Alberto - [Apartamento no especificado]</li>
+    <li>Alejandra Sepúlveda - Apartamento 101</li>
+    <li>María Morales - Apartamento 2106</li>
+    <li>Villalba - Apartamento 2206</li>
+    <li>Isa - [Apartamento no especificado]</li>
+  </ul>
+  <p><strong>Quórum:</strong> 34.2% al inicio de la plenaria</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Lectura y Aprobación del Orden del Día</li>
+  <li>Nombramiento del Presidente y Secretario de la Asamblea</li>
+  <li>Nombramiento de la Comisión Verificadora del Acta</li>
+  <li>Informe de Gestión de la Administración y el Consejo de Administración (2023)</li>
+  <li>Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</li>
+  <li>Lectura de Estados Financieros (Periodo 2023)</li>
+  <li>Dictamen de Revisoría Fiscal</li>
+  <li>Aprobación de Estados Financieros (Periodo 2023)</li>
+  <li>Aprobación del Proyecto Presupuestal (Enero-Diciembre 2024)</li>
+  <li>Aprobación de Cuota Extra</li>
+  <li>Elección del Comité de Convivencia</li>
+  <li>Elección del Nuevo Revisor Fiscal o Reelección del Mismo</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>Se constató que a las 2:00 p.m. solo se contaba con el 3% del quórum requerido. Por consiguiente, de acuerdo con el reglamento, la asamblea se inició a las 3:00 p.m. con un quórum del 34.2%.</p>
+
+<h3>2. Lectura y Aprobación del Orden del Día</h3>
+<p>El administrador, Ricardo González, presentó el orden del día propuesto. A sugerencia de la revisoría fiscal, se aprobó por unanimidad incluir la aprobación de una cuota extra como punto adicional en el orden del día, específicamente como punto 11, después de la aprobación del proyecto presupuestal.</p>
+
+<h3>3. Nombramiento del Presidente y Secretario de la Asamblea</h3>
+<p>Se explicó la importancia de elegir un presidente neutral y cordial para dirigir la asamblea. Claudia Cecilia Bonilla Agudelo (Apartamento 2608) planteó una inquietud sobre la legalidad de la asamblea con el quórum presente. El Revisor Fiscal, Sebastián Moreno, aclaró que, para efectos de la asamblea, existen dos tipos de quórum: para deliberar y para decidir. El quórum para deliberar en segunda convocatoria (como era el caso) se cumple con cualquier número de asistentes. El quórum decisorio requiere mayoría simple (50% + 1 de los presentes) para la mayoría de las decisiones, y mayoría calificada (70% del quórum total de la copropiedad) para decisiones específicas, las cuales no se tomarían en esta asamblea.</p>
+<p>Ante la falta de postulaciones, Claudia Marcela García Quintero (Apartamento 1905) fue propuesta y aprobada por unanimidad como Presidenta de la Asamblea. Se aprobó que la administración actuara como Secretario de la Asamblea.</p>
+
+<h3>4. Nombramiento de la Comisión Verificadora del Acta</h3>
+<p>Se nombró a la comisión verificadora del acta, integrada por:</p>
+<ul>
+    <li>María Cristina Narváez (Apartamento 2508)</li>
+    <li>César Tobón (Representante de los Apartamentos 1101 y 1801)</li>
+    <li>Jonathan González (Apartamento 2308)</li>
+</ul>
+<p>Se solicitó a los miembros de la comisión proporcionar sus nombres, teléfonos y correos electrónicos antes de finalizar la asamblea.</p>
+
+<h3>5. Informe de Gestión de la Administración y el Consejo de Administración (2023)</h3>
+<p>Ricardo González, administrador de empresas y especialista en gerencia financiera, presentó el informe de gestión del año 2023. Destacó la importancia del respeto y el trato digno durante la asamblea. El informe se estructuró en torno a ejes estratégicos:</p>
+<ul>
+    <li>Cumplimiento de requisitos legales</li>
+    <li>Valorización del patrimonio</li>
+    <li>Sana convivencia</li>
+    <li>Sostenibilidad financiera del edificio</li>
+</ul>
+
+<h4>Valorización del Patrimonio</h4>
+<ul>
+    <li><strong>Impermeabilización de la terraza:</strong> Se realizó la impermeabilización para solucionar filtraciones en el piso 29. Se espera corregir el drywall afectado entre marzo y abril.</li>
+    <li><strong>Reparación de chutes de basura:</strong> Se solicitó a los copropietarios mantener los chutes cerrados para evitar malos olores.</li>
+</ul>
+
+<h4>Requisitos Legales y Plan de Emergencias</h4>
+<ul>
+    <li><strong>Plan de emergencias y red contra incendios:</strong> Se priorizará el plan de emergencias, incluyendo la red contra incendios. Se completó la dotación de mangueras en 2023 y se continuará en 2024. Los extintores se encuentran al día.</li>
+</ul>
+
+<h4>Mejoras Locativas y Estética</h4>
+<ul>
+    <li><strong>Compra de mesa de concreto:</strong> Se instaló una mesa en el patio, la cual requirió una corrección debido al mal uso.</li>
+    <li><strong>Pintura y señalización:</strong> Se realizaron mejoras en la pintura y señalización de puntos fijos, vigilancia interna y externa, gimnasio y zona de piscina.</li>
+    <li><strong>Gimnasio:</strong> Se planea instalar cámaras para evitar el uso indebido de los equipos y daños en el piso.</li>
+    <li><strong>Sensores de movimiento:</strong> Se reemplazó el 80% de los sensores de movimiento para reducir el consumo de energía.</li>
+</ul>
+
+<h4>Adquisiciones con Ingresos No Operacionales</h4>
+<ul>
+    <li>Se adquirieron una nevera para el salón social, asoleadoras y sillas playeras para la zona de piscina, utilizando ingresos no operacionales provenientes de reservas del salón social y parqueaderos de visitantes.</li>
+</ul>
+
+<h4>Aseo y Mantenimiento</h4>
+<ul>
+    <li><strong>Campañas de aseo:</strong> Se implementaron campañas de lavado a profundidad en pisos, patios y parqueaderos.</li>
+    <li><strong>Empaques de canillas:</strong> Se cambiaron los empaques de las canillas para evitar riesgos eléctricos en el ascensor.</li>
+    <li><strong>Mantenimiento del turco y la piscina:</strong> Se restauraron el turco y la zona de la piscina.</li>
+    <li><strong>Mantenimiento de fachadas:</strong> Se intervinieron cinco apartamentos con afectaciones en las fachadas.</li>
+    <li><strong>Jardinería:</strong> Se fortalecerá la jardinería interna y externa, incluyendo la recuperación de la jardinera en el piso seis.</li>
+</ul>
+
+<h4>Mantenimientos de Ley</h4>
+<ul>
+    <li><strong>Lavado de tanques:</strong> Se realizó semestralmente en abril y septiembre.</li>
+    <li><strong>Mantenimiento preventivo de ascensores:</strong> Se realiza mensualmente con la empresa Sumar.</li>
+    <li><strong>Fumigación:</strong> Se realizó fumigación y refuerzo en zonas comunes en noviembre.</li>
+    <li><strong>Mantenimiento de bombas hidráulicas:</strong> Se realiza bimensualmente.</li>
+    <li><strong>Análisis de agua de la piscina:</strong> Se realiza mensualmente.</li>
+</ul>
+
+<h4>Cumplimiento de Requisitos Legales</h4>
+<ul>
+    <li><strong>Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST):</strong> Se avanzó del 69% al 88% en el cumplimiento de los estándares mínimos. Se planea alcanzar el 98% o 100% este año.</li>
+    <li><strong>Actualización de la identificación, evaluación y valoración de riesgos:</strong> Se realizó con las empresas de vigilancia y aseo.</li>
+    <li><strong>Elementos de protección personal:</strong> Se compraron elementos de protección personal para el equipo de aseo.</li>
+    <li><strong>Plan de trabajo anual y capacitación:</strong> Se estableció un plan de trabajo y capacitación para el personal.</li>
+    <li><strong>Plantas en los pisos:</strong> Se recordó que las plantas en los pasillos están prohibidas por normatividad legal vigente.</li>
+    <li><strong>Compra de herramientas y señalización:</strong> Se compraron herramientas para el personal de mantenimiento y señalización de pisos mojados.</li>
+</ul>
+
+<h4>Proyecciones para 2024 (SG-SST)</h4>
+<ul>
+    <li>Capacitaciones en plan de emergencias (sismos, incendios, manejo de mangueras y extintores).</li>
+    <li>Jornadas de salud (donación de sangre, yoga, mindfulness).</li>
+    <li>Intervención del puesto de trabajo de vigilantes y personal de oficios varios.</li>
+    <li>Instalación de sensores de humo en zonas de reciclaje y cuartos de basura.</li>
+</ul>
+
+<h4>Plan de Manejo Integral de Residuos Sólidos (PMIRS)</h4>
+<ul>
+    <li>Se recordó que el reciclaje no debe dejarse en las salidas de emergencia.</li>
+    <li>Se instó a separar los residuos sólidos en la fuente.</li>
+    <li>Se obtuvo un certificado de disposición final de residuos sólidos.</li>
+</ul>
+
+<h4>Proyecciones para 2024 (PMIRS)</h4>
+<ul>
+    <li>Capacitación en manejo de residuos sólidos para residentes.</li>
+    <li>Inducción trimestral para nuevos residentes sobre el manual de convivencia.</li>
+    <li>Certificación final de medicamentos vencidos y elementos cortopunzantes.</li>
+    <li>Implementación de una cajonera para generar abono interno con residuos orgánicos.</li>
+    <li>Disposición adecuada de aceites quemados.</li>
+</ul>
+
+<h4>Tratamiento de Datos Personales</h4>
+<ul>
+    <li>Se es exhaustivo con el cumplimiento de la Ley 1581 de 2012.</li>
+    <li>Se actualizan los datos personales de los residentes.</li>
+    <li>Solo el equipo de vigilancia tiene acceso a las cámaras.</li>
+    <li>Se trabaja en la confidencialidad de la información con el equipo de vigilancia.</li>
+    <li>Se sistematizarán las bases de datos con la plataforma LUCR para tener un censo en tiempo real de residentes, mascotas y vehículos.</li>
+</ul>
+
+<h4>Sanciones</h4>
+<ul>
+    <li>Se han generado sanciones por más de $2,300,000 por mal uso de mascotas. En lo que va del año, las sanciones ascienden a $1,936,000.</li>
+    <li>Se intervendrá la zona de mascotas con escalas y mejor acceso.</li>
+    <li>Se recordó la obligatoriedad del uso de bozal para razas peligrosas y la necesidad de recoger heces y limpiar orina de mascotas.</li>
+</ul>
+
+<h4>Sana Convivencia</h4>
+<ul>
+    <li>Se realizaron actividades de Halloween y actividades familiares en diciembre (bingo, integración en novenas).</li>
+    <li>Se compraron elementos navideños para decorar la copropiedad.</li>
+</ul>
+
+<h4>Sostenibilidad Financiera</h4>
+<ul>
+    <li>Se recuperaron $26 millones de cartera con la empresa de abogados Ejecutamos.</li>
+    <li>Se continúa con la restricción de accesos a parqueaderos, zonas comunes, piscina y turco para morosos.</li>
+    <li>Se prohíbe la entrega de paquetería e ingreso de domiciliarios a morosos.</li>
+    <li>Se capitalizó el fondo de imprevistos, alcanzando los $19 millones.</li>
+    <li>Se incrementó la reserva de fachada en $12 millones, alcanzando los $40 millones.</li>
+    <li>Se obtuvieron ingresos de $20 millones por alquiler de parqueaderos y salón social.</li>
+    <li>Se está al día con los proveedores.</li>
+    <li>Se busca una revisión de las facturas de servicios públicos con una empresa intermediaria.</li>
+    <li>Se está en proceso de recuperación de $8 millones adeudados por Conarte.</li>
+</ul>
+
+<h4>Encuestas de Satisfacción</h4>
+<ul>
+    <li>Se realizaron encuestas de satisfacción con el equipo de aseo (97%) y vigilancia (98%).</li>
+</ul>
+
+<h4>Asistente Virtual</h4>
+<ul>
+    <li>Se implementará una asistente virtual para responder consultas en tiempo real a través de WhatsApp.</li>
+</ul>
+
+<h4>Preguntas y Respuestas</h4>
+<ul>
+    <li>Joana Barrientos (Apartamento 10) preguntó por qué no se han realizado arreglos en el parque y la piscina si hay ingresos. Ricardo González respondió que se requiere aprobación en asamblea para la ejecución presupuestal y que los recursos no alcanzan para todos los proyectos.</li>
+    <li>Esteban Cavi (Apartamento 1302) preguntó por la carnetización de la piscina. Verónica Guzmán, contadora, respondió que los dineros recaudados están en una cuenta pasivo y se tomará una decisión sobre su destino.</li>
+    <li>Karina García (Apartamento 802) expresó su preocupación por la falta de decisiones y la vulneración de los derechos de los niños a la recreación. Ricardo González respondió que se cerró la piscina preventivamente por seguridad y que se está buscando una solución biométrica para el acceso.</li>
+    <li>Alexander Jiménez (Apartamento 1807) preguntó sobre la potestad del consejo para tomar decisiones. Alexander Bohorquez (Apartamento 1301) respondió que el consejo aprueba de acuerdo con el presupuesto y que la asamblea es para tomar decisiones.</li>
+    <li>Fabián Gómez Morales (Apartamento 602) sugirió fijar fechas para las actividades planificadas.</li>
+</ul>
+
+<h3>6. Nombramiento del Nuevo Consejo de Administración o Reelección del Anterior</h3>
+<p>Se abrió el espacio para la postulación de candidatos al Consejo de Administración. Se recordó que los postulados deben ser propietarios o apoderados, no estar en mora superior a 60 días y no haber sido sancionados por convivencia en los últimos dos años. El Revisor Fiscal, Sebastián Moreno, aclaró que las personas con leasing deben contar con un poder del banco para postularse.</p>
+<p>Se explicó que el reglamento de Coral prevé un consejo amplio de 18 miembros (9 principales y 9 suplentes). Se indicó que las personas que no cumplan con los requisitos pueden ser invitadas permanentes al consejo, con derecho a voz pero sin voto.</p>
+<p>Se generó un debate sobre la posibilidad de modificar el reglamento para permitir que personas con leasing puedan ser miembros del consejo. Se aclaró que esto no es posible, ya que el reglamento no puede contradecir la Ley 675 de 2001. Se explicó el proceso y los requisitos para modificar el reglamento, incluyendo la necesidad de una mayoría calificada (70% de los coeficientes) y la reforma de la escritura, con un costo aproximado de $60,000 por apartamento.</p>
+<p>Se propuso que los propietarios apoderen a personas con leasing para que puedan postularse. Se aclaró que el poder debe ser escrito si el propietario no está presente, pero puede ser de viva voz si el propietario está presente en la asamblea.</p>
+<p>Se postularon las siguientes personas:</p>
+<ul>
+    <li>Lady Sánchez (Apartamento 1106)</li>
+    <li>Alexander Jiménez (Apartamento 1807)</li>
+    <li>Nicolás Castrillo (Apartamento 1906)</li>
+    <li>Alexander Borges (Apartamento 1301)</li>
+    <li>Jason Velázquez (Apartamento 2504)</li>
+    <li>Didier Toro (Apartamento 2406)</li>
+    <li>María Cristina Narváez (Apartamento 2508)</li>
+    <li>Claudia Marcela García (Apoderada por Lady Joana Soto, Apartamento 908)</li>
+    <li>Sebastián Ortiz (Apartamento 604)</li>
+    <li>Joana Barrientos (Apartamento 10)</li>
+</ul>
+<p>Se aclaró que los miembros del consejo se elegirían en una sola plancha y no individualmente. Se propuso que se creara un manual del consejero para sancionar faltas graves. Se sugirió que los consejeros antiguos se postularan para compartir su experiencia.</p>
+<p>Se postularon como invitados permanentes:</p>
+<ul>
+    <li>Fabián Gómez Morales (Apartamento 602)</li>
+    <li>Emperatriz Hidalgo (Apartamento 2104, apoderada por Sergio Rodríguez, Apartamento 902)</li>
+    <li>Jonathan González (Apartamento 2308)</li>
+</ul>
+<p>Se sometió a votación la lista de candidatos al Consejo de Administración. Ante la falta de unanimidad, se procedió a la elección por planchas. Finalmente, se aprobó por mayoría la lista de candidatos al Consejo de Administración.</p>
+
+<h3>7. Lectura de Estados Financieros (Periodo 2023)</h3>
+<p>Verónica Guzmán, contadora de la copropiedad, presentó los estados financieros del año 2023. Señaló un error de estructura en los informes compartidos, pero aclaró que no afectaba el fondo de la información.</p>
+
+<h4>Composición del Activo</h4>
+<ul>
+    <li>Caja Menor: $300,000</li>
+    <li>Banco Av Villas (Recaudo de cuotas de administración): $33,757,283</li>
+    <li>Banco Av Villas (Aprovechamientos): $9,717,198</li>
+    <li>Fiducia Av Villas (Fachadas): $39,611,711</li>
+    <li>Certivillas (Fondo de Imprevistos): $14,153,991</li>
+    <li>Anticipos: [Valor no especificado]</li>
+    <li>Deudores por cuotas de administración: $44,659,930</li>
+    <li>Multas de parqueaderos: $80,000</li>
+    <li>Multas de convivencia: $389,200</li>
+    <li>Intereses de mora: $1,772,950</li>
+    <li>Honorarios de abogados: $90,867</li>
+    <li>Sanciones por inasistencia a la asamblea: $90,000</li>
+</ul>
+
+<h4>Recursos Restringidos</h4>
+<ul>
+    <li>Reserva de provisión restringida: $23,444,904</li>
+    <li>Reserva de destinación de proyectos: $3,000,600</li>
+    <li>Reserva del fondo de imprevistos: $19,840,676</li>
+    <li>Cuota extra de fachadas: $28,844,900</li>
+    <li>Saldos a favor: [Valor no especificado]</li>
+    <li>Consignaciones por identificar: $5,589,195</li>
+    <li>Ingresos recibidos para terceros (carnetización): $190,000</li>
+</ul>
+
+<h4>Composición del Pasivo más Patrimonio</h4>
+<ul>
+    <li>Reserva legal: $19,840,676</li>
+    <li>Cuentas por pagar: $3,572,721</li>
+    <li>Saldos a favor: $1,413,947</li>
+    <li>Otros pasivos (cuotas extras y reservas): $61,668,999</li>
+    <li>Excedentes de años anteriores: [Valor no especificado]</li>
+</ul>
+
+<h4>Ingresos</h4>
+<ul>
+    <li>Ingresos operacionales (cuotas de administración): $449,359,626 (facturado), $405,892,910 (recaudado)</li>
+    <li>Ingresos no operacionales (intereses, sanciones, multas, aprovechamientos): $35,158,128</li>
+</ul>
+
+<h4>Cartera</h4>
+<ul>
+    <li>Cartera corriente (1-3 cuotas): $15,908,160 (56 apartamentos)</li>
+    <li>Cartera entre 4 y 11 cuotas: $7,816,690 (7 apartamentos)</li>
+    <li>Cartera morosa (12+ cuotas): $23,111,305 (6 apartamentos)</li>
+    <li>Apartamentos al día: 129 de 198</li>
+    <li>Consignaciones por identificar: 22</li>
+</ul>
+
+<h4>Evolución del Gasto</h4>
+<p>Se presentó un gráfico comparando el presupuesto y la ejecución de gastos en 2023. Se destacaron los rubros con mayor y menor ejecución, así como los gastos más representativos.</p>
+
+<h4>Evolución del Fondo de Reserva</h4>
+<ul>
+    <li>2022: $15,429,576</li>
+    <li>2023 (ahorro del 1%): $4,411,100</li>
+    <li>Saldo en patrimonio: $19,840,176</li>
+    <li>Saldo en bancos (Certivillas): $14,153,991</li>
+</ul>
+
+<h4>Resultados del Ejercicio</h4>
+<ul>
+    <li>Resultados de ejercicios anteriores: $52,997,250</li>
+    <li>Resultado del ejercicio actual: $32,591,313</li>
+    <li>Total de utilidades: [Valor no especificado]</li>
+    <li>Líquido en bancos: 21,971,000 (25%)</li>
+    <li>Represado en cartera: $64,578,853 (75%)</li>
+</ul>
+
+<h4>Preguntas y Respuestas</h4>
+<ul>
+    <li>Se preguntó por qué no se priorizaron los arreglos de la piscina si había dinero ahorrado en el rubro. Se respondió que el proyecto es más costoso y se compró un filtro para la piscina en enero de 2024.</li>
+    <li>Se preguntó por el daño del motor de la piscina. Se respondió que fue el filtro y pudo ser por uso o mal uso.</li>
+</ul>
+
+<h3>8. Dictamen de Revisoría Fiscal</h3>
+<p>Sebastián Moreno, Revisor Fiscal, presentó el dictamen de los estados financieros. Explicó que la preparación de los estados financieros es responsabilidad de la administración, pero la revisoría fiscal los audita. El dictamen emitido fue sin salvedades, indicando que la información presentada refleja razonablemente la situación financiera de la copropiedad.</p>
+
+<h4>Observaciones</h4>
+<ul>
+    <li><strong>Saldos pendientes de legalización:</strong> $1,434,920 por anticipo al administrador para gastos de navidad.</li>
+    <li><strong>Consignaciones por identificar:</strong> $5,589,195. Se recomendó a los propietarios realizar pagos referenciados y a la administración intensificar la gestión para identificar las consignaciones.</li>
+</ul>
+
+<h4>Cumplimiento Normativo (Semáforo)</h4>
+<ul>
+    <li><strong>Impuestos:</strong> Cumplimiento en la presentación de declaraciones de retenciones en la fuente y retención a título de industria y comercio.</li>
+    <li><strong>Reserva legal:</strong> Incumplimiento por falta de apropiación de forma líquida ($5,686).</li>
+    <li><strong>Seguro de zonas comunes:</strong> Vigente.</li>
+    <li><strong>Sistema de Gestión de Seguridad y Salud en el Trabajo (SG-SST), Plan Integral de Manejo de Residuos Sólidos (PMIRS) y Política de Tratamiento de Datos Personales:</strong> Incumplimiento al cierre de diciembre.</li>
+</ul>
+
+<h4>Ley de Piscinas (Ley 1209 de 2008)</h4>
+<ul>
+    <li>El piscinero debe tener certificación en operación y mantenimiento de piscinas y salvamento acuático. Se advirtió que el piscinero actual no cuenta con certificación en salvamento acuático.</li>
+</ul>
+
+<h4>Control Interno</h4>
+<ul>
+    <li>El Consejo de Administración ejerce control financiero. Se evidenciaron medidas de control interno, como el token de validación dual.</li>
+</ul>
+
+<h4>Análisis Financiero</h4>
+<ul>
+    <li>La cartera tiene un indicador de rotación por encima de 30 días (35.7 días). Se recomendó emprender acciones de cobro, incluso jurídicas, para la cartera con vencimiento superior a 180 días.</li>
+    <li>Se paga un mes de gastos a proveedores en promedio cada 2.5 días.</li>
+    <li>La relación entre lo que le deben a la copropiedad y lo que la copropiedad debe es favorable (57 millones vs. 3.5 millones).</li>
+    <li>No se observa riesgo de impago de obligaciones.</li>
+</ul>
+
+<h4>Preguntas y Respuestas</h4>
+<ul>
+    <li>Se preguntó qué pasa si fallece alguien en la piscina por falta de salvavidas. Se respondió que la copropiedad puede enfrentar responsabilidades solidarias y se recomendó cumplir con la ley de piscinas.</li>
+    <li>Se preguntó sobre la fecha estipulada para el arreglo de los cables de tracción. Se respondió que se espera iniciar la ejecución en marzo.</li>
+</ul>
+
+<h3>9. Aprobación de Estados Financieros (Periodo 2023)</h3>
+<p>Se sometieron a votación los estados financieros. Se solicitó revisar los numerales de las notas. Se aprobaron por unanimidad los estados financieros al 31 de diciembre de 2023.</p>
+
+<h3>10. Aprobación del Proyecto Presupuestal (Enero-Diciembre 2024)</h3>
+<p>Se propuso un incremento del 12.07% en la cuota de administración, correspondiente al incremento del salario mínimo legal vigente. Se justificó el aumento por la reforma laboral y el aumento en los costos de vigilancia y aseo. Se destacó que el presupuesto está ajustado a la realidad y necesidades de la copropiedad.</p>
+<p>Se mencionó que el rubro de vigilancia incrementa un 19% y se redujeron los gastos bancarios. Se propuso un descuento por pronto pago, pero se advirtió que esto implicaría un gasto adicional en el presupuesto. Se sugirió no incrementar mucho la cuota y disminuir rubros no urgentes. Se recordó que hay gastos importantes como el hidrofugado de la fachada.</p>
+<p>Se propuso buscar alternativas para reducir costos, como paneles solares y optimización del personal. Se recordó que Conarte debe un dinero a la copropiedad. Se sugirió no incrementar mucho la cuota, tratando de mantener un equilibrio sin entrar en riesgos.</p>
+<p>Se sometió a votación el presupuesto con el incremento del 12.07%. Se aprobó por unanimidad el presupuesto para el 2024.</p>
+
+<h3>11. Aprobación de Cuota Extra</h3>
+<p>Se presentó la necesidad de una cuota extra para reparar el cable de tracción de los ascensores, la reforma del parque infantil y el embaldosado de la piscina de niños. Se propuso una cuota de $255,100 por apartamento, pagadera en cuotas. Se sugirió dividir la cuota en cinco o seis cuotas para facilitar el pago.</p>
+<p>Se propuso priorizar la vida y atender primero los ascensores. Se sugirió cerrar el parque infantil por seguridad. Se propuso invertir los aprovechamientos de los parqueaderos en el parque infantil. Se sugirió utilizar el fondo de imprevistos, pero se aclaró que este fondo es para imprevistos y no para gastos previsibles.</p>
+<p>Se propuso utilizar los excedentes y la recuperación de cartera para los proyectos. Se propuso una cuota extra para la fachada. Se propuso que el Consejo de Administración evalúe la prioridad de los proyectos y los ejecute a medida que se recaude el dinero. Se propuso no descartar del todo la cuota extra, sino hacer una cuota del 50% para provisionar fondos para la fachada.</p>
+<p>Se propuso que la administración trate de no incrementar mucho la cuota, tratando de mantener esa seguridad para esos posibles riesgos que pueden existir. Se propuso que la administración mire alternativas para optimizar los gastos. Se propuso que el Consejo de Administración, con la revisoría fiscal, mire cómo se puede financiar el tema del parque con esos ingresos.</p>
+<p>Se propuso que el municipio preste el lote para que los perritos tengan un espacio más largo. Se propuso que la administración lleve a cabo el estudio y les diga con cifras concretas la relación costo beneficio. Se propuso que se cobre una multa a los que no fumiguen, pero se aclaró que esto requiere una modificación del reglamento.</p>
+<p>Se propuso que el Consejo de Administración evalúe la prioridad de los proyectos y los ejecute a medida que se recaude el dinero. Se propuso no aprobar cuota extra y realizar los proyectos con los excedentes que estén de forma líquida o se vayan realizando de forma líquida.</p>
+<p>Se sometió a votación la propuesta de no aprobar cuota extra y utilizar los excedentes para los tres proyectos. Se aprobó por mayoría que los excedentes se utilicen para el ascensor, la piscina y el parque infantil, dándole potestad al Consejo de Administración para definir la prioridad de los proyectos.</p>
+<p>Se sometió a votación la propuesta de pagar una cuota extra del 50% para la fachada, pagadera en tres cuotas después de la prima (agosto). Se aprobó por mayoría la cuota extra de $150,000 para la fachada, pagadera en tres cuotas después de agosto.</p>
+
+<h3>12. Elección del Comité de Convivencia</h3>
+<p>Se postularon para el Comité de Convivencia:</p>
+<ul>
+    <li>Sergio Rodríguez (Apartamento 902)</li>
+    <li>Jonas [Apellido y Apartamento no especificados]</li>
+    <li>Lady Sánchez (Apartamento 1106)</li>
+</ul>
+<p>Se aprobó por unanimidad que los tres copropietarios conformen el Comité de Convivencia.</p>
+
+<h3>13. Elección del Nuevo Revisor Fiscal o Reelección del Mismo</h3>
+<p>Ante la falta de nuevas propuestas, se sometió a votación la reelección de la firma actual como revisores fiscales. Se aprobó por unanimidad la reelección de la firma actual como revisores fiscales.</p>
+
+<h3>14. Proposiciones y Varios</h3>
+<ul>
+    <li>Se hizo un llamado a los dueños de mascotas para que sean responsables al sacar a sus mascotas, especialmente cuando son niños quienes los sacan. Se solicitó poner bozal a los perros agresivos.</li>
+    <li>Se insistió en que la piscinera no realice labores de aseo en zonas comunes durante el horario de piscina.</li>
+    <li>Se preguntó por el lote de atrás. Se respondió que no es de Coral y que el municipio ya notificó a la persona que lo ocupa. Se propuso retomar el caso del pedazo de tierra internamente, pero se consideró que el costo no justifica el beneficio.</li>
+    <li>Se propuso que el municipio preste el lote para que los perritos tengan un espacio más largo.</li>
+    <li>Se propuso que se programe ordenadamente la fumigación y se cobre una multa a los que no fumiguen, pero se aclaró que esto requiere una modificación del reglamento.</li>
+    <li>Se propuso que se trabaje en el tema de la energía eólica.</li>
+    <li>Se propuso que se haga una petición o queja a la constructora por el tema de la fachada.</li>
+    <li>Se propuso que se haga una acción popular o algo, y no de forma individual como lo quiere la entidad, tal vez como para ellos mirar a ver a quién le cobran y a quién sí, a quién no y al más marrano yo pensaría que debemos de unirnos.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 7:52 PM</p>
+  <p><strong>Acuerdos:</strong></p>
+  <ul>
+    <li>Aprobación del presupuesto para el 2024 con un incremento del 12.07%.</li>
+    <li>No aprobación de cuota extra para los proyectos de ascensores, piscina y parque infantil.</li>
+    <li>Utilización de los excedentes de la copropiedad para la ejecución de los proyectos de ascensores, piscina y parque infantil, dándole potestad al Consejo de Administración para definir la prioridad de los proyectos.</li>
+    <li>Aprobación de una cuota extra de $150,000 para la fachada, pagadera en tres cuotas después de agosto.</li>
+    <li>Conformación del Comité de Convivencia por Sergio Rodríguez, Jonas [Apellido no especificado] y Lady Sánchez.</li>
+    <li>Reelección de la firma actual como revisores fiscales.</li>
+  </ul>
+  <p><strong>Compromisos:</strong></p>
+  <ul>
+    <li>El Consejo de Administración definirá la prioridad de los proyectos de ascensores, piscina y parque infantil.</li>
+    <li>La administración realizará el estudio de la relación costo beneficio del pedazo de tierra internamente.</li>
+    <li>La administración y los consejeros trabajarán en el tema de la energía eólica.</li>
+    <li>La administración y los consejeros harán una petición o queja a la constructora por el tema de la fachada.</li>
+    <li>La administración y los consejeros harán una acción popular o algo, y no de forma individual como lo quiere la entidad, tal vez como para ellos mirar a ver a quién le cobran y a quién sí, a quién no y al más marrano yo pensaría que debemos de unirnos.</li>
+  </ul>
+  <p><strong>Próximos pasos:</strong></p>
+[2025-02-08T17:05:36.620Z] Contenido cargado con éxito. ID: 1ysZtDt4rHrrNriKB5VDE6yb9r_tuWk1u
+[2025-02-08T17:05:36.620Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
