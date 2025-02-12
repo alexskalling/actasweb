@@ -14,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Generador de actas",
-  description: "Actas de reuniones al instante",
+  title: "Generador de Actas en minutos | ActasDeReuniones.AI",
+  description:
+    "Convierte grabaciones en pre-actas en minutos. Ahorra tiempo, cumple con la Ley 675, garantiza precisión y calidad con nuestra herramienta sencilla.",
 };
 
 export default function RootLayout({

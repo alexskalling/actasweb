@@ -342,8 +342,6 @@ html
 ---  
 
 
-
-
 ## **VALIDACIÓN FINAL**  
 Antes de entregar el acta, asegúrate de cumplir con los siguientes criterios:  
 

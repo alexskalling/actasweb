@@ -28,9 +28,9 @@ export default function Home() {
           <div className="flex h-full">
             <div className="m-auto">
               <CardContent className=" items-center justify-center ">
-                <h3 className="text-3xl  mt-5 font-bold text-center mb-8">
+                <h2 className="text-3xl  mt-5 font-bold text-center mb-8">
                   Siempre a la orden
-                </h3>
+                </h2>
                 <p className="text-md text-center">
                   Si tienes alguna duda o necesitas ayuda en cualquier momento,
                   estamos aquí para ti.{" "}
@@ -173,10 +173,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <p className="text-sm text-center">
+                <h3 className="text-sm text-center">
                   Valoramos tu tiempo, por eso damos prioridad al contacto por
                   WhatsApp.
-                </p>
+                </h3>
               </CardContent>
             </div>
           </div>
