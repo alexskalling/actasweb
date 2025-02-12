@@ -13,9 +13,9 @@ export default function Home() {
         className="absolute h-screen w-screen inset-0 -z-10"
         style={{
           backgroundImage: `url(${logo.src})`,
-          backgroundSize: "cover", // Hace que la imagen cubra toda la pantalla sin repetirse
-          backgroundPosition: "center", // Centra la imagen
-          backgroundRepeat: "no-repeat", // Evita que la imagen se repita
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       ></div>
       <NavComponent />
