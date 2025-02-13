@@ -15,7 +15,7 @@ function calcularNumPartes(longitud: number): number {
   if (longitud > 140000) return 5;
   if (longitud > 98000) return 4;
   if (longitud > 70000) return 3;
-  return 1; // No se divide si es 70K o menos
+  return 1; /
 }
 
 export async function generateContent(nombreNormalizado: string) {
