@@ -3327,3 +3327,1094 @@ Formato generado:
   <p><strong>Próximos pasos:</strong></p>
 [2025-02-08T17:05:36.620Z] Contenido cargado con éxito. ID: 1ysZtDt4rHrrNriKB5VDE6yb9r_tuWk1u
 [2025-02-08T17:05:36.620Z] Acta lista y guardada como coral_apartamentos_Borrador.docx.
+[2025-02-12T18:45:30.729Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-12T18:45:30.730Z] Verificando o creando carpeta.
+[2025-02-12T18:45:31.162Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:45:31.162Z] Verificando existencia del archivo.
+[2025-02-12T18:45:31.571Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:45:31.571Z] El archivo ya existe.
+[2025-02-12T18:46:07.246Z] Guardando transcipcion.
+[2025-02-12T18:46:09.314Z] Verificando si la transcripción ya existe.
+[2025-02-12T18:46:09.314Z] Verificando o creando carpeta.
+[2025-02-12T18:46:09.992Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:46:09.992Z] Verificando existencia del archivo.
+[2025-02-12T18:46:10.315Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:46:10.315Z] Verificando existencia del archivo.
+[2025-02-12T18:46:10.596Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:46:10.596Z] La transcripción ya existe.
+[2025-02-12T18:46:10.597Z] Iniciando generación de contenido: reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T18:46:10.597Z] Verificando o creando carpeta.
+[2025-02-12T18:46:10.902Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:46:10.903Z] Verificando existencia del archivo.
+[2025-02-12T18:46:11.529Z] Archivo no encontrado.
+[2025-02-12T18:46:11.530Z] Verificando existencia del archivo.
+[2025-02-12T18:46:12.130Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:48:50.022Z] Error en generando contenido: Failed after 3 attempts. Last error: Resource has been exhausted (e.g. check quota)..
+[2025-02-12T18:50:21.804Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-12T18:50:21.804Z] Verificando o creando carpeta.
+[2025-02-12T18:50:22.536Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:50:22.536Z] Verificando existencia del archivo.
+[2025-02-12T18:50:22.798Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:50:22.798Z] El archivo ya existe.
+[2025-02-12T18:50:39.901Z] Verificando si la transcripción ya existe.
+[2025-02-12T18:50:39.901Z] Verificando o creando carpeta.
+[2025-02-12T18:50:40.843Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:50:40.844Z] Verificando existencia del archivo.
+[2025-02-12T18:50:41.456Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:50:41.456Z] Verificando existencia del archivo.
+[2025-02-12T18:50:41.801Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:50:41.801Z] La transcripción ya existe.
+[2025-02-12T18:50:41.802Z] Iniciando generación de contenido: reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T18:50:41.802Z] Verificando o creando carpeta.
+[2025-02-12T18:50:42.094Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:50:42.094Z] Verificando existencia del archivo.
+[2025-02-12T18:50:42.687Z] Archivo no encontrado.
+[2025-02-12T18:50:42.687Z] Verificando existencia del archivo.
+[2025-02-12T18:50:43.302Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:51:43.515Z] Guardando transcripción.
+[2025-02-12T18:51:43.516Z] Iniciando subida de archivo.
+[2025-02-12T18:51:46.576Z] Archivo subido con éxito. ID: 1KaOE1dY7qV96MDmB1WcNDBo-GEmDQmkM y permisos de lectura pública asignados.
+[2025-02-12T18:51:46.576Z] Iniciando formato de contenido. reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T18:51:46.576Z] Verificando o creando carpeta.
+[2025-02-12T18:51:46.887Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:51:46.887Z] Verificando existencia del archivo.
+[2025-02-12T18:51:47.202Z] Archivo no encontrado.
+[2025-02-12T18:51:47.202Z] Verificando existencia del archivo.
+[2025-02-12T18:51:47.710Z] Archivo ya existe. URL: 1KaOE1dY7qV96MDmB1WcNDBo-GEmDQmkM.
+[2025-02-12T18:51:47.710Z] Verificando existencia del archivo.
+[2025-02-12T18:51:47.987Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+Formato generado:
+[2025-02-12T18:51:50.682Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión Extraordinaria del Consejo de Administración</h1>
+  <p><strong>Fecha:</strong> 11 de febrero de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 7:00 PM - Cierre: 12:00 AM</p>
+  <p><strong>Lugar:</strong> Apartamento 1510, Doctor Lerman Salinas</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Dr. Lerman Salinas - Presidente del Consejo</li>
+    <li>Fanny Val - Secretaria de la Reunión</li>
+    <li>Luis Miguel Hernández</li>
+    <li>Jaime Montoya</li>
+    <li>Isabel Gallego</li>
+    <li>Jessica Salinas</li>
+    <li>Claudia García</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Elección de Presidente y Secretario de la Reunión</li>
+  <li>Seguridad</li>
+  <li>Mascotas e Higiene</li>
+  <li>Cámaras</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>El Dr. Lerman Salinas, presidente del consejo, dio inicio a la reunión extraordinaria, confirmando la presencia de los miembros necesarios para la toma de decisiones.</p>
+
+<h3>2. Elección de Presidente y Secretario de la Reunión</h3>
+<p>Se procedió a la elección de los cargos para la reunión. El Dr. Lerman Salinas fue elegido como presidente y Fanny Val como secretaria. La administración se encargaría de elaborar el acta de la reunión.</p>
+
+<h3>3. Seguridad</h3>
+<p>Se abordaron temas relacionados con la seguridad en la copropiedad, comenzando con la vigilancia y el control de mascotas. Se enfatizó la importancia de que los caninos utilicen correa y bozal, según lo establecido por la ley, especialmente en el ascensor. Se discutió la situación actual de las cámaras de seguridad, donde se constató que varias no estaban funcionando y que no se estaban realizando los controles necesarios sobre los caninos. Se mencionó la necesidad de corregir los puntos ciegos y mejorar la ubicación de las cámaras. Se señaló la falta de control sobre los excrementos de perros en áreas comunes y la necesidad de mejorar la higiene en general. Se mencionó la posibilidad de que un inspector de salud visite las instalaciones.</p>
+<ul>
+  <li><strong>Vigilancia y Caninos:</strong> Se reiteró la necesidad de que los perros usen correa y bozal en el ascensor y se cuestionó el funcionamiento de las cámaras de seguridad. Se discutió la falta de control sobre los excrementos de perros y la higiene en general.</li>
+  <li><strong>Cámaras:</strong> Se constató que las cámaras no estaban funcionando correctamente y que no se estaban realizando los controles necesarios. Se mencionó la necesidad de corregir los puntos ciegos y mejorar la ubicación de las cámaras.</li>
+  <li><strong>Acciones:</strong> Se acordó que la administración tomaría medidas para mejorar la vigilancia y el control de mascotas, así como para solucionar los problemas con las cámaras de seguridad.</li>
+</ul>
+
+<h3>4. Mascotas e Higiene</h3>
+<p>Se continuó con la discusión sobre la tenencia de mascotas y la higiene en la copropiedad. Se destacó la importancia de la educación de los dueños de mascotas y la necesidad de que se responsabilicen por sus animales. Se mencionaron las acciones que se han realizado, como la colocación de avisos y la capacitación a los propietarios. Se discutió la posibilidad de imponer multas y sanciones a quienes incumplan las normas. Se habló sobre la necesidad de buscar profesionales en áreas como trabajo social y psicología para realizar pedagogía con los residentes. Se mencionó la necesidad de mejorar la señalización y la limpieza de las zonas comunes. Se discutió la posibilidad de multar a los infractores y decomisar animales en caso de incumplimiento de las normas.</p>
+<ul>
+  <li><strong>Educación y Responsabilidad:</strong> Se enfatizó la importancia de la educación de los dueños de mascotas y la necesidad de que se responsabilicen por sus animales.</li>
+  <li><strong>Acciones:</strong> Se acordó realizar una capacitación el 27 de febrero, de 5 a 7 PM, sobre tenencia adecuada de mascotas en convenio con la Secretaría de Medio Ambiente. Se acordó ser enfáticos en el cumplimiento de las normas y el reglamento en la asamblea de marzo. Se acordó reportar a la Sala de Mediación Policial a quienes infrinjan las normas. Se acordó colocar avisos en las zonas comunes.</li>
+  <li><strong>Sanciones:</strong> Se discutió la posibilidad de imponer multas, decomiso de animales y otras sanciones a quienes incumplan las normas.</li>
+</ul>
+
+<h3>5. Cámaras</h3>
+<p>Se abordó el tema de las cámaras de seguridad, discutiendo los avances en su reparación y mantenimiento. Se informó sobre la compra de un disco duro y la necesidad de realizar ajustes en el sistema eléctrico. Se mencionó la instalación de nuevas cámaras y la importancia de que los vigilantes reporten cualquier anomalía. Se discutió la posibilidad de que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente. Se informó sobre la compra de una UPS y la necesidad de mejorar la estabilidad del sistema eléctrico. Se discutió la posibilidad de que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente.</p>
+<ul>
+  <li><strong>Avances y Mantenimiento:</strong> Se informó sobre los avances en la reparación y mantenimiento de las cámaras de seguridad.</li>
+  <li><strong>Acciones:</strong> Se acordó acelerar la reparación de las cámaras y realizar ajustes en el sistema eléctrico. Se acordó que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente.</li>
+</ul>
+
+<h3>6. Proposiciones y Varios</h3>
+<p>Se discutieron varios temas, incluyendo la revisión y aprobación del presupuesto 2025, el informe de gestión de 2024, fugas de agua, RCI, certificación de bomberos, el fondo de imprevistos, la propuesta de empresas de vigilancia y la logística para la asamblea del 1 de marzo. Se aprobó el orden del día.</p>
+<ul>
+  <li><strong>Revisión y Aprobación del Presupuesto 2025:</strong> Se presentó el presupuesto para el año 2025, destacando que no aumentaría más que el salario mínimo legal vigente. Se detallaron los ingresos y gastos, incluyendo vigilancia, aseo, energía, administración, ascensores, seguros, mantenimiento de zonas comunes, mantenimiento de piscina, fumigación, asesorías, contador, insumos de aseo y cafetería, sistema de bombeo, suministro y reparaciones eléctricas, entre otros. Se aprobó el presupuesto.</li>
+  <li><strong>Informe de Gestión 2024:</strong> Se presentó el informe de gestión del año 2024, destacando los logros y proyectos realizados. Se mencionaron los contratos vigentes, la gestión legal, el seguimiento y control a los consumos de servicios públicos, la cartera, el cumplimiento de objetivos propuestos y los retos para el futuro. Se aprobó el informe.</li>
+  <li><strong>Fugas de Agua:</strong> Se discutió el problema de las fugas de agua, mencionando la calidad de la tubería y la falta de anclajes. Se informó sobre la necesidad de cambiar la tubería y se solicitó un diagnóstico para determinar el costo de la reparación. Se acordó que José, experto en el tema, hiciera un informe y un video para la asamblea.</li>
+  <li><strong>RCI y Certificación de Bomberos:</strong> Se abordó el tema de la certificación de bomberos, destacando la necesidad de cumplir con los requerimientos para obtenerla. Se mencionó la necesidad de habilitar la salida a la calle por las escaleras de emergencia y se discutió la posibilidad de realizar un autopréstamo del fondo de fachada y el fondo de imprevistos para cubrir los gastos. Se acordó que el comandante de bomberos y Marco, experto en el tema, fueran invitados a la asamblea. Se discutió la necesidad de colocar pasamanos en las escaleras de emergencia.</li>
+  <li><strong>Fondo de Imprevistos:</strong> Se discutió la necesidad de utilizar el fondo de imprevistos para cubrir los gastos de la certificación de bomberos y otros temas urgentes.</li>
+  <li><strong>Empresas de Vigilancia:</strong> Se mencionó la necesidad de contratar una empresa de vigilancia y se discutió la posibilidad de realizar un contrato a largo plazo.</li>
+  <li><strong>Logística para la Asamblea del 1 de Marzo:</strong> Se discutió la logística para la asamblea del 1 de marzo, incluyendo la necesidad de enviar la citación a tiempo.</li>
+</ul>
+
+<p>Se discutió el presupuesto para el año 2025, destacando que no aumentaría más que el salario mínimo legal vigente. Se detallaron los ingresos y gastos, incluyendo vigilancia, aseo, energía, administración, ascensores, seguros, mantenimiento de zonas comunes, mantenimiento de piscina, fumigación, asesorías, contador, insumos de aseo y cafetería, sistema de bombeo, suministro y reparaciones eléctricas, entre otros. Se aprobó el presupuesto.</p>
+<p>Se presentó el informe de gestión del año 2024, destacando los logros y proyectos realizados. Se mencionaron los contratos vigentes, la gestión legal, el seguimiento y control a los consumos de servicios públicos, la cartera, el cumplimiento de objetivos propuestos y los retos para el futuro. Se aprobó el informe.</p>
+<p>Se discutió el problema de las fugas de agua, mencionando la calidad de la tubería y la falta de anclajes. Se informó sobre la necesidad de cambiar la tubería y se solicitó un diagnóstico para determinar el costo de la reparación. Se acordó que José, experto en el tema, hiciera un informe y un video para la asamblea.</p>
+<p>Se abordó el tema de la certificación de bomberos, destacando la necesidad de cumplir con los requerimientos para obtenerla. Se mencionó la necesidad de habilitar la salida a la calle por las escaleras de emergencia y se discutió la posibilidad de realizar un autopréstamo del fondo de fachada y el fondo de imprevistos para cubrir los gastos. Se acordó que el comandante de bomberos y Marco, experto en el tema, fueran invitados a la asamblea. Se discutió la necesidad de colocar pasamanos en las escaleras de emergencia.</p>
+<p>Se discutió la necesidad de utilizar el fondo de imprevistos para cubrir los gastos de la certificación de bomberos y otros temas urgentes.</p>
+<p>Se mencionó la necesidad de contratar una empresa de vigilancia y se discutió la posibilidad de realizar un contrato a largo plazo.</p>
+<p>Se discutió la logística para la asamblea del 1 de marzo, incluyendo la necesidad de enviar la citación a tiempo.</p>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 12:00 AM</p>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-12T18:51:53.852Z] Contenido cargado con éxito. ID: 1lyBTUMKJRgkyS43KOZHHaJV2avtT828I
+[2025-02-12T18:51:53.852Z] Acta lista y guardada como reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso_Borrador.docx.
+[2025-02-12T18:56:17.308Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-12T18:56:17.308Z] Verificando o creando carpeta.
+[2025-02-12T18:56:18.046Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:56:18.046Z] Verificando existencia del archivo.
+[2025-02-12T18:56:18.388Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:56:18.388Z] El archivo ya existe.
+[2025-02-12T18:56:19.546Z] Verificando si la transcripción ya existe.
+[2025-02-12T18:56:19.546Z] Verificando o creando carpeta.
+[2025-02-12T18:56:19.981Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:56:19.981Z] Verificando existencia del archivo.
+[2025-02-12T18:56:20.271Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:56:20.271Z] Verificando existencia del archivo.
+[2025-02-12T18:56:20.543Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:56:20.543Z] La transcripción ya existe.
+[2025-02-12T18:56:20.544Z] Iniciando generación de contenido: reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T18:56:20.544Z] Verificando o creando carpeta.
+[2025-02-12T18:56:20.898Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:56:20.898Z] Verificando existencia del archivo.
+[2025-02-12T18:56:21.533Z] Archivo no encontrado.
+[2025-02-12T18:56:21.533Z] Verificando existencia del archivo.
+[2025-02-12T18:56:22.040Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T18:56:37.742Z] Iniciando subida de archivo.
+[2025-02-12T18:56:40.641Z] Archivo subido con éxito. ID: 1oIrSKDZjb6i9jNbqc7f1MFNOWnk4Yd6u y permisos de lectura pública asignados.
+[2025-02-12T18:56:40.642Z] Iniciando formato de contenido. reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T18:56:40.642Z] Verificando o creando carpeta.
+[2025-02-12T18:56:41.295Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:56:41.295Z] Verificando existencia del archivo.
+[2025-02-12T18:56:41.570Z] Archivo no encontrado.
+[2025-02-12T18:56:41.570Z] Verificando existencia del archivo.
+[2025-02-12T18:56:41.838Z] Archivo ya existe. URL: 1oIrSKDZjb6i9jNbqc7f1MFNOWnk4Yd6u.
+[2025-02-12T18:56:41.838Z] Verificando existencia del archivo.
+[2025-02-12T18:56:42.524Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+Formato generado:
+[2025-02-12T18:56:45.188Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión Extraordinaria del Consejo de Administración</h1>
+  <p><strong>Fecha:</strong> 11 de febrero de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 7:00 PM - Cierre: 12:00 AM</p>
+  <p><strong>Lugar:</strong> Apartamento 1510, Doctor Lerman Salinas</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Dr. Lerman Salinas - Presidente del Consejo</li>
+    <li>Fanny Val - Secretaria de la Reunión</li>
+    <li>Luis Miguel Hernández</li>
+    <li>Jaime Montoya</li>
+    <li>Isabel Gallego</li>
+    <li>Jessica Salinas</li>
+    <li>Claudia García</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Elección de Presidente y Secretario de la Reunión</li>
+  <li>Seguridad</li>
+  <li>Mascotas e Higiene</li>
+  <li>Cámaras</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>El Dr. Lerman Salinas, presidente del consejo, dio inicio a la reunión extraordinaria, confirmando la presencia de los miembros necesarios para la toma de decisiones.</p>
+
+<h3>2. Elección de Presidente y Secretario de la Reunión</h3>
+<p>Se procedió a la elección de los cargos para la reunión. El Dr. Lerman Salinas fue elegido como presidente y Fanny Val como secretaria. La administración se encargaría de elaborar el acta de la reunión.</p>
+
+<h3>3. Seguridad</h3>
+<p>Se abordaron temas relacionados con la seguridad en la copropiedad, comenzando con la vigilancia y el control de mascotas. Se enfatizó la importancia de que los caninos utilicen correa y bozal, según lo establecido por la ley, especialmente en el ascensor. Se discutió la situación actual de las cámaras de seguridad, donde se constató que varias no estaban funcionando y que no se estaban realizando los controles necesarios sobre los caninos. Se mencionó la necesidad de corregir los puntos ciegos y mejorar la ubicación de las cámaras. Se señaló la falta de control sobre los excrementos de perros en áreas comunes y la necesidad de mejorar la higiene en general. Se mencionó la posibilidad de que un inspector de salud visite las instalaciones.</p>
+<ul>
+  <li><strong>Vigilancia y Caninos:</strong> Se reiteró la necesidad de que los perros usen correa y bozal en el ascensor y se cuestionó el funcionamiento de las cámaras de seguridad. Se discutió la falta de control sobre los excrementos de perros y la higiene en general.</li>
+  <li><strong>Cámaras:</strong> Se constató que las cámaras no estaban funcionando correctamente y que no se estaban realizando los controles necesarios. Se mencionó la necesidad de corregir los puntos ciegos y mejorar la ubicación de las cámaras.</li>
+  <li><strong>Acciones:</strong> Se acordó que la administración tomaría medidas para mejorar la vigilancia y el control de mascotas, así como para solucionar los problemas con las cámaras de seguridad.</li>
+</ul>
+
+<h3>4. Mascotas e Higiene</h3>
+<p>Se continuó con la discusión sobre la tenencia de mascotas y la higiene en la copropiedad. Se destacó la importancia de la educación de los dueños de mascotas y la necesidad de que se responsabilicen por sus animales. Se mencionaron las acciones que se han realizado, como la colocación de avisos y la capacitación a los propietarios. Se discutió la posibilidad de imponer multas y sanciones a quienes incumplan las normas. Se habló sobre la necesidad de buscar profesionales en áreas como trabajo social y psicología para realizar pedagogía con los residentes. Se mencionó la necesidad de mejorar la señalización y la limpieza de las zonas comunes. Se discutió la posibilidad de multar a los infractores y decomisar animales en caso de incumplimiento de las normas.</p>
+<ul>
+  <li><strong>Educación y Responsabilidad:</strong> Se enfatizó la importancia de la educación de los dueños de mascotas y la necesidad de que se responsabilicen por sus animales.</li>
+  <li><strong>Acciones:</strong> Se acordó realizar una capacitación el 27 de febrero, de 5 a 7 PM, sobre tenencia adecuada de mascotas en convenio con la Secretaría de Medio Ambiente. Se acordó ser enfáticos en el cumplimiento de las normas y el reglamento en la asamblea de marzo. Se acordó reportar a la Sala de Mediación Policial a quienes infrinjan las normas. Se acordó colocar avisos en las zonas comunes.</li>
+  <li><strong>Sanciones:</strong> Se discutió la posibilidad de imponer multas, decomiso de animales y otras sanciones a quienes incumplan las normas.</li>
+</ul>
+
+<h3>5. Cámaras</h3>
+<p>Se abordó el tema de las cámaras de seguridad, discutiendo los avances en su reparación y mantenimiento. Se informó sobre la compra de un disco duro y la necesidad de realizar ajustes en el sistema eléctrico. Se mencionó la instalación de nuevas cámaras y la importancia de que los vigilantes reporten cualquier anomalía. Se discutió la posibilidad de que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente. Se informó sobre la compra de una UPS y la necesidad de mejorar la estabilidad del sistema eléctrico. Se discutió la posibilidad de que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente.</p>
+<ul>
+  <li><strong>Avances y Mantenimiento:</strong> Se informó sobre los avances en la reparación y mantenimiento de las cámaras de seguridad.</li>
+  <li><strong>Acciones:</strong> Se acordó acelerar la reparación de las cámaras y realizar ajustes en el sistema eléctrico. Se acordó que los vigilantes envíen fotos al grupo de WhatsApp de vigilancia para reportar cualquier incidente.</li>
+</ul>
+
+<h3>6. Proposiciones y Varios</h3>
+<p>Se discutieron varios temas, incluyendo la revisión y aprobación del presupuesto 2025, el informe de gestión de 2024, fugas de agua, RCI, certificación de bomberos, el fondo de imprevistos, la propuesta de empresas de vigilancia y la logística para la asamblea del 1 de marzo. Se aprobó el orden del día.</p>
+<ul>
+  <li><strong>Revisión y Aprobación del Presupuesto 2025:</strong> Se presentó el presupuesto para el año 2025, destacando que no aumentaría más que el salario mínimo legal vigente. Se detallaron los ingresos y gastos, incluyendo vigilancia, aseo, energía, administración, ascensores, seguros, mantenimiento de zonas comunes, mantenimiento de piscina, fumigación, asesorías, contador, insumos de aseo y cafetería, sistema de bombeo, suministro y reparaciones eléctricas, entre otros. Se aprobó el presupuesto.</li>
+  <li><strong>Informe de Gestión 2024:</strong> Se presentó el informe de gestión del año 2024, destacando los logros y proyectos realizados. Se mencionaron los contratos vigentes, la gestión legal, el seguimiento y control a los consumos de servicios públicos, la cartera, el cumplimiento de objetivos propuestos y los retos para el futuro. Se aprobó el informe.</li>
+  <li><strong>Fugas de Agua:</strong> Se discutió el problema de las fugas de agua, mencionando la calidad de la tubería y la falta de anclajes. Se informó sobre la necesidad de cambiar la tubería y se solicitó un diagnóstico para determinar el costo de la reparación. Se acordó que José, experto en el tema, hiciera un informe y un video para la asamblea.</li>
+  <li><strong>RCI y Certificación de Bomberos:</strong> Se abordó el tema de la certificación de bomberos, destacando la necesidad de cumplir con los requerimientos para obtenerla. Se mencionó la necesidad de habilitar la salida a la calle por las escaleras de emergencia y se discutió la posibilidad de realizar un autopréstamo del fondo de fachada y el fondo de imprevistos para cubrir los gastos. Se acordó que el comandante de bomberos y Marco, experto en el tema, fueran invitados a la asamblea. Se discutió la necesidad de colocar pasamanos en las escaleras de emergencia.</li>
+  <li><strong>Fondo de Imprevistos:</strong> Se discutió la necesidad de utilizar el fondo de imprevistos para cubrir los gastos de la certificación de bomberos y otros temas urgentes.</li>
+  <li><strong>Empresas de Vigilancia:</strong> Se mencionó la necesidad de contratar una empresa de vigilancia y se discutió la posibilidad de realizar un contrato a largo plazo.</li>
+  <li><strong>Logística para la Asamblea del 1 de Marzo:</strong> Se discutió la logística para la asamblea del 1 de marzo, incluyendo la necesidad de enviar la citación a tiempo.</li>
+</ul>
+
+<p>Se discutió el presupuesto para el año 2025, destacando que no aumentaría más que el salario mínimo legal vigente. Se detallaron los ingresos y gastos, incluyendo vigilancia, aseo, energía, administración, ascensores, seguros, mantenimiento de zonas comunes, mantenimiento de piscina, fumigación, asesorías, contador, insumos de aseo y cafetería, sistema de bombeo, suministro y reparaciones eléctricas, entre otros. Se aprobó el presupuesto.</p>
+<p>Se presentó el informe de gestión del año 2024, destacando los logros y proyectos realizados. Se mencionaron los contratos vigentes, la gestión legal, el seguimiento y control a los consumos de servicios públicos, la cartera, el cumplimiento de objetivos propuestos y los retos para el futuro. Se aprobó el informe.</p>
+<p>Se discutió el problema de las fugas de agua, mencionando la calidad de la tubería y la falta de anclajes. Se informó sobre la necesidad de cambiar la tubería y se solicitó un diagnóstico para determinar el costo de la reparación. Se acordó que José, experto en el tema, hiciera un informe y un video para la asamblea.</p>
+<p>Se abordó el tema de la certificación de bomberos, destacando la necesidad de cumplir con los requerimientos para obtenerla. Se mencionó la necesidad de habilitar la salida a la calle por las escaleras de emergencia y se discutió la posibilidad de realizar un autopréstamo del fondo de fachada y el fondo de imprevistos para cubrir los gastos. Se acordó que el comandante de bomberos y Marco, experto en el tema, fueran invitados a la asamblea. Se discutió la necesidad de colocar pasamanos en las escaleras de emergencia.</p>
+<p>Se discutió la necesidad de utilizar el fondo de imprevistos para cubrir los gastos de la certificación de bomberos y otros temas urgentes.</p>
+<p>Se mencionó la necesidad de contratar una empresa de vigilancia y se discutió la posibilidad de realizar un contrato a largo plazo.</p>
+<p>Se discutió la logística para la asamblea del 1 de marzo, incluyendo la necesidad de enviar la citación a tiempo.</p>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> 12:00 AM</p>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-12T18:56:48.160Z] Contenido cargado con éxito. ID: 1xX_un8XBvEDCOfu2PqgHfLItW2XG9IhV
+[2025-02-12T18:56:48.160Z] Acta lista y guardada como reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso_Borrador.docx.
+[2025-02-12T18:57:53.863Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-12T18:57:53.863Z] Verificando o creando carpeta.
+[2025-02-12T18:57:54.212Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T18:57:54.212Z] Verificando existencia del archivo.
+[2025-02-12T18:57:54.510Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T18:57:54.510Z] El archivo ya existe.
+[2025-02-12T19:01:37.833Z] Verificando si la transcripción ya existe.
+[2025-02-12T19:01:37.833Z] Verificando o creando carpeta.
+[2025-02-12T19:01:38.357Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:01:38.357Z] Verificando existencia del archivo.
+[2025-02-12T19:01:38.698Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T19:01:38.698Z] Verificando existencia del archivo.
+[2025-02-12T19:01:39.063Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T19:01:39.063Z] La transcripción ya existe.
+[2025-02-12T19:01:39.064Z] Iniciando generación de contenido: reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T19:01:39.064Z] Verificando o creando carpeta.
+[2025-02-12T19:01:39.488Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:01:39.488Z] Verificando existencia del archivo.
+[2025-02-12T19:01:39.779Z] Archivo no encontrado.
+[2025-02-12T19:01:39.779Z] Verificando existencia del archivo.
+[2025-02-12T19:01:40.089Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T19:01:53.098Z] Error en generando contenido: Failed after 3 attempts. Last error: Resource has been exhausted (e.g. check quota)..
+[2025-02-12T19:33:37.226Z] Verificando existencia del archivo: 250205_1957 carmen maya.mp3.
+[2025-02-12T19:33:37.227Z] Verificando o creando carpeta.
+[2025-02-12T19:33:38.718Z] Carpeta creada con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:33:38.719Z] Verificando existencia del archivo.
+[2025-02-12T19:33:39.282Z] Archivo no encontrado.
+[2025-02-12T19:33:39.282Z] Iniciando subida de archivo.
+[2025-02-12T19:33:48.533Z] Archivo subido con éxito. ID: 13Z1-5c0fcfQt4-VLpyoBfJwhURt6Iess y permisos de lectura pública asignados.
+[2025-02-12T19:33:48.533Z] Archivo subido correctamente: 250205_1957 carmen maya.mp3.
+[2025-02-12T19:33:55.379Z] Verificando si la transcripción ya existe.
+[2025-02-12T19:33:55.379Z] Verificando o creando carpeta.
+[2025-02-12T19:33:55.707Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:33:55.708Z] Verificando existencia del archivo.
+[2025-02-12T19:33:56.310Z] Archivo no encontrado.
+[2025-02-12T19:33:56.310Z] Verificando existencia del archivo.
+[2025-02-12T19:33:56.571Z] Archivo ya existe. URL: 13Z1-5c0fcfQt4-VLpyoBfJwhURt6Iess.
+[2025-02-12T19:33:56.571Z] Iniciando proceso de transcripción.
+[2025-02-12T19:35:22.068Z] Guardando transcripción.
+[2025-02-12T19:35:22.068Z] Iniciando subida de archivo.
+[2025-02-12T19:35:24.863Z] Archivo subido con éxito. ID: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM y permisos de lectura pública asignados.
+[2025-02-12T19:35:24.863Z] Transcripción completada con éxito.
+[2025-02-12T19:35:24.863Z] Iniciando generación de contenido: 250205_1957_carmen_maya.mp3
+[2025-02-12T19:35:24.863Z] Verificando o creando carpeta.
+[2025-02-12T19:35:25.177Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:35:25.178Z] Verificando existencia del archivo.
+[2025-02-12T19:35:25.432Z] Archivo no encontrado.
+[2025-02-12T19:35:25.432Z] Verificando existencia del archivo.
+[2025-02-12T19:35:25.746Z] Archivo ya existe. URL: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM.
+[2025-02-12T19:35:41.186Z] Iniciando subida de archivo.
+[2025-02-12T19:35:43.571Z] Archivo subido con éxito. ID: 1bn1tsq33Mq6iF57xxHt3-blcLov0p-z7 y permisos de lectura pública asignados.
+[2025-02-12T19:35:43.572Z] Iniciando formato de contenido. 250205_1957_carmen_maya.mp3
+[2025-02-12T19:35:43.572Z] Verificando o creando carpeta.
+[2025-02-12T19:35:43.869Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:35:43.870Z] Verificando existencia del archivo.
+[2025-02-12T19:35:44.160Z] Archivo no encontrado.
+[2025-02-12T19:35:44.160Z] Verificando existencia del archivo.
+[2025-02-12T19:35:44.423Z] Archivo ya existe. URL: 1bn1tsq33Mq6iF57xxHt3-blcLov0p-z7.
+[2025-02-12T19:35:44.423Z] Verificando existencia del archivo.
+[2025-02-12T19:35:44.761Z] Archivo ya existe. URL: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM.
+Formato generado:
+[2025-02-12T19:35:47.418Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: [Hora no especificada en la transcripción] - Cierre: [Hora no especificada en la transcripción]</p>
+  <p><strong>Lugar:</strong> [Lugar no especificado en la transcripción]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>[Nombres de los asistentes no especificados en la transcripción]</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Análisis Presupuestal</li>
+  <li>Estado de Cartera</li>
+  <li>Gráficos de Pagos y Gastos</li>
+  <li>Informe de Contabilidad</li>
+  <li>Informe de Administración</li>
+  <li>Proposiciones y Varios</li>
+</ol>
+
+<h2>Análisis Presupuestal</h2>
+<p>Se realizó un análisis del presupuesto, destacando los siguientes puntos:</p>
+<ul>
+  <li><strong>Gastos que sobrepasan el presupuesto:</strong>
+    <ul>
+      <li>Acueducto y alcantarillado: Se registró un aumento del 678% por encima de lo presupuestado.</li>
+      <li>Mantenimiento de cámaras de circuito cerrado de televisión: Se presupuestaron $2,000,400 y se gastaron $8,000,768, representando un aumento del 947%.</li>
+      <li>Gravamen financiero: Se presupuestaron $108,000 y se ejecutó $1,000,000.</li>
+    </ul>
+  </li>
+  <li><strong>Gastos no presupuestados:</strong>
+    <ul>
+      <li>Mantenimiento de ventanas y puertas.</li>
+      <li>Red de gas: $950,000, sumando un total de $1,230,000.</li>
+    </ul>
+  </li>
+  <li><strong>Pérdida acumulada:</strong> El ejercicio acumulado del 2024 arrojó una pérdida de $2,315,399.</li>
+  <li><strong>Mantenimiento de motobombas:</strong> Se revisó el valor de mantenimiento de motobombas, con un egreso de $6,686 y un gasto de $8,92. Se identificó una doble contabilización en el comprobante de egreso y en la causación, la cual se ajustó para reflejar un solo pago.</li>
+</ul>
+
+<h2>Estado de Cartera</h2>
+<p>Se presentó un análisis de la cartera, destacando:</p>
+<ul>
+  <li><strong>Edades de la cartera:</strong>
+    <ul>
+      <li>De 1 a 30 días: $641,247 (12% de la cartera).</li>
+      <li>De 31 a 60 días: $648,000 (12% de la cartera).</li>
+      <li>De 61 a 90 días: $538,000 (10% de la cartera).</li>
+      <li>Más de 91 días: $3,000,578 (66% de la cartera).</li>
+    </ul>
+  </li>
+  <li><strong>Apartamentos con saldos pendientes:</strong> Los apartamentos 316, 416 y 9908 representan el 66% de la cartera vencida.</li>
+  <li><strong>Apartamentos con saldos a favor:</strong> Se identificaron apartamentos con saldos a favor, siendo el más representativo el apartamento 4 con $482,470.</li>
+  <li><strong>Cartera por año:</strong> Se analizó la cartera del año 2024, observando que el mes con menor cartera no corriente fue diciembre, con $1,828,974.</li>
+</ul>
+
+<h2>Gráficos de Pagos y Gastos</h2>
+<p>Se presentaron gráficos sobre pagos y gastos:</p>
+<ul>
+  <li><strong>Gráfico de pagos:</strong> El mes con mayor pago fue enero de 2024, con $24,000,806.</li>
+  <li><strong>Gráfico de gastos:</strong>
+    <ul>
+      <li>Nómina: 63% del ingreso.</li>
+      <li>Servicios públicos: 8%.</li>
+      <li>Mantenimiento de zonas comunes: 8% ($19 millones).</li>
+      <li>Administración: 8% ($19 millones).</li>
+      <li>Seguro: 5% ($11,000,646).</li>
+    </ul>
+  </li>
+  <li><strong>Pendientes:</strong> Se mencionaron pendientes como anticipos a proveedores y cuentas por pagar menores a $10,000, sugiriendo su ajuste al peso.</li>
+  <li><strong>Consignaciones por identificar:</strong> Se identificaron consignaciones por identificar, sugiriendo su inclusión como ingresos no operacionales en el año 2023 o 2024, decisión que quedó pendiente del consejo.</li>
+</ul>
+
+<h2>Informe de Contabilidad</h2>
+<p>Se presentaron los siguientes puntos:</p>
+<ul>
+  <li><strong>Bonanza:</strong> Se solicitó y se revisó la relación de pagos de Bonanza, identificando pagos pendientes. Se confirmó que Bonanza tenía pagos pendientes de noviembre y diciembre.</li>
+  <li><strong>Costos Bancarios:</strong> Se compararon los costos de Bancolombia con los de AB Villas, destacando la facilidad de conciliación y gestión de Bancolombia, a pesar de ser más costoso.</li>
+  <li><strong>Informe Resumen (Noviembre y Diciembre):</strong>
+    <ul>
+      <li><strong>Seguridad Social:</strong> Pagos al día.</li>
+      <li><strong>Gastos Adicionales (Noviembre):</strong> Asamblea extraordinaria, alquiler de sillas y video beam.</li>
+      <li><strong>Fondo de Imprevistos:</strong> Saldo favorable constante.</li>
+      <li><strong>Anticipo a Iván Villa:</strong> $175,000 abonados de un total de $1,150,000 por mantenimiento del muro.</li>
+      <li><strong>Traslado del fondo del acueducto:</strong> $9,998,000 por fuga.</li>
+      <li><strong>Póliza:</strong> Se revisó la vigencia de la póliza, confirmando que la fecha de emisión es el 15 de noviembre de 2024 y la vigencia es del 4 de noviembre de 2024 al 4 de noviembre de 2025.</li>
+      <li><strong>Cartera (Noviembre):</strong> Abonaron los apartamentos 209, 516, 99 y 105. Los apartamentos 317 y 316 eran los que más debían.</li>
+      <li><strong>Cartera (Diciembre):</strong> Canceló el apartamento 317. El apartamento 316, 416, 209 y 9908 mantenían deudas.</li>
+      <li><strong>Reembolsos de Caja Menor (Diciembre):</strong> Justificados por costos de administración, mensajería y gastos de navidad.</li>
+      <li><strong>Pago a Iván Villa:</strong> Pago total del muro ($535,000), primas y bonificaciones.</li>
+      <li><strong>Primas:</strong> Se destacó la importancia de que los soportes de las primas estén firmados por los empleados.</li>
+      <li><strong>Pagos al día:</strong> Seguridad social, honorarios, servicios públicos, facturación, retención en la fuente, motobombas y Kioto.</li>
+      <li><strong>Cuentas por pagar:</strong> Pendiente un pago de $4,400 a Kioto.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Informe de Administración</h2>
+<p>Se presentaron los siguientes puntos:</p>
+<ul>
+  <li><strong>Saldos en Banco y Fiducia:</strong>
+    <ul>
+      <li>Fiducia: $27,169,971.</li>
+      <li>Cuenta corriente: $26,169,169.</li>
+    </ul>
+  </li>
+  <li><strong>Cartera Vencida:</strong>
+    <ul>
+      <li>Apartamento 316: Deuda de $2,320,000, en prejurídico. Se realizó un acuerdo de pago.</li>
+      <li>Apartamento 9908: Deuda de $981,050.</li>
+    </ul>
+  </li>
+  <li><strong>Inquilino Local:</strong> El inquilino del local se atrasó en los pagos de arriendo de noviembre, diciembre y enero. Se le enviaron comunicaciones y canceló dos meses. Se consideraron otras medidas.</li>
+  <li><strong>Vacaciones:</strong>
+    <ul>
+      <li>Eduardo Arboleda: Comenzó vacaciones el 3 de febrero.</li>
+      <li>Argiro: Sale a vacaciones el 20 de febrero hasta el 10 de marzo.</li>
+      <li>Reemplazo: Un vigilante de Quietoseguridad realizará los reemplazos.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Proposiciones y Varios</h2>
+<ul>
+  <li><strong>Cotizaciones de techos:</strong> Se presentaron cotizaciones de techos, con recomendaciones de contratar primero una interventoría para asegurar un presupuesto adecuado y un pliego de condiciones claro. Se acordó contratar una interventoría.</li>
+  <li><strong>Protocolo de trabajo:</strong> Se propuso crear un protocolo o guía de pasos para futuros trabajos, incluyendo un acta de conflictos de intereses.</li>
+  <li><strong>Kioto:</strong> Se discutió la reunión con Kioto sobre los turnos de trabajo de Eduardo y Argiro. Se concluyó que los turnos actuales no cumplen con la normativa y se debe entablar una conversación con ellos para buscar opciones.</li>
+  <li><strong>Próxima reunión:</strong> Se propuso una reunión adicional para el próximo jueves a la misma hora para continuar con los temas pendientes.</li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> [Hora no especificada en la transcripción]</p>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-12T19:35:50.280Z] Contenido cargado con éxito. ID: 1xiIYW_A8zxQGfc5s6c1rw0ZBNjqqVT4W
+[2025-02-12T19:35:50.280Z] Acta lista y guardada como 250205_1957_carmen_maya_Borrador.docx.
+[2025-02-12T19:37:05.693Z] Verificando existencia del archivo: 250205_1957 carmen maya.mp3.
+[2025-02-12T19:37:05.693Z] Verificando o creando carpeta.
+[2025-02-12T19:37:06.101Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:37:06.102Z] Verificando existencia del archivo.
+[2025-02-12T19:37:06.349Z] Archivo ya existe. URL: 13Z1-5c0fcfQt4-VLpyoBfJwhURt6Iess.
+[2025-02-12T19:37:06.350Z] El archivo ya existe.
+[2025-02-12T19:37:07.708Z] Verificando si la transcripción ya existe.
+[2025-02-12T19:37:07.708Z] Verificando o creando carpeta.
+[2025-02-12T19:37:08.034Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:37:08.034Z] Verificando existencia del archivo.
+[2025-02-12T19:37:08.457Z] Archivo ya existe. URL: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM.
+[2025-02-12T19:37:08.457Z] Verificando existencia del archivo.
+[2025-02-12T19:37:08.722Z] Archivo ya existe. URL: 13Z1-5c0fcfQt4-VLpyoBfJwhURt6Iess.
+[2025-02-12T19:37:08.722Z] La transcripción ya existe.
+[2025-02-12T19:37:08.723Z] Iniciando generación de contenido: 250205_1957_carmen_maya.mp3
+[2025-02-12T19:37:08.723Z] Verificando o creando carpeta.
+[2025-02-12T19:37:09.011Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:37:09.011Z] Verificando existencia del archivo.
+[2025-02-12T19:37:09.263Z] Archivo no encontrado.
+[2025-02-12T19:37:09.263Z] Verificando existencia del archivo.
+[2025-02-12T19:37:09.558Z] Archivo ya existe. URL: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM.
+[2025-02-12T19:37:38.039Z] Iniciando subida de archivo.
+[2025-02-12T19:37:41.229Z] Archivo subido con éxito. ID: 1Uj-t8k_9zgkcATyj0I-WP0bhBjc_3bk0 y permisos de lectura pública asignados.
+[2025-02-12T19:37:41.229Z] Iniciando formato de contenido. 250205_1957_carmen_maya.mp3
+[2025-02-12T19:37:41.230Z] Verificando o creando carpeta.
+[2025-02-12T19:37:41.983Z] Carpeta existente con ID: 1Fz4ly6MOkr18wCKKkO1yacjXHxVMLZJT.
+[2025-02-12T19:37:41.984Z] Verificando existencia del archivo.
+[2025-02-12T19:37:42.233Z] Archivo no encontrado.
+[2025-02-12T19:37:42.233Z] Verificando existencia del archivo.
+[2025-02-12T19:37:42.822Z] Archivo ya existe. URL: 1Uj-t8k_9zgkcATyj0I-WP0bhBjc_3bk0.
+[2025-02-12T19:37:42.822Z] Verificando existencia del archivo.
+[2025-02-12T19:37:43.436Z] Archivo ya existe. URL: 1OImgf6yFyPU-QqZWDkKZgCJc8Xk6tSfM.
+Formato generado:
+[2025-02-12T19:37:45.664Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [Fecha no especificada en la transcripción]</p>
+  <p><strong>Hora:</strong> Inicio: [Hora de inicio no especificada en la transcripción] - Cierre: [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Lugar:</strong> [Lugar no especificado en la transcripción]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Luz Karime</li>
+    <li>María Victoria</li>
+    <li>Harold</li>
+    <li>Carmen</li>
+    <li>Anderson</li>
+    <li>Jairo</li>
+    <li>Wilber</li>
+    <li>Enrique</li>
+    <li>Marta</li>
+    <li>Alejandro (mencionado como asistente del 318)</li>
+    <li>Juan Camilo (mencionado como asistente del 304)</li>
+    <li>Iván Villa (mencionado)</li>
+    <li>Eduardo Arboleda (mencionado)</li>
+    <li>Argiro (mencionado)</li>
+    <li>Fernando (mencionado)</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Cumplimiento del Presupuesto 2024</li>
+  <li>Análisis de Cartera</li>
+  <li>Informe de Bonanza</li>
+  <li>Comparativo Bancolombia vs. A Bebillas</li>
+  <li>Informe de Revisoría Fiscal (María Victoria)</li>
+  <li>Informe de Administración (Carmen)</li>
+  <li>Cotizaciones de los Techos</li>
+  <li>Reunión con Kioto (Propuesta de Horarios)</li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>Cumplimiento del Presupuesto 2024</h3>
+<p>Se discutieron varios puntos sobre el cumplimiento del presupuesto, identificando ítems que sobrepasan lo presupuestado y aquellos que no estaban presupuestados inicialmente.</p>
+
+<ul>
+    <li><strong>Ítems que sobrepasan lo presupuestado:</strong>
+        <ul>
+            <li>Acueducto y alcantarillado: Se mencionó un incremento del 678% por encima de lo presupuestado, con un monto de $4,000,652 y $10,000,000.</li>
+            <li>Mantenimiento de cámaras de circuito cerrado de televisión: Se presupuestaron $2,000,400 y se gastaron $8,000,768, representando un 947%.</li>
+            <li>Gravamen financiero: Se presupuestaron $108,000 y se ejecutó $1,000,000.</li>
+        </ul>
+    </li>
+    <li><strong>Ítems no presupuestados:</strong>
+        <ul>
+            <li>Mantenimiento de ventanas y puertas.</li>
+            <li>Red de gas: $950,000.</li>
+        </ul>
+    </li>
+    <li><strong>Resultado del ejercicio acumulado 2024:</strong>
+        <ul>
+            <li>Se reportó una pérdida de $2,315,399.</li>
+        </ul>
+    </li>
+    <li><strong>Mantenimiento de motobombas:</strong>
+        <ul>
+            <li>Se identificó una discrepancia en el valor de mantenimiento de motobombas en diciembre, donde se registraron $740,000 cuando el valor mensual era de $363,000.</li>
+            <li>Se detectó una doble contabilización en el comprobante de egreso 6686 y en el 4892.</li>
+            <li>Se acordó ajustar el valor para reflejar un solo pago.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Análisis de Cartera</h3>
+<p>Se presentó un análisis de las edades de la cartera, identificando los porcentajes correspondientes a diferentes rangos de días de vencimiento.</p>
+
+<ul>
+    <li><strong>Edades de la cartera:</strong>
+        <ul>
+            <li>De 1 a 30 días: $641,247 (12% de la cartera).</li>
+            <li>De 31 a 60 días: $648,000 (12% de la cartera).</li>
+            <li>De 61 a 90 días: $538,000 (10% de la cartera).</li>
+            <li>Más de 91 días: $3,000,578 (66% de la cartera).</li>
+        </ul>
+    </li>
+    <li><strong>Apartamentos con mayor deuda (más de 91 días):</strong>
+        <ul>
+            <li>Apartamento 316: $1,000,988.</li>
+            <li>Apartamento 416: $826,200.</li>
+            <li>Apartamento 9908: $764,216.</li>
+        </ul>
+    </li>
+    <li><strong>Apartamentos con saldos a favor:</strong>
+        <ul>
+            <li>Total: $823.</li>
+            <li>Apartamento número 4: $482,470 (el más representativo).</li>
+        </ul>
+    </li>
+    <li><strong>Gráfico de la cartera independiente en 2024:</strong>
+        <ul>
+            <li>Mes más bajo de cartera no corriente: Diciembre ($1,828,974).</li>
+            <li>Mes más alto de pagos: Enero ($2,400,806,255).</li>
+        </ul>
+    </li>
+    <li><strong>Gráfico de gastos:</strong>
+        <ul>
+            <li>Nómina: 63% del ingreso.</li>
+            <li>Servicios públicos: 8%.</li>
+            <li>Mantenimiento de zonas comunes: 8% ($19,000,000).</li>
+            <li>Administración: 8% ($19,000,000).</li>
+            <li>Seguro: 5% ($11,000,646).</li>
+        </ul>
+    </li>
+    <li><strong>Pendientes:</strong>
+        <ul>
+            <li>Anticipo de proveedores.</li>
+            <li>Cuentas por pagar menores a $10,000 (se propone llevarlas como ajuste al peso).</li>
+            <li>Consignaciones por identificar (se propone incluirlas como ingresos no operacionales en 2023 o 2024, sujeto a decisión del consejo).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Informe de Bonanza</h3>
+<p>Se discutió el estado de cuenta de Bonanza, específicamente los pagos realizados y las cuentas por cobrar.</p>
+
+<ul>
+    <li><strong>Estado de cuenta:</strong>
+        <ul>
+            <li>Se identificaron cuatro pagos de $2,000,075 al crédito.</li>
+            <li>Se confirmó que a diciembre, Bonanza debía los meses de noviembre y diciembre.</li>
+            <li>Se proporcionó un archivo con el histórico de pagos y gastos de Wilson Monsalve Gómez (Bonanza).</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Comparativo Bancolombia vs. A Bebillas</h3>
+<p>Se compararon los costos y beneficios de utilizar Bancolombia en comparación con A Bebillas.</p>
+
+<ul>
+    <li><strong>Costos:</strong>
+        <ul>
+            <li>Bancolombia (2024): $3,000,818.</li>
+            <li>A Bebillas (2023): $1,000,900.</li>
+            <li>Intereses de Fiduancolombia: $2,000,139.</li>
+        </ul>
+    </li>
+    <li><strong>Beneficios:</strong>
+        <ul>
+            <li>Información al día y fácil de conciliar.</li>
+            <li>Recaudo 360 facilita la conciliación bancaria.</li>
+            <li>Atención de Bancolombia es excelente.</li>
+            <li>Agilización en el registro y seguimiento de cifras.</li>
+            <li>Mejora en la facturación y disminución de inconvenientes.</li>
+            <li>Facilidad de pago para los propietarios a través de QR y sucursal virtual.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Informe de Revisoría Fiscal (María Victoria)</h3>
+<p>María Victoria presentó un informe resumen entre noviembre y diciembre, destacando los siguientes puntos:</p>
+
+<ul>
+    <li><strong>Noviembre:</strong>
+        <ul>
+            <li>Se pagaron los dos temas de seguridad social pendientes.</li>
+            <li>Se realizaron pagos extras por la asamblea extraordinaria (alquiler de sillas y video beam).</li>
+            <li>Se hizo el abono al fondo de imprevistos ($199,000).</li>
+            <li>Se realizó un anticipo a Iván Villa por el mantenimiento del muro ($175,000 de un total de $1,150,000).</li>
+            <li>Se validó el traslado del fondo del acueducto por la fuga ($9,998,000).</li>
+            <li>Se observó una póliza pagada de $13,758,000 con fecha de emisión del 15 de noviembre de 2024 y vigencia hasta el 4 de noviembre de 2025. Se aclaró que la póliza se renueva automáticamente y la vigencia es del 4 de noviembre al 4 de noviembre.</li>
+        </ul>
+    </li>
+    <li><strong>Cartera (Noviembre):</strong>
+        <ul>
+            <li>Abonaron los apartamentos 209, 516, 99 y 105.</li>
+            <li>Los que más debían eran el 317 y el 316 (alrededor de $1,191,688 cada uno).</li>
+        </ul>
+    </li>
+    <li><strong>Diciembre:</strong>
+        <ul>
+            <li>Se realizaron dos reembolsos de caja menor justificados.</li>
+            <li>Se incluyeron gastos de Navidad y la despedida de Iván Villa.</li>
+            <li>Se pagó la totalidad del trabajo del muro a Iván Villa ($535,000).</li>
+            <li>Se pagaron primas y bonificaciones (bonificaciones de $200,000 aprobadas por el consejo y $300,000 de reconocimiento a Iván Villa).</li>
+            <li>Se observó que los soportes de las primas no estaban firmados por Eduardo, Argiro y Fernando.</li>
+            <li>Se pagaron los honorarios de contabilidad, administración y revisoría fiscal.</li>
+            <li>Se pagaron los servicios públicos y la facturación.</li>
+            <li>Se pagó a Kioto $1,620,000.</li>
+        </ul>
+    </li>
+    <li><strong>Cartera (Diciembre):</strong>
+        <ul>
+            <li>Canceló el apartamento 317.</li>
+            <li>Canceló el apartamento 304 (que debía $614,000 en noviembre).</li>
+            <li>El 316 tiene una deuda de $1,988,000.</li>
+            <li>El 416 debe $826,000.</li>
+            <li>El 209 debe $538,000.</li>
+            <li>El 9908 debe $764,000.</li>
+        </ul>
+    </li>
+    <li><strong>Cuentas por pagar:</strong>
+        <ul>
+            <li>Está pendiente un pago de $4,000,400 a Kioto.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Informe de Administración (Carmen)</h3>
+<p>Carmen presentó el informe de administración, destacando los siguientes puntos:</p>
+
+<ul>
+    <li><strong>Saldos en banco:</strong>
+        <ul>
+            <li>Fiducia: $27,169,971.</li>
+            <li>Cuenta corriente: $26,169,169,1000.</li>
+        </ul>
+    </li>
+    <li><strong>Cartera con más de tres cuotas vencidas:</strong>
+        <ul>
+            <li>Apartamento 316: Deuda de $2,320,000, en prejurídico. Realizó un acuerdo de pago con el abogado pagando la cuota del acuerdo más la cuota de la administración del mes de enero, desde enero hasta agosto 2025. No consignó la primera cuota en enero.</li>
+            <li>Apartamento 9908: Deuda de $981,050. Siempre ha pagado el mes adelantado.</li>
+        </ul>
+    </li>
+    <li><strong>Wilson Monsalve (inquilino local):</strong>
+        <ul>
+            <li>Se atrasó con el pago del arriendo en noviembre, diciembre y enero.</li>
+            <li>Canceló dos meses ($4,550,000) el 30 de enero de 2024.</li>
+            <li>Se enviaron comunicaciones físicas y por WhatsApp.</li>
+            <li>Otros propietarios de locales se están quejando.</li>
+        </ul>
+    </li>
+    <li><strong>Vacaciones del personal:</strong>
+        <ul>
+            <li>Eduardo Arboleda (portero): Comenzó el 3 de febrero.</li>
+            <li>Argiro: Del 20 de febrero al 10 de marzo.</li>
+            <li>Reemplazo: Vigilante de Kioto Seguridad.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Cotizaciones de los Techos</h3>
+<p>Se discutió la necesidad de obtener cotizaciones para los techos y se propuso contratar una interventoría para estandarizar el proceso.</p>
+
+<ul>
+    <li><strong>Propuesta:</strong>
+        <ul>
+            <li>Contratar una interventoría para ayudar a elegir la cotización más adecuada y elaborar un pliego de condiciones.</li>
+        </ul>
+    </li>
+    <li><strong>Razones:</strong>
+        <ul>
+            <li>El interventor puede ayudar a elegir la cotización más adecuada.</li>
+            <li>El interventor puede hacer un presupuesto adecuado con los ítems necesarios.</li>
+            <li>Evitar obras adicionales que encarezcan el proyecto.</li>
+            <li>Estandarizar la obra para evitar diferencias entre precios, metros y productos.</li>
+        </ul>
+    </li>
+    <li><strong>Acciones a seguir:</strong>
+        <ul>
+            <li>Buscar diferentes opciones para la interventoría.</li>
+            <li>Elaborar un protocolo o guía de pasos para futuros trabajos.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Reunión con Kioto (Propuesta de Horarios)</h3>
+<p>Se discutió la reunión con Kioto sobre la propuesta de horarios de los empleados de seguridad.</p>
+
+<ul>
+    <li><strong>Conclusiones:</strong>
+        <ul>
+            <li>No es procedente mantener los turnos de trabajo actuales de Argiro y Eduardo, ya que no cumplen con la legislación laboral.</li>
+            <li>La unidad no tiene permiso para que los empleados trabajen horas extras ni jornadas de 12 horas.</li>
+            <li>Se debe entablar una conversación con Argiro para mostrarle las opciones disponibles.</li>
+            <li>Se plantea la posibilidad de que los empleados de seguridad sean contratados a través de una empresa de vigilancia.</li>
+        </ul>
+    </li>
+</ul>
+
+<footer>
+  <p><strong>Hora de cierre:</strong> [Hora de cierre no especificada en la transcripción]</p>
+  <p><strong>Acuerdos:</strong></p>
+  <ul>
+    <li>Ajustar el valor del mantenimiento de motobombas para reflejar un solo pago.</li>
+    <li>Contratar una interventoría para el proyecto de los techos.</li>
+    <li>Elaborar un protocolo o guía de pasos para futuros trabajos.</li>
+    <li>Entablar una conversación con Argiro sobre sus opciones laborales.</li>
+    <li>Evaluar la posibilidad de contratar una empresa de vigilancia.</li>
+  </ul>
+  <p><strong>Próximos pasos:</strong></p>
+  <ul>
+    <li>Buscar opciones para la interventoría.</li>
+    <li>Programar una reunión adicional el próximo jueves para discutir el tema de Kioto.</li>
+  </ul>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-12T19:37:48.416Z] Contenido cargado con éxito. ID: 1L1tfgo5dx33RDPaPnAKS5LGOuWsZgh1Y
+[2025-02-12T19:37:48.417Z] Acta lista y guardada como 250205_1957_carmen_maya_Borrador.docx.
+[2025-02-12T19:47:22.559Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-12T19:47:22.559Z] Verificando o creando carpeta.
+[2025-02-12T19:47:23.234Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:47:23.235Z] Verificando existencia del archivo.
+[2025-02-12T19:47:23.484Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T19:47:23.485Z] El archivo ya existe.
+[2025-02-12T19:47:25.561Z] Verificando si la transcripción ya existe.
+[2025-02-12T19:47:25.561Z] Verificando o creando carpeta.
+[2025-02-12T19:47:26.197Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:47:26.197Z] Verificando existencia del archivo.
+[2025-02-12T19:47:26.643Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T19:47:26.643Z] Verificando existencia del archivo.
+[2025-02-12T19:47:27.221Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-12T19:47:27.221Z] La transcripción ya existe.
+[2025-02-12T19:47:27.222Z] Iniciando generación de contenido: reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T19:47:27.222Z] Verificando o creando carpeta.
+[2025-02-12T19:47:27.778Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:47:27.778Z] Verificando existencia del archivo.
+[2025-02-12T19:47:28.125Z] Archivo no encontrado.
+[2025-02-12T19:47:28.125Z] Verificando existencia del archivo.
+[2025-02-12T19:47:28.362Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+[2025-02-12T19:49:57.354Z] Guardando transcripción.
+[2025-02-12T19:49:57.354Z] Iniciando subida de archivo.
+[2025-02-12T19:50:00.107Z] Archivo subido con éxito. ID: 1GG9zmGRa_qYrvh0_Nj_7djSEkBeFek2w y permisos de lectura pública asignados.
+[2025-02-12T19:50:00.108Z] Iniciando formato de contenido. reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso.mp3
+[2025-02-12T19:50:00.108Z] Verificando o creando carpeta.
+[2025-02-12T19:50:00.397Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-12T19:50:00.398Z] Verificando existencia del archivo.
+[2025-02-12T19:50:00.698Z] Archivo no encontrado.
+[2025-02-12T19:50:00.698Z] Verificando existencia del archivo.
+[2025-02-12T19:50:01.335Z] Archivo ya existe. URL: 1GG9zmGRa_qYrvh0_Nj_7djSEkBeFek2w.
+[2025-02-12T19:50:01.335Z] Verificando existencia del archivo.
+[2025-02-12T19:50:01.628Z] Archivo ya existe. URL: 1yYQUdI_yhNRk8LTLJeBsGtzJ9lsDVvrm.
+Formato generado:
+[2025-02-12T19:50:04.512Z] Subiendo acta. <header>
+  <h1 style="text-align: center;">Acta de Reunión Extraordinaria del Consejo de Administración</h1>
+  <p><strong>Fecha:</strong> 11 de febrero de 2024</p>
+  <p><strong>Hora:</strong> Inicio: 7:00 PM - Cierre: 12:00 AM</p>
+  <p><strong>Lugar:</strong> No especificado</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Dr. Lerman Salinas - Presidente del Consejo (Apartamento 1510)</li>
+    <li>Fanny Val - Secretaria de la Reunión</li>
+    <li>Luis Carlos - Miembro del Consejo</li>
+    <li>Carlos - Supervisor de Mantenimiento</li>
+    <li>Jessica Salina - Consejera</li>
+    <li>Isabel Gallego - Consejera</li>
+    <li>Jaime Montoya - Consejero (Apartamento 107)</li>
+    <li>Claudia García - Consejera (Apartamento 910)</li>
+    <li>José David - Invitado</li>
+  </ul>
+  <p><strong>Quórum:</strong> Confirmado</p>
+</header>
+
+<h2>Orden del Día</h2>
+<ol>
+  <li>Verificación del Quórum</li>
+  <li>Aprobación del Orden del Día</li>
+  <li>Elección de Presidente y Secretario de la Reunión</li>
+  <li>Seguridad, Mascotas e Higiene</li>
+  <li>Cámaras</li>
+  <li>Proposiciones y Varios
+    <ul>
+      <li>Revisión y Aprobación del Presupuesto 2025</li>
+      <li>Revisión y Aprobación del Informe de Gestión 2024</li>
+      <li>Fugas de Agua</li>
+      <li>RCI (Red Contra Incendios) y Certificación de Bomberos</li>
+      <li>Fondo de Imprevistos</li>
+      <li>Propuesta de Empresas de Vigilancia</li>
+      <li>Logística para la Asamblea del 1 de marzo de 2025</li>
+    </ul>
+  </li>
+</ol>
+
+<h2>Desarrollo del Acta</h2>
+
+<h3>1. Verificación del Quórum</h3>
+<p>Se constata la presencia de los consejeros, verificando así el quórum necesario para dar inicio a la reunión.</p>
+
+<h3>2. Aprobación del Orden del Día</h3>
+<p>El Dr. Lerman Salinas presenta el orden del día, que incluye los siguientes puntos:</p>
+<ul>
+  <li>Verificación del quórum.</li>
+  <li>Aprobación del orden del día.</li>
+  <li>Elección de presidente y secretario de la reunión.</li>
+  <li>Seguridad, mascotas e higiene.</li>
+  <li>Cámaras.</li>
+  <li>Proposiciones y varios, que incluyen:
+    <ul>
+      <li>Revisión y aprobación del presupuesto 2025 (con el aval previo del comité financiero).</li>
+      <li>Revisión y aprobación del informe de gestión de 2024.</li>
+      <li>Tema de fugas de agua.</li>
+      <li>Tema RCI (Red Contra Incendios) y certificación de bomberos.</li>
+      <li>Tema del fondo de imprevistos.</li>
+      <li>Tema de la propuesta de empresas de vigilancia.</li>
+      <li>Logística para la asamblea del 1 de marzo, incluyendo la citación a realizarse el 13 de febrero para cumplir con los 15 días hábiles de anticipación.</li>
+    </ul>
+  </li>
+</ul>
+<p>El orden del día es sometido a votación y aprobado por unanimidad.</p>
+
+<h3>3. Elección de Presidente y Secretario de la Reunión</h3>
+<p>Se propone y aprueba al Dr. Lerman Salinas como presidente de la reunión y a Fanny Val como secretaria. Se acuerda que la administración elaborará el acta.</p>
+
+<h3>4. Seguridad, Mascotas e Higiene</h3>
+<p>El Dr. Lerman Salinas introduce el tema de seguridad, enfocándose en la vigilancia y el control de caninos. Se destaca la importancia de que los perros estén siempre con correa y, en el caso de razas peligrosas, con bozal. Este control debe iniciarse desde el ascensor, donde el personal de portería debe identificar quién ingresa con perros peligrosos y verificar el uso de correa y bozal.</p>
+
+<p>Se menciona una inspección informal realizada por el Dr. Salinas, donde se constató que varias cámaras de seguridad no están operativas, lo que impide el control adecuado de los caninos. Se señala que, aunque los vigilantes reportan a la administración sobre los caninos sueltos, no se están tomando medidas efectivas.</p>
+
+<p>Se discute la problemática de excrementos de perros en áreas comunes, como el parqueadero, y la presencia de orina en pasillos, generando problemas de higiene y salubridad. Se menciona que la zona designada para caninos no está siendo utilizada correctamente, generando un ambiente insalubre.</p>
+
+<p>Carlos complementa la información indicando que Miguel ha sido muy activo en el tema de las mascotas, pero se considera que la responsabilidad principal recae en los dueños de los perros, quienes deben ser más educados y conscientes sobre la tenencia de mascotas. Se menciona que algunos residentes permiten que sus perros anden sueltos y no recogen sus excrementos, generando molestias y problemas de higiene.</p>
+
+<p>Carlos informa que se han realizado varias reuniones en el último mes para abordar el tema de las cámaras de seguridad. Se compró un disco duro de 6 terabytes por $1 millón debido a fallas en el sistema. También se han presentado problemas con las UPS, que se están solucionando con la compra de nuevas unidades. Se ha instruido a los vigilantes para que envíen fotos de los perros sueltos, pero no están cumpliendo con esta tarea.</p>
+
+<p>Se reitera la recomendación de Luis Carlos de cambiar a los porteros, ya que se considera que están siendo influenciados por ciertos residentes y no informan adecuadamente a la administración. Se destaca la importancia de la cultura y la educación de los residentes en el manejo de sus mascotas.</p>
+
+<p>Carlos menciona que se están elaborando avisos para la zona de mascotas y para las áreas donde los perros suelen orinar. Estos avisos se instalarán en columnas, ascensores y otros lugares estratégicos.</p>
+
+<p>Patricia sugiere que los avisos incluyan mensajes sobre multas y sanciones para generar mayor conciencia y cumplimiento de las normas. Se informa que la zona de mascotas en el parqueadero trasero ha sido pintada y está lista para su uso, con una cámara de seguridad instalada para su vigilancia.</p>
+
+<p>Patricia propone comenzar a multar a los infractores y destaca la importancia de que todos los residentes se comprometan a reportar las infracciones. Se menciona que hasta que la zona de mascotas no esté reglamentada, no se pueden aplicar multas.</p>
+
+<p>Luis Carlos analiza que en los 10 meses de su gestión no se han reportado robos, por lo que se cuestiona si el problema es de vigilancia o de convivencia. Se plantea la necesidad de una trabajadora social en lugar de un vigilante adicional, aunque se reconoce que ambos son necesarios. Se insiste en la necesidad de rotar a los vigilantes para evitar que se sientan con derechos adquiridos.</p>
+
+<p>Patricia informa sobre las acciones que se están llevando a cabo con el tema de las mascotas, incluyendo una capacitación el 27 de febrero en convenio con la Secretaría de Medio Ambiente. Después de esta capacitación, se tocará el tema en la asamblea del 1 de marzo y se aplicarán multas y reportes a la Sala de Mediación Policial para quienes infrinjan las normas. Se menciona que ya hay un caso en seguimiento del apartamento 2810 con dos perros doberman.</p>
+
+<p>Patricia enfatiza que las omisiones en el cuidado de las mascotas, como la falta de correa o bozal, pueden acarrear sanciones, decomiso del animal y la necesidad de tener certificados de vacunación y seguros. Se menciona la Ley 746, que establece multas y sanciones para los infractores.</p>
+
+<p>Se reitera la importancia de diseñar y culturizar a los residentes sobre el uso adecuado de las zonas comunes y el manejo de las mascotas. Se propone buscar apoyo en universidades para contar con practicantes de áreas humanas que realicen pedagogía con los residentes.</p>
+
+<p>Se destaca que el problema principal no es de seguridad, sino de salud mental y conciencia, y que las cámaras no son para cuidarnos de los de afuera, sino de los de adentro. Se menciona que muchos conflictos se han originado con perros pequeños y que es necesario educar a los residentes sobre la importancia de cumplir las normas.</p>
+
+<p>Se propone buscar profesionales en áreas humanas para que realicen campañas educativas y expliquen las normas a los residentes. Se menciona que la gente tiene un nivel de conciencia muy bajo y que es necesario abordar este problema desde una perspectiva cultural y comunitaria.</p>
+
+<p>Jaime considera que no se debería permitir que la gente atraviese el parqueadero para salir al lobby, ya que esto puede generar problemas de seguridad y facilitar el ingreso de personas no autorizadas. Se menciona que algunos residentes atraviesan el parqueadero con perros, lo que puede generar problemas de higiene.</p>
+
+<p>Se acuerda evaluar este tema a la luz de la ley, consultando con bomberos y tránsito sobre la señalización vial interna. También se menciona la necesidad de mejorar el aseo en la zona de granito del pasillo, donde los perros suelen orinar.</p>
+
+<h3>5. Cámaras</h3>
+<p>Este tema se abordó en el punto anterior, dentro de la discusión sobre seguridad, mascotas e higiene.</p>
+
+<h3>6. Proposiciones y Varios</h3>
+<h4>Revisión y Aprobación del Presupuesto 2025</h4>
+<p>Patricia presenta el presupuesto 2025, indicando que el objetivo es que no aumente más de lo que aumentó el salario mínimo legal vigente. Se menciona que el comité financiero ya dio el aval al presupuesto.</p>
+
+<p>Se aclara que el presupuesto se aprobará en la asamblea y que, según el reglamento, a partir del 1 de enero, el presupuesto aumenta lo que aumente el IPC o el salario mínimo, el mayor de los dos. Se plantea que la cuota de administración se quede como está, con ingresos de la copropiedad de $108,000,582, provenientes de la facturación, el módulo comercial y los descuentos por pronto pago. Este aumento corresponde al aumento del salario mínimo legal vigente.</p>
+
+<p>Se destaca que 17 conceptos representan el 90% del presupuesto, sumando $97,876,584. El rubro que más pesa es el de vigilancia, con el 27% del presupuesto, costando $29,000,386,842. Se explica cómo se calculó este valor, teniendo en cuenta las tarifas antes y después de la reducción de la jornada laboral.</p>
+
+<p>En cuanto al aseo, se plantea la necesidad de un piscinero, cuatro operarios y adiciones para refuerzos. Se destaca la necesidad de contratar un operario más para que se dedique al tema de todero, ya que la copropiedad estaba muy abandonada y no tenía un todero de tiempo completo.</p>
+
+<p>Se muestra el detalle del presupuesto, indicando que el piscinero tiene un presupuesto de $4,000,456, con un aumento del 8.66%, inferior al aumento del salario mínimo. Se incluye un todero de tiempo completo. Se aclara que las brigadas para los parqueaderos se negociarán con Biourbe para que queden incluidas en la tarifa.</p>
+
+<p>El rubro de energía representa el 15% del presupuesto. Se explica cómo se calculó este valor, bajando las facturas de EPM y mirando los promedios de consumo. Se aumenta el valor en un 9.53%, aunque se reconoce que la energía está pronosticada para aumentar más de eso.</p>
+
+<p>Se menciona que, en caso de desviaciones en los consumos, se realizará una reclamación por medio de una empresa especializada. Se propone calcular los picos más altos de consumo para evitar desviaciones, aunque esto subiría mucho el presupuesto.</p>
+
+<p>Se explica cómo se calculó el valor de la administración, teniendo en cuenta los salarios mínimos y las prestaciones sociales. Se menciona que en el año 2023 el presupuesto de honorarios de administración era de $6,000,300, que luego se bajó a $5,500,000, pero se agregó un auxiliar de mantenimiento de $1,500,000. Se aumenta el valor en un 9.53%, llegando a $7,728,437.</p>
+
+<p>Se destaca que este valor incluye el salario de la chica nueva y que la administración asume la seguridad social de todos los empleados. Se menciona que una persona con el salario mínimo se gana $2,500,000, por lo que no son ni tres salarios mínimos para un cargo administrativo.</p>
+
+<p>Se acuerda que el ejercicio de calcular el salario de la administración es el más sano, ya que se está poniendo el salario que debe haber tenido si el incremento del valor de la administración hubiese sido normal en cada una de las prestaciones de presupuesto.</p>
+
+<p>Se menciona que los ascensores tienen congelada la tarifa desde el año pasado. El seguro también tiene su anexo y se aumenta en un 9.53%. Se destaca que la eliminación del operador de medios permitió cumplir con otros rubros del presupuesto que no se tenían en cuenta.</p>
+
+<p>Se explica cómo se calculó el mantenimiento de la zona común, aumentando el valor para jardín a $660,000 y manteniendo el valor para zonas comunes en $2,000,781. Se aumenta el presupuesto del sistema de cámaras a $600,000. Se rebaja el mantenimiento de la piscina a $775,001 debido a que ya se tiene el plan de manejo y saneamiento básico de piscina.</p>
+
+<p>Se aumenta el presupuesto de la fumigación a $1,600,224 para realizar dos fumigaciones al año. Se menciona que se tiene cotización con Di Manejo Integral de Plaga, pero se cotizará con varias empresas. Se aumenta el presupuesto del revisor fiscal en un 9.52%.</p>
+
+<p>Se menciona la importancia de la asesoría en el sistema de gestión y seguridad en el trabajo y en el plan de manejo integral de residuos sólidos. Se disminuye el presupuesto de asesoría jurídica a $500,000, esperando no tener tantas demandas. Se mantiene el salario del contador y se aumenta el presupuesto de insumos de aseo y cafetería en un 48%.</p>
+
+<p>Se explica cómo se calculó el presupuesto del sistema de bombeo, aumentando el valor para mantenimiento correctivo a $1,401,165. Se proyecta lavar los tanques dos veces al año, con un costo de $1,721,000 cada lavada. Se menciona la necesidad de reparar una fuga en el piso de abajo.</p>
+
+<p>Se aumenta el presupuesto de suministro y reparaciones eléctricas a $900,000 mensuales. Se menciona la necesidad de cambiar los breakers en el piso nueve debido a problemas con el voltaje. Se incluye el mantenimiento de la piscina, que es solamente el cloro, los insumos y todo lo de la piscina.</p>
+
+<p>Se aprueba el presupuesto para presentárselo así a la asamblea.</p>
+
+<h4>Revisión y Aprobación del Informe de Gestión 2024</h4>
+<p>Patricia presenta el informe de gestión de 2024, que contiene la introducción, el enfoque, la dirección y el control, la sostenibilidad económica, el mantenimiento y la mejora de la infraestructura, la convivencia, el bienestar y la seguridad, los logros y los proyectos.</p>
+
+<p>Se mencionan los nombres de los consejeros nombrados en la asamblea general de 16 de marzo de 2024.</p>
+
+<p>Se mencionan los contratos vigentes de administración, contabilidad, revisoría fiscal, vigilancia, SEO, la póliza y el sistema de bombeo.</p>
+
+<p>En la gestión legal, se menciona que la copropiedad tiene un proceso en contra radicado en el juzgado dos laboral de Envigado, instaurado por la señora Mónica María Castrillón, el cual fue contestado el día 7 de noviembre de 2024. La audiencia de conciliación está fijada para el día 19 de febrero de 2026 a las 2:00 p.m. Las pretensiones presuntas son de $12,000,600 por concepto de tres meses de salario, entre otros.</p>
+
+<p>También se menciona que Altos de Valparaíso ph, representado por el abogado Andrés Humberto Vázquez Álvarez, inició en el año 2024 un proceso legal en contra de la construcción promotora la vera Terrazas, en liquidación. El abogado tendrá un espacio en la asamblea que se llevará a cabo el 1 de marzo de 2025, donde resolverá los avances e inquietudes sobre este proceso.</p>
+
+<p>Se indica que los planes de ley de plan de manejo integral de residuos sólidos, sistema de gestión y seguridad en el trabajo, tratamiento de datos y certificación de inspección de bomberos están en proceso.</p>
+
+<p>Se menciona que se realizó un seguimiento y control a los consumos de servicios públicos, revisando mes a mes los consumos de agua y energía. Se destaca que la energía presentó el mayor consumo en las bombas de calor del sistema de calefacción de la piscina.</p>
+
+<p>Se presenta la cartera al 31 de enero de 2025, indicando la relación de propietarios que adeudan contribuciones a las expensas comunes. Se menciona que Promotora antes de Valparaíso está en cobro prejurídico, y que hay otros propietarios en cobro prejurídico, acuerdo de pago y cobro administrativo. Se destaca que se ha realizado una buena gestión de cartera.</p>
+
+<p>Se explica cómo se distribuyó el valor de los pagos por administración, indicando que la vigilancia y el aseo se comen el 40% del presupuesto, la energía el 13%, la administración, el contador y el revisor fiscal el 8%, el sistema de bombeo el 6%, los ascensores el 5%, y los otros el 23%.</p>
+
+<p>Se mencionan los logros alcanzados más importantes, como las decisiones aprobadas en la asamblea extraordinaria de propietarios del 22 de junio de 2024, donde se aprobó una cuota extra dividida en tres meses y se eliminó el operador de medios 12 horas. Se mencionan las inversiones realizadas con estos recursos, como la compra de contenedores de basura, neveras, lockers, escritorios y sillas ergonómicas.</p>
+
+<p>Se realizaron mantenimientos importantes a los ductos de basura y sus tapas. Se apertura un formato para atención de propietarios que tuvieran afectación en su zona privada por causa de la zona común. Se realizó la instalación de malla perforada en toda la torre dos para evitar el ingreso de palomas y murciélagos. Se empezó a pintar algunas de las zonas comunes como el gimnasio, salón social, zona húmeda y algunos puntos fijos. Se dio una mejor imagen al cuarto de separación de residuos y se realizaron campañas frente al tema. Se implementó un plan de saneamiento de piscina, incluyendo el control de ingreso y aforo. Se instalaron cuatro tapas en los tanques superiores de almacenamiento de agua. Se enchapó el ingreso a los ascensores de las torres a nivel del primer piso. Se cambió la plataforma de vidrio de la entrada y se instaló un tapete. Se realizó la decoración de navidad y las novenas con muy buena acogida por parte de toda la comunidad. Se realizó la celebración de Halloween, evento que atrajo gran participación de niños y padres. Y por último y no menos importante, el saneamiento de los pasivos, pasando al 31 de diciembre a Pasisalvo con las empresas de vigilancia, SEO y ascensores, tal y como lo muestran los informes de contabilidad y revisoría fiscal. Realizando un saneamiento de los pasivos de la copropiedad Biourbe estilo y Atenti.</p>
+
+<p>Se mencionan los retos para establecer su cronograma en la asamblea general de propietarios, como la impermeabilización de la fachada y sellamiento de toda la ventanería de Torre un y Torre dos, el cambio de los dos juegos de cable de tracción, la señalización y demarcación vial, y las goteras en los parqueaderos de cada torre ocasionados por la zona común de cada torre donde está el parque infantil y el golfito.</p>
+
+<p>Se espera que todos los informes escritos sean leídos y resueltas sus inquietudes antes de la asamblea general de propietarios. Se cuenta con su asistencia en la asamblea para que este espacio de reunión lo podamos optimizar al máximo para decidir sobre el rumbo de Altos de Valparaíso.</p>
+
+<p>Se aprueba el informe con las observaciones ya hechas.</p>
+
+<h4>Fugas de Agua</h4>
+<p>Carlos informa sobre las fugas de agua, indicando que se han presentado problemas en el piso 26 debido a la mala calidad de la tubería. Se menciona que el tubo no es el adecuado para recibir la presión del agua.</p>
+
+<p>Se conecta a José David, quien explica que la tubería instalada no es de buena calidad y que no hay anclajes de soportes en los bajantes. También menciona que en el piso 26 hicieron una conexión entre gravedad y presión, lo cual no es recomendable para los pisos altos. Se recomienda tener una válvula en el sótano para drenar la tubería y evitar pérdidas de agua.</p>
+
+<p>José David se compromete a pasar por escrito cuánto podría costar la válvula para futura reparación. También se compromete a hacer un análisis para ver dónde se puede llevar esa tubería para que no haya tanta pérdida de agua. Se menciona que en esa intervención se cambian los accesorios por tubería ya Paco.</p>
+
+<p>Se pregunta cuánto costaría cambiar toda la tubería, pero José David indica que no sabría decir. Se menciona que hay que hacer un estudio más o menos aproximado para poderles dar un valor acertado. Se ofrece a realizar un diagnóstico por $520,000 para hacer todo el estudio, más o menos qué es lo que se hay que hacer, qué tubería se recomienda y se envía como un tipo 1 plano, de cuánto más o menos hay que cambiar, tramos más o menos de lo que hay que instalar.</p>
+
+<p>Se pregunta cuánto tiempo estaría la gente sin agua, y José David indica que hay que hacerlo estratégicamente por tramos. Se compromete a hacer un comunicado para explicarle todo eso a la gente y a hacer una cotización de cuánto vale instalar esos variadores para el golpe de ariete y cuánto vale cambiar la tubería.</p>
+
+<p>Se menciona que las bombas de abajo son de 25 caballos y tienen un arranque que se llama Estrella delta, que genera un golpe de ariete muy fuerte. Se propone poner unos variadores de velocidad para restringir ese golpe, que pueden valer entre 25 y $26 millones cada uno.</p>
+
+<p>Se acuerda que José David haga un video contando todo esto para ponerlo el día a la asamblea o si no hacerlo venir.</p>
+
+<p>Se menciona que este es un problema que se empezó a presentar incluso antes de que llegaran. Se acuerda buscar una solución definitiva y decirle a la gente que esta es la situación y que hasta que no se haga eso, cualquier día nos podemos quedar sin agua.</p>
+
+<h4>RCI (Red Contra Incendios) y Certificación de Bomberos</h4>
+<p>Patricia informa que Altos de Valparaíso no se va a poder certificar, ya que no cumple con los requerimientos de bomberos para certificarse. Se menciona que hay problemas de diseño y muchas cosas que están mal.</p>
+
+<p>Se menciona que se compró un sticker y que este edificio no tiene problemas estructurales. Se informa que Patricia se sentó con Marco Aurelio, quien vino a hacer inspección, a evaluar punto por punto para saber en donde no cumple altos y por qué no cumple. El estudio de ellos vale $14 millones.</p>
+
+<p>Se pregunta de quién dependen los bomberos, y se indica que del cuerpo de bomberos de Sabaneta, Unidad autónoma. Se menciona que Patricia tiene reunión el jueves a las 4:30 con el secretario de gobierno de Sabaneta, con Johan Quintero.</p>
+
+<p>Se debe habilitar la salida de ecuaciones y evacuación. Las personas que evaporan los pisos superiores. Se menciona que no se ha encontrado la solución para esto. La NCR del 2010, capítulo cinco dice que por ley tiene que haber una salida a la calle por las escaleras de emergencia de torre un y torre dos. Y si no sale a la calle, no nos van a certificar jamás. El problema es que tenemos una escalera de emergencia cruzada.</p>
+
+<p>Se menciona que este predio estaba restringido por el POT de Sabaneta, porque iba a ser la gradería indesa. Se acuerda bajar los certificados de Cámara de Comercio, de Promotora Vela y de promotor a la 77 Sur, y enviar la citación a los correos de notificación judicial, solicitando que se hagan presentes en esta asamblea y les voy a colocar puntualmente en el correo que tengo requerimiento de bombero de evacuar estos dos torres por ahí. Sí, porque se puede hacer. Mientras tanto me tienen que dar las tienen que dar las servidumbres. Exactamente, la servidumbre. Y si no demandan.</p>
+
+<p>Se menciona que hay que hacer un arreglo directo con etapa tres, que no nos pueden dejar este pasamanos que aparece acá, nosotros lo mandamos ya a hacer así.</p>
+
+<p>Se menciona que al hacer la traducción de la norma, los constructores de aquí, como los gringos le dicen alberca a la piscina, cuando tradujeron acá, ellos entendieron que la R se conectaba a la piscina y cometieron unas atrocidades increíbles en muchas partes. Se menciona que Altos de Valparaíso tiene ese problema. Es un problema de interpretación de normas, un problema que alto lo tiene. Y entonces los diseños eso tiene que garantizar más o -100 psi, 100 libras de presión hasta el último piso. Y Altos de Valparaíso no lo cumple. Entonces en los diseños hay una falla de succión de la bomba porque no llega con la suficiente fuerza al último piso. Y fuera de eso no debería estar succionando desde la piscina, porque cuando tú succionas una bomba de esas desde la piscina, la piscina tiene demasiado cloro y te daña todas las tuberías del equipo de red contra incendio.</p>
+
+<p>Se menciona que hay varias soluciones que Marco dijo que las podíamos ver sobre la marcha. Se mencionan cuatro compañías: Spci, Asequ, Manfresas e Ingema. Se menciona que la red contra incendio es el corazón de esta unidad, para mantener esta unidad viva. Porque si hay un inicio de incendio acá, estamos fritos.</p>
+
+<p>Se menciona que Patricia ya tiene requerimiento de la Secretaría de Gobierno, de la inspectora de Urbanismo, ya el secretario de Gobierno, que Johan Quintero está enterado de la situación de Altos, la inspectora Jane está enterada, la de urbanismo, el jefe de Inspecciones está enterado, el jefe de Gestión del Riesgo está enterado. Todos los organismos de gobierno están enterados de que Altos de Valparaíso no está certificado ni en sistema, ni en la inspección cumple, ni tiene la prueba hidá. Entonces esto nos puede acarrear sanciones de todo tipo. Y si hay un evento, me puedo ir a una sanción penal y económica muy alta.</p>
+
+<p>Se propone colocar dentro de la asamblea y dentro del manual de convivencia un protocolo que inmediatamente, que todo alto sepa y que los porteros sepa, que inmediatamente haya una evacuación, deja las puertas abiertas. Se menciona que las puertas de emergencia no deben tener tránsito, es decir, nadie puede transitar por ahí porque son solamente para evacuaciones. Se propone hacer una inmersión en cámara para empezar a colocarle multas a las personas que no hagan buen uso de las puertas de emergencia, porque éstas deben cerrar automáticamente. Y hacer un arreglo de todas las puertas de emergencia para que cierren automáticamente y controlar que los propietarios no dañen ese cierre automático.</p>
+
+<p>Se menciona que hay que arreglar el sistema de alerta de alarma, los pulsadores, los rociadores y los paneles de detección. Se menciona que hay que instalar unos rociadores en la RCi y hay que mirar que los paneles de detección si funcionen.</p>
+
+<p>Se menciona que hay que colocar pasamanos en los cuatro tacos de las escaleras de evacuación de emergencia. Se menciona que hay que esa rci hay que ponerla, esa bomba. Esas empresas que dicen es para todo el sistema alrededor, pero no como tal. Para la bomba. Sí, para la bomba, sí, claro, ellos son expertos en todo esto.</p>
+
+<p>Se acuerda que no se les puede vender a la comunidad que nos vamos a certificar, vamos a actuar con diligencia y cuidado con todos los organismos. Se acuerda que Patricia ponga el tema para que usted diga ahí no sé, no sé, como eso es para que hice un montón de cosas. Y el consejo es como que y. De dónde está inventando todas mentiras. Exactamente. ¿De dónde está hablando tanta caspa?</p>
+
+<h4>Fondo de Imprevistos</h4>
+<p>Se propone usar esos fondos de fachada, de reserva fachada, imprevistos para darle solución a eso. Se propone un autopréstamo del fondo que tenemos para fachada y el fondo de imprevistos. Empezar a actuar ya. Eso se lo planteamos pues a la asamblea, porque tenemos que la asamblea en 15 días. Entonces estamos a 15 días. Le proponemos a la asamblea que eso hay que ponerlo en el orden del día, que nos deje usar el fondo imprevisto, y con la plata de reinversión que nos van a dar las empresas de vigilancia, vamos otra vez fondeando el fondo. Pero que tenemos que actuar con diligencia y cuidado. Y tenemos que pagar la certificación, la visita de inspección ocular y la prueba hidráulica.</p>
+
+<p>Se menciona que se tiene $70 millones en el fondo. Se acuerda empezar por algo, mi doctor, porque tenemos que actuar con diligencia y cuidado.</p>
+
+<h4>Propuesta de Empresas de Vigilancia</h4>
+<p>Este tema se abordará en la asamblea, donde se elegirá la empresa de vigilancia. Se espera que la empresa elegida ofrezca una reinversión para realizar proyectos importantes como la puesta a punto de la red contra incendios y el cambio de las bombas de calor de la piscina.</p>
+
+<h4>Logística para la Asamblea del 1 de marzo de 2025</h4>
+<p>Se menciona que Patricia tiene plazo para citar hasta el 13 de febrero, o sea pasado mañana, entonces yo doy por aprobados todos estos temas para citar. Actuar con diligencia y cuidado es igual a los comportamiento de un buen padre de familia, así lo define la ley civil.</p>
+
+<h2>Cierre</h2>
+<p><strong>Hora de cierre:</strong> 12:00 AM</p>
+<p><strong>Acuerdos Alcanzados:</strong></p>
+<ul>
+  <li>Aprobar el orden del día propuesto.</li>
+  <li>Designar al Dr. Lerman Salinas como presidente de la reunión y a Fanny Val como secretaria.</li>
+  <li>Aprobar el presupuesto 2025 para presentárselo a la asamblea.</li>
+  <li>Aprobar el informe de gestión 2024 con las observaciones realizadas.</li>
+  <li>Realizar un comunicado para explicar a la gente la situación de las fugas de agua.</li>
+  <li>Actuar con diligencia y cuidado en el tema de la RCI y la certificación de bomberos.</li>
+  <li>Proponer a la asamblea el uso de los fondos de fachada e imprevistos para solucionar los problemas de la RCI.</li>
+  <li>Citar a la asamblea a los representantes de Promotora Vela y de la constructora 77 Sur para que se hagan responsables de los problemas de la RCI.</li>
+</ul>
+<p><strong>Compromisos Específicos Acordados:</strong></p>
+<ul>
+  <li>José David se compromete a pasar por escrito cuánto podría costar la válvula para futura reparación y a hacer un comunicado para explicarle todo eso a la gente.</li>
+  <li>Carlos se compromete a conseguir cotizaciones de empresas especializadas en RCI y a gestionar los pasamanos para las escaleras de emergencia.</li>
+  <li>Patricia se compromete a reunirse con el secretario de gobierno de Sabaneta y a contactar a los representantes de Promotora Vela y de la constructora 77 Sur.</li>
+</ul>
+<p><strong>Próximos Pasos:</strong></p>
+<ul>
+  <li>Enviar la citación a la asamblea a más tardar el 13 de febrero.</li>
+  <li>Realizar las gestiones necesarias para solucionar los problemas de la RCI y las fugas de agua.</li>
+  <li>Preparar la presentación del presupuesto y el informe de gestión para la asamblea.</li>
+</ul>
+<footer>
+  <p><strong>Firmas:</strong></p>
+  
+</footer>
+[2025-02-12T19:50:07.397Z] Contenido cargado con éxito. ID: 1B_-TvOF_yE7NcqODjayYF5o34MM1XB-u
+[2025-02-12T19:50:07.398Z] Acta lista y guardada como reunion_extraordinaria_altos_de_valparaiso_febrero_11_2025_carlos_sandoval_altos_de_valparaiso_Borrador.docx.
+[2025-02-13T13:38:06.466Z] Verificando existencia del archivo: REUNION EXTRAORDINARIA ALTOS DE VALPARAISO FEBRERO 11 2025 Carlos Sandoval Altos de Valparaiso.mp3.
+[2025-02-13T13:38:06.468Z] Verificando o creando carpeta.
+[2025-02-13T13:38:07.217Z] Carpeta existente con ID: 1cFfC920XtySQ78mtmf8XL-eQmZzbUoCr.
+[2025-02-13T13:38:07.217Z] Verificando existencia del archivo.
+[2025-02-13T13:38:07.833Z] Archivo ya existe. URL: 1QkAJ8RpPVnVt2z6G7aC8Iock584gC9-4.
+[2025-02-13T13:38:07.833Z] El archivo ya existe.

@@ -10,11 +10,11 @@ import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
 
 function calcularNumPartes(longitud: number): number {
-  if (longitud > 210000) return 6;
-  if (longitud > 175000) return 5;
-  if (longitud > 140000) return 4;
-  if (longitud > 98000) return 3;
-  if (longitud > 70000) return 2;
+  if (longitud > 210000) return 7;
+  if (longitud > 175000) return 6;
+  if (longitud > 140000) return 5;
+  if (longitud > 98000) return 4;
+  if (longitud > 70000) return 3;
   return 1; // No se divide si es 70K o menos
 }
 

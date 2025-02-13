@@ -1,5 +1,3 @@
-"use server";
-
 import { uploadFileAction } from "./uploadFileAction";
 import { normalizarNombreArchivo } from "./utilsActions";
 
