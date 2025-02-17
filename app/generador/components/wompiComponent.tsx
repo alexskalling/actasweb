@@ -12,7 +12,6 @@ const generateIntegrityHash = async (concatenatedString) => {
 };
 //@ts-expect-error revisar despues
 const createCheckoutInstance = (amount, reference, integrityHash, name) => {
-  //@ts-expect-error revisar despues
   return new window.WidgetCheckout({
     currency: "COP",
     amountInCents: amount,

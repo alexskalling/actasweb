@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,6 +34,8 @@ export default function RootLayout({
           src="https://checkout.wompi.co/widget.js"
           strategy="lazyOnload"
         />
+        <GoogleAnalytics gaId="G-F2VDTR8RN3" />
+        <GoogleTagManager gtmId="GTM-MRMG7JTJ" />
       </body>
     </html>
   );
