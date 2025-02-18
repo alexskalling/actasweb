@@ -56,8 +56,7 @@ const WompiComponent = (props) => {
   }, [props.costo]);
 
   useEffect(() => {
-    const tiket =
-      "acta" + Math.floor(Date.now() / 1000) + Math.floor(Math.random() * 1000);
+    const tiket = "acta" + props.name;
     const script = document.createElement("script");
     script.src = "https://checkout.wompi.co/widget.js";
     script.async = true;

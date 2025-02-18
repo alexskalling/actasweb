@@ -165,7 +165,7 @@ export default function FileUploaderComponent() {
             const save = await saveTransactionAction({
               transaccion: tx.data.id,
               referencia: tx.data.reference,
-              acta: tx.data.reference,
+              acta: name,
               valor: (tx.data.amount_in_cents / 100).toString(),
               duracion: timeDuration,
             });
