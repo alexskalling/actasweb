@@ -14,6 +14,7 @@ export default function FileUploaderComponent() {
   const [file, setFile] = useState<File | null>(null);
   const [name, setName] = useState<string>("");
   const [duration, setDuration] = useState<number>(0);
+  const [durationFormat, setDurationFormat] = useState<string>("0");
   const [tokens, setTokens] = useState<string>("0");
   const [calcular, setCalcular] = useState(false);
   const [calculando, setCalculando] = useState(false);
@@ -47,6 +48,7 @@ export default function FileUploaderComponent() {
     media.onloadedmetadata = () => {
       const fileDuration = media.duration;
       setDuration(fileDuration);
+      setDurationFormat(formatDuration(fileDuration));
       setTokens(calculateTokens(fileDuration));
       URL.revokeObjectURL(url);
     };
@@ -56,6 +58,7 @@ export default function FileUploaderComponent() {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
     const secs = Math.floor(seconds % 60);
+
     return [hours, minutes, secs]
       .map((v) => (v < 10 ? "0" + v : v))
       .filter((v, i) => v !== "00" || i > 0)
@@ -139,6 +142,8 @@ export default function FileUploaderComponent() {
       const searchParams = new URLSearchParams(window.location.search);
       const id = searchParams.get("id");
       const name = searchParams.get("name");
+      const duration = searchParams.get("duration");
+      setDuration(Number(duration));
       //@ts-expect-error revisar despues
       setIdtx(id);
       //@ts-expect-error revisar despues
@@ -154,7 +159,7 @@ export default function FileUploaderComponent() {
             `https://production.wompi.co/v1/transactions/${idtx}`
           );
           const tx = await response.json();
-          console.log("tx", tx.data.status);
+          const timeDuration = formatDuration(duration);
           if (tx.data.status === "APPROVED") {
             console.log("tx", tx.data);
             const save = await saveTransactionAction({
@@ -162,7 +167,7 @@ export default function FileUploaderComponent() {
               referencia: tx.data.reference,
               acta: tx.data.reference,
               valor: (tx.data.amount_in_cents / 100).toString(),
-              duracion: formatDuration(duration),
+              duracion: timeDuration,
             });
             console.log("save: ", JSON.stringify(save));
 
@@ -406,6 +411,7 @@ export default function FileUploaderComponent() {
                   <WompiComponent
                     costo={tokens}
                     duracion={duration}
+                    durationFormat={durationFormat}
                     handlePayment={handlePayment}
                     name={name}
                   />

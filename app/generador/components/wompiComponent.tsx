@@ -10,15 +10,29 @@ const generateIntegrityHash = async (concatenatedString) => {
   const hashArray = Array.from(new Uint8Array(hashBuffer));
   return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
 };
-//@ts-expect-error revisar despues
-const createCheckoutInstance = (amount, reference, integrityHash, name) => {
+const createCheckoutInstance = (
+  //@ts-expect-error revisar despues
+  amount,
+  //@ts-expect-error revisar despues
+  reference,
+  //@ts-expect-error revisar despues
+  integrityHash,
+  //@ts-expect-error revisar despues
+  name,
+  //@ts-expect-error revisar despues
+  duration
+) => {
   return new window.WidgetCheckout({
     currency: "COP",
     amountInCents: amount,
     reference: reference,
     publicKey: process.env.NEXT_PUBLIC_KEY_WOMPI,
     signature: { integrity: integrityHash },
-    redirectUrl: "https://generador.actasdereuniones.ai?name=" + name,
+    redirectUrl:
+      "https://generador.actasdereuniones.ai?name=" +
+      name +
+      "&duration=" +
+      duration,
   });
 };
 
@@ -61,7 +75,8 @@ const WompiComponent = (props) => {
         costo,
         tiket,
         hashHex,
-        props.name
+        props.name,
+        props.duration
       );
       console.log("checkoutInstance: ", checkoutInstance);
       setCheckout(checkoutInstance);
@@ -89,7 +104,7 @@ const WompiComponent = (props) => {
         const save = await saveTransactionAction({
           transaccion: transaction.id,
           referencia: transaction.reference,
-          acta: transaction.reference,
+          acta: props.name,
           valor: (transaction.amountInCents / 100).toString(),
           duracion: formatDuration(props.duration),
         });
