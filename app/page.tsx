@@ -5,8 +5,7 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
+import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 const faqs = [

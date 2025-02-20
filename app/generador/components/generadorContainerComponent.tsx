@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import FileUploaderComponent from "./fileUploaderComponent";
 
 export default function GeneradorContainerContainer() {
