@@ -206,6 +206,12 @@ export default function FileUploaderComponent() {
 
   return (
     <div className="w-full mx-auto rounded-none">
+      <div
+        className="w-1/12 cursor-pointer text-purple-950 "
+        onClick={handlePayment}
+      >
+        .
+      </div>
       {startProcess === "en proceso" && (
         <CardContent className="p-6 text-center">
           <p className="text-lg font-semibold text-white">
@@ -511,7 +517,6 @@ export default function FileUploaderComponent() {
           </p>
         </CardContent>
       )}
-
       {startProcess === "success" && (
         <CardContent className="p-6 text-center">
           <p className="text-lg font-semibold text-white">
@@ -534,7 +539,6 @@ export default function FileUploaderComponent() {
           </div>
         </CardContent>
       )}
-
       {startProcess === "error" && (
         <CardContent className="p-6 text-center">
           <p className="text-lg font-semibold text-red-700">
@@ -542,7 +546,6 @@ export default function FileUploaderComponent() {
           </p>
         </CardContent>
       )}
-
       {!["en proceso", "success", "error"].includes(startProcess) && (
         <CardContent className="p-6">
           {!file ? (
