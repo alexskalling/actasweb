@@ -3,10 +3,12 @@ import FileUploaderComponent from "./fileUploaderComponent";
 
 export default function GeneradorContainerContainer() {
   return (
-    <div className="container mx-auto p-4 mt-4">
-      <h1 className="text-5xl font-bold text-center mb-8">Genera tu acta</h1>
+    <div className=" mx-auto p-4 mt-4 rounded-sm bg-purple-950">
+      <h2 className="text-3xl  mt-5 font-bold text-center text-white ">
+        Genera tu acta
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Card className="w-full rounded-sm">
+        <div className="w-full rounded-sm">
           <div className="flex h-full">
             <div className="m-auto">
               <CardContent className="flex items-center justify-center ">
@@ -14,8 +16,8 @@ export default function GeneradorContainerContainer() {
               </CardContent>
             </div>
           </div>
-        </Card>
-        <Card className="w-full rounded-sm">
+        </div>
+        <div className="w-full ">
           <CardContent className="flex flex-col items-center justify-center">
             <img
               src="https://actasdereuniones.ai/wp-content/uploads/2025/02/actas3.webp"
@@ -23,7 +25,7 @@ export default function GeneradorContainerContainer() {
               className="object-cover"
             />
           </CardContent>
-        </Card>
+        </div>
       </div>
     </div>
   );

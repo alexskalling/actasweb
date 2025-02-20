@@ -91,7 +91,7 @@ export async function generateContent(nombreNormalizado: string) {
       const contentMessage = await getContentPromt(0, contenido);
 
       const revisionFinal = await generateText({
-        model: google("gemini-2.0-flash"),
+        model: google("gemini-2.0-flash-thinking-exp-01-21"),
         maxTokens: 1000000,
         temperature: 0,
         system: systemMessage,
@@ -121,7 +121,7 @@ export async function generateContent(nombreNormalizado: string) {
       const systemMessage = await getSystemPromt(i == 0 ? 1 : 2);
       const contentMessage = await getContentPromt(i == 0 ? 1 : 2, partes[i]);
       const text = await generateText({
-        model: google("gemini-2.0-flash"),
+        model: google("gemini-2.0-flash-thinking-exp-01-21"),
         maxTokens: 1000000,
         temperature: 0,
         system: systemMessage,
@@ -136,7 +136,7 @@ export async function generateContent(nombreNormalizado: string) {
     const contentMessage = await getContentPromt(0, contenido);
 
     const revisionFinal = await generateText({
-      model: google("gemini-2.0-flash"),
+      model: google("gemini-2.0-flash-thinking-exp-01-21"),
       maxTokens: 1000000,
       temperature: 0,
       system: systemMessage,
@@ -276,6 +276,7 @@ El desarrollo del acta debe responder a la seccion de orden de dia, de ser neces
 Manten el mismo todo y logica narrativa durante todo el documento debe ser fomral sin enrredar al lector  y en tono amable
 Se muy cuidadoso con el tema de las fechas y cifras no quiero que existan ambiguedades en lso que planteas en este punto
 noabuses de la palabra  "se propuso" usa sinonimos y une loe hecho de manera mas natural
+Introduce de manera natural y formal los coemntarioo o peticipaciones de los asistente de ser posible identificandolo  para que se sepa que fue lo que aporta solo si esto apoya a la narrativa
 
 
 
