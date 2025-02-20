@@ -72,7 +72,12 @@ export async function generateContent(nombreNormalizado) {
       maxTokens: 1000000,
       temperature: 0,
       system: await getSystemPromt("Orden"),
-      prompt: await getUserPromt("Orden", "Orden", contenidoTranscripcion),
+      prompt: await getUserPromt(
+        "Orden",
+        "Orden",
+        contenidoTranscripcion,
+        "test"
+      ),
     });
 
     const jsonText = responseGeminiOrdenDelDia.text.trim();
@@ -308,7 +313,7 @@ async function getUserPromt(
   tipo: string,
   tema: string,
   content: string,
-  ordendeldia?: any
+  ordendeldia: string
 ) {
   let userPromt = "";
 
