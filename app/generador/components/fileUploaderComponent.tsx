@@ -5,10 +5,72 @@ import { useState, useCallback, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import { Upload, File } from "lucide-react";
-import { CalculateAction } from "../services/calculateAction";
 import WompiComponent from "./wompiComponent";
 import { processAction } from "../services/processAction";
 import { saveTransactionAction } from "../services/saveTransactionAction";
+import { AssemblyAI } from "assemblyai";
+import { normalizarNombreArchivo } from "../services/utilsActions";
+import { findTranscription } from "../services/findTranscription";
+import { uploadFileAction } from "../services/uploadFileAction";
+
+const assembly = new AssemblyAI({
+  //@ts-expect-error revisar despues (puedes investigar por qué TS espera esto)
+  apiKey: process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY, // Usar variable de entorno del cliente
+});
+
+async function trascripcion(audioFile: File): Promise<string> {
+  return new Promise(async (resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const audioData = e.target?.result;
+
+      if (!audioData) {
+        console.error(
+          "Error reading audio data from FileReader en obtenerTranscripcionDesdeCliente"
+        );
+        reject("Error al leer el archivo de audio.");
+        return;
+      }
+
+      try {
+        const transcriptResponse = await assembly.transcripts.transcribe({
+          audio: audioData,
+          language_code: "es",
+        });
+
+        const transcript = await assembly.transcripts.get(
+          transcriptResponse.id
+        );
+
+        if (transcript && transcript.text) {
+          resolve(transcript.text);
+        } else if (transcript && transcript.error) {
+          reject(
+            `Error de transcripción desde AssemblyAI: ${transcript.error}`
+          );
+        } else {
+          reject(
+            "No se pudo obtener la transcripción o la transcripción está vacía."
+          );
+        }
+      } catch (assemblyError) {
+        console.error(
+          "Error transcribing audio with AssemblyAI en obtenerTranscripcionDesdeCliente:",
+          assemblyError
+        );
+        reject(`Error al contactar con AssemblyAI: ${assemblyError}`);
+      }
+    };
+    reader.onerror = (fileReaderError) => {
+      console.error(
+        "FileReader error en obtenerTranscripcionDesdeCliente:",
+        fileReaderError
+      );
+      reject("Error al leer el archivo.");
+    };
+    reader.readAsArrayBuffer(audioFile);
+  });
+}
 
 export default function FileUploaderComponent() {
   const [file, setFile] = useState<File | null>(null);
@@ -79,6 +141,7 @@ export default function FileUploaderComponent() {
   };
 
   async function handleCalculate() {
+    console.log("calculando");
     setCalculando(true);
     if (!file) {
       alert("No se ha seleccionado un archivo");
@@ -89,12 +152,26 @@ export default function FileUploaderComponent() {
     const formData = new FormData();
     formData.append("file", file);
 
-    const upload = await CalculateAction(formData);
-    if (upload?.status === "success") {
-      setCalcular(true);
-      setCalculando(false);
-      //@ts-expect-error revisar después
-      setName(upload.name);
+    const nombreNormalizado = await normalizarNombreArchivo(file.name);
+    console.log("nombre" + nombreNormalizado);
+    const isTrasncript = await findTranscription(nombreNormalizado);
+    if (isTrasncript?.status === "success") {
+      console.log("busqueda teminada" + isTrasncript.message);
+      setName(nombreNormalizado);
+      if (isTrasncript.message == "Transcribir") {
+        const transcripcion = await trascripcion(file);
+        console.log(transcripcion);
+        const load = await uploadFileAction(nombreNormalizado, transcripcion);
+        if (load.status == "success") {
+          setCalcular(true);
+          setCalculando(false);
+        } else {
+          setStartProcess("error");
+        }
+      } else {
+        setCalcular(true);
+        setCalculando(false);
+      }
     } else {
       alert("Error al calcular el archivo");
       setCalculando(false);
@@ -186,7 +263,8 @@ export default function FileUploaderComponent() {
 
   async function handlePayment() {
     setStartProcess("en proceso");
-    const result = await processAction(name); // Primero actualizamos el estado
+
+    const result = await processAction(name);
     if (result.status == "success") {
       setStartProcess("success");
       //@ts-expect-error revisar despues
@@ -625,8 +703,8 @@ export default function FileUploaderComponent() {
                 <div className="flex space-x-2 mx-auto text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width={24}
-                    height={24}
+                    width={50}
+                    height={50}
                     viewBox="0 0 24 24"
                   >
                     <rect
@@ -920,7 +998,10 @@ export default function FileUploaderComponent() {
                       ></animate>
                     </rect>
                   </svg>
-                  Calculando...{" "}
+                  <p className="text-xs mt-2">
+                    Procesando archivo. La duración estimada depende del tamaño
+                    del archivo y puede tomar unos minutos.
+                  </p>
                 </div>
               )}
 

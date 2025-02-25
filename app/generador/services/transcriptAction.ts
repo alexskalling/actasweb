@@ -35,6 +35,7 @@ export async function transcripAction(nombreNormalizado: string) {
       idCarpeta
     );
     console.log(audio);
+    writeLog(`[${new Date().toISOString()}] audio:${audio}`);
     if (transcripcionExistente) {
       writeLog(`[${new Date().toISOString()}] La transcripción ya existe.`);
       return { status: "success", message: "La transcripción ya existía." };

@@ -2,54 +2,37 @@
 
 import {
   autenticarGoogleDrive,
+  crearArchivo,
   manejarError,
   obtenerOCrearCarpeta,
-  subirArchivo,
-  verificarArchivoExistente,
   writeLog,
 } from "./utilsActions";
 
 export async function uploadFileAction(
-  formData: unknown,
-  nombreNormalizado: string
+  nombreNormalizado: string,
+  trasncripcion: string
 ) {
   try {
     console.log(nombreNormalizado);
     const drive = await autenticarGoogleDrive();
-    //@ts-expect-error revisar despues
-    const archivo = formData.get("file");
-    if (!archivo) throw new Error("No se recibió el archivo.");
 
-    writeLog(
-      `[${new Date().toISOString()}] Verificando existencia del archivo: ${
-        archivo.name
-      }.`
-    );
+    const nombreTranscripcion = `${nombreNormalizado.replace(
+      /\.[^/.]+$/,
+      ""
+    )}_Transcripcion.txt`;
 
     const idCarpeta = await obtenerOCrearCarpeta(drive, nombreNormalizado);
     console.log(idCarpeta);
-    const archivoExistente = await verificarArchivoExistente(
-      drive,
-      nombreNormalizado,
-      idCarpeta
-    );
 
-    if (archivoExistente) {
-      writeLog(`[${new Date().toISOString()}] El archivo ya existe.`);
-      return { status: "success", message: "El archivo ya existía." };
-    }
-
-    const idArchivoNuevo = await subirArchivo(
+    const idArchivoNuevo = await crearArchivo(
       drive,
-      archivo,
-      nombreNormalizado,
+      trasncripcion,
+      nombreTranscripcion,
       idCarpeta
     );
     if (idArchivoNuevo) {
       writeLog(
-        `[${new Date().toISOString()}] Archivo subido correctamente: ${
-          archivo.name
-        }.`
+        `[${new Date().toISOString()}] Archivo subido correctamente: ${nombreTranscripcion}.`
       );
       return { status: "success", message: "Archivo subido correctamente." };
     }

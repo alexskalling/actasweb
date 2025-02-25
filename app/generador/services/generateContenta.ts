@@ -10,7 +10,7 @@ import {
   crearArchivo,
 } from "./utilsActions";
 //@ts-expect-error revisar despues
-export async function generateContent(nombreNormalizado) {
+export async function generateContenta(nombreNormalizado) {
   try {
     console.log("Iniciando generación de contenido para:", nombreNormalizado);
 

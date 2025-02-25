@@ -1,26 +1,12 @@
 "use server";
 import { formatContent } from "./formatContent";
-import { generateContent } from "./generateContent";
-import { transcripAction } from "./transcriptAction";
+import { generateContenta } from "./generateContenta";
 
 export async function processAction(name: string) {
   try {
-    console.log("Transacción en proceso");
+    console.log("Transacción en proceso" + name);
 
-    // Transcripción
-    const transcript = await transcripAction(name);
-    if (transcript?.status !== "success") {
-      console.log("Error en la transcripción");
-      return {
-        status: "error",
-        message: "Error en la transcripción",
-      };
-    }
-    console.log("Transcripción lista");
-
-    // Generación de contenido
-    console.log("Embeddings en proceso");
-    const contenido = await generateContent(name);
+    const contenido = await generateContenta(name);
     if (contenido?.status !== "success") {
       console.log("Error en la generación de contenidos");
       return {
