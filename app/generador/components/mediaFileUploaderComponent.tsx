@@ -8,7 +8,6 @@ import WompiComponent from "./wompiComponent";
 import { processAction } from "../services/processAction";
 import io, { Socket } from "socket.io-client";
 import { saveTransactionAction } from "../services/saveTransactionAction";
-import { uploadFile } from "../services/uploadFileAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 
 interface MediaSelectorProps {

@@ -1,6 +1,3 @@
-//@ts-expect-error revisar despues
-import { DOMParser } from "xmldom"; // Importar DOMParser desde xmldom
-
 import io from "socket.io-client";
 
 // 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
