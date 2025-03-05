@@ -448,6 +448,16 @@ async function guardarArchivoNextcloudDocx(
 
     writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch**
 
+    writeLog(`**INICIO LOG PETICIÓN FETCH PUT DOCX (FALLIDA):**`); // **NUEVO LOG - INICIO PETICIÓN DOCX**
+    writeLog(`  Método: PUT`); // **LOG - MÉTODO**
+    writeLog(`  URL: ${rutaCompletaArchivoDocx}`); // **LOG - URL**
+    writeLog(`  Headers:`); // **LOG - HEADERS (JSON INDENTADO)**
+    writeLog(JSON.stringify(cabecerasAutenticacion, null, 2));
+    writeLog(
+      `  Body: ReadableStream (Buffer de tamaño ${docxBuffer.length} bytes)`
+    ); // **LOG - BODY INFO**
+    writeLog(`**FIN LOG PETICIÓN FETCH PUT DOCX (FALLIDA)**`); // **NUEVO LOG - FIN PETICIÓN DOCX**
+
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
       headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS**
