@@ -249,6 +249,7 @@ async function uploadFileToNextcloud(
       //@ts-expect-error revisar despues
       headers: cabecerasAutenticacion,
       body: stream,
+      duplex: "half",
     });
 
     if (!respuestaSubida.ok) {
