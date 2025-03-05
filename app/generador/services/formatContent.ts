@@ -1,7 +1,6 @@
 "use server";
 //@ts-expect-error revisar despues
 import htmlToDocx from "html-to-docx";
-import { Readable } from "stream";
 //@ts-expect-error revisar despues
 
 import { DOMParser } from "xmldom"; // Asegúrate de tener xmldom: npm install xmldom
