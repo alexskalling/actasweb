@@ -433,7 +433,8 @@ async function guardarArchivoNextcloudDocx(
 
     const cabecerasAutenticacion = {
       Authorization: "Basic " + btoa(usuario + ":" + contrasena),
-      "Content-Type": "application/octet-stream", // **MANTENEMOS Content-Type application/octet-stream PARA PRUEBAS**
+      "Content-Type":
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       "Content-Length": contentLength.toString(), // **NUEVO - AÑADIR Content-Length HEADER EXPLICITAMENTE**
     };
 
