@@ -18,9 +18,13 @@ const createCheckoutInstance = (
   //@ts-expect-error revisar despues
   integrityHash,
   //@ts-expect-error revisar despues
-  name,
+  file,
   //@ts-expect-error revisar despues
-  duration
+  duration,
+  //@ts-expect-error revisar despues
+  folder,
+  //@ts-expect-error revisar despues
+  fileid
 ) => {
   return new window.WidgetCheckout({
     currency: "COP",
@@ -29,8 +33,12 @@ const createCheckoutInstance = (
     publicKey: process.env.NEXT_PUBLIC_KEY_WOMPI,
     signature: { integrity: integrityHash },
     redirectUrl:
-      "http://generador.actasdereuniones.ai?name=" +
-      name +
+      "https://generador.actasdereuniones.ai/?folder=" +
+      folder +
+      "&file=" +
+      file +
+      "&fileid=" +
+      fileid +
       "&duration=" +
       duration,
   });
@@ -56,7 +64,11 @@ const WompiComponent = (props) => {
   }, [props.costo]);
 
   useEffect(() => {
-    const tiket = "acta" + props.name;
+    const tiket =
+      "acta:" +
+      props.file +
+      "-" +
+      Math.floor(Math.random() * 90000 + 10000).toString();
     const script = document.createElement("script");
     script.src = "https://checkout.wompi.co/widget.js";
     script.async = true;
@@ -74,8 +86,10 @@ const WompiComponent = (props) => {
         costo,
         tiket,
         hashHex,
-        props.name,
-        props.duration
+        props.file,
+        props.duration,
+        props.folder,
+        props.fileid
       );
       console.log("checkoutInstance: ", checkoutInstance);
       setCheckout(checkoutInstance);
@@ -103,7 +117,7 @@ const WompiComponent = (props) => {
         const save = await saveTransactionAction({
           transaccion: transaction.id,
           referencia: transaction.reference,
-          acta: props.name,
+          acta: props.file,
           valor: (transaction.amountInCents / 100).toString(),
           duracion: formatDuration(props.duration),
         });
@@ -121,7 +135,7 @@ const WompiComponent = (props) => {
       className="w-full rounded-sm bg-purple-600"
       onClick={() => [handleOpenWidget()]}
     >
-      Continuar
+      Pagar
     </Button>
   );
 };

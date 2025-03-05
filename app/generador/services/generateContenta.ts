@@ -3,138 +3,196 @@
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
 import {
-  autenticarGoogleDrive,
-  obtenerContenidoArchivoDrive,
+  manejarError,
+  writeLog,
+  guardarArchivo,
   verificarArchivoExistente,
-  obtenerOCrearCarpeta,
-  crearArchivo,
+  obtenerContenidoArchivo,
 } from "./utilsActions";
-//@ts-expect-error revisar despues
-export async function generateContenta(nombreNormalizado) {
+import io from "socket.io-client";
+
+// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
+const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
+
+socketBackendReal.on("connect_error", (error) => {
+  console.error("Error de conexión Socket.IO desde backend real:", error);
+});
+socketBackendReal.on("connect_timeout", (timeout) => {
+  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
+});
+socketBackendReal.on("disconnect", (reason) => {
+  console.log("Desconexión de Socket.IO desde backend real:", reason);
+});
+
+export async function generateContenta(
+  folder: string,
+  file: string,
+  fileid: string,
+  transcipcion: string
+) {
+  const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
+  const nombreTranscripcion = `${file.replace(
+    /\.[^/.]+$/,
+    ""
+  )}_Transcripcion.txt`;
+
   try {
-    console.log("Iniciando generación de contenido para:", nombreNormalizado);
+    writeLog(`Verificando contenido existente: ${nombreContenido}`);
 
-    const drive = await autenticarGoogleDrive();
-    console.log("Autenticado en Google Drive");
-
-    const nombreTranscripcion = `${nombreNormalizado.replace(
-      /\.[^/.]+$/,
-      ""
-    )}_Transcripcion.txt`;
-
-    console.log("Buscando transcripción:", nombreTranscripcion);
-
-    const idCarpeta = await obtenerOCrearCarpeta(drive, nombreNormalizado);
-    console.log("Carpeta obtenida o creada con ID:", idCarpeta);
-
-    const transcripcionExistente = await verificarArchivoExistente(
-      drive,
-      nombreTranscripcion,
-      idCarpeta
-    );
-    if (!transcripcionExistente) {
-      console.log("No se encontró la transcripción");
-      return;
+    if (await verificarArchivoExistente(nombreContenido, folder)) {
+      writeLog(`Contenido existente: ${nombreContenido}. Cargando.`);
+      const contenidoExistente = await obtenerContenidoArchivo(
+        folder,
+        nombreContenido
+      );
+      return { status: "success", content: contenidoExistente };
     }
 
-    const nombreContenido = `${nombreNormalizado.replace(
-      /\.[^/.]+$/,
-      ""
-    )}_Contenido.txt`;
+    writeLog(`Generando contenido para: ${file}`);
+    socketBackendReal.emit("upload-status", {
+      roomName: folder,
+      statusData: {
+        message: `[Contenido] Leyendo, entendiendo y analisando el contenido de: ${file} `,
+      },
+    });
 
-    // Verifica si el archivo de contenido ya existe
-    const contenidoExistente = await verificarArchivoExistente(
-      drive,
-      nombreContenido,
-      idCarpeta
-    );
+    let contenidoTranscripcion = transcipcion;
 
-    if (contenidoExistente) {
-      console.log("El archivo de contenido ya existe.");
-      return {
-        status: "success",
-        message: "Contenido ya existente.",
-      };
+    if (!contenidoTranscripcion) {
+      writeLog(
+        `Transcripción no proporcionada como parámetro. Verificando transcripción existente: ${nombreTranscripcion}`
+      );
+      if (!(await verificarArchivoExistente(nombreTranscripcion, folder))) {
+        writeLog(`Transcripción no encontrada: ${nombreTranscripcion}`);
+        return {
+          status: "error",
+          message: "Transcripción no encontrada en Nextcloud.",
+        };
+      }
+      writeLog(
+        `Transcripción encontrada: ${nombreTranscripcion}. Obteniendo contenido.`
+      );
+      //@ts-expect-error revisar despues - This comment can be removed if types are properly checked.
+      contenidoTranscripcion = await obtenerContenidoArchivo(
+        folder,
+        nombreTranscripcion
+      );
+      if (!contenidoTranscripcion) {
+        return {
+          status: "error",
+          message:
+            "No se pudo obtener el contenido de la transcripción desde Nextcloud.",
+        };
+      }
+    } else {
+      writeLog(`Usando transcripción proporcionada como parámetro.`);
     }
 
-    console.log("Transcripción encontrada, obteniendo contenido...");
-    const contenidoTranscripcion = (await obtenerContenidoArchivoDrive(
-      drive,
-      transcripcionExistente
-    )) as string;
-
-    console.log(
-      "Contenido de transcripción obtenido. Generando Orden del Día..."
-    );
-
+    writeLog(`Generando Orden del Día con Gemini para: ${file}`);
+    socketBackendReal.emit("upload-status", {
+      roomName: folder,
+      statusData: {
+        message: `[Contenido] Generando el orden del dia de la reunion `,
+      },
+    });
     const responseGeminiOrdenDelDia = await generateText({
       model: google("gemini-2.0-flash"),
-      maxTokens: 1000000,
+      maxTokens: 100000, // Consider adjusting maxTokens based on typical output size.
       temperature: 0,
-      system: await getSystemPromt("Orden"),
+      system: await getSystemPromt("Orden"), // Assume getSystemPromt and getUserPromt are efficient.
       prompt: await getUserPromt(
         "Orden",
         "Orden",
         contenidoTranscripcion,
-        "test"
-      ),
+        "test",
+        0
+      ), // Consider caching prompts if they are static.
     });
 
-    const jsonText = responseGeminiOrdenDelDia.text.trim();
+    const jsonCleaned = responseGeminiOrdenDelDia.text
+      .trim()
+      .replace(/^`+|`+$/g, "")
+      .replace(/^json/i, "");
 
-    // Eliminar posibles delimitadores de código como ```json y ```
-    const jsonCleaned = jsonText.replace(/^```json\s*|\s*```$/g, "");
-
-    const ordenDelDiaJSON = JSON.parse(jsonCleaned);
-
-    console.log("Orden del día generado:", JSON.stringify(ordenDelDiaJSON));
     let contenido = "";
-
-    for (const tema of ordenDelDiaJSON) {
-      console.log("Generando contenido para tema:", tema.nombre);
-
-      const responseTema = await generateText({
-        model: google("gemini-2.0-flash-thinking-exp-01-21"),
-        maxTokens: 1000000,
-        temperature: 0,
-        system: await getSystemPromt(
-          tema.nombre == "Cabecera"
-            ? "Cabecera"
-            : tema.nombre == "Cierre"
-            ? "Cierre"
-            : "Contenido"
-        ),
-        prompt: await getUserPromt(
-          tema.nombre == "Cabecera"
-            ? "Cabecera"
-            : tema.nombre == "Cierre"
-            ? "Cierre"
-            : "Contenido",
-          tema.nombre,
-          contenidoTranscripcion,
-          ordenDelDiaJSON
-        ),
+    try {
+      const ordenDelDiaJSON = JSON.parse(jsonCleaned);
+      socketBackendReal.emit("upload-status", {
+        roomName: folder,
+        statusData: {
+          message: `[Contenido] Orden del dia listo `,
+        },
       });
+      console.log(ordenDelDiaJSON);
+      let index = 0;
+      for (const tema of ordenDelDiaJSON) {
+        console.log(tema);
+        if (tema.nombre != "Cabecera" && tema.nombre != "Cierre") {
+          socketBackendReal.emit("upload-status", {
+            roomName: folder,
+            statusData: {
+              message: `[Contenido] ${index}/${ordenDelDiaJSON.length - 2}   ${
+                tema.nombre
+              }   `,
+            },
+          });
+        }
+        console.log(index);
+        const systemPromptType =
+          tema.nombre === "Cabecera"
+            ? "Cabecera"
+            : tema.nombre === "Cierre"
+            ? "Cierre"
+            : "Contenido";
 
-      const textoGenerado = responseTema.text.trim();
-      console.log("Contenido generado:", textoGenerado);
+        const userPromptType = systemPromptType; // They appear to be the same based on original code.
 
-      contenido += textoGenerado; // Concatenamos directamente sin saltos de línea
+        const responseTema = await generateText({
+          model: google("gemini-2.0-flash"),
+          maxTokens: 100000, // Consider adjusting maxTokens per tema.
+          temperature: 0,
+          system: await getSystemPromt(systemPromptType),
+          prompt: await getUserPromt(
+            userPromptType,
+            tema.nombre,
+            contenidoTranscripcion,
+            ordenDelDiaJSON,
+            index
+          ),
+        });
+        console.log(responseTema.text.trim());
+        contenido += responseTema.text.trim();
+        index++;
+      }
+
+      const contenidoFormato = contenido
+        .replace(/```html/g, "")
+        .replace(/html/g, "")
+        .replace(/```/g, "")
+        .replace(/< lang="es">/g, "")
+        .replace(/<\/?>/g, "")
+        .replace(/\[Text Wrapping Break\]/g, "")
+        .trim();
+
+      writeLog(`Guardando contenido en Nextcloud: ${nombreContenido}`);
+      await guardarArchivo(folder, nombreContenido, contenidoFormato);
+      writeLog(`Contenido guardado: ${nombreContenido}`);
+
+      return { status: "success", content: contenidoFormato };
+    } catch (jsonError) {
+      manejarError("generateContenta - Error JSON", jsonError);
+      writeLog(`Error JSON parse: . JSON Text: ${jsonCleaned}`);
+      return {
+        status: "error",
+        message: "Error al procesar el Orden del Día (JSON inválido).",
+      };
     }
-
-    console.log("Contenido final generado:", contenido);
-    const contenidoFormato = contenido
-      .replace(/```html/g, "")
-      .replace(/html/g, "")
-      .replace(/```/g, "")
-      .replace(/< lang="es">/g, "")
-      .replace(/<\/?>/g, "")
-      .replace(/\[Text Wrapping Break\]/g, "")
-      .trim();
-    await crearArchivo(drive, contenidoFormato, nombreContenido, idCarpeta);
-    return { status: "success", content: contenidoFormato };
   } catch (error) {
-    console.error("Error durante la generación del orden del día:", error);
+    manejarError("generateContenta", error);
+    return {
+      status: "error",
+      message: "Error durante la generación del contenido.",
+    };
   }
 }
 
@@ -149,8 +207,10 @@ Eres un asistente experto en análisis de reuniones. Tu única tarea es procesar
 Reglas estrictas:
 1. **Solo responde con JSON válido**. No agregues explicaciones, comentarios ni texto adicional antes o después del JSON.
 2. **Estructura JSON obligatoria:**  
-   - Si hay un "Orden del Día" explícito en la transcripción, respétalo.  
-   - Si no hay un "Orden del Día", genera uno basado en los grandes temas tratados, manteniendo el orden cronológico.  
+   - Si hay un "Orden del Día" explícito en la transcripción, respétalo.
+   SI EN LA TRASNCRIPCION   dicen un orden del dia  RESPETALO y solo agrega cosas si es que es necesario pero no quites cosas
+   - Si no hay un "Orden del Día", genera uno basado en los grandes temas tratados pero igua asegurate de que no hay  pro qeu si hay debe ser la bse minima de trabajo y creciendo desde ahi, manteniendo el orden cronológico. 
+   asegurate de que lso temas seran plasmados en el otrden del dia generado y qeu no vas a cambiar el roden bajo ninguan razon 
    - Siempre debe empezar con { "id": 0, "nombre": "Cabecera" } y terminar con { "id": n + 1, "nombre": "Cierre" }.  
 3. **No incluyas subtemas ni detalles menores**. Solo los grandes temas.  
 4. **La respuesta debe ser un JSON puro, sin etiquetas, ni nombres adicionales, solo un array de objetos JSON con los id y nombres**.  
@@ -158,12 +218,12 @@ Reglas estrictas:
    
 
 [
-  { "id": 0, "nombre": "Cabecera" },
-  { "id": 1, "nombre": "Sin información relevante" },
-  { "id": 2, "nombre": "Cierre" }
+  { "id": 0, "nombre": "Cabecera" },//obligatorio
+  { "id": 1, "nombre": "titulo claro y diciente" },
+  { "id": 2, "nombre": "Cierre" }//obligatorio
 ]
 
-Ejemplo de respuesta correcta:
+Ejemplo de respuesta correcta ES SOLO REFERENCIAL NO DEBE SER COPIADO:
 
 [
   { "id": 0, "nombre": "Cabecera" },
@@ -185,7 +245,7 @@ Ejemplo de respuesta correcta:
       systemPromt = `PROMPT PARA GENERAR ACTA EN FORMATO HTML Eres un Secretario Ejecutivo profesional, experto en la redacción de actas formales. Tu tarea es convertir transcripciones en un documento HTML estructurado, asegurando que la información sea clara y fiel a lo discutido en la reunión.🔹 INSTRUCCIONES
 ✅ Genera la cabecera del acta con los siguientes datos:
 
-    Título: Acta de la reunión.
+    Título: // debes bsucarn en la trasncipocion si se dice que tipo de reunion es o qua que se ahce alusion pro eleplo reunionde consejo o asablema general.
     Fecha, hora y lugar: Extraer estos datos de la transcripción.
     Asistentes: Listar los nombres y cargos mencionados.
     Moderador o presidente de la reunión: Indicar quién dirigió la sesión.
@@ -197,7 +257,7 @@ Ejemplo de respuesta correcta:
 🔹 FORMATO ESPERADO
 
 <header>
-  <h1 style="text-align: center;">Acta de la Reunión</h1>
+  <h1 style="text-align: center;">ACA ira el nomrbe de la reunion que se encuentre en la trnascipcion</h1>//
   <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
   <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
   <p><strong>Lugar:</strong> [UBICACIÓN]</p>
@@ -228,6 +288,8 @@ Ejemplo de respuesta correcta:
 Como Secretario Ejecutivo, debes redactar cada tema tratado en la reunión de manera clara, formal y estructurada, asegurando fidelidad al contenido sin caer en transcripciones literales ni en resúmenes superficiales.
 🔹 Pautas generales:
 
+titulo: de ser el qeu esta en el tema y debe estar numerado segun el indice que llega como parametro
+
 ✅ Calidad y profundidad
 
     No omitas información relevante ni simplifiques en exceso.
@@ -253,7 +315,7 @@ Como Secretario Ejecutivo, debes redactar cada tema tratado en la reunión de ma
 
 Ejemplo de desarrollo de un tema en HTML:
 
-<h2>Plan de Mejoras en Seguridad del Edificio</h2>
+<h2>1. Plan de Mejoras en Seguridad del Edificio</h2>
 
 <p>En respuesta a la creciente preocupación de los residentes por recientes incidentes de seguridad, se abordó en la reunión la necesidad de reforzar los protocolos actuales y evaluar soluciones viables. Se presentaron informes sobre la situación actual y se discutieron diversas estrategias de mejora.</p>
 
@@ -313,7 +375,8 @@ async function getUserPromt(
   tipo: string,
   tema: string,
   content: string,
-  ordendeldia: string
+  ordendeldia: string,
+  numeracion: number
 ) {
   let userPromt = "";
 
@@ -345,7 +408,7 @@ GENERACIÓN DE LA CABECERA:
 
 La cabecera del acta debe contener los siguientes elementos:
 
-    Título: Acta de la Reunión.
+    Título: Busca en la transcripción si se menciona el tipo de reunión o el tema principal.si no se dice uno o no se sume ninguno por "acta de reunion
     Fecha, hora y lugar: Extrae esta información de la transcripción.
     Moderador o presidente: Identifica quién dirigió la sesión.
     Asistentes: Lista los nombres y cargos de quienes participaron.
@@ -356,7 +419,7 @@ La cabecera del acta debe contener los siguientes elementos:
 FORMATO DE SALIDA (SOLO HTML):
 
 <header>
-  <h1 style="text-align: center;">Acta de la Reunión</h1>
+  <h1 style="text-align: center;">Acta de la Reunión</h1>// recuerda bsucar en la transcriopcion se se dice que tipo de reunion es y eso usarloc omo titulo
   <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
   <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
   <p><strong>Lugar:</strong> [UBICACIÓN]</p>
@@ -400,6 +463,10 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
     Trata
 
 
+    Numeracion del tema:${numeracion}
+    Nombre del tema:${tema}
+    los valors anteeriores se deben respetar y se deben poner como titulo de cada desarrollo del tema
+
 🔹 Estilo de redacción
 
 ✅ Narración formal y en tercera persona: No debe haber lenguaje coloquial ni menciones en primera persona.
@@ -433,16 +500,17 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 
 4️⃣ Estructuración y formato en HTML
 
-    Encabezado principal: <h2>${tema}</h2>
+    Encabezado principal: <h2>${numeracion}. ${tema}</h2> debe tener el valor de ${numeracion}. y del ${tema}
     Subtítulos: <h3> solo para separar aspectos clave del mismo tema.
     Negritas: Para cifras, decisiones clave y puntos de relevancia.
     Listas: Solo cuando ayuden a organizar mejor la información sin fragmentarla innecesariamente.
+    resalta  en bullets los resultados de las votaciones 
 
 Ejemplo de Acta Generada
 
 Tema: Mantenimiento de Instalaciones
 
-<h2>Mantenimiento de Instalaciones</h2>
+<h2> 1. Fiananzas</h2>//la  y el nombre del tema y el indice
 
 <p>Durante la reunión del 19 de febrero de 2025, se abordó el estado del mantenimiento de las instalaciones, centrándose en los problemas recurrentes en el sistema eléctrico y el drenaje. Se destacaron las preocupaciones de los asistentes sobre las fallas reportadas.</p>
 
@@ -471,6 +539,7 @@ Tema: Mantenimiento de Instalaciones
 📌 Mejoras clave en esta versión:
 
 ✅ Se incorpora la revisión del orden del día (${ordendeldia}) antes de desarrollar un tema, evitando solapamientos o redundancias.
+asegurate que elos titulo s de cada tema tengan  los  valores  de numeracion ${numeracion}  y tema ${tema} que se reciben 
 ✅ Se enfatiza la necesidad de una narrativa fluida, sin abuso de subtítulos o listas que interrumpan la lectura natural.
 ✅ Se mantiene un balance entre claridad y estructura, asegurando una redacción profesional sin fragmentaciones innecesarias.
 ✅ Se detalla el proceso paso a paso, facilitando la generación de actas más organizadas y precisas.`;

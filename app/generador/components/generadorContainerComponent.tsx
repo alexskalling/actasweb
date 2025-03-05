@@ -1,5 +1,5 @@
 import { CardContent } from "@/components/ui/card";
-import FileUploaderComponent from "./fileUploaderComponent";
+import MediaFileUploaderComponent from "./mediaFileUploaderComponent";
 
 export default function GeneradorContainerContainer() {
   return (
@@ -10,11 +10,7 @@ export default function GeneradorContainerContainer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="w-full rounded-sm">
           <div className="flex h-full">
-            <div className="m-auto">
-              <CardContent className="flex items-center justify-center ">
-                <FileUploaderComponent />
-              </CardContent>
-            </div>
+            <MediaFileUploaderComponent />
           </div>
         </div>
         <div className="w-full ">

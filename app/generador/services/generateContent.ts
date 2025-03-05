@@ -45,9 +45,10 @@ export async function generateContent(nombreNormalizado: string) {
 
     // Verifica si el archivo de contenido ya existe
     const contenidoExistente = await verificarArchivoExistente(
+      //@ts-expect-error revisar despues
+
       drive,
-      nombreContenido,
-      idCarpeta
+      nombreContenido
     );
 
     if (contenidoExistente) {
@@ -59,9 +60,10 @@ export async function generateContent(nombreNormalizado: string) {
     }
 
     const transcripcionExistente = await verificarArchivoExistente(
+      //@ts-expect-error revisar despues
+
       drive,
-      nombreTranscripcion,
-      idCarpeta
+      nombreTranscripcion
     );
 
     if (!transcripcionExistente) {
@@ -92,7 +94,7 @@ export async function generateContent(nombreNormalizado: string) {
 
       const revisionFinal = await generateText({
         model: google("gemini-2.0-flash-thinking-exp-01-21"),
-        maxTokens: 1000000,
+        maxTokens: 100000,
         temperature: 0,
         system: systemMessage,
         prompt: contentMessage,
@@ -121,8 +123,8 @@ export async function generateContent(nombreNormalizado: string) {
       const systemMessage = await getSystemPromt(i == 0 ? 1 : 2);
       const contentMessage = await getContentPromt(i == 0 ? 1 : 2, partes[i]);
       const text = await generateText({
-        model: google("gemini-2.0-flash"),
-        maxTokens: 1000000,
+        model: google("gemini-2.0-flash-thinking-exp-01-21"),
+        maxTokens: 100000,
         temperature: 0,
         system: systemMessage,
         prompt: contentMessage,
@@ -140,7 +142,7 @@ export async function generateContent(nombreNormalizado: string) {
 
     const revisionFinal = await generateText({
       model: google("gemini-2.0-flash-thinking-exp-01-21"),
-      maxTokens: 1000000,
+      maxTokens: 100000,
       temperature: 0,
       system: systemMessage,
       prompt: contentMessage,
