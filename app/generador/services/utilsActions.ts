@@ -74,7 +74,6 @@ export async function uploadFile(formData: FormData): Promise<UploadResult> {
       rutaCompletaArchivo,
       urlNextcloud,
       //@ts-expect-error revisar despues
-
       cabecerasAutenticacion,
       nombreCarpeta
     );
@@ -237,27 +236,34 @@ async function uploadFileToNextcloud(
   archivo: File,
   nombreCarpeta: string
 ): Promise<void> {
-  const stream = archivo.stream();
-  console.log(`[DEBUG] Tamaño del archivo: ${archivo.size}`); // Nuevo log
-  socketBackendReal.emit("upload-status", {
-    roomName: nombreCarpeta,
-    statusData: { message: `[Carga] Enviando archivo` },
-  });
+  console.log(`[DEBUG] Tamaño del archivo: ${archivo.size}`);
 
   try {
+    const arrayBuffer = await archivo.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+
     const respuestaSubida = await fetch(rutaCompletaArchivo, {
       method: "PUT",
+      headers: {
+        //@ts-expect-error revisar despues
+
+        ...cabecerasAutenticacion,
+        "Content-Length": buffer.length.toString(),
+      },
+      body: buffer,
       //@ts-expect-error revisar despues
-      headers: cabecerasAutenticacion,
-      body: stream,
-      duplex: "half", // Add this line
+
+      duplex: "half",
     });
-    console.log(`[DEBUG] Código de respuesta HTTP: ${respuestaSubida.status}`); // Nuevo log
+
+    console.log(`[DEBUG] Código de respuesta HTTP: ${respuestaSubida.status}`);
+
     if (!respuestaSubida.ok) {
       throw new Error(
         `Error al subir archivo: ${respuestaSubida.status} ${respuestaSubida.statusText}`
       );
     }
+
     socketBackendReal.emit("upload-status", {
       roomName: nombreCarpeta,
       statusData: { message: `[Carga] Archivo guardado` },
@@ -267,7 +273,7 @@ async function uploadFileToNextcloud(
       roomName: nombreCarpeta,
       statusData: { message: `[Carga] Error al transferir archivo` },
     });
-    throw error; // Relanzar el error
+    throw error;
   }
 }
 
