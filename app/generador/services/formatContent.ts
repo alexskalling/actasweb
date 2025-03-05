@@ -431,21 +431,28 @@ async function guardarArchivoNextcloudDocx(
     // **NUEVO - CALCULAR Content-Length EXPLICITAMENTE**
     const contentLength = Buffer.byteLength(docxBuffer); // Calcular tamaño en bytes del buffer
 
-    const cabecerasAutenticacion = {
+    // **MODIFICACIÓN IMPORTANTE - HEADERS COMO EN AUDIO, Y Content-Type DENTRO**
+    const cabecerasAutenticacionBase = {
+      // Renombramos para no confundir
       Authorization: "Basic " + btoa(usuario + ":" + contrasena),
+      // **QUITAMOS Content-Type DE AQUÍ**
+    };
+
+    const cabecerasAutenticacion = {
+      // Usamos un nuevo objeto para los headers FINALES
+      ...cabecerasAutenticacionBase, // **SPREAD DE LAS CABECERAS BASE (Authorization)**
       "Content-Type":
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "Content-Length": contentLength.toString(), // **NUEVO - AÑADIR Content-Length HEADER EXPLICITAMENTE**
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // **CONTENT-TYPE AHORA DENTRO, COMO Content-Length**
+      "Content-Length": contentLength.toString(), // **MANTENEMOS Content-Length**
     };
 
     writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch**
 
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
-      headers: cabecerasAutenticacion,
+      headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS**
       //@ts-expect-error revisar despues
       body: bufferStream,
-      duplex: "half", // **VOLVEMOS A duplex: "half"**
     });
 
     if (!respuestaGuardado.ok) {
