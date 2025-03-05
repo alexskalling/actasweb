@@ -463,6 +463,7 @@ async function guardarArchivoNextcloudDocx(
       headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS**
       //@ts-expect-error revisar despues
       body: bufferStream,
+      duplex: "half", // **¡LÍNEA CRUCIAL AÑADIDA: duplex: 'half'!**
     });
 
     if (!respuestaGuardado.ok) {
