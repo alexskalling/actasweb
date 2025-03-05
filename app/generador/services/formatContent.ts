@@ -1,5 +1,6 @@
 "use server";
-
+//@ts-expect-error revisar despues
+import htmlToDocx from "html-to-docx";
 import { Readable } from "stream";
 //@ts-expect-error revisar despues
 
@@ -355,8 +356,7 @@ async function obtenerUrlPublicaArchivoExistente(
   }
 }
 
-// Función para guardar el archivo .docx en Nextcloud (CON CAMBIOS IMPORTANTES PARA PRUEBAS: duplex: "half", Content-Type octet-stream, Buffer.from, log de fetch, CONSOLE LOGS ADICIONALES, GUARDADO LOCAL, LOG CONTENIDO docxBuffer, HTML MUY SIMPLE DE PRUEBA, **CONTENT-LENGTH HEADER EXPLICITO**)
-import fs from "fs/promises"; // Importar fs.promises para guardar archivo localmente
+import fs from "fs/promises";
 import path from "path";
 
 async function guardarArchivoNextcloudDocx(
@@ -364,49 +364,21 @@ async function guardarArchivoNextcloudDocx(
   nombreActaDocx: string,
   textoActa: string
 ): Promise<boolean> {
-  // **AHORA CREANDO UN SIMPLE ARCHIVO DE TEXTO EN LUGAR DE DOCX**
-  const textContent =
-    "Este es un archivo de texto plano subido desde Docker a Nextcloud.";
-  const textFileName = nombreActaDocx.replace(".docx", ".txt"); // Cambiar nombre de archivo a .txt
+  const actaContent = textoActa;
 
-  writeLog(`Preparando guardado .txt en Nextcloud: ${textFileName}`);
-  writeLog(`Contenido de textContent (texto plano): ${textContent}`);
-  console.log("textContent (Texto Plano): ", textContent);
-
-  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO - SIN CAMBIOS**
-  writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
-  writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
-  writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
-  writeLog(`  NEXTCLOUD_URL: ${process.env.NEXTCLOUD_URL}`);
-  writeLog(`  NEXTCLOUD_USER: ${process.env.NEXTCLOUD_USER}`);
-  writeLog(
-    `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
-  );
-  // LOG DEL CONTENIDO TEXTO  - SIN CAMBIOS
-  writeLog(`CONTENIDO TEXTO A SUBIR: ${textContent}`);
-  console.log(textoActa); // Sigue mostrando textoActa en consola (aunque ahora usamos textContent)
   try {
-    // **YA NO CREA DOCX - SOLO USA CONTENIDO DE TEXTO COMO BUFFER**
-    const textBuffer = Buffer.from(textContent, "utf-8"); // Buffer desde el contenido de texto
-    const bufferStream = Readable.from(textBuffer);
+    const docxBuffer = await htmlToDocx(actaContent);
 
-    writeLog(`Tamaño del textBuffer generado: ${textBuffer.length} bytes`); // **LOG DE DEPURACIÓN - Tamaño textBuffer**
-
-    // **NUEVA PRUEBA - GUARDAR textBuffer LOCALMENTE COMO ARCHIVO DE TEXTO**
     const rutaArchivoLocalPrueba = path.join(
       "/tmp",
-      `prueba_${textFileName}` // Usando nombre de archivo .txt
-    ); // Ajusta la ruta si es necesario
-    writeLog(
-      `Guardando textBuffer localmente para prueba en: ${rutaArchivoLocalPrueba}`
+      `prueba_${nombreActaDocx}`
     );
-    await fs.writeFile(rutaArchivoLocalPrueba, textBuffer); // Guardar textBuffer localmente
+    await fs.writeFile(rutaArchivoLocalPrueba, Buffer.from(docxBuffer));
 
-    writeLog(
-      `Primeros 100 bytes de textBuffer (hex): ${textBuffer
-        .subarray(0, 100)
-        .toString("hex")}`
-    ); // **NUEVO LOG - CONTENIDO textBuffer (PRIMEROS 100 BYTES en HEX)**
+    console.log(
+      "Primeros 100 bytes de docxBuffer (hex):",
+      Buffer.from(docxBuffer).subarray(0, 100).toString("hex")
+    );
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -417,60 +389,36 @@ async function guardarArchivoNextcloudDocx(
     }
 
     const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
-    const rutaCompletaCarpeta = `${rutaBaseActas}/${folder}`;
-    const rutaCompletaArchivoText = `${rutaCompletaCarpeta}/${textFileName}`; // Usando nombre .txt para ruta en Nextcloud
+    const rutaCompletaArchivoDocx = `${rutaBaseActas}/${folder}/${nombreActaDocx}`;
 
-    // **NUEVO - CALCULAR Content-Length EXPLICITAMENTE - SIN CAMBIOS**
-    const contentLength = Buffer.byteLength(textBuffer); // Tamaño del textBuffer
-
-    // **MODIFICACIÓN IMPORTANTE - CABECERAS - Content-Type AHORA text/plain**
-    const cabecerasAutenticacionBase = {
-      // Renombrando para no confundir - SIN CAMBIOS
-      Authorization: "Basic " + btoa(usuario + ":" + contrasena),
-      // **QUITAMOS Content-Type DE AQUÍ - SIN CAMBIOS**
-    };
+    const contentLength = Buffer.byteLength(docxBuffer);
 
     const cabecerasAutenticacion = {
-      // Usamos un nuevo objeto para las cabeceras FINALES - **Content-Type CAMBIADO a text/plain**
-      ...cabecerasAutenticacionBase, // **SPREAD DE LAS CABECERAS BASE (Authorization) - SIN CAMBIOS**
-      "Content-Type": "text/plain", // **CONTENT-TYPE AHORA ES text/plain**
-      "Content-Length": contentLength.toString(), // **MANTENEMOS Content-Length - SIN CAMBIOS**
+      Authorization:
+        "Basic " + Buffer.from(`${usuario}:${contrasena}`).toString("base64"),
+      "Content-Type": "application/octet-stream",
+      "Content-Length": contentLength.toString(),
     };
 
-    writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch - SIN CAMBIOS**
+    console.log(`[DEBUG] Subiendo archivo a: ${rutaCompletaArchivoDocx}`);
 
-    writeLog(`**INICIO LOG PETICIÓN FETCH PUT TEXT (PRUEBA):**`); // **CABECERA DEL LOG CAMBIADA A TEXTO**
-    writeLog(`  Método: PUT`); // **LOG - MÉTODO - SIN CAMBIOS**
-    writeLog(`  URL: ${rutaCompletaArchivoText}`); // **LOG - URL - AHORA URL DE ARCHIVO DE TEXTO**
-    writeLog(`  Headers:`); // **LOG - CABECERAS (JSON INDENTADO) - SIN CAMBIOS**
-    writeLog(JSON.stringify(cabecerasAutenticacion, null, 2));
-    writeLog(
-      `  Body: ReadableStream (Buffer de tamaño ${textBuffer.length} bytes)`
-    ); // **LOG - INFO DEL BODY - Tamaño del Buffer ahora de textBuffer**
-    writeLog(`**FIN LOG PETICIÓN FETCH PUT TEXT (PRUEBA)**`); // **PIE DEL LOG CAMBIADO A TEXTO**
-
-    const respuestaGuardado = await fetch(rutaCompletaArchivoText, {
-      // **URL AHORA ES DE ARCHIVO DE TEXTO**
+    const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
-      headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS - SIN CAMBIOS**
-      //@ts-expect-error revisar despues
-      body: bufferStream,
-      duplex: "half", // **MANTENEMOS duplex: 'half'**
+      headers: cabecerasAutenticacion,
+      body: docxBuffer, // Se envía directamente el buffer sin `duplex`
     });
 
     if (!respuestaGuardado.ok) {
       console.error(
-        `Error al guardar .txt en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}` // **MENSAJE DE ERROR CAMBIADO A .txt**
+        `Error al guardar .docx en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}`
       );
       return false;
     }
 
-    writeLog(
-      `.txt guardado exitosamente en Nextcloud (PRUEBA ARCHIVO DE TEXTO): ${textFileName}` // **MENSAJE DE ÉXITO CAMBIADO A ARCHIVO DE TEXTO**
-    );
+    console.log(`.docx guardado exitosamente en Nextcloud: ${nombreActaDocx}`);
     return true;
   } catch (error) {
-    manejarError("guardarArchivoNextcloudDocx", error); // Nombre del manejador de error sigue siendo de la función DOCX, OK por ahora.
+    console.error("Error en guardarArchivoNextcloudDocx:", error);
     return false;
   }
 }
