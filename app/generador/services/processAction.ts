@@ -41,7 +41,6 @@ export async function processAction(
     const formato = await formatContent(
       folder,
       file,
-      fileid,
       //@ts-expect-error revisar despues
 
       contenido.content

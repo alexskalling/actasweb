@@ -31,7 +31,6 @@ socketBackendReal.on("disconnect", (reason) => {
 export async function formatContent(
   folder: string,
   file: string,
-  fileid: string, // Ya no se usa para las URLs de descarga directa
   contenidoActa: string
 ) {
   const nombreNormalizado = file;
@@ -366,14 +365,27 @@ async function guardarArchivoNextcloudDocx(
   nombreActaDocx: string,
   textoActa: string // Aunque este parámetro no se usa directamente ahora, se mantiene para la estructura de la función
 ): Promise<boolean> {
-  // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA**
-  const actaContent = textoActa;
+  // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
+  const actaContent =
+    "<h1>Prueba DOCX Simple</h1><p>Texto sencillo de prueba para Docker.</p>";
 
   writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
   writeLog(
     `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
-  ); // **LOG DE DEPURACIÓN - Contenido HTML**
-  console.log("actaContent: ", actaContent); // Puedes dejar este console.log TEMPORALMENTE para ver en consola del navegador
+  );
+  console.log("actaContent (HTML Simple de Prueba): ", actaContent);
+
+  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO**
+  writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
+  writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
+  writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
+  writeLog(`  NEXTCLOUD_URL: ${process.env.NEXTCLOUD_URL}`);
+  writeLog(`  NEXTCLOUD_USER: ${process.env.NEXTCLOUD_USER}`);
+  writeLog(
+    `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
+  );
+  // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
+  writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
 
   try {
     const docxBuffer = await htmlToDocx(actaContent);

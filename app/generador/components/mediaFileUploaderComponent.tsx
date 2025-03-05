@@ -142,7 +142,6 @@ export default function MediaFileUploaderComponent({
   }, [preview]);
 
   const handleUploadFile = async () => {
-    console.log("Subiendo archivo a Nextcloud...");
     setCalculando(true);
     setError(null);
     setUploadStatus(
@@ -165,8 +164,7 @@ export default function MediaFileUploaderComponent({
       socket.emit("set-filename", nombreNormalizado);
       socket.emit("join-room", nombreCarpeta);
     }
-    console.log("Nombre normalizado:", nombreNormalizado);
-    console.log(nombreCarpeta);
+
     formData.append("audioFile", selectedFile);
     formData.append("nombreCarpeta", nombreCarpeta);
     formData.append("nombreNormalizado", nombreNormalizado);
