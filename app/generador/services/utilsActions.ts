@@ -238,6 +238,7 @@ async function uploadFileToNextcloud(
   nombreCarpeta: string
 ): Promise<void> {
   const stream = archivo.stream();
+  console.log(`[DEBUG] Tamaño del archivo: ${archivo.size}`); // Nuevo log
   socketBackendReal.emit("upload-status", {
     roomName: nombreCarpeta,
     statusData: { message: `[Carga] Enviando archivo` },
@@ -249,9 +250,9 @@ async function uploadFileToNextcloud(
       //@ts-expect-error revisar despues
       headers: cabecerasAutenticacion,
       body: stream,
-      duplex: "half",
+      duplex: "half", // Add this line
     });
-
+    console.log(`[DEBUG] Código de respuesta HTTP: ${respuestaSubida.status}`); // Nuevo log
     if (!respuestaSubida.ok) {
       throw new Error(
         `Error al subir archivo: ${respuestaSubida.status} ${respuestaSubida.statusText}`
