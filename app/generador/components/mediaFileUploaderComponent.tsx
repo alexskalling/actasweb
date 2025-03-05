@@ -88,6 +88,8 @@ export default function MediaFileUploaderComponent({
 
   const clearSelection = () => {
     setSelectedFile(null);
+    //@ts-expect-error revisar despues
+
     setFile(null);
     setDuration(0);
     setPreview(null);
