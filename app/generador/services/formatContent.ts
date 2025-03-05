@@ -386,7 +386,7 @@ async function guardarArchivoNextcloudDocx(
   );
   // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
   writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
-
+  console.log(textoActa);
   try {
     const docxBuffer = await htmlToDocx(actaContent);
     writeLog(
