@@ -88,6 +88,7 @@ export default function MediaFileUploaderComponent({
 
   const clearSelection = () => {
     setSelectedFile(null);
+    setFile(null);
     setDuration(0);
     setPreview(null);
     setError(null);
@@ -360,11 +361,12 @@ export default function MediaFileUploaderComponent({
             </div>
           </div>
         )}
+
         <div className="flex gap-4">
           <Button
             className="w-full rounded-sm"
             variant="outline"
-            onClick={handlePayment}
+            onClick={clearSelection}
           >
             Cancelar
           </Button>
@@ -1015,6 +1017,7 @@ export default function MediaFileUploaderComponent({
             </Button>
           )}
         </div>
+
         <div>
           {uploadStatus && ( // Muestra el estado de la carga (éxito o error)
             <div className="mt-2 text-sm  break-words text-center text-white ">
@@ -1027,6 +1030,14 @@ export default function MediaFileUploaderComponent({
             </div>
           )}
         </div>
+        {file && (
+          <div
+            className="text-purple-950 mt-50 cursor-pointer  w-fit"
+            onClick={handlePayment}
+          >
+            .
+          </div>
+        )}
       </div>
     </div>
   );
