@@ -363,19 +363,18 @@ import path from "path";
 async function guardarArchivoNextcloudDocx(
   folder: string,
   nombreActaDocx: string,
-  textoActa: string // Aunque este parámetro no se usa directamente ahora, se mantiene para la estructura de la función
+  textoActa: string
 ): Promise<boolean> {
-  // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
-  const actaContent =
-    "<h1>Prueba DOCX Simple</h1><p>Texto sencillo de prueba para Docker.</p>";
+  // **AHORA CREANDO UN SIMPLE ARCHIVO DE TEXTO EN LUGAR DE DOCX**
+  const textContent =
+    "Este es un archivo de texto plano subido desde Docker a Nextcloud.";
+  const textFileName = nombreActaDocx.replace(".docx", ".txt"); // Cambiar nombre de archivo a .txt
 
-  writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
-  writeLog(
-    `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
-  );
-  console.log("actaContent (HTML Simple de Prueba): ", actaContent);
+  writeLog(`Preparando guardado .txt en Nextcloud: ${textFileName}`);
+  writeLog(`Contenido de textContent (texto plano): ${textContent}`);
+  console.log("textContent (Texto Plano): ", textContent);
 
-  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO**
+  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO - SIN CAMBIOS**
   writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
   writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
   writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
@@ -384,37 +383,31 @@ async function guardarArchivoNextcloudDocx(
   writeLog(
     `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
   );
-  // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
-  writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
-  console.log(textoActa);
+  // LOG DEL CONTENIDO TEXTO  - SIN CAMBIOS
+  writeLog(`CONTENIDO TEXTO A SUBIR: ${textContent}`);
+  console.log(textoActa); // Sigue mostrando textoActa en consola (aunque ahora usamos textContent)
   try {
-    const docxBuffer = await htmlToDocx(actaContent);
-    writeLog(
-      `Tamaño del docxBuffer generado por htmlToDocx: ${docxBuffer.length} bytes`
-    ); // **LOG DE DEPURACIÓN - Tamaño docxBuffer**
+    // **YA NO CREA DOCX - SOLO USA CONTENIDO DE TEXTO COMO BUFFER**
+    const textBuffer = Buffer.from(textContent, "utf-8"); // Buffer desde el contenido de texto
+    const bufferStream = Readable.from(textBuffer);
 
-    // **NUEVA PRUEBA - GUARDAR docxBuffer LOCALMENTE**
+    writeLog(`Tamaño del textBuffer generado: ${textBuffer.length} bytes`); // **LOG DE DEPURACIÓN - Tamaño textBuffer**
+
+    // **NUEVA PRUEBA - GUARDAR textBuffer LOCALMENTE COMO ARCHIVO DE TEXTO**
     const rutaArchivoLocalPrueba = path.join(
       "/tmp",
-      `prueba_${nombreActaDocx}`
+      `prueba_${textFileName}` // Usando nombre de archivo .txt
     ); // Ajusta la ruta si es necesario
     writeLog(
-      `Guardando docxBuffer localmente para prueba en: ${rutaArchivoLocalPrueba}`
+      `Guardando textBuffer localmente para prueba en: ${rutaArchivoLocalPrueba}`
     );
-    await fs.writeFile(rutaArchivoLocalPrueba, Buffer.from(docxBuffer)); // Guardar como Buffer
+    await fs.writeFile(rutaArchivoLocalPrueba, textBuffer); // Guardar textBuffer localmente
 
     writeLog(
-      `Primeros 100 bytes de docxBuffer (hex): ${Buffer.from(docxBuffer)
+      `Primeros 100 bytes de textBuffer (hex): ${textBuffer
         .subarray(0, 100)
         .toString("hex")}`
-    ); // **NUEVO LOG - CONTENIDO docxBuffer (PRIMEROS 100 BYTES en HEX)**
-    console.log(
-      "Primeros 100 bytes de docxBuffer (hex): ",
-      Buffer.from(docxBuffer).subarray(0, 100).toString("hex")
-    ); // Console.log también
-
-    // const bufferStream = Readable.from(docxBuffer); // Línea original
-    const bufferStream = Readable.from(Buffer.from(docxBuffer)); // **MANTENEMOS Buffer.from()**
+    ); // **NUEVO LOG - CONTENIDO textBuffer (PRIMEROS 100 BYTES en HEX)**
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -426,59 +419,59 @@ async function guardarArchivoNextcloudDocx(
 
     const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
     const rutaCompletaCarpeta = `${rutaBaseActas}/${folder}`;
-    const rutaCompletaArchivoDocx = `${rutaCompletaCarpeta}/${nombreActaDocx}`;
+    const rutaCompletaArchivoText = `${rutaCompletaCarpeta}/${textFileName}`; // Usando nombre .txt para ruta en Nextcloud
 
-    // **NUEVO - CALCULAR Content-Length EXPLICITAMENTE**
-    const contentLength = Buffer.byteLength(docxBuffer); // Calcular tamaño en bytes del buffer
+    // **NUEVO - CALCULAR Content-Length EXPLICITAMENTE - SIN CAMBIOS**
+    const contentLength = Buffer.byteLength(textBuffer); // Tamaño del textBuffer
 
-    // **MODIFICACIÓN IMPORTANTE - HEADERS COMO EN AUDIO, Y Content-Type DENTRO**
+    // **MODIFICACIÓN IMPORTANTE - CABECERAS - Content-Type AHORA text/plain**
     const cabecerasAutenticacionBase = {
-      // Renombramos para no confundir
+      // Renombrando para no confundir - SIN CAMBIOS
       Authorization: "Basic " + btoa(usuario + ":" + contrasena),
-      // **QUITAMOS Content-Type DE AQUÍ**
+      // **QUITAMOS Content-Type DE AQUÍ - SIN CAMBIOS**
     };
 
     const cabecerasAutenticacion = {
-      // Usamos un nuevo objeto para los headers FINALES
-      ...cabecerasAutenticacionBase, // **SPREAD DE LAS CABECERAS BASE (Authorization)**
-      "Content-Type":
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document", // **CONTENT-TYPE AHORA DENTRO, COMO Content-Length**
-      "Content-Length": contentLength.toString(), // **MANTENEMOS Content-Length**
+      // Usamos un nuevo objeto para las cabeceras FINALES - **Content-Type CAMBIADO a text/plain**
+      ...cabecerasAutenticacionBase, // **SPREAD DE LAS CABECERAS BASE (Authorization) - SIN CAMBIOS**
+      "Content-Type": "text/plain", // **CONTENT-TYPE AHORA ES text/plain**
+      "Content-Length": contentLength.toString(), // **MANTENEMOS Content-Length - SIN CAMBIOS**
     };
 
-    writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch**
+    writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch - SIN CAMBIOS**
 
-    writeLog(`**INICIO LOG PETICIÓN FETCH PUT DOCX (FALLIDA):**`); // **NUEVO LOG - INICIO PETICIÓN DOCX**
-    writeLog(`  Método: PUT`); // **LOG - MÉTODO**
-    writeLog(`  URL: ${rutaCompletaArchivoDocx}`); // **LOG - URL**
-    writeLog(`  Headers:`); // **LOG - HEADERS (JSON INDENTADO)**
+    writeLog(`**INICIO LOG PETICIÓN FETCH PUT TEXT (PRUEBA):**`); // **CABECERA DEL LOG CAMBIADA A TEXTO**
+    writeLog(`  Método: PUT`); // **LOG - MÉTODO - SIN CAMBIOS**
+    writeLog(`  URL: ${rutaCompletaArchivoText}`); // **LOG - URL - AHORA URL DE ARCHIVO DE TEXTO**
+    writeLog(`  Headers:`); // **LOG - CABECERAS (JSON INDENTADO) - SIN CAMBIOS**
     writeLog(JSON.stringify(cabecerasAutenticacion, null, 2));
     writeLog(
-      `  Body: ReadableStream (Buffer de tamaño ${docxBuffer.length} bytes)`
-    ); // **LOG - BODY INFO**
-    writeLog(`**FIN LOG PETICIÓN FETCH PUT DOCX (FALLIDA)**`); // **NUEVO LOG - FIN PETICIÓN DOCX**
+      `  Body: ReadableStream (Buffer de tamaño ${textBuffer.length} bytes)`
+    ); // **LOG - INFO DEL BODY - Tamaño del Buffer ahora de textBuffer**
+    writeLog(`**FIN LOG PETICIÓN FETCH PUT TEXT (PRUEBA)**`); // **PIE DEL LOG CAMBIADO A TEXTO**
 
-    const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
+    const respuestaGuardado = await fetch(rutaCompletaArchivoText, {
+      // **URL AHORA ES DE ARCHIVO DE TEXTO**
       method: "PUT",
-      headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS**
+      headers: cabecerasAutenticacion, // **USAMOS EL NUEVO OBJETO DE CABECERAS - SIN CAMBIOS**
       //@ts-expect-error revisar despues
       body: bufferStream,
-      duplex: "half", // **¡LÍNEA CRUCIAL AÑADIDA: duplex: 'half'!**
+      duplex: "half", // **MANTENEMOS duplex: 'half'**
     });
 
     if (!respuestaGuardado.ok) {
       console.error(
-        `Error al guardar .docx en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}`
+        `Error al guardar .txt en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}` // **MENSAJE DE ERROR CAMBIADO A .txt**
       );
       return false;
     }
 
     writeLog(
-      `.docx guardado exitosamente en Nextcloud con Content-Type: application/octet-stream, Content-Length: ${contentLength}, y duplex: half: ${nombreActaDocx}`
-    ); // **LOG MODIFICADO - Indica Content-Type, Content-Length y duplex: half**
+      `.txt guardado exitosamente en Nextcloud (PRUEBA ARCHIVO DE TEXTO): ${textFileName}` // **MENSAJE DE ÉXITO CAMBIADO A ARCHIVO DE TEXTO**
+    );
     return true;
   } catch (error) {
-    manejarError("guardarArchivoNextcloudDocx", error);
+    manejarError("guardarArchivoNextcloudDocx", error); // Nombre del manejador de error sigue siendo de la función DOCX, OK por ahora.
     return false;
   }
 }
