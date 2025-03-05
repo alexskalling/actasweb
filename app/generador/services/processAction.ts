@@ -6,12 +6,12 @@ import { transcripAction } from "./transcriptAction";
 export async function processAction(
   folder: string,
   file: string,
-  fileid: string
+  urlAssembly: string
 ) {
   try {
     console.log("Inicio de proceso de acción");
-    console.log("Proceso de  trasncripcion");
-    const transcribe = await transcripAction(folder, file, fileid);
+    console.log("Proceso de  trasncripcion" + urlAssembly);
+    const transcribe = await transcripAction(folder, file, urlAssembly);
     if (transcribe?.status !== "success") {
       console.log("Error en la generación de trasncripcion");
       return {
@@ -24,7 +24,7 @@ export async function processAction(
     const contenido = await generateContenta(
       folder,
       file,
-      fileid,
+      urlAssembly,
       //@ts-expect-error revisar despues
       transcribe.content
     );

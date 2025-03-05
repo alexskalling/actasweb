@@ -33,7 +33,7 @@ interface TranscripcionResult {
 export async function transcripAction(
   folder: string,
   file: string,
-  fileid: string
+  urlAssembly: string
 ): Promise<TranscripcionResult> {
   const nombreTranscripcion = generateTranscriptionFilename(file);
   const nextcloudUser = process.env.NEXTCLOUD_USER;
@@ -59,9 +59,9 @@ export async function transcripAction(
     }
 
     const textoTranscripcion = await realizarTranscripcionAssemblyAI(
+      folder,
       file,
-      fileid,
-      nextcloudUrl
+      urlAssembly
     );
     await guardarTranscripcionEnNextcloud(
       folder,
@@ -123,9 +123,9 @@ async function obtenerTranscripcionExistente(
 }
 
 async function realizarTranscripcionAssemblyAI(
+  folder: string,
   file: string,
-  fileid: string,
-  urlNextcloud: string
+  urlAssembly: string
 ): Promise<string> {
   writeLog(`Iniciando transcripción con AssemblyAI para: ${file}`);
   socketBackendReal.emit("upload-status", {
@@ -135,10 +135,9 @@ async function realizarTranscripcionAssemblyAI(
     },
   });
 
-  const publicUrlNextcloud = `${urlNextcloud}/s/${fileid}/download/${file}`;
   const clienteTranscripcion = await obtenerClienteTranscripcion();
   const transcripcion = await clienteTranscripcion.transcripts.transcribe({
-    audio_url: publicUrlNextcloud,
+    audio_url: urlAssembly,
     speaker_labels: true,
     language_code: "es",
   });

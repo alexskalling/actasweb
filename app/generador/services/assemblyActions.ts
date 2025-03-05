@@ -14,6 +14,7 @@ export const uploadFileToAssemblyAI = async (
   transcriptId?: string;
   error?: string;
 }> => {
+  console.log("inicio carga");
   // Retornará transcriptId también
   if (!ASSEMBLYAI_API_KEY) {
     return { success: false, error: "AssemblyAI API key is not configured." };
@@ -24,9 +25,8 @@ export const uploadFileToAssemblyAI = async (
   if (!audioFile) {
     return { success: false, error: "No audio file provided in formData." };
   }
-
+  console.log("llamando al api");
   try {
-    // **Paso 1: Subir el archivo (como antes)**
     const uploadResponse = await fetch("https://api.assemblyai.com/v2/upload", {
       method: "POST",
       headers: {
@@ -47,7 +47,7 @@ export const uploadFileToAssemblyAI = async (
         error: `Upload failed with status ${uploadResponse.status}: ${errorText}`,
       };
     }
-
+    console.log("revcisando url");
     const uploadResult = await uploadResponse.json();
     const uploadUrl = uploadResult?.upload_url; // Extraer upload_url
 
@@ -61,53 +61,10 @@ export const uploadFileToAssemblyAI = async (
         error: "Upload successful but upload URL not found in response.",
       };
     }
+    console.log(JSON.stringify(uploadResponse));
+    console.log("url" + uploadUrl);
 
-    // **Paso 2: Iniciar la transcripción (NUEVO)**
-    const transcriptionResponse = await fetch(
-      "https://api.assemblyai.com/v2/transcript",
-      {
-        method: "POST",
-        headers: {
-          Authorization: ASSEMBLYAI_API_KEY,
-          "Content-Type": "application/json", // Importante indicar que enviamos JSON
-        },
-        body: JSON.stringify({
-          audio_url: uploadUrl, // Usamos la upload_url obtenida del paso 1
-        }),
-      }
-    );
-
-    if (!transcriptionResponse.ok) {
-      const errorText = await transcriptionResponse.text();
-      console.error(
-        "AssemblyAI Transcription API error:",
-        transcriptionResponse.status,
-        errorText
-      );
-      return {
-        success: false,
-        uploadUrl: uploadUrl,
-        error: `Transcription start failed with status ${transcriptionResponse.status}: ${errorText}`,
-      }; // Devolvemos también uploadUrl en caso de error de transcripción, por si acaso
-    }
-
-    const transcriptionResult = await transcriptionResponse.json();
-    const transcriptId = transcriptionResult?.id; // Extraer transcript_id
-
-    if (!transcriptId) {
-      console.error(
-        "AssemblyAI Transcription API response missing transcript_id:",
-        transcriptionResult
-      );
-      return {
-        success: false,
-        uploadUrl: uploadUrl,
-        error:
-          "Transcription started successfully but transcript ID not found in response.",
-      }; // Devolvemos también uploadUrl en caso de error de transcript_id, por si acaso
-    }
-
-    return { success: true, uploadUrl: uploadUrl, transcriptId: transcriptId }; // Retornar ambos: uploadUrl y transcriptId
+    return { success: true, uploadUrl: uploadUrl }; // Retornar ambos: uploadUrl y transcriptId
   } catch (error) {
     console.error(
       "Error during AssemblyAI file upload and transcription:",

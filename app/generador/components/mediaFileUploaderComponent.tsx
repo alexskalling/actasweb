@@ -3,11 +3,13 @@
 import * as React from "react";
 import { Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { normalizarNombreArchivo, uploadFile } from "../services/utilsActions";
+import { normalizarNombreArchivo } from "../services/utilsActions";
 import WompiComponent from "./wompiComponent";
 import { processAction } from "../services/processAction";
 import io, { Socket } from "socket.io-client";
 import { saveTransactionAction } from "../services/saveTransactionAction";
+import { uploadFile } from "../services/uploadFileAction";
+import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 
 interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
@@ -28,6 +30,7 @@ export default function MediaFileUploaderComponent({
   const [procesando, setProcesando] = React.useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = React.useState<number>(0);
   const [publicUrl, setPublicUrl] = React.useState<string | null>(null);
+  const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
   const [file, setFile] = React.useState<string>();
   const [fileid, setFileid] = React.useState<string>();
@@ -101,14 +104,10 @@ export default function MediaFileUploaderComponent({
 
   async function handlePayment() {
     setProcesando(true);
-    if (!folder || !file || !fileid) {
-      console.error(
-        "No se han proporcionado los datos necesarios para el pago"
-      );
-      return;
-    }
+
     setUploadStatus("Iniciando generacion del acta");
-    const result = await processAction(folder, file, fileid);
+    //@ts-expect-error revisar despues
+    const result = await processAction(folder, file, urlAssembly);
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
@@ -170,13 +169,15 @@ export default function MediaFileUploaderComponent({
     formData.append("nombreNormalizado", nombreNormalizado);
 
     try {
-      const result = await uploadFile(formData);
+      const result = await uploadFileToAssemblyAI(formData);
+
       if (result.success) {
         setFile(nombreNormalizado);
         setFolder(nombreCarpeta);
+        console.log(result.uploadUrl);
         //@ts-expect-error revisar despues
 
-        setFileid(result.publicUrl.match(/([^/]+)$/)?.[1] || "");
+        setUrlAssembly(result.uploadUrl);
 
         setRoomName(nombreCarpeta);
 
