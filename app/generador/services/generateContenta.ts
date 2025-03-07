@@ -114,7 +114,6 @@ export async function generateContenta(
       .replace(/^`+|`+$/g, "")
       .replace(/^json/i, "");
 
-    let contenido = "";
     try {
       const ordenDelDiaJSON = JSON.parse(jsonCleaned);
       socketBackendReal.emit("upload-status", {
@@ -163,22 +162,20 @@ export async function generateContenta(
 }
 
 async function procesarOrdenDelDia(
-  //@ts-expect-error revisar despues
-
+  //@ts-expect-error revisar después
   ordenDelDiaJSON,
-  //@ts-expect-error revisar despues
-
+  //@ts-expect-error revisar después
   folder,
-  //@ts-expect-error revisar despues
-
+  //@ts-expect-error revisar después
   socketBackendReal,
-  //@ts-expect-error revisar despues
-
+  //@ts-expect-error revisar después
   contenidoTranscripcion
 ) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let contenido = "";
+
   let index = 0;
-  let modelName = "gemini-2.0-flash-thinking-exp-01-21"; // Modelo inicial (priorizado)
+  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
   const maxRetries = 3;
   let retryCount = 0;
 
@@ -205,7 +202,7 @@ async function procesarOrdenDelDia(
     const userPromptType = systemPromptType;
 
     let responseTema;
-    retryCount = 0; // Reiniciar el contador de reintentos para cada tema
+    retryCount = 0;
 
     while (retryCount < maxRetries) {
       try {
@@ -224,7 +221,7 @@ async function procesarOrdenDelDia(
         });
         console.log(responseTema.text.trim());
         contenido += responseTema.text.trim();
-        break; // Éxito, salir del bucle de reintento
+        break;
       } catch (error) {
         console.error(
           `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):`,
@@ -232,7 +229,6 @@ async function procesarOrdenDelDia(
         );
         retryCount++;
         if (retryCount >= 2 && modelName === "gemini-thinking") {
-          // Solo cambia a flash en el tercer intento fallido (segundo error consecutivo)
           modelName = "gemini-2.0-flash";
           console.log("Cambio de modelo a gemini-2.0-flash");
         }
@@ -245,10 +241,13 @@ async function procesarOrdenDelDia(
           break;
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 5000)); // Esperar 5 segundos antes del reintento
+        await new Promise((resolve) => setTimeout(resolve, 5000));
       }
     }
     index++;
+  }
+  if (contenido.trim() === "") {
+    console.warn("Advertencia: El contenido está vacío.");
   }
   return contenido;
 }
