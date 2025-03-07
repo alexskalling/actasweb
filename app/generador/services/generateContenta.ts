@@ -124,46 +124,12 @@ export async function generateContenta(
         },
       });
       console.log(ordenDelDiaJSON);
-      let index = 0;
-      for (const tema of ordenDelDiaJSON) {
-        console.log(tema);
-        if (tema.nombre != "Cabecera" && tema.nombre != "Cierre") {
-          socketBackendReal.emit("upload-status", {
-            roomName: folder,
-            statusData: {
-              message: `[Contenido] ${index}/${ordenDelDiaJSON.length - 2}   ${
-                tema.nombre
-              }   `,
-            },
-          });
-        }
-        console.log(index);
-        const systemPromptType =
-          tema.nombre === "Cabecera"
-            ? "Cabecera"
-            : tema.nombre === "Cierre"
-            ? "Cierre"
-            : "Contenido";
-
-        const userPromptType = systemPromptType; // They appear to be the same based on original code.
-
-        const responseTema = await generateText({
-          model: google("gemini-2.0-flash"),
-          maxTokens: 100000, // Consider adjusting maxTokens per tema.
-          temperature: 0,
-          system: await getSystemPromt(systemPromptType),
-          prompt: await getUserPromt(
-            userPromptType,
-            tema.nombre,
-            contenidoTranscripcion,
-            ordenDelDiaJSON,
-            index
-          ),
-        });
-        console.log(responseTema.text.trim());
-        contenido += responseTema.text.trim();
-        index++;
-      }
+      const contenido = await procesarOrdenDelDia(
+        ordenDelDiaJSON,
+        folder,
+        socketBackendReal,
+        contenidoTranscripcion
+      );
 
       const contenidoFormato = contenido
         .replace(/```html/g, "")
@@ -194,6 +160,97 @@ export async function generateContenta(
       message: "Error durante la generación del contenido.",
     };
   }
+}
+
+async function procesarOrdenDelDia(
+  //@ts-expect-error revisar despues
+
+  ordenDelDiaJSON,
+  //@ts-expect-error revisar despues
+
+  folder,
+  //@ts-expect-error revisar despues
+
+  socketBackendReal,
+  //@ts-expect-error revisar despues
+
+  contenidoTranscripcion
+) {
+  let contenido = "";
+  let index = 0;
+  let modelName = "gemini-2.0-flash-thinking-exp-01-21"; // Modelo inicial (priorizado)
+  const maxRetries = 3;
+  let retryCount = 0;
+
+  for (const tema of ordenDelDiaJSON) {
+    console.log(tema);
+    if (tema.nombre != "Cabecera" && tema.nombre != "Cierre") {
+      socketBackendReal.emit("upload-status", {
+        roomName: folder,
+        statusData: {
+          message: `[Contenido] ${index}/${ordenDelDiaJSON.length - 2}   ${
+            tema.nombre
+          }   `,
+        },
+      });
+    }
+    console.log(index);
+    const systemPromptType =
+      tema.nombre === "Cabecera"
+        ? "Cabecera"
+        : tema.nombre === "Cierre"
+        ? "Cierre"
+        : "Contenido";
+
+    const userPromptType = systemPromptType;
+
+    let responseTema;
+    retryCount = 0; // Reiniciar el contador de reintentos para cada tema
+
+    while (retryCount < maxRetries) {
+      try {
+        responseTema = await generateText({
+          model: google(modelName),
+          maxTokens: 100000,
+          temperature: 0,
+          system: await getSystemPromt(systemPromptType),
+          prompt: await getUserPromt(
+            userPromptType,
+            tema.nombre,
+            contenidoTranscripcion,
+            ordenDelDiaJSON,
+            index
+          ),
+        });
+        console.log(responseTema.text.trim());
+        contenido += responseTema.text.trim();
+        break; // Éxito, salir del bucle de reintento
+      } catch (error) {
+        console.error(
+          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):`,
+          error
+        );
+        retryCount++;
+        if (retryCount >= 2 && modelName === "gemini-thinking") {
+          // Solo cambia a flash en el tercer intento fallido (segundo error consecutivo)
+          modelName = "gemini-2.0-flash";
+          console.log("Cambio de modelo a gemini-2.0-flash");
+        }
+
+        if (retryCount >= maxRetries) {
+          console.error(
+            "Máximo número de intentos alcanzado, no se pudo procesar el tema."
+          );
+          contenido += `[Error: No se pudo procesar ${tema.nombre}. Máximo número de intentos alcanzado.]`;
+          break;
+        }
+
+        await new Promise((resolve) => setTimeout(resolve, 5000)); // Esperar 5 segundos antes del reintento
+      }
+    }
+    index++;
+  }
+  return contenido;
 }
 
 async function getSystemPromt(tipo: string) {
@@ -471,6 +528,8 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 
 ✅ Narración formal y en tercera persona: No debe haber lenguaje coloquial ni menciones en primera persona.
 ✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse a actas anteriores.
+La redaccion debe estar de manera estrica en modo de terceera persona y no se debe repetir informacion que ya se dio en otro tema
+ten cuidado con ser muy redundate con el tema de lso cambios en el orden de dia apra no esta  a cada rato mencionando que se cambio el orden del dia
 ✅ Estructura organizada y coherente:
 
     Evitar redundancias: Si un aspecto se desarrollará en otro punto del orden del día, se menciona la relación sin repetir información.
@@ -542,7 +601,8 @@ Tema: Mantenimiento de Instalaciones
 asegurate que elos titulo s de cada tema tengan  los  valores  de numeracion ${numeracion}  y tema ${tema} que se reciben 
 ✅ Se enfatiza la necesidad de una narrativa fluida, sin abuso de subtítulos o listas que interrumpan la lectura natural.
 ✅ Se mantiene un balance entre claridad y estructura, asegurando una redacción profesional sin fragmentaciones innecesarias.
-✅ Se detalla el proceso paso a paso, facilitando la generación de actas más organizadas y precisas.`;
+✅ Se detalla el proceso paso a paso, facilitando la generación de actas más organizadas y precisas.
+asegurate que todo el contenido si o si este en tercera persona y que no se repita informacion que ya se dio en otro tema`;
       return userPromt;
 
     case "Cierre":
