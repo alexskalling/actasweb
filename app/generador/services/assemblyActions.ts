@@ -36,7 +36,6 @@ export async function uploadFileToAssemblyAI(
     xhr.upload.onprogress = (event) => {
       if (event.lengthComputable && onUploadProgress) {
         const progress = (event.loaded / event.total) * 100;
-        console.log("Upload Progress (services/assemblyActions.ts):", progress); // ➡️ Añade esta línea
         onUploadProgress(progress);
       }
     };
