@@ -51,7 +51,6 @@ export async function uploadFileToAssemblyAI(
             message: "Audio subido exitosamente a AssemblyAI.",
             publicUrl: null,
             uploadUrl: uploadResult.upload_url,
-            error: null,
           });
         } catch (e) {
           console.error("Error al parsear la respuesta JSON:", e);
