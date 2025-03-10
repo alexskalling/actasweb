@@ -174,6 +174,8 @@ export default function MediaFileUploaderComponent({
       });
 
       if (result.success) {
+        setUploadStatus("Archivo listo para ser procesado");
+
         setFile(nombreNormalizado);
         setFolder(nombreCarpeta);
         console.log(result.uploadUrl);
