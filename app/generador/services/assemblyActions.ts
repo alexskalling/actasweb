@@ -1,78 +1,101 @@
-// services/assemblyaiActions.ts (modificado)
-
-const ASSEMBLYAI_API_KEY = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
-
-if (!ASSEMBLYAI_API_KEY) {
-  console.error("ASSEMBLYAI_API_KEY is not set in environment variables.");
+// services/assemblyActions.ts
+"use client";
+interface UploadResult {
+  success: boolean;
+  message?: string;
+  publicUrl?: string | null;
+  error?: string;
+  uploadUrl?: string | null;
 }
 
-export const uploadFileToAssemblyAI = async (
-  formData: FormData
-): Promise<{
-  success: boolean;
-  uploadUrl?: string;
-  transcriptId?: string;
-  error?: string;
-}> => {
-  console.log("inicio carga");
-  // Retornará transcriptId también
+export async function uploadFileToAssemblyAI(
+  formData: FormData,
+  onUploadProgress?: (progress: number) => void
+): Promise<UploadResult> {
+  const ASSEMBLYAI_API_KEY = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
+  const archivo = formData.get("audioFile") as File;
+
   if (!ASSEMBLYAI_API_KEY) {
-    return { success: false, error: "AssemblyAI API key is not configured." };
-  }
-
-  const audioFile = formData.get("audioFile") as File;
-
-  if (!audioFile) {
-    return { success: false, error: "No audio file provided in formData." };
-  }
-  console.log("llamando al api");
-  try {
-    const uploadResponse = await fetch("https://api.assemblyai.com/v2/upload", {
-      method: "POST",
-      headers: {
-        Authorization: ASSEMBLYAI_API_KEY,
-      },
-      body: audioFile,
-    });
-
-    if (!uploadResponse.ok) {
-      const errorText = await uploadResponse.text();
-      console.error(
-        "AssemblyAI Upload API error:",
-        uploadResponse.status,
-        errorText
-      );
-      return {
-        success: false,
-        error: `Upload failed with status ${uploadResponse.status}: ${errorText}`,
-      };
-    }
-    console.log("revcisando url");
-    const uploadResult = await uploadResponse.json();
-    const uploadUrl = uploadResult?.upload_url; // Extraer upload_url
-
-    if (!uploadUrl) {
-      console.error(
-        "AssemblyAI Upload API response missing upload_url:",
-        uploadResult
-      );
-      return {
-        success: false,
-        error: "Upload successful but upload URL not found in response.",
-      };
-    }
-    console.log(JSON.stringify(uploadResponse));
-    console.log("url" + uploadUrl);
-
-    return { success: true, uploadUrl: uploadUrl }; // Retornar ambos: uploadUrl y transcriptId
-  } catch (error) {
-    console.error(
-      "Error during AssemblyAI file upload and transcription:",
-      error
-    );
+    console.error("Error: API Key de AssemblyAI no configurada.");
     return {
       success: false,
-      error: `Error uploading and starting transcription with AssemblyAI: ${error}`,
+      message: "API Key de AssemblyAI no configurada.",
+      error:
+        "API Key de AssemblyAI no configurada. Debes reemplazar 'TU_API_KEY_DE_ASSEMBLYAI' con tu clave real.",
+      publicUrl: null,
+      uploadUrl: null,
     };
   }
-};
+
+  return new Promise((resolve) => {
+    // Retornamos una Promesa para manejar la asincronía
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.assemblyai.com/v2/upload");
+    xhr.setRequestHeader("Authorization", ASSEMBLYAI_API_KEY);
+
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable && onUploadProgress) {
+        const progress = (event.loaded / event.total) * 100;
+        console.log("Upload Progress (services/assemblyActions.ts):", progress); // ➡️ Añade esta línea
+        onUploadProgress(progress);
+      }
+    };
+
+    xhr.onload = async () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try {
+          const uploadResult = JSON.parse(xhr.responseText);
+          console.log("Audio subido exitosamente a AssemblyAI:", uploadResult);
+          resolve({
+            success: true,
+            message: "Audio subido exitosamente a AssemblyAI.",
+            publicUrl: null,
+            uploadUrl: uploadResult.upload_url,
+            error: null,
+          });
+        } catch (e) {
+          console.error("Error al parsear la respuesta JSON:", e);
+          resolve({
+            success: false,
+            message: "Error al procesar la respuesta del servidor.",
+            error:
+              e instanceof Error
+                ? e.message
+                : "Error desconocido al parsear JSON",
+            publicUrl: null,
+            uploadUrl: null,
+          });
+        }
+      } else {
+        console.error(
+          `Error al subir el audio a AssemblyAI. Código de estado: ${xhr.status}`
+        );
+        const errorDetails = xhr.responseText;
+        console.error("Detalles del error:", errorDetails);
+        resolve({
+          success: false,
+          message: `Error al subir audio a AssemblyAI: ${xhr.status} - ${xhr.statusText}`,
+          error: `Código de estado: ${xhr.status}, Detalles: ${errorDetails}`,
+          publicUrl: null,
+          uploadUrl: null,
+        });
+      }
+    };
+
+    xhr.onerror = () => {
+      console.error(
+        "Error general en la función uploadAudio (XMLHttpRequest error):",
+        xhr.statusText
+      );
+      resolve({
+        success: false,
+        message: "Error general al subir el audio.",
+        error: `Error de red al subir el archivo. Código de estado: ${xhr.status}`,
+        publicUrl: null,
+        uploadUrl: null,
+      });
+    };
+
+    xhr.send(archivo); // Enviamos el archivo con XMLHttpRequest
+  });
+}

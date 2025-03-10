@@ -176,7 +176,7 @@ async function procesarOrdenDelDia(
 
   let index = 0;
   let modelName = "gemini-2.0-flash-thinking-exp-01-21";
-  const maxRetries = 3;
+  const maxRetries = 5;
   let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
@@ -228,7 +228,7 @@ async function procesarOrdenDelDia(
           error
         );
         retryCount++;
-        if (retryCount >= 2 && modelName === "gemini-thinking") {
+        if (retryCount >= 3 && modelName === "gemini-thinking") {
           modelName = "gemini-2.0-flash";
           console.log("Cambio de modelo a gemini-2.0-flash");
         }
@@ -241,7 +241,7 @@ async function procesarOrdenDelDia(
           break;
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise((resolve) => setTimeout(resolve, 7000));
       }
     }
     index++;
@@ -595,7 +595,7 @@ Tema: Mantenimiento de Instalaciones
 <p>Se aprobó la contratación de expertos y la ejecución de reparaciones prioritarias. Adicionalmente, se implementará un <strong>plan de mantenimiento preventivo</strong> con un presupuesto anual específico.</p>
 
 📌 Mejoras clave en esta versión:
-
+ si un tema de orden del dia no se encuentra en la transcipcion se debe indicar que se planteo en el otden del dia pero no se desarollo en la reunion o no se encontro detalle en la transcipcion
 ✅ Se incorpora la revisión del orden del día (${ordendeldia}) antes de desarrollar un tema, evitando solapamientos o redundancias.
 asegurate que elos titulo s de cada tema tengan  los  valores  de numeracion ${numeracion}  y tema ${tema} que se reciben 
 ✅ Se enfatiza la necesidad de una narrativa fluida, sin abuso de subtítulos o listas que interrumpan la lectura natural.

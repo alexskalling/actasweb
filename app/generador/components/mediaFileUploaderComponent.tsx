@@ -1,3 +1,4 @@
+// components/MediaFileUploaderComponent.tsx
 "use client";
 
 import * as React from "react";
@@ -27,23 +28,23 @@ export default function MediaFileUploaderComponent({
   const [uploadStatus, setUploadStatus] = React.useState<string | null>(null);
   const [calculando, setCalculando] = React.useState<boolean>(false);
   const [procesando, setProcesando] = React.useState<boolean>(false);
-  const [uploadProgress, setUploadProgress] = React.useState<number>(0);
+  const [uploadProgress, setUploadProgress] = React.useState<number>(0); // Estado para el progreso de subida
   const [publicUrl, setPublicUrl] = React.useState<string | null>(null);
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
   const [file, setFile] = React.useState<string>();
   const [fileid, setFileid] = React.useState<string>();
   const [acta, setActa] = React.useState<string>();
-  const [idtx, setIdtx] = React.useState(null);
+  const [idtx, setIdtx] = React.useState<string | null>(null);
   const [transcripcion, setTranscripcion] = React.useState<string>();
-  const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
-  const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
+  const [socket, setSocket] = React.useState<Socket | null>(null);
+  const [roomName, setRoomName] = React.useState<string | null>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setError(null);
     setUploadStatus(null);
-    setUploadProgress(0);
+    setUploadProgress(0); // Reset progress when a new file is selected
     setPublicUrl(null);
 
     if (!file) return;
@@ -68,19 +69,21 @@ export default function MediaFileUploaderComponent({
   };
 
   React.useEffect(() => {
-    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Conéctate al servidor de Socket.IO
+    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL as string);
     setSocket(newSocket);
 
     return () => {
-      newSocket.disconnect(); // Desconecta el socket cuando el componente se desmonte
+      newSocket.disconnect();
     };
   }, []);
 
   React.useEffect(() => {
     if (!socket) return;
     //@ts-expect-error revisar despues
-    socket.on("upload-status", (data: Array) => {
-      setUploadStatus(data.message);
+    socket.on("upload-status", (data: { message: string }[]) => {
+      if (Array.isArray(data) && data.length > 0 && data[0].message) {
+        setUploadStatus(data[0].message);
+      }
     });
 
     return () => {
@@ -90,20 +93,22 @@ export default function MediaFileUploaderComponent({
 
   const clearSelection = () => {
     setSelectedFile(null);
-    //@ts-expect-error revisar despues
-
     setFile(null);
     setDuration(0);
     setPreview(null);
     setError(null);
     setUploadStatus(null);
-    setUploadProgress(0);
+    setUploadProgress(0); // Reset progress when clearing selection
     setPublicUrl(null);
+    setUrlAssembly(null);
+    setActa("");
+    setTranscripcion("");
   };
 
   async function handlePayment() {
     setProcesando(true);
-
+    setActa("");
+    setTranscripcion("");
     setUploadStatus("Iniciando generacion del acta");
     //@ts-expect-error revisar despues
     const result = await processAction(folder, file, urlAssembly);
@@ -145,7 +150,7 @@ export default function MediaFileUploaderComponent({
     setUploadStatus(
       "Subiendo archivo, asi lo tendremos listo para ser procesado..."
     );
-    setUploadProgress(0);
+    setUploadProgress(0); // Reset progress at the start of upload
     setPublicUrl(null);
 
     if (!selectedFile) {
@@ -168,33 +173,40 @@ export default function MediaFileUploaderComponent({
     formData.append("nombreNormalizado", nombreNormalizado);
 
     try {
-      const result = await uploadFileToAssemblyAI(formData);
+      const result = await uploadFileToAssemblyAI(formData, (progress) => {
+        setUploadProgress(Math.round(progress)); // Update uploadProgress state
+      });
 
       if (result.success) {
         setFile(nombreNormalizado);
         setFolder(nombreCarpeta);
         console.log(result.uploadUrl);
-        //@ts-expect-error revisar despues
-
-        setUrlAssembly(result.uploadUrl);
+        setUrlAssembly(result.uploadUrl || null);
 
         setRoomName(nombreCarpeta);
 
         setCalculando(false);
-        setUploadProgress(100);
-        //@ts-expect-error revisar despues
-
-        setPublicUrl(result.publicUrl);
+        setUploadProgress(100); // Ensure progress is 100% on success
+        setPublicUrl(result.publicUrl || null);
+        setUploadStatus("Archivo subido exitosamente");
       } else {
-        setUploadStatus(result.error || "Error al subir el archivo");
+        setUploadStatus(
+          result.error || result.message || "Error al subir el archivo"
+        );
+        setError(
+          result.error ||
+            result.message ||
+            "Error desconocido al subir el archivo"
+        );
         setCalculando(false);
-        setUploadProgress(0);
+        setUploadProgress(0); // Reset progress on error
       }
     } catch (error) {
       setUploadStatus(`Error de red o al procesar la petición: ${error}`);
+      setError(`Error de red o al procesar la petición: ${error}`);
       console.error("Error al subir:", error);
       setCalculando(false);
-      setUploadProgress(0);
+      setUploadProgress(0); // Reset progress on catch error
     }
   };
 
@@ -218,7 +230,6 @@ export default function MediaFileUploaderComponent({
           "Esperando 3 segundos antes de descargar la transcripción..."
         );
         setTimeout(() => {
-          // Descargar la transcripción después de 3 segundos
           if (acta) {
             downloadFile(transcripcion);
           } else {
@@ -234,7 +245,6 @@ export default function MediaFileUploaderComponent({
   };
 
   React.useEffect(() => {
-    // Asegurarse de que este código solo se ejecute en el cliente
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
       const id = searchParams.get("id");
@@ -242,22 +252,17 @@ export default function MediaFileUploaderComponent({
       const folder = searchParams.get("folder");
       const fileid = searchParams.get("fileid");
       const duration = searchParams.get("duration");
-      setDuration(Number(duration));
-      //@ts-expect-error revisar despues
       setIdtx(id);
-      //@ts-expect-error revisar despues
-      setFile(file);
-      //@ts-expect-error revisar despues
-      setFileid(fileid);
-      //@ts-expect-error revisar despues
-      setFolder(folder);
+      setFile(file || null);
+      setFileid(fileid || null);
+      setFolder(folder || null);
+      setDuration(Number(duration) || 0);
       setRoomName(folder);
     }
   }, []);
 
   React.useEffect(() => {
     const fetchTransaction = async () => {
-      // Check if idtx is not null AND not an empty string
       if (idtx && idtx !== "") {
         try {
           const response = await fetch(
@@ -289,7 +294,7 @@ export default function MediaFileUploaderComponent({
     };
 
     fetchTransaction();
-  }, [idtx]);
+  }, [idtx, duration, file, handlePayment]);
 
   return (
     <div className="p-6 w-full max-w-md mx-auto bg-transparent rounded-md">
@@ -305,7 +310,7 @@ export default function MediaFileUploaderComponent({
                 <p className="mb-2 text-sm text-white">
                   <span className="font-semibold">
                     Haz click para seleccionar
-                  </span>{" "}
+                  </span>
                   o arrastra y suelta
                 </p>
               </div>
@@ -362,6 +367,22 @@ export default function MediaFileUploaderComponent({
           </div>
         )}
 
+        {/* Barra de Progreso */}
+        {calculando && (
+          <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+            <div
+              className="bg-purple-600 h-2.5 rounded-full"
+              style={{ width: `${uploadProgress}%` }}
+            ></div>
+          </div>
+        )}
+        {uploadStatus &&
+          uploadProgress != 100 &&
+          !procesando &&
+          !calculando && (
+            <div className="text-sm text-white text-center">{uploadStatus}</div>
+          )}
+
         <div className="flex gap-4">
           <Button
             className="w-full rounded-sm"
@@ -388,7 +409,7 @@ export default function MediaFileUploaderComponent({
           {uploadProgress != 100 && !file && (
             <Button
               className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-              onClick={handleUploadFile} //  Ahora llama a handleUploadFile corregida
+              onClick={handleUploadFile}
               disabled={calculando}
             >
               {calculando ? (
@@ -701,7 +722,6 @@ export default function MediaFileUploaderComponent({
           {procesando && (
             <Button
               className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-              onClick={handleUploadFile} //  Ahora llama a handleUploadFile corregida
               disabled={procesando}
             >
               <>
@@ -1003,41 +1023,11 @@ export default function MediaFileUploaderComponent({
                     ></animate>
                   </rect>
                 </svg>
-                Procensado acta...
+                Procesando...
               </>
             </Button>
           )}
-
-          {acta != null && transcripcion != null && (
-            <Button
-              className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-              onClick={handleDownload}
-            >
-              Descargar
-            </Button>
-          )}
         </div>
-
-        <div>
-          {uploadStatus && ( // Muestra el estado de la carga (éxito o error)
-            <div className="mt-2 text-sm  break-words text-center text-white ">
-              {uploadStatus}
-              {publicUrl && (
-                <>
-                  <br />
-                </>
-              )}
-            </div>
-          )}
-        </div>
-        {file && (
-          <div
-            className="text-purple-950 mt-50 cursor-pointer  w-fit"
-            onClick={handlePayment}
-          >
-            .
-          </div>
-        )}
       </div>
     </div>
   );

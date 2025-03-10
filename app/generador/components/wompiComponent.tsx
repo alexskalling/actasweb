@@ -132,7 +132,7 @@ const WompiComponent = (props) => {
 
   return (
     <Button
-      className="w-full rounded-sm bg-purple-600"
+      className="w-full rounded-sm bg-green-700"
       onClick={() => [handleOpenWidget()]}
     >
       Pagar

@@ -1,18 +1,4 @@
-import io from "socket.io-client";
-
-// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
-const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Asumimos que esta URL es pública y segura para el cliente
-
-socketBackendReal.on("connect_error", (error) => {
-  console.error("Error de conexión Socket.IO desde backend real:", error);
-});
-socketBackendReal.on("connect_timeout", (timeout) => {
-  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
-});
-socketBackendReal.on("disconnect", (reason) => {
-  console.log("Desconexión de Socket.IO desde backend real:", reason);
-});
-
+''use
 interface UploadResult {
   success: boolean;
   message?: string;
