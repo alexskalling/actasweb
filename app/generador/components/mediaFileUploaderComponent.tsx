@@ -96,7 +96,11 @@ export default function MediaFileUploaderComponent({
     setDuration(0);
     setPreview(null);
     setError(null);
-    setUploadStatus(null);
+    //@ts-expect-error revisar despues
+
+    setUploadStatus(false);
+    setCalculando(false);
+
     setUploadProgress(0);
     setPublicUrl(null);
   };

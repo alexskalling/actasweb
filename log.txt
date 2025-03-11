@@ -66,3 +66,83 @@ Transcripción no proporcionada como parámetro. Verificando transcripción exis
 Transcripción encontrada: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt. Obteniendo contenido.
 [2025-03-10T20:04:16.957Z] Contenido del archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" obtenido de Nextcloud.
 Generando Orden del Día con Gemini para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Verificando si existe transcripción: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en carpeta asamblea_villa_laura_2025_1_diana_castilla
+[2025-03-11T12:25:15.098Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:25:16.673Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción existente encontrada: asamblea_villa_laura_2025_1_diana_castilla. Obteniendo contenido.
+Verificando contenido existente: asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[2025-03-11T12:25:17.861Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-11T12:25:18.719Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt" NO encontrado en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Generando contenido para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[2025-03-11T12:25:18.720Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:25:19.344Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción encontrada: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt. Obteniendo contenido.
+[2025-03-11T12:25:20.695Z] Contenido del archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Verificando si existe transcripción: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en carpeta asamblea_villa_laura_2025_1_diana_castilla
+[2025-03-11T12:33:16.464Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:33:17.999Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción existente encontrada: asamblea_villa_laura_2025_1_diana_castilla. Obteniendo contenido.
+Verificando contenido existente: asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[2025-03-11T12:33:19.146Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-11T12:33:20.004Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt" NO encontrado en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Generando contenido para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[2025-03-11T12:33:20.004Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:33:20.655Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción encontrada: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt. Obteniendo contenido.
+[2025-03-11T12:33:21.797Z] Contenido del archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Verificando si existe transcripción: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en carpeta asamblea_villa_laura_2025_1_diana_castilla
+[2025-03-11T12:35:29.886Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:35:31.095Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción existente encontrada: asamblea_villa_laura_2025_1_diana_castilla. Obteniendo contenido.
+Verificando contenido existente: asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[2025-03-11T12:35:32.298Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-11T12:35:32.918Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt" NO encontrado en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Generando contenido para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[2025-03-11T12:35:32.918Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-11T12:35:33.555Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Transcripción encontrada: asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt. Obteniendo contenido.
+[2025-03-11T12:35:34.710Z] Contenido del archivo "asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: asamblea_villa_laura_2025_1_diana_castilla.mp3
+Guardando contenido en Nextcloud: asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+Contenido guardado: asamblea_villa_laura_2025_1_diana_castilla_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: asamblea_villa_laura_2025_1_diana_castilla.mp3 en carpeta: asamblea_villa_laura_2025_1_diana_castilla
+Verificando Borrador .docx existente: asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx
+[2025-03-11T12:36:40.300Z] Verificando existencia del archivo asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx en Nextcloud carpeta asamblea_villa_laura_2025_1_diana_castilla.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-11T12:36:40.899Z] Archivo "asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx" NO encontrado en Nextcloud en la carpeta "asamblea_villa_laura_2025_1_diana_castilla".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/3dS4wFgxWk2zaxo
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/3dS4wFgxWk2zaxo
+Generando URL pública para Transcripcion.txt (EXISTENTE): asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_villa_laura_2025_1_diana_castilla/asamblea_villa_laura_2025_1_diana_castilla_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/BDw4Mg6gbDjCzk5
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/BDw4Mg6gbDjCzk5

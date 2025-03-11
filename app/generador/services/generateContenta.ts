@@ -175,7 +175,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
+  let modelName = "gemini-2.0-flash";
   const maxRetries = 3;
   let retryCount = 0;
 
@@ -226,8 +226,8 @@ async function procesarOrdenDelDia(
           error
         );
         retryCount++;
-        if (retryCount >= 2 && modelName === "gemini-thinking") {
-          modelName = "gemini-2.0-flash";
+        if (retryCount >= 2) {
+          modelName = "gemini-2.0-flash-thinking-exp-01-21";
           console.log("Cambio de modelo a gemini-2.0-flash");
         }
 
