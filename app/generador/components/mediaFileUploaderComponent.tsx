@@ -1046,7 +1046,7 @@ export default function MediaFileUploaderComponent({
             <div className="text-sm text-white text-center">{uploadStatus}</div>
           )}
         <div>
-          {uploadStatus && ( // Muestra el estado de la carga (éxito o error)
+          {uploadStatus && (
             <div className="mt-2 text-sm  break-words text-center text-white ">
               {uploadStatus}
               {publicUrl && (
