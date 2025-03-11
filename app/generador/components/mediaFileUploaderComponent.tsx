@@ -1057,14 +1057,6 @@ export default function MediaFileUploaderComponent({
             </div>
           )}
         </div>
-        {file && (
-          <div
-            className="text-purple-950 mt-50 cursor-pointer  w-fit"
-            onClick={handlePayment}
-          >
-            .
-          </div>
-        )}
       </div>
     </div>
   );
