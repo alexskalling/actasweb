@@ -97,9 +97,9 @@ export async function generateContenta(
     });
     const responseGeminiOrdenDelDia = await generateText({
       model: google("gemini-2.0-flash"),
-      maxTokens: 100000, // Consider adjusting maxTokens based on typical output size.
+      maxTokens: 100000,
       temperature: 0,
-      system: await getSystemPromt("Orden"), // Assume getSystemPromt and getUserPromt are efficient.
+      system: await getSystemPromt("Orden"),
       prompt: await getUserPromt(
         "Orden",
         "Orden",
