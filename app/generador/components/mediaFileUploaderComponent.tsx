@@ -1042,7 +1042,7 @@ export default function MediaFileUploaderComponent({
           uploadProgress != 100 &&
           !procesando &&
           !calculando &&
-          selectedFile != null && ( // Mensaje de estado SI hay uploadStatus, progreso no es 100, no procesando, no calculando y HAY selectedFile
+          selectedFile != null && (
             <div className="text-sm text-white text-center">{uploadStatus}</div>
           )}
         <div>

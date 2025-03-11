@@ -65,7 +65,7 @@ const WompiComponent = (props) => {
 
   useEffect(() => {
     const tiket =
-      "acta:" +
+      process.env.NEXT_PUBLIC_PAGO +
       props.file +
       "-" +
       Math.floor(Math.random() * 90000 + 10000).toString();
