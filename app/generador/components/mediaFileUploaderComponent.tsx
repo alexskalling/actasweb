@@ -110,6 +110,9 @@ export default function MediaFileUploaderComponent({
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
+      setUploadStatus(
+        "Todo listo, tu borrador de acta está listo para ser descargado."
+      );
       setProcesando(false);
     } else {
       setProcesando(false);
@@ -309,9 +312,8 @@ export default function MediaFileUploaderComponent({
                 <Upload className="w-12 h-12 mb-4 text-white" />
                 <p className="mb-2 text-sm text-white">
                   <span className="font-semibold">
-                    Haz click para seleccionar
+                    Haz click para seleccionar un archivo
                   </span>{" "}
-                  o arrastra y suelta
                 </p>
               </div>
               <input
