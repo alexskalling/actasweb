@@ -98,6 +98,12 @@ export default function MediaFileUploaderComponent({
     setError(null);
     //@ts-expect-error revisar despues
 
+    setActa(null);
+    //@ts-expect-error revisar despues
+
+    setTranscripcion(null);
+    //@ts-expect-error revisar despues
+
     setUploadStatus(false);
     setCalculando(false);
 
@@ -1019,7 +1025,7 @@ export default function MediaFileUploaderComponent({
             </Button>
           )}
 
-          {acta != null && transcripcion != null && (
+          {acta != null && transcripcion != null && file && (
             <Button
               className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
               onClick={handleDownload}

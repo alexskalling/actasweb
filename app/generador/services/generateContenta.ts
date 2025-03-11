@@ -176,7 +176,7 @@ async function procesarOrdenDelDia(
 
   let index = 0;
   let modelName = "gemini-2.0-flash";
-  const maxRetries = 3;
+  const maxRetries = 5;
   let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
@@ -226,9 +226,9 @@ async function procesarOrdenDelDia(
           error
         );
         retryCount++;
-        if (retryCount >= 2) {
+        if (retryCount > 2) {
           modelName = "gemini-2.0-flash-thinking-exp-01-21";
-          console.log("Cambio de modelo a gemini-2.0-flash");
+          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
         }
 
         if (retryCount >= maxRetries) {
