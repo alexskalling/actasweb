@@ -257,8 +257,10 @@ async function procesarOrdenDelDia(
         break;
       } catch (error) {
         console.error(
-          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):`
+          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):` +
+            error
         );
+
         retryCount++;
         if (retryCount > 1) {
           modelName = "gemini-2.0-flash";
