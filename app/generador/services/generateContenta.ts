@@ -95,19 +95,54 @@ export async function generateContenta(
         message: `[Contenido] Generando el orden del dia de la reunion `,
       },
     });
-    const responseGeminiOrdenDelDia = await generateText({
-      model: google("gemini-2.0-flash"),
-      maxTokens: 100000,
-      temperature: 0,
-      system: await getSystemPromt("Orden"),
-      prompt: await getUserPromt(
-        "Orden",
-        "Orden",
-        contenidoTranscripcion,
-        "test",
-        0
-      ), // Consider caching prompts if they are static.
-    });
+    let responseGeminiOrdenDelDia;
+    let retryCountOrdenDelDia = 0;
+    const maxRetriesOrdenDelDia = 5;
+    let modelNameOrdenDelDia = "gemini-2.0-flash-thinking-exp-01-21"; // Puedes mantener este modelo inicial
+
+    while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
+      try {
+        responseGeminiOrdenDelDia = await generateText({
+          model: google(modelNameOrdenDelDia),
+          maxTokens: 100000,
+          temperature: 0,
+          system: await getSystemPromt("Orden"),
+          prompt: await getUserPromt(
+            "Orden",
+            "Orden",
+            contenidoTranscripcion,
+            "test",
+            0
+          ),
+        });
+        break; // Si la llamada es exitosa, sal del bucle
+      } catch (error) {
+        console.error(
+          `Error al generar el Orden del Día (intento ${
+            retryCountOrdenDelDia + 1
+          }):`,
+          error
+        );
+        retryCountOrdenDelDia++;
+        if (retryCountOrdenDelDia > 1) {
+          modelNameOrdenDelDia = "gemini-2.0-flash"; // Mantener el mismo modelo o cambiar si lo prefieres
+          console.log("Cambio de modelo (Orden del Día) a gemini-2.0-flash");
+        }
+        if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
+          console.error(
+            "Máximo número de intentos alcanzado al generar el Orden del Día."
+          );
+          return {
+            status: "error",
+            message:
+              "Error al generar el Orden del Día después de varios intentos.",
+          };
+        }
+        await new Promise((resolve) => setTimeout(resolve, 5000)); // Espera antes de reintentar
+      }
+    }
+
+    //@ts-expect-error revisar despues - This comment can be removed if types are properly checked.
 
     const jsonCleaned = responseGeminiOrdenDelDia.text
       .trim()
@@ -175,7 +210,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash";
+  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
   const maxRetries = 5;
   let retryCount = 0;
 
@@ -222,13 +257,12 @@ async function procesarOrdenDelDia(
         break;
       } catch (error) {
         console.error(
-          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):`,
-          error
+          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):`
         );
         retryCount++;
-        if (retryCount > 2) {
-          modelName = "gemini-2.0-flash-thinking-exp-01-21";
-          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
+        if (retryCount > 1) {
+          modelName = "gemini-2.0-flash";
+          console.log("Cambio de modelo a gemini-2.0-flash");
         }
 
         if (retryCount >= maxRetries) {
@@ -261,8 +295,8 @@ Eres un asistente experto en análisis de reuniones. Tu única tarea es procesar
 Reglas estrictas:
 1. **Solo responde con JSON válido**. No agregues explicaciones, comentarios ni texto adicional antes o después del JSON.
 2. **Estructura JSON obligatoria:**  
-   - Si hay un "Orden del Día" explícito en la transcripción, respétalo.
-   SI EN LA TRASNCRIPCION   dicen un orden del dia  RESPETALO y solo agrega cosas si es que es necesario pero no quites cosas
+   - Si hay un "Orden del Día" explícito en la transcripción, respétalo  pero aun asi revisa la trasncipcion por temas improtantes que no se nombren  e incluyelso para aunemtar la calidad del orden del dia.
+a   SI EN LA TRASNCRIPCION   dicen un orden del diatomalo como base y  agrega cosas si es que es necesario pero no quites cosas revisa lso grandes temas y  dam ele meojro orden del dia psoible enornde cornologico
    - Si no hay un "Orden del Día", genera uno basado en los grandes temas tratados pero igua asegurate de que no hay  pro qeu si hay debe ser la bse minima de trabajo y creciendo desde ahi, manteniendo el orden cronológico. 
    asegurate de que lso temas seran plasmados en el otrden del dia generado y qeu no vas a cambiar el roden bajo ninguan razon 
    - Siempre debe empezar con { "id": 0, "nombre": "Cabecera" } y terminar con { "id": n + 1, "nombre": "Cierre" }.  
