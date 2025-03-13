@@ -38,7 +38,7 @@ export default function MediaFileUploaderComponent({
   const [transcripcion, setTranscripcion] = React.useState<string>();
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
-  let test = null;
+
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     setError(null);
@@ -179,7 +179,6 @@ export default function MediaFileUploaderComponent({
       socket.emit("set-filename", nombreNormalizado);
       socket.emit("join-room", nombreCarpeta);
     }
-    test = nombreNormalizado;
 
     formData.append("audioFile", selectedFile);
     formData.append("nombreCarpeta", nombreCarpeta);
@@ -289,7 +288,7 @@ export default function MediaFileUploaderComponent({
 
           if (tx.data.status === "APPROVED") {
             console.log("tx", tx.data);
-            const save = await saveTransactionAction({
+            await saveTransactionAction({
               transaccion: tx.data.id,
               referencia: tx.data.reference,
               //@ts-expect-error revisar despues
