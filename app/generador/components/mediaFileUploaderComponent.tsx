@@ -278,7 +278,6 @@ export default function MediaFileUploaderComponent({
       if (idtx && idtx !== "") {
         setProcesando(true);
         try {
-          alert(process.env.NEXT_PUBLIC_WOMPI_TX);
           const response = await fetch(
             process.env.NEXT_PUBLIC_WOMPI_TX + "/v1/transactions/" + idtx
           );
