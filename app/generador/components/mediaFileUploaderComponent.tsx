@@ -1079,6 +1079,14 @@ export default function MediaFileUploaderComponent({
             </div>
           )}
         </div>
+        {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
+          <Button
+            className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+            onClick={handlePayment}
+          >
+            Generar directo
+          </Button>
+        )}
       </div>
     </div>
   );
