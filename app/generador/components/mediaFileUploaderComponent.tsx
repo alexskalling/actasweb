@@ -39,12 +39,22 @@ export default function MediaFileUploaderComponent({
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
 
-  const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = event.target.files?.[0];
     setError(null);
     setUploadStatus(null);
     setUploadProgress(0);
     setPublicUrl(null);
+    //@ts-expect-error revisar despues
+
+    const nombreNormalizado = await normalizarNombreArchivo(file.name);
+    const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
+    setFile(nombreNormalizado);
+    setRoomName(nombreCarpeta);
+
+    setFolder(nombreCarpeta);
 
     if (!file) return;
 
@@ -216,6 +226,22 @@ export default function MediaFileUploaderComponent({
     }
   };
 
+  const handledirecto = async () => {
+    setError(null);
+    setUploadStatus("Enviado a soporte directo...");
+
+    // Introduce a very short delay to allow state updates to potentially process
+    setTimeout(async () => {
+      try {
+        handlePayment();
+      } catch (error) {
+        setUploadStatus(`Error de red o al procesar la petición: ${error}`);
+        console.error("Error al subir:", error);
+        setCalculando(false);
+        setUploadProgress(0);
+      }
+    }, 0); // A timeout of 0 will place this at the end of the current event loop
+  };
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
     window.open(proxyUrl, "_blank");
@@ -1079,6 +1105,14 @@ export default function MediaFileUploaderComponent({
             </div>
           )}
         </div>
+        {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
+          <Button
+            className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+            onClick={handledirecto}
+          >
+            Generar directo
+          </Button>
+        )}
       </div>
     </div>
   );
