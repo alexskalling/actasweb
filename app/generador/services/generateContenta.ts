@@ -424,6 +424,7 @@ Diferencias clave con la versión anterior:
 ✅ Se especifica revisar el orden del día antes de desarrollar un tema para evitar redundancias entre apartados.
 ✅ Se mantiene una narrativa fluida sin fragmentar en exceso la información con listas o subtítulos innecesarios.
 ✅ Cada tema se redacta con la extensión adecuada, sin perder precisión ni caer en transcripciones o resúmenes superficiales.
+identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos 
 
 `;
       return systemPromt;
@@ -559,6 +560,7 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 
 🔹 Estilo de redacción
 
+identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos quiero que tomes el tema  como base a respetar para buscar contenido
 ✅ Narración formal y en tercera persona: No debe haber lenguaje coloquial ni menciones en primera persona.
 ✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse a actas anteriores.
 La redaccion debe estar de manera estrica en modo de terceera persona y no se debe repetir informacion que ya se dio en otro tema
