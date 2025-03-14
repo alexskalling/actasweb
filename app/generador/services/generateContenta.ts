@@ -210,7 +210,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
+  let modelName = "gemini-2.0-flash";
   const maxRetries = 5;
   let retryCount = 0;
 
@@ -263,8 +263,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-flash";
-          console.log("Cambio de modelo a gemini-2.0-flash");
+          modelName = "gemini-2.0-flash-thinking-exp-01-21";
+          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
         }
 
         if (retryCount >= maxRetries) {
@@ -396,6 +396,7 @@ titulo: de ser el qeu esta en el tema y debe estar numerado segun el indice que 
     Antes de desarrollar un tema, revisa el orden del día para asegurarte de que la información no se repite innecesariamente en otros apartados.
     Si un punto se abordará con mayor profundidad en otro tema, menciona la relación sin adelantar detalles.
     Cada tema debe ser autosuficiente, pero sin duplicar información que ya será tratada en otro apartado.
+    revisa el contenido que teiene lsito antes de devolverlo apr que no repitas cosas  contendido repetido es mala practica
 
 ✅ Formato HTML estructurado
 
@@ -424,6 +425,7 @@ Diferencias clave con la versión anterior:
 ✅ Se especifica revisar el orden del día antes de desarrollar un tema para evitar redundancias entre apartados.
 ✅ Se mantiene una narrativa fluida sin fragmentar en exceso la información con listas o subtítulos innecesarios.
 ✅ Cada tema se redacta con la extensión adecuada, sin perder precisión ni caer en transcripciones o resúmenes superficiales.
+identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos 
 
 `;
       return systemPromt;
@@ -559,6 +561,7 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 
 🔹 Estilo de redacción
 
+identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos quiero que tomes el tema  como base a respetar para buscar contenido
 ✅ Narración formal y en tercera persona: No debe haber lenguaje coloquial ni menciones en primera persona.
 ✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse a actas anteriores.
 La redaccion debe estar de manera estrica en modo de terceera persona y no se debe repetir informacion que ya se dio en otro tema
@@ -597,6 +600,7 @@ ten cuidado con ser muy redundate con el tema de lso cambios en el orden de dia 
     Negritas: Para cifras, decisiones clave y puntos de relevancia.
     Listas: Solo cuando ayuden a organizar mejor la información sin fragmentarla innecesariamente.
     resalta  en bullets los resultados de las votaciones 
+    antes de responder valida que NO tengas contendio  repetido  es una mala practica repetir contenidos 
 
 Ejemplo de Acta Generada
 
