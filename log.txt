@@ -1,0 +1,140 @@
+Verificando si existe transcripción: asamblea_villa_laura_2025_villa_laura_Transcripcion.txt en carpeta asamblea_villa_laura_2025_villa_laura
+[2025-03-14T16:23:58.376Z] Verificando existencia del archivo asamblea_villa_laura_2025_villa_laura_Transcripcion.txt en Nextcloud carpeta asamblea_villa_laura_2025_villa_laura.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_villa_laura/asamblea_villa_laura_2025_villa_laura_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:24:01.165Z] Archivo "asamblea_villa_laura_2025_villa_laura_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_villa_laura".
+Transcripción existente encontrada: asamblea_villa_laura_2025_villa_laura. Obteniendo contenido.
+Verificando contenido existente: asamblea_villa_laura_2025_villa_laura_Contenido.txt
+[2025-03-14T16:24:03.865Z] Verificando existencia del archivo asamblea_villa_laura_2025_villa_laura_Contenido.txt en Nextcloud carpeta asamblea_villa_laura_2025_villa_laura.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_villa_laura/asamblea_villa_laura_2025_villa_laura_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:24:05.206Z] Archivo "asamblea_villa_laura_2025_villa_laura_Contenido.txt" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_villa_laura".
+Contenido existente: asamblea_villa_laura_2025_villa_laura_Contenido.txt. Cargando.
+[2025-03-14T16:24:06.539Z] Contenido del archivo "asamblea_villa_laura_2025_villa_laura_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: asamblea_villa_laura_2025_villa_laura.mp3 en carpeta: asamblea_villa_laura_2025_villa_laura
+Verificando Borrador .docx existente: asamblea_villa_laura_2025_villa_laura_Borrador.docx
+[2025-03-14T16:24:06.539Z] Verificando existencia del archivo asamblea_villa_laura_2025_villa_laura_Borrador.docx en Nextcloud carpeta asamblea_villa_laura_2025_villa_laura.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_villa_laura_2025_villa_laura/asamblea_villa_laura_2025_villa_laura_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:24:07.838Z] Archivo "asamblea_villa_laura_2025_villa_laura_Borrador.docx" EXISTE en Nextcloud en la carpeta "asamblea_villa_laura_2025_villa_laura".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): asamblea_villa_laura_2025_villa_laura_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_villa_laura_2025_villa_laura/asamblea_villa_laura_2025_villa_laura_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/R8qcHnDy2so2Jyc
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/R8qcHnDy2so2Jyc
+Generando URL pública para Transcripcion.txt (EXISTENTE): asamblea_villa_laura_2025_villa_laura_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_villa_laura_2025_villa_laura/asamblea_villa_laura_2025_villa_laura_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/FZMT8iYyKHmctD8
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/FZMT8iYyKHmctD8
+Verificando si existe transcripción: trebol_ph_2025_diana_trebol_Transcripcion.txt en carpeta trebol_ph_2025_diana_trebol
+[2025-03-14T16:27:04.240Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Transcripcion.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:27:06.119Z] Archivo "trebol_ph_2025_diana_trebol_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Transcripción existente encontrada: trebol_ph_2025_diana_trebol. Obteniendo contenido.
+Verificando contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt
+[2025-03-14T16:27:07.953Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Contenido.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:27:09.075Z] Archivo "trebol_ph_2025_diana_trebol_Contenido.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt. Cargando.
+[2025-03-14T16:27:10.594Z] Contenido del archivo "trebol_ph_2025_diana_trebol_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: trebol_ph_2025_diana_trebol.mp3 en carpeta: trebol_ph_2025_diana_trebol
+Verificando Borrador .docx existente: trebol_ph_2025_diana_trebol_Borrador.docx
+[2025-03-14T16:27:10.597Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Borrador.docx en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:27:11.662Z] Archivo "trebol_ph_2025_diana_trebol_Borrador.docx" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): trebol_ph_2025_diana_trebol_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yFpc57C8Nwn8SYB
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yFpc57C8Nwn8SYB
+Generando URL pública para Transcripcion.txt (EXISTENTE): trebol_ph_2025_diana_trebol_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/4n9t6kriHxN836L
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/4n9t6kriHxN836L
+Verificando si existe transcripción: trebol_ph_2025_diana_trebol_Transcripcion.txt en carpeta trebol_ph_2025_diana_trebol
+[2025-03-14T16:39:41.569Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Transcripcion.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:39:44.316Z] Archivo "trebol_ph_2025_diana_trebol_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Transcripción existente encontrada: trebol_ph_2025_diana_trebol. Obteniendo contenido.
+Verificando contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt
+[2025-03-14T16:39:46.759Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Contenido.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:39:47.962Z] Archivo "trebol_ph_2025_diana_trebol_Contenido.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt. Cargando.
+[2025-03-14T16:39:50.098Z] Contenido del archivo "trebol_ph_2025_diana_trebol_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: trebol_ph_2025_diana_trebol.mp3 en carpeta: trebol_ph_2025_diana_trebol
+Verificando Borrador .docx existente: trebol_ph_2025_diana_trebol_Borrador.docx
+[2025-03-14T16:39:50.100Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Borrador.docx en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:39:51.679Z] Archivo "trebol_ph_2025_diana_trebol_Borrador.docx" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): trebol_ph_2025_diana_trebol_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/z6C8NY38zgeJY4H
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/z6C8NY38zgeJY4H
+Generando URL pública para Transcripcion.txt (EXISTENTE): trebol_ph_2025_diana_trebol_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Lf2kpAGoLwwBQ8a
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Lf2kpAGoLwwBQ8a
+Verificando si existe transcripción: trebol_ph_2025_diana_trebol_Transcripcion.txt en carpeta trebol_ph_2025_diana_trebol
+[2025-03-14T16:42:52.659Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Transcripcion.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:42:54.985Z] Archivo "trebol_ph_2025_diana_trebol_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Transcripción existente encontrada: trebol_ph_2025_diana_trebol. Obteniendo contenido.
+Verificando contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt
+[2025-03-14T16:42:57.254Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Contenido.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:42:58.481Z] Archivo "trebol_ph_2025_diana_trebol_Contenido.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt. Cargando.
+[2025-03-14T16:43:00.414Z] Contenido del archivo "trebol_ph_2025_diana_trebol_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: trebol_ph_2025_diana_trebol.mp3 en carpeta: trebol_ph_2025_diana_trebol
+Verificando Borrador .docx existente: trebol_ph_2025_diana_trebol_Borrador.docx
+[2025-03-14T16:43:00.417Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Borrador.docx en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:43:01.686Z] Archivo "trebol_ph_2025_diana_trebol_Borrador.docx" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): trebol_ph_2025_diana_trebol_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/bi5HyCKmJ9bZGZd
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/bi5HyCKmJ9bZGZd
+Generando URL pública para Transcripcion.txt (EXISTENTE): trebol_ph_2025_diana_trebol_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/XYfFaKpi7qyoM6Q
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/XYfFaKpi7qyoM6Q
+Verificando si existe transcripción: trebol_ph_2025_diana_trebol_Transcripcion.txt en carpeta trebol_ph_2025_diana_trebol
+[2025-03-14T16:48:20.524Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Transcripcion.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:48:22.938Z] Archivo "trebol_ph_2025_diana_trebol_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Transcripción existente encontrada: trebol_ph_2025_diana_trebol. Obteniendo contenido.
+Verificando contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt
+[2025-03-14T16:48:24.841Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Contenido.txt en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:48:26.123Z] Archivo "trebol_ph_2025_diana_trebol_Contenido.txt" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Contenido existente: trebol_ph_2025_diana_trebol_Contenido.txt. Cargando.
+[2025-03-14T16:48:27.372Z] Contenido del archivo "trebol_ph_2025_diana_trebol_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: trebol_ph_2025_diana_trebol.mp3 en carpeta: trebol_ph_2025_diana_trebol
+Verificando Borrador .docx existente: trebol_ph_2025_diana_trebol_Borrador.docx
+[2025-03-14T16:48:27.377Z] Verificando existencia del archivo trebol_ph_2025_diana_trebol_Borrador.docx en Nextcloud carpeta trebol_ph_2025_diana_trebol.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-14T16:48:28.364Z] Archivo "trebol_ph_2025_diana_trebol_Borrador.docx" EXISTE en Nextcloud en la carpeta "trebol_ph_2025_diana_trebol".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): trebol_ph_2025_diana_trebol_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/PJMSefGf2Ea5JJz
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/PJMSefGf2Ea5JJz
+Generando URL pública para Transcripcion.txt (EXISTENTE): trebol_ph_2025_diana_trebol_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/trebol_ph_2025_diana_trebol/trebol_ph_2025_diana_trebol_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/C6j3xdmEGLEm848
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/C6j3xdmEGLEm848
