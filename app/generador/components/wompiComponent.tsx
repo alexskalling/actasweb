@@ -58,7 +58,6 @@ const formatDuration = (seconds: number): string => {
 const tipo = process.env.NEXT_PUBLIC_PAGO;
 //@ts-expect-error revisar despues
 const WompiComponent = (props) => {
-  alert(props.fileid);
   const [checkout, setCheckout] = useState(null);
   const [costo, setCosto] = useState(props.costo * 100);
 

@@ -205,7 +205,6 @@ export default function MediaFileUploaderComponent({
       if (result.success) {
         setUploadStatus("Archivo listo para ser procesado");
 
-        alert(result.uploadUrl + "--------antes");
         //@ts-expect-error revisar despues
 
         setUrlAssembly(result.uploadUrl);
