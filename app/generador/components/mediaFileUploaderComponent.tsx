@@ -9,7 +9,6 @@ import { processAction } from "../services/processAction";
 import io, { Socket } from "socket.io-client";
 import { saveTransactionAction } from "../services/saveTransactionAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
-import { Field } from "@headlessui/react";
 
 interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
@@ -29,7 +28,6 @@ export default function MediaFileUploaderComponent({
   const [calculando, setCalculando] = React.useState<boolean>(false);
   const [procesando, setProcesando] = React.useState<boolean>(false);
   const [uploadProgress, setUploadProgress] = React.useState<number>(0);
-  const [publicUrl, setPublicUrl] = React.useState<string | null>(null);
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
   const [file, setFile] = React.useState<string>();
@@ -48,7 +46,7 @@ export default function MediaFileUploaderComponent({
     setError(null);
     setUploadStatus(null);
     setUploadProgress(0);
-    setPublicUrl(null);
+
     //@ts-expect-error revisar despues
 
     const nombreNormalizado = await normalizarNombreArchivo(file.name);
@@ -120,7 +118,6 @@ export default function MediaFileUploaderComponent({
     setCalculando(false);
 
     setUploadProgress(0);
-    setPublicUrl(null);
   };
 
   async function handlePayment() {
@@ -171,7 +168,6 @@ export default function MediaFileUploaderComponent({
       "Subiendo archivo, asi lo tendremos listo para ser procesado..."
     );
     setUploadProgress(0);
-    setPublicUrl(null);
 
     if (!selectedFile) {
       setError("Por favor selecciona un archivo de audio o video.");
@@ -211,9 +207,6 @@ export default function MediaFileUploaderComponent({
 
         setCalculando(false);
         setUploadProgress(100);
-        //@ts-expect-error revisar despues
-
-        setPublicUrl(result.publicUrl);
       } else {
         setUploadStatus(result.error || "Error al subir el archivo");
         setCalculando(false);
@@ -277,7 +270,7 @@ export default function MediaFileUploaderComponent({
       console.error("Error general:", (error as Error).message);
     }
   };
-
+  console.log(fileid);
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
