@@ -1104,7 +1104,7 @@ export default function MediaFileUploaderComponent({
       </div>
       {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
         <Button
-          className="w-full mt-4 rounded-sm bg-purple-600 hover:bg-purple-700"
+          className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
           onClick={handledirecto}
         >
           Generar con transcripcion existente
