@@ -46,7 +46,6 @@ export default function MediaFileUploaderComponent({
     setError(null);
     setUploadStatus(null);
     setUploadProgress(0);
-
     //@ts-expect-error revisar despues
 
     const nombreNormalizado = await normalizarNombreArchivo(file.name);
