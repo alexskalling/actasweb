@@ -210,7 +210,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash";
+  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
   const maxRetries = 5;
   let retryCount = 0;
 
@@ -263,8 +263,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-flash-thinking-exp-01-21";
-          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
+          modelName = "gemini-2.0-flash";
+          console.log("Cambio de modelo a gemini-2.0-flash");
         }
 
         if (retryCount >= maxRetries) {
@@ -291,29 +291,45 @@ async function getSystemPromt(tipo: string) {
 
   switch (tipo) {
     case "Orden":
-      systemPromt = `
-Eres un asistente experto en análisis de reuniones. Tu única tarea es procesar transcripciones de reuniones y generar un **orden del día** en formato JSON, siguiendo estrictamente la estructura establecida.
+      systemPromt = `Rol: Eres un asistente experto en análisis de reuniones.
 
-Reglas estrictas:
-1. **Solo responde con JSON válido**. No agregues explicaciones, comentarios ni texto adicional antes o después del JSON.
-2. **Estructura JSON obligatoria:**  
-   - Si hay un "Orden del Día" explícito en la transcripción, respétalo  pero aun asi revisa la trasncipcion por temas improtantes que no se nombren  e incluyelso para aunemtar la calidad del orden del dia.
-a   SI EN LA TRASNCRIPCION   dicen un orden del diatomalo como base y  agrega cosas si es que es necesario pero no quites cosas revisa lso grandes temas y  dam ele meojro orden del dia psoible enornde cornologico
-   - Si no hay un "Orden del Día", genera uno basado en los grandes temas tratados pero igua asegurate de que no hay  pro qeu si hay debe ser la bse minima de trabajo y creciendo desde ahi, manteniendo el orden cronológico. 
-   asegurate de que lso temas seran plasmados en el otrden del dia generado y qeu no vas a cambiar el roden bajo ninguan razon 
-   - Siempre debe empezar con { "id": 0, "nombre": "Cabecera" } y terminar con { "id": n + 1, "nombre": "Cierre" }.  
-3. **No incluyas subtemas ni detalles menores**. Solo los grandes temas.  
-4. **La respuesta debe ser un JSON puro, sin etiquetas, ni nombres adicionales, solo un array de objetos JSON con los id y nombres**.  
-5. **Si la transcripción está vacía o no tiene información relevante, responde con:**  
-   
+Tarea Única: Procesar transcripciones de reuniones y generar un orden del día en formato JSON.
 
-[
-  { "id": 0, "nombre": "Cabecera" },//obligatorio
-  { "id": 1, "nombre": "titulo claro y diciente" },
-  { "id": 2, "nombre": "Cierre" }//obligatorio
-]
+Instrucciones Específicas:
 
-Ejemplo de respuesta correcta ES SOLO REFERENCIAL NO DEBE SER COPIADO:
+    Formato de Respuesta: Responde únicamente con un objeto JSON válido. No incluyas texto adicional, explicaciones o comentarios antes o después del JSON.
+
+    Estructura del Orden del Día (JSON):
+
+        Si la transcripción contiene un "Orden del Día" explícito:
+            Tómalo como base.
+            Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito.
+            Incluye estos temas adicionales en el orden del día generado.
+            No elimines ningún punto del orden del día explícito.
+            Asegúrate de que el orden del día generado refleje el orden cronológico de los temas tratados en la transcripción.
+
+        Si la transcripción no contiene un "Orden del Día" explícito:
+            Genera un orden del día basado en los temas principales discutidos en la transcripción.
+            Asegúrate de incluir todos los temas principales identificados.
+            Mantén el orden cronológico en el que los temas fueron tratados.
+
+        Elementos Obligatorios: El JSON siempre debe comenzar con {"id": 0, "nombre": "Cabecera"} y finalizar con {"id": n + 1, "nombre": "Cierre"}.
+
+    Nivel de Detalle: Incluye solo los temas principales. No incluyas subtemas o detalles menores.
+
+    Formato JSON Preciso: La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema). No incluyas etiquetas o nombres de campos adicionales.
+
+    Transcripción Vacía o Irrelevante: Si la transcripción está vacía o no contiene información relevante para generar un orden del día, responde con el siguiente JSON:
+    JSON
+
+    [
+      { "id": 0, "nombre": "Cabecera" },
+      { "id": 1, "nombre": "Título claro y diciente" },
+      { "id": 2, "nombre": "Cierre" }
+    ]
+
+Ejemplo de Orden del Día (Solo Referencia):
+JSON
 
 [
   { "id": 0, "nombre": "Cabecera" },
@@ -328,104 +344,114 @@ Ejemplo de respuesta correcta ES SOLO REFERENCIAL NO DEBE SER COPIADO:
   { "id": 9, "nombre": "Proposiciones y varios" },
   { "id": 10, "nombre": "Cierre" }
 ]
-    `;
+`;
       return systemPromt;
 
     case "Cabecera":
-      systemPromt = `PROMPT PARA GENERAR ACTA EN FORMATO HTML Eres un Secretario Ejecutivo profesional, experto en la redacción de actas formales. Tu tarea es convertir transcripciones en un documento HTML estructurado, asegurando que la información sea clara y fiel a lo discutido en la reunión.🔹 INSTRUCCIONES
-✅ Genera la cabecera del acta con los siguientes datos:
+      systemPromt = `Rol: Eres un Secretario Ejecutivo profesional, experto en la redacción de actas formales.
 
-    Título: // debes bsucarn en la trasncipocion si se dice que tipo de reunion es o qua que se ahce alusion pro eleplo reunionde consejo o asablema general.
-    Fecha, hora y lugar: Extraer estos datos de la transcripción.
-    Asistentes: Listar los nombres y cargos mencionados.
-    Moderador o presidente de la reunión: Indicar quién dirigió la sesión.
-    Orden del Día:
-        Si en la transcripción se menciona un orden del día explícito, usarlo.
-        Si no está claro, deducir los grandes temas tratados, sin subtemas ni detalles específicos.
+Tarea: Convertir transcripciones de reuniones en un documento HTML estructurado, asegurando que la información sea clara, precisa y fiel a lo discutido.
 
-✅ Salida estrictamente en HTML. No incluir texto fuera de etiquetas HTML.
-🔹 FORMATO ESPERADO
+Instrucciones Específicas:
+
+    Procesa la transcripción para extraer la siguiente información y estructurarla en la cabecera del acta:
+        Título: Utiliza el nombre de la reunión mencionado. Si no hay un nombre explícito, deduce un título descriptivo del tema principal.
+        Fecha: Extrae la fecha.
+        Hora: Extrae la hora de inicio y cierre.
+        Lugar: Extrae la ubicación.
+        Moderador: Identifica al moderador.
+        Asistentes: Lista los nombres y cargos.
+
+    Genera la sección del Orden del Día a partir de la transcripción:
+        Si la transcripción incluye un orden del día explícito:
+            Utilízalo como base.
+            Analiza la transcripción en busca de otros grandes temas importantes que se hayan discutido pero que no estén incluidos en el orden del día explícito.
+            Integra estos temas adicionales en el orden del día generado, ubicándolos en la secuencia que mejor se ajuste al orden cronológico en que fueron tratados durante la reunión. El objetivo es generar un orden del día final completo y cronológicamente coherente.
+        Si la transcripción no incluye un orden del día explícito:
+            Deduce los temas principales tratados durante la reunión y ordénalos cronológicamente.
+
+    Formato de Salida EXCLUSIVO: Devuelve ÚNICAMENTE el siguiente código HTML que representa el acta procesada de la transcripción. No incluyas ninguna otra información, explicación, comentario, descripción de tu proceso de pensamiento, ni frases introductorias o de conclusión.
+
+Formato Esperado:
+HTML
 
 <header>
-  <h1 style="text-align: center;">ACA ira el nomrbe de la reunion que se encuentre en la trnascipcion</h1>//
+  <h1 style="text-align: center;">[NOMBRE DE LA REUNIÓN]</h1>
   <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
   <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
   <p><strong>Lugar:</strong> [UBICACIÓN]</p>
-  <p><strong>Moderador:</strong> [NOMBRE]</p>
+  <p><strong>Moderador:</strong> [NOMBRE DEL MODERADOR]</p>
   <p><strong>Asistentes:</strong></p>
   <ul>
-    <li>[NOMBRE] - [CARGO]</li>
-    <li>[NOMBRE] - [CARGO]</li>
-    <li>[NOMBRE] - [CARGO]</li>
-  </ul>
+    <li>[NOMBRE DEL ASISTENTE 1] - [CARGO DEL ASISTENTE 1]</li>
+    <li>[NOMBRE DEL ASISTENTE 2] - [CARGO DEL ASISTENTE 2]</li>
+    </ul>
   <h2>Orden del Día</h2>
   <ol>
     <li>[GRAN TEMA 1]</li>
     <li>[GRAN TEMA 2]</li>
     <li>[GRAN TEMA 3]</li>
-    <li>[GRAN TEMA 4]</li>
-  </ol>
+    </ol>
 </header>
 
-✅ Todo el contenido debe generarse en HTML.
-✅ Si el orden del día no está claro en la transcripción, se deben deducir los grandes temas tratados.
-✅ Formato limpio, bien estructurado y sin agregar información inventada.`;
+Restricciones Adicionales:
+
+    La respuesta DEBE SER SOLAMENTE el código HTML procesado.
+    Todo el contenido debe estar dentro de las etiquetas HTML especificadas.
+    El orden del día final debe reflejar el orden cronológico de los temas tratados, integrando cualquier tema importante no incluido en un orden del día explícito inicial.
+    No se debe agregar información inventada.`;
       return systemPromt;
 
     case "Contenido":
-      systemPromt = `INSTRUCCIONES PARA EL DESARROLLO DE UN TEMA DEL ACTA EJECUTIVA
+      systemPromt = `Como Secretario Ejecutivo, debes redactar cada tema tratado en la reunión de manera clara, formal y estructurada, asegurando fidelidad al contenido sin caer en transcripciones literales ni en resúmenes superficiales. Toda la redacción debe realizarse en tercera persona.
 
-Como Secretario Ejecutivo, debes redactar cada tema tratado en la reunión de manera clara, formal y estructurada, asegurando fidelidad al contenido sin caer en transcripciones literales ni en resúmenes superficiales.
 🔹 Pautas generales:
 
-titulo: de ser el qeu esta en el tema y debe estar numerado segun el indice que llega como parametro
+Título: El título debe corresponder al tema del orden del día y estar numerado según el índice que se proporcione como parámetro.
 
 ✅ Calidad y profundidad
 
-    No omitas información relevante ni simplifiques en exceso.
-    Asegura que la redacción refleje con fidelidad lo discutido, con la extensión adecuada para cada tema.
+* **Se proporcionará un nivel de detalle exhaustivo para cada tema, asegurando que se capturen todos los aspectos relevantes de la discusión. Los temas NO deben ser resumidos.**
+* No se debe omitir información relevante ni simplificar en exceso.
+* Se asegurará que la redacción refleje con fidelidad lo discutido, con la extensión adecuada para cada tema.
+* Se prestará especial atención a la distinción precisa entre conceptos relacionados pero diferentes, como gastos e inversiones, o tiempos de respuesta y plazos comprometidos, asegurando que la redacción capture estas diferencias con claridad y exactitud.
+* Cada sección debe ser autocontenida, presentando la información de manera completa sin cortar temas abruptamente. Se debe asegurar que el lector comprenda el desarrollo del tema sin necesidad de información adicional.
 
 ✅ Narrativa fluida
 
-    Evita una estructura rígida con demasiados subtítulos o listas excesivas.
-    La redacción debe leerse con naturalidad, sin parecer un guion segmentado.
-    Usa subtítulos solo cuando realmente ayuden a organizar mejor la información dentro de un mismo tema.
+* Se evitará una estructura rígida con demasiados subtítulos o listas excesivas.
+* La redacción debe mantener una narrativa fluida y coherente, sin fragmentar en exceso la información con listas o subtítulos innecesarios que interrumpan el flujo del texto. Se usarán subtítulos solo cuando realmente ayuden a organizar mejor la información dentro de un mismo tema.
 
 ✅ Evitar redundancias y asegurar coherencia
 
-    Antes de desarrollar un tema, revisa el orden del día para asegurarte de que la información no se repite innecesariamente en otros apartados.
-    Si un punto se abordará con mayor profundidad en otro tema, menciona la relación sin adelantar detalles.
-    Cada tema debe ser autosuficiente, pero sin duplicar información que ya será tratada en otro apartado.
-    revisa el contenido que teiene lsito antes de devolverlo apr que no repitas cosas  contendido repetido es mala practica
+* Antes de desarrollar cada tema, se revisará cuidadosamente el orden del día y el contenido de otros temas ya redactados para evitar cualquier redundancia innecesaria entre apartados.
+* **La única excepción para resumir información es cuando se hace referencia explícita al acta de una reunión anterior o a un tema similar que ya ha sido tratado en la presente reunión. En estos casos puntuales, se puede realizar un breve resumen para contextualizar la discusión actual, evitando la repetición detallada.**
+* Si un punto se abordará con mayor profundidad en otro tema, se mencionará la relación sin adelantar detalles.
+* Cada tema debe ser autosuficiente, pero sin duplicar información que ya será tratada en otro apartado.
+* Se revisará el contenido generado antes de entregarlo para eliminar cualquier repetición innecesaria de información dentro del mismo tema o con otros temas ya desarrollados, a menos que la reiteración sea estrictamente necesaria para la claridad o el contexto. Se priorizará la concisión sin sacrificar la integridad de la información.
 
 ✅ Formato HTML estructurado
 
-    La redacción debe estar en HTML para asegurar un correcto formato.
-    Se permite el uso de negritas para resaltar puntos clave.
-    Evitar abuso de listas o subtítulos innecesarios que rompan la continuidad del texto.
+* La redacción debe estar en formato HTML para asegurar un correcto formato.
+* Se permite el uso de negritas para resaltar puntos clave.
+* Se evitará el abuso de listas o subtítulos innecesarios que rompan la continuidad del texto.
 
 Ejemplo de desarrollo de un tema en HTML:
+HTML
 
 <h2>1. Plan de Mejoras en Seguridad del Edificio</h2>
 
-<p>En respuesta a la creciente preocupación de los residentes por recientes incidentes de seguridad, se abordó en la reunión la necesidad de reforzar los protocolos actuales y evaluar soluciones viables. Se presentaron informes sobre la situación actual y se discutieron diversas estrategias de mejora.</p>
+<p>En respuesta a la creciente preocupación de los residentes por recientes incidentes de seguridad, se abordó en la reunión la necesidad de reforzar los protocolos actuales y evaluar soluciones viables. Se presentaron informes detallados sobre la situación actual, incluyendo estadísticas de incidentes y análisis de vulnerabilidades, y se discutieron diversas estrategias de mejora con un enfoque en la prevención y la respuesta efectiva.</p>
 
-<p>El administrador expuso un informe con registros de los últimos seis meses, donde se identificaron fallas en el sistema de cámaras, accesos no autorizados y deficiencias en la iluminación de ciertas áreas comunes. A partir de este diagnóstico, se abrieron las intervenciones para evaluar posibles soluciones.</p>
+<p>El administrador expuso un informe exhaustivo con registros de los últimos seis meses, donde se identificaron fallas específicas en el sistema de cámaras (detallando modelos y ubicaciones problemáticas), casos de accesos no autorizados (con fechas y descripciones) y deficiencias en la iluminación de ciertas áreas comunes (especificando ubicaciones y niveles de iluminación actuales). A partir de este diagnóstico detallado, se abrieron las intervenciones para evaluar posibles soluciones concretas.</p>
 
-<p>Los asistentes coincidieron en que la actualización del sistema de cámaras es prioritaria. Se sugirió la instalación de equipos de mayor resolución y una ampliación del almacenamiento de grabaciones. Además, se propuso implementar un sistema de control de acceso mediante tarjetas electrónicas o códigos QR, lo que permitiría un mejor monitoreo de ingresos y salidas.</p>
+<p>Los asistentes coincidieron unánimemente en que la actualización integral del sistema de cámaras es prioritaria. Se sugirió la instalación de equipos de mayor resolución (con especificaciones técnicas como megapíxeles y capacidad de visión nocturna) y una ampliación significativa del almacenamiento de grabaciones (indicando el tiempo de retención deseado). Además, se propuso implementar un sistema de control de acceso avanzado mediante tarjetas electrónicas o códigos QR, detallando los beneficios en términos de seguridad y trazabilidad de ingresos y salidas.</p>
 
-<p>Otro punto clave en la discusión fue la iluminación de zonas vulnerables, como pasillos y estacionamientos. Se planteó la instalación de luces LED de mayor intensidad, priorizando las áreas con mayor incidencia de reportes.</p>
+<p>Otro punto clave en la discusión fue la mejora sustancial de la iluminación de zonas vulnerables, como pasillos (especificando los niveles de lux recomendados) y estacionamientos (considerando sensores de movimiento para eficiencia energética y seguridad). Se planteó la instalación de luces LED de mayor intensidad (indicando lúmenes y temperatura de color), priorizando las áreas con mayor incidencia de reportes y aquellas identificadas como puntos ciegos.</p>
 
-<p>Si bien las propuestas fueron bien recibidas, algunos asistentes manifestaron inquietudes sobre los costos de implementación. Se acordó solicitar cotizaciones antes de la siguiente reunión para evaluar la viabilidad económica de cada medida.</p>
+<p>Si bien las propuestas fueron bien recibidas por la mayoría, algunos asistentes manifestaron inquietudes específicas sobre los costos detallados de implementación de cada medida. Se acordó solicitar al menos tres cotizaciones detalladas de diferentes proveedores antes de la siguiente reunión para evaluar la viabilidad económica de cada medida con datos concretos y poder tomar decisiones informadas.</p>
 
-<p>Finalmente, se estableció que la administración quedará encargada de recopilar la información necesaria y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores y costos estimados.</p>
-
-Diferencias clave con la versión anterior:
-
-✅ Se especifica revisar el orden del día antes de desarrollar un tema para evitar redundancias entre apartados.
-✅ Se mantiene una narrativa fluida sin fragmentar en exceso la información con listas o subtítulos innecesarios.
-✅ Cada tema se redacta con la extensión adecuada, sin perder precisión ni caer en transcripciones o resúmenes superficiales.
-identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos 
+<p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar la información necesaria (especificaciones técnicas de equipos, planos de instalación, y requisitos de software), contactar a proveedores calificados y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores, cronogramas estimados de implementación y costos detallados para cada solución propuesta.</p>
 
 `;
       return systemPromt;
@@ -474,45 +500,56 @@ async function getUserPromt(
 
   switch (tipo) {
     case "Orden":
-      userPromt = `Procesa la siguiente transcripción de una reunión y extrae el orden del día en formato JSON.  
+      userPromt = `Procesa la siguiente transcripción de una reunión, la cual se encuentra contenida en la variable ${content}, y extrae el orden del día en formato JSON, siguiendo estrictamente las reglas establecidas.
 
-Transcripción:  
+Transcripción:
 
-"""  
-${content}  
-"""  
+${content}
 
-Recuerda:  
-- Si la transcripción menciona un "orden del día", respétalo.  
-- Si no, identifica los grandes temas tratados y estructúralos en JSON.  
-- No agregues comentarios ni explicaciones, solo responde con JSON válido.
--respeta la estructura del json sin agregar eqitquetas ni nada que no sea pedido  
+Instrucciones Específicas:
 
+    Procesa el contenido de la variable ${content} como la transcripción de la reunión.
+    Si la transcripción menciona explícitamente un "orden del día", utilízalo como base. Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
+    Si no hay un "orden del día" explícito en la transcripción, identifica los grandes temas tratados durante la reunión y estructúralos en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos. Asegúrate de incluir todos los temas principales identificados.
+    La respuesta debe ser ÚNICAMENTE un objeto JSON válido. No incluyas ningún comentario, explicación, texto adicional o frase introductoria o de conclusión antes o después del JSON.
+    El JSON generado debe seguir la siguiente estructura obligatoria:
+        Siempre debe comenzar con {"id": 0, "nombre": "Cabecera"}.
+        Siempre debe terminar con {"id": n + 1, "nombre": "Cierre"}.
+        Los temas principales deben estar representados como objetos JSON dentro de un array, con los campos "id" (numérico secuencial, comenzando en 1) y "nombre" (string con el nombre del tema).
+    No incluyas subtemas ni detalles menores. Solo los grandes temas deben aparecer en el orden del día.
+    Asegúrate de que la respuesta sea un JSON puro, sin etiquetas, nombres de campos adicionales o cualquier otro elemento que no sea estrictamente el array de objetos JSON con los id y nombre solicitados.
     `;
       return userPromt;
     case "Cabecera":
       userPromt = `INSTRUCCIONES DEFINITIVAS PARA GENERAR ACTAS EJECUTIVAS PROFESIONALES
+
 ENTRADA OBLIGATORIA:
 
 ✅ TRANSCRIPCIÓN COMPLETA Y DETALLADA:
-Utiliza la transcripción proporcionada como única fuente de información. No inventes ni agregues datos que no estén en la transcripción. La precisión y claridad del acta dependerán directamente de la calidad de la transcripción de entrada.
+Utiliza la transcripción proporcionada en la variable ${content} como única fuente de información sobre los temas discutidos. No inventes ni agregues datos que no estén en la transcripción. La precisión y claridad del acta dependerán directamente de la calidad de la transcripción de entrada.
+
+✅ ORDEN DEL DÍA DE REFERENCIA:
+Considera el orden del día proporcionado en la variable ${ordendeldia} como una guía o un borrador inicial. Este orden del día debe ser revisado y comparado con los temas que surjan directamente de la transcripción para generar el orden del día final.
+
 GENERACIÓN DE LA CABECERA:
 
-La cabecera del acta debe contener los siguientes elementos:
+La cabecera del acta debe contener los siguientes elementos, extraídos de la transcripción (${content}):
 
-    Título: Busca en la transcripción si se menciona el tipo de reunión o el tema principal.si no se dice uno o no se sume ninguno por "acta de reunion
-    Fecha, hora y lugar: Extrae esta información de la transcripción.
-    Moderador o presidente: Identifica quién dirigió la sesión.
-    Asistentes: Lista los nombres y cargos de quienes participaron.
-    Orden del Día:
-        Si se menciona un orden del día en la transcripción, usarlo.
-        Si no está explícito, analizar la transcripción y deducir los grandes temas tratados, sin subtemas ni detalles excesivos.
+* **Título:** Busca en la transcripción si se menciona el tipo de reunión o el tema principal. Si no se indica explícitamente o no se puede deducir, utiliza "Acta de Reunión" como título.
+* **Fecha, hora y lugar:** Extrae esta información directamente de la transcripción.
+* **Moderador o presidente:** Identifica quién dirigió la sesión, basándote en la transcripción.
+* **Asistentes:** Lista los nombres y cargos de quienes participaron, según se mencionan en la transcripción.
+* **Orden del Día:**
+    * **Revisa el orden del día proporcionado en la variable ${ordendeldia}.**
+    * **Analiza la transcripción (${content}) para identificar los grandes temas tratados.**
+    * **Combina y organiza los temas del ${ordendeldia} y los temas identificados en la transcripción para generar el orden del día final.** Asegúrate de que este orden del día refleje con precisión los grandes temas discutidos en la reunión.
+    * **El orden del día final debe presentarse en orden cronológico, según el desarrollo de la reunión tal como se evidencia en la transcripción (${content}).**
 
 FORMATO DE SALIDA (SOLO HTML):
+HTML
 
 <header>
-  <h1 style="text-align: center;">Acta de la Reunión</h1>// recuerda bsucar en la transcriopcion se se dice que tipo de reunion es y eso usarloc omo titulo
-  <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+  <h1 style="text-align: center;">Acta de la Reunión</h1><p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
   <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
   <p><strong>Lugar:</strong> [UBICACIÓN]</p>
   <p><strong>Moderador:</strong> [NOMBRE]</p>
@@ -533,82 +570,78 @@ FORMATO DE SALIDA (SOLO HTML):
 
 REGLAS ESTRICTAS:
 
+✅ ORDEN DEL DÍA FINAL: El orden del día final para el acta se generará combinando y revisando el contenido de la variable ${ordendeldia} y los temas identificados en la transcripción (${content}), asegurando que los temas se presenten en orden cronológico según la discusión en la transcripción.
+
 ✅ Salida en HTML puro. No responder en texto plano ni en otro formato.
 ✅ No inventar datos. Si falta información clave, dejar un espacio vacío o indicar "[NO ESPECIFICADO]".
-✅ El "Orden del Día" debe derivarse de los grandes temas de la transcripción si no está explícito.
-✅ No incluir subtemas en el orden del día.
-TRANSCRIPCIÓN:
-
-${content} `;
+✅ El "Orden del Día" debe derivarse de los grandes temas de la transcripción y del contenido de ${ordendeldia}.
+✅ No incluir subtemas en el orden del día.`;
       return userPromt;
     case "Contenido":
       userPromt = `INSTRUCCIONES DEFINITIVAS PARA GENERAR ACTAS EJECUTIVAS PROFESIONALES
 📌 Objetivo:
 
 Generar un acta de reunión profesional y detallada basada en la transcripción de la reunión. El contenido debe centrarse exclusivamente en el tema especificado, capturando todos los detalles relevantes discutidos, incluidas cifras, comentarios de los asistentes y decisiones tomadas, evitando redundancias innecesarias.
+
 📝 Instrucciones Generales:
+
 🔹 Enfoque preciso en el tema
 
-    Se debe extraer y desarrollar contenido exclusivamente relacionado con el tema ${tema}, sin incluir información que pertenezca a otros puntos del orden del día.
-    Antes de desarrollar el contenido, se debe revisar el orden del día ${ordendeldia} para asegurarse de que el tema en cuestión no se solape con otros puntos.
-    ten en cuanta los comentarios de los asistente y de ser posibles integralso  comonaraccion dentro de lso contenidos
-    Trata
-
-
-    Numeracion del tema:${numeracion}
-    Nombre del tema:${tema}
-    los valors anteeriores se deben respetar y se deben poner como titulo de cada desarrollo del tema
+    Se debe extraer y desarrollar contenido exclusivamente relacionado con el tema **${tema}**, sin incluir información que pertenezca a otros puntos del orden del día.
+    Antes de desarrollar el contenido, se debe revisar el orden del día **${ordendeldia}** para asegurarse de que el tema en cuestión no se solape con otros puntos.
+    Se deben integrar los comentarios de los asistentes en la narración del contenido, cuando sea pertinente y aporte valor al acta.
+    El desarrollo del tema debe estar encabezado por la numeración **${numeracion}** y el nombre del tema **${tema}**.
 
 🔹 Estilo de redacción
 
-identifica bien los temas  no es lo mismo hablar de gastos que de inversion, o de tiempos de respuesta a plazos compromentidos quiero que tomes el tema  como base a respetar para buscar contenido
-✅ Narración formal y en tercera persona: No debe haber lenguaje coloquial ni menciones en primera persona.
-✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse a actas anteriores.
-La redaccion debe estar de manera estrica en modo de terceera persona y no se debe repetir informacion que ya se dio en otro tema
-ten cuidado con ser muy redundate con el tema de lso cambios en el orden de dia apra no esta  a cada rato mencionando que se cambio el orden del dia
+    Se deben identificar claramente los temas, diferenciando conceptos relacionados pero distintos como gastos e inversión, o tiempos de respuesta y plazos comprometidos. El tema **${tema}** debe ser la base para la búsqueda y el desarrollo del contenido.
+✅ Narración formal y en tercera persona: La redacción debe ser formal y estrictamente en tercera persona, sin lenguaje coloquial ni menciones en primera persona.
+✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores.
+✅ Evitar redundancias: No se debe repetir información que ya se haya dado en otro tema del acta. Se debe tener especial cuidado en no mencionar repetidamente cambios en el orden del día, a menos que sea estrictamente necesario para la comprensión del tema actual.
+
 ✅ Estructura organizada y coherente:
 
-    Evitar redundancias: Si un aspecto se desarrollará en otro punto del orden del día, se menciona la relación sin repetir información.
-    Fluidez narrativa: Evitar una estructura fragmentada o con exceso de listas que le resten naturalidad al acta.
+    Se debe evitar la redundancia mencionando la relación con otros puntos del orden del día sin repetir la información detallada.
+    La narrativa debe ser fluida y natural, evitando una estructura fragmentada o un uso excesivo de listas.
 
 🔹 Formato profesional y estructurado
 
-✅ Negritas para resaltar cifras y decisiones clave.
-✅ Subtítulos solo cuando aporten claridad: No deben fragmentar en exceso el contenido.
-✅ Listas únicamente cuando sea necesario: No abusar de ellas para evitar un formato de "lista de supermercado".
+✅ Se deben usar negritas para resaltar cifras y decisiones clave.
+✅ Los subtítulos ( <h3> ) se utilizarán solo cuando aporten claridad y ayuden a organizar aspectos clave dentro del mismo tema, sin fragmentar excesivamente el contenido.
+✅ Las listas ( <ul> o <ol> ) se utilizarán únicamente cuando sea necesario para organizar mejor la información, evitando un uso excesivo. Los resultados de las votaciones se deben resaltar en listas de tipo bullet (<ul>).
+
 🔎 Proceso de Desarrollo
+
 1️⃣ Revisión del orden del día
 
-    Analizar el contenido del orden del día (${ordendeldia}) antes de redactar.
-    Asegurar que la información no se superponga con otros temas previamente discutidos o que serán tratados más adelante.
+    Analizar el contenido del orden del día (**${ordendeldia}**) antes de redactar el tema actual.
+    Asegurar que la información a desarrollar no se superponga con otros temas previamente discutidos o que serán tratados más adelante.
 
 2️⃣ Extracción precisa de información
 
-    Identificar dentro de la transcripción ${content} todas las menciones y detalles relacionados exclusivamente con el tema ${tema}.
+    Identificar dentro de la transcripción (**${content}**) todas las menciones y detalles relacionados exclusivamente con el tema **${tema}**.
     Omitir cualquier información irrelevante o que pertenezca a otro punto del orden del día.
 
 3️⃣ Desarrollo del contenido
 
     Redactar en tercera persona con un tono formal y profesional.
-    Incluir detalles específicos como fechas, montos, acuerdos y nombres relevantes cuando sean mencionados.
-    Asegurar coherencia en la estructura y evitar redundancias con otros puntos del acta.
+    Incluir detalles específicos como fechas, montos, acuerdos y nombres relevantes cuando sean mencionados en la transcripción.
+    Asegurar la coherencia en la estructura y evitar la redundancia con otros puntos del acta.
 
 4️⃣ Estructuración y formato en HTML
 
-    Encabezado principal: <h2>${numeracion}. ${tema}</h2> debe tener el valor de ${numeracion}. y del ${tema}
-    Subtítulos: <h3> solo para separar aspectos clave del mismo tema.
-    Negritas: Para cifras, decisiones clave y puntos de relevancia.
-    Listas: Solo cuando ayuden a organizar mejor la información sin fragmentarla innecesariamente.
-    resalta  en bullets los resultados de las votaciones 
-    antes de responder valida que NO tengas contendio  repetido  es una mala practica repetir contenidos 
+    El encabezado principal debe ser: <h2>${numeracion}. ${tema}</h2>.
+    Utilizar subtítulos (<h3>) solo para separar aspectos clave del mismo tema.
+    Usar negritas (<strong>) para cifras, decisiones clave y puntos de relevancia.
+    Utilizar listas (<ul>) para resaltar los resultados de las votaciones.
+    **Antes de responder, se debe validar que NO haya contenido repetido.**
 
 Ejemplo de Acta Generada
 
 Tema: Mantenimiento de Instalaciones
 
-<h2> 1. Fiananzas</h2>//la  y el nombre del tema y el indice
 
-<p>Durante la reunión del 19 de febrero de 2025, se abordó el estado del mantenimiento de las instalaciones, centrándose en los problemas recurrentes en el sistema eléctrico y el drenaje. Se destacaron las preocupaciones de los asistentes sobre las fallas reportadas.</p>
+<h2>1. Fiananzas</h2><p>Durante la reunión del 19 de febrero de 2025, se abordó el estado del mantenimiento de las instalaciones, centrándose en los problemas recurrentes en el sistema eléctrico y el drenaje. Se destacaron las preocupaciones de los asistentes sobre las fallas reportadas.</p>
 
 <h3>Diagnóstico de Problemas</h3>
 
@@ -635,11 +668,13 @@ Tema: Mantenimiento de Instalaciones
 📌 Mejoras clave en esta versión:
 
 ✅ Se incorpora la revisión del orden del día (${ordendeldia}) antes de desarrollar un tema, evitando solapamientos o redundancias.
-asegurate que elos titulo s de cada tema tengan  los  valores  de numeracion ${numeracion}  y tema ${tema} que se reciben 
 ✅ Se enfatiza la necesidad de una narrativa fluida, sin abuso de subtítulos o listas que interrumpan la lectura natural.
 ✅ Se mantiene un balance entre claridad y estructura, asegurando una redacción profesional sin fragmentaciones innecesarias.
 ✅ Se detalla el proceso paso a paso, facilitando la generación de actas más organizadas y precisas.
-asegurate que todo el contenido si o si este en tercera persona y que no se repita informacion que ya se dio en otro tema`;
+✅ Se asegura que los títulos de cada tema tengan los valores de numeración ${numeracion} y tema ${tema}.
+✅ Se reitera que todo el contenido debe estar en tercera persona y que no se debe repetir información ya dada en otro tema.
+
+La respuesta a este prompt DEBE SER ÚNICAMENTE el código HTML generado para el tema específico, sin incluir ninguna otra información, explicación o comentario sobre el proceso meramente el resultado del contenido del acta en el formato.`;
       return userPromt;
 
     case "Cierre":
