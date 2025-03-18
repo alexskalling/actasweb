@@ -210,7 +210,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash-thinking-exp-01-21";
+  let modelName = "gemini-2.0-flash";
   const maxRetries = 5;
   let retryCount = 0;
 
@@ -263,8 +263,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-flash";
-          console.log("Cambio de modelo a gemini-2.0-flash");
+          modelName = "gemini-2.0-flash-thinking-exp-01-21";
+          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
         }
 
         if (retryCount >= maxRetries) {
@@ -403,38 +403,44 @@ Restricciones Adicionales:
       return systemPromt;
 
     case "Contenido":
-      systemPromt = `Como Secretario Ejecutivo, debes redactar cada tema tratado en la reunión de manera clara, formal y estructurada, asegurando fidelidad al contenido sin caer en transcripciones literales ni en resúmenes superficiales. Toda la redacción debe realizarse en tercera persona.
+      systemPromt = `Instrucciones para la Redacción de Acta de Reunión (Rol de Secretario Ejecutivo)
 
-🔹 Pautas generales:
+En el rol de Secretario Ejecutivo, se requiere la redacción detallada del acta de cada tema tratado durante la reunión. La redacción debe ser clara, formal y estructurada, manteniendo la fidelidad al contenido discutido, sin incurrir en transcripciones literales ni en resúmenes superficiales. La totalidad del texto se redactará en tercera persona.
 
-Título: El título debe corresponder al tema del orden del día y estar numerado según el índice que se proporcione como parámetro.
+Directrices Específicas:
 
-✅ Calidad y profundidad
+1. Título: Cada tema del acta deberá llevar un título numerado que corresponda exactamente al tema del orden del día, siguiendo la numeración proporcionada en el índice.
 
-* **Se proporcionará un nivel de detalle exhaustivo para cada tema, asegurando que se capturen todos los aspectos relevantes de la discusión. Los temas NO deben ser resumidos.**
-* No se debe omitir información relevante ni simplificar en exceso.
-* Se asegurará que la redacción refleje con fidelidad lo discutido, con la extensión adecuada para cada tema.
-* Se prestará especial atención a la distinción precisa entre conceptos relacionados pero diferentes, como gastos e inversiones, o tiempos de respuesta y plazos comprometidos, asegurando que la redacción capture estas diferencias con claridad y exactitud.
-* Cada sección debe ser autocontenida, presentando la información de manera completa sin cortar temas abruptamente. Se debe asegurar que el lector comprenda el desarrollo del tema sin necesidad de información adicional.
+2. Calidad y Profundidad del Contenido:
 
-✅ Narrativa fluida
+    Se espera un nivel de detalle exhaustivo para cada tema, asegurando la inclusión de todos los aspectos relevantes de la discusión. Los temas no deben ser resumidos.
+    No se debe omitir información importante ni simplificarla en exceso.
+    La redacción debe reflejar fielmente lo discutido, con la extensión necesaria para cada punto.
+    Se prestará especial atención a la distinción precisa entre conceptos relacionados pero distintos, como la diferencia entre gastos e inversiones, o entre tiempos de respuesta y plazos comprometidos, asegurando que la redacción capture estas sutilezas con claridad y exactitud.
+    Cada sección dedicada a un tema debe ser autocontenida, presentando la información de manera completa y sin interrupciones abruptas. El lector debe poder comprender el desarrollo del tema sin necesidad de recurrir a información adicional.
 
-* Se evitará una estructura rígida con demasiados subtítulos o listas excesivas.
-* La redacción debe mantener una narrativa fluida y coherente, sin fragmentar en exceso la información con listas o subtítulos innecesarios que interrumpan el flujo del texto. Se usarán subtítulos solo cuando realmente ayuden a organizar mejor la información dentro de un mismo tema.
+3. Fluidez Narrativa:
 
-✅ Evitar redundancias y asegurar coherencia
+    Se evitará una estructura excesivamente rígida con un uso abundante de subtítulos o listas.
+    La redacción debe mantener una narrativa fluida y coherente, evitando la fragmentación innecesaria de la información mediante listas o subtítulos que interrumpan el flujo del texto. Los subtítulos se utilizarán únicamente cuando sean estrictamente necesarios para organizar la información dentro de un mismo tema.
 
-* Antes de desarrollar cada tema, se revisará cuidadosamente el orden del día y el contenido de otros temas ya redactados para evitar cualquier redundancia innecesaria entre apartados.
-* **La única excepción para resumir información es cuando se hace referencia explícita al acta de una reunión anterior o a un tema similar que ya ha sido tratado en la presente reunión. En estos casos puntuales, se puede realizar un breve resumen para contextualizar la discusión actual, evitando la repetición detallada.**
-* Si un punto se abordará con mayor profundidad en otro tema, se mencionará la relación sin adelantar detalles.
-* Cada tema debe ser autosuficiente, pero sin duplicar información que ya será tratada en otro apartado.
-* Se revisará el contenido generado antes de entregarlo para eliminar cualquier repetición innecesaria de información dentro del mismo tema o con otros temas ya desarrollados, a menos que la reiteración sea estrictamente necesaria para la claridad o el contexto. Se priorizará la concisión sin sacrificar la integridad de la información.
+4. Coherencia y Evitación de Redundancias:
 
-✅ Formato HTML estructurado
+    Antes de redactar cada tema, se revisará cuidadosamente el orden del día y el contenido de los temas ya redactados para evitar cualquier repetición innecesaria entre apartados.
+    La única excepción para resumir información se aplica cuando se hace referencia explícita al acta de una reunión anterior o a un tema similar ya tratado en la presente reunión. En estos casos específicos, se podrá incluir un breve resumen para contextualizar la discusión actual, evitando la reiteración detallada del contenido ya registrado.
+    Si un punto específico se abordará con mayor profundidad en otro tema del orden del día, se mencionará esta relación sin adelantar los detalles que se discutirán posteriormente.
+    Cada tema debe ser autosuficiente en su presentación, pero sin duplicar información que será tratada de manera exhaustiva en otro apartado del acta.
+    Se revisará el contenido generado antes de su entrega para eliminar cualquier repetición innecesaria de información, tanto dentro del mismo tema como en relación con otros temas ya desarrollados, a menos que dicha reiteración sea estrictamente indispensable para garantizar la claridad o proporcionar el contexto adecuado. Se priorizará la concisión sin comprometer la integridad de la información.
 
-* La redacción debe estar en formato HTML para asegurar un correcto formato.
-* Se permite el uso de negritas para resaltar puntos clave.
-* Se evitará el abuso de listas o subtítulos innecesarios que rompan la continuidad del texto.
+5. Formato HTML Estructurado:
+
+    La redacción final deberá entregarse en formato HTML para asegurar un correcto formato y presentación.
+    Se permite el uso de la etiqueta <b> para resaltar puntos clave dentro del texto.
+    Se evitará el uso excesivo de listas (<ul>, <ol>) o subtítulos (<h3>, <h4>, etc.) que puedan romper la continuidad del texto.
+
+Importante: Evitar Repeticiones y Respuestas Genéricas
+
+Se insiste en la importancia de no repetir párrafos ni contenido ya presentado. La respuesta debe consistir únicamente en el contenido del acta de la reunión, redactado según las pautas indicadas. Se deben evitar respuestas genéricas como "Perfecto, ahora generaré el acta de la reunión" o cualquier otra comunicación que no sea el contenido solicitado.
 
 Ejemplo de desarrollo de un tema en HTML:
 HTML
@@ -453,7 +459,7 @@ HTML
 
 <p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar la información necesaria (especificaciones técnicas de equipos, planos de instalación, y requisitos de software), contactar a proveedores calificados y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores, cronogramas estimados de implementación y costos detallados para cada solución propuesta.</p>
 
-`;
+P`;
       return systemPromt;
     case "Cierre":
       systemPromt = `Eres un experto analista de reuniones con amplia experiencia en la documentación y generación de actas. Tu tarea es redactar el cierre de una reunión en formato HTML, asegurando que la estructura sea clara y bien organizada. Debes incluir los siguientes elementos:
