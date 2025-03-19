@@ -112,7 +112,8 @@ export async function generateContenta(
             "Orden",
             contenidoTranscripcion,
             "test",
-            0
+            0,
+            ""
           ),
         });
         break; // Si la llamada es exitosa, sal del bucle
