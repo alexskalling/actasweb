@@ -294,45 +294,57 @@ async function getSystemPromt(tipo: string) {
 
   switch (tipo) {
     case "Orden":
-      systemPromt = `Rol: Eres un asistente experto en análisis de reuniones.
-
-Tarea Única: Procesar transcripciones de reuniones y generar un orden del día en formato JSON.
-
+      systemPromt = `Procesar transcripciones de reuniones y generar un orden del día en formato JSON.
 Instrucciones Específicas:
 
     Formato de Respuesta: Responde únicamente con un objeto JSON válido. No incluyas texto adicional, explicaciones o comentarios antes o después del JSON.
 
-    Estructura del Orden del Día (JSON):
+Estructura del Orden del Día (JSON):
 
-        Si la transcripción contiene un "Orden del Día" explícito:
-            Tómalo como base.
-            Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito.
-            Incluye estos temas adicionales en el orden del día generado.
-            No elimines ningún punto del orden del día explícito.
-            Asegúrate de que el orden del día generado refleje el orden cronológico de los temas tratados en la transcripción.
+    Si la transcripción contiene un "Orden del Día" explícito:
+        Tómalo como base.
+        Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito.
+        Incluye estos temas adicionales en el orden del día generado.
+        No elimines ningún punto del orden del día explícito.
+        Asegúrate de que el orden del día generado refleje el orden cronológico de los temas tratados en la transcripción.
+        Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
 
-        Si la transcripción no contiene un "Orden del Día" explícito:
-            Genera un orden del día basado en los temas principales discutidos en la transcripción.
-            Asegúrate de incluir todos los temas principales identificados.
-            Mantén el orden cronológico en el que los temas fueron tratados.
+    Si la transcripción no contiene un "Orden del Día" explícito:
+        Genera un orden del día basado en los temas principales discutidos en la transcripción.
+        Asegúrate de incluir todos los temas principales identificados.
+        Mantén el orden cronológico en el que los temas fueron tratados.
+        Antes de entregar el resultado final, verifica que no haya duplicados en la lista. Si un tema ya está en la lista, no lo repitas.
 
-        Elementos Obligatorios: El JSON siempre debe comenzar con {"id": 0, "nombre": "Cabecera"} y finalizar con {"id": n + 1, "nombre": "Cierre"}.
+Elementos Obligatorios:
 
-    Nivel de Detalle: Incluye solo los temas principales. No incluyas subtemas o detalles menores.
+El JSON siempre debe comenzar con:
 
-    Formato JSON Preciso: La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema). No incluyas etiquetas o nombres de campos adicionales.
+{ "id": 0, "nombre": "Cabecera" }
 
-    Transcripción Vacía o Irrelevante: Si la transcripción está vacía o no contiene información relevante para generar un orden del día, responde con el siguiente JSON:
-    JSON
+Y finalizar con:
 
-    [
-      { "id": 0, "nombre": "Cabecera" },
-      { "id": 1, "nombre": "Título claro y diciente" },
-      { "id": 2, "nombre": "Cierre" }
-    ]
+{ "id": n + 1, "nombre": "Cierre" }
+
+Nivel de Detalle:
+
+    Incluye solo los temas principales. No incluyas subtemas o detalles menores.
+
+Formato JSON Preciso:
+
+    La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema).
+    No incluyas etiquetas o nombres de campos adicionales.
+
+Transcripción Vacía o Irrelevante:
+
+Si la transcripción está vacía o no contiene información relevante para generar un orden del día, responde con el siguiente JSON:
+
+[
+  { "id": 0, "nombre": "Cabecera" },
+  { "id": 1, "nombre": "Título claro y diciente" },
+  { "id": 2, "nombre": "Cierre" }
+]
 
 Ejemplo de Orden del Día (Solo Referencia):
-JSON
 
 [
   { "id": 0, "nombre": "Cabecera" },
@@ -347,6 +359,7 @@ JSON
   { "id": 9, "nombre": "Proposiciones y varios" },
   { "id": 10, "nombre": "Cierre" }
 ]
+
 `;
       return systemPromt;
 
@@ -507,23 +520,41 @@ async function getUserPromt(
   switch (tipo) {
     case "Orden":
       userPromt = `Procesa la siguiente transcripción de una reunión, la cual se encuentra contenida en la variable ${content}, y extrae el orden del día en formato JSON, siguiendo estrictamente las reglas establecidas.
-
 Transcripción:
 
 ${content}
-
 Instrucciones Específicas:
 
-    Procesa el contenido de la variable ${content} como la transcripción de la reunión.
-    Si la transcripción menciona explícitamente un "orden del día", utilízalo como base. Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
-    Si no hay un "orden del día" explícito en la transcripción, identifica los grandes temas tratados durante la reunión y estructúralos en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos. Asegúrate de incluir todos los temas principales identificados.
+    Procesamiento del Contenido:
+        Procesa el contenido de la variable ${content} como la transcripción de la reunión.
+
+    Si la transcripción menciona explícitamente un "orden del día":
+        Utilízalo como base.
+        Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
+        Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
+
+    Si no hay un "orden del día" explícito en la transcripción:
+        Identifica los grandes temas tratados durante la reunión.
+        Estructura los temas en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos.
+        Asegúrate de incluir todos los temas principales identificados.
+        Verifica que no haya duplicados en la lista. Si un tema ya está en la lista, no lo repitas.
+
+Formato de Respuesta:
+
     La respuesta debe ser ÚNICAMENTE un objeto JSON válido. No incluyas ningún comentario, explicación, texto adicional o frase introductoria o de conclusión antes o después del JSON.
     El JSON generado debe seguir la siguiente estructura obligatoria:
-        Siempre debe comenzar con {"id": 0, "nombre": "Cabecera"}.
-        Siempre debe terminar con {"id": n + 1, "nombre": "Cierre"}.
-        Los temas principales deben estar representados como objetos JSON dentro de un array, con los campos "id" (numérico secuencial, comenzando en 1) y "nombre" (string con el nombre del tema).
-    No incluyas subtemas ni detalles menores. Solo los grandes temas deben aparecer en el orden del día.
-    Asegúrate de que la respuesta sea un JSON puro, sin etiquetas, nombres de campos adicionales o cualquier otro elemento que no sea estrictamente el array de objetos JSON con los id y nombre solicitados.
+        Siempre debe comenzar con:
+
+{ "id": 0, "nombre": "Cabecera" }
+
+Siempre debe terminar con:
+
+{ "id": n + 1, "nombre": "Cierre" }
+
+Los temas principales deben estar representados como objetos JSON dentro de un array, con los campos "id" (numérico secuencial, comenzando en 1) y "nombre" (string con el nombre del tema).
+No incluyas subtemas ni detalles menores. Solo los grandes temas deben aparecer en el orden del día.
+Asegúrate de que la respuesta sea un JSON puro, sin etiquetas, nombres de campos adicionales o cualquier otro elemento que no sea estrictamente el array de objetos JSON con los campos "id" y "nombre".
+El JSON final no debe contener temas repetidos.
     `;
       return userPromt;
     case "Cabecera":
