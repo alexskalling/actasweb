@@ -167,6 +167,7 @@ export async function generateContenta(
 
       const contenidoFormato = contenido
         .replace(/```html/g, "")
+        .replace(/HTML/g, "")
         .replace(/html/g, "")
         .replace(/```/g, "")
         .replace(/< lang="es">/g, "")
@@ -249,7 +250,8 @@ async function procesarOrdenDelDia(
             tema.nombre,
             contenidoTranscripcion,
             ordenDelDiaJSON,
-            index
+            index,
+            contenido
           ),
         });
         console.log(responseTema.text.trim());
@@ -403,14 +405,11 @@ Restricciones Adicionales:
       return systemPromt;
 
     case "Contenido":
-      systemPromt = `Instrucciones para la Redacción de Acta de Reunión (Rol de Secretario Ejecutivo)
-
-En el rol de Secretario Ejecutivo, se requiere la redacción detallada del acta de cada tema tratado durante la reunión. La redacción debe ser clara, formal y estructurada, manteniendo la fidelidad al contenido discutido, sin incurrir en transcripciones literales ni en resúmenes superficiales. La totalidad del texto se redactará en tercera persona.
-
+      systemPromt = `En el rol de Secretario Ejecutivo, se requiere la redacción detallada del acta de cada tema tratado durante la reunión. La redacción debe ser clara, formal y estructurada, manteniendo la fidelidad al contenido discutido, sin incurrir en transcripciones literales ni en resúmenes superficiales. SIEMPRE DEBE ESTAR REDACTADO EN TERCERA PERSONA.
 Directrices Específicas:
+1. Título:
 
-1. Título: Cada tema del acta deberá llevar un título numerado que corresponda exactamente al tema del orden del día, siguiendo la numeración proporcionada en el índice.
-
+Cada tema del acta deberá llevar un título numerado que corresponda exactamente al tema del orden del día, siguiendo la numeración proporcionada en el índice.
 2. Calidad y Profundidad del Contenido:
 
     Se espera un nivel de detalle exhaustivo para cada tema, asegurando la inclusión de todos los aspectos relevantes de la discusión. Los temas no deben ser resumidos.
@@ -418,6 +417,7 @@ Directrices Específicas:
     La redacción debe reflejar fielmente lo discutido, con la extensión necesaria para cada punto.
     Se prestará especial atención a la distinción precisa entre conceptos relacionados pero distintos, como la diferencia entre gastos e inversiones, o entre tiempos de respuesta y plazos comprometidos, asegurando que la redacción capture estas sutilezas con claridad y exactitud.
     Cada sección dedicada a un tema debe ser autocontenida, presentando la información de manera completa y sin interrupciones abruptas. El lector debe poder comprender el desarrollo del tema sin necesidad de recurrir a información adicional.
+    En caso de que un tema del orden del día no se aborde durante la reunión, se debe dejar constancia explícita indicando que el tema estaba previsto pero no se trató finalmente.
 
 3. Fluidez Narrativa:
 
@@ -441,9 +441,7 @@ Directrices Específicas:
 Importante: Evitar Repeticiones y Respuestas Genéricas
 
 Se insiste en la importancia de no repetir párrafos ni contenido ya presentado. La respuesta debe consistir únicamente en el contenido del acta de la reunión, redactado según las pautas indicadas. Se deben evitar respuestas genéricas como "Perfecto, ahora generaré el acta de la reunión" o cualquier otra comunicación que no sea el contenido solicitado.
-
 Ejemplo de desarrollo de un tema en HTML:
-HTML
 
 <h2>1. Plan de Mejoras en Seguridad del Edificio</h2>
 
@@ -457,9 +455,9 @@ HTML
 
 <p>Si bien las propuestas fueron bien recibidas por la mayoría, algunos asistentes manifestaron inquietudes específicas sobre los costos detallados de implementación de cada medida. Se acordó solicitar al menos tres cotizaciones detalladas de diferentes proveedores antes de la siguiente reunión para evaluar la viabilidad económica de cada medida con datos concretos y poder tomar decisiones informadas.</p>
 
-<p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar la información necesaria (especificaciones técnicas de equipos, planos de instalación, y requisitos de software), contactar a proveedores calificados y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores, cronogramas estimados de implementación y costos detallados para cada solución propuesta.</p>
+<p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar la información necesaria (especificaciones técnicas de equipos, planos de instalación y requisitos de software), contactar a proveedores calificados y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores, cronogramas estimados de implementación y costos detallados para cada solución propuesta.</p>
 
-P`;
+`;
       return systemPromt;
     case "Cierre":
       systemPromt = `Eres un experto analista de reuniones con amplia experiencia en la documentación y generación de actas. Tu tarea es redactar el cierre de una reunión en formato HTML, asegurando que la estructura sea clara y bien organizada. Debes incluir los siguientes elementos:
@@ -500,7 +498,8 @@ async function getUserPromt(
   tema: string,
   content: string,
   ordendeldia: string,
-  numeracion: number
+  numeracion: number,
+  contenidoActa: string
 ) {
   let userPromt = "";
 
@@ -584,103 +583,84 @@ REGLAS ESTRICTAS:
 ✅ No incluir subtemas en el orden del día.`;
       return userPromt;
     case "Contenido":
-      userPromt = `INSTRUCCIONES DEFINITIVAS PARA GENERAR ACTAS EJECUTIVAS PROFESIONALES
+      userPromt = `📝 INSTRUCCIONES DEFINITIVAS PARA GENERAR ACTAS EJECUTIVAS PROFESIONALES
 📌 Objetivo:
 
 Generar un acta de reunión profesional y detallada basada en la transcripción de la reunión. El contenido debe centrarse exclusivamente en el tema especificado, capturando todos los detalles relevantes discutidos, incluidas cifras, comentarios de los asistentes y decisiones tomadas, evitando redundancias innecesarias.
-
 📝 Instrucciones Generales:
 
 🔹 Enfoque preciso en el tema
 
-    Se debe extraer y desarrollar contenido exclusivamente relacionado con el tema **${tema}**, sin incluir información que pertenezca a otros puntos del orden del día.
-    Antes de desarrollar el contenido, se debe revisar el orden del día **${ordendeldia}** para asegurarse de que el tema en cuestión no se solape con otros puntos.
+    Se debe extraer y desarrollar contenido exclusivamente relacionado con el tema ${tema}, sin incluir información que pertenezca a otros puntos del orden del día.
+    Antes de desarrollar el contenido, se debe revisar el orden del día ${ordendeldia} para asegurarse de que el tema en cuestión no se solape con otros puntos.
+    Se debe realizar una búsqueda exhaustiva y minuciosa dentro de la transcripción para encontrar todos los detalles específicos relacionados con el tema ${tema}.
+    En caso de no encontrar información relevante, se debe expresar claramente que el tema fue nombrado en el orden del día pero no fue abordado durante el desarrollo de la reunión.
     Se deben integrar los comentarios de los asistentes en la narración del contenido, cuando sea pertinente y aporte valor al acta.
-    El desarrollo del tema debe estar encabezado por la numeración **${numeracion}** y el nombre del tema **${tema}**.
+    El desarrollo del tema debe estar encabezado por la numeración ${numeracion} y el nombre del tema ${tema}.
+
+🔹 Evitar redundancias y contenido duplicado
+
+    A medida que se genera contenido nuevo basado en el tema en curso, se debe revisar el contenido previamente generado ${contenidoActa} para evitar solapamientos, redundancias o información repetida.
+    Se debe garantizar que el contenido generado esté claro y ordenado, evitando repeticiones o superposiciones con temas previamente desarrollados.
+    Verificar que la información relevante sea precisa y no contradiga lo ya escrito en otros apartados del acta.
 
 🔹 Estilo de redacción
 
-    Se deben identificar claramente los temas, diferenciando conceptos relacionados pero distintos como gastos e inversión, o tiempos de respuesta y plazos comprometidos. El tema **${tema}** debe ser la base para la búsqueda y el desarrollo del contenido.
-✅ Narración formal y en tercera persona: La redacción debe ser formal y estrictamente en tercera persona, sin lenguaje coloquial ni menciones en primera persona.
-✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores.
-✅ Evitar redundancias: No se debe repetir información que ya se haya dado en otro tema del acta. Se debe tener especial cuidado en no mencionar repetidamente cambios en el orden del día, a menos que sea estrictamente necesario para la comprensión del tema actual.
+    ✅ Narración formal y en tercera persona: La redacción debe ser formal y estrictamente en tercera persona, sin lenguaje coloquial ni menciones en primera persona.
+    ✅ No se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores.
+    ✅ Evitar redundancias: No se debe repetir información que ya se haya dado en otro tema del acta. Se debe tener especial cuidado en no mencionar repetidamente cambios en el orden del día, a menos que sea estrictamente necesario para la comprensión del tema actual.
 
-✅ Estructura organizada y coherente:
+🔹 Estructura organizada y coherente:
 
     Se debe evitar la redundancia mencionando la relación con otros puntos del orden del día sin repetir la información detallada.
     La narrativa debe ser fluida y natural, evitando una estructura fragmentada o un uso excesivo de listas.
 
 🔹 Formato profesional y estructurado
 
-✅ Se deben usar negritas para resaltar cifras y decisiones clave.
-✅ Los subtítulos ( <h3> ) se utilizarán solo cuando aporten claridad y ayuden a organizar aspectos clave dentro del mismo tema, sin fragmentar excesivamente el contenido.
-✅ Las listas ( <ul> o <ol> ) se utilizarán únicamente cuando sea necesario para organizar mejor la información, evitando un uso excesivo. Los resultados de las votaciones se deben resaltar en listas de tipo bullet (<ul>).
+    ✅ Se deben usar negritas para resaltar cifras y decisiones clave.
+    ✅ Los subtítulos (<h3>) se utilizarán solo cuando aporten claridad y ayuden a organizar aspectos clave dentro del mismo tema, sin fragmentar excesivamente el contenido.
+    ✅ Las listas (<ul> o <ol>) se utilizarán únicamente cuando sea necesario para organizar mejor la información, evitando un uso excesivo. Los resultados de las votaciones se deben resaltar en listas de tipo bullet (<ul>).
 
 🔎 Proceso de Desarrollo
 
 1️⃣ Revisión del orden del día
 
-    Analizar el contenido del orden del día (**${ordendeldia}**) antes de redactar el tema actual.
+    Analizar el contenido del orden del día (${ordendeldia}) antes de redactar el tema actual.
     Asegurar que la información a desarrollar no se superponga con otros temas previamente discutidos o que serán tratados más adelante.
 
 2️⃣ Extracción precisa de información
 
-    Identificar dentro de la transcripción (**${content}**) todas las menciones y detalles relacionados exclusivamente con el tema **${tema}**.
+    Identificar dentro de la transcripción (${content}) todas las menciones y detalles relacionados exclusivamente con el tema ${tema}.
     Omitir cualquier información irrelevante o que pertenezca a otro punto del orden del día.
 
-3️⃣ Desarrollo del contenido
+3️⃣ Verificación de contenido previo
+
+    Revisar el contenido ya generado (${contenidoActa}) para evitar redundancias, solapamientos o información repetida.
+    Asegurarse de que la estructura del acta se mantenga clara, ordenada y sin contradicciones con respecto a lo previamente escrito.
+
+4️⃣ Desarrollo del contenido
 
     Redactar en tercera persona con un tono formal y profesional.
     Incluir detalles específicos como fechas, montos, acuerdos y nombres relevantes cuando sean mencionados en la transcripción.
     Asegurar la coherencia en la estructura y evitar la redundancia con otros puntos del acta.
+    Si el tema no fue abordado en la reunión, mencionar explícitamente que se incluyó en el orden del día pero no se trató finalmente.
 
-4️⃣ Estructuración y formato en HTML
+5️⃣ Estructuración y formato en HTML
 
     El encabezado principal debe ser: <h2>${numeracion}. ${tema}</h2>.
     Utilizar subtítulos (<h3>) solo para separar aspectos clave del mismo tema.
     Usar negritas (<strong>) para cifras, decisiones clave y puntos de relevancia.
     Utilizar listas (<ul>) para resaltar los resultados de las votaciones.
-    **Antes de responder, se debe validar que NO haya contenido repetido.**
-
-Ejemplo de Acta Generada
-
-Tema: Mantenimiento de Instalaciones
-
-
-<h2>1. Fiananzas</h2><p>Durante la reunión del 19 de febrero de 2025, se abordó el estado del mantenimiento de las instalaciones, centrándose en los problemas recurrentes en el sistema eléctrico y el drenaje. Se destacaron las preocupaciones de los asistentes sobre las fallas reportadas.</p>
-
-<h3>Diagnóstico de Problemas</h3>
-
-<p>El equipo de mantenimiento presentó un informe con las siguientes áreas críticas:</p>
-
-<ul>
-    <li><strong>Sistema eléctrico:</strong> Se registraron fallos intermitentes en la iluminación, principalmente en los pasillos principales, con <strong>5 incidentes en enero</strong>, afectando la seguridad de los residentes.</li>
-    <li><strong>Sistema de drenaje:</strong> Bloqueos recurrentes causaron <strong>inundaciones menores en el sótano</strong> en varias ocasiones durante el último trimestre.</li>
-</ul>
-
-<h3>Medidas Aprobadas</h3>
-
-<p>Tras la evaluación, se aprobaron las siguientes acciones:</p>
-
-<ul>
-    <li><strong>Contratación de especialistas:</strong> Se asignó un presupuesto de <strong>$2,500</strong> para un diagnóstico integral de los sistemas afectados.</li>
-    <li><strong>Reparaciones inmediatas:</strong> Se destinarán <strong>$1,500</strong> para solucionar fallos eléctricos urgentes.</li>
-</ul>
-
-<h3>Conclusiones</h3>
-
-<p>Se aprobó la contratación de expertos y la ejecución de reparaciones prioritarias. Adicionalmente, se implementará un <strong>plan de mantenimiento preventivo</strong> con un presupuesto anual específico.</p>
+    Antes de responder, se debe validar que NO haya contenido repetido.
 
 📌 Mejoras clave en esta versión:
 
-✅ Se incorpora la revisión del orden del día (${ordendeldia}) antes de desarrollar un tema, evitando solapamientos o redundancias.
-✅ Se enfatiza la necesidad de una narrativa fluida, sin abuso de subtítulos o listas que interrumpan la lectura natural.
-✅ Se mantiene un balance entre claridad y estructura, asegurando una redacción profesional sin fragmentaciones innecesarias.
-✅ Se detalla el proceso paso a paso, facilitando la generación de actas más organizadas y precisas.
-✅ Se asegura que los títulos de cada tema tengan los valores de numeración ${numeracion} y tema ${tema}.
-✅ Se reitera que todo el contenido debe estar en tercera persona y que no se debe repetir información ya dada en otro tema.
-
-La respuesta a este prompt DEBE SER ÚNICAMENTE el código HTML generado para el tema específico, sin incluir ninguna otra información, explicación o comentario sobre el proceso meramente el resultado del contenido del acta en el formato.`;
+    ✅ Refuerza la búsqueda minuciosa de la información en la transcripción para garantizar que no se omita ningún detalle relevante.
+    ✅ Se enfatiza la necesidad de expresar que el tema fue nombrado en el orden del día pero no abordado, si aplica.
+    ✅ Garantiza una redacción formal en tercera persona en todo el contenido.
+    ✅ Evita redundancias y garantiza que no se repita información ya cubierta en otros temas.
+    ✅ Facilita el proceso de generación de actas con estructura clara y profesional.
+    ✅ Incluye la verificación previa de contenido generado para evitar redundancias y asegurar la coherencia del acta.`;
       return userPromt;
 
     case "Cierre":
