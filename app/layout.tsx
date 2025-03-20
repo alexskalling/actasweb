@@ -34,7 +34,7 @@ export default function RootLayout({
           src="https://checkout.wompi.co/widget.js"
           strategy="lazyOnload"
         />
-        <GoogleAnalytics gaId="G-F2VDTR8RN3" />
+        <GoogleAnalytics gaId="G-VL70D0YN9S" />
         <GoogleTagManager gtmId="GTM-MRMG7JTJ" />
       </body>
     </html>
