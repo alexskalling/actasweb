@@ -297,23 +297,25 @@ async function getSystemPromt(tipo: string) {
       systemPromt = `Procesar transcripciones de reuniones y generar un orden del día en formato JSON.
 Instrucciones Específicas:
 
-    Formato de Respuesta: Responde únicamente con un objeto JSON válido. No incluyas texto adicional, explicaciones o comentarios antes o después del JSON.
+Formato de Respuesta: Responde únicamente con un objeto JSON válido. No incluyas texto adicional, explicaciones o comentarios antes o después del JSON.
 
 Estructura del Orden del Día (JSON):
 
-    Si la transcripción contiene un "Orden del Día" explícito:
-        Tómalo como base.
-        Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito.
-        Incluye estos temas adicionales en el orden del día generado.
-        No elimines ningún punto del orden del día explícito.
-        Asegúrate de que el orden del día generado refleje el orden cronológico de los temas tratados en la transcripción.
-        Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
+Si la transcripción contiene un "Orden del Día" explícito:
+    Tómalo como base.
+    Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito.
+    Incluye estos temas adicionales en el orden del día generado.
+    No elimines ningún punto del orden del día explícito.
+    **Identifica temas altamente similares dentro del orden del día explícito o entre los puntos añadidos y el orden del día explícito (por ejemplo, "Lectura y aprobación del orden del día" y "Modificación del orden del día", o "Informe de ascensores" y "Discusión sobre ascensores"). Si encuentras temas con una similitud muy alta, combínalos en un único punto del orden del día. Asegúrate de integrar la información y los detalles discutidos en ambos temas originales dentro del nuevo punto combinado, evitando la repetición de información.**
+    Asegúrate de que el orden del día generado refleje el orden cronológico de los temas tratados en la transcripción.
+    Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre (o un tema ya combinado) ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
 
-    Si la transcripción no contiene un "Orden del Día" explícito:
-        Genera un orden del día basado en los temas principales discutidos en la transcripción.
-        Asegúrate de incluir todos los temas principales identificados.
-        Mantén el orden cronológico en el que los temas fueron tratados.
-        Antes de entregar el resultado final, verifica que no haya duplicados en la lista. Si un tema ya está en la lista, no lo repitas.
+Si la transcripción no contiene un "Orden del Día" explícito:
+    Genera un orden del día basado en los temas principales discutidos en la transcripción.
+    **Identifica temas altamente similares entre los temas identificados (siguiendo el mismo criterio de alta similitud ejemplificado anteriormente). Si encuentras temas con una similitud muy alta, combínalos en un único punto del orden del día, integrando la información y los detalles discutidos en ambos temas originales sin repetir información.**
+    Asegúrate de incluir todos los temas principales identificados (o combinados).
+    Mantén el orden cronológico en el que los temas fueron tratados.
+    Antes de entregar el resultado final, verifica que no haya duplicados en la lista. Si un tema ya está en la lista (o ha sido combinado), no lo repitas.
 
 Elementos Obligatorios:
 
@@ -327,37 +329,37 @@ Y finalizar con:
 
 Nivel de Detalle:
 
-    Incluye solo los temas principales. No incluyas subtemas o detalles menores.
+Incluye solo los temas principales. No incluyas subtemas o detalles menores.
 
 Formato JSON Preciso:
 
-    La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema).
-    No incluyas etiquetas o nombres de campos adicionales.
+La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema).
+No incluyas etiquetas o nombres de campos adicionales.
 
 Transcripción Vacía o Irrelevante:
 
 Si la transcripción está vacía o no contiene información relevante para generar un orden del día, responde con el siguiente JSON:
 
 [
-  { "id": 0, "nombre": "Cabecera" },
-  { "id": 1, "nombre": "Título claro y diciente" },
-  { "id": 2, "nombre": "Cierre" }
+{ "id": 0, "nombre": "Cabecera" },
+{ "id": 1, "nombre": "Título claro y diciente" },
+{ "id": 2, "nombre": "Cierre" }
 ]
 
 Ejemplo de Orden del Día (Solo Referencia):
 
 [
-  { "id": 0, "nombre": "Cabecera" },
-  { "id": 1, "nombre": "Verificación del quórum" },
-  { "id": 2, "nombre": "Lectura y aprobación del orden del día" },
-  { "id": 3, "nombre": "Elección Presidente y secretario de la asamblea" },
-  { "id": 4, "nombre": "Comisión verificadora del acta" },
-  { "id": 5, "nombre": "Informe de administración y el consejo de administración" },
-  { "id": 6, "nombre": "Estados financieros con corte a 31 de diciembre del 2024" },
-  { "id": 7, "nombre": "Dictamen del revisor fiscal" },
-  { "id": 8, "nombre": "Aprobación de los estados financieros" },
-  { "id": 9, "nombre": "Proposiciones y varios" },
-  { "id": 10, "nombre": "Cierre" }
+{ "id": 0, "nombre": "Cabecera" },
+{ "id": 1, "nombre": "Verificación del quórum" },
+{ "id": 2, "nombre": "Lectura y aprobación del orden del día" },
+{ "id": 3, "nombre": "Elección Presidente y secretario de la asamblea" },
+{ "id": 4, "nombre": "Comisión verificadora del acta" },
+{ "id": 5, "nombre": "Informe de administración y el consejo de administración" },
+{ "id": 6, "nombre": "Estados financieros con corte a 31 de diciembre del 2024" },
+{ "id": 7, "nombre": "Dictamen del revisor fiscal" },
+{ "id": 8, "nombre": "Aprobación de los estados financieros" },
+{ "id": 9, "nombre": "Proposiciones y varios" },
+{ "id": 10, "nombre": "Cierre" }
 ]
 
 `;
@@ -519,31 +521,39 @@ async function getUserPromt(
 
   switch (tipo) {
     case "Orden":
-      userPromt = `Procesa la siguiente transcripción de una reunión, la cual se encuentra contenida en la variable ${content}, y extrae el orden del día en formato JSON, siguiendo estrictamente las reglas establecidas.
+      userPromt = `Claro, aquí tienes el prompt con los ejemplos integrados dentro de las instrucciones:
+
+Procesa la siguiente transcripción de una reunión, la cual se encuentra contenida en la variable ${content}, y extrae el orden del día en formato JSON, siguiendo estrictamente las reglas establecidas.
+
 Transcripción:
 
 ${content}
 Instrucciones Específicas:
 
-    Procesamiento del Contenido:
-        Procesa el contenido de la variable ${content} como la transcripción de la reunión.
+Procesamiento del Contenido:
+    Procesa el contenido de la variable ${content} como la transcripción de la reunión.
 
-    Si la transcripción menciona explícitamente un "orden del día":
-        Utilízalo como base.
-        Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
-        Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
+Si la transcripción menciona explícitamente un "orden del día":
+    Utilízalo como base.
+    Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
+    **Identifica temas altamente similares dentro del orden del día explícito o entre los puntos añadidos y el orden del día explícito. Por ejemplo:**
+        * **Si encuentras los temas "4. Lectura y aprobación del orden del día" y "5. Modificación del orden del día", considera que son altamente similares y combínalos en un único punto.**
+        * **De igual manera, si aparecen "14. Informe de ascensores" y "15. Discusión sobre ascensores", estos también deben considerarse altamente similares y combinarse.**
+    **Al combinar temas, asegúrate de integrar la información y los detalles discutidos en ambos temas originales dentro del nuevo punto combinado, evitando la repetición de información.**
+    Antes de entregar el resultado final, asegúrate de que no haya temas duplicados (incluso después de la posible combinación de temas similares) en la lista. Si un tema con el mismo nombre (o un tema ya combinado) ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
 
-    Si no hay un "orden del día" explícito en la transcripción:
-        Identifica los grandes temas tratados durante la reunión.
-        Estructura los temas en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos.
-        Asegúrate de incluir todos los temas principales identificados.
-        Verifica que no haya duplicados en la lista. Si un tema ya está en la lista, no lo repitas.
+Si no hay un "orden del día" explícito en la transcripción:
+    Identifica los grandes temas tratados durante la reunión.
+    **Identifica temas altamente similares entre los temas identificados, siguiendo el criterio de alta similitud ejemplificado anteriormente (por ejemplo, la combinación de un informe y su discusión relacionada). Si encuentras temas con una similitud muy alta, combínalos en un único punto del orden del día, integrando la información y los detalles discutidos en ambos temas originales sin repetir información.**
+    Estructura los temas (incluyendo los posibles temas combinados) en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos.
+    Asegúrate de incluir todos los temas principales identificados (o combinados).
+    Verifica que no haya duplicados en la lista. Si un tema ya está en la lista (o ha sido combinado), no lo repitas.
 
 Formato de Respuesta:
 
-    La respuesta debe ser ÚNICAMENTE un objeto JSON válido. No incluyas ningún comentario, explicación, texto adicional o frase introductoria o de conclusión antes o después del JSON.
-    El JSON generado debe seguir la siguiente estructura obligatoria:
-        Siempre debe comenzar con:
+La respuesta debe ser ÚNICAMENTE un objeto JSON válido. No incluyas ningún comentario, explicación, texto adicional o frase introductoria o de conclusión antes o después del JSON.
+El JSON generado debe seguir la siguiente estructura obligatoria:
+    Siempre debe comenzar con:
 
 { "id": 0, "nombre": "Cabecera" }
 
@@ -555,6 +565,13 @@ Los temas principales deben estar representados como objetos JSON dentro de un a
 No incluyas subtemas ni detalles menores. Solo los grandes temas deben aparecer en el orden del día.
 Asegúrate de que la respuesta sea un JSON puro, sin etiquetas, nombres de campos adicionales o cualquier otro elemento que no sea estrictamente el array de objetos JSON con los campos "id" y "nombre".
 El JSON final no debe contener temas repetidos.
+
+Puntos Clave Adicionales:
+
+    Alta Similitud: Considera como altamente similares temas que se refieren al mismo asunto principal, incluso si tienen ligeras variaciones en su formulación (como los ejemplos proporcionados).
+    Integración de Detalles: Al combinar temas, asegúrate de que el nombre del nuevo tema refleje adecuadamente la unión de los temas originales y que la información relevante de ambos se considere para el contenido asociado a ese punto del orden del día (aunque el formato JSON solo requiere el nombre).
+    Orden Cronológico: Mantén el orden cronológico original de los temas, incluso después de la combinación. Si dos temas altamente similares se discutieron en momentos diferentes, el tema combinado debería reflejar ese orden dentro del flujo general de la reunión.
+
     `;
       return userPromt;
     case "Cabecera":
@@ -565,7 +582,7 @@ ENTRADA OBLIGATORIA:
 ✅ TRANSCRIPCIÓN COMPLETA Y DETALLADA:
 Utiliza la transcripción proporcionada en la variable ${content} como única fuente de información sobre los temas discutidos. No inventes ni agregues datos que no estén en la transcripción. La precisión y claridad del acta dependerán directamente de la calidad de la transcripción de entrada.
 
-✅ ORDEN DEL DÍA DE REFERENCIA:
+✅ ORDEN DEL DÍA DE REFERENCIA y base que no se debe modificar a menso de que sea estricatamente necesario:
 Considera el orden del día proporcionado en la variable ${ordendeldia} como una guía o un borrador inicial. Este orden del día debe ser revisado y comparado con los temas que surjan directamente de la transcripción para generar el orden del día final.
 
 GENERACIÓN DE LA CABECERA:
@@ -577,10 +594,9 @@ La cabecera del acta debe contener los siguientes elementos, extraídos de la tr
 * **Moderador o presidente:** Identifica quién dirigió la sesión, basándote en la transcripción.
 * **Asistentes:** Lista los nombres y cargos de quienes participaron, según se mencionan en la transcripción.
 * **Orden del Día:**
-    * **Revisa el orden del día proporcionado en la variable ${ordendeldia}.**
+    * **Revisa el orden del día proporcionado en la variable ${ordendeldia} esta debe se tu base a  poner el el contendio del orden de dia.**
     * **Analiza la transcripción (${content}) para identificar los grandes temas tratados.**
-    * **Combina y organiza los temas del ${ordendeldia} y los temas identificados en la transcripción para generar el orden del día final.** Asegúrate de que este orden del día refleje con precisión los grandes temas discutidos en la reunión.
-    * **El orden del día final debe presentarse en orden cronológico, según el desarrollo de la reunión tal como se evidencia en la transcripción (${content}).**
+    * * el orden y los nombres deben ser los del${ordendeldia} y los temas identificados en la transcripción para generar el orden del día final.** Asegúrate de que este orden del día refleje con precisión los grandes temas discutidos en la reunión.
 
 FORMATO DE SALIDA (SOLO HTML):
 HTML
@@ -611,7 +627,7 @@ REGLAS ESTRICTAS:
 
 ✅ Salida en HTML puro. No responder en texto plano ni en otro formato.
 ✅ No inventar datos. Si falta información clave, dejar un espacio vacío o indicar "[NO ESPECIFICADO]".
-✅ El "Orden del Día" debe derivarse de los grandes temas de la transcripción y del contenido de ${ordendeldia}.
+✅ El "Orden del Día" debe tomar comobase casi oblicgatoria el ${ordendeldia}.
 ✅ No incluir subtemas en el orden del día.`;
       return userPromt;
     case "Contenido":
