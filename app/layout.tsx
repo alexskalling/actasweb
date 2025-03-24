@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,13 +21,24 @@ export const metadata: Metadata = {
     "Convierte grabaciones en pre-actas en minutos. Ahorra tiempo, cumple con la Ley 675, garantiza precisión y calidad con nuestra herramienta sencilla.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
+  // Añadimos 'async' aquí
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers(); // Usamos 'await' aquí
+  const hostname = headersList.get("host") || "";
+  const isGeneradorDomain = hostname === "generador.actasdereuniones.ai";
+
   return (
-    <html lang="en">
+    <html lang="es">
+      <head>
+        {!isGeneradorDomain && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
+        {/* Otros elementos del head */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -48,7 +60,7 @@ export default function RootLayout({
                 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];t=b.createElement(e);t.async=!0;
+                n.queue=;t=b.createElement(e);t.async=!0;
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)
               }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
