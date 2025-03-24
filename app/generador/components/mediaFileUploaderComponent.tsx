@@ -1073,7 +1073,7 @@ export default function MediaFileUploaderComponent({
               </div>
             )}
           </div>
-          {/* Barra de Progreso - Colocada aquí, antes de los botones */}
+
           {calculando &&
             selectedFile != null && ( // Condición para mostrar la barra:  calculando Y selectedFile no es nulo
               <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
