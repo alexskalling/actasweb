@@ -136,8 +136,6 @@ const WompiComponent = (props) => {
     <Button
       className="w-full rounded-sm bg-green-700"
       onClick={() => [handleOpenWidget()]}
-      data-gtm-event="click"
-      data-gtm-label={props.gtmLabel}
     >
       Pagar
     </Button>

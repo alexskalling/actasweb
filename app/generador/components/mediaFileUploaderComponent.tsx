@@ -553,8 +553,6 @@ export default function MediaFileUploaderComponent({
         <Button
           className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
           onClick={handledirecto}
-          data-gtm-event="click"
-          data-gtm-label="generar-con-transcripcion"
         >
           Generar con transcripcion existente
         </Button>
