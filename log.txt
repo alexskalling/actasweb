@@ -78,3 +78,151 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250315_co
 Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250315_codigoverde_sanmiguel_jorge_mario_ramirez/901318918_20250315_codigoverde_sanmiguel_jorge_mario_ramirez_Transcripcion.txt
 URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/zMdHYHFSmeiMdgW
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/zMdHYHFSmeiMdgW
+[2025-03-25T20:35:54.834Z] Guardando transcipcion.
+Verificando si existe transcripción: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez
+[2025-03-25T20:35:56.777Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt en Nextcloud carpeta 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:35:59.216Z] Archivo "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez".
+Iniciando transcripción con AssemblyAI para: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.mp3
+[2025-03-25T20:36:32.150Z] Guardando transcipcion.
+Verificando si existe transcripción: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez
+[2025-03-25T20:36:33.800Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt en Nextcloud carpeta 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:36:35.978Z] Archivo "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez".
+Iniciando transcripción con AssemblyAI para: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.mp3
+[2025-03-25T20:36:50.266Z] Guardando transcipcion.
+Verificando si existe transcripción: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez
+[2025-03-25T20:36:51.635Z] Verificando existencia del archivo 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt en Nextcloud carpeta 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:36:53.082Z] Archivo "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez".
+Iniciando transcripción con AssemblyAI para: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.mp3
+[2025-03-25T20:37:36.016Z] Guardando transcipcion.
+Verificando si existe transcripción: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez
+[2025-03-25T20:37:37.328Z] Verificando existencia del archivo 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt en Nextcloud carpeta 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:37:39.191Z] Archivo "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez".
+Iniciando transcripción con AssemblyAI para: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.mp3
+Guardando transcripción: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez
+Transcripción guardada: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt
+Verificando contenido existente: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt
+[2025-03-25T20:39:39.797Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt en Nextcloud carpeta 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:39:40.751Z] Archivo "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez".
+Generando contenido para: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.mp3
+Guardando transcripción: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez
+Transcripción guardada: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt
+Verificando contenido existente: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt
+[2025-03-25T20:41:14.757Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt en Nextcloud carpeta 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:41:15.953Z] Archivo "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez".
+Generando contenido para: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.mp3
+Guardando transcripción: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez
+Guardando transcripción: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt en carpeta 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez
+Transcripción guardada: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt
+Verificando contenido existente: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt
+[2025-03-25T20:41:31.995Z] Verificando existencia del archivo 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt en Nextcloud carpeta 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:41:32.941Z] Archivo "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez".
+Generando contenido para: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.mp3
+Transcripción guardada: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt
+Verificando contenido existente: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt
+[2025-03-25T20:41:33.484Z] Verificando existencia del archivo 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt en Nextcloud carpeta 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:41:34.689Z] Archivo "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt" NO encontrado en Nextcloud en la carpeta "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez".
+Generando contenido para: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.mp3
+Guardando contenido en Nextcloud: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt
+Contenido guardado: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.mp3 en carpeta: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez
+Verificando Borrador .docx existente: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx
+[2025-03-25T20:41:52.740Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx en Nextcloud carpeta 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:41:53.940Z] Archivo "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/E4GdmsD7ioPJxAD
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/E4GdmsD7ioPJxAD
+Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/aQzji9eEk9LZmeP
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/aQzji9eEk9LZmeP
+Guardando contenido en Nextcloud: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt
+Guardando contenido en Nextcloud: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt
+Contenido guardado: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.mp3 en carpeta: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez
+Verificando Borrador .docx existente: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx
+[2025-03-25T20:45:21.680Z] Verificando existencia del archivo 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx en Nextcloud carpeta 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:45:22.655Z] Archivo "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_lavega_jorge_mario_ramirez".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx
+Contenido guardado: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.mp3 en carpeta: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez
+Verificando Borrador .docx existente: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx
+[2025-03-25T20:45:23.605Z] Verificando existencia del archivo 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx en Nextcloud carpeta 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:45:24.583Z] Archivo "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx" NO encontrado en Nextcloud en la carpeta "901318918_20250322_codigoverde_montesion_jorge_mario_ramirez".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/QaqjARKrWsfM7RG
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/QaqjARKrWsfM7RG
+Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez/901318918_20250322_codigoverde_lavega_jorge_mario_ramirez_Transcripcion.txt
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/MQcyb4bZBPxtGRY
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/MQcyb4bZBPxtGRY
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Y73ZFCsxWrrQQLT
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/Y73ZFCsxWrrQQLT
+Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez/901318918_20250322_codigoverde_montesion_jorge_mario_ramirez_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/4bXtH2e7ttQn3wD
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/4bXtH2e7ttQn3wD
+Guardando contenido en Nextcloud: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt
+Contenido guardado: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.mp3 en carpeta: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez
+Verificando Borrador .docx existente: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx
+[2025-03-25T20:46:06.570Z] Verificando existencia del archivo 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx en Nextcloud carpeta 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-25T20:46:07.561Z] Archivo "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx" NO encontrado en Nextcloud en la carpeta "901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/T5LiReLKwHGRbbB
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/T5LiReLKwHGRbbB
+Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez/901318918_20250323_codigoverde_torresantaisabel_jorge_mario_ramirez_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/aKFMFF6Yb7K9iJj
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/aKFMFF6Yb7K9iJj
