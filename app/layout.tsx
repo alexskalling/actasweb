@@ -27,12 +27,6 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="es">
-      {process.env.NEXT_PUBLIC_PAGO == "soporte" && (
-        <head>
-          <meta name="robots" content="noindex, nofollow" />
-        </head>
-      )}
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
