@@ -376,8 +376,6 @@ export default function MediaFileUploaderComponent({
                     size="sm"
                     onClick={clearSelection}
                     className="text-white"
-                    data-gtm-event="click"
-                    data-gtm-label="clear-selection"
                   >
                     <X className="h-4 w-4" />
                     <span className="sr-only">Eliminar archivo</span>
@@ -408,8 +406,6 @@ export default function MediaFileUploaderComponent({
                 className="w-full rounded-sm"
                 variant="outline"
                 onClick={clearSelection}
-                data-gtm-event="click"
-                data-gtm-label="cancelar-seleccion"
               >
                 Cancelar
               </Button>
@@ -428,7 +424,6 @@ export default function MediaFileUploaderComponent({
                   fileid={urlAssembly}
                   duration={duration}
                   handlePayment={handlePayment}
-                  gtmLabel="pagar-acta" // Puedes agregar un prop para taguear el botón dentro de WompiComponent si es un componente tuyo
                 />
               )}
             {uploadProgress != 100 &&
@@ -439,8 +434,6 @@ export default function MediaFileUploaderComponent({
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={handleUploadFile}
                   disabled={calculando}
-                  data-gtm-event="click"
-                  data-gtm-label="subir-archivo"
                 >
                   {calculando ? (
                     <>
@@ -498,8 +491,6 @@ export default function MediaFileUploaderComponent({
                 className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                 onClick={handleUploadFile}
                 disabled={procesando}
-                data-gtm-event="click"
-                data-gtm-label="procesando-acta"
               >
                 <>
                   {" "}
@@ -517,16 +508,12 @@ export default function MediaFileUploaderComponent({
                   onClick={() => {
                     window.location.href = "/";
                   }}
-                  data-gtm-event="click"
-                  data-gtm-label="generar-nueva"
                 >
                   Generar nueva
                 </Button>
                 <Button
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={handleDownload}
-                  data-gtm-event="click"
-                  data-gtm-label="descargar-acta"
                 >
                   Descargar
                 </Button>
@@ -543,7 +530,6 @@ export default function MediaFileUploaderComponent({
                 ></div>
               </div>
             )}
-
 
           {uploadStatus &&
             uploadProgress != 100 &&
