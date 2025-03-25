@@ -1,7 +1,6 @@
 "use server";
 //@ts-expect-error revisar despues
 import htmlToDocx from "html-to-docx";
-import { Readable } from "stream";
 //@ts-expect-error revisar despues
 
 import { DOMParser } from "xmldom"; // Asegúrate de tener xmldom: npm install xmldom
@@ -356,15 +355,15 @@ async function obtenerUrlPublicaArchivoExistente(
   }
 }
 
-// Función para guardar el archivo .docx en Nextcloud (CON CAMBIOS IMPORTANTES PARA PRUEBAS: duplex: "half", Content-Type octet-stream, Buffer.from, log de fetch, CONSOLE LOGS ADICIONALES, GUARDADO LOCAL, LOG CONTENIDO docxBuffer, HTML MUY SIMPLE DE PRUEBA, **CONTENT-LENGTH HEADER EXPLICITO**)
-import fs from "fs/promises"; // Importar fs.promises para guardar archivo localmente
+import fs from "fs/promises";
 import path from "path";
 
 async function guardarArchivoNextcloudDocx(
   folder: string,
   nombreActaDocx: string,
-  textoActa: string // Aunque este parámetro no se usa directamente ahora, se mantiene para la estructura de la función
+  textoActa: string
 ): Promise<boolean> {
+
   // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
   const actaContent =
     "<h1>Prueba DOCX Simple</h1><p>Texto sencillo de prueba para Docker.</p>";
@@ -388,34 +387,21 @@ async function guardarArchivoNextcloudDocx(
   // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
   writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
 
+
+
   try {
     const docxBuffer = await htmlToDocx(actaContent);
-    writeLog(
-      `Tamaño del docxBuffer generado por htmlToDocx: ${docxBuffer.length} bytes`
-    ); // **LOG DE DEPURACIÓN - Tamaño docxBuffer**
 
-    // **NUEVA PRUEBA - GUARDAR docxBuffer LOCALMENTE**
     const rutaArchivoLocalPrueba = path.join(
       "/tmp",
       `prueba_${nombreActaDocx}`
-    ); // Ajusta la ruta si es necesario
-    writeLog(
-      `Guardando docxBuffer localmente para prueba en: ${rutaArchivoLocalPrueba}`
     );
-    await fs.writeFile(rutaArchivoLocalPrueba, Buffer.from(docxBuffer)); // Guardar como Buffer
+    await fs.writeFile(rutaArchivoLocalPrueba, Buffer.from(docxBuffer));
 
-    writeLog(
-      `Primeros 100 bytes de docxBuffer (hex): ${Buffer.from(docxBuffer)
-        .subarray(0, 100)
-        .toString("hex")}`
-    ); // **NUEVO LOG - CONTENIDO docxBuffer (PRIMEROS 100 BYTES en HEX)**
     console.log(
-      "Primeros 100 bytes de docxBuffer (hex): ",
+      "Primeros 100 bytes de docxBuffer (hex):",
       Buffer.from(docxBuffer).subarray(0, 100).toString("hex")
-    ); // Console.log también
-
-    // const bufferStream = Readable.from(docxBuffer); // Línea original
-    const bufferStream = Readable.from(Buffer.from(docxBuffer)); // **MANTENEMOS Buffer.from()**
+    );
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -426,26 +412,23 @@ async function guardarArchivoNextcloudDocx(
     }
 
     const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
-    const rutaCompletaCarpeta = `${rutaBaseActas}/${folder}`;
-    const rutaCompletaArchivoDocx = `${rutaCompletaCarpeta}/${nombreActaDocx}`;
+    const rutaCompletaArchivoDocx = `${rutaBaseActas}/${folder}/${nombreActaDocx}`;
 
-    // **NUEVO - CALCULAR Content-Length EXPLICITAMENTE**
-    const contentLength = Buffer.byteLength(docxBuffer); // Calcular tamaño en bytes del buffer
+    const contentLength = Buffer.byteLength(docxBuffer);
 
     const cabecerasAutenticacion = {
-      Authorization: "Basic " + btoa(usuario + ":" + contrasena),
-      "Content-Type": "application/octet-stream", // **MANTENEMOS Content-Type application/octet-stream PARA PRUEBAS**
-      "Content-Length": contentLength.toString(), // **NUEVO - AÑADIR Content-Length HEADER EXPLICITAMENTE**
+      Authorization:
+        "Basic " + Buffer.from(`${usuario}:${contrasena}`).toString("base64"),
+      "Content-Type": "application/octet-stream",
+      "Content-Length": contentLength.toString(),
     };
 
-    writeLog(`Implementación de fetch: ${global.fetch.toString()}`); // **AÑADIDO LOG - Implementación de fetch**
+    console.log(`[DEBUG] Subiendo archivo a: ${rutaCompletaArchivoDocx}`);
 
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
       headers: cabecerasAutenticacion,
-      //@ts-expect-error revisar despues
-      body: bufferStream,
-      duplex: "half", // **VOLVEMOS A duplex: "half"**
+      body: docxBuffer, // Se envía directamente el buffer sin `duplex`
     });
 
     if (!respuestaGuardado.ok) {
@@ -455,12 +438,10 @@ async function guardarArchivoNextcloudDocx(
       return false;
     }
 
-    writeLog(
-      `.docx guardado exitosamente en Nextcloud con Content-Type: application/octet-stream, Content-Length: ${contentLength}, y duplex: half: ${nombreActaDocx}`
-    ); // **LOG MODIFICADO - Indica Content-Type, Content-Length y duplex: half**
+    console.log(`.docx guardado exitosamente en Nextcloud: ${nombreActaDocx}`);
     return true;
   } catch (error) {
-    manejarError("guardarArchivoNextcloudDocx", error);
+    console.error("Error en guardarArchivoNextcloudDocx:", error);
     return false;
   }
 }

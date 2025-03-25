@@ -33,7 +33,8 @@ const createCheckoutInstance = (
     publicKey: process.env.NEXT_PUBLIC_KEY_WOMPI,
     signature: { integrity: integrityHash },
     redirectUrl:
-      "https://generador.actasdereuniones.ai/?folder=" +
+      process.env.NEXT_PUBLIC_AMBIENTE_URL +
+      "/?folder=" +
       folder +
       "&file=" +
       file +
@@ -54,6 +55,7 @@ const formatDuration = (seconds: number): string => {
     .join(":");
 };
 
+const tipo = process.env.NEXT_PUBLIC_PAGO;
 //@ts-expect-error revisar despues
 const WompiComponent = (props) => {
   const [checkout, setCheckout] = useState(null);
@@ -65,7 +67,7 @@ const WompiComponent = (props) => {
 
   useEffect(() => {
     const tiket =
-      "acta:" +
+      tipo +
       props.file +
       "-" +
       Math.floor(Math.random() * 90000 + 10000).toString();
@@ -132,8 +134,10 @@ const WompiComponent = (props) => {
 
   return (
     <Button
-      className="w-full rounded-sm bg-purple-600"
+      className="w-full rounded-sm bg-green-700"
       onClick={() => [handleOpenWidget()]}
+      data-gtm-event="click"
+      data-gtm-label={props.gtmLabel}
     >
       Pagar
     </Button>

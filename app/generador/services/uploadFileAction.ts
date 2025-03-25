@@ -1,49 +1,60 @@
-"use server";
+import io from "socket.io-client";
 
-import {
-  autenticarGoogleDrive,
-  crearArchivo,
-  manejarError,
-  obtenerOCrearCarpeta,
-  writeLog,
-} from "./utilsActions";
+// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
+const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Asumimos que esta URL es pública y segura para el cliente
 
-export async function uploadFileAction(
-  nombreNormalizado: string,
-  trasncripcion: string
-) {
-  try {
-    console.log(nombreNormalizado);
-    const drive = await autenticarGoogleDrive();
+socketBackendReal.on("connect_error", (error) => {
+  console.error("Error de conexión Socket.IO desde backend real:", error);
+});
+socketBackendReal.on("connect_timeout", (timeout) => {
+  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
+});
+socketBackendReal.on("disconnect", (reason) => {
+  console.log("Desconexión de Socket.IO desde backend real:", reason);
+});
 
-    const nombreTranscripcion = `${nombreNormalizado.replace(
-      /\.[^/.]+$/,
-      ""
-    )}_Transcripcion.txt`;
+interface UploadResult {
+  success: boolean;
+  message?: string;
+  publicUrl?: string | null;
+  error?: string;
+}
 
-    const idCarpeta = await obtenerOCrearCarpeta(drive, nombreNormalizado);
-    console.log(idCarpeta);
-
-    const idArchivoNuevo = await crearArchivo(
-      drive,
-      trasncripcion,
-      nombreTranscripcion,
-      idCarpeta
+export async function uploadFile(formData: FormData): Promise<UploadResult> {
+  const ASSEMBLYAI_API_KEY = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
+  const archivo = formData.get("audioFile") as File;
+  if (!ASSEMBLYAI_API_KEY) {
+    console.error("Error: API Key de AssemblyAI no configurada.");
+    throw new Error(
+      "API Key de AssemblyAI no configurada. Debes reemplazar 'TU_API_KEY_DE_ASSEMBLYAI' con tu clave real."
     );
-    if (idArchivoNuevo) {
-      writeLog(
-        `[${new Date().toISOString()}] Archivo subido correctamente: ${nombreTranscripcion}.`
+  }
+
+  try {
+    const uploadResponse = await fetch("https://api.assemblyai.com/v2/upload", {
+      method: "POST",
+      headers: {
+        Authorization: ASSEMBLYAI_API_KEY,
+      },
+      body: archivo,
+    });
+
+    if (!uploadResponse.ok) {
+      console.error(
+        `Error al subir el audio a AssemblyAI. Código de estado: ${uploadResponse.status}`
       );
-      return { status: "success", message: "Archivo subido correctamente." };
+      const errorDetails = await uploadResponse.text(); // Obtener detalles del error
+      console.error("Detalles del error:", errorDetails);
+      throw new Error(
+        `Error al subir audio a AssemblyAI: ${uploadResponse.status} - ${uploadResponse.statusText}. Detalles: ${errorDetails}`
+      );
     }
 
-    throw new Error("Error al subir el archivo");
+    const uploadResult = await uploadResponse.json();
+    console.log("Audio subido exitosamente a AssemblyAI:", uploadResult);
+    return uploadResult.upload_url; // Devuelve la URL de carga de AssemblyAI
   } catch (error) {
-    manejarError("uploadFileAction", error);
-    writeLog(`[${new Date().toISOString()}] Error: ${error}`);
-    return {
-      status: "error",
-      message: error || "Problemas al cargar el archivo.",
-    };
+    console.error("Error general en la función uploadAudio:", error);
+    throw error; // Relanza el error para que quien llame a la función pueda manejarlo
   }
 }
