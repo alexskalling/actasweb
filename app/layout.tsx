@@ -32,7 +32,6 @@ export default async function RootLayout({
       >
         {children}
 
-        {/* Cargar el script de Meta Pixel */}
         <Script
           strategy="afterInteractive"
           src={`https://connect.facebook.net/en_US/fbevents.js`}
