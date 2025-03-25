@@ -18,9 +18,13 @@ const geistMono = Geist_Mono({
 let title = "Generador de Actas en minutos | ActasDeReuniones.AI";
 let description =
   "Convierte grabaciones en pre-actas en minutos. Ahorra tiempo, cumple con la Ley 675, garantiza precisión y calidad con nuestra herramienta sencilla.";
-{
-  process.env.NEXT_PUBLIC_PAGO != "soporte" && (title = "Soporte actas");
+
+if (process.env.NEXT_PUBLIC_PAGO == "soporte") {
+  title = "Soporte ActasDeReuniones.AI - asistencia personalizada";
+  description =
+    "Escala tu proceso con el soporte de ActasDeReuniones.AI. Descubre asistencia personalizada para garantizar una experiencia fluida en el uso de nuestra herramienta.";
 }
+
 export const metadata: Metadata = {
   title: title,
   description: description,
