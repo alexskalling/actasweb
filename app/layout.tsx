@@ -27,18 +27,14 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers(); // Usamos 'await' aquí
-  const hostname = headersList.get("host") || "";
-  const isGeneradorDomain = hostname === "generador.actasdereuniones.ai";
-
   return (
     <html lang="es">
-      <head>
-        {!isGeneradorDomain && (
+      {process.env.NEXT_PUBLIC_PAGO == "soporte" && (
+        <head>
           <meta name="robots" content="noindex, nofollow" />
-        )}
-        {/* Otros elementos del head */}
-      </head>
+        </head>
+      )}
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
