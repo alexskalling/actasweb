@@ -374,6 +374,7 @@ async function guardarArchivoNextcloudDocx(
     `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
   );
   console.log("actaContent (HTML Simple de Prueba): ", actaContent);
+  console.log(textoActa);
 
   // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO**
   writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
