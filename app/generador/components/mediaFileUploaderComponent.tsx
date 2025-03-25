@@ -81,7 +81,7 @@ export default function MediaFileUploaderComponent({
     setSocket(newSocket);
 
     return () => {
-      newSocket.disconnect(); // Desconecta el socket cuando el componente se desmonte
+      newSocket.disconnect();
     };
   });
 
