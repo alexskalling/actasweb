@@ -533,15 +533,17 @@ export default function MediaFileUploaderComponent({
               </div>
             )}
           </div>
-          {/* Barra de Progreso */}
-          {calculando && selectedFile != null && (
-            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-              <div
-                className="bg-purple-600 h-2.5 rounded-full"
-                style={{ width: `${uploadProgress}%` }}
-              ></div>
-            </div>
-          )}
+
+          {calculando &&
+            selectedFile != null && ( // Condición para mostrar la barra:  calculando Y selectedFile no es nulo
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-purple-600 h-2.5 rounded-full"
+                  style={{ width: `${uploadProgress}%` }}
+                ></div>
+              </div>
+            )}
+
 
           {uploadStatus &&
             uploadProgress != 100 &&
