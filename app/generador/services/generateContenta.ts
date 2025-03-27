@@ -98,7 +98,7 @@ export async function generateContenta(
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 5;
-    let modelNameOrdenDelDia = "gemini-2.0-flash-thinking-exp-01-21"; // Puedes mantener este modelo inicial
+    let modelNameOrdenDelDia = "gemini-2.5-pro-exp-03-25"; // Puedes mantener este modelo inicial
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
@@ -212,7 +212,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash";
+  let modelName = "gemini-2.5-pro-exp-03-25";
   const maxRetries = 5;
   let retryCount = 0;
 
@@ -266,8 +266,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-flash-thinking-exp-01-21";
-          console.log("Cambio de modelo a gemini-2.0-flash-thinking-exp-01-21");
+          modelName = "gemini-2.0-flash";
+          console.log("Cambio de modelo a gemini-2.0-flash");
         }
 
         if (retryCount >= maxRetries) {
