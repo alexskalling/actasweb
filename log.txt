@@ -306,3 +306,111 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 901318918_20250322_co
 Compartiendo archivo existente para obtener URL pública: /Actas/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez/901318918_20250322_codigoverde_lasvegasplaza_jorge_mario_ramirez_Transcripcion.txt
 URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/wpfPtz5Z2B3PEKJ
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/wpfPtz5Z2B3PEKJ
+Verificando si existe transcripción: asambleaalcazardelasabana_Transcripcion.txt en carpeta asambleaalcazardelasabana
+[2025-03-29T14:10:55.123Z] Verificando existencia del archivo asambleaalcazardelasabana_Transcripcion.txt en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T14:10:56.824Z] Archivo "asambleaalcazardelasabana_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Transcripción existente encontrada: asambleaalcazardelasabana. Obteniendo contenido.
+Verificando contenido existente: asambleaalcazardelasabana_Contenido.txt
+[2025-03-29T14:10:58.208Z] Verificando existencia del archivo asambleaalcazardelasabana_Contenido.txt en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-29T14:10:59.083Z] Archivo "asambleaalcazardelasabana_Contenido.txt" NO encontrado en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Generando contenido para: asambleaalcazardelasabana.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: asambleaalcazardelasabana_Transcripcion.txt
+[2025-03-29T14:10:59.083Z] Verificando existencia del archivo asambleaalcazardelasabana_Transcripcion.txt en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T14:11:00.040Z] Archivo "asambleaalcazardelasabana_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Transcripción encontrada: asambleaalcazardelasabana_Transcripcion.txt. Obteniendo contenido.
+[2025-03-29T14:11:01.451Z] Contenido del archivo "asambleaalcazardelasabana_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: asambleaalcazardelasabana.mp3
+Guardando contenido en Nextcloud: asambleaalcazardelasabana_Contenido.txt
+Contenido guardado: asambleaalcazardelasabana_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: asambleaalcazardelasabana.mp3 en carpeta: asambleaalcazardelasabana
+Verificando Borrador .docx existente: asambleaalcazardelasabana_Borrador.docx
+[2025-03-29T14:22:09.945Z] Verificando existencia del archivo asambleaalcazardelasabana_Borrador.docx en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-29T14:22:10.850Z] Archivo "asambleaalcazardelasabana_Borrador.docx" NO encontrado en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: asambleaalcazardelasabana_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): asambleaalcazardelasabana_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/A2rSHaSJc7NsRBw
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/A2rSHaSJc7NsRBw
+Generando URL pública para Transcripcion.txt (EXISTENTE): asambleaalcazardelasabana_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/GRDr7eNPjL2JNMH
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/GRDr7eNPjL2JNMH
+Verificando si existe transcripción: asambleaalcazardelasabana_Transcripcion.txt en carpeta asambleaalcazardelasabana
+[2025-03-29T17:22:58.613Z] Verificando existencia del archivo asambleaalcazardelasabana_Transcripcion.txt en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T17:23:00.069Z] Archivo "asambleaalcazardelasabana_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Transcripción existente encontrada: asambleaalcazardelasabana. Obteniendo contenido.
+Verificando contenido existente: asambleaalcazardelasabana_Contenido.txt
+[2025-03-29T17:23:01.483Z] Verificando existencia del archivo asambleaalcazardelasabana_Contenido.txt en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T17:23:02.383Z] Archivo "asambleaalcazardelasabana_Contenido.txt" EXISTE en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Contenido existente: asambleaalcazardelasabana_Contenido.txt. Cargando.
+[2025-03-29T17:23:03.525Z] Contenido del archivo "asambleaalcazardelasabana_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: asambleaalcazardelasabana.mp3 en carpeta: asambleaalcazardelasabana
+Verificando Borrador .docx existente: asambleaalcazardelasabana_Borrador.docx
+[2025-03-29T17:23:03.525Z] Verificando existencia del archivo asambleaalcazardelasabana_Borrador.docx en Nextcloud carpeta asambleaalcazardelasabana.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T17:23:04.408Z] Archivo "asambleaalcazardelasabana_Borrador.docx" EXISTE en Nextcloud en la carpeta "asambleaalcazardelasabana".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): asambleaalcazardelasabana_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/TzeWwr5a5Sqp3i5
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/TzeWwr5a5Sqp3i5
+Generando URL pública para Transcripcion.txt (EXISTENTE): asambleaalcazardelasabana_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/asambleaalcazardelasabana/asambleaalcazardelasabana_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/xp2oLRQERL293qx
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/xp2oLRQERL293qx
+Verificando si existe transcripción: asamblea_eden_Transcripcion.txt en carpeta asamblea_eden
+[2025-03-29T17:24:08.670Z] Verificando existencia del archivo asamblea_eden_Transcripcion.txt en Nextcloud carpeta asamblea_eden.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_eden/asamblea_eden_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T17:24:10.152Z] Archivo "asamblea_eden_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_eden".
+Transcripción existente encontrada: asamblea_eden. Obteniendo contenido.
+Verificando contenido existente: asamblea_eden_Contenido.txt
+[2025-03-29T17:24:12.026Z] Verificando existencia del archivo asamblea_eden_Contenido.txt en Nextcloud carpeta asamblea_eden.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_eden/asamblea_eden_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-29T17:24:12.894Z] Archivo "asamblea_eden_Contenido.txt" NO encontrado en Nextcloud en la carpeta "asamblea_eden".
+Generando contenido para: asamblea_eden.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: asamblea_eden_Transcripcion.txt
+[2025-03-29T17:24:12.894Z] Verificando existencia del archivo asamblea_eden_Transcripcion.txt en Nextcloud carpeta asamblea_eden.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_eden/asamblea_eden_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-03-29T17:24:13.770Z] Archivo "asamblea_eden_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "asamblea_eden".
+Transcripción encontrada: asamblea_eden_Transcripcion.txt. Obteniendo contenido.
+[2025-03-29T17:24:15.390Z] Contenido del archivo "asamblea_eden_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: asamblea_eden.mp3
+Guardando contenido en Nextcloud: asamblea_eden_Contenido.txt
+Contenido guardado: asamblea_eden_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: asamblea_eden.mp3 en carpeta: asamblea_eden
+Verificando Borrador .docx existente: asamblea_eden_Borrador.docx
+[2025-03-29T17:35:07.080Z] Verificando existencia del archivo asamblea_eden_Borrador.docx en Nextcloud carpeta asamblea_eden.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/asamblea_eden/asamblea_eden_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-03-29T17:35:07.961Z] Archivo "asamblea_eden_Borrador.docx" NO encontrado en Nextcloud en la carpeta "asamblea_eden".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: asamblea_eden_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): asamblea_eden_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_eden/asamblea_eden_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/pyCyjHeojHCYkQg
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/pyCyjHeojHCYkQg
+Generando URL pública para Transcripcion.txt (EXISTENTE): asamblea_eden_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_eden/asamblea_eden_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/PePH338WPfAJ9Nc
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/PePH338WPfAJ9Nc

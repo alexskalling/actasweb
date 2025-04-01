@@ -60,6 +60,7 @@ const tipo = process.env.NEXT_PUBLIC_PAGO;
 const WompiComponent = (props) => {
   const [checkout, setCheckout] = useState(null);
   const [costo, setCosto] = useState(props.costo * 100);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setCosto(props.costo * 100);
@@ -109,6 +110,22 @@ const WompiComponent = (props) => {
       console.error("No se ha cargado el script de Wompi.");
       return;
     }
+
+    setIsLoading(true);
+
+    // Track Wompi payment button click with more details
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      // @ts-ignore
+      window.gtag('event', 'wompi_payment_button_click', {
+        'event_category': 'engagement',
+        'event_label': 'wompi_payment_started',
+        'value': props.costo,
+        'file_name': props.file,
+        'duration': props.duration,
+        'folder': props.folder
+      });
+    }
+
     //@ts-expect-error revisar despues
     checkout.open(async (result) => {
       console.log("Resultado de la transacción: ", result);
@@ -125,8 +142,35 @@ const WompiComponent = (props) => {
         });
         console.log("save: ", JSON.stringify(save));
         props.handlePayment();
+
+        // Track successful payment with transaction details
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          // @ts-ignore
+          window.gtag('event', 'wompi_payment_success', {
+            'event_category': 'engagement',
+            'event_label': 'wompi_payment_completed',
+            'value': transaction.amountInCents / 100,
+            'transaction_id': transaction.id,
+            'file_name': props.file,
+            'duration': props.duration
+          });
+        }
+      } else {
+        // Track Wompi payment rejection with more details
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          // @ts-ignore
+          window.gtag('event', 'wompi_payment_rejected', {
+            'event_category': 'error',
+            'event_label': transaction.status || 'Unknown status',
+            'transaction_id': transaction.id,
+            'file_name': props.file,
+            'duration': props.duration,
+            'error_message': transaction.error_message || 'No error message'
+          });
+        }
       }
 
+      setIsLoading(false);
       console.log("Transaction ID: ", transaction.id);
       console.log("Transaction object: ", transaction);
     });
@@ -134,10 +178,31 @@ const WompiComponent = (props) => {
 
   return (
     <Button
-      className="w-full rounded-sm bg-green-700"
+      className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
       onClick={() => [handleOpenWidget()]}
+      disabled={isLoading}
     >
-      Pagar
+      {isLoading ? (
+        <>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="animate-spin"
+          >
+            <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+          </svg>
+          Procesando...
+        </>
+      ) : (
+        "Pagar"
+      )}
     </Button>
   );
 };

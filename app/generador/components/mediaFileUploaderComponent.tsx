@@ -74,6 +74,16 @@ export default function MediaFileUploaderComponent({
     media.onloadedmetadata = () => {
       setDuration(media.duration);
     };
+
+    // Track file selection event
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      // @ts-ignore
+      window.gtag('event', 'file_selected', {
+        'event_category': 'engagement',
+        'event_label': file.type,
+        'value': file.size
+      });
+    }
   };
 
   React.useEffect(() => {
@@ -117,10 +127,28 @@ export default function MediaFileUploaderComponent({
     setCalculando(false);
 
     setUploadProgress(0);
+
+    // Track clear selection event
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      // @ts-ignore
+      window.gtag('event', 'clear_selection', {
+        'event_category': 'engagement'
+      });
+    }
   };
 
-  async function handlePayment() {
+  const handlePayment = async () => {
     setProcesando(true);
+
+    // Track payment initiation event
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      // @ts-ignore
+      window.gtag('event', 'payment_initiated', {
+        'event_category': 'engagement',
+        'event_label': 'payment_start',
+        'value': calculatePrice(duration)
+      });
+    }
 
     setUploadStatus("Iniciando generacion del acta");
     //@ts-expect-error revisar despues
@@ -132,11 +160,30 @@ export default function MediaFileUploaderComponent({
         "Todo listo, tu borrador de acta está listo para ser descargado."
       );
       setProcesando(false);
+
+      // Track successful payment event
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        // @ts-ignore
+        window.gtag('event', 'payment_success', {
+          'event_category': 'engagement',
+          'event_label': 'payment_completed',
+          'value': calculatePrice(duration)
+        });
+      }
     } else {
       setProcesando(false);
       alert("Error al procesar el archivo: " + result.message);
+
+      // Track payment error event
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        // @ts-ignore
+        window.gtag('event', 'payment_error', {
+          'event_category': 'error',
+          'event_label': result.message || 'Unknown error'
+        });
+      }
     }
-  }
+  };
 
   const calculatePrice = (durationInSeconds: number): number => {
     const segments = Math.ceil(durationInSeconds / 60 / 15);
@@ -193,35 +240,70 @@ export default function MediaFileUploaderComponent({
 
     try {
       const result = await uploadFileToAssemblyAI(formData, (progress) => {
-        // ✅ Pasa el callback onUploadProgress
-        setUploadProgress(Math.round(progress)); // ✅ Actualiza el estado uploadProgress
+        setUploadProgress(Math.round(progress));
       });
 
       if (result.success) {
         setUploadStatus("Archivo listo para ser procesado");
 
         //@ts-expect-error revisar despues
-
         setUrlAssembly(result.uploadUrl);
 
         setCalculando(false);
         setUploadProgress(100);
+
+        // Track successful upload event
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          // @ts-ignore
+          window.gtag('event', 'file_upload_success', {
+            'event_category': 'engagement',
+            'event_label': selectedFile.type,
+            'value': selectedFile.size
+          });
+        }
       } else {
         setUploadStatus(result.error || "Error al subir el archivo");
         setCalculando(false);
         setUploadProgress(0);
+
+        // Track upload error event
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          // @ts-ignore
+          window.gtag('event', 'file_upload_error', {
+            'event_category': 'error',
+            'event_label': result.error || 'Unknown error'
+          });
+        }
       }
     } catch (error) {
       setUploadStatus(`Error de red o al procesar la petición: ${error}`);
       console.error("Error al subir:", error);
       setCalculando(false);
       setUploadProgress(0);
+
+      // Track upload error event
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        // @ts-ignore
+        window.gtag('event', 'file_upload_error', {
+          'event_category': 'error',
+          'event_label': error instanceof Error ? error.message : 'Unknown error'
+        });
+      }
     }
   };
 
   const handledirecto = async () => {
     setError(null);
     setUploadStatus("Enviado a soporte directo...");
+
+    // Track direct support event
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      // @ts-ignore
+      window.gtag('event', 'direct_support_initiated', {
+        'event_category': 'engagement',
+        'event_label': 'direct_support_start'
+      });
+    }
 
     // Introduce a very short delay to allow state updates to potentially process
     setTimeout(async () => {
@@ -232,8 +314,17 @@ export default function MediaFileUploaderComponent({
         console.error("Error al subir:", error);
         setCalculando(false);
         setUploadProgress(0);
+
+        // Track direct support error event
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          // @ts-ignore
+          window.gtag('event', 'direct_support_error', {
+            'event_category': 'error',
+            'event_label': error instanceof Error ? error.message : 'Unknown error'
+          });
+        }
       }
-    }, 0); // A timeout of 0 will place this at the end of the current event loop
+    }, 0);
   };
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
@@ -249,13 +340,22 @@ export default function MediaFileUploaderComponent({
         );
         return;
       }
+
+      // Track download event
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        // @ts-ignore
+        window.gtag('event', 'document_download', {
+          'event_category': 'engagement',
+          'event_label': 'acta_and_transcription'
+        });
+      }
+
       if (transcripcion) {
         downloadFile(acta);
         console.log(
           "Esperando 3 segundos antes de descargar la transcripción..."
         );
         setTimeout(() => {
-          // Descargar la transcripción después de 3 segundos
           if (acta) {
             downloadFile(transcripcion);
           } else {
@@ -267,6 +367,15 @@ export default function MediaFileUploaderComponent({
       }
     } catch (error) {
       console.error("Error general:", (error as Error).message);
+
+      // Track download error event
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        // @ts-ignore
+        window.gtag('event', 'document_download_error', {
+          'event_category': 'error',
+          'event_label': error instanceof Error ? error.message : 'Unknown error'
+        });
+      }
     }
   };
   console.log(fileid);
@@ -341,6 +450,15 @@ export default function MediaFileUploaderComponent({
               <label
                 htmlFor="media-upload"
                 className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-md cursor-pointer transition-colors"
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                    // @ts-ignore
+                    window.gtag('event', 'upload_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'upload_button_clicked'
+                    });
+                  }
+                }}
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
                   <Upload className="w-12 h-12 mb-4 text-white" />
@@ -405,7 +523,16 @@ export default function MediaFileUploaderComponent({
               <Button
                 className="w-full rounded-sm"
                 variant="outline"
-                onClick={clearSelection}
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                    // @ts-ignore
+                    window.gtag('event', 'cancel_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'cancel_button_clicked'
+                    });
+                  }
+                  clearSelection();
+                }}
               >
                 Cancelar
               </Button>
@@ -432,7 +559,16 @@ export default function MediaFileUploaderComponent({
               !procesando && (
                 <Button
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                  onClick={handleUploadFile} //  Ahora llama a handleUploadFile corregida
+                  onClick={() => {
+                    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                      // @ts-ignore
+                      window.gtag('event', 'continue_button_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'continue_button_clicked'
+                      });
+                    }
+                    handleUploadFile();
+                  }}
                   disabled={calculando}
                 >
                   {calculando ? (
@@ -745,7 +881,16 @@ export default function MediaFileUploaderComponent({
             {procesando && (
               <Button
                 className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                onClick={handleUploadFile} //  Ahora llama a handleUploadFile corregida
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                    // @ts-ignore
+                    window.gtag('event', 'processing_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'processing_button_clicked'
+                    });
+                  }
+                  handleUploadFile();
+                }}
                 disabled={procesando}
               >
                 <>
@@ -1058,15 +1203,30 @@ export default function MediaFileUploaderComponent({
                   className="w-full rounded-sm"
                   variant="outline"
                   onClick={() => {
+                    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                      // @ts-ignore
+                      window.gtag('event', 'new_generation_button_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'new_generation_button_clicked'
+                      });
+                    }
                     window.location.href = "/";
-                    // window.location.reload(); // Opcional: Si quieres forzar la recarga
                   }}
                 >
                   Generar nueva
                 </Button>
                 <Button
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                  onClick={handleDownload}
+                  onClick={() => {
+                    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                      // @ts-ignore
+                      window.gtag('event', 'download_button_click', {
+                        'event_category': 'engagement',
+                        'event_label': 'download_button_clicked'
+                      });
+                    }
+                    handleDownload();
+                  }}
                 >
                   Descargar
                 </Button>
@@ -1105,7 +1265,16 @@ export default function MediaFileUploaderComponent({
       {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
         <Button
           className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
-          onClick={handledirecto}
+          onClick={() => {
+            if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+              // @ts-ignore
+              window.gtag('event', 'direct_support_button_click', {
+                'event_category': 'engagement',
+                'event_label': 'direct_support_button_clicked'
+              });
+            }
+            handledirecto();
+          }}
         >
           Generar con transcripcion existente
         </Button>
