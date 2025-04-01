@@ -77,7 +77,7 @@ export default function MediaFileUploaderComponent({
 
     // Track file selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
+      
       window.gtag('event', 'file_selected', {
         'event_category': 'engagement',
         'event_label': file.type,
@@ -116,10 +116,8 @@ export default function MediaFileUploaderComponent({
     setPreview(null);
     setError(null);
     //@ts-expect-error revisar despues
-
     setActa(null);
     //@ts-expect-error revisar despues
-
     setTranscripcion(null);
     //@ts-expect-error revisar despues
 
@@ -130,7 +128,7 @@ export default function MediaFileUploaderComponent({
 
     // Track clear selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
+      
       window.gtag('event', 'clear_selection', {
         'event_category': 'engagement'
       });
@@ -142,7 +140,6 @@ export default function MediaFileUploaderComponent({
 
     // Track payment initiation event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
       window.gtag('event', 'payment_initiated', {
         'event_category': 'engagement',
         'event_label': 'payment_start',
@@ -163,7 +160,7 @@ export default function MediaFileUploaderComponent({
 
       // Track successful payment event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-        // @ts-ignore
+    
         window.gtag('event', 'payment_success', {
           'event_category': 'engagement',
           'event_label': 'payment_completed',
@@ -176,7 +173,7 @@ export default function MediaFileUploaderComponent({
 
       // Track payment error event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-        // @ts-ignore
+    
         window.gtag('event', 'payment_error', {
           'event_category': 'error',
           'event_label': result.message || 'Unknown error'
@@ -254,7 +251,7 @@ export default function MediaFileUploaderComponent({
 
         // Track successful upload event
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-          // @ts-ignore
+      
           window.gtag('event', 'file_upload_success', {
             'event_category': 'engagement',
             'event_label': selectedFile.type,
@@ -268,7 +265,7 @@ export default function MediaFileUploaderComponent({
 
         // Track upload error event
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-          // @ts-ignore
+      
           window.gtag('event', 'file_upload_error', {
             'event_category': 'error',
             'event_label': result.error || 'Unknown error'
@@ -283,7 +280,7 @@ export default function MediaFileUploaderComponent({
 
       // Track upload error event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-        // @ts-ignore
+    
         window.gtag('event', 'file_upload_error', {
           'event_category': 'error',
           'event_label': error instanceof Error ? error.message : 'Unknown error'
@@ -298,7 +295,7 @@ export default function MediaFileUploaderComponent({
 
     // Track direct support event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
+  
       window.gtag('event', 'direct_support_initiated', {
         'event_category': 'engagement',
         'event_label': 'direct_support_start'
@@ -317,7 +314,7 @@ export default function MediaFileUploaderComponent({
 
         // Track direct support error event
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-          // @ts-ignore
+      
           window.gtag('event', 'direct_support_error', {
             'event_category': 'error',
             'event_label': error instanceof Error ? error.message : 'Unknown error'
@@ -343,7 +340,7 @@ export default function MediaFileUploaderComponent({
 
       // Track download event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-        // @ts-ignore
+    
         window.gtag('event', 'document_download', {
           'event_category': 'engagement',
           'event_label': 'acta_and_transcription'
@@ -370,7 +367,7 @@ export default function MediaFileUploaderComponent({
 
       // Track download error event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-        // @ts-ignore
+    
         window.gtag('event', 'document_download_error', {
           'event_category': 'error',
           'event_label': error instanceof Error ? error.message : 'Unknown error'
@@ -452,7 +449,7 @@ export default function MediaFileUploaderComponent({
                 className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-md cursor-pointer transition-colors"
                 onClick={() => {
                   if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                    // @ts-ignore
+                
                     window.gtag('event', 'upload_button_click', {
                       'event_category': 'engagement',
                       'event_label': 'upload_button_clicked'
@@ -525,7 +522,7 @@ export default function MediaFileUploaderComponent({
                 variant="outline"
                 onClick={() => {
                   if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                    // @ts-ignore
+                
                     window.gtag('event', 'cancel_button_click', {
                       'event_category': 'engagement',
                       'event_label': 'cancel_button_clicked'
@@ -561,7 +558,7 @@ export default function MediaFileUploaderComponent({
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                      // @ts-ignore
+                  
                       window.gtag('event', 'continue_button_click', {
                         'event_category': 'engagement',
                         'event_label': 'continue_button_clicked'
@@ -883,7 +880,7 @@ export default function MediaFileUploaderComponent({
                 className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                 onClick={() => {
                   if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                    // @ts-ignore
+                
                     window.gtag('event', 'processing_button_click', {
                       'event_category': 'engagement',
                       'event_label': 'processing_button_clicked'
@@ -1204,7 +1201,7 @@ export default function MediaFileUploaderComponent({
                   variant="outline"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                      // @ts-ignore
+                  
                       window.gtag('event', 'new_generation_button_click', {
                         'event_category': 'engagement',
                         'event_label': 'new_generation_button_clicked'
@@ -1219,7 +1216,7 @@ export default function MediaFileUploaderComponent({
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                      // @ts-ignore
+                  
                       window.gtag('event', 'download_button_click', {
                         'event_category': 'engagement',
                         'event_label': 'download_button_clicked'
@@ -1267,7 +1264,7 @@ export default function MediaFileUploaderComponent({
           className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
           onClick={() => {
             if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-              // @ts-ignore
+          
               window.gtag('event', 'direct_support_button_click', {
                 'event_category': 'engagement',
                 'event_label': 'direct_support_button_clicked'

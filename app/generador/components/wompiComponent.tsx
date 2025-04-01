@@ -115,7 +115,7 @@ const WompiComponent = (props) => {
 
     // Track Wompi payment button click with more details
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
+  
       window.gtag('event', 'wompi_payment_button_click', {
         'event_category': 'engagement',
         'event_label': 'wompi_payment_started',
@@ -145,7 +145,7 @@ const WompiComponent = (props) => {
 
         // Track successful payment with transaction details
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-          // @ts-ignore
+      
           window.gtag('event', 'wompi_payment_success', {
             'event_category': 'engagement',
             'event_label': 'wompi_payment_completed',
@@ -158,7 +158,7 @@ const WompiComponent = (props) => {
       } else {
         // Track Wompi payment rejection with more details
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-          // @ts-ignore
+      
           window.gtag('event', 'wompi_payment_rejected', {
             'event_category': 'error',
             'event_label': transaction.status || 'Unknown status',
