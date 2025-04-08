@@ -57,8 +57,20 @@ export default function MediaFileUploaderComponent({
 
     if (!file) return;
 
-    if (!file.type.match(/^(audio|video)/)) {
-      setError("Por favor selecciona un archivo de audio o video válido.");
+    // Lista de extensiones de audio y video permitidas
+    const allowedExtensions = [
+      // Audio
+      '.wav', '.mp3', '.m4a', '.aac', '.ogg', '.wma', '.flac',
+      // Video
+      '.mp4', '.avi', '.mov', '.wmv', '.flv', '.mkv', '.webm'
+    ];
+
+    // Obtener la extensión del archivo y convertirla a minúsculas
+    const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase();
+
+    // Verificar si es un archivo de audio/video por tipo MIME o extensión
+    if (!file.type.match(/^(audio|video)/) && !allowedExtensions.includes(fileExtension)) {
+      setError("Por favor selecciona un archivo de audio o video válido. Formatos permitidos: " + allowedExtensions.join(', '));
       return;
     }
 
@@ -67,7 +79,7 @@ export default function MediaFileUploaderComponent({
     setPreview(url);
     onFileSelect?.(file);
 
-    const media = file.type.startsWith("audio/")
+    const media = file.type.startsWith("audio/") || fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
       ? new Audio(url)
       : document.createElement("video");
     media.src = url;
@@ -77,10 +89,10 @@ export default function MediaFileUploaderComponent({
 
     // Track file selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      
+      // @ts-ignore
       window.gtag('event', 'file_selected', {
         'event_category': 'engagement',
-        'event_label': file.type,
+        'event_label': file.type || fileExtension,
         'value': file.size
       });
     }
