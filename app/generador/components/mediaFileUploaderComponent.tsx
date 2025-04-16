@@ -89,7 +89,7 @@ export default function MediaFileUploaderComponent({
 
     // Track file selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      // @ts-ignore
+    
       window.gtag('event', 'file_selected', {
         'event_category': 'engagement',
         'event_label': file.type || fileExtension,
