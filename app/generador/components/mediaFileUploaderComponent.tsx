@@ -424,6 +424,7 @@ export default function MediaFileUploaderComponent({
           const tx = await response.json();
           const timeDuration = duration;
 
+          
           if (tx.data.status === "APPROVED") {
             console.log("tx", tx.data);
             await saveTransactionAction({
