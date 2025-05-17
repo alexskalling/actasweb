@@ -1,0 +1,310 @@
+Guardando contenido en Nextcloud: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Contenido.txt
+Contenido guardado: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025.mp3 en carpeta: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025
+Verificando Borrador .docx existente: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx
+[2025-04-16T20:08:25.010Z] Verificando existencia del archivo 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx en Nextcloud carpeta 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-04-16T20:08:25.902Z] Archivo "2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx" NO encontrado en Nextcloud en la carpeta "2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/sc36e4qJz8j6pjg
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/sc36e4qJz8j6pjg
+Generando URL pública para Transcripcion.txt (EXISTENTE): 2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025/2025-03_camino_de_arrayanes_mz_7_-_asamblea_ordinaria_2025_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/mnCpKTiXpDjKDWS
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/mnCpKTiXpDjKDWS
+Verificando si existe transcripción: getsemani_Transcripcion.txt en carpeta getsemani
+[2025-05-05T21:32:11.568Z] Verificando existencia del archivo getsemani_Transcripcion.txt en Nextcloud carpeta getsemani.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/getsemani/getsemani_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-05T21:32:13.012Z] Archivo "getsemani_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "getsemani".
+Transcripción existente encontrada: getsemani. Obteniendo contenido.
+Verificando contenido existente: getsemani_Contenido.txt
+[2025-05-05T21:32:14.422Z] Verificando existencia del archivo getsemani_Contenido.txt en Nextcloud carpeta getsemani.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/getsemani/getsemani_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-05T21:32:15.251Z] Archivo "getsemani_Contenido.txt" NO encontrado en Nextcloud en la carpeta "getsemani".
+Generando contenido para: getsemani.wav
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: getsemani_Transcripcion.txt
+[2025-05-05T21:32:15.252Z] Verificando existencia del archivo getsemani_Transcripcion.txt en Nextcloud carpeta getsemani.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/getsemani/getsemani_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-05T21:32:16.162Z] Archivo "getsemani_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "getsemani".
+Transcripción encontrada: getsemani_Transcripcion.txt. Obteniendo contenido.
+[2025-05-05T21:32:18.029Z] Contenido del archivo "getsemani_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: getsemani.wav
+Guardando contenido en Nextcloud: getsemani_Contenido.txt
+Contenido guardado: getsemani_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: getsemani.wav en carpeta: getsemani
+Verificando Borrador .docx existente: getsemani_Borrador.docx
+[2025-05-05T21:38:21.670Z] Verificando existencia del archivo getsemani_Borrador.docx en Nextcloud carpeta getsemani.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/getsemani/getsemani_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-05T21:38:22.498Z] Archivo "getsemani_Borrador.docx" NO encontrado en Nextcloud en la carpeta "getsemani".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: getsemani_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): getsemani_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/getsemani/getsemani_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/s78QEcj3GxL8pFS
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/s78QEcj3GxL8pFS
+Generando URL pública para Transcripcion.txt (EXISTENTE): getsemani_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/getsemani/getsemani_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/mTxCgxnCBciynfg
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/mTxCgxnCBciynfg
+[2025-05-17T16:09:28.053Z] Guardando transcipcion.
+[2025-05-17T16:09:30.235Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:09:30.606Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:09:32.253Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Iniciando transcripción con AssemblyAI para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:10:00.372Z] Guardando transcipcion.
+[2025-05-17T16:10:00.975Z] Guardando transcipcion.
+[2025-05-17T16:10:01.713Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:10:02.091Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:10:03.481Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Iniciando transcripción con AssemblyAI para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:10:39.247Z] Guardando transcipcion.
+[2025-05-17T16:12:20.336Z] Guardando transcipcion.
+[2025-05-17T16:12:21.270Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:12:21.637Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:12:23.052Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Iniciando transcripción con AssemblyAI para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Guardando transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+Transcripción guardada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:12:33.733Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:12:34.623Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Guardando transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+Transcripción guardada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:12:56.661Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:12:57.560Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:13:16.189Z] Guardando transcipcion.
+[2025-05-17T16:13:16.648Z] Guardando transcipcion.
+[2025-05-17T16:13:17.113Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:13:17.821Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:19.167Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:13:21.318Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:13:22.114Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:13:22.115Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:22.907Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:13:24.252Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:13:39.874Z] Guardando transcipcion.
+[2025-05-17T16:13:40.272Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:13:40.998Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:13:41.668Z] Guardando transcipcion.
+[2025-05-17T16:13:42.126Z] Guardando transcipcion.
+[2025-05-17T16:13:42.466Z] Guardando transcipcion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:42.468Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:13:42.813Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:43.742Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:13:43.832Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:13:44.673Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:13:44.674Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:13:45.043Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:45.482Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:13:45.878Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:13:45.880Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:13:46.704Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:13:46.857Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:13:48.020Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:14:07.173Z] Guardando transcipcion.
+[2025-05-17T16:14:07.815Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:14:08.201Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:14:09.548Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:14:11.008Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:14:11.834Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:14:11.836Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:14:12.662Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:14:13.975Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:15:06.067Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:15:06.513Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:15:07.875Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:15:10.476Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:15:11.398Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:15:11.400Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:15:12.325Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:15:13.762Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Guardando transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+Transcripción guardada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:15:35.288Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:15:36.092Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:15:38.387Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:15:38.780Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:15:39.608Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:15:40.407Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:15:41.225Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:15:41.226Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:15:42.120Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:15:43.556Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:20:59.519Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:21:00.397Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:21:01.820Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:21:03.118Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:21:03.939Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:21:03.939Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:21:04.739Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:21:06.161Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+[2025-05-17T16:22:16.429Z] Guardando transcipcion.
+Verificando si existe transcripción: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+[2025-05-17T16:22:16.913Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:22:18.356Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción existente encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes. Obteniendo contenido.
+Verificando contenido existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[2025-05-17T16:22:19.672Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:22:20.497Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Generando contenido para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[2025-05-17T16:22:20.499Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-05-17T16:22:21.379Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Transcripción encontrada: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt. Obteniendo contenido.
+[2025-05-17T16:22:24.047Z] Contenido del archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3
+Guardando contenido en Nextcloud: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+Contenido guardado: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.mp3 en carpeta: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes
+Verificando Borrador .docx existente: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx
+[2025-05-17T16:29:12.879Z] Verificando existencia del archivo mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx en Nextcloud carpeta mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-05-17T16:29:13.779Z] Archivo "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx" NO encontrado en Nextcloud en la carpeta "mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/DjG3dbsYC29JqyZ
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/DjG3dbsYC29JqyZ
+Generando URL pública para Transcripcion.txt (EXISTENTE): mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes/mesa-20250508-140011-grabacion-de-la-reunion-parte-1-dfxqlycv_pybjpvai__online-audio-converter.com__reunion_sedes_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/MKL3AKwWkWzosn2
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/MKL3AKwWkWzosn2

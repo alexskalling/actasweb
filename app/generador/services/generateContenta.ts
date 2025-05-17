@@ -97,8 +97,8 @@ export async function generateContenta(
     });
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
-    const maxRetriesOrdenDelDia = 5;
-    let modelNameOrdenDelDia = "gemini-2.5-pro-exp-03-25"; // Puedes mantener este modelo inicial
+    const maxRetriesOrdenDelDia = 3;
+    let modelNameOrdenDelDia = "gemini-2.0-flash"; // Puedes mantener este modelo inicial
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
@@ -212,8 +212,8 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.5-pro-exp-03-25";
-  const maxRetries = 5;
+  let modelName = "gemini-2.0-flash";
+  const maxRetries = 3;
   let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
@@ -453,7 +453,7 @@ Directrices Específicas:
         Se permite el uso de la etiqueta <b> para resaltar puntos clave dentro del texto.
         Se evitará el uso excesivo de listas (<ul>, <ol>) o subtítulos (<h3>, <h4>, etc.) que puedan romper la continuidad del texto.
 
-Importante: Evitar Repeticiones y Respuestas Genéricas
+Importante: Evitar Repeticiones en el contenido, ya antes me repites parrafos y eso esta mal quieroq eu sea claro detallado y que NO repitas contenido bajo ninguna  razon
 
 Se insiste en la importancia de no repetir párrafos ni contenido ya presentado. La respuesta debe consistir únicamente en el contenido del acta de la reunión, redactado según las pautas indicadas. Se deben evitar respuestas genéricas como "Perfecto, ahora generaré el acta de la reunión" o cualquier otra comunicación que no sea el contenido solicitado.
 Ejemplo de desarrollo de un tema en HTML:
@@ -694,11 +694,13 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 
 5️⃣ Estructuración y formato en HTML
 
-    El encabezado principal debe ser: <h2>${numeracion}. ${tema}</h2>.
+    El encabezado principal debe ser: <h2>${numeracion}. ${tema}</h2>.X
     Utilizar subtítulos (<h3>) solo para separar aspectos clave del mismo tema.
     Usar negritas (<strong>) para cifras, decisiones clave y puntos de relevancia.
     Utilizar listas (<ul>) para resaltar los resultados de las votaciones.
     Antes de responder, se debe validar que NO haya contenido repetido.
+
+    Revisa que NO REPITAS PARRAFOS O CONTENIDOS DENTRE DE UN TEMA ES MUY MALA PRACTICA QUE EXITAN PARRAFOS QUE DIGAN LOS MISMO
 
 📌 Mejoras clave en esta versión:
 
