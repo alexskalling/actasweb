@@ -98,7 +98,7 @@ export async function generateContenta(
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 3;
-    let modelNameOrdenDelDia = "gemini-2.0-flash"; // Puedes mantener este modelo inicial
+    let modelNameOrdenDelDia = "gemini-2.5-flash-preview-04-17"; // Puedes mantener este modelo inicial
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
@@ -212,7 +212,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash";
+  let modelName = "gemini-2.5-flash-preview-04-17";
   const maxRetries = 3;
   let retryCount = 0;
 
