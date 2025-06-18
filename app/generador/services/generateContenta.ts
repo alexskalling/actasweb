@@ -11,9 +11,6 @@ import {
 } from "./utilsActions";
 import io from "socket.io-client";
 
-// Configurar la región para Vertex AI
-process.env.GOOGLE_CLOUD_LOCATION = "europe-west3"; // Frankfurt
-
 // 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
 const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
 
@@ -215,7 +212,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-pro";
+  let modelName = "gemini-2.5-flash-preview-04-17";
   const maxRetries = 3;
   let retryCount = 0;
 
@@ -269,8 +266,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-pro";
-          console.log("Cambio de modelo a gemini-2.0-pro");
+          modelName = "gemini-2.0-flash";
+          console.log("Cambio de modelo a gemini-2.0-flash");
         }
 
         if (retryCount >= maxRetries) {
