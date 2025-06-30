@@ -47,6 +47,7 @@ export async function updateSession(request: NextRequest) {
     "/entradas",
     "/agenda",
     "/newsletter",
+    "/plataforma",
   ];
 
   // Verificar si la ruta actual es /plataforma o cualquier subruta

@@ -62,7 +62,7 @@ export default function NavComponent() {
                 onClick={() => signOut({ callbackUrl: "/" })}
                 className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
               >
-                Logout
+                Salir
               </button>
             </div>
           ) : (
@@ -70,7 +70,7 @@ export default function NavComponent() {
               onClick={() => signIn(undefined, { callbackUrl: "/" })}
               className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
             >
-              Sign In
+              Iniciar sesión
             </button>
           )}
         </div>

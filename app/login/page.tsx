@@ -1,5 +1,5 @@
 'use client';
-import logo from "../generador/assets/logo-actas-ai-blanco.svg";
+import logo from "../(generador)/assets/logo-actas-ai-blanco.svg";
 import { signIn } from 'next-auth/react';
 import { useSearchParams } from "next/navigation";
 import Image from 'next/image';
@@ -20,9 +20,7 @@ export default function LoginPage() {
             alt="Actas de Reuniones AI Logo" // Added alt attribute for accessibility
             priority // Optional: Add priority if this is a LCP image
           />
-          <h1 className="text-2xl font-bold mt-4 text-white">
-            Bienvenido de nuevo
-          </h1>
+    
           <p className=" font-bold mt-4 text-white">
             ¡Nos Emociona mucho tenerte con nosotros!
           </p>
@@ -58,14 +56,14 @@ export default function LoginPage() {
           </button>
         </div>
 
-        {/* Divider */}
+        {/* Divider 
         <div className="flex items-center gap-3 text-white/70 text-sm">
           <div className="flex-1 h-px bg-white/30" />
           o
           <div className="flex-1 h-px bg-white/30" />
         </div>
 
-        {/* Footer */}
+       
         <div className="text-center text-xs text-white/60">
           <p>
             Al continuar, aceptas nuestros{' '}
@@ -78,6 +76,7 @@ export default function LoginPage() {
             </a>.
           </p>
         </div>
+        */}
       </div>
     </main>
   );

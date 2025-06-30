@@ -1,5 +1,5 @@
-import GeneradorContainerContainer from "./generador/components/generadorContainerComponent";
-import NavComponent from "./generador/components/navComponent";
+import GeneradorContainerContainer from "./(generador)/components/generadorContainerComponent";
+import NavComponent from "./(generador)/components/navComponent";
 import {
   Disclosure,
   DisclosureButton,
@@ -10,6 +10,7 @@ import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 import SendEmailButton from "./Emails/components/SendEmailButton";
 import EditProfileForm from "./profile/components/editProfileForm";
+import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -91,7 +92,9 @@ export default function Home() {
       )}
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
-        <NavComponent />
+      
+        <EmailSignupBannerComponent />
+
         <GeneradorContainerContainer />
         <SendEmailButton/>
         <EditProfileForm/>
