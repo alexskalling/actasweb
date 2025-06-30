@@ -39,21 +39,23 @@ export default function PaymentModalComponent({
           </h3>
         </div>
         
-        <div className="space-y-3 text-sm text-gray-700">
-          <p>
-            Serás redirigido a la plataforma de pagos y
-          
-            <strong> Dependiendo del método de pago:</strong>
-          </p>
-          
-          <ul className="list-disc list-inside space-y-1 ml-2">
-            <li>Algunos métodos regresan automáticamente a generar tu acta</li>
-            <li className="text-purple-600 font-bold">Otros requieren que hagas clic en "Volver al comercio"</li>
-          </ul>
-          
-          <p className="text-orange-600 font-medium">
-            Si ves un botón "Volver al comercio" o similar, haz clic en él para continuar con la generación de tu acta.
-          </p>
+                  <div className="space-y-3 text-sm text-gray-700">
+            <p>
+              Serás redirigido a la plataforma de pagos y
+            </p>
+            
+            <p>
+              <strong>Dependiendo del método de pago:</strong>
+            </p>
+            
+            <ul className="list-disc list-inside space-y-1 ml-2">
+              <li>Algunos métodos regresan automáticamente a generar tu acta</li>
+              <li className="text-purple-600 font-bold">Otros requieren que hagas clic en &ldquo;Volver al comercio&rdquo;</li>
+            </ul>
+            
+            <p className="text-orange-600 font-medium">
+              Si ves un botón &ldquo;Volver al comercio&rdquo; o similar, haz clic en él para continuar con la generación de tu acta.
+            </p>
         </div>
         
         <div className="flex gap-3 mt-6">
