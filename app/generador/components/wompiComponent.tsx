@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 import { saveTransactionAction } from "../services/saveTransactionAction";
+import PaymentModalComponent from "./paymentModalComponent";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
   const encoder = new TextEncoder();
@@ -70,6 +71,7 @@ const WompiComponent = (props) => {
   const [checkout, setCheckout] = useState(null);
   const [costo, setCosto] = useState(props.costo * 100);
   const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setCosto(props.costo * 100);
@@ -185,34 +187,53 @@ const WompiComponent = (props) => {
     });
   };
 
+  const handleButtonClick = () => {
+    if (props.showModalFirst) {
+      setShowModal(true);
+    } else {
+      handleOpenWidget();
+    }
+  };
+
   return (
-    <Button
-      className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
-      onClick={() => [handleOpenWidget()]}
-      disabled={isLoading}
-    >
-      {isLoading ? (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={24}
-            height={24}
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="animate-spin"
-          >
-            <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-          </svg>
-          Procesando...
-        </>
-      ) : (
-        "Pagar"
-      )}
-    </Button>
+    <>
+      <Button
+        className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
+        onClick={handleButtonClick}
+        disabled={isLoading}
+      >
+        {isLoading ? (
+          <>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={24}
+              height={24}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="animate-spin"
+            >
+              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+            Procesando...
+          </>
+        ) : (
+          "Pagar"
+        )}
+      </Button>
+      
+      <PaymentModalComponent
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        onConfirm={() => {
+          setShowModal(false);
+          handleOpenWidget();
+        }}
+      />
+    </>
   );
 };
 

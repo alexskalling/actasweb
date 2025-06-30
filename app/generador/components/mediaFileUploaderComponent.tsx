@@ -10,6 +10,7 @@ import io, { Socket } from "socket.io-client";
 import { saveTransactionAction } from "../services/saveTransactionAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 
+
 interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
   accept?: string;
@@ -38,6 +39,7 @@ export default function MediaFileUploaderComponent({
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
   const [start, setStar] = React.useState<boolean>(false);
+
 
   const handleFileSelect = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -572,6 +574,7 @@ export default function MediaFileUploaderComponent({
                   fileid={urlAssembly}
                   duration={duration}
                   handlePayment={handlePayment}
+                  showModalFirst={true}
                 />
               )}
             {uploadProgress != 100 &&
