@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { headers } from "next/headers";
+import { Providers } from "@/components/providers/providers"; // Importar el SessionProvider
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,20 +27,19 @@ if (process.env.NEXT_PUBLIC_PAGO === "soporte") {
 }
 
 export const metadata: Metadata = {
-  title: title,
-  description: description,
+  title,
+  description,
   alternates: {
-    canonical: 'https://actasdereuniones.ai/',
+    canonical: "https://actasdereuniones.ai/",
   },
 };
 
 export default async function RootLayout({
-  // Añadimos 'async' aquí
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers(); // Usamos 'await' aquí
+  const headersList = await headers();
   const hostname = headersList.get("host") || "";
   const isGeneradorDomain = hostname === "generador.actasdereuniones.ai";
 
@@ -49,12 +49,13 @@ export default async function RootLayout({
         {!isGeneradorDomain && (
           <meta name="robots" content="noindex, nofollow" />
         )}
-        {/* Otros elementos del head */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
 
         {/* Cargar el script de Meta Pixel */}
         <Script
@@ -72,7 +73,7 @@ export default async function RootLayout({
                 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
                 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
                 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=;t=b.createElement(e);t.async=!0;
+                n.queue=[];t=b.createElement(e);t.async=!0;
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)
               }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
@@ -88,7 +89,7 @@ export default async function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=968021022066284&ev=PageView&noscript=1`}
+            src="https://www.facebook.com/tr?id=968021022066284&ev=PageView&noscript=1"
           />
         </noscript>
 

@@ -8,6 +8,8 @@ import {
 import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
+import SendEmailButton from "./Emails/components/SendEmailButton";
+import EditProfileForm from "./profile/components/editProfileForm";
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -89,7 +91,10 @@ export default function Home() {
       )}
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
+        <NavComponent />
         <GeneradorContainerContainer />
+        <SendEmailButton/>
+        <EditProfileForm/>
       </div>
 
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
