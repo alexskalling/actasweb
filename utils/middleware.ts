@@ -50,16 +50,6 @@ export async function updateSession(request: NextRequest) {
     "/plataforma",
   ];
 
-  // Verificar si la ruta actual es /plataforma o cualquier subruta
-  const isProtectedRoute = request.nextUrl.pathname.startsWith("/plataforma");
-
-  // Si es una ruta protegida y no hay usuario, redirigir al login
-  if (isProtectedRoute && !user) {
-    const redirectUrl = new URL("/", request.url);
-    // Opcional: Guardar la URL original para redirigir después del login
-    redirectUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
-    return NextResponse.redirect(redirectUrl);
-  }
 
   // Si todo está bien, continuar con la respuesta normal
   return response;

@@ -67,7 +67,7 @@ export default function NavComponent() {
             </div>
           ) : (
             <button
-              onClick={() => signIn(undefined, { callbackUrl: "/" })}
+              onClick={() => signIn(undefined, { callbackUrl: "/plataforma" })}
               className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
             >
               Iniciar sesión

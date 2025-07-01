@@ -7,7 +7,7 @@ import Image from 'next/image';
 export default function LoginPage() {
 
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/";
+  const callbackUrl = searchParams.get("callbackUrl") || "/plataforma";
 
   return (
     <main className="min-h-screen bg-purple-950 flex items-center justify-center px-4">

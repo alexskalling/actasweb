@@ -22,12 +22,7 @@ export const authOptions: NextAuthOptions = {
     signIn: "/login",
   },
   callbacks: {
-    async redirect({ url, baseUrl }) {
-      if (url === "/login") return baseUrl;
-      if (url.startsWith(baseUrl)) return url;
-      return baseUrl;
-    },
-    async signIn({ user }) {
+      async signIn({ user }) {
       const name = user.name ?? "Sin nombre";
       const mail = user.email;
 

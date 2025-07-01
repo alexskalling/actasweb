@@ -7,7 +7,7 @@ export default function EditProfileForm() {
   const { data: session } = useSession();
 
   return (
-    <main className="min-h-screen bg-purple-950 flex items-center justify-center px-4">
+    <main className=" bg-purple-950 flex items-center justify-center px-4 py-40">
       <div className="max-w-md w-full bg-white/10 backdrop-blur-md shadow-2xl rounded-2xl p-8 space-y-6 border border-white/20 text-white">
         <div className="flex flex-col items-center space-y-2">
           <h1 className="text-2xl font-bold">Editar Perfil</h1>
