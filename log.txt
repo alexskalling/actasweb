@@ -25,3 +25,78 @@ Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
 Usando contenido del acta proporcionado como parámetro.
 Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
 [2025-07-02T19:19:31.611Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+[2025-07-02T22:46:20.913Z] Guardando transcipcion.
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T22:46:22.124Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:46:23.318Z] Archivo "audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "audio".
+Transcripción existente encontrada: audio. Obteniendo contenido.
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T22:46:24.390Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:46:25.127Z] Archivo "audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "audio".
+Contenido existente: audio_Contenido.txt. Cargando.
+[2025-07-02T22:46:25.889Z] Contenido del archivo "audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T22:46:25.891Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T22:46:26.667Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T22:46:26.874Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T22:47:02.571Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:47:03.685Z] Archivo "audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "audio".
+Transcripción existente encontrada: audio. Obteniendo contenido.
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T22:47:04.759Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:47:05.487Z] Archivo "audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "audio".
+Contenido existente: audio_Contenido.txt. Cargando.
+[2025-07-02T22:47:06.238Z] Contenido del archivo "audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T22:47:06.240Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T22:47:06.983Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T22:47:07.220Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-02T22:48:09.573Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:10.734Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-02T22:48:11.836Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:12.585Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-02T22:48:13.501Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-02T22:48:13.502Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:14.237Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yG6PdfZ2kxSdXE6
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yG6PdfZ2kxSdXE6
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/TiQAYNME8eKWWz7
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/TiQAYNME8eKWWz7

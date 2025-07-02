@@ -9,13 +9,10 @@ import { processAction } from "../services/processAction";
 import io, { Socket } from "socket.io-client";
 import { saveTransactionAction } from "../services/saveTransactionAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
-import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
-import { newActaEstado } from "../services/Acta_Estado/newActaEstado";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth/options/authOptions";
-import { updateEstatusActa } from "../services/Acta_Estado/updateActaStatus";
-import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateInClientDownload";
+import { crearActaDesdeCliente } from "../services/Acta_Estado/ActionsInClient/newActaInClient";
+import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaInClientDownload";
+import { actualizarEstatusDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaStatusInClient";
+
 
 interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
@@ -23,7 +20,7 @@ interface MediaSelectorProps {
   maxSize?: number;
 }
 
-export default async function MediaFileUploaderComponent({
+export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
 }: MediaSelectorProps) {
@@ -45,7 +42,7 @@ export default async function MediaFileUploaderComponent({
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
   const [start, setStar] = React.useState<boolean>(false);
-  const session = await getServerSession(authOptions);
+
 
   const handleFileSelect = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -105,19 +102,20 @@ export default async function MediaFileUploaderComponent({
       });
     }
   };
+
   React.useEffect(() => {
     const actualizar = async () => {
-      if (acta && transcripcion && file && selectedFile) {
+      if (acta && transcripcion && file) {
         try {
-          await actualizarEstadoDesdeCliente(selectedFile.name, transcripcion, acta);
+          await actualizarEstadoDesdeCliente(file, transcripcion, acta);
         } catch (error) {
-          console.error("❌ Error al llamar al server action:", error);
+          console.error("❌ Error al actualizar estado desde cliente:", error);
         }
       }
     };
 
     actualizar();
-  }, [acta, transcripcion, file, selectedFile]);
+  }, [acta, transcripcion, file]); // se ejecuta cuando los 3 están definidos
 
   React.useEffect(() => {
     const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Conéctate al servidor de Socket.IO
@@ -278,18 +276,16 @@ export default async function MediaFileUploaderComponent({
 
         //@ts-expect-error revisar despues
         setUrlAssembly(result.uploadUrl);
-
-        if (session) {
-          const mail = await getUserEmailFromSession();
-          const user_id = await getUserIdByEmail(mail);
-          await newActaEstado({
-            user_id,
-            transcription: null,
-            url: result.uploadUrl,
-            file_name: selectedFile.name,
-          });
-        }
-
+        const ejecutarCrearActa = async () => {
+          try {
+            if (selectedFile) {
+              await crearActaDesdeCliente(selectedFile.name, result.uploadUrl);
+            }
+          } catch (error) {
+            console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
+          }
+        };
+        ejecutarCrearActa();
 
         setCalculando(false);
         setUploadProgress(100);
@@ -471,18 +467,18 @@ export default async function MediaFileUploaderComponent({
 
             handlePayment();
           } else {
+            const actualizarEstatus = async () => {
+              try {
+                if (selectedFile) {
+                  await actualizarEstatusDesdeCliente(selectedFile.name, 2);
+                }
+                console.log("pago aprobado");
+              } catch (error) {
+                console.error("❌ Error actualizando estatus:", error);
+              }
+            };
 
-            if (session && selectedFile) {
-              const mail = await getUserEmailFromSession();
-              const user_id = await getUserIdByEmail(mail);
-              await updateEstatusActa({
-                user_id: user_id,
-                file_name: selectedFile.name,
-                nuevo_estatus_id: 2,
-              });
-            }
-
-            console.log("pago aprobado");
+            actualizarEstatus();
           }
         } catch (error) {
           console.error("Error al buscar la transacción:", error);
@@ -616,6 +612,7 @@ export default async function MediaFileUploaderComponent({
                   fileid={urlAssembly}
                   duration={duration}
                   handlePayment={handlePayment}
+                  showModalFirst={true}
                 />
               )}
             {uploadProgress != 100 &&
