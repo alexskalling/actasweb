@@ -9,7 +9,6 @@ import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 import SendEmailButton from "./Emails/components/SendEmailButton";
-import EditProfileForm from "./profile/components/editProfileForm";
 import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
 const faqs = [
   {
@@ -97,7 +96,6 @@ export default function Home() {
 
         <GeneradorContainerContainer />
         <SendEmailButton/>
-        <EditProfileForm/>
       </div>
 
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
