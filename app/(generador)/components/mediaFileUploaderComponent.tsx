@@ -11,10 +11,11 @@ import { saveTransactionAction } from "../services/saveTransactionAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
 import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
-import { newActaEstado } from "../services/Acta_Estado/generateActaEstado";
+import { newActaEstado } from "../services/Acta_Estado/newActaEstado";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth/options/authOptions";
 import { updateEstatusActa } from "../services/Acta_Estado/updateActaStatus";
+import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateInClientDownload";
 
 interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
@@ -104,6 +105,19 @@ export default async function MediaFileUploaderComponent({
       });
     }
   };
+  React.useEffect(() => {
+    const actualizar = async () => {
+      if (acta && transcripcion && file && selectedFile) {
+        try {
+          await actualizarEstadoDesdeCliente(selectedFile.name, transcripcion, acta);
+        } catch (error) {
+          console.error("❌ Error al llamar al server action:", error);
+        }
+      }
+    };
+
+    actualizar();
+  }, [acta, transcripcion, file, selectedFile]);
 
   React.useEffect(() => {
     const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Conéctate al servidor de Socket.IO
