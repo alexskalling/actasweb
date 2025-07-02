@@ -4,7 +4,7 @@ import { db } from "@/lib/db/db";
 import { users } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions";
+import { authOptions } from "@/lib/auth/options/authOptions";
 
 export async function updateProfile(formData: FormData) {
   const session = await getServerSession(authOptions);

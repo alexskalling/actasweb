@@ -1,6 +1,6 @@
 "use server";
 
-import { resend } from "@/lib/resend";
+import { resend } from "@/lib/resend/resend";
 import WelcomeEmail from "@/app/Emails/mailStruct/welcomeEmail";
 import React from "react";
 

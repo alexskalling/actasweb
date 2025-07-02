@@ -1,0 +1,27 @@
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T19:18:46.182Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[2025-07-02T19:18:46.244Z] Error en verificarArchivoExistenteNextcloud: fetch failed.
+Iniciando transcripción con AssemblyAI para: audio.mp3
+Guardando transcripción: audio_Transcripcion.txt en carpeta audio
+Transcripción guardada: audio_Transcripcion.txt
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T19:18:58.517Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T19:18:59.274Z] Archivo "audio_Contenido.txt" NO encontrado en Nextcloud en la carpeta "audio".
+Generando contenido para: audio.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: audio.mp3
+Guardando contenido en Nextcloud: audio_Contenido.txt
+Contenido guardado: audio_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T19:19:30.563Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T19:19:31.328Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T19:19:31.611Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..

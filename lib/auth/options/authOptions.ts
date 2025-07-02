@@ -1,7 +1,7 @@
 import { db } from "@/lib/db/db";
 import { eq } from "drizzle-orm";
 import { users } from "@/lib/db/schema";
-import { newUser } from "@/lib/registerUser";
+import { newUser } from "@/lib/Users/registerUser";
 import GoogleProvider from "next-auth/providers/google";
 import AzureADProvider from "next-auth/providers/azure-ad";
 import type { NextAuthOptions } from "next-auth";
