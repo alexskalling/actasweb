@@ -35,27 +35,27 @@ export default function PaymentModalComponent({
         <div className="flex items-center mb-4">
           <AlertCircle className="h-6 w-6 text-orange-500 mr-2" />
           <h3 className="text-lg font-semibold text-gray-900">
-            Importante sobre el pago
+            Información importante
           </h3>
         </div>
         
-                  <div className="space-y-3 text-sm text-gray-700">
-            <p>
-              Serás redirigido a la plataforma de pagos y
-            </p>
-            
-            <p>
-              <strong>Dependiendo del método de pago:</strong>
-            </p>
-            
-            <ul className="list-disc list-inside space-y-1 ml-2">
-              <li>Algunos métodos regresan automáticamente a generar tu acta</li>
-              <li className="text-purple-600 font-bold">Otros requieren que hagas clic en &ldquo;Volver al comercio&rdquo;</li>
-            </ul>
-            
-            <p className="text-orange-600 font-medium">
-              Si ves un botón &ldquo;Volver al comercio&rdquo; o similar, haz clic en él para continuar con la generación de tu acta.
-            </p>
+        <div className="space-y-3 text-sm text-gray-700">
+          <p>
+            Serás redirigido a la plataforma de pagos de Wompi.
+          </p>
+          
+          <p>
+            <strong>Después del pago:</strong>
+          </p>
+          
+          <ul className="list-disc list-inside space-y-1 ml-2">
+            <li>Algunos métodos regresan automáticamente</li>
+            <li>Otros muestran un botón <strong>"Volver al comercio"</strong></li>
+          </ul>
+          
+          <p className="text-orange-600 font-medium">
+            Si ves el botón "Volver al comercio", haz clic en él para continuar.
+          </p>
         </div>
         
         <div className="flex gap-3 mt-6">
