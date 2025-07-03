@@ -436,3 +436,32 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
 URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/ro4WQpfy273mW2M
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/ro4WQpfy273mW2M
+[2025-07-03T19:16:39.089Z] Guardando transcipcion.
+Verificando si existe transcripción: porteria_acata_2_Transcripcion.txt en carpeta porteria_acata_2
+[2025-07-03T19:16:40.495Z] Verificando existencia del archivo porteria_acata_2_Transcripcion.txt en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:41.949Z] Archivo "porteria_acata_2_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Transcripción existente encontrada: porteria_acata_2. Obteniendo contenido.
+Verificando contenido existente: porteria_acata_2_Contenido.txt
+[2025-07-03T19:16:43.114Z] Verificando existencia del archivo porteria_acata_2_Contenido.txt en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:44.000Z] Archivo "porteria_acata_2_Contenido.txt" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Contenido existente: porteria_acata_2_Contenido.txt. Cargando.
+[2025-07-03T19:16:45.027Z] Contenido del archivo "porteria_acata_2_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: porteria_acata_2.mp3 en carpeta: porteria_acata_2
+Verificando Borrador .docx existente: porteria_acata_2_Borrador.docx
+[2025-07-03T19:16:45.029Z] Verificando existencia del archivo porteria_acata_2_Borrador.docx en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:45.852Z] Archivo "porteria_acata_2_Borrador.docx" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): porteria_acata_2_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/porteria_acata_2/porteria_acata_2_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yXnDTJKmJAibYqG
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yXnDTJKmJAibYqG
+Generando URL pública para Transcripcion.txt (EXISTENTE): porteria_acata_2_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/porteria_acata_2/porteria_acata_2_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/iecNczEnKLESMo4
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/iecNczEnKLESMo4

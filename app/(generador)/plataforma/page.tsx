@@ -2,17 +2,13 @@
 
 import { useState } from 'react'
 import {
-
   Menu,
   MenuButton,
   MenuItem,
   MenuItems,
 } from '@headlessui/react'
 import {
-
   EllipsisVerticalIcon,
-
-
   XMarkIcon as XMarkIconMini,
 } from '@heroicons/react/20/solid'
 
@@ -20,54 +16,40 @@ import MediaFileUploaderComponent from '../components/mediaFileUploaderComponent
 import { useSession, signOut } from 'next-auth/react'
 import HistorialActasComponent from '../components/historialActasComponent'
 
-
-
-
-
-export default function Example() {
+export default function PlataformaPage() {
   const { data: session } = useSession();
 
   return (
     <>
-   
       <main>
-        <header className="relative isolate ">
+        <header className="relative isolate">
           <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute top-full left-16 -mt-16 transform-gpu opacity-50 blur-3xl xl:left-1/2 xl:-ml-80">
-              <div
-                style={{
-                  clipPath:
-                    'polygon(100% 38.5%, 82.6% 100%, 60.2% 37.7%, 52.4% 32.1%, 47.5% 41.8%, 45.2% 65.6%, 27.5% 23.4%, 0.1% 35.3%, 17.9% 0%, 27.7% 23.4%, 76.2% 2.5%, 74.2% 56%, 100% 38.5%)',
-                }}
-                className="aspect-1154/678 w-288.5 bg-linear-to-br from-[#FF80B5] to-[#9089FC]"
-              />
-            </div>
             <div className="absolute inset-x-0 bottom-0 h-px bg-gray-900/5" />
           </div>
 
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
             <div className="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
               <div className="flex items-center gap-x-6">
-              <img
-                src={session?.user?.image ?? ""}
-                alt={`Foto de perfil de ${session?.user?.name}`}
-                className="w-20 h-20 rounded-lg"
-              />
+                <img
+                  src={session?.user?.image ?? ""}
+                  alt={`Foto de perfil de ${session?.user?.name}`}
+                  className="w-20 h-20 rounded-lg"
+                />
                 <h1>
                   <div className="text-sm/6 text-gray-500">
-                   Bienvenido
+                    Bienvenido
                   </div>
-                  <div className="mt-1 text-base font-semibold text-gray-900"> {session?.user?.name}</div>
+                  <div className="mt-1 text-base font-semibold text-gray-900">
+                    {session?.user?.name}
+                  </div>
                 </h1>
               </div>
               <div className="flex items-center gap-x-4 sm:gap-x-6">
-             
                 <a href="#" className="hidden text-sm/6 font-semibold text-gray-900 sm:block">
                   Editar perfil
                 </a>
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
-                 
                   className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Salir
@@ -109,18 +91,59 @@ export default function Example() {
 
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {/* Invoice summary */}
+            {/* Uploader Component */}
             <div className="lg:col-start-3 lg:row-end-1">
-            <MediaFileUploaderComponent />
+              <MediaFileUploaderComponent />
+            </div>
+            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
+                  <div>
+                    <h3 className="font-bold text-xl">
+                      ⚠️ Recuerda
+                    </h3>
+                    <p className="text-white mt-2 text-sm">
+                      En el proceso de pago recuerda dar click en "Volver al comercio" o "Finalizar proceso" en caso de que no se haga de manera automática
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Invoice */}
-            <div className=" sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2">
-             <HistorialActasComponent />
+            {/* Historial Component */}
+            <div className="sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2">
+              <HistorialActasComponent />
             </div>
-
-        
           </div>
+          
+
+
+
+           {/* Sección de Soporte */}
+           <div className="mt-12 pt-8 border-t border-gray-200">
+             <div className="text-center md:text-left">
+               <h3 className="font-bold text-xl text-purple-600 mb-4">
+                 📞 Soporte
+               </h3>
+               <div className="  items-center justify-between gap-6 text-center md:text-left">
+               <p className="text-gray-700 mb-2">
+                 Nuestro horario de atención es de lunes a viernes de 8:00 AM a 6:00 PM
+               </p>
+               <p className="text-gray-700 mb-3">
+                 En caso de que necesites soporte, puedes contactarte por WhatsApp con:
+               </p>
+               </div>
+          
+               <div className="space-y-1">
+                 <p className="text-gray-900">
+                   • <strong className="text-purple-600">Leonardo:</strong> +57 301 242 2098
+                 </p>
+                 <p className="text-gray-900">
+                   • <strong className="text-purple-600">Guillermo:</strong> +56 9 4587 1929
+                 </p>
+               </div>
+             </div>
+           </div>
         </div>
       </main>
     </>
