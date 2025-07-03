@@ -1,3 +1,4 @@
+'use client'
 import GeneradorContainerContainer from "./(generador)/components/generadorContainerComponent";
 import NavComponent from "./(generador)/components/navComponent";
 import {
@@ -9,8 +10,7 @@ import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
-import { useSession } from "next-auth/react"
-
+import { useSession } from "next-auth/react";
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -49,9 +49,10 @@ const faqs = [
   },
   // More questions...
 ];
-const { data: session } = useSession();
+
 
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <div className="relative isolate z-0 ">
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
@@ -94,7 +95,7 @@ export default function Home() {
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
 
-        {session && <EmailSignupBannerComponent />}
+        {!session && <EmailSignupBannerComponent />}
 
         <GeneradorContainerContainer />
       </div>

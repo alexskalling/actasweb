@@ -13,7 +13,7 @@ export default function EmailSignupBannerComponent() {
   
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-6 rounded-lg shadow-lg mb-6 relative">
+    <div className="bg-purple-600  text-white p-6 rounded-lg shadow-lg mb-6 relative">
 
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
