@@ -1,6 +1,6 @@
 import { db } from "@/lib/db/db";
 import { eq } from "drizzle-orm";
-import { users } from "@/lib/db/schema";
+import { usuarios } from "@/lib/db/schema";
 import { newUser } from "@/lib/Users/registerUser";
 import GoogleProvider from "next-auth/providers/google";
 import AzureADProvider from "next-auth/providers/azure-ad";
@@ -22,7 +22,7 @@ export const authOptions: NextAuthOptions = {
     signIn: "/login",
   },
   callbacks: {
-      async signIn({ user }) {
+    async signIn({ user }) {
       const name = user.name ?? "Sin nombre";
       const mail = user.email;
 
@@ -34,17 +34,17 @@ export const authOptions: NextAuthOptions = {
       try {
         const existing = await db
           .select()
-          .from(users)
-          .where(eq(users.mail, mail))
+          .from(usuarios)
+          .where(eq(usuarios.email, mail))
           .then((res) => res[0]);
 
         const now = new Date();
 
         if (existing) {
           await db
-            .update(users)
-            .set({ last_login: now })
-            .where(eq(users.mail, mail));
+            .update(usuarios)
+            .set({ ultimoAcceso: now })
+            .where(eq(usuarios.email, mail));
         } else {
           await newUser({ name, mail, last_login: now });
         }
@@ -54,7 +54,6 @@ export const authOptions: NextAuthOptions = {
         console.error("❌ Error durante signIn:", err);
         return false;
       }
-    }
-    ,
+    },
   },
 };

@@ -633,3 +633,115 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
 URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/oyJnwwr94qPFBdQ
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/oyJnwwr94qPFBdQ
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:33:27.964Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:29.164Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:33:30.253Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:30.980Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:33:31.875Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:33:31.877Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:32.619Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/GLCK4nfz3z7W2Lr
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/GLCK4nfz3z7W2Lr
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2zMB3oSiD7P4aKM
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2zMB3oSiD7P4aKM
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:33:50.536Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:51.621Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:33:52.684Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:53.427Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:33:54.336Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:33:54.338Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:55.086Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2GKwDXpFd8CPQC8
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2GKwDXpFd8CPQC8
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2sGPG6NmgwHG3pT
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2sGPG6NmgwHG3pT
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:50:42.565Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:43.760Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:50:44.837Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:45.591Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:50:46.493Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:50:46.495Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:47.240Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/J8RbEoCmadrq3aA
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/J8RbEoCmadrq3aA
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2S63bDsbskFAqAx
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2S63bDsbskFAqAx
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:55:07.518Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:08.652Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:55:09.746Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:10.467Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:55:11.197Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:55:11.200Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:11.929Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/7HQfPGsQ2PFtsfR
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/7HQfPGsQ2PFtsfR
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/LdgDQdPwmnzPQo3
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/LdgDQdPwmnzPQo3

@@ -106,49 +106,55 @@ export default function MediaFileUploaderComponent({
     }
   };
 
-const hasSentEmail = React.useRef(false);
+  const hasSentEmail = React.useRef(false);
 
-React.useEffect(() => {
-  const ejecutarFlujo = async () => {
-    if (
-      file &&
-      session?.user?.email &&
-      session?.user?.name &&
-      !hasSentEmail.current
-    ) {
-      try {
-        await actualizarEstadoDesdeCliente(file, transcripcion, acta);
-        const email = session.user.email;
-        const name = session.user.name;
+  React.useEffect(() => {
+    const ejecutarFlujo = async () => {
+      if (
+        file &&
+        session?.user?.email &&
+        session?.user?.name &&
+        !hasSentEmail.current
+      ) {
+        try {
+          await actualizarEstadoDesdeCliente(file, transcripcion, acta);
+          const email = session.user.email;
+          const name = session.user.name;
 
-        const Acta_Estado = await fetchActaByUserAndFile(email, file);
+          const actaEstado = await fetchActaByUserAndFile(email, file);
 
-        if (!Acta_Estado || !Acta_Estado.transcription || !Acta_Estado.url) {
-          console.warn("⚠️ No se encontró acta válida o incompleta.");
-          return;
-        }
-
-        if (Acta_Estado.estatus_id !== 4) {
-          const res = await sendActaEmail(email, name, Acta_Estado.url, Acta_Estado.transcription);
-
-          if (res.success) {
-            console.log("✅ Correo enviado con éxito");
-            await actualizarEstatusDesdeCliente(file, 4);
-            console.log("✅ Estatus cambiado a Enviado");
-          } else {
-            console.error("❌ Error al enviar el correo:", res.error);
+          if (!actaEstado || !actaEstado.urlBorrador|| !actaEstado.urlTranscripcion) {
+            console.warn("⚠️ No se encontró acta válida o está incompleta.");
+            return;
           }
 
-          hasSentEmail.current = true;
-        }
-      } catch (error) {
-        console.error("❌ Error durante el flujo completo:", error);
-      }
-    }
-  };
+          if (actaEstado.idEstadoProceso !== 4) {
+            const res = await sendActaEmail(
+              email,
+              name,
+              actaEstado.urlTranscripcion,
+              actaEstado.urlBorrador
+            );
 
-  ejecutarFlujo();
-}, [acta != null, transcripcion != null, file != null, session]);
+            if (res.success) {
+              console.log("✅ Correo enviado con éxito");
+              await actualizarEstatusDesdeCliente(file, 4);
+              console.log("✅ Estatus cambiado a Enviado");
+            } else {
+              console.error("❌ Error al enviar el correo:", res.error);
+            }
+
+            hasSentEmail.current = true;
+          }
+
+        } catch (error) {
+          console.error("❌ Error durante el flujo completo:", error);
+        }
+      }
+    };
+
+    ejecutarFlujo();
+  }, [acta != null, transcripcion != null, file != null, session]);
 
 
 

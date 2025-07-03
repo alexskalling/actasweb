@@ -2,22 +2,21 @@
 
 import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
 import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
-import { newActaEstado } from "../newActaEstado";
+import { newActa } from "../newActaEstado";
 
 
 export async function crearActaDesdeCliente(
   file_name: string,
-  url: string | null | undefined
+  urlAssembly: string | null | undefined
 ) {
   try {
     const mail = await getUserEmailFromSession();
     const user_id = await getUserIdByEmail(mail);
 
-    await newActaEstado({
+    await newActa({
       user_id,
       file_name,
-      url,
-      transcription: null,
+      urlAssembly,
     });
 
     console.log("✅ Acta creada desde cliente");

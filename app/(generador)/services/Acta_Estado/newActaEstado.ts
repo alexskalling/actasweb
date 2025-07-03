@@ -1,31 +1,30 @@
 'use server';
 
 import { db } from "@/lib/db/db";
-import { actaEstado } from "@/lib/db/schema";
+import { actas } from "@/lib/db/schema";
 
-interface NewActaEstadoInput {
+interface NewActaInput {
   user_id: string;
-  transcription: string | null;
-  url: string | null | undefined;
+  urlAssembly: string | null | undefined;
   file_name: string;
 }
 
-export async function newActaEstado({
+export async function newActa({
   user_id,
-  url,
-  transcription,
+  urlAssembly,
   file_name,
-}: NewActaEstadoInput) {
+}: NewActaInput) {
   try {
-    await db.insert(actaEstado).values({
-      user_id,
-      estatus_id: 1, // Estado "pendiente de pago"
-      transcription,
-      url,
-      file_name,
+    await db.insert(actas).values({
+      idUsuario: user_id,
+      idEstadoProceso: 1, // Estado inicial "pendiente de pago"
+      urlAssembly: urlAssembly,
+      nombre: file_name,
     });
+
+    console.log(`✅ Acta creada correctamente.`);
   } catch (error) {
-    console.error("❌ Error al crear estado del acta:", error);
+    console.error("❌ Error al crear el acta:", error);
     throw error;
   }
 }

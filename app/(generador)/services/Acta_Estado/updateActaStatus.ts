@@ -1,13 +1,13 @@
 'use server';
 
 import { db } from "@/lib/db/db";
-import { actaEstado } from "@/lib/db/schema";
+import { actas } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
 
 interface UpdateEstatusInput {
-  user_id: string;
-  file_name: string;
-  nuevo_estatus_id: number ; 
+  user_id: string;         // UUID del usuario
+  file_name: string;       // nombre del acta
+  nuevo_estatus_id: number; // nuevo id de estado_proceso
 }
 
 export async function updateEstatusActa({
@@ -17,18 +17,19 @@ export async function updateEstatusActa({
 }: UpdateEstatusInput) {
   try {
     const result = await db
-      .update(actaEstado)
-      .set({ estatus_id: nuevo_estatus_id })
+      .update(actas)
+      .set({ idEstadoProceso: nuevo_estatus_id })
       .where(
         and(
-          eq(actaEstado.user_id, user_id),
-          eq(actaEstado.file_name, file_name)
+          eq(actas.idUsuario, user_id),
+          eq(actas.nombre, file_name)
         )
       );
 
-    console.log(`Estado actualizado `);
+    console.log(`Estado actualizado`);
+    return result;
   } catch (error) {
-    console.error(" Error al actualizar estatus del acta:", error);
+    console.error("Error al actualizar estatus del acta:", error);
     throw error;
   }
 }

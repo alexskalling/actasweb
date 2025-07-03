@@ -1,5 +1,7 @@
+'use server';
+
 import { db } from "@/lib/db/db";
-import { users } from "@/lib/db/schema";
+import { usuarios } from "@/lib/db/schema";
 
 interface NewUserInput {
   name: string;
@@ -7,12 +9,16 @@ interface NewUserInput {
   last_login?: Date;
 }
 
-export async function newUser({ name, mail, last_login = new Date() }: NewUserInput) {
+export async function newUser({
+  name,
+  mail,
+  last_login = new Date(),
+}: NewUserInput) {
   try {
-    await db.insert(users).values({
-      name,
-      mail,
-      last_login,
+    await db.insert(usuarios).values({
+      nombre: name,
+      email: mail,
+      ultimoAcceso: last_login,
     });
     console.log(`✅ Usuario registrado: ${mail}`);
   } catch (error) {
