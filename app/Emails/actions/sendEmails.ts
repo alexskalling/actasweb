@@ -1,10 +1,10 @@
 "use server";
 
 import { resend } from "@/lib/resend/resend";
-import WelcomeEmail from "@/app/Emails/mailStruct/welcomeEmail";
 import React from "react";
+import ActaEmail from "../mailStruct/actaEmail";
 
-export async function sendWelcomeEmail(
+export async function sendActaEmail(
   email: string,
   name: string,
   url: string,
@@ -13,9 +13,9 @@ export async function sendWelcomeEmail(
   try {
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: email,
+      to: "elliotwolf@skalling.com",
       subject: "Tu acta está lista ✅",
-      react: React.createElement(WelcomeEmail, {
+      react: React.createElement(ActaEmail, {
         name,
         url,
         transcription,

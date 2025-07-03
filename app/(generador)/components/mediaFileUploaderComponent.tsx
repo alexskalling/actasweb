@@ -13,9 +13,8 @@ import { crearActaDesdeCliente } from "../services/Acta_Estado/ActionsInClient/n
 import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaInClientDownload";
 import { actualizarEstatusDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaStatusInClient";
 import { useSession } from "next-auth/react";
-import { sendWelcomeEmail } from "@/app/Emails/actions/sendEmails";
 import { fetchActaByUserAndFile } from "../services/Acta_Estado/getActaEstadoByUser";
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
+import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
 
 
 interface MediaSelectorProps {
@@ -107,42 +106,41 @@ export default function MediaFileUploaderComponent({
     }
   };
 
+const hasSentEmail = React.useRef(false);
+
 React.useEffect(() => {
   const ejecutarFlujo = async () => {
     if (
       file &&
       session?.user?.email &&
-      session?.user?.name
+      session?.user?.name &&
+      !hasSentEmail.current
     ) {
       try {
+        await actualizarEstadoDesdeCliente(file, transcripcion, acta);
         const email = session.user.email;
         const name = session.user.name;
 
-        const acta = await fetchActaByUserAndFile(email, file);
+        const Acta_Estado = await fetchActaByUserAndFile(email, file);
 
-        if (!acta || !acta.transcription || !acta.url) {
+        if (!Acta_Estado || !Acta_Estado.transcription || !Acta_Estado.url) {
           console.warn("⚠️ No se encontró acta válida o incompleta.");
           return;
         }
 
+        if (Acta_Estado.estatus_id !== 4) {
+          const res = await sendActaEmail(email, name, Acta_Estado.url, Acta_Estado.transcription);
 
-        const res = await sendWelcomeEmail(email, name, acta.url, acta.transcription);
-
-        if (res.success) {
-          console.log("✅ Correo enviado con éxito");
-
-
-          try {
-            await actualizarEstatusDesdeCliente(file, 4); // 4 = enviado
+          if (res.success) {
+            console.log("✅ Correo enviado con éxito");
+            await actualizarEstatusDesdeCliente(file, 4);
             console.log("✅ Estatus cambiado a Enviado");
-          } catch (err) {
-            console.error("❌ Error al actualizar estatus final:", err);
+          } else {
+            console.error("❌ Error al enviar el correo:", res.error);
           }
 
-        } else {
-          console.error("❌ Error al enviar el correo:", res.error);
+          hasSentEmail.current = true;
         }
-
       } catch (error) {
         console.error("❌ Error durante el flujo completo:", error);
       }
@@ -150,12 +148,13 @@ React.useEffect(() => {
   };
 
   ejecutarFlujo();
-}, [file, session]);
+}, [acta != null, transcripcion != null, file != null, session]);
+
 
 
 
   React.useEffect(() => {
-    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Conéctate al servidor de Socket.IO
+    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
     setSocket(newSocket);
 
     return () => {
