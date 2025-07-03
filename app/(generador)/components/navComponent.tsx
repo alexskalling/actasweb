@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import logo from "../assets/logo-actas-ai-blanco.svg";
-import { signIn, useSession, signOut } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -54,19 +54,25 @@ export default function NavComponent() {
 
           {/* Auth Section */}
           {session?.user ? (
-            // Usuario con sesión
-            pathname === "/" ? (
-              // Si está en la ruta raíz, mostrar botón "Ingresar"
-              <Link
-                href="/plataforma"
-                className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
-              >
-                Ingresar
-              </Link>
-            ) : (
-              // Si no está en la ruta raíz, no mostrar nada
-              null
-            )
+            <>
+              {/* Foto de perfil */}
+              <Image
+                src={session.user.image || "/default-profile.png"}
+                alt="Foto de perfil"
+                width={32}
+                height={32}
+                className="rounded-full border-2 border-white"
+              />
+              {pathname === "/" && (
+                <Link
+                  href="/plataforma"
+                  className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
+                >
+                  Ingresar
+                </Link>
+              )}
+
+            </>
           ) : (
             // Usuario sin sesión, mostrar botón "Iniciar sesión"
             <button

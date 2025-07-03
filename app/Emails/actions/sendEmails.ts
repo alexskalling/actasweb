@@ -13,7 +13,7 @@ export async function sendActaEmail(
   try {
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "elliotwolf@skalling.com",
+      to: email,
       subject: "Tu acta está lista ✅",
       react: React.createElement(ActaEmail, {
         name,

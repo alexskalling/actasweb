@@ -8,8 +8,9 @@ import {
 import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
-import SendEmailButton from "./Emails/components/SendEmailButton";
 import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
+import { useSession } from "next-auth/react"
+
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -48,6 +49,7 @@ const faqs = [
   },
   // More questions...
 ];
+const { data: session } = useSession();
 
 export default function Home() {
   return (
@@ -91,11 +93,10 @@ export default function Home() {
       )}
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
-      
-        <EmailSignupBannerComponent />
+
+        {session && <EmailSignupBannerComponent />}
 
         <GeneradorContainerContainer />
-        <SendEmailButton/>
       </div>
 
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
