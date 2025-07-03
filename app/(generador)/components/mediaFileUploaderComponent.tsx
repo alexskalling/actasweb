@@ -559,8 +559,8 @@ React.useEffect(() => {
                 }}
               >
                 <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                  <Upload className="w-12 h-12 mb-4 text-white" />
-                  <p className="mb-2 text-sm text-white">
+                  <Upload className="w-12 h-12 mb-4 text-purple-700" />
+                  <p className="mb-2 text-sm text-pu text-purple-700">
                     <span className="font-semibold">
                       Haz click para seleccionar un archivo
                     </span>{" "}
@@ -584,21 +584,21 @@ React.useEffect(() => {
             <div className="space-y-4">
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <div className="text-md font-medium text-white truncate">
+                  <div className="text-md font-medium text-purple-700 truncate">
                     {selectedFile.name}
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={clearSelection}
-                    className="text-white"
+                    className="text-pu text-purple-700"
                   >
                     <X className="h-4 w-4" />
                     <span className="sr-only">Eliminar archivo</span>
                   </Button>
                 </div>
 
-                <div className="text-sm font-semibold text-white">
+                <div className="text-sm font-semibold text-purple-700">
                   Valor estimado: {formatCurrency(calculatePrice(duration))} COP
                 </div>
               </div>
@@ -1348,7 +1348,7 @@ React.useEffect(() => {
             !procesando &&
             !calculando &&
             selectedFile != null && (
-              <div className="text-sm text-white text-center">
+              <div className="text-sm text-purple-700 text-center">
                 {uploadStatus}
               </div>
             )}
@@ -1356,7 +1356,7 @@ React.useEffect(() => {
       )}
       <div>
         {uploadStatus && (
-          <div className="mt-2 text-sm  break-words text-center text-white ">
+          <div className="mt-2 text-sm  break-words text-center text-purple-700 ">
             {uploadStatus}
           </div>
         )}

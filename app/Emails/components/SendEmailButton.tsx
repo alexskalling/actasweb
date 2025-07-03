@@ -2,7 +2,7 @@
 
 import { useSession } from "next-auth/react";
 import { useTransition } from "react";
-import { sendWelcomeEmail } from "@/app/Emails/actions/sendEmails";
+import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
 
 export default function SendEmailButton() {
   const { data: session, status } = useSession();
@@ -17,7 +17,7 @@ export default function SendEmailButton() {
     if (!email || !name) return;
 
     startTransition(() => {
-      sendWelcomeEmail(email, name);
+      sendActaEmail(email, name);
     });
   };
 

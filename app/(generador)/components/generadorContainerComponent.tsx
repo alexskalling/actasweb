@@ -3,8 +3,8 @@ import MediaFileUploaderComponent from "./mediaFileUploaderComponent";
 
 export default function GeneradorContainerContainer() {
   return (
-    <div className=" mx-auto p-4 mt-4 rounded-sm bg-purple-950">
-      <h2 className="text-3xl  mt-5 font-bold text-center text-white ">
+    <div className=" mx-auto p-4 mt-4 rounded-sm">
+      <h2 className="text-3xl  mt-5 font-bold text-center text-purple-900 ">
         Genera tu acta
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

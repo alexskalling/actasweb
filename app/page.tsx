@@ -55,7 +55,7 @@ export default function Home() {
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
         <>
           <NavComponent />
-          <div className=" mx-auto p-4 max-w-7xl">
+          <div className=" mx-auto max-w-7xl">
             {" "}
             <div className="w-full rounded-sm bg-white">
               <div className="flex h-full">
@@ -64,11 +64,11 @@ export default function Home() {
                     <h1 className="text-5xl  mt-5 font-bold text-purple-900 text-center mb-8">
                       Genera tu acta de reunión en minutos
                     </h1>
-                    <h2 className="text-3xl  mt-5 font-bold text-center mb-8">
+                    <h2 className="text-3xl   mt-5 font-bold text-center mb-8">
                       Transforma tu audio en un acta formal de manera rápida y
                       segura
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg  text-gray-600">
                       ¿Eres administrador de propiedad horizontal y pierdes
                       tiempo redactando actas? Con nuestro{" "}
                       <span className=" font-bold">generador de actas</span>,{" "}
