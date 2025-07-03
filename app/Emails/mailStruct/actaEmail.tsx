@@ -11,7 +11,7 @@ interface WelcomeEmailProps {
 export default function ActaEmail({ name, url, transcription }: WelcomeEmailProps) {
   return (
     <Html>
-      <Heading>Mucho gusto!, yo {name} te envia un saludo desde actas 👋</Heading>
+      <Heading>Hola, {name} 👋</Heading>
       <Text>¡Gracias por preferirnos!</Text>
 
       <Text>
@@ -27,9 +27,7 @@ export default function ActaEmail({ name, url, transcription }: WelcomeEmailProp
         🔗 <strong>Enlace del archivo:</strong><br />
         <a href={url}>{url}</a>
       </Text>
-      <Text>
-         <strong>Att: El Padawan</strong><br />
-      </Text>
+
     </Html>
   );
 }
