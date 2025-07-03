@@ -14,7 +14,7 @@ export async function actualizarEstadoDesdeCliente(file_name: string, transcript
       file_name,
       transcription,
       url,
-      nuevo_estatus_id: 3, // "enviada"
+      nuevo_estatus_id: 3, 
     });
 
     console.log("✅ Estado actualizado desde cliente");

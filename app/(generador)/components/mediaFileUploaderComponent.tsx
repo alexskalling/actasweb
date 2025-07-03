@@ -12,6 +12,10 @@ import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 import { crearActaDesdeCliente } from "../services/Acta_Estado/ActionsInClient/newActaInClient";
 import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaInClientDownload";
 import { actualizarEstatusDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaStatusInClient";
+import { useSession } from "next-auth/react";
+import { sendWelcomeEmail } from "@/app/Emails/actions/sendEmails";
+import { fetchActaByUserAndFile } from "../services/Acta_Estado/getActaEstadoByUser";
+import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
 
 
 interface MediaSelectorProps {
@@ -42,7 +46,7 @@ export default function MediaFileUploaderComponent({
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
   const [start, setStar] = React.useState<boolean>(false);
-
+  const { data: session } = useSession();
 
   const handleFileSelect = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -103,19 +107,52 @@ export default function MediaFileUploaderComponent({
     }
   };
 
-  React.useEffect(() => {
-    const actualizar = async () => {
-      if (acta && transcripcion && file) {
-        try {
-          await actualizarEstadoDesdeCliente(file, transcripcion, acta);
-        } catch (error) {
-          console.error("❌ Error al actualizar estado desde cliente:", error);
-        }
-      }
-    };
+React.useEffect(() => {
+  const ejecutarFlujo = async () => {
+    if (
+      file &&
+      session?.user?.email &&
+      session?.user?.name
+    ) {
+      try {
+        const email = session.user.email;
+        const name = session.user.name;
 
-    actualizar();
-  }, [acta, transcripcion, file]); // se ejecuta cuando los 3 están definidos
+        const acta = await fetchActaByUserAndFile(email, file);
+
+        if (!acta || !acta.transcription || !acta.url) {
+          console.warn("⚠️ No se encontró acta válida o incompleta.");
+          return;
+        }
+
+
+        const res = await sendWelcomeEmail(email, name, acta.url, acta.transcription);
+
+        if (res.success) {
+          console.log("✅ Correo enviado con éxito");
+
+
+          try {
+            await actualizarEstatusDesdeCliente(file, 4); // 4 = enviado
+            console.log("✅ Estatus cambiado a Enviado");
+          } catch (err) {
+            console.error("❌ Error al actualizar estatus final:", err);
+          }
+
+        } else {
+          console.error("❌ Error al enviar el correo:", res.error);
+        }
+
+      } catch (error) {
+        console.error("❌ Error durante el flujo completo:", error);
+      }
+    }
+  };
+
+  ejecutarFlujo();
+}, [file, session]);
+
+
 
   React.useEffect(() => {
     const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL); // Conéctate al servidor de Socket.IO
@@ -276,6 +313,7 @@ export default function MediaFileUploaderComponent({
 
         //@ts-expect-error revisar despues
         setUrlAssembly(result.uploadUrl);
+        console.log(session?.user?.email);
         const ejecutarCrearActa = async () => {
           try {
             if (selectedFile) {

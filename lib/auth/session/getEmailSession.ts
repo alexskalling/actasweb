@@ -1,7 +1,8 @@
-import { useSession } from "next-auth/react";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth/options/authOptions";
 
 export async function getUserEmailFromSession() {
-  const { data: session } = useSession();
+  const session = await getServerSession(authOptions);
 
   if (!session || !session.user?.email) {
     throw new Error("No se encontró sesión activa");
