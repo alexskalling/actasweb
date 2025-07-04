@@ -27,13 +27,24 @@ export async function GET(req) {
       );
     }
 
-    // Reenviar los headers importantes para la descarga (Content-Type, Content-Disposition)
+    // Configurar headers para forzar la descarga
     const headers = new Headers();
-    headers.set("Content-Type", response.headers.get("Content-Type"));
-    headers.set(
-      "Content-Disposition",
-      response.headers.get("Content-Disposition")
-    );
+    headers.set("Content-Type", response.headers.get("Content-Type") || "application/octet-stream");
+    
+    // Forzar descarga con nombre de archivo
+    const contentDisposition = response.headers.get("Content-Disposition");
+    if (contentDisposition) {
+      headers.set("Content-Disposition", contentDisposition);
+    } else {
+      // Si no hay Content-Disposition, crear uno
+      const fileName = fileUrl.split('/').pop() || 'archivo';
+      headers.set("Content-Disposition", `attachment; filename="${fileName}"`);
+    }
+    
+    // Headers adicionales para evitar cache y forzar descarga
+    headers.set("Cache-Control", "no-cache, no-store, must-revalidate");
+    headers.set("Pragma", "no-cache");
+    headers.set("Expires", "0");
 
     // Enviar el stream de la respuesta directamente al cliente
     return new NextResponse(response.body, {

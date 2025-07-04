@@ -7,14 +7,10 @@ import { normalizarNombreArchivo } from "../services/utilsActions";
 import WompiComponent from "./wompiComponent";
 import { processAction } from "../services/processAction";
 import io, { Socket } from "socket.io-client";
-import { saveTransactionAction } from "../services/saveTransactionAction";
 import { uploadFileToAssemblyAI } from "../services/assemblyActions";
-import { crearActaDesdeCliente } from "../services/Acta_Estado/ActionsInClient/newActaInClient";
-import { actualizarEstadoDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaInClientDownload";
-import { actualizarEstatusDesdeCliente } from "../services/Acta_Estado/ActionsInClient/updateActaStatusInClient";
 import { useSession } from "next-auth/react";
-import { fetchActaByUserAndFile } from "../services/Acta_Estado/getActaEstadoByUser";
-import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
+import { GuardarNuevoProceso } from "../services/guardarNuevoProceso";
+import { ActualizarProceso } from "../services/actualizarProceso";
 
 
 interface MediaSelectorProps {
@@ -45,10 +41,7 @@ export default function MediaFileUploaderComponent({
   const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
   const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
   const [start, setStar] = React.useState<boolean>(false);
-  const [showModal, setShowModal] = React.useState(false);
-  const [modalMessage, setModalMessage] = React.useState("");
   const { data: session } = useSession();
-
 
   const handleFileSelect = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -110,57 +103,6 @@ export default function MediaFileUploaderComponent({
   };
 
   const hasSentEmail = React.useRef(false);
-
-  React.useEffect(() => {
-    const ejecutarFlujo = async () => {
-      if (
-        file &&
-        session?.user?.email &&
-        session?.user?.name &&
-        !hasSentEmail.current
-      ) {
-        try {
-          await actualizarEstadoDesdeCliente(file, transcripcion, acta);
-          const email = session.user.email;
-          const name = session.user.name;
-
-          const actaEstado = await fetchActaByUserAndFile(email, file);
-
-          if (!actaEstado || !actaEstado.urlBorrador || !actaEstado.urlTranscripcion) {
-            console.warn("⚠️ No se encontró acta válida o está incompleta.");
-            return;
-          }
-
-          if (actaEstado.idEstadoProceso !== 4) {
-            const res = await sendActaEmail(
-              email,
-              name,
-              actaEstado.urlTranscripcion,
-              actaEstado.urlBorrador
-            );
-
-            if (res.success) {
-              console.log("✅ Correo enviado con éxito");
-              await actualizarEstatusDesdeCliente(file, 4);
-              console.log("✅ Estatus cambiado a Enviado");
-            } else {
-              console.error("❌ Error al enviar el correo:", res.error);
-            }
-
-            hasSentEmail.current = true;
-          }
-
-        } catch (error) {
-          console.error("❌ Error durante el flujo completo:", error);
-        }
-      }
-    };
-
-    ejecutarFlujo();
-  }, [acta != null, transcripcion != null, file != null, session]);
-
-
-
 
   React.useEffect(() => {
     const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
@@ -225,7 +167,7 @@ export default function MediaFileUploaderComponent({
 
     setUploadStatus("Iniciando generacion del acta");
     //@ts-expect-error revisar despues
-    const result = await processAction(folder, file, urlAssembly);
+    const result = await processAction(folder, file, urlAssembly, session?.user?.email, session?.user?.name);
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
@@ -321,40 +263,18 @@ export default function MediaFileUploaderComponent({
 
         //@ts-expect-error revisar despues
         setUrlAssembly(result.uploadUrl);
-        console.log(session?.user?.email);
-
 
 
         const ejecutarCrearActa = async () => {
           try {
-            if (selectedFile) {
-              await crearActaDesdeCliente(selectedFile.name, result.uploadUrl);
-              console.log("✅ Acta creada correctamente");
+            if (result.uploadUrl) {
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), '', result.uploadUrl, '', '', '');
             }
-          } catch (error: any) {
+          } catch (error) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
-
-            const msg = error?.message || "";
-
-            if (
-              msg.includes("duplicate key value") ||
-              msg.includes("actas_nombre_acta_key") ||
-              msg.includes("23505") ||
-              msg.includes("DUPLICATE_ACTA")
-            ) {
-              console.warn("⚠️ Duplicado detectado");
-              setModalMessage("El archivo ya existe en la base de datos. Por favor usa otro nombre.");
-              setShowModal(true);
-            } else {
-              // otro error
-              setModalMessage("Ocurrió un error al crear el acta. Intenta nuevamente.");
-              setShowModal(true);
-            }
           }
         };
-
-
-        await ejecutarCrearActa();
+        ejecutarCrearActa();
 
         setCalculando(false);
         setUploadProgress(100);
@@ -525,29 +445,21 @@ export default function MediaFileUploaderComponent({
 
           if (tx.data.status === "APPROVED") {
             console.log("tx", tx.data);
-            await saveTransactionAction({
-              transaccion: tx.data.id,
-              referencia: tx.data.reference,
-              //@ts-expect-error revisar despues
-              acta: file,
-              valor: (tx.data.amount_in_cents / 100).toString(),
-              duracion: ensureDurationFormat(timeDuration),
-            });
+            await ActualizarProceso(
+              file || '', // nombre
+              5, // idEstadoProceso (ejemplo: 4 = aprobado)
+              undefined,
+              undefined,
+              tx.data.id,
+              undefined,
+              undefined,
+              null, // urlTranscripcion (ajusta según tu flujo)
+              null  // urlborrador (ajusta según tu flujo)
+            );
 
             handlePayment();
           } else {
-            const actualizarEstatus = async () => {
-              try {
-                if (selectedFile) {
-                  await actualizarEstatusDesdeCliente(selectedFile.name, 2);
-                }
-                console.log("pago aprobado");
-              } catch (error) {
-                console.error("❌ Error actualizando estatus:", error);
-              }
-            };
-
-            actualizarEstatus();
+            console.log("pago aprobado");
           }
         } catch (error) {
           console.error("Error al buscar la transacción:", error);
@@ -572,863 +484,844 @@ export default function MediaFileUploaderComponent({
   };
 
   return (
-    <>
-      <div className="p-6 w-full max-w-md mx-auto bg-transparent rounded-md">
-        {showModal && (
-          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-            <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full mx-4">
-              <h2 className="text-lg font-bold text-gray-800 mb-4 text-center">Error</h2>
-              <p className="text-gray-600 mb-4 text-center">
-                {modalMessage}
-              </p>
-              <button
-                onClick={() => setShowModal(false)}
-                className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
+    <div className="p-6 w-full max-w-md mx-auto bg-transparent rounded-md">
+      {start && (
+        <div className="space-y-4">
+          {!selectedFile && !file && (
+            <div className="flex items-center justify-center w-full">
+              <label
+                htmlFor="media-upload"
+                className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-md cursor-pointer transition-colors"
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+
+                    window.gtag('event', 'upload_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'upload_button_clicked'
+                    });
+                  }
+                }}
               >
-                Cerrar
-              </button>
+                <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                  <Upload className="w-12 h-12 mb-4 text-purple-700" />
+                  <p className="mb-2 text-sm text-pu text-purple-700">
+                    <span className="font-semibold">
+                      Haz click para seleccionar un archivo
+                    </span>{" "}
+                  </p>
+                </div>
+                <input
+                  id="media-upload"
+                  type="file"
+                  className="hidden"
+                  accept={accept}
+                  onChange={handleFileSelect}
+                  aria-label="Seleccionar archivo de audio o video"
+                />
+              </label>
             </div>
-          </div>
-        )}
-        {start && (
-          <div className="space-y-4">
-            {!selectedFile && !file && (
-              <div className="flex items-center justify-center w-full">
-                <label
-                  htmlFor="media-upload"
-                  className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-md cursor-pointer transition-colors"
+          )}
+          {error && (
+            <div className="text-sm text-red-500 text-center">{error}</div>
+          )}
+          {selectedFile && preview && (
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <div className="text-md font-medium text-purple-700 truncate">
+                    {selectedFile.name}
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={clearSelection}
+                    className="text-pu text-purple-700"
+                  >
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Eliminar archivo</span>
+                  </Button>
+                </div>
+
+                <div className="text-sm font-semibold text-purple-700">
+                  Valor estimado: {formatCurrency(calculatePrice(duration))} COP
+                </div>
+              </div>
+
+              <div className="rounded-lg overflow-hidden bg-black">
+                {selectedFile.type.startsWith("audio/") ? (
+                  <audio src={preview} controls className="w-full">
+                    Tu navegador no soporta el elemento de audio.
+                  </audio>
+                ) : (
+                  <video src={preview} controls className="w-full">
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                )}
+              </div>
+            </div>
+          )}
+          <div className="flex gap-4">
+            {acta == null && transcripcion == null && (
+              <Button
+                className="w-full rounded-sm"
+                variant="outline"
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+
+                    window.gtag('event', 'cancel_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'cancel_button_clicked'
+                    });
+                  }
+                  clearSelection();
+                }}
+              >
+                Cancelar
+              </Button>
+            )}
+
+            {uploadProgress == 100 &&
+              selectedFile != null &&
+              acta == null &&
+              transcripcion == null &&
+              urlAssembly != null &&
+              !procesando && (
+                <WompiComponent
+                  costo={calculatePrice(duration)}
+                  file={file}
+                  folder={folder}
+                  fileid={urlAssembly}
+                  duration={duration}
+                  handlePayment={handlePayment}
+                  showModalFirst={true}
+                />
+              )}
+            {uploadProgress != 100 &&
+              acta == null &&
+              transcripcion == null &&
+              !procesando && (
+                <Button
+                  className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
 
-                      window.gtag('event', 'upload_button_click', {
+                      window.gtag('event', 'continue_button_click', {
                         'event_category': 'engagement',
-                        'event_label': 'upload_button_clicked'
+                        'event_label': 'continue_button_clicked'
                       });
                     }
+                    handleUploadFile();
                   }}
+                  disabled={calculando}
                 >
-                  <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                    <Upload className="w-12 h-12 mb-4 text-purple-700" />
-                    <p className="mb-2 text-sm text-pu text-purple-700">
-                      <span className="font-semibold">
-                        Haz click para seleccionar un archivo
-                      </span>{" "}
-                    </p>
-                  </div>
-                  <input
-                    id="media-upload"
-                    type="file"
-                    className="hidden"
-                    accept={accept}
-                    onChange={handleFileSelect}
-                    aria-label="Seleccionar archivo de audio o video"
-                  />
-                </label>
-              </div>
-            )}
-            {error && (
-              <div className="text-sm text-red-500 text-center">{error}</div>
-            )}
-            {selectedFile && preview && (
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="text-md font-medium text-purple-700 truncate">
-                      {selectedFile.name}
-                    </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={clearSelection}
-                      className="text-pu text-purple-700"
-                    >
-                      <X className="h-4 w-4" />
-                      <span className="sr-only">Eliminar archivo</span>
-                    </Button>
-                  </div>
-
-                  <div className="text-sm font-semibold text-purple-700">
-                    Valor estimado: {formatCurrency(calculatePrice(duration))} COP
-                  </div>
-                </div>
-
-                <div className="rounded-lg overflow-hidden bg-black">
-                  {selectedFile.type.startsWith("audio/") ? (
-                    <audio src={preview} controls className="w-full">
-                      Tu navegador no soporta el elemento de audio.
-                    </audio>
+                  {calculando ? (
+                    <>
+                      {" "}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={50}
+                        height={50}
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={1}
+                          y={1}
+                          fill="currentColor"
+                        >
+                          <animate
+                            id="svgSpinnersBlocksWave0"
+                            attributeName="x"
+                            begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={8.33}
+                          y={1}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={1}
+                          y={8.33}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.1s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={15.66}
+                          y={1}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={8.33}
+                          y={8.33}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={1}
+                          y={15.66}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="1;4;1"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.2s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={15.66}
+                          y={8.33}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={8.33}
+                          y={15.66}
+                          fill="currentColor"
+                        >
+                          <animate
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="8.33;11.33;8.33"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.3s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                        <rect
+                          width={7.33}
+                          height={7.33}
+                          x={15.66}
+                          y={15.66}
+                          fill="currentColor"
+                        >
+                          <animate
+                            id="svgSpinnersBlocksWave1"
+                            attributeName="x"
+                            begin="svgSpinnersBlocksWave0.begin+0.4s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="y"
+                            begin="svgSpinnersBlocksWave0.begin+0.4s"
+                            dur="0.6s"
+                            values="15.66;18.66;15.66"
+                          ></animate>
+                          <animate
+                            attributeName="width"
+                            begin="svgSpinnersBlocksWave0.begin+0.4s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                          <animate
+                            attributeName="height"
+                            begin="svgSpinnersBlocksWave0.begin+0.4s"
+                            dur="0.6s"
+                            values="7.33;1.33;7.33"
+                          ></animate>
+                        </rect>
+                      </svg>
+                      Subiendo...
+                    </>
                   ) : (
-                    <video src={preview} controls className="w-full">
-                      Tu navegador no soporta el elemento de video.
-                    </video>
+                    "Continuar"
                   )}
-                </div>
-              </div>
+                </Button>
+              )}
+            {procesando && (
+              <Button
+                className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                onClick={() => {
+                  if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+
+                    window.gtag('event', 'processing_button_click', {
+                      'event_category': 'engagement',
+                      'event_label': 'processing_button_clicked'
+                    });
+                  }
+                  handleUploadFile();
+                }}
+                disabled={procesando}
+              >
+                <>
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={50}
+                    height={50}
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={1}
+                      y={1}
+                      fill="currentColor"
+                    >
+                      <animate
+                        id="svgSpinnersBlocksWave0"
+                        attributeName="x"
+                        begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={8.33}
+                      y={1}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={1}
+                      y={8.33}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.1s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={15.66}
+                      y={1}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={8.33}
+                      y={8.33}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={1}
+                      y={15.66}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="1;4;1"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.2s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={15.66}
+                      y={8.33}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={8.33}
+                      y={15.66}
+                      fill="currentColor"
+                    >
+                      <animate
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="8.33;11.33;8.33"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.3s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                    <rect
+                      width={7.33}
+                      height={7.33}
+                      x={15.66}
+                      y={15.66}
+                      fill="currentColor"
+                    >
+                      <animate
+                        id="svgSpinnersBlocksWave1"
+                        attributeName="x"
+                        begin="svgSpinnersBlocksWave0.begin+0.4s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="y"
+                        begin="svgSpinnersBlocksWave0.begin+0.4s"
+                        dur="0.6s"
+                        values="15.66;18.66;15.66"
+                      ></animate>
+                      <animate
+                        attributeName="width"
+                        begin="svgSpinnersBlocksWave0.begin+0.4s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                      <animate
+                        attributeName="height"
+                        begin="svgSpinnersBlocksWave0.begin+0.4s"
+                        dur="0.6s"
+                        values="7.33;1.33;7.33"
+                      ></animate>
+                    </rect>
+                  </svg>
+                  Procesando acta...
+                </>
+              </Button>
             )}
-            <div className="flex gap-4">
-              {acta == null && transcripcion == null && (
+
+            {acta != null && transcripcion != null && file && (
+              <div className="flex gap-2 w-full">
                 <Button
                   className="w-full rounded-sm"
                   variant="outline"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
 
-                      window.gtag('event', 'cancel_button_click', {
+                      window.gtag('event', 'new_generation_button_click', {
                         'event_category': 'engagement',
-                        'event_label': 'cancel_button_clicked'
+                        'event_label': 'new_generation_button_clicked'
                       });
                     }
-                    clearSelection();
+                    window.location.href = "/";
                   }}
                 >
-                  Cancelar
+                  Generar nueva
                 </Button>
-              )}
-
-              {uploadProgress == 100 &&
-                selectedFile != null &&
-                acta == null &&
-                transcripcion == null &&
-                urlAssembly != null &&
-                !procesando && (
-                  <WompiComponent
-                    costo={calculatePrice(duration)}
-                    file={file}
-                    folder={folder}
-                    fileid={urlAssembly}
-                    duration={duration}
-                    handlePayment={handlePayment}
-                    showModalFirst={true}
-                  />
-                )}
-              {uploadProgress != 100 &&
-                acta == null &&
-                transcripcion == null &&
-                !procesando && (
-                  <Button
-                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                    onClick={() => {
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-                        window.gtag('event', 'continue_button_click', {
-                          'event_category': 'engagement',
-                          'event_label': 'continue_button_clicked'
-                        });
-                      }
-                      handleUploadFile();
-                    }}
-                    disabled={calculando}
-                  >
-                    {calculando ? (
-                      <>
-                        {" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={50}
-                          height={50}
-                          viewBox="0 0 24 24"
-                        >
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              id="svgSpinnersBlocksWave0"
-                              attributeName="x"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              id="svgSpinnersBlocksWave1"
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                        </svg>
-                        Subiendo...
-                      </>
-                    ) : (
-                      "Continuar"
-                    )}
-                  </Button>
-                )}
-              {procesando && (
                 <Button
                   className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
 
-                      window.gtag('event', 'processing_button_click', {
+                      window.gtag('event', 'download_button_click', {
                         'event_category': 'engagement',
-                        'event_label': 'processing_button_clicked'
+                        'event_label': 'download_button_clicked'
                       });
                     }
-                    handleUploadFile();
+                    handleDownload();
                   }}
-                  disabled={procesando}
                 >
-                  <>
-                    {" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={50}
-                      height={50}
-                      viewBox="0 0 24 24"
-                    >
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={1}
-                        y={1}
-                        fill="currentColor"
-                      >
-                        <animate
-                          id="svgSpinnersBlocksWave0"
-                          attributeName="x"
-                          begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={8.33}
-                        y={1}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={1}
-                        y={8.33}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.1s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={15.66}
-                        y={1}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={8.33}
-                        y={8.33}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={1}
-                        y={15.66}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="1;4;1"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.2s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={15.66}
-                        y={8.33}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={8.33}
-                        y={15.66}
-                        fill="currentColor"
-                      >
-                        <animate
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="8.33;11.33;8.33"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.3s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                      <rect
-                        width={7.33}
-                        height={7.33}
-                        x={15.66}
-                        y={15.66}
-                        fill="currentColor"
-                      >
-                        <animate
-                          id="svgSpinnersBlocksWave1"
-                          attributeName="x"
-                          begin="svgSpinnersBlocksWave0.begin+0.4s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="y"
-                          begin="svgSpinnersBlocksWave0.begin+0.4s"
-                          dur="0.6s"
-                          values="15.66;18.66;15.66"
-                        ></animate>
-                        <animate
-                          attributeName="width"
-                          begin="svgSpinnersBlocksWave0.begin+0.4s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                        <animate
-                          attributeName="height"
-                          begin="svgSpinnersBlocksWave0.begin+0.4s"
-                          dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
-                      </rect>
-                    </svg>
-                    Procesando acta...
-                  </>
+                  Descargar
                 </Button>
-              )}
+              </div>
+            )}
+          </div>
+          {/* Barra de Progreso - Colocada aquí, antes de los botones */}
+          {calculando &&
+            selectedFile != null && ( // Condición para mostrar la barra:  calculando Y selectedFile no es nulo
+              <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div
+                  className="bg-purple-600 h-2.5 rounded-full"
+                  style={{ width: `${uploadProgress}%` }}
+                ></div>
+              </div>
+            )}
 
-              {acta != null && transcripcion != null && file && (
-                <div className="flex gap-2 w-full">
-                  <Button
-                    className="w-full rounded-sm"
-                    variant="outline"
-                    onClick={() => {
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-                        window.gtag('event', 'new_generation_button_click', {
-                          'event_category': 'engagement',
-                          'event_label': 'new_generation_button_clicked'
-                        });
-                      }
-                      window.location.href = "/";
-                    }}
-                  >
-                    Generar nueva
-                  </Button>
-                  <Button
-                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                    onClick={() => {
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-                        window.gtag('event', 'download_button_click', {
-                          'event_category': 'engagement',
-                          'event_label': 'download_button_clicked'
-                        });
-                      }
-                      handleDownload();
-                    }}
-                  >
-                    Descargar
-                  </Button>
-                </div>
-              )}
-            </div>
-            {/* Barra de Progreso - Colocada aquí, antes de los botones */}
-            {calculando &&
-              selectedFile != null && ( // Condición para mostrar la barra:  calculando Y selectedFile no es nulo
-                <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                  <div
-                    className="bg-purple-600 h-2.5 rounded-full"
-                    style={{ width: `${uploadProgress}%` }}
-                  ></div>
-                </div>
-              )}
-
-            {uploadStatus &&
-              uploadProgress != 100 &&
-              !procesando &&
-              !calculando &&
-              selectedFile != null && (
-                <div className="text-sm text-purple-700 text-center">
-                  {uploadStatus}
-                </div>
-              )}
+          {uploadStatus &&
+            uploadProgress != 100 &&
+            !procesando &&
+            !calculando &&
+            selectedFile != null && (
+              <div className="text-sm text-purple-700 text-center">
+                {uploadStatus}
+              </div>
+            )}
+        </div>
+      )}
+      <div>
+        {uploadStatus && (
+          <div className="mt-2 text-sm  break-words text-center text-purple-700 ">
+            {uploadStatus}
           </div>
         )}
-
-        <div>
-          {uploadStatus && (
-            <div className="mt-2 text-sm  break-words text-center text-purple-700 ">
-              {uploadStatus}
-            </div>
-          )}
-        </div>
-        {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
-          <Button
-            className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
-            onClick={() => {
-              if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-                window.gtag('event', 'direct_support_button_click', {
-                  'event_category': 'engagement',
-                  'event_label': 'direct_support_button_clicked'
-                });
-              }
-              handledirecto();
-            }}
-          >
-            Generar con transcripcion existente
-          </Button>
-        )}
       </div>
-    </>
+      {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
+        <Button
+          className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
+          onClick={() => {
+            if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+
+              window.gtag('event', 'direct_support_button_click', {
+                'event_category': 'engagement',
+                'event_label': 'direct_support_button_clicked'
+              });
+            }
+            handledirecto();
+          }}
+        >
+          Generar con transcripcion existente
+        </Button>
+      )}
+    </div>
   );
 }
