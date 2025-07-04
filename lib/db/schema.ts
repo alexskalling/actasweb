@@ -61,7 +61,9 @@ export const actas = pgTable("actas", {
   idEstadoProceso: bigint("id_estado_proceso_acta", { mode: "number" })
     .default(1)
     .references(() => estadosProceso.id),
-  idUsuario: uuid("id_usuario").references(() => usuarios.id),
+  idUsuario: uuid("id_usuario")
+    .defaultRandom() // Puedes cambiar esto si usas auth.uid()
+    .references(() => usuarios.id),
 });
 
 export const actasRelations = relations(actas, ({ one }) => ({

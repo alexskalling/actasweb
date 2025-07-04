@@ -15,6 +15,8 @@ import { actualizarEstatusDesdeCliente } from "../services/Acta_Estado/ActionsIn
 import { useSession } from "next-auth/react";
 import { fetchActaByUserAndFile } from "../services/Acta_Estado/getActaEstadoByUser";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
+import { GuardarNuevoProceso } from "../services/guardarNuevoProceso";
+import { ActualizarProceso } from "../services/actualizarProceso";
 
 
 interface MediaSelectorProps {
@@ -132,8 +134,9 @@ export default function MediaFileUploaderComponent({
             const res = await sendActaEmail(
               email,
               name,
+              actaEstado.urlBorrador,
               actaEstado.urlTranscripcion,
-              actaEstado.urlBorrador
+              file
             );
 
             if (res.success) {
@@ -222,7 +225,7 @@ export default function MediaFileUploaderComponent({
 
     setUploadStatus("Iniciando generacion del acta");
     //@ts-expect-error revisar despues
-    const result = await processAction(folder, file, urlAssembly);
+    const result = await processAction(folder, file, urlAssembly, session?.user?.email, session?.user?.name);
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
@@ -318,11 +321,12 @@ export default function MediaFileUploaderComponent({
 
         //@ts-expect-error revisar despues
         setUrlAssembly(result.uploadUrl);
-        console.log(session?.user?.email);
+     
+
         const ejecutarCrearActa = async () => {
           try {
-            if (selectedFile) {
-              await crearActaDesdeCliente(selectedFile.name, result.uploadUrl);
+            if (result.uploadUrl) {
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), '', result.uploadUrl, '', '', '');
             }
           } catch (error) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
@@ -499,14 +503,17 @@ export default function MediaFileUploaderComponent({
 
           if (tx.data.status === "APPROVED") {
             console.log("tx", tx.data);
-            await saveTransactionAction({
-              transaccion: tx.data.id,
-              referencia: tx.data.reference,
-              //@ts-expect-error revisar despues
-              acta: file,
-              valor: (tx.data.amount_in_cents / 100).toString(),
-              duracion: ensureDurationFormat(timeDuration),
-            });
+            await ActualizarProceso(
+              file || '', // nombre
+              5, // idEstadoProceso (ejemplo: 4 = aprobado)
+              undefined,
+              undefined,
+              tx.data.id,
+              undefined,
+              undefined,
+              null, // urlTranscripcion (ajusta según tu flujo)
+              null  // urlborrador (ajusta según tu flujo)
+            );
 
             handlePayment();
           } else {

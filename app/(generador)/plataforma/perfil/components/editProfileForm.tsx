@@ -7,7 +7,7 @@ export default function EditProfileForm({ onClose }: { onClose: () => void }) {
   const { data: session } = useSession();
 
   return (
-    <div className="relative max-w-md w-full bg-white/90 rounded-2xl p-8 space-y-6 border border-gray-200 text-gray-900">
+    <div className="relative max-w-md w-full bg-white/90 rounded-lg p-8 space-y-6  text-gray-900">
       {/* Botón de cerrar */}
       <button
         onClick={onClose}

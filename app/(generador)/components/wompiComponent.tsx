@@ -1,9 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
-import { saveTransactionAction } from "../services/saveTransactionAction";
+import { ActualizarProceso } from "../services/actualizarProceso";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
+  
   const encoder = new TextEncoder();
   const encodedText = encoder.encode(concatenatedString);
   const hashBuffer = await crypto.subtle.digest("SHA-256", encodedText);
@@ -142,13 +143,17 @@ const WompiComponent = (props) => {
 
       if (transaction.status == "APPROVED") {
         console.log("Transacción aprobada" + transaction.id);
-        const save = await saveTransactionAction({
-          transaccion: transaction.id,
-          referencia: transaction.reference,
-          acta: props.file,
-          valor: (transaction.amountInCents / 100).toString(),
-          duracion: ensureDurationFormat(props.duration),
-        });
+        const save = await ActualizarProceso(
+          props.file, // nombre
+          5, // idEstadoProceso (ejemplo: 4 = aprobado)
+          undefined,
+          transaction.amountInCents / 100,
+          transaction.id,
+         undefined,
+          transaction.reference,
+          null, // urlTranscripcion (ajusta según tu flujo)
+          null  // urlborrador (ajusta según tu flujo)
+        );
         console.log("save: ", JSON.stringify(save));
         props.handlePayment();
 

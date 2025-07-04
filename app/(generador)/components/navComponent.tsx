@@ -55,14 +55,7 @@ export default function NavComponent() {
           {/* Auth Section */}
           {session?.user ? (
             <>
-              {/* Foto de perfil */}
-              <Image
-                src={session.user.image || "/default-profile.png"}
-                alt="Foto de perfil"
-                width={32}
-                height={32}
-                className="rounded-full border-2 border-white"
-              />
+             
               {pathname === "/" && (
                 <Link
                   href="/plataforma"
