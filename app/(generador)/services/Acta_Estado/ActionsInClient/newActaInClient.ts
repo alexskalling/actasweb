@@ -20,8 +20,10 @@ export async function crearActaDesdeCliente(
     });
 
     console.log("✅ Acta creada desde cliente");
-  } catch (error) {
-    console.error("❌ Error al crear el acta desde cliente:", error);
+  } catch (error: any) {
+    if (error?.cause?.code === "23505") {
+      throw new Error("DUPLICATE_ACTA");
+    }
     throw error;
   }
 }

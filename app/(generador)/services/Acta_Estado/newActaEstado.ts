@@ -22,9 +22,12 @@ export async function newActa({
       nombre: file_name,
     });
 
-    console.log(`✅ Acta creada correctamente.`);
-  } catch (error) {
-    console.error("❌ Error al crear el acta:", error);
+    console.log(`Acta creada correctamente.`);
+  }  catch (error: any) {
+    if (error?.cause?.code === "23505") {
+      throw new Error("DUPLICATE_ACTA");
+    }
+    console.error("Error al crear el acta:", error);
     throw error;
   }
 }

@@ -16,15 +16,15 @@ export async function actualizarEstadoDesdeCliente(file_name: string, urlTranscr
         urlBorrador,
         nuevo_estatus_id: 3,
       });
-      console.log(" Estado actualizado desde cliente");
+      console.log("Estado actualizado desde cliente");
     }else{
-      console.error(" Error actualizando acta desde cliente: url or transcription is undefined");
+      console.error("Error actualizando acta desde cliente: url or transcription is undefined");
     }
 
 
     
   } catch (error) {
-    console.error(" Error actualizando acta desde cliente:", error);
+    console.error("Error actualizando acta desde cliente:", error);
     throw error;
   }
 }

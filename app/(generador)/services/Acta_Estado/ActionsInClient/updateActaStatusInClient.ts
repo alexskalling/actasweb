@@ -19,9 +19,9 @@ export async function actualizarEstatusDesdeCliente(
       nuevo_estatus_id,
     });
 
-    console.log("✅ Estatus actualizado desde cliente");
+    console.log("Estatus actualizado desde cliente");
   } catch (error) {
-    console.error("❌ Error al actualizar estatus desde cliente:", error);
+    console.error("Error al actualizar estatus desde cliente:", error);
     throw error;
   }
 }

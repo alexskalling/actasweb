@@ -34,10 +34,10 @@ export async function updateActaCompleta({
         )
       );
 
-    console.log(`✅ Acta actualizada.`);
+    console.log(`Acta actualizada.`);
     return result;
   } catch (error) {
-    console.error("❌ Error actualizando acta:", error);
+    console.error("Error actualizando acta:", error);
     throw error;
   }
 }

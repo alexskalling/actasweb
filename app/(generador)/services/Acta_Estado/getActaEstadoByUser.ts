@@ -22,7 +22,7 @@ export async function fetchActaByUserAndFile(email: string, file_name: string) {
 
     return result[0]; // puede ser undefined si no hay coincidencias
   } catch (error) {
-    console.error("❌ Error obteniendo acta:", error);
+    console.error("Error obteniendo acta:", error);
     throw error;
   }
 }
