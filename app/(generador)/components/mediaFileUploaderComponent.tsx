@@ -547,7 +547,7 @@ export default function MediaFileUploaderComponent({
                     if (window.confirmPayment) {
                       window.confirmPayment();
                       // Limpiar la función después de usarla
-                      window.confirmPayment = null;
+                      window.confirmPayment = undefined;
                     }
                     // Track del evento de confirmación
                     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
@@ -676,7 +676,7 @@ export default function MediaFileUploaderComponent({
                     duration={duration}
                     handlePayment={handlePayment}
                     showModalFirst={true}
-                    onPaymentClick={(handleOpenWidget) => {
+                    onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
                       setShowPaymentModal(true);
                       // Guardar la función para ejecutarla cuando el usuario confirme
                       window.confirmPayment = handleOpenWidget;
