@@ -55,7 +55,10 @@ export async function GuardarNuevoProceso(
 
     console.log("✅ Acta creada desde cliente");
     return { status: 'success', message: 'Acta creada correctamente.' };
-  } catch (error) {
+  } catch (error: any) {
+    if (error?.cause?.code === "23505") {
+    throw new Error("DUPLICATE_ACTA");
+    }
     console.error("❌ Error al crear el acta desde cliente:", error);
     throw error;
   }
