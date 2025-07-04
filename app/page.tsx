@@ -95,9 +95,39 @@ export default function Home() {
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
 
-        {!session && <EmailSignupBannerComponent />}
+        {!session?(<>
+          <EmailSignupBannerComponent />
+          <GeneradorContainerContainer />
+        </>):(
+           <div className="bg-purple-600 max-w-2xl mx-auto  text-white p-6 rounded-lg shadow-lg mb-6 relative">
 
-        <GeneradorContainerContainer />
+
+           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+             <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
+               <div>
+                 <h3 className="font-bold text-xl">
+                   Ingresar a mi plataforma de actas
+                 </h3>
+            
+               </div>
+             </div>
+     
+             <div className="flex justify-center md:justify-end w-full md:w-auto px-20">
+               <Link
+                 href="/plataforma"
+                 className="bg-white hover:bg-purple-500 text-gray-900 px-6 py-2 rounded-md transition-colors"
+               >
+                 Ingresar
+               </Link>
+             </div>
+           </div>
+         </div>
+        )}
+        
+
+
+
+       
       </div>
 
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (

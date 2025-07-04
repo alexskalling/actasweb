@@ -1,6 +1,13 @@
 "use client";
 
 import * as React from "react";
+
+// Declaración global para la función de confirmación de pago
+declare global {
+  interface Window {
+    confirmPayment?: () => void;
+  }
+}
 import { Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { normalizarNombreArchivo } from "../services/utilsActions";
@@ -43,6 +50,7 @@ export default function MediaFileUploaderComponent({
   const [start, setStar] = React.useState<boolean>(false);
   const [showModal, setShowModal] = React.useState(false);
   const [modalMessage, setModalMessage] = React.useState("");
+  const [showPaymentModal, setShowPaymentModal] = React.useState(false);
   const { data: session } = useSession();
 
   const handleFileSelect = async (
@@ -520,6 +528,44 @@ export default function MediaFileUploaderComponent({
           </div>
         </div>
       )}
+
+      {showPaymentModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full mx-4">
+            <div className="text-center">
+              <h2 className="text-xl font-bold text-gray-800 mb-4">💳 Recuerda</h2>
+              <p className="text-gray-600 mb-6">
+                Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en <span className="font-bold text-purple-600"> "Finalizar Proceso" </span> o <span className="font-bold text-purple-600"> "Redirigir al Comercio" </span> 
+                para generar tu acta. Si es que no se da de manera automatica.
+              </p>
+              <div className="flex gap-3 justify-center">
+     
+                <button
+                  onClick={() => {
+                    setShowPaymentModal(false);
+                    // Ejecutar la función de pago guardada
+                    if (window.confirmPayment) {
+                      window.confirmPayment();
+                      // Limpiar la función después de usarla
+                      window.confirmPayment = null;
+                    }
+                    // Track del evento de confirmación
+                    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                      window.gtag('event', 'payment_confirmed', {
+                        'event_category': 'engagement',
+                        'event_label': 'payment_confirmed'
+                      });
+                    }
+                  }}
+                  className="px-6 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition-colors"
+                >
+                  Entiendo, continuar con el pago
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="p-6 w-full max-w-md mx-auto bg-transparent rounded-md">
         {start && (
           <div className="space-y-4">
@@ -630,6 +676,11 @@ export default function MediaFileUploaderComponent({
                     duration={duration}
                     handlePayment={handlePayment}
                     showModalFirst={true}
+                    onPaymentClick={(handleOpenWidget) => {
+                      setShowPaymentModal(true);
+                      // Guardar la función para ejecutarla cuando el usuario confirme
+                      window.confirmPayment = handleOpenWidget;
+                    }}
                   />
                 )}
               {uploadProgress != 100 &&
