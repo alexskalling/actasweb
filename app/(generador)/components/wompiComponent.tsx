@@ -193,7 +193,14 @@ const WompiComponent = (props) => {
   return (
     <Button
       className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
-      onClick={() => [handleOpenWidget()]}
+      onClick={() => {
+        // Mostrar popup de confirmación antes de proceder con el pago
+        if (props.onPaymentClick) {
+          props.onPaymentClick(handleOpenWidget);
+        } else {
+          handleOpenWidget();
+        }
+      }}
       disabled={isLoading}
     >
       {isLoading ? (
