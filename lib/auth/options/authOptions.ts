@@ -11,7 +11,7 @@ export const authOptions: NextAuthOptions = {
     AzureADProvider({
       clientId: process.env.AZURE_AD_CLIENT_ID!,
       clientSecret: process.env.AZURE_AD_CLIENT_SECRET!,
-      tenantId: process.env.AZURE_AD_TENANT_ID!,
+      tenantId: "common",
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
