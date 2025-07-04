@@ -73,6 +73,17 @@ export async function processAction(
     );
     if (email) {
       await sendActaEmail(email, name, formato.acta as string, formato.transcripcion as string, file as string);
+      await ActualizarProceso(
+      file,
+      7,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined
+    );
     }
 
     return {
