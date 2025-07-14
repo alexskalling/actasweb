@@ -14,13 +14,11 @@ export async function updateProfile(formData: FormData) {
     throw new Error("No se pudo identificar al usuario.");
   }
 
-  const name = formData.get("name")?.toString();
   const phone = formData.get("phone")?.toString();
 
   await db
     .update(usuarios)
     .set({
-      ...(name && { nombre: name }),
       ...(phone && { telefono: phone }),
     })
     .where(eq(usuarios.email, email));

@@ -38,7 +38,7 @@ export async function GuardarNuevoProceso(
       urlBorrador: urlborrador,
     };
 
-    // 🔎 buscar si ya existe con estado <4
+    // 🔎 buscar si ya existe con estado <6
     const actaAbierta = await db
       .select()
       .from(actas)
@@ -46,7 +46,8 @@ export async function GuardarNuevoProceso(
         and(
           eq(actas.nombre, nombreActa),
           eq(actas.idUsuario, user_id),
-          lt(actas.idEstadoProceso, 5)
+          lt(actas.idEstadoProceso, 6)
+
         )
       )
       .limit(1);
@@ -60,7 +61,6 @@ export async function GuardarNuevoProceso(
           and(
             eq(actas.nombre, nombreActa),
             eq(actas.idUsuario, user_id),
-
           )
         );
 
@@ -68,7 +68,7 @@ export async function GuardarNuevoProceso(
       return { status: 'success', message: 'Acta actualizada correctamente.' };
     }
 
-    // 🔎 si no hay abierta, verificar si existe con estado >=4
+    // 🔎 si no hay abierta, verificar si existe con estado >=5
     const actaCerrada = await db
       .select()
       .from(actas)
@@ -77,12 +77,13 @@ export async function GuardarNuevoProceso(
           eq(actas.nombre, nombreActa),
           eq(actas.idUsuario, user_id),
           gte(actas.idEstadoProceso, 6)
+
         )
       )
       .limit(1);
 
     if (actaCerrada.length > 0) {
-      console.log("Ya existe un acta con estado >=4 para este nombre y usuario.");
+      console.log("Ya existe un acta con estado >=5 para este nombre y usuario.");
       throw new Error("DUPLICATE_ACTA");
     }
 
@@ -92,7 +93,7 @@ export async function GuardarNuevoProceso(
     console.log("✅ Acta creada");
     return { status: 'success', message: 'Acta creada correctamente.' };
 
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error("❌ Error al guardar el acta:", error);
     throw error;
   }

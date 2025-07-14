@@ -79,8 +79,8 @@ export default function PlataformaPage() {
                       setShowEditForm(!showEditForm);
                     }}
                     className="text-sm/6 font-semibold text-gray-900"
-                  >
-                    Editar perfil
+
+                    Actualizar información de contacto
                   </button>
 
                   <button
