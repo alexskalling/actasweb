@@ -56,14 +56,7 @@ const formatDuration = (seconds: number): string => {
     .join(":");
 };
 
-const ensureDurationFormat = (duration: string | number): string => {
-  if (typeof duration === "string" && /^\d{2}:\d{2}:\d{2}$/.test(duration)) {
-    return duration;
-  }
-  // Si es número o string numérico, conviértelo
-  const seconds = typeof duration === "number" ? duration : Number.parseInt(duration, 10);
-  return formatDuration(seconds);
-};
+
 
 const tipo = process.env.NEXT_PUBLIC_PAGO;
 //@ts-expect-error revisar despues

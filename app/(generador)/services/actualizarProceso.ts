@@ -41,7 +41,7 @@ export async function ActualizarProceso(
     }
 
     // Construir solo los campos a actualizar
-    const updateFields: any = {};
+    const updateFields: Record<string, string | number> = {};
     if (idEstadoProceso !== undefined && idEstadoProceso !== null) updateFields.idEstadoProceso = idEstadoProceso;
     if (duracion !== undefined && duracion !== null && duracion !== '') updateFields.duracion = duracion;
     if (costo !== undefined && costo !== null) updateFields.costo = costo.toString();

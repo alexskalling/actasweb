@@ -50,11 +50,11 @@ export default function PaymentModalComponent({
           
           <ul className="list-disc list-inside space-y-1 ml-2">
             <li>Algunos métodos regresan automáticamente</li>
-            <li>Otros muestran un botón <strong>"Volver al comercio"</strong></li>
+            <li>Otros muestran un botón <strong>&quot;Volver al comercio&quot;</strong></li>
           </ul>
           
           <p className="text-orange-600 font-medium">
-            Si ves el botón "Volver al comercio", haz clic en él para continuar.
+            Si ves el botón &quot;Volver al comercio&quot;, haz clic en él para continuar.
           </p>
         </div>
         

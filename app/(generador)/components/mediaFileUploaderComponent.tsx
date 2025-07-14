@@ -112,7 +112,7 @@ export default function MediaFileUploaderComponent({
     }
   };
 
-  const hasSentEmail = React.useRef(false);
+
 
   React.useEffect(() => {
     const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
@@ -280,10 +280,10 @@ export default function MediaFileUploaderComponent({
             if (result.uploadUrl) {
               await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), '', result.uploadUrl, '', '', '');
             }
-          } catch (error: any) {
+          } catch (error: unknown) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
 
-            const msg = error?.message || "";
+            const msg = error instanceof Error ? error.message : "";
 
             if (
               msg.includes("duplicate key value") ||
@@ -467,7 +467,6 @@ export default function MediaFileUploaderComponent({
           );
 
           const tx = await response.json();
-          const timeDuration = duration;
 
 
           if (tx.data.status === "APPROVED") {
@@ -535,7 +534,7 @@ export default function MediaFileUploaderComponent({
             <div className="text-center">
               <h2 className="text-xl font-bold text-gray-800 mb-4">💳 Recuerda</h2>
               <p className="text-gray-600 mb-6">
-                Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en <span className="font-bold text-purple-600"> "Finalizar Proceso" </span> o <span className="font-bold text-purple-600"> "Redirigir al Comercio" </span> 
+                Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en <span className="font-bold text-purple-600"> &quot;Finalizar Proceso&quot; </span> o <span className="font-bold text-purple-600"> &quot;Redirigir al Comercio&quot; </span> 
                 para generar tu acta. Si es que no se da de manera automatica.
               </p>
               <div className="flex gap-3 justify-center">

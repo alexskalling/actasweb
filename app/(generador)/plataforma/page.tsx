@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 import {
   Menu,
   MenuButton,
@@ -36,11 +35,9 @@ export default function PlataformaPage() {
               <div className="flex items-center justify-between gap-x-8">
                 <div className="flex items-center gap-x-6">
                   {session?.user?.image?(
-                      <Image
+                      <img
                       src={session?.user?.image ?? ""}
                       alt={`Foto de perfil de ${session?.user?.name}`}
-                      width={80}
-                      height={80}
                       className="w-20 h-20 rounded-lg"
                     />
                   ):(
