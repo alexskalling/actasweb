@@ -1425,3 +1425,31 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/CLzAxQWHCXS9JDQ
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/CLzAxQWHCXS9JDQ
+Verificando si existe transcripción: demo_actas_Transcripcion.txt en carpeta demo_actas
+[2025-07-04T17:56:50.069Z] Verificando existencia del archivo demo_actas_Transcripcion.txt en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:51.322Z] Archivo "demo_actas_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "demo_actas".
+Transcripción existente encontrada: demo_actas. Obteniendo contenido.
+Verificando contenido existente: demo_actas_Contenido.txt
+[2025-07-04T17:56:52.475Z] Verificando existencia del archivo demo_actas_Contenido.txt en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:53.245Z] Archivo "demo_actas_Contenido.txt" EXISTE en Nextcloud en la carpeta "demo_actas".
+Contenido existente: demo_actas_Contenido.txt. Cargando.
+[2025-07-04T17:56:54.025Z] Contenido del archivo "demo_actas_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: demo_actas.wav en carpeta: demo_actas
+Verificando Borrador .docx existente: demo_actas_Borrador.docx
+[2025-07-04T17:56:54.028Z] Verificando existencia del archivo demo_actas_Borrador.docx en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:54.792Z] Archivo "demo_actas_Borrador.docx" EXISTE en Nextcloud en la carpeta "demo_actas".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): demo_actas_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/demo_actas/demo_actas_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/swJMAABfrnkgJGL
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/swJMAABfrnkgJGL
+Generando URL pública para Transcripcion.txt (EXISTENTE): demo_actas_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/demo_actas/demo_actas_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ZHMHdcq3KG6aF8K
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ZHMHdcq3KG6aF8K

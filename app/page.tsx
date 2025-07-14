@@ -100,8 +100,6 @@ export default function Home() {
           <GeneradorContainerContainer />
         </>):(
            <div className="bg-purple-600 max-w-2xl mx-auto  text-white p-6 rounded-lg shadow-lg mb-6 relative">
-
-
            <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
              <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
                <div>
