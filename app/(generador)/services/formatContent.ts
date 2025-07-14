@@ -365,7 +365,31 @@ async function guardarArchivoNextcloudDocx(
   nombreActaDocx: string,
   textoActa: string
 ): Promise<boolean> {
-  const actaContent = textoActa;
+
+  // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
+  const actaContent =
+    "<h1>Prueba DOCX Simple</h1><p>Texto sencillo de prueba para Docker.</p>";
+
+  writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
+  writeLog(
+    `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
+  );
+  console.log("actaContent (HTML Simple de Prueba): ", actaContent);
+  console.log(textoActa);
+
+  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO**
+  writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
+  writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
+  writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
+  writeLog(`  NEXTCLOUD_URL: ${process.env.NEXTCLOUD_URL}`);
+  writeLog(`  NEXTCLOUD_USER: ${process.env.NEXTCLOUD_USER}`);
+  writeLog(
+    `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
+  );
+  // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
+  writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
+
+
 
   try {
     const docxBuffer = await htmlToDocx(actaContent);

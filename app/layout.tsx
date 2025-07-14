@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { headers } from "next/headers";
-import { Providers } from "@/components/providers/providers"; // Importar el SessionProvider
+import Script from "next/script";
+import { Providers } from "@/components/providers/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,6 +90,7 @@ export default async function RootLayout({
             width="1"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=968021022066284&ev=PageView&noscript=1"
+            alt=""
           />
         </noscript>
 

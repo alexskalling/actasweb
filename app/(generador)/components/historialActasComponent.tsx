@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRightIcon } from '@heroicons/react/20/solid'
+
 import { useEffect, useState } from 'react';
 import { getActasByUser } from '../services/getActasByUser';
 

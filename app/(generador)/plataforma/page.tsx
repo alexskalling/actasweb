@@ -126,7 +126,7 @@ export default function PlataformaPage() {
                       ⚠️ Recuerda
                     </h3>
                     <p className="text-white mt-2 text-sm">
-                      En el proceso de pago recuerda dar click en "Volver al comercio" o "Finalizar proceso" en caso de que no se haga de manera automática
+                      En el proceso de pago recuerda dar click en &quot;Volver al comercio&quot; o &quot;Finalizar proceso&quot; en caso de que no se haga de manera automática
                     </p>
                   </div>
                 </div>
