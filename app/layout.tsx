@@ -4,6 +4,7 @@ import "./globals.css";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { headers } from "next/headers";
 import Script from "next/script";
+import { Providers } from "@/components/providers/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,10 +27,10 @@ if (process.env.NEXT_PUBLIC_PAGO === "soporte") {
 }
 
 export const metadata: Metadata = {
-  title: title,
-  description: description,
+  title,
+  description,
   alternates: {
-    canonical: 'https://actasdereuniones.ai/',
+    canonical: "https://actasdereuniones.ai/",
   },
 };
 
@@ -52,7 +53,9 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
 
         {/* Cargar el script de Meta Pixel */}
         <Script
@@ -86,7 +89,7 @@ export default async function RootLayout({
             height="1"
             width="1"
             style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=968021022066284&ev=PageView&noscript=1`}
+            src="https://www.facebook.com/tr?id=968021022066284&ev=PageView&noscript=1"
           />
         </noscript>
 

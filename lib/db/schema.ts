@@ -1,0 +1,78 @@
+import {
+  pgTable,
+  uuid,
+  text,
+  timestamp,
+  bigint,
+} from "drizzle-orm/pg-core";
+import {
+  relations
+} from "drizzle-orm";
+
+// Tabla: estados_proceso
+export const estadosProceso = pgTable("estados_proceso", {
+  id: bigint("id_estado_proceso", { mode: "number" })
+    .primaryKey()
+    .notNull(),
+  fechaCreacion: timestamp("fecha_creacion_estado_proceso", {
+    withTimezone: true,
+  })
+    .notNull()
+    .defaultNow(),
+  nombre: text("nombre_estado_proceso"),
+});
+
+export const estadosProcesoRelations = relations(estadosProceso, ({ many }) => ({
+  actas: many(actas), // relación 1:N hacia actas
+}));
+
+// Tabla: usuarios
+export const usuarios = pgTable("usuarios", {
+  id: uuid("id_usuario").primaryKey().notNull().defaultRandom(),
+  fechaCreacion: timestamp("fecha_creacion_usuario", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+  nombre: text("nombre_usuario"),
+  email: text("email_usuario"),
+  telefono: text("telefono_usuario"),
+  ultimoAcceso: timestamp("ultimo_acceso"),
+});
+
+export const usuariosRelations = relations(usuarios, ({ many }) => ({
+  actas: many(actas), // relación 1:N hacia actas
+}));
+
+// Tabla: actas
+export const actas = pgTable("actas", {
+  id: uuid("id_acta").primaryKey().notNull().defaultRandom(),
+  fechaProcesamiento: timestamp("fecha_procesamiento_acta", {
+    withTimezone: true,
+  })
+    .notNull()
+    .defaultNow(),
+  nombre: text("nombre_acta").unique(),
+  urlAssembly: text("url_assembly_acta"),
+  tx: text("tx_acta"),
+  duracion: text("duracion_acta"),
+  referencia: text("referencia_acta"),
+  costo: text("costo_acta"),
+  urlTranscripcion: text("url_transcripcion_acta"),
+  urlBorrador: text("url_borrador_acta"),
+  idEstadoProceso: bigint("id_estado_proceso_acta", { mode: "number" })
+    .default(1)
+    .references(() => estadosProceso.id),
+  idUsuario: uuid("id_usuario")
+    .defaultRandom() // Puedes cambiar esto si usas auth.uid()
+    .references(() => usuarios.id),
+});
+
+export const actasRelations = relations(actas, ({ one }) => ({
+  estadoProceso: one(estadosProceso, {
+    fields: [actas.idEstadoProceso],
+    references: [estadosProceso.id],
+  }),
+  usuario: one(usuarios, {
+    fields: [actas.idUsuario],
+    references: [usuarios.id],
+  }),
+}));

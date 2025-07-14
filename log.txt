@@ -1,0 +1,1455 @@
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T19:18:46.182Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[2025-07-02T19:18:46.244Z] Error en verificarArchivoExistenteNextcloud: fetch failed.
+Iniciando transcripción con AssemblyAI para: audio.mp3
+Guardando transcripción: audio_Transcripcion.txt en carpeta audio
+Transcripción guardada: audio_Transcripcion.txt
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T19:18:58.517Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T19:18:59.274Z] Archivo "audio_Contenido.txt" NO encontrado en Nextcloud en la carpeta "audio".
+Generando contenido para: audio.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: audio.mp3
+Guardando contenido en Nextcloud: audio_Contenido.txt
+Contenido guardado: audio_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T19:19:30.563Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T19:19:31.328Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T19:19:31.611Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+[2025-07-02T22:46:20.913Z] Guardando transcipcion.
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T22:46:22.124Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:46:23.318Z] Archivo "audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "audio".
+Transcripción existente encontrada: audio. Obteniendo contenido.
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T22:46:24.390Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:46:25.127Z] Archivo "audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "audio".
+Contenido existente: audio_Contenido.txt. Cargando.
+[2025-07-02T22:46:25.889Z] Contenido del archivo "audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T22:46:25.891Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T22:46:26.667Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T22:46:26.874Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: audio_Transcripcion.txt en carpeta audio
+[2025-07-02T22:47:02.571Z] Verificando existencia del archivo audio_Transcripcion.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:47:03.685Z] Archivo "audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "audio".
+Transcripción existente encontrada: audio. Obteniendo contenido.
+Verificando contenido existente: audio_Contenido.txt
+[2025-07-02T22:47:04.759Z] Verificando existencia del archivo audio_Contenido.txt en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:47:05.487Z] Archivo "audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "audio".
+Contenido existente: audio_Contenido.txt. Cargando.
+[2025-07-02T22:47:06.238Z] Contenido del archivo "audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: audio.mp3 en carpeta: audio
+Verificando Borrador .docx existente: audio_Borrador.docx
+[2025-07-02T22:47:06.240Z] Verificando existencia del archivo audio_Borrador.docx en Nextcloud carpeta audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio/audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-02T22:47:06.983Z] Archivo "audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_Borrador.docx
+[2025-07-02T22:47:07.220Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-02T22:48:09.573Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:10.734Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-02T22:48:11.836Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:12.585Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-02T22:48:13.501Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-02T22:48:13.502Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T22:48:14.237Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yG6PdfZ2kxSdXE6
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yG6PdfZ2kxSdXE6
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/TiQAYNME8eKWWz7
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/TiQAYNME8eKWWz7
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-02T23:17:52.347Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:17:53.573Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-02T23:17:54.643Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:17:55.376Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-02T23:17:56.293Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-02T23:17:56.294Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:17:57.038Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/xPy5iJqEDGESj42
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/xPy5iJqEDGESj42
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/zmex7XPeLxNPCyQ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/zmex7XPeLxNPCyQ
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-02T23:19:32.753Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:19:33.904Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-02T23:19:35.001Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:19:35.745Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-02T23:19:36.690Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-02T23:19:36.692Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:19:37.469Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/3xZired6R2ReH5B
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/3xZired6R2ReH5B
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/TbnrSF8ofSSdyGm
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/TbnrSF8ofSSdyGm
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-02T23:29:35.859Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:29:37.048Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-02T23:29:38.137Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:29:38.875Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-02T23:29:39.772Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-02T23:29:39.774Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-02T23:29:40.509Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/M6pTAcgfnji6Xnx
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/M6pTAcgfnji6Xnx
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/BPoR3HtjX6aMBRX
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/BPoR3HtjX6aMBRX
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:11:26.178Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:11:27.342Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:11:28.448Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:11:29.175Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:11:30.082Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:11:30.084Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:11:30.818Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/g3cdTLKnmECRAb4
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/g3cdTLKnmECRAb4
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/jkM7LgCTWyTPTBE
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/jkM7LgCTWyTPTBE
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:25:23.835Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:25:25.012Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:25:26.142Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:25:26.880Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:25:27.788Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:25:27.790Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:25:28.515Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2QbFWoJ6DJdYQif
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2QbFWoJ6DJdYQif
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/4oXkLLb9A7q8mie
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/4oXkLLb9A7q8mie
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:34:38.541Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:34:39.805Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:34:40.895Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:34:41.625Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:34:42.533Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:34:42.535Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:34:43.258Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/TfYQXc8fc5Q7TSW
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/TfYQXc8fc5Q7TSW
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/SZTL2mZXNNd5Qrn
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/SZTL2mZXNNd5Qrn
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:35:02.318Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:35:03.431Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:35:04.537Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:35:05.284Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:35:06.196Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:35:06.197Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:35:06.942Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/3qoNWAcj9q3ExNr
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/3qoNWAcj9q3ExNr
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/e8WTSqJXbmQFkXC
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/e8WTSqJXbmQFkXC
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:37:24.285Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:37:25.420Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:37:26.492Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:37:27.269Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:37:28.029Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:37:28.030Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:37:28.768Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/JEc4KeiqDjT3zX8
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/JEc4KeiqDjT3zX8
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/iQeCgx4YcRb2XMB
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/iQeCgx4YcRb2XMB
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:43:29.129Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:43:30.359Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:43:31.416Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:43:32.139Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:43:33.034Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:43:33.035Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:43:33.787Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/FFQgsrrHKoyJ9yR
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/FFQgsrrHKoyJ9yR
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/SEtcwgNGJ7D6zBK
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/SEtcwgNGJ7D6zBK
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:44:40.537Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:44:41.695Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:44:42.793Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:44:43.542Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:44:44.459Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:44:44.461Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:44:45.216Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Zw98J7LFQxyHLK6
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Zw98J7LFQxyHLK6
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/ESEBa4ZPLbfXWdQ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/ESEBa4ZPLbfXWdQ
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:47:14.247Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:47:15.394Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:47:16.481Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:47:17.226Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:47:18.115Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:47:18.116Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:47:18.849Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Z9wGpkPx28aKkDd
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Z9wGpkPx28aKkDd
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/XAjZH5iJwp5rSsJ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/XAjZH5iJwp5rSsJ
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T00:50:33.156Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:50:34.379Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T00:50:35.480Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:50:36.253Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T00:50:37.164Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T00:50:37.166Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T00:50:37.924Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/5tKJJ3LyApAGASi
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/5tKJJ3LyApAGASi
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/ro4WQpfy273mW2M
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/ro4WQpfy273mW2M
+[2025-07-03T19:16:39.089Z] Guardando transcipcion.
+Verificando si existe transcripción: porteria_acata_2_Transcripcion.txt en carpeta porteria_acata_2
+[2025-07-03T19:16:40.495Z] Verificando existencia del archivo porteria_acata_2_Transcripcion.txt en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:41.949Z] Archivo "porteria_acata_2_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Transcripción existente encontrada: porteria_acata_2. Obteniendo contenido.
+Verificando contenido existente: porteria_acata_2_Contenido.txt
+[2025-07-03T19:16:43.114Z] Verificando existencia del archivo porteria_acata_2_Contenido.txt en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:44.000Z] Archivo "porteria_acata_2_Contenido.txt" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Contenido existente: porteria_acata_2_Contenido.txt. Cargando.
+[2025-07-03T19:16:45.027Z] Contenido del archivo "porteria_acata_2_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: porteria_acata_2.mp3 en carpeta: porteria_acata_2
+Verificando Borrador .docx existente: porteria_acata_2_Borrador.docx
+[2025-07-03T19:16:45.029Z] Verificando existencia del archivo porteria_acata_2_Borrador.docx en Nextcloud carpeta porteria_acata_2.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/porteria_acata_2/porteria_acata_2_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:16:45.852Z] Archivo "porteria_acata_2_Borrador.docx" EXISTE en Nextcloud en la carpeta "porteria_acata_2".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): porteria_acata_2_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/porteria_acata_2/porteria_acata_2_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yXnDTJKmJAibYqG
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yXnDTJKmJAibYqG
+Generando URL pública para Transcripcion.txt (EXISTENTE): porteria_acata_2_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/porteria_acata_2/porteria_acata_2_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/iecNczEnKLESMo4
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/iecNczEnKLESMo4
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T19:48:45.972Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:48:47.257Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T19:48:48.356Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:48:49.091Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T19:48:50.022Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T19:48:50.024Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:48:50.769Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/a3txaiSf2GZg3X6
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/a3txaiSf2GZg3X6
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/D3LzHNaxGxaFkSp
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/D3LzHNaxGxaFkSp
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T19:55:03.184Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:55:04.393Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T19:55:05.458Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:55:06.180Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T19:55:07.082Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T19:55:07.084Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T19:55:07.831Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/FnD74Lm7W2yLept
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/FnD74Lm7W2yLept
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Y4MyZrqHSr3mgfd
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Y4MyZrqHSr3mgfd
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T20:02:47.720Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:02:49.004Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T20:02:50.094Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:02:50.834Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T20:02:51.590Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T20:02:51.591Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:02:52.328Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Z5MtHXpxDCqxjr3
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Z5MtHXpxDCqxjr3
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/mYiFj8eAXqLSyki
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/mYiFj8eAXqLSyki
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T20:06:20.613Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:06:21.763Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T20:06:22.837Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:06:23.588Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T20:06:24.328Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T20:06:24.329Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:06:25.141Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/dHtEjK2z5TFZnid
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/dHtEjK2z5TFZnid
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/wzj3ni7cToxPn9A
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/wzj3ni7cToxPn9A
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T20:07:45.613Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:07:46.780Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T20:07:47.899Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:07:48.677Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T20:07:49.439Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T20:07:49.441Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:07:50.176Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/3DzfD84qQ9Bjzpp
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/3DzfD84qQ9Bjzpp
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/B34H8aL7LgJ8q5H
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/B34H8aL7LgJ8q5H
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T20:09:41.741Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:09:42.960Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T20:09:44.054Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:09:44.801Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T20:09:45.734Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T20:09:45.736Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T20:09:46.484Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/zW4rLscBJZ5Z47F
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/zW4rLscBJZ5Z47F
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/oyJnwwr94qPFBdQ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/oyJnwwr94qPFBdQ
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:33:27.964Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:29.164Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:33:30.253Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:30.980Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:33:31.875Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:33:31.877Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:32.619Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/GLCK4nfz3z7W2Lr
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/GLCK4nfz3z7W2Lr
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2zMB3oSiD7P4aKM
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2zMB3oSiD7P4aKM
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:33:50.536Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:51.621Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:33:52.684Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:53.427Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:33:54.336Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:33:54.338Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:33:55.086Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2GKwDXpFd8CPQC8
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2GKwDXpFd8CPQC8
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2sGPG6NmgwHG3pT
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2sGPG6NmgwHG3pT
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:50:42.565Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:43.760Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:50:44.837Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:45.591Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:50:46.493Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:50:46.495Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:50:47.240Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/J8RbEoCmadrq3aA
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/J8RbEoCmadrq3aA
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2S63bDsbskFAqAx
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2S63bDsbskFAqAx
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-03T21:55:07.518Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:08.652Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-03T21:55:09.746Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:10.467Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-03T21:55:11.197Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-03T21:55:11.200Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-03T21:55:11.929Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/7HQfPGsQ2PFtsfR
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/7HQfPGsQ2PFtsfR
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/LdgDQdPwmnzPQo3
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/LdgDQdPwmnzPQo3
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T12:31:09.117Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-04T12:31:10.411Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Iniciando transcripción con AssemblyAI para: skalling_colombia_social_statutes_and_shareholder_regulations.wav
+Guardando transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+Transcripción guardada: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T12:31:26.936Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-04T12:31:27.713Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" NO encontrado en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Generando contenido para: skalling_colombia_social_statutes_and_shareholder_regulations.wav
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: skalling_colombia_social_statutes_and_shareholder_regulations.wav
+Guardando contenido en Nextcloud: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+Contenido guardado: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T12:33:55.375Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-04T12:33:56.183Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" NO encontrado en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Pd2tpJ2B9EtMYfW
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: http://files.actasdereuniones.ai/s/Pd2tpJ2B9EtMYfW
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/WcBJstjgASdkgfK
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/WcBJstjgASdkgfK
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T12:42:20.453Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:42:21.860Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T12:42:23.012Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:42:23.902Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T12:42:24.911Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T12:42:24.914Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:42:25.746Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Z2ZWLLqtqdTePkR
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Z2ZWLLqtqdTePkR
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/2mACESTWP5yJGRg
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/2mACESTWP5yJGRg
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T12:47:54.180Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:47:55.486Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T12:47:56.712Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:47:57.475Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T12:47:58.540Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T12:47:58.542Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T12:47:59.319Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/ByMrKMYPwK7iKZS
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/ByMrKMYPwK7iKZS
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/qK397oXEr9xLekF
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/qK397oXEr9xLekF
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:04:17.196Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:04:18.473Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:04:19.737Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:04:20.515Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:04:21.467Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:04:21.468Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:04:22.291Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/i5WKMpnbWjNxd3t
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/i5WKMpnbWjNxd3t
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/L5esPZj9crBPRd9
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/L5esPZj9crBPRd9
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:06:54.919Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:06:56.267Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:06:57.536Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:06:58.306Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:06:59.480Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:06:59.484Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:07:00.292Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Tk2n7zcrqH2KNiN
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Tk2n7zcrqH2KNiN
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/ijEbkRHB8cs6mjy
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/ijEbkRHB8cs6mjy
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:10:47.332Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:10:48.585Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:10:49.773Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:10:50.552Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:10:51.552Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:10:51.555Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:10:52.313Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/BxLL4mt3QBDac4q
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/BxLL4mt3QBDac4q
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Fq6Rs4rHXnmZFDa
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Fq6Rs4rHXnmZFDa
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:16:00.836Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:16:02.167Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:16:03.339Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:16:04.120Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:16:05.208Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:16:05.209Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:16:05.983Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/yRmZP9gKEM9WQGL
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/yRmZP9gKEM9WQGL
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/oYj8bRMJDHoJ3BD
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/oYj8bRMJDHoJ3BD
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:23:53.869Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:23:55.244Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:23:56.426Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:23:57.217Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:23:58.176Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:23:58.178Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:23:58.947Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/MSi6xTJsi3BTQjA
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/MSi6xTJsi3BTQjA
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/wYdcKxrj23JTAkz
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/wYdcKxrj23JTAkz
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:25:53.000Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:25:54.254Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:25:55.523Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:25:56.308Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:25:57.268Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:25:57.271Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:25:58.049Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/PnSwxxx9NFMQJeK
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/PnSwxxx9NFMQJeK
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/c75i98DLNmW5czW
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/c75i98DLNmW5czW
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:32:15.982Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:32:17.250Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:32:18.420Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:32:19.323Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:32:20.329Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:32:20.332Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:32:21.101Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/STaS7F5GTnFr3yZ
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/STaS7F5GTnFr3yZ
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/dTgX9KYQozSMXJ3
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/dTgX9KYQozSMXJ3
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:42:07.876Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:42:09.159Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:42:10.334Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:42:11.102Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:42:12.112Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:42:12.114Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:42:12.904Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/4aHS92XzH7SFCJ7
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/4aHS92XzH7SFCJ7
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/enB97WgwBmpDjGZ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/enB97WgwBmpDjGZ
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:45:48.844Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:45:50.221Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:45:51.470Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:45:52.286Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:45:53.269Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:45:53.272Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:45:54.057Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/nGJcq9XMyiEFFGA
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/nGJcq9XMyiEFFGA
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/8CPnkZEC6ng52Eb
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/8CPnkZEC6ng52Eb
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:49:02.030Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:49:03.349Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:49:04.532Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:49:05.324Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:49:06.102Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:49:06.104Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:49:06.876Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/f9Z25Y9ARLcrNEE
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/f9Z25Y9ARLcrNEE
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/Aq8BRtYLyaRRKXe
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/Aq8BRtYLyaRRKXe
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:52:45.659Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:52:47.069Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:52:48.238Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:52:49.164Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:52:49.968Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:52:49.969Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:52:50.772Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/artDHxbAwPHS6mr
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/artDHxbAwPHS6mr
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/cHSALA3ekRZYgFq
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/cHSALA3ekRZYgFq
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T13:58:50.021Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:58:51.262Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T13:58:52.486Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:58:53.305Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T13:58:54.302Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T13:58:54.305Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T13:58:55.120Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/6abGaA3LTLcDJAx
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/6abGaA3LTLcDJAx
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/iiiweMsT4pgDE8o
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/iiiweMsT4pgDE8o
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T14:13:19.933Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:13:21.261Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T14:13:22.443Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:13:23.237Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T14:13:24.218Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T14:13:24.220Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:13:25.059Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/k3aAQoqxXw7gMsC
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/k3aAQoqxXw7gMsC
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/mCgerNQs2H7M6Xm
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/mCgerNQs2H7M6Xm
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T14:14:05.866Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:14:07.070Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T14:14:08.367Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:14:09.141Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T14:14:10.106Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T14:14:10.107Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:14:10.883Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/EZBZfgFrH4qQci2
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/EZBZfgFrH4qQci2
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/BdF8R5pbFmNdc2G
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/BdF8R5pbFmNdc2G
+Verificando si existe transcripción: skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en carpeta skalling_colombia_social_statutes_and_shareholder_regulations
+[2025-07-04T14:24:55.245Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:24:56.567Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Transcripción existente encontrada: skalling_colombia_social_statutes_and_shareholder_regulations. Obteniendo contenido.
+Verificando contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[2025-07-04T14:24:57.741Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:24:58.511Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Contenido existente: skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt. Cargando.
+[2025-07-04T14:24:59.336Z] Contenido del archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: skalling_colombia_social_statutes_and_shareholder_regulations.wav en carpeta: skalling_colombia_social_statutes_and_shareholder_regulations
+Verificando Borrador .docx existente: skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[2025-07-04T14:24:59.339Z] Verificando existencia del archivo skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx en Nextcloud carpeta skalling_colombia_social_statutes_and_shareholder_regulations.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T14:25:00.124Z] Archivo "skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx" EXISTE en Nextcloud en la carpeta "skalling_colombia_social_statutes_and_shareholder_regulations".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/4EErgWiL34B4CDo
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/4EErgWiL34B4CDo
+Generando URL pública para Transcripcion.txt (EXISTENTE): skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/skalling_colombia_social_statutes_and_shareholder_regulations/skalling_colombia_social_statutes_and_shareholder_regulations_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/aWMRzjZPAGRpN7o
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/aWMRzjZPAGRpN7o
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T15:27:11.165Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:27:12.325Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T15:27:13.388Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:27:14.134Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T15:27:15.053Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T15:27:15.055Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:27:15.806Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/qs6AdxtCTw4yLN6
+URL pública de Borrador.docx (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/qs6AdxtCTw4yLN6
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: http://files.actasdereuniones.ai/s/oFDACwcNPsW7czL
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: http://files.actasdereuniones.ai/s/oFDACwcNPsW7czL
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T15:39:47.084Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:39:48.352Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T15:39:49.455Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:39:50.197Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T15:39:50.964Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T15:39:50.966Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:39:51.719Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/wRz9bswfqbqycc3
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/wRz9bswfqbqycc3
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ES6ARXwKzQ6AxgG
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ES6ARXwKzQ6AxgG
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T15:42:47.274Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:42:48.423Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T15:42:49.506Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:42:50.264Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T15:42:51.157Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T15:42:51.159Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:42:51.896Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/gxZWk9jQeTLpkYW
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/gxZWk9jQeTLpkYW
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/DoBPM8ELpiTyCM8
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/DoBPM8ELpiTyCM8
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T15:45:21.262Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:45:22.448Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T15:45:23.547Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:45:24.277Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T15:45:25.192Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T15:45:25.194Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:45:25.952Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/adzwCoRCResqCFE
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/adzwCoRCResqCFE
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ercEnG75HGoWjEb
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ercEnG75HGoWjEb
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T15:52:20.230Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:52:21.378Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T15:52:22.449Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:52:23.199Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T15:52:24.142Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T15:52:24.144Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T15:52:24.880Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/TN8oNwMMTCZAR2i
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/TN8oNwMMTCZAR2i
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/LpKsL6g67Yw33Ma
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/LpKsL6g67Yw33Ma
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-04T16:33:09.630Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T16:33:10.845Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-04T16:33:11.921Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T16:33:12.662Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-04T16:33:13.421Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-04T16:33:13.422Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T16:33:14.179Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/KckJdCjjjX9wK3K
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/KckJdCjjjX9wK3K
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/CLzAxQWHCXS9JDQ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/CLzAxQWHCXS9JDQ
+Verificando si existe transcripción: demo_actas_Transcripcion.txt en carpeta demo_actas
+[2025-07-04T17:56:50.069Z] Verificando existencia del archivo demo_actas_Transcripcion.txt en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:51.322Z] Archivo "demo_actas_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "demo_actas".
+Transcripción existente encontrada: demo_actas. Obteniendo contenido.
+Verificando contenido existente: demo_actas_Contenido.txt
+[2025-07-04T17:56:52.475Z] Verificando existencia del archivo demo_actas_Contenido.txt en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:53.245Z] Archivo "demo_actas_Contenido.txt" EXISTE en Nextcloud en la carpeta "demo_actas".
+Contenido existente: demo_actas_Contenido.txt. Cargando.
+[2025-07-04T17:56:54.025Z] Contenido del archivo "demo_actas_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: demo_actas.wav en carpeta: demo_actas
+Verificando Borrador .docx existente: demo_actas_Borrador.docx
+[2025-07-04T17:56:54.028Z] Verificando existencia del archivo demo_actas_Borrador.docx en Nextcloud carpeta demo_actas.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/demo_actas/demo_actas_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-04T17:56:54.792Z] Archivo "demo_actas_Borrador.docx" EXISTE en Nextcloud en la carpeta "demo_actas".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): demo_actas_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/demo_actas/demo_actas_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/swJMAABfrnkgJGL
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/swJMAABfrnkgJGL
+Generando URL pública para Transcripcion.txt (EXISTENTE): demo_actas_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/demo_actas/demo_actas_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ZHMHdcq3KG6aF8K
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ZHMHdcq3KG6aF8K

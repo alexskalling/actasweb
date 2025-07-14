@@ -208,6 +208,8 @@ export async function formatContent(
         `URL pública de Borrador.docx (RECIÉN CREADO) obtenida: ${publicUrlBorrador}`
       );
 
+   
+
       writeLog(
         `Generando URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
       );

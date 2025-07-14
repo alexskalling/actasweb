@@ -1,5 +1,6 @@
-import GeneradorContainerContainer from "./generador/components/generadorContainerComponent";
-import NavComponent from "./generador/components/navComponent";
+'use client'
+import GeneradorContainerContainer from "./(generador)/components/generadorContainerComponent";
+import NavComponent from "./(generador)/components/navComponent";
 import {
   Disclosure,
   DisclosureButton,
@@ -8,6 +9,8 @@ import {
 import { CardContent } from "@/components/ui/card";
 import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
+import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
+import { useSession } from "next-auth/react";
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -47,13 +50,15 @@ const faqs = [
   // More questions...
 ];
 
+
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <div className="relative isolate z-0 ">
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
         <>
           <NavComponent />
-          <div className=" mx-auto p-4 max-w-7xl">
+          <div className=" mx-auto max-w-7xl">
             {" "}
             <div className="w-full rounded-sm bg-white">
               <div className="flex h-full">
@@ -62,11 +67,11 @@ export default function Home() {
                     <h1 className="text-5xl  mt-5 font-bold text-purple-900 text-center mb-8">
                       Genera tu acta de reunión en minutos
                     </h1>
-                    <h2 className="text-3xl  mt-5 font-bold text-center mb-8">
+                    <h2 className="text-3xl   mt-5 font-bold text-center mb-8">
                       Transforma tu audio en un acta formal de manera rápida y
                       segura
                     </h2>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg  text-gray-600">
                       ¿Eres administrador de propiedad horizontal y pierdes
                       tiempo redactando actas? Con nuestro{" "}
                       <span className=" font-bold">generador de actas</span>,{" "}
@@ -89,7 +94,38 @@ export default function Home() {
       )}
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
-        <GeneradorContainerContainer />
+
+        {!session?(<>
+          <EmailSignupBannerComponent />
+          <GeneradorContainerContainer />
+        </>):(
+           <div className="bg-purple-600 max-w-2xl mx-auto  text-white p-6 rounded-lg shadow-lg mb-6 relative">
+           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+             <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
+               <div>
+                 <h3 className="font-bold text-xl">
+                   Ingresar a mi plataforma de actas
+                 </h3>
+            
+               </div>
+             </div>
+     
+             <div className="flex justify-center md:justify-end w-full md:w-auto px-20">
+               <Link
+                 href="/plataforma"
+                 className="bg-white hover:bg-purple-500 text-gray-900 px-6 py-2 rounded-md transition-colors"
+               >
+                 Ingresar
+               </Link>
+             </div>
+           </div>
+         </div>
+        )}
+        
+
+
+
+       
       </div>
 
       {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
