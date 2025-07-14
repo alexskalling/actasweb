@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 import { saveTransactionAction } from "../services/saveTransactionAction";
+import PaymentModalComponent from "./paymentModalComponent";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
   const encoder = new TextEncoder();
@@ -55,11 +56,22 @@ const formatDuration = (seconds: number): string => {
     .join(":");
 };
 
+const ensureDurationFormat = (duration: string | number): string => {
+  if (typeof duration === "string" && /^\d{2}:\d{2}:\d{2}$/.test(duration)) {
+    return duration;
+  }
+  // Si es número o string numérico, conviértelo
+  const seconds = typeof duration === "number" ? duration : Number.parseInt(duration, 10);
+  return formatDuration(seconds);
+};
+
 const tipo = process.env.NEXT_PUBLIC_PAGO;
 //@ts-expect-error revisar despues
 const WompiComponent = (props) => {
   const [checkout, setCheckout] = useState(null);
   const [costo, setCosto] = useState(props.costo * 100);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setCosto(props.costo * 100);
@@ -109,6 +121,22 @@ const WompiComponent = (props) => {
       console.error("No se ha cargado el script de Wompi.");
       return;
     }
+
+    setIsLoading(true);
+
+    // Track Wompi payment button click with more details
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+  
+      window.gtag('event', 'wompi_payment_button_click', {
+        'event_category': 'engagement',
+        'event_label': 'wompi_payment_started',
+        'value': props.costo,
+        'file_name': props.file,
+        'duration': props.duration,
+        'folder': props.folder
+      });
+    }
+
     //@ts-expect-error revisar despues
     checkout.open(async (result) => {
       console.log("Resultado de la transacción: ", result);
@@ -121,24 +149,91 @@ const WompiComponent = (props) => {
           referencia: transaction.reference,
           acta: props.file,
           valor: (transaction.amountInCents / 100).toString(),
-          duracion: formatDuration(props.duration),
+          duracion: ensureDurationFormat(props.duration),
         });
         console.log("save: ", JSON.stringify(save));
         props.handlePayment();
+
+        // Track successful payment with transaction details
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      
+          window.gtag('event', 'wompi_payment_success', {
+            'event_category': 'engagement',
+            'event_label': 'wompi_payment_completed',
+            'value': transaction.amountInCents / 100,
+            'transaction_id': transaction.id,
+            'file_name': props.file,
+            'duration': props.duration
+          });
+        }
+      } else {
+        // Track Wompi payment rejection with more details
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      
+          window.gtag('event', 'wompi_payment_rejected', {
+            'event_category': 'error',
+            'event_label': transaction.status || 'Unknown status',
+            'transaction_id': transaction.id,
+            'file_name': props.file,
+            'duration': props.duration,
+            'error_message': transaction.error_message || 'No error message'
+          });
+        }
       }
 
+      setIsLoading(false);
       console.log("Transaction ID: ", transaction.id);
       console.log("Transaction object: ", transaction);
     });
   };
 
+  const handleButtonClick = () => {
+    if (props.showModalFirst) {
+      setShowModal(true);
+    } else {
+      handleOpenWidget();
+    }
+  };
+
   return (
-    <Button
-      className="w-full rounded-sm bg-green-700"
-      onClick={() => [handleOpenWidget()]}
-    >
-      Pagar
-    </Button>
+    <>
+      <Button
+        className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
+        onClick={handleButtonClick}
+        disabled={isLoading}
+      >
+        {isLoading ? (
+          <>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={24}
+              height={24}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="animate-spin"
+            >
+              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+            </svg>
+            Procesando...
+          </>
+        ) : (
+          "Pagar"
+        )}
+      </Button>
+      
+      <PaymentModalComponent
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        onConfirm={() => {
+          setShowModal(false);
+          handleOpenWidget();
+        }}
+      />
+    </>
   );
 };
 
