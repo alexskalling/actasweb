@@ -57,9 +57,9 @@ export default function PlataformaPage() {
                 <div className="flex items-center gap-x-4 sm:gap-x-6">
                   <button
                     onClick={() => setShowEditForm(!showEditForm)}
-                    className="text-sm/6 font-semibold text-gray-900"
+                    className="text-sm/6 font-semibold text-gray-900 rounded-md  px-3 py-2 shadow-xs"
                   >
-                    Editar perfil
+                    Actualizar información de contacto
                   </button>
 
                   <button

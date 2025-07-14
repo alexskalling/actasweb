@@ -2,64 +2,111 @@
 
 import { useSession } from "next-auth/react";
 import { updateProfile } from "../actions/update";
+import { useState } from "react";
 
 export default function EditProfileForm({ onClose }: { onClose: () => void }) {
   const { data: session } = useSession();
 
+  const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      await updateProfile(formData);
+
+      // ✅ Mostrar modal
+      setModalMessage("Gracias por actualizar tus datos.");
+      setShowModal(true);
+    } catch (err) {
+      console.error(err);
+      setModalMessage("Ocurrió un error al actualizar tus datos.");
+      setShowModal(true);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    onClose(); // cerrar el formulario después de cerrar el modal
+  };
+
   return (
-    <div className="relative max-w-md w-full bg-white/90 rounded-lg p-8 space-y-6  text-gray-900">
-      {/* Botón de cerrar */}
-      <button
-        onClick={onClose}
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-lg"
-      >
-        ✖
-      </button>
-
-      <div className="flex flex-col items-center space-y-2">
-        <h1 className="text-2xl font-bold text-gray-800">Editar Perfil</h1>
-        <p className="text-sm text-gray-600">
-          Actualiza tu información personal
-        </p>
-      </div>
-
-      <form action={updateProfile} className="space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Nombre
-          </label>
-          <input
-            name="name"
-            type="text"
-            defaultValue={session?.user?.name ?? ""}
-            className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
-            placeholder="Tu nombre"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-gray-700">
-            Teléfono
-          </label>
-          <input
-            name="phone"
-            type="text"
-            placeholder="Ej: 3001234567"
-            className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
-          />
-        </div>
-
+    <>
+      <div className="relative max-w-md w-full bg-white/90 rounded-lg p-8 space-y-6 text-gray-900">
+        {/* Botón de cerrar */}
         <button
-          type="submit"
-          className="w-full px-4 py-2 bg-purple-600 text-white border border-purple-700 rounded-lg hover:bg-purple-700 transition"
+          onClick={onClose}
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-lg"
         >
-          Guardar Cambios
+          ✖
         </button>
-      </form>
 
-      <div className="text-center text-xs text-gray-500 pt-2">
-        <p>Tu información se mantiene segura con nosotros.</p>
+        <div className="flex flex-col items-center space-y-2">
+          <h1 className="text-2xl font-bold text-gray-800">Informacion de contacto</h1>
+          <p className="text-sm text-gray-600">
+            Actualiza tu información de contacto
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Usuario: {session?.user?.name ?? ""}
+            </label>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700">
+              Teléfono
+            </label>
+            <input
+              name="phone"
+              type="text"
+              placeholder="Ej: 3001234567"
+              className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full px-4 py-2 bg-purple-600 text-white border border-purple-700 rounded-lg hover:bg-purple-700 transition disabled:opacity-50"
+          >
+            {loading ? 'Guardando…' : 'Guardar Cambios'}
+          </button>
+        </form>
+
+        <div className="text-center text-xs text-gray-500 pt-2">
+          <p>Tu información se mantiene segura con nosotros.</p>
+        </div>
       </div>
-    </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+            <h2 className="text-lg font-bold text-gray-800 mb-4 text-center">
+              Perfil Actualizado
+            </h2>
+            <p className="text-gray-600 mb-4 text-center">
+              {modalMessage}
+            </p>
+            <button
+              onClick={handleCloseModal}
+              className="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 mx-auto block"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
