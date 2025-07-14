@@ -30,7 +30,17 @@ export default function LoginPage() {
         {/* Botones sociales */}
         <div className="space-y-3">
           <button
-            onClick={() => signIn("google", { callbackUrl })}
+            onClick={() => {
+              // Track inicio login Google
+              if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                window.gtag('event', 'inicio_login', {
+                  'event_category': 'autenticacion',
+                  'event_label': 'login_google',
+                  'metodo_login': 'google'
+                });
+              }
+              signIn("google", { callbackUrl });
+            }}
             className="w-full flex items-center gap-3 px-4 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition"
           >
             <Image
@@ -43,7 +53,17 @@ export default function LoginPage() {
           </button>
 
           <button
-            onClick={() => signIn("azure-ad", { callbackUrl })}
+            onClick={() => {
+              // Track inicio login Microsoft
+              if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                window.gtag('event', 'inicio_login', {
+                  'event_category': 'autenticacion',
+                  'event_label': 'login_microsoft',
+                  'metodo_login': 'microsoft'
+                });
+              }
+              signIn("azure-ad", { callbackUrl });
+            }}
             className="w-full flex items-center gap-3 px-4 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition"
           >
             <Image

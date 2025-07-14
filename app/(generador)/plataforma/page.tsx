@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Menu,
   MenuButton,
@@ -20,6 +20,18 @@ import EditProfileForm from './perfil/components/editProfileForm'
 export default function PlataformaPage() {
   const { data: session } = useSession()
   const [showEditForm, setShowEditForm] = useState(false)
+
+  // Track acceso a plataforma
+  useEffect(() => {
+    if (session && process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'acceso_plataforma', {
+        'event_category': 'plataforma',
+        'event_label': 'usuario_accede_plataforma',
+        'user_name': session.user?.name,
+        'user_email': session.user?.email
+      });
+    }
+  }, [session]);
 
   return (
     <>
@@ -56,14 +68,33 @@ export default function PlataformaPage() {
 
                 <div className="flex items-center gap-x-4 sm:gap-x-6">
                   <button
-                    onClick={() => setShowEditForm(!showEditForm)}
-                    className="text-sm/6 font-semibold text-gray-900 rounded-md  px-3 py-2 shadow-xs"
-                  >
+                    onClick={() => {
+                      // Track edición perfil
+                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                        window.gtag('event', 'edicion_perfil', {
+                          'event_category': 'plataforma',
+                          'event_label': 'usuario_edita_perfil'
+                        });
+                      }
+                      setShowEditForm(!showEditForm);
+                    }}
+                    className="text-sm/6 font-semibold text-gray-900"
+
                     Actualizar información de contacto
                   </button>
 
                   <button
-                    onClick={() => signOut({ callbackUrl: "/" })}
+                    onClick={() => {
+                      // Track cerrar sesión
+                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+                        window.gtag('event', 'cerrar_sesion', {
+                          'event_category': 'autenticacion',
+                          'event_label': 'usuario_cierra_sesion',
+                          'user_name': session?.user?.name
+                        });
+                      }
+                      signOut({ callbackUrl: "/" });
+                    }}
                     className="rounded-md bg-purple-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
                   >
                     Salir

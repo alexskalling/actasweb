@@ -56,6 +56,16 @@ export default function HistorialActasComponent() {
         return;
       }
 
+      // Track inicio descarga desde historial
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        window.gtag('event', 'inicio_descarga_documento', {
+          'event_category': 'descarga',
+          'event_label': 'descarga_desde_historial',
+          'tipo_documento': 'acta_y_transcripcion',
+          'nombre_archivo': acta.nombre
+        });
+      }
+
       // Descargar borrador primero
       downloadFile(acta.urlBorrador);
       
@@ -64,6 +74,16 @@ export default function HistorialActasComponent() {
       setTimeout(() => {
         if (acta.urlTranscripcion) {
           downloadFile(acta.urlTranscripcion);
+          
+          // Track descarga completada desde historial
+          if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+            window.gtag('event', 'descarga_documento_completada', {
+              'event_category': 'descarga',
+              'event_label': 'descarga_exitosa_historial',
+              'tipo_documento': 'acta_y_transcripcion',
+              'nombre_archivo': acta.nombre
+            });
+          }
         } else {
           console.warn("No se proporcionó una URL para la transcripción.");
         }
