@@ -46,7 +46,7 @@ export async function GuardarNuevoProceso(
         and(
           eq(actas.nombre, nombreActa),
           eq(actas.idUsuario, user_id),
-          lt(actas.idEstadoProceso, 4)
+          lt(actas.idEstadoProceso, 5)
         )
       )
       .limit(1);
@@ -60,7 +60,7 @@ export async function GuardarNuevoProceso(
           and(
             eq(actas.nombre, nombreActa),
             eq(actas.idUsuario, user_id),
-            lt(actas.idEstadoProceso, 4)
+
           )
         );
 
@@ -76,7 +76,7 @@ export async function GuardarNuevoProceso(
         and(
           eq(actas.nombre, nombreActa),
           eq(actas.idUsuario, user_id),
-          gte(actas.idEstadoProceso, 4)
+          gte(actas.idEstadoProceso, 6)
         )
       )
       .limit(1);
