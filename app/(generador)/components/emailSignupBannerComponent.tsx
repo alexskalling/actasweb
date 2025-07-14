@@ -7,6 +7,14 @@ import { Mail } from "lucide-react";
 export default function EmailSignupBannerComponent() {
 
   const handleRegister = () => {
+    // Track inicio registro desde banner
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'inicio_registro', {
+        'event_category': 'autenticacion',
+        'event_label': 'registro_desde_banner',
+        'ubicacion_pagina': 'banner_email'
+      });
+    }
     window.location.href = "/api/auth/signin?callbackUrl=/plataforma";
   };
 

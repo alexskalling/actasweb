@@ -60,6 +60,15 @@ export default function MediaFileUploaderComponent({
     setError(null);
     setUploadStatus(null);
     setUploadProgress(0);
+
+    // Track inicio selección archivo
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'inicio_seleccion_archivo', {
+        'event_category': 'proceso_acta',
+        'event_label': 'usuario_selecciona_archivo'
+      });
+    }
+
     //@ts-expect-error revisar despues
 
     const nombreNormalizado = await normalizarNombreArchivo(file.name);
@@ -85,7 +94,27 @@ export default function MediaFileUploaderComponent({
     // Verificar si es un archivo de audio/video por tipo MIME o extensión
     if (!file.type.match(/^(audio|video)/) && !allowedExtensions.includes(fileExtension)) {
       setError("Por favor selecciona un archivo de audio o video válido. Formatos permitidos: " + allowedExtensions.join(', '));
+      
+      // Track error validación archivo
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        window.gtag('event', 'error_validacion_archivo', {
+          'event_category': 'proceso_acta',
+          'event_label': 'archivo_invalido',
+          'tipo_archivo': file.type,
+          'extension_archivo': fileExtension
+        });
+      }
       return;
+    }
+
+    // Track validación archivo exitosa
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'validacion_archivo_exitosa', {
+        'event_category': 'proceso_acta',
+        'event_label': 'archivo_valido',
+        'tipo_archivo': file.type,
+        'tamaño_archivo': file.size
+      });
     }
 
     setSelectedFile(file);
@@ -103,7 +132,6 @@ export default function MediaFileUploaderComponent({
 
     // Track file selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
       window.gtag('event', 'file_selected', {
         'event_category': 'engagement',
         'event_label': file.type || fileExtension,
@@ -166,6 +194,17 @@ export default function MediaFileUploaderComponent({
   const handlePayment = async () => {
     setProcesando(true);
 
+    // Track inicio procesamiento acta
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'inicio_procesamiento_acta', {
+        'event_category': 'proceso_acta',
+        'event_label': 'inicio_generacion_acta',
+        'nombre_archivo': file,
+        'duracion_estimada': duration,
+        'tipo_procesamiento': 'acta_completa'
+      });
+    }
+
     // Track payment initiation event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
       window.gtag('event', 'payment_initiated', {
@@ -186,9 +225,18 @@ export default function MediaFileUploaderComponent({
       );
       setProcesando(false);
 
+      // Track procesamiento acta completado
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        window.gtag('event', 'procesamiento_acta_completado', {
+          'event_category': 'proceso_acta',
+          'event_label': 'acta_generada_exitosamente',
+          'nombre_archivo': file,
+          'tiempo_procesamiento': Date.now() // Aquí podrías calcular el tiempo real
+        });
+      }
+
       // Track successful payment event
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
         window.gtag('event', 'payment_success', {
           'event_category': 'engagement',
           'event_label': 'payment_completed',
@@ -233,6 +281,16 @@ export default function MediaFileUploaderComponent({
   }, [preview]);
 
   const handleUploadFile = async () => {
+    // Track inicio subida archivo
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'inicio_subida_archivo', {
+        'event_category': 'proceso_acta',
+        'event_label': 'usuario_inicia_subida',
+        'nombre_archivo': selectedFile?.name,
+        'tamaño_archivo': selectedFile?.size
+      });
+    }
+
     setCalculando(true);
     setError(null);
     setUploadStatus(
@@ -265,7 +323,20 @@ export default function MediaFileUploaderComponent({
 
     try {
       const result = await uploadFileToAssemblyAI(formData, (progress) => {
-        setUploadProgress(Math.round(progress));
+        const progressRounded = Math.round(progress);
+        setUploadProgress(progressRounded);
+        
+        // Track progreso subida cada 25%
+        if (progressRounded % 25 === 0 && progressRounded > 0) {
+          if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+            window.gtag('event', 'progreso_subida_archivo', {
+              'event_category': 'proceso_acta',
+              'event_label': 'progreso_subida',
+              'porcentaje_progreso': progressRounded,
+              'nombre_archivo': selectedFile?.name
+            });
+          }
+        }
       });
 
       if (result.success) {
@@ -395,12 +466,13 @@ export default function MediaFileUploaderComponent({
         return;
       }
 
-      // Track download event
+      // Track inicio descarga documento
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-        window.gtag('event', 'document_download', {
-          'event_category': 'engagement',
-          'event_label': 'acta_and_transcription'
+        window.gtag('event', 'inicio_descarga_documento', {
+          'event_category': 'descarga',
+          'event_label': 'inicio_descarga_acta_transcripcion',
+          'tipo_documento': 'acta_y_transcripcion',
+          'nombre_archivo': file
         });
       }
 
@@ -412,6 +484,25 @@ export default function MediaFileUploaderComponent({
         setTimeout(() => {
           if (acta) {
             downloadFile(transcripcion);
+            
+            // Track descarga documento completada y conversión
+            if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+              window.gtag('event', 'descarga_documento_completada', {
+                'event_category': 'descarga',
+                'event_label': 'descarga_exitosa_completa',
+                'tipo_documento': 'acta_y_transcripcion',
+                'nombre_archivo': file
+              });
+              
+              // Track conversión completada
+              window.gtag('event', 'conversion_completada', {
+                'event_category': 'conversion',
+                'event_label': 'usuario_completa_proceso',
+                'valor_conversion': calculatePrice(duration),
+                'tipo_conversion': 'acta_completa',
+                'posicion_embudo': 'final'
+              });
+            }
           } else {
             console.warn("No se proporcionó una URL para la transcripción.");
           }
