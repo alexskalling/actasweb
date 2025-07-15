@@ -367,8 +367,7 @@ async function guardarArchivoNextcloudDocx(
 ): Promise<boolean> {
 
   // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
-  const actaContent =
-    "<h1>Prueba DOCX Simple</h1><p>Texto sencillo de prueba para Docker.</p>";
+  const actaContent = textoActa;
 
   writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
   writeLog(

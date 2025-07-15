@@ -1537,3 +1537,365 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/FPWRLTynGpwWrkE
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/FPWRLTynGpwWrkE
+Verificando si existe transcripción: whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt en carpeta whatsapp_audio_2025-07-14_at_7.31.50_pm
+[2025-07-15T13:35:57.598Z] Verificando existencia del archivo whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt en Nextcloud carpeta whatsapp_audio_2025-07-14_at_7.31.50_pm.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-14_at_7.31.50_pm/whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-15T13:35:58.824Z] Archivo "whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "whatsapp_audio_2025-07-14_at_7.31.50_pm".
+Transcripción existente encontrada: whatsapp_audio_2025-07-14_at_7.31.50_pm. Obteniendo contenido.
+Verificando contenido existente: whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt
+[2025-07-15T13:36:00.022Z] Verificando existencia del archivo whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt en Nextcloud carpeta whatsapp_audio_2025-07-14_at_7.31.50_pm.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-14_at_7.31.50_pm/whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-15T13:36:00.896Z] Archivo "whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt" EXISTE en Nextcloud en la carpeta "whatsapp_audio_2025-07-14_at_7.31.50_pm".
+Contenido existente: whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt. Cargando.
+[2025-07-15T13:36:01.894Z] Contenido del archivo "whatsapp_audio_2025-07-14_at_7.31.50_pm_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: whatsapp_audio_2025-07-14_at_7.31.50_pm.ogg en carpeta: whatsapp_audio_2025-07-14_at_7.31.50_pm
+Verificando Borrador .docx existente: whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+[2025-07-15T13:36:01.896Z] Verificando existencia del archivo whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx en Nextcloud carpeta whatsapp_audio_2025-07-14_at_7.31.50_pm.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-14_at_7.31.50_pm/whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-15T13:36:02.669Z] Archivo "whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx" NO encontrado en Nextcloud en la carpeta "whatsapp_audio_2025-07-14_at_7.31.50_pm".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+Preparando guardado .docx en Nextcloud: whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión de Seguimiento Programa Somos Familia, Somos Comunidad</h1>
+  <p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+  <p><strong>Hora:</strong> Inicio: [HORA NO ESPECIFICADA] - Cierre: [HORA NO ESPECIFICADA]</p>
+  <p><strong>Lugar:</strong> [LUGAR NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> Jemerson</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Paula - Coordinadora</li>
+    <li>Liliana - [Rol no especificado]</li>
+    <li>Dora - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Ana Aguilar - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Heiner - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Juliana - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Juliet - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Ana Karina - [Rol no especificado, conectada por teléfono]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Reporte de Avance del Programa Somos Familia, Somos Comunidad en San Gil.</li>
+    <li>Experiencia y Dificultades del Equipo de San Gil en Caracterización y Vinculación.</li>
+    <li>Estrategias de Vinculación Implementadas (Alianzas Estratégicas y Voz a Voz).</li>
+    <li>Discusión sobre el Trabajo en Equipo, Distribución de Tareas y Disponibilidad.</li>
+    <li>Importancia del Reporte Diario y Evidencias de Gestión.</li>
+    <li>Propuestas para Acelerar la Vinculación de Familias.</li>
+    <li>Compromisos y Seguimiento del Plan de Trabajo.</li>
+    <li>Consideraciones de la Coordinadora.</li>
+  </ol>
+</header>
+
+<h2>1. Introducción y objetivo de la reunión</h2>
+<p>La reunión fue convocada con el propósito fundamental de realizar un seguimiento detallado al avance del Programa Somos Familia, Somos Comunidad en la sede de San Gil. El moderador, Jemerson, expuso que el objetivo principal de este encuentro era asegurar que el equipo contara con las herramientas y el apoyo necesarios, tanto de la regional como del centro zonal, para alcanzar la meta establecida de vincular a <b>125 familias</b>.</p>
+<p>Asimismo, se planteó como parte del objetivo escuchar directamente a los profesionales del equipo de San Gil, con el fin de conocer sus experiencias en la implementación del programa, así como identificar y comprender las dificultades que han enfrentado en los procesos de caracterización y vinculación de las familias.</p>
+
+<h2>2. Reporte de avance y meta del programa Somos Familia, Somos Comunidad en San Gil</h2>
+
+<p>En el desarrollo de la reunión, se presentó el reporte detallado sobre el avance actual del Programa Somos Familia, Somos Comunidad en la sede de San Gil. Se informó que, a la fecha, se han reportado un total de <b>44 familias</b>, lo que representa un avance del <b>35%</b> respecto a la meta establecida. Se recordó que el compromiso adquirido con la sede nacional es alcanzar la vinculación de <b>125 familias</b> antes del <b>30 de julio</b>, fecha límite para la finalización de la meta del servicio.</p>
+
+<p>Se destacó que, según el reporte enviado a Bogotá la semana anterior, al 11 de julio se habían vinculado y priorizado <b>6 familias</b>. La cifra actual de 44 familias reportadas incluye las 20 familias focalizadas recientemente en el sector Covid, las cuales forman parte del total consolidado hasta el momento. Adicionalmente, se mencionó que existen 9 familias focalizadas en el sector Covid que aún no han sido reportadas formalmente en la ruta SharePoint, pero se espera su próxima inclusión.</p>
+
+<p>En cuanto al proceso de caracterización, se detalló que de una base de datos inicial de 38 familias proporcionada desde Bogotá, se identificó una familia repetida, ajustando el total a 37. De estas 37, se han caracterizado <b>29 familias</b>, quedando una pendiente de caracterizar para la semana en curso. Seis familias adicionales, identificadas a través del formato huella, decidieron no vincularse al programa, argumentando falta de tiempo debido a compromisos laborales o personales, a pesar de los intentos de contacto realizados en diferentes momentos.</p>
+
+<p>Se hizo referencia a la base de datos facilitada por el área de Atención al Usuario, que contenía aproximadamente 39 contactos. Tras realizar llamadas a estas familias, se encontró una respuesta mayoritariamente negativa o de resentimiento hacia la institución. Muchas familias manifestaron no querer tener vínculos con el ICBF, indicando que ya habían cerrado sus casos y no les interesaba reabrirlos. De esta base de datos, solo se logró vincular a <b>6 familias</b> a través de las llamadas realizadas por el equipo.</p>
+
+<p>Considerando el avance actual de 44 familias reportadas y la meta de 125 para el 30 de julio, se determinó que restan aproximadamente <b>81 familias</b> por vincular en un plazo de cerca de 10 días. Ante esta situación, se subrayó la urgencia de acelerar el proceso de vinculación. Se planteó la necesidad de vincular alrededor de <b>10 familias diarias</b> para poder cumplir con el objetivo en el tiempo restante. Se enfatizó que cada día sin vinculaciones incrementa el número de familias pendientes para los días subsiguientes, generando una presión adicional sobre el equipo.</p>
+
+<p>Se solicitó al equipo de San Gil mantener un reporte diario de las actividades realizadas, incluyendo las gestiones de caracterización y priorización de familias. Se explicó que este reporte es requerido directamente por la sede nacional en Bogotá, quienes realizan un seguimiento constante del avance del programa. Se hizo hincapié en la importancia de documentar no solo los resultados positivos, sino también las dificultades encontradas, como la negativa de las familias a vincularse o los problemas con las bases de datos, para que la sede nacional tenga conocimiento de los desafíos que enfrenta el centro zonal.</p>
+
+<h2>3. Discusión de dificultades y estrategias de caracterización y vinculación de familias</h2>
+
+<p>El equipo de profesionales de San Gil compartió sus experiencias y los desafíos encontrados en los procesos de caracterización y vinculación de familias al programa. Se detallaron las dificultades específicas que han impactado el avance hacia la meta establecida.</p>
+
+<p>En cuanto a la caracterización, se explicó que de una base de datos inicial de 38 familias proporcionada desde Bogotá, se identificó una familia repetida, ajustando el total a 37. De estas, se han caracterizado <b>29 familias</b>. Queda una familia pendiente de caracterizar para la semana en curso, ya que la persona se encontraba de viaje y programó el acompañamiento para estos días. Seis familias adicionales, identificadas a través del formato huella, decidieron no vincularse al programa. Argumentaron falta de tiempo debido a compromisos laborales o personales, a pesar de los intentos de contacto realizados en diferentes momentos. Se mencionó el caso particular de una familia en el barrio Vergel, a la que se intentó visitar en dos ocasiones sin éxito, y que finalmente manifestó no tener la disposición para continuar por cuestiones laborales y personales.</p>
+
+<p>Respecto a la vinculación, se hizo referencia a una base de datos facilitada por el área de Atención al Usuario, que contenía aproximadamente 39 contactos. Tras realizar llamadas a estas familias, el equipo encontró una respuesta mayoritariamente negativa o de resentimiento hacia la institución. Muchas familias expresaron no querer tener vínculos con el ICBF, indicando que ya habían cerrado sus casos y no les interesaba reabrirlos. De esta base de datos, solo se logró vincular a <b>6 familias</b> a través de las llamadas realizadas por los profesionales. Se señaló que algunos números de teléfono ya no correspondían a las familias contactadas, sugiriendo que la base de datos podría ser antigua.</p>
+
+<p>Se abordaron las estrategias de vinculación implementadas. Inicialmente, se buscaron alianzas estratégicas con diversas entidades. Se presentó el equipo ante la Comisaría de Familia, pero, según lo reportado, esta entidad se negó verbalmente a proporcionar acceso a bases de datos de familias, argumentando que manejaban casos delicados y temas de violencia intrafamiliar, y que dicha información no podía ser compartida. Se destacó que, aunque se presentó un oficio de solicitud avalado por la coordinadora, la respuesta negativa fue verbal y no formalizada por escrito. Se continuó con alianzas con el enlace de Educación (Secretaría de Desarrollo), logrando agendar una reunión con psicoorientadores de colegios del municipio para el miércoles a las 8 de la mañana. También se gestionó con la oficina del Sisbén, donde se hizo presencia y se está a la espera de una base de datos. Se contactó a la casa parroquial, presentando al grupo y quedando pendientes de una respuesta sobre posibles familias. Adicionalmente, se realizó una articulación con madres comunitarias en el Centro de Convivencia, presentando la modalidad y compartiendo contactos.</p>
+
+<p>Paralelamente a las alianzas, se ha estado trabajando intensamente con la estrategia de "voz a voz" o puerta a puerta, principalmente en el sector Covid, que abarca 17 barrios. Esta labor se realiza prioritariamente en las tardes, a partir de las 2 p.m., buscando encontrar a las personas en sus hogares. Se informó que, a través de esta estrategia, se han focalizado aproximadamente <b>20 familias</b>, las cuales están incluidas en el total de 44 familias reportadas hasta el momento. Se mencionó que existen 9 familias adicionales focalizadas en este sector que aún no han sido formalmente reportadas en la ruta SharePoint.</p>
+
+<p>Surgió una discusión sobre el trabajo en equipo y la distribución de tareas. Se señaló que, si bien las articulaciones con entidades se han realizado generalmente por el equipo completo o en duplas en las mañanas, la estrategia de voz a voz en las tardes ha enfrentado dificultades debido a la disponibilidad de uno de los miembros del equipo (Heiner), quien en ocasiones no ha podido acompañar en estas jornadas vespertinas por tener otro compromiso. Esto ha llevado a que las otras profesionales (Dora, Juliana, Juliet) deban trabajar en grupos de tres o dividirse, lo cual genera preocupación, especialmente en barrios con cierta vulnerabilidad, donde se considera esencial trabajar siempre en duplas por seguridad. Se reconoció que la falta de trabajo en duplas en la vinculación pudo haber afectado el avance, a diferencia del proceso de caracterización, que se realizó en duplas y avanzó rápidamente.</p>
+
+<p>El profesional Heiner explicó que, si bien tiene buena comunicación y se siente bien trabajando con el equipo y en la modalidad, en ocasiones se le dificulta asistir en las tardes debido a otro compromiso. Propuso buscar estrategias alternativas, como encargarse de llenar las fichas de caracterización o el formato huella de forma remota, mientras sus compañeras realizan el trabajo de campo. Reconoció que su ausencia puede desestabilizar al grupo, pero enfatizó su disposición a trabajar y su compromiso con la modalidad.</p>
+
+<p>Ante esta situación, se subrayó la importancia del trabajo colectivo y la organización del equipo. Se sugirió distribuir las actividades teniendo en cuenta las cualidades y aptitudes de cada profesional, asignando roles como la articulación con entidades (asociado al rol de gestor comunitario), la subida y organización de información, y la interacción directa con la comunidad. Se recordó que, al momento de la contratación, se enfatizó la importancia de tener disponibilidad de tiempo para adaptarse a los horarios de las familias, especialmente en esta fase de focalización y priorización.</p>
+
+<p>Se recomendó que una sola persona se encargue de las articulaciones con entidades, apoyada por la coordinadora para las solicitudes formales por escrito, mientras los demás profesionales se enfocan en la vinculación y caracterización. Se enfatizó la necesidad de tener soportes escritos de las gestiones realizadas, incluyendo las respuestas negativas de las entidades, para poder justificar ante la sede nacional los desafíos encontrados.</p>
+
+<p>Como estrategia para acelerar la vinculación, se propuso intensificar el "voz a voz" y explorar la posibilidad de realizar vinculaciones grupales. Esto podría lograrse contactando líderes comunitarios o personas significativas en los barrios, o pidiendo a las familias ya vinculadas que recomienden a otras familias que podrían beneficiarse del programa. Se reiteró la necesidad de vincular alrededor de <b>10 familias diarias</b> para alcanzar la meta del 30 de julio, advirtiendo que cada día sin vinculaciones aumenta la carga para los días siguientes.</p>
+
+<p>La coordinadora, Paula, intervino para respaldar las dificultades expuestas por el equipo, comparándolas con experiencias previas en otras modalidades, especialmente en lo referente a las bases de datos y la disponibilidad de las familias. Resaltó el compromiso del equipo y las estrategias implementadas, como el voz a voz y el contacto con presidentes de juntas de acción comunal. Subrayó la importancia de trabajar en duplas por la vulnerabilidad de algunos barrios priorizados y reiteró que, si bien se puede considerar el apoyo en tareas administrativas, la prioridad actual es el trabajo de campo para cumplir la meta. Instó al equipo a organizar su plan de trabajo, distribuir las actividades y mantener el compromiso diario para lograr el objetivo.</p>
+
+<p>Se concluyó que el equipo debe organizarse internamente, distribuir las tareas y presentar un plan de trabajo grupal detallado, el cual debe ser alimentado diariamente en la ruta SharePoint. Se hizo un llamado al profesional Heiner a comunicar cualquier inconveniente de disponibilidad para que el equipo pueda articularse y evitar retrasos en el trabajo.</p>
+
+<h2>4. Organización del equipo y distribución de tareas</h2>
+
+<p>Durante la reunión, se abordó de manera específica la dinámica de trabajo del equipo de San Gil, la distribución de las tareas y la disponibilidad de los profesionales, identificando estos aspectos como factores clave que impactan el avance en la vinculación de familias. Se planteó la necesidad de comprender cómo se están organizando para llevar a cabo las diferentes actividades del programa.</p>
+
+<p>El equipo explicó que las articulaciones con entidades, como la Comisaría de Familia, la Secretaría de Desarrollo (Educación), la oficina del Sisbén y la casa parroquial, se han realizado generalmente en las mañanas, con la participación de los cuatro profesionales, a menudo dividiéndose en duplas para visitar diferentes dependencias. Se mencionó una articulación con madres comunitarias en el Centro de Convivencia que se realizó en la tarde, a la que asistieron tres de los profesionales.</p>
+
+<p>Se detalló que la estrategia de "voz a voz" o trabajo puerta a puerta, intensificada en el sector Covid (que abarca 17 barrios) y considerada la más efectiva hasta el momento para focalizar familias, se lleva a cabo prioritariamente en las tardes, a partir de las 2 p.m., buscando encontrar a las familias en sus hogares. Sin embargo, se señaló que esta labor vespertina ha enfrentado dificultades debido a la disponibilidad de uno de los miembros del equipo, el profesional Heiner, quien en ocasiones no ha podido acompañar en estas jornadas por tener otro compromiso.</p>
+
+<p>Las profesionales Dora, Juliana y Juliet expresaron su preocupación por esta situación, ya que la ausencia de un integrante las obliga a trabajar en grupos de tres o a dividirse, lo cual consideran riesgoso, especialmente en barrios con cierta vulnerabilidad, donde se considera esencial trabajar siempre en duplas por seguridad. Reconocieron que la falta de trabajo en duplas en la fase de vinculación pudo haber afectado el ritmo de avance, a diferencia del proceso de caracterización, que se realizó consistentemente en duplas y avanzó rápidamente.</p>
+
+<p>El profesional Heiner intervino para explicar que, si bien tiene buena comunicación y se siente bien trabajando con el equipo y en la modalidad, en ocasiones se le dificulta asistir en las tardes debido a otro compromiso. Enfatizó su disposición a trabajar y su compromiso con la modalidad, proponiendo buscar estrategias alternativas para contribuir, como encargarse de llenar las fichas de caracterización o el formato huella de forma remota, mientras sus compañeras realizan el trabajo de campo. Reconoció que su ausencia puede desestabilizar al grupo, pero reiteró que no se debe a falta de voluntad de trabajar o a problemas con sus compañeras.</p>
+
+<p>Ante esta situación, el moderador, Jemerson, subrayó la importancia del trabajo colectivo y la organización del equipo. Sugirió distribuir las actividades teniendo en cuenta las cualidades y aptitudes de cada profesional, asignando roles específicos como la articulación con entidades (asociado al rol de gestor comunitario), la subida y organización de información, y la interacción directa con la comunidad. Recordó que, al momento de la contratación, se enfatizó la importancia de tener disponibilidad de tiempo para adaptarse a los horarios de las familias, especialmente en esta fase de focalización y priorización.</p>
+
+<p>Se recomendó que una sola persona se encargue de las articulaciones con entidades, apoyada por la coordinadora para las solicitudes formales por escrito, mientras los demás profesionales se enfocan en la vinculación y caracterización. Se enfatizó la necesidad de tener soportes escritos de las gestiones realizadas, incluyendo las respuestas negativas de las entidades, para poder justificar ante la sede nacional los desafíos encontrados.</p>
+
+<p>La coordinadora, Paula, respaldó las dificultades expuestas por el equipo y subrayó la importancia de trabajar en duplas por la vulnerabilidad de algunos barrios priorizados. Reiteró que, si bien se puede considerar el apoyo en tareas administrativas, la prioridad actual es el trabajo de campo para cumplir la meta. Instó al equipo a organizar su plan de trabajo, distribuir las actividades y mantener el compromiso diario para lograr el objetivo.</p>
+
+<p>Como resultado de la discusión, se estableció el compromiso de que el equipo se organice internamente, distribuya las tareas de manera efectiva y presente un plan de trabajo grupal detallado. Se recordó que ya cuentan con un cronograma en la ruta SharePoint que debe ser alimentado diariamente. Se hizo un llamado específico al profesional Heiner a comunicar cualquier inconveniente de disponibilidad con antelación para que el equipo pueda articularse y evitar retrasos en el trabajo de campo.</p>
+
+<h2>5. Importancia de la documentación y reporte diario de gestiones</h2>
+
+<p>Durante la reunión, se hizo un énfasis particular en la crucial importancia de mantener una documentación exhaustiva y un reporte diario detallado de todas las gestiones realizadas por el equipo. Se explicó que esta práctica no es una solicitud local, sino un requisito directo de la sede nacional en <b>Bogotá</b>, la cual realiza un seguimiento constante y minucioso del avance del programa.</p>
+
+<p>Se subrayó que el reporte diario debe incluir no solo los resultados positivos, como las familias vinculadas o caracterizadas, sino también todas las actividades llevadas a cabo, incluso aquellas que no arrojaron el resultado esperado. Esto incluye, por ejemplo, las llamadas realizadas a las bases de datos que no resultaron en vinculaciones, o las gestiones de articulación con entidades que no proporcionaron la información o el apoyo solicitado.</p>
+
+<p>La finalidad de documentar estas gestiones, exitosas o no, es proporcionar a la sede nacional en <b>Bogotá</b> una visión completa de los esfuerzos realizados y de los desafíos encontrados en el centro zonal. Se destacó la necesidad de contar con <b>soportes escritos</b> de estas gestiones. Como ejemplo, se mencionó la importancia de tener evidencia de las solicitudes formales (oficios) enviadas a entidades como la Comisaría de Familia, y de documentar las respuestas recibidas, incluso si estas fueron verbales y negativas. Estos soportes son fundamentales para justificar ante <b>Bogotá</b> por qué ciertas vías de acción no produjeron resultados y para demostrar que se realizaron los intentos necesarios.</p>
+
+<p>Se recordó al equipo que el reporte diario de las actividades debe ser enviado por <b>correo electrónico</b> al finalizar cada jornada. Este mecanismo permite a la regional y a la sede nacional monitorear el progreso en tiempo real y detectar rápidamente cualquier retraso en la vinculación de familias. Se advirtió que la falta de reporte o la ausencia de vinculaciones en un día determinado genera una alerta inmediata y puede derivar en la necesidad de convocar reuniones de seguimiento adicionales para comprender las causas y buscar soluciones.</p>
+
+<p>Aunque el equipo cuenta con un cronograma de trabajo en la ruta <b>SharePoint</b> que se alimenta semanalmente, se reiteró que el reporte diario por correo es el instrumento clave para el seguimiento inmediato y la verificación del cumplimiento de las metas diarias necesarias para alcanzar el objetivo de <b>125 familias</b> antes del <b>30 de julio</b>. Se enfatizó que cada día sin avance documentado incrementa la presión para los días subsiguientes.</p>
+
+<p>Finalmente, se recordó que la coordinadora, como supervisora del contrato, también debe estar informada diariamente de las actividades y gestiones realizadas por el equipo, recibiendo copia de estos reportes, ya que es su responsabilidad supervisar el cumplimiento de las metas y actividades contractuales.</p>
+
+<h2>6. Propuestas para Acelerar la Vinculación de Familias</h2>
+
+<p>Ante el reporte de avance presentado, que indica la necesidad de vincular aproximadamente <b>81 familias</b> adicionales en un plazo de cerca de 10 días para alcanzar la meta de <b>125 familias</b> antes del <b>30 de julio</b>, se abordaron diversas propuestas orientadas a acelerar significativamente el proceso de vinculación.</p>
+
+<p>Se reconoció que la estrategia de "voz a voz" o trabajo puerta a puerta, particularmente en el sector Covid, ha demostrado ser la más efectiva hasta el momento para focalizar familias, resultando en la identificación de aproximadamente <b>20 familias</b> que ya forman parte del total reportado. En este contexto, se planteó la necesidad de <b>intensificar</b> esta estrategia, considerándola la vía principal para lograr el objetivo en el tiempo restante.</p>
+
+<p>Como medida concreta para potenciar el "voz a voz", se propuso explorar e implementar la realización de <b>vinculaciones grupales</b>. Se sugirió que esta modalidad podría llevarse a cabo contactando a líderes comunitarios o personas significativas en los barrios priorizados, quienes podrían facilitar el acercamiento a múltiples familias interesadas. Asimismo, se planteó la posibilidad de solicitar a las familias ya vinculadas que recomienden a otras familias de su entorno que podrían beneficiarse del programa, facilitando así un acceso más rápido y con mayor confianza.</p>
+
+<p>Para dimensionar el esfuerzo requerido y asegurar el cumplimiento de la meta, se estableció la necesidad de vincular un promedio de aproximadamente <b>10 familias diarias</b>. Se enfatizó que este objetivo diario es crucial y que cualquier día en el que no se logre esta cifra implicará un aumento en el número de familias a vincular en los días subsiguientes, incrementando la presión sobre el equipo. Se puso como ejemplo que, si un día no se vinculan las 10 familias, al día siguiente se deberían vincular 20 para recuperar el ritmo.</p>
+
+<p>Se recordó que el reporte diario de actividades, cuya importancia fue discutida previamente, servirá como herramienta fundamental para monitorear el cumplimiento de esta meta diaria. Se advirtió que la ausencia de reporte o la falta de vinculaciones documentadas en un día determinado generará una alerta y podría derivar en la convocatoria inmediata de reuniones de seguimiento para analizar las causas y definir acciones correctivas.</p>
+
+<p>La coordinadora y los representantes de la regional respaldaron la urgencia de acelerar el proceso y la pertinencia de intensificar las estrategias de campo, como el "voz a voz" y las vinculaciones grupales, para alcanzar la meta del <b>30 de julio</b>. Se instó al equipo a organizar su plan de trabajo diario en función de este objetivo de vinculación de <b>10 familias diarias</b>.</p>
+
+<h2>7. Consideraciones de la Coordinadora</h2>
+
+<p>La Coordinadora, Paula, intervino hacia el final de la reunión, indicando que se encontraba en otra reunión con defensores de familia, pero que había escuchado las preocupaciones manifestadas por el equipo de profesionales. Validó las dificultades expuestas por las compañeras, comparándolas con experiencias previas en otras modalidades, especialmente en lo referente a la complejidad de las bases de datos proporcionadas y la disponibilidad de tiempo de las familias para recibir los acompañamientos.</p>
+
+<p>Resaltó el compromiso demostrado por el equipo, mencionando que han estado activamente gestionando oficios y buscando alternativas para avanzar. Destacó específicamente la estrategia del "voz a voz" como una iniciativa implementada por ellas mismas, incluso reuniéndose con presidentes de juntas de acción comunal para facilitar el acceso a los barrios.</p>
+
+<p>La Coordinadora subrayó la importancia fundamental de trabajar en <b>duplas</b>, haciendo una aclaración sobre la preocupación del equipo respecto a la disponibilidad del profesional Heiner. Enfatizó que la modalidad de trabajo requiere la presencia de dos profesionales, especialmente considerando la vulnerabilidad de algunos barrios priorizados, lo que hace inseguro realizar visitas de forma individual. Indicó que lo ideal es estar siempre de a dos para garantizar la seguridad y efectividad del trabajo de campo.</p>
+
+<p>Respecto a la sugerencia del profesional Heiner sobre la posibilidad de realizar trabajo remoto para tareas administrativas como el llenado de fichas, la Coordinadora manifestó que, si bien esa opción podría considerarse en otro momento, la prioridad actual es fortalecer el plan de trabajo en campo para cumplir las <b>metas diarias</b> de vinculación y caracterización. Recordó que el plazo para alcanzar la meta de <b>125 familias</b> es el <b>30 de julio</b> y que no es viable esperar a que las familias busquen al equipo; por el contrario, es necesario salir activamente a buscarlas, incluso tocando puertas más de una vez, basándose en la experiencia de años anteriores.</p>
+
+<p>Finalmente, la Coordinadora reiteró la necesidad de que el equipo se comprometa con el ejercicio y la actividad diaria para lograr el cumplimiento de la meta. Instó a fortalecer el plan de trabajo grupal para asegurar que cada uno de los cuatro profesionales contribuya al logro de las metas diarias establecidas.</p>
+
+<h2>8. Instrucciones finales y compromiso de plan de trabajo</h2>
+
+<p>Como cierre de la reunión y en respuesta a las dificultades y avances reportados, se impartieron las instrucciones finales y se establecieron los compromisos clave para el equipo de San Gil con el fin de asegurar el cumplimiento de la meta de vinculación de familias. Se enfatizó la necesidad de una organización interna efectiva y una distribución clara de las tareas entre los cuatro profesionales.</p>
+
+<p>Se solicitó al equipo que, como un primer compromiso formal, presenten un plan de trabajo grupal detallado. Este plan debe especificar claramente las actividades que realizará cada profesional, teniendo en cuenta las diferentes funciones requeridas para la modalidad, como la articulación con entidades, la gestión de la información y el trabajo directo en campo (vinculación y caracterización). Se recordó que ya cuentan con un cronograma en la ruta SharePoint, el cual debe ser alimentado diariamente para reflejar el avance y las actividades ejecutadas.</p>
+
+<p>Ante la urgencia de vincular aproximadamente <b>81 familias</b> en el tiempo restante hasta el <b>30 de julio</b>, se reiteró la expectativa de alcanzar un promedio de aproximadamente <b>10 familias diarias</b>. Se subrayó que este objetivo diario es fundamental y que no lograrlo en un día determinado implicará duplicar o triplicar el esfuerzo en las jornadas subsiguientes para recuperar el ritmo necesario. Se hizo un llamado a la conciencia sobre el impacto directo que tiene cada día sin vinculaciones en la presión para cumplir la meta final.</p>
+
+<p>Se vinculó directamente el reporte diario de actividades, cuya importancia fue destacada previamente, con el seguimiento del cumplimiento de este plan de trabajo y la meta diaria. Se explicó que la ausencia de reporte o la falta de vinculaciones documentadas en un día generará una alerta inmediata y podrá derivar en la convocatoria de reuniones de seguimiento adicionales para analizar las causas y definir acciones correctivas. Se instó al equipo a articular sus actividades y a medir el tiempo de manera eficiente para maximizar el trabajo de campo, especialmente en la estrategia de "voz a voz" y posibles vinculaciones grupales.</p>
+
+<p>Finalmente, la Coordinadora, Paula, respaldó las instrucciones impartidas, reiterando la importancia del compromiso individual y colectivo con el ejercicio diario. Subrayó que el cumplimiento de la meta depende directamente del trabajo activo en campo y de la ejecución del plan de trabajo grupal. Se hizo un llamado específico al profesional Heiner a comunicar cualquier inconveniente de disponibilidad con antelación para que el equipo pueda articularse y evitar que su ausencia retrase el trabajo de campo esencial para la vinculación de familias.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> 10:00 AM</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>El equipo de San Gil se organizará para distribuir tareas (articulaciones, vinculaciones, caracterizaciones) y trabajar en duplas para intensificar la vinculación de familias, especialmente a través del "voz a voz". – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>Presentar un plan de trabajo grupal detallando las actividades y responsabilidades específicas de cada profesional para cumplir la meta del 30 de julio. – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>El Gestor Comunitario liderará las articulaciones con entidades, apoyado por la Coordinadora para formalizar las solicitudes por escrito y tener soportes de la gestión. – <strong>Responsables:</strong> Gestor Comunitario, Coordinadora</li>
+        <li>Enviar reportes diarios por correo electrónico detallando todas las actividades realizadas, gestiones, resultados (positivos o negativos) y dificultades encontradas. – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>Einer comunicará sus dificultades de disponibilidad en las tardes y coordinará con el equipo para asegurar el trabajo en duplas o definir alternativas que no retrasen el avance. – <strong>Responsables:</strong> Einer, Equipo de San Gil</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión de Seguimiento Programa Somos Familia, Somos Comunidad</h1>
+  <p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+  <p><strong>Hora:</strong> Inicio: [HORA NO ESPECIFICADA] - Cierre: [HORA NO ESPECIFICADA]</p>
+  <p><strong>Lugar:</strong> [LUGAR NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> Jemerson</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Paula - Coordinadora</li>
+    <li>Liliana - [Rol no especificado]</li>
+    <li>Dora - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Ana Aguilar - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Heiner - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Juliana - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Juliet - Profesional Somos Familia, Somos Comunidad (San Gil)</li>
+    <li>Ana Karina - [Rol no especificado, conectada por teléfono]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Reporte de Avance del Programa Somos Familia, Somos Comunidad en San Gil.</li>
+    <li>Experiencia y Dificultades del Equipo de San Gil en Caracterización y Vinculación.</li>
+    <li>Estrategias de Vinculación Implementadas (Alianzas Estratégicas y Voz a Voz).</li>
+    <li>Discusión sobre el Trabajo en Equipo, Distribución de Tareas y Disponibilidad.</li>
+    <li>Importancia del Reporte Diario y Evidencias de Gestión.</li>
+    <li>Propuestas para Acelerar la Vinculación de Familias.</li>
+    <li>Compromisos y Seguimiento del Plan de Trabajo.</li>
+    <li>Consideraciones de la Coordinadora.</li>
+  </ol>
+</header>
+
+<h2>1. Introducción y objetivo de la reunión</h2>
+<p>La reunión fue convocada con el propósito fundamental de realizar un seguimiento detallado al avance del Programa Somos Familia, Somos Comunidad en la sede de San Gil. El moderador, Jemerson, expuso que el objetivo principal de este encuentro era asegurar que el equipo contara con las herramientas y el apoyo necesarios, tanto de la regional como del centro zonal, para alcanzar la meta establecida de vincular a <b>125 familias</b>.</p>
+<p>Asimismo, se planteó como parte del objetivo escuchar directamente a los profesionales del equipo de San Gil, con el fin de conocer sus experiencias en la implementación del programa, así como identificar y comprender las dificultades que han enfrentado en los procesos de caracterización y vinculación de las familias.</p>
+
+<h2>2. Reporte de avance y meta del programa Somos Familia, Somos Comunidad en San Gil</h2>
+
+<p>En el desarrollo de la reunión, se presentó el reporte detallado sobre el avance actual del Programa Somos Familia, Somos Comunidad en la sede de San Gil. Se informó que, a la fecha, se han reportado un total de <b>44 familias</b>, lo que representa un avance del <b>35%</b> respecto a la meta establecida. Se recordó que el compromiso adquirido con la sede nacional es alcanzar la vinculación de <b>125 familias</b> antes del <b>30 de julio</b>, fecha límite para la finalización de la meta del servicio.</p>
+
+<p>Se destacó que, según el reporte enviado a Bogotá la semana anterior, al 11 de julio se habían vinculado y priorizado <b>6 familias</b>. La cifra actual de 44 familias reportadas incluye las 20 familias focalizadas recientemente en el sector Covid, las cuales forman parte del total consolidado hasta el momento. Adicionalmente, se mencionó que existen 9 familias focalizadas en el sector Covid que aún no han sido reportadas formalmente en la ruta SharePoint, pero se espera su próxima inclusión.</p>
+
+<p>En cuanto al proceso de caracterización, se detalló que de una base de datos inicial de 38 familias proporcionada desde Bogotá, se identificó una familia repetida, ajustando el total a 37. De estas 37, se han caracterizado <b>29 familias</b>, quedando una pendiente de caracterizar para la semana en curso. Seis familias adicionales, identificadas a través del formato huella, decidieron no vincularse al programa, argumentando falta de tiempo debido a compromisos laborales o personales, a pesar de los intentos de contacto realizados en diferentes momentos.</p>
+
+<p>Se hizo referencia a la base de datos facilitada por el área de Atención al Usuario, que contenía aproximadamente 39 contactos. Tras realizar llamadas a estas familias, se encontró una respuesta mayoritariamente negativa o de resentimiento hacia la institución. Muchas familias manifestaron no querer tener vínculos con el ICBF, indicando que ya habían cerrado sus casos y no les interesaba reabrirlos. De esta base de datos, solo se logró vincular a <b>6 familias</b> a través de las llamadas realizadas por el equipo.</p>
+
+<p>Considerando el avance actual de 44 familias reportadas y la meta de 125 para el 30 de julio, se determinó que restan aproximadamente <b>81 familias</b> por vincular en un plazo de cerca de 10 días. Ante esta situación, se subrayó la urgencia de acelerar el proceso de vinculación. Se planteó la necesidad de vincular alrededor de <b>10 familias diarias</b> para poder cumplir con el objetivo en el tiempo restante. Se enfatizó que cada día sin vinculaciones incrementa el número de familias pendientes para los días subsiguientes, generando una presión adicional sobre el equipo.</p>
+
+<p>Se solicitó al equipo de San Gil mantener un reporte diario de las actividades realizadas, incluyendo las gestiones de caracterización y priorización de familias. Se explicó que este reporte es requerido directamente por la sede nacional en Bogotá, quienes realizan un seguimiento constante del avance del programa. Se hizo hincapié en la importancia de documentar no solo los resultados positivos, sino también las dificultades encontradas, como la negativa de las familias a vincularse o los problemas con las bases de datos, para que la sede nacional tenga conocimiento de los desafíos que enfrenta el centro zonal.</p>
+
+<h2>3. Discusión de dificultades y estrategias de caracterización y vinculación de familias</h2>
+
+<p>El equipo de profesionales de San Gil compartió sus experiencias y los desafíos encontrados en los procesos de caracterización y vinculación de familias al programa. Se detallaron las dificultades específicas que han impactado el avance hacia la meta establecida.</p>
+
+<p>En cuanto a la caracterización, se explicó que de una base de datos inicial de 38 familias proporcionada desde Bogotá, se identificó una familia repetida, ajustando el total a 37. De estas, se han caracterizado <b>29 familias</b>. Queda una familia pendiente de caracterizar para la semana en curso, ya que la persona se encontraba de viaje y programó el acompañamiento para estos días. Seis familias adicionales, identificadas a través del formato huella, decidieron no vincularse al programa. Argumentaron falta de tiempo debido a compromisos laborales o personales, a pesar de los intentos de contacto realizados en diferentes momentos. Se mencionó el caso particular de una familia en el barrio Vergel, a la que se intentó visitar en dos ocasiones sin éxito, y que finalmente manifestó no tener la disposición para continuar por cuestiones laborales y personales.</p>
+
+<p>Respecto a la vinculación, se hizo referencia a una base de datos facilitada por el área de Atención al Usuario, que contenía aproximadamente 39 contactos. Tras realizar llamadas a estas familias, el equipo encontró una respuesta mayoritariamente negativa o de resentimiento hacia la institución. Muchas familias expresaron no querer tener vínculos con el ICBF, indicando que ya habían cerrado sus casos y no les interesaba reabrirlos. De esta base de datos, solo se logró vincular a <b>6 familias</b> a través de las llamadas realizadas por los profesionales. Se señaló que algunos números de teléfono ya no correspondían a las familias contactadas, sugiriendo que la base de datos podría ser antigua.</p>
+
+<p>Se abordaron las estrategias de vinculación implementadas. Inicialmente, se buscaron alianzas estratégicas con diversas entidades. Se presentó el equipo ante la Comisaría de Familia, pero, según lo reportado, esta entidad se negó verbalmente a proporcionar acceso a bases de datos de familias, argumentando que manejaban casos delicados y temas de violencia intrafamiliar, y que dicha información no podía ser compartida. Se destacó que, aunque se presentó un oficio de solicitud avalado por la coordinadora, la respuesta negativa fue verbal y no formalizada por escrito. Se continuó con alianzas con el enlace de Educación (Secretaría de Desarrollo), logrando agendar una reunión con psicoorientadores de colegios del municipio para el miércoles a las 8 de la mañana. También se gestionó con la oficina del Sisbén, donde se hizo presencia y se está a la espera de una base de datos. Se contactó a la casa parroquial, presentando al grupo y quedando pendientes de una respuesta sobre posibles familias. Adicionalmente, se realizó una articulación con madres comunitarias en el Centro de Convivencia, presentando la modalidad y compartiendo contactos.</p>
+
+<p>Paralelamente a las alianzas, se ha estado trabajando intensamente con la estrategia de "voz a voz" o puerta a puerta, principalmente en el sector Covid, que abarca 17 barrios. Esta labor se realiza prioritariamente en las tardes, a partir de las 2 p.m., buscando encontrar a las personas en sus hogares. Se informó que, a través de esta estrategia, se han focalizado aproximadamente <b>20 familias</b>, las cuales están incluidas en el total de 44 familias reportadas hasta el momento. Se mencionó que existen 9 familias adicionales focalizadas en este sector que aún no han sido formalmente reportadas en la ruta SharePoint.</p>
+
+<p>Surgió una discusión sobre el trabajo en equipo y la distribución de tareas. Se señaló que, si bien las articulaciones con entidades se han realizado generalmente por el equipo completo o en duplas en las mañanas, la estrategia de voz a voz en las tardes ha enfrentado dificultades debido a la disponibilidad de uno de los miembros del equipo (Heiner), quien en ocasiones no ha podido acompañar en estas jornadas vespertinas por tener otro compromiso. Esto ha llevado a que las otras profesionales (Dora, Juliana, Juliet) deban trabajar en grupos de tres o dividirse, lo cual genera preocupación, especialmente en barrios con cierta vulnerabilidad, donde se considera esencial trabajar siempre en duplas por seguridad. Se reconoció que la falta de trabajo en duplas en la vinculación pudo haber afectado el avance, a diferencia del proceso de caracterización, que se realizó en duplas y avanzó rápidamente.</p>
+
+<p>El profesional Heiner explicó que, si bien tiene buena comunicación y se siente bien trabajando con el equipo y en la modalidad, en ocasiones se le dificulta asistir en las tardes debido a otro compromiso. Propuso buscar estrategias alternativas, como encargarse de llenar las fichas de caracterización o el formato huella de forma remota, mientras sus compañeras realizan el trabajo de campo. Reconoció que su ausencia puede desestabilizar al grupo, pero enfatizó su disposición a trabajar y su compromiso con la modalidad.</p>
+
+<p>Ante esta situación, se subrayó la importancia del trabajo colectivo y la organización del equipo. Se sugirió distribuir las actividades teniendo en cuenta las cualidades y aptitudes de cada profesional, asignando roles como la articulación con entidades (asociado al rol de gestor comunitario), la subida y organización de información, y la interacción directa con la comunidad. Se recordó que, al momento de la contratación, se enfatizó la importancia de tener disponibilidad de tiempo para adaptarse a los horarios de las familias, especialmente en esta fase de focalización y priorización.</p>
+
+<p>Se recomendó que una sola persona se encargue de las articulaciones con entidades, apoyada por la coordinadora para las solicitudes formales por escrito, mientras los demás profesionales se enfocan en la vinculación y caracterización. Se enfatizó la necesidad de tener soportes escritos de las gestiones realizadas, incluyendo las respuestas negativas de las entidades, para poder justificar ante la sede nacional los desafíos encontrados.</p>
+
+<p>Como estrategia para acelerar la vinculación, se propuso intensificar el "voz a voz" y explorar la posibilidad de realizar vinculaciones grupales. Esto podría lograrse contactando líderes comunitarios o personas significativas en los barrios, o pidiendo a las familias ya vinculadas que recomienden a otras familias que podrían beneficiarse del programa. Se reiteró la necesidad de vincular alrededor de <b>10 familias diarias</b> para alcanzar la meta del 30 de julio, advirtiendo que cada día sin vinculaciones aumenta la carga para los días siguientes.</p>
+
+<p>La coordinadora, Paula, intervino para respaldar las dificultades expuestas por el equipo, comparándolas con experiencias previas en otras modalidades, especialmente en lo referente a las bases de datos y la disponibilidad de las familias. Resaltó el compromiso del equipo y las estrategias implementadas, como el voz a voz y el contacto con presidentes de juntas de acción comunal. Subrayó la importancia de trabajar en duplas por la vulnerabilidad de algunos barrios priorizados y reiteró que, si bien se puede considerar el apoyo en tareas administrativas, la prioridad actual es el trabajo de campo para cumplir la meta. Instó al equipo a organizar su plan de trabajo, distribuir las actividades y mantener el compromiso diario para lograr el objetivo.</p>
+
+<p>Se concluyó que el equipo debe organizarse internamente, distribuir las tareas y presentar un plan de trabajo grupal detallado, el cual debe ser alimentado diariamente en la ruta SharePoint. Se hizo un llamado al profesional Heiner a comunicar cualquier inconveniente de disponibilidad para que el equipo pueda articularse y evitar retrasos en el trabajo.</p>
+
+<h2>4. Organización del equipo y distribución de tareas</h2>
+
+<p>Durante la reunión, se abordó de manera específica la dinámica de trabajo del equipo de San Gil, la distribución de las tareas y la disponibilidad de los profesionales, identificando estos aspectos como factores clave que impactan el avance en la vinculación de familias. Se planteó la necesidad de comprender cómo se están organizando para llevar a cabo las diferentes actividades del programa.</p>
+
+<p>El equipo explicó que las articulaciones con entidades, como la Comisaría de Familia, la Secretaría de Desarrollo (Educación), la oficina del Sisbén y la casa parroquial, se han realizado generalmente en las mañanas, con la participación de los cuatro profesionales, a menudo dividiéndose en duplas para visitar diferentes dependencias. Se mencionó una articulación con madres comunitarias en el Centro de Convivencia que se realizó en la tarde, a la que asistieron tres de los profesionales.</p>
+
+<p>Se detalló que la estrategia de "voz a voz" o trabajo puerta a puerta, intensificada en el sector Covid (que abarca 17 barrios) y considerada la más efectiva hasta el momento para focalizar familias, se lleva a cabo prioritariamente en las tardes, a partir de las 2 p.m., buscando encontrar a las familias en sus hogares. Sin embargo, se señaló que esta labor vespertina ha enfrentado dificultades debido a la disponibilidad de uno de los miembros del equipo, el profesional Heiner, quien en ocasiones no ha podido acompañar en estas jornadas por tener otro compromiso.</p>
+
+<p>Las profesionales Dora, Juliana y Juliet expresaron su preocupación por esta situación, ya que la ausencia de un integrante las obliga a trabajar en grupos de tres o a dividirse, lo cual consideran riesgoso, especialmente en barrios con cierta vulnerabilidad, donde se considera esencial trabajar siempre en duplas por seguridad. Reconocieron que la falta de trabajo en duplas en la fase de vinculación pudo haber afectado el ritmo de avance, a diferencia del proceso de caracterización, que se realizó consistentemente en duplas y avanzó rápidamente.</p>
+
+<p>El profesional Heiner intervino para explicar que, si bien tiene buena comunicación y se siente bien trabajando con el equipo y en la modalidad, en ocasiones se le dificulta asistir en las tardes debido a otro compromiso. Enfatizó su disposición a trabajar y su compromiso con la modalidad, proponiendo buscar estrategias alternativas para contribuir, como encargarse de llenar las fichas de caracterización o el formato huella de forma remota, mientras sus compañeras realizan el trabajo de campo. Reconoció que su ausencia puede desestabilizar al grupo, pero reiteró que no se debe a falta de voluntad de trabajar o a problemas con sus compañeras.</p>
+
+<p>Ante esta situación, el moderador, Jemerson, subrayó la importancia del trabajo colectivo y la organización del equipo. Sugirió distribuir las actividades teniendo en cuenta las cualidades y aptitudes de cada profesional, asignando roles específicos como la articulación con entidades (asociado al rol de gestor comunitario), la subida y organización de información, y la interacción directa con la comunidad. Recordó que, al momento de la contratación, se enfatizó la importancia de tener disponibilidad de tiempo para adaptarse a los horarios de las familias, especialmente en esta fase de focalización y priorización.</p>
+
+<p>Se recomendó que una sola persona se encargue de las articulaciones con entidades, apoyada por la coordinadora para las solicitudes formales por escrito, mientras los demás profesionales se enfocan en la vinculación y caracterización. Se enfatizó la necesidad de tener soportes escritos de las gestiones realizadas, incluyendo las respuestas negativas de las entidades, para poder justificar ante la sede nacional los desafíos encontrados.</p>
+
+<p>La coordinadora, Paula, respaldó las dificultades expuestas por el equipo y subrayó la importancia de trabajar en duplas por la vulnerabilidad de algunos barrios priorizados. Reiteró que, si bien se puede considerar el apoyo en tareas administrativas, la prioridad actual es el trabajo de campo para cumplir la meta. Instó al equipo a organizar su plan de trabajo, distribuir las actividades y mantener el compromiso diario para lograr el objetivo.</p>
+
+<p>Como resultado de la discusión, se estableció el compromiso de que el equipo se organice internamente, distribuya las tareas de manera efectiva y presente un plan de trabajo grupal detallado. Se recordó que ya cuentan con un cronograma en la ruta SharePoint que debe ser alimentado diariamente. Se hizo un llamado específico al profesional Heiner a comunicar cualquier inconveniente de disponibilidad con antelación para que el equipo pueda articularse y evitar retrasos en el trabajo de campo.</p>
+
+<h2>5. Importancia de la documentación y reporte diario de gestiones</h2>
+
+<p>Durante la reunión, se hizo un énfasis particular en la crucial importancia de mantener una documentación exhaustiva y un reporte diario detallado de todas las gestiones realizadas por el equipo. Se explicó que esta práctica no es una solicitud local, sino un requisito directo de la sede nacional en <b>Bogotá</b>, la cual realiza un seguimiento constante y minucioso del avance del programa.</p>
+
+<p>Se subrayó que el reporte diario debe incluir no solo los resultados positivos, como las familias vinculadas o caracterizadas, sino también todas las actividades llevadas a cabo, incluso aquellas que no arrojaron el resultado esperado. Esto incluye, por ejemplo, las llamadas realizadas a las bases de datos que no resultaron en vinculaciones, o las gestiones de articulación con entidades que no proporcionaron la información o el apoyo solicitado.</p>
+
+<p>La finalidad de documentar estas gestiones, exitosas o no, es proporcionar a la sede nacional en <b>Bogotá</b> una visión completa de los esfuerzos realizados y de los desafíos encontrados en el centro zonal. Se destacó la necesidad de contar con <b>soportes escritos</b> de estas gestiones. Como ejemplo, se mencionó la importancia de tener evidencia de las solicitudes formales (oficios) enviadas a entidades como la Comisaría de Familia, y de documentar las respuestas recibidas, incluso si estas fueron verbales y negativas. Estos soportes son fundamentales para justificar ante <b>Bogotá</b> por qué ciertas vías de acción no produjeron resultados y para demostrar que se realizaron los intentos necesarios.</p>
+
+<p>Se recordó al equipo que el reporte diario de las actividades debe ser enviado por <b>correo electrónico</b> al finalizar cada jornada. Este mecanismo permite a la regional y a la sede nacional monitorear el progreso en tiempo real y detectar rápidamente cualquier retraso en la vinculación de familias. Se advirtió que la falta de reporte o la ausencia de vinculaciones en un día determinado genera una alerta inmediata y puede derivar en la necesidad de convocar reuniones de seguimiento adicionales para comprender las causas y buscar soluciones.</p>
+
+<p>Aunque el equipo cuenta con un cronograma de trabajo en la ruta <b>SharePoint</b> que se alimenta semanalmente, se reiteró que el reporte diario por correo es el instrumento clave para el seguimiento inmediato y la verificación del cumplimiento de las metas diarias necesarias para alcanzar el objetivo de <b>125 familias</b> antes del <b>30 de julio</b>. Se enfatizó que cada día sin avance documentado incrementa la presión para los días subsiguientes.</p>
+
+<p>Finalmente, se recordó que la coordinadora, como supervisora del contrato, también debe estar informada diariamente de las actividades y gestiones realizadas por el equipo, recibiendo copia de estos reportes, ya que es su responsabilidad supervisar el cumplimiento de las metas y actividades contractuales.</p>
+
+<h2>6. Propuestas para Acelerar la Vinculación de Familias</h2>
+
+<p>Ante el reporte de avance presentado, que indica la necesidad de vincular aproximadamente <b>81 familias</b> adicionales en un plazo de cerca de 10 días para alcanzar la meta de <b>125 familias</b> antes del <b>30 de julio</b>, se abordaron diversas propuestas orientadas a acelerar significativamente el proceso de vinculación.</p>
+
+<p>Se reconoció que la estrategia de "voz a voz" o trabajo puerta a puerta, particularmente en el sector Covid, ha demostrado ser la más efectiva hasta el momento para focalizar familias, resultando en la identificación de aproximadamente <b>20 familias</b> que ya forman parte del total reportado. En este contexto, se planteó la necesidad de <b>intensificar</b> esta estrategia, considerándola la vía principal para lograr el objetivo en el tiempo restante.</p>
+
+<p>Como medida concreta para potenciar el "voz a voz", se propuso explorar e implementar la realización de <b>vinculaciones grupales</b>. Se sugirió que esta modalidad podría llevarse a cabo contactando a líderes comunitarios o personas significativas en los barrios priorizados, quienes podrían facilitar el acercamiento a múltiples familias interesadas. Asimismo, se planteó la posibilidad de solicitar a las familias ya vinculadas que recomienden a otras familias de su entorno que podrían beneficiarse del programa, facilitando así un acceso más rápido y con mayor confianza.</p>
+
+<p>Para dimensionar el esfuerzo requerido y asegurar el cumplimiento de la meta, se estableció la necesidad de vincular un promedio de aproximadamente <b>10 familias diarias</b>. Se enfatizó que este objetivo diario es crucial y que cualquier día en el que no se logre esta cifra implicará un aumento en el número de familias a vincular en los días subsiguientes, incrementando la presión sobre el equipo. Se puso como ejemplo que, si un día no se vinculan las 10 familias, al día siguiente se deberían vincular 20 para recuperar el ritmo.</p>
+
+<p>Se recordó que el reporte diario de actividades, cuya importancia fue discutida previamente, servirá como herramienta fundamental para monitorear el cumplimiento de esta meta diaria. Se advirtió que la ausencia de reporte o la falta de vinculaciones documentadas en un día determinado generará una alerta y podría derivar en la convocatoria inmediata de reuniones de seguimiento para analizar las causas y definir acciones correctivas.</p>
+
+<p>La coordinadora y los representantes de la regional respaldaron la urgencia de acelerar el proceso y la pertinencia de intensificar las estrategias de campo, como el "voz a voz" y las vinculaciones grupales, para alcanzar la meta del <b>30 de julio</b>. Se instó al equipo a organizar su plan de trabajo diario en función de este objetivo de vinculación de <b>10 familias diarias</b>.</p>
+
+<h2>7. Consideraciones de la Coordinadora</h2>
+
+<p>La Coordinadora, Paula, intervino hacia el final de la reunión, indicando que se encontraba en otra reunión con defensores de familia, pero que había escuchado las preocupaciones manifestadas por el equipo de profesionales. Validó las dificultades expuestas por las compañeras, comparándolas con experiencias previas en otras modalidades, especialmente en lo referente a la complejidad de las bases de datos proporcionadas y la disponibilidad de tiempo de las familias para recibir los acompañamientos.</p>
+
+<p>Resaltó el compromiso demostrado por el equipo, mencionando que han estado activamente gestionando oficios y buscando alternativas para avanzar. Destacó específicamente la estrategia del "voz a voz" como una iniciativa implementada por ellas mismas, incluso reuniéndose con presidentes de juntas de acción comunal para facilitar el acceso a los barrios.</p>
+
+<p>La Coordinadora subrayó la importancia fundamental de trabajar en <b>duplas</b>, haciendo una aclaración sobre la preocupación del equipo respecto a la disponibilidad del profesional Heiner. Enfatizó que la modalidad de trabajo requiere la presencia de dos profesionales, especialmente considerando la vulnerabilidad de algunos barrios priorizados, lo que hace inseguro realizar visitas de forma individual. Indicó que lo ideal es estar siempre de a dos para garantizar la seguridad y efectividad del trabajo de campo.</p>
+
+<p>Respecto a la sugerencia del profesional Heiner sobre la posibilidad de realizar trabajo remoto para tareas administrativas como el llenado de fichas, la Coordinadora manifestó que, si bien esa opción podría considerarse en otro momento, la prioridad actual es fortalecer el plan de trabajo en campo para cumplir las <b>metas diarias</b> de vinculación y caracterización. Recordó que el plazo para alcanzar la meta de <b>125 familias</b> es el <b>30 de julio</b> y que no es viable esperar a que las familias busquen al equipo; por el contrario, es necesario salir activamente a buscarlas, incluso tocando puertas más de una vez, basándose en la experiencia de años anteriores.</p>
+
+<p>Finalmente, la Coordinadora reiteró la necesidad de que el equipo se comprometa con el ejercicio y la actividad diaria para lograr el cumplimiento de la meta. Instó a fortalecer el plan de trabajo grupal para asegurar que cada uno de los cuatro profesionales contribuya al logro de las metas diarias establecidas.</p>
+
+<h2>8. Instrucciones finales y compromiso de plan de trabajo</h2>
+
+<p>Como cierre de la reunión y en respuesta a las dificultades y avances reportados, se impartieron las instrucciones finales y se establecieron los compromisos clave para el equipo de San Gil con el fin de asegurar el cumplimiento de la meta de vinculación de familias. Se enfatizó la necesidad de una organización interna efectiva y una distribución clara de las tareas entre los cuatro profesionales.</p>
+
+<p>Se solicitó al equipo que, como un primer compromiso formal, presenten un plan de trabajo grupal detallado. Este plan debe especificar claramente las actividades que realizará cada profesional, teniendo en cuenta las diferentes funciones requeridas para la modalidad, como la articulación con entidades, la gestión de la información y el trabajo directo en campo (vinculación y caracterización). Se recordó que ya cuentan con un cronograma en la ruta SharePoint, el cual debe ser alimentado diariamente para reflejar el avance y las actividades ejecutadas.</p>
+
+<p>Ante la urgencia de vincular aproximadamente <b>81 familias</b> en el tiempo restante hasta el <b>30 de julio</b>, se reiteró la expectativa de alcanzar un promedio de aproximadamente <b>10 familias diarias</b>. Se subrayó que este objetivo diario es fundamental y que no lograrlo en un día determinado implicará duplicar o triplicar el esfuerzo en las jornadas subsiguientes para recuperar el ritmo necesario. Se hizo un llamado a la conciencia sobre el impacto directo que tiene cada día sin vinculaciones en la presión para cumplir la meta final.</p>
+
+<p>Se vinculó directamente el reporte diario de actividades, cuya importancia fue destacada previamente, con el seguimiento del cumplimiento de este plan de trabajo y la meta diaria. Se explicó que la ausencia de reporte o la falta de vinculaciones documentadas en un día generará una alerta inmediata y podrá derivar en la convocatoria de reuniones de seguimiento adicionales para analizar las causas y definir acciones correctivas. Se instó al equipo a articular sus actividades y a medir el tiempo de manera eficiente para maximizar el trabajo de campo, especialmente en la estrategia de "voz a voz" y posibles vinculaciones grupales.</p>
+
+<p>Finalmente, la Coordinadora, Paula, respaldó las instrucciones impartidas, reiterando la importancia del compromiso individual y colectivo con el ejercicio diario. Subrayó que el cumplimiento de la meta depende directamente del trabajo activo en campo y de la ejecución del plan de trabajo grupal. Se hizo un llamado específico al profesional Heiner a comunicar cualquier inconveniente de disponibilidad con antelación para que el equipo pueda articularse y evitar que su ausencia retrase el trabajo de campo esencial para la vinculación de familias.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> 10:00 AM</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>El equipo de San Gil se organizará para distribuir tareas (articulaciones, vinculaciones, caracterizaciones) y trabajar en duplas para intensificar la vinculación de familias, especialmente a través del "voz a voz". – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>Presentar un plan de trabajo grupal detallando las actividades y responsabilidades específicas de cada profesional para cumplir la meta del 30 de julio. – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>El Gestor Comunitario liderará las articulaciones con entidades, apoyado por la Coordinadora para formalizar las solicitudes por escrito y tener soportes de la gestión. – <strong>Responsables:</strong> Gestor Comunitario, Coordinadora</li>
+        <li>Enviar reportes diarios por correo electrónico detallando todas las actividades realizadas, gestiones, resultados (positivos o negativos) y dificultades encontradas. – <strong>Responsable:</strong> Equipo de San Gil</li>
+        <li>Einer comunicará sus dificultades de disponibilidad en las tardes y coordinará con el equipo para asegurar el trabajo en duplas o definir alternativas que no retrasen el avance. – <strong>Responsables:</strong> Einer, Equipo de San Gil</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/whatsapp_audio_2025-07-14_at_7.31.50_pm/whatsapp_audio_2025-07-14_at_7.31.50_pm_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/QikTj4z7RpyBy2J
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/QikTj4z7RpyBy2J
+Generando URL pública para Transcripcion.txt (EXISTENTE): whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/whatsapp_audio_2025-07-14_at_7.31.50_pm/whatsapp_audio_2025-07-14_at_7.31.50_pm_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/G8jxaEwD95ZaiiN
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/G8jxaEwD95ZaiiN
