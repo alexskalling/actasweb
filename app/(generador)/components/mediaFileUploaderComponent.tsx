@@ -712,9 +712,9 @@ export default function MediaFileUploaderComponent({
                       <div className="text-xs text-purple-600 mt-1 space-y-1">
                         <p>💡 En iPhone:</p>
                         <ul className="list-disc list-inside ml-2 space-y-1">
-                          <li>Selecciona desde "Archivos"</li>
-                          <li>O usa "Grabar" para crear nuevo audio</li>
-                          <li>O selecciona desde "Fotos" si es video</li>
+                          <li>Selecciona desde &quot;Archivos&quot;</li>
+                          <li>O usa &quot;Grabar&quot; para crear nuevo audio</li>
+                          <li>O selecciona desde &quot;Fotos&quot; si es video</li>
                         </ul>
                       </div>
                     )}
