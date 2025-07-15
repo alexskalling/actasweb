@@ -50,7 +50,7 @@ export default function ActaEmail({ name, url, transcription, file }: ActaEmailP
               📄 Transcripción:
             </Text>
             <a
-              href={`${process.env.NEXT_PUBLIC_AMBIENTE_URL}api/descarga?url=${encodeURIComponent(transcription)}`}
+              href={`${process.env.NEXT_PUBLIC_AMBIENTE_URL}/api/descarga?url=${encodeURIComponent(transcription)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -69,7 +69,7 @@ export default function ActaEmail({ name, url, transcription, file }: ActaEmailP
               🔗 Enlace del Borrador de acta:
             </Text>
             <a
-              href={`${process.env.NEXT_PUBLIC_AMBIENTE_URL}api/descarga?url=${encodeURIComponent(url)}`}
+              href={`${process.env.NEXT_PUBLIC_AMBIENTE_URL}/api/descarga?url=${encodeURIComponent(url)}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{
