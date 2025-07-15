@@ -93,7 +93,7 @@ export async function GuardarNuevoProceso(
     console.log("✅ Acta creada");
     return { status: 'success', message: 'Acta creada correctamente.' };
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("❌ Error al guardar el acta:", error);
     throw error;
   }

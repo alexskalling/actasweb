@@ -30,6 +30,12 @@ export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
 }: MediaSelectorProps) {
+  // Función para detectar cualquier navegador en iOS
+  const isIOSDevice = () => {
+    if (typeof window === 'undefined') return false;
+    const userAgent = window.navigator.userAgent;
+    return /iPad|iPhone|iPod/.test(userAgent);
+  };
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
   const [preview, setPreview] = React.useState<string | null>(null);
   const [error, setError] = React.useState<string | null>(null);
@@ -67,6 +73,27 @@ export default function MediaFileUploaderComponent({
         'event_category': 'proceso_acta',
         'event_label': 'usuario_selecciona_archivo'
       });
+    }
+
+    // Manejo específico para dispositivos iOS
+    if (isIOSDevice() && !file) {
+      setError("Por favor selecciona un archivo válido. En iPhone, asegúrate de seleccionar desde 'Archivos' o usar la opción 'Grabar'.");
+      return;
+    }
+
+    // Validación adicional para iOS
+    if (isIOSDevice() && file) {
+      // Verificar que el archivo tenga un tamaño válido
+      if (file.size === 0) {
+        setError("El archivo seleccionado está vacío. Por favor selecciona un archivo válido.");
+        return;
+      }
+      
+      // Verificar que el archivo tenga un nombre válido
+      if (!file.name || file.name.trim() === '') {
+        setError("El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo.");
+        return;
+      }
     }
 
     //@ts-expect-error revisar despues
@@ -681,14 +708,27 @@ export default function MediaFileUploaderComponent({
                         Haz click para seleccionar un archivo
                       </span>{" "}
                     </p>
+                    {isIOSDevice() && (
+                      <div className="text-xs text-purple-600 mt-1 space-y-1">
+                        <p>💡 En iPhone:</p>
+                        <ul className="list-disc list-inside ml-2 space-y-1">
+                          <li>Selecciona desde &quot;Archivos&quot;</li>
+                          <li>O usa &quot;Grabar&quot; para crear nuevo audio</li>
+                          <li>O selecciona desde &quot;Fotos&quot; si es video</li>
+                        </ul>
+                      </div>
+                    )}
                   </div>
                   <input
                     id="media-upload"
                     type="file"
                     className="hidden"
-                    accept={accept}
+                    accept={isIOSDevice() ? "audio/*,video/*,.m4a,.mp3,.wav,.mp4,.mov,.aac,.ogg" : accept}
                     onChange={handleFileSelect}
                     aria-label="Seleccionar archivo de audio o video"
+                    capture={isIOSDevice() ? undefined : "environment"}
+                    multiple={false}
+                    style={{ display: 'none' }}
                   />
                 </label>
               </div>
