@@ -32,12 +32,6 @@ export default function PlataformaPage() {
       });
     }
   }, [session]);
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.opener) {
-      window.opener.postMessage("auth-completed", "*");
-      window.close();
-    }
-  }, []);
 
   return (
     <>

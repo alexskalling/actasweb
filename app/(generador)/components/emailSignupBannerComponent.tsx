@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -10,7 +10,7 @@ export default function EmailSignupBannerComponent() {
     const listener = async (event: MessageEvent) => {
       if (event.data?.type === "auth-completed" && event.data?.source === "banner") {
         const session = await getSession();
-        console.log("Sesión actualizada desde BANNER:", session);
+        console.log("✅ Sesión actualizada desde BANNER:", session);
         // Aquí puedes actualizar estado global si lo necesitas
       }
     };
@@ -28,19 +28,8 @@ export default function EmailSignupBannerComponent() {
       });
     }
 
-    const popup = window.open(
-      `/login?source=banner`,
-      "loginPopup",
-      "width=500,height=600"
-    );
-
-    const pollTimer = window.setInterval(async () => {
-      if (popup?.closed) {
-        window.clearInterval(pollTimer);
-        const session = await getSession();
-        console.log("Sesión actualizada (polling BANNER):", session);
-      }
-    }, 500);
+    // Abre en una pestaña nueva
+    window.open(`/login?source=banner`, "_blank");
   };
 
   return (

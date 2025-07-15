@@ -94,7 +94,7 @@ export default function Home() {
       )}
 
       <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
-
+<NavComponent/>
         {!session ? (<>
           <EmailSignupBannerComponent />
         </>) : (

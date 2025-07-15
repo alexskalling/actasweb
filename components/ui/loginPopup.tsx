@@ -5,11 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import logo from "@/app/(generador)/assets/logo-actas-ai-blanco.svg";
 
-export default function LoginPopup({
-  callbackUrl = "/plataforma",
-}: {
-  callbackUrl?: string;
-}) {
+export default function LoginPopup({ callbackUrl = "/plataforma" }: { callbackUrl?: string }) {
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -23,9 +19,12 @@ export default function LoginPopup({
           "*"
         );
         window.close();
+      } else {
+        // Si no es un popup, solo redirige normalmente
+        window.location.href = callbackUrl;
       }
     }
-  }, [session]);
+  }, [session, callbackUrl]);
 
   const handleSignIn = (provider: string) => {
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
@@ -35,12 +34,12 @@ export default function LoginPopup({
         metodo_login: provider,
       });
     }
+
     signIn(provider, { callbackUrl });
   };
 
   return (
     <div className="max-w-md w-full bg-white/10 backdrop-blur-md shadow-2xl rounded-2xl p-8 space-y-6 border border-white/20">
-      {/* Logo y título */}
       <div className="flex flex-col items-center">
         <Image
           src={logo}
@@ -60,18 +59,12 @@ export default function LoginPopup({
         )}
       </div>
 
-      {/* Botones sociales */}
       <div className="space-y-3">
         <button
           onClick={() => handleSignIn("google")}
           className="w-full flex items-center gap-3 px-4 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition"
         >
-          <Image
-            src="/google-logo.svg"
-            alt="Google"
-            width={20}
-            height={20}
-          />
+          <Image src="/google-logo.svg" alt="Google" width={20} height={20} />
           <span>Continuar con Google</span>
         </button>
 
@@ -79,12 +72,7 @@ export default function LoginPopup({
           onClick={() => handleSignIn("azure-ad")}
           className="w-full flex items-center gap-3 px-4 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition"
         >
-          <Image
-            src="/microsoft-logo.svg"
-            alt="Microsoft"
-            width={20}
-            height={20}
-          />
+          <Image src="/microsoft-logo.svg" alt="Microsoft" width={20} height={20} />
           <span>Continuar con Microsoft</span>
         </button>
       </div>

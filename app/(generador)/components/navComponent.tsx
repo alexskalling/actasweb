@@ -19,6 +19,7 @@ export default function NavComponent() {
         console.log("Sesión actualizada desde NAVBAR:", session);
 
         if (session) {
+          console.log("Redirigiendo a /plataforma");
           router.push("/plataforma");
         }
       }
@@ -28,23 +29,11 @@ export default function NavComponent() {
     return () => window.removeEventListener("message", listener);
   }, [router]);
 
-  const handleLoginPopup = () => {
-    const popup = window.open(
+  const handleLoginNewTab = () => {
+    window.open(
       `/login?source=navbar`,
-      "loginPopup",
-      "width=500,height=600"
+      "_blank"
     );
-
-    const pollTimer = window.setInterval(async () => {
-      if (popup?.closed) {
-        window.clearInterval(pollTimer);
-        const session = await getSession();
-        console.log("Sesión actualizada (polling NAVBAR):", session);
-        if (session) {
-          router.push("/plataforma");
-        }
-      }
-    }, 500);
   };
 
   return (
@@ -75,7 +64,7 @@ export default function NavComponent() {
             )
           ) : (
             <button
-              onClick={handleLoginPopup}
+              onClick={handleLoginNewTab}
               className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white"
             >
               Iniciar sesión
