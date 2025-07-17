@@ -2875,3 +2875,630 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 20250710_220713_Trans
 Compartiendo archivo existente para obtener URL pública: /Actas/20250710_220713/20250710_220713_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/qoMzgHaTZEb3Nk2
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/qoMzgHaTZEb3Nk2
+Verificando si existe transcripción: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt en carpeta enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita
+[2025-07-17T16:55:28.242Z] Verificando existencia del archivo enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt en Nextcloud carpeta enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T16:55:29.571Z] Archivo "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita".
+Transcripción existente encontrada: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita. Obteniendo contenido.
+Verificando contenido existente: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt
+[2025-07-17T16:55:30.749Z] Verificando existencia del archivo enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt en Nextcloud carpeta enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T16:55:31.522Z] Archivo "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt" NO encontrado en Nextcloud en la carpeta "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita".
+Generando contenido para: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.mp4
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
+[2025-07-17T16:55:31.523Z] Verificando existencia del archivo enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt en Nextcloud carpeta enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T16:55:32.313Z] Archivo "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita".
+Transcripción encontrada: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt. Obteniendo contenido.
+[2025-07-17T16:55:33.285Z] Contenido del archivo "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.mp4
+Guardando contenido en Nextcloud: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt
+Contenido guardado: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.mp4 en carpeta: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita
+Verificando Borrador .docx existente: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+[2025-07-17T17:01:41.487Z] Verificando existencia del archivo enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx en Nextcloud carpeta enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T17:01:42.252Z] Archivo "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx" NO encontrado en Nextcloud en la carpeta "enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+Preparando guardado .docx en Nextcloud: enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión sobre Diagnóstico y Protocolo de Acción Conjunta URT - Rama Judicial</h1>
+  <p><strong>Fecha:</strong> [NO ESPECIFICADO] de [NO ESPECIFICADO] de [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> Rita</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Jamie - Ex Fondo URT</li>
+    <li>Melissa - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Seguimiento general a sentencias de restitución de tierras</li>
+    <li>Acciones de la Unidad de Restitución de Tierras en el seguimiento de sentencias (2024 y años anteriores)</li>
+    <li>Implementación de la medida de participación del núcleo familiar en proyectos productivos</li>
+    <li>Análisis y ponderación de la ficha de análisis para prelación de casos</li>
+    <li>Interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales</li>
+    <li>Guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento</li>
+    <li>Análisis y valoración de la efectividad de medidas con enfoque de género</li>
+    <li>Obstáculos para el cumplimiento de órdenes con enfoque de género</li>
+    <li>Buenas prácticas y experiencias exitosas en la Unidad y la rama judicial</li>
+    <li>Fortalecimiento institucional de la Unidad para mejorar el seguimiento a sentencias con enfoque de género</li>
+  </ol>
+</header>
+
+<h2>1. Verificación de información del equipo de seguimiento y fondo para diagnóstico y protocolo de acción conjunta URT y rama judicial</h2>
+
+<p>Se inició la discusión con el objetivo de verificar la información disponible desde el equipo de seguimiento y el Fondo, con el fin de nutrir el diagnóstico y el protocolo de acción conjunta entre la URT y la rama judicial. Rita dirigió la conversación, formulando preguntas específicas para obtener información detallada sobre las acciones realizadas y los datos disponibles.</p>
+
+<p>Jamie, ex miembro del Fondo URT, aclaró que su información se limitaría a las acciones realizadas hasta el año anterior. Para obtener información sobre las acciones actuales, sugirió contactar a <b>John Álvarez</b> (encargado de las tablas, indicadores y datos de cumplimiento de sentencias, incluyendo datos desagregados por género) y <b>Giselle Cáceres</b> (responsable del acompañamiento y verificación del cumplimiento de indicadores COMPES en temas de género). Adicionalmente, recomendó contactar a <b>Elizabeth</b>, actual coordinadora de proyectos productivos, para obtener información sobre titularidad y acciones afirmativas en proyectos productivos para familias restituidas.</p>
+
+<p>En relación con las acciones realizadas por la Unidad de Restitución de Tierras en el seguimiento de sentencias hasta 2024, Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie destacó la importancia de tener en cuenta la prelación en el análisis de la sentencia al implementar proyectos productivos. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>Melissa intervino para preguntar sobre la fecha de inicio de la medida que requería la participación de todo el núcleo familiar, con el fin de evaluar su impacto en el tiempo. Jamie respondió que la implementación de esta medida se intensificó alrededor de abril. Sugirió revisar las tablas de John Álvarez para analizar la titularidad y evaluar el impacto de la medida. Aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora Elizabeth debería tener información clara al respecto.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>En cuanto a las órdenes judiciales, Jamie aclaró que la ficha de análisis incluía todas las órdenes, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>Jamie explicó que la Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de 2022 aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>En cuanto a las guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento, Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer. Se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita.</p>
+
+<p>Jamie indicó que no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había cumplimiento de las órdenes. La ficha no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<p>En cuanto a los obstáculos para el cumplimiento de las órdenes con enfoque de género, Jamie mencionó la falta de conocimiento y sensibilización de los funcionarios y funcionarias, así como el cambio constante de personal. Propuso la sensibilización como una acción afirmativa clave. Otros obstáculos identificados fueron la falta de enfoque de género en algunas órdenes judiciales, la falta de seguimiento constante, la falta de articulación interinstitucional y el desconocimiento de las mujeres de sus derechos y de la sentencia. También mencionó la demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>En cuanto a los obstáculos desde otras entidades y desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<p>En cuanto a las buenas prácticas y experiencias exitosas, Jamie mencionó la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo. Destacó la participación del grupo Fondo en espacios donde se hablaba del tema de género y la formulación de acciones afirmativas para las mujeres restituidas desde la etapa de posfallo.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<p>Finalmente, Jamie se comprometió a buscar los manuales y documentos mencionados y a enviarlos a Rita. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información. Se acordó mantener la comunicación a través de WhatsApp para cualquier dato adicional.</p>
+
+<h2>2. Acciones de la Unidad de Restitución de Tierras en el seguimiento de sentencias (2024 y años anteriores)</h2>
+
+<p>En relación con las acciones realizadas por la Unidad de Restitución de Tierras en el seguimiento de sentencias hasta <b>2024</b>, Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie destacó la importancia de tener en cuenta la prelación en el análisis de la sentencia al implementar proyectos productivos. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>La implementación de la medida que requería la participación de todo el núcleo familiar se intensificó alrededor de abril. Se sugirió revisar las tablas de John Álvarez para analizar la titularidad y evaluar el impacto de la medida. Se aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora Elizabeth debería tener información clara al respecto.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>La Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de <b>2022</b> aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer. Se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita.</p>
+
+<p>Jamie indicó que no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había cumplimiento de las órdenes. La ficha no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<p>Jamie mencionó la falta de conocimiento y sensibilización de los funcionarios y funcionarias, así como el cambio constante de personal, como obstáculos para el cumplimiento de las órdenes con enfoque de género. Propuso la sensibilización como una acción afirmativa clave. Otros obstáculos identificados fueron la falta de enfoque de género en algunas órdenes judiciales, la falta de seguimiento constante, la falta de articulación interinstitucional y el desconocimiento de las mujeres de sus derechos y de la sentencia. También mencionó la demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<p>Jamie mencionó la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo como buenas prácticas.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<h2>3. Análisis de fichas de sentencias y datos importantes para prelación y enfoque diferencial</h2>
+
+<p>Durante la reunión, se discutió el análisis de las fichas de sentencias y los datos relevantes para la prelación y el enfoque diferencial en el seguimiento de las órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>Jamie indicó que la información de identificación de las personas en la ficha estaba desagregada por sexo, edad y condición.</p>
+
+<h2>4. Implementación de la medida de participación del núcleo familiar en proyectos productivos</h2>
+
+<p>Durante la reunión, se abordó la implementación de la medida de participación del núcleo familiar en proyectos productivos, con el objetivo de asegurar que todos los beneficiarios del derecho de restitución estén informados y participen en las decisiones relacionadas con la titularidad y el desarrollo de los proyectos. Jamie, ex miembro del Fondo URT, proporcionó información sobre las acciones realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis para determinar si había una mujer en la titularidad del reconocimiento de restitución. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto productivo. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>Melissa preguntó sobre la fecha de inicio de la medida que requería la participación de todo el núcleo familiar, con el fin de evaluar su impacto en el tiempo. Jamie respondió que la implementación de esta medida se intensificó alrededor de abril. Sugirió revisar las tablas de <b>John Álvarez</b> para analizar la titularidad y evaluar el impacto de la medida. Aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora <b>Elizabeth</b> debería tener información clara al respecto.</p>
+
+<p>Jamie mencionó que los manuales operativos de la entidad contemplan la participación del núcleo familiar, incluyendo a los jóvenes, en la implementación y desarrollo de los proyectos productivos.</p>
+
+<h2>5. Ponderación y calificación en la ficha de análisis para prelación</h2>
+
+<p>Durante la reunión, se discutió la ponderación y calificación en la ficha de análisis utilizada para establecer la prelación de casos en la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó detalles sobre cómo se realizaba este proceso hasta <b>2024</b>.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Este análisis se realizaba tras la emisión de una sentencia de restitución, con el objetivo de determinar si había una mujer en la titularidad del reconocimiento de restitución. Se identificaban datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica.</p>
+
+<p>Sin embargo, Jamie reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<h2>6. Sensibilización en materia de género en el territorio</h2>
+
+<p>Durante la discusión sobre el análisis de las fichas de sentencias y los datos relevantes para la prelación y el enfoque diferencial, Jamie, ex miembro del Fondo URT, destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante. Mencionó que la sensibilización en este tema era baja entre los profesionales de la unidad hasta <b>2024</b>.</p>
+
+<p>Jamie relató que, en algunas ocasiones, durante reuniones con todas las misionales, se ponía de presente la necesidad de sensibilizar en el tema de género a los profesionales de la unidad en territorio. Describió incidentes en los que compañeros de la territorial de Magdalena se referían despectivamente a las mujeres de Asomoproca, lo que evidenciaba la falta de enfoque y sensibilización en el tema.</p>
+
+<p>Jamie propuso la sensibilización como una acción afirmativa clave para abordar este obstáculo. Señaló que el cambio constante de funcionarios no permitía la continuidad del trabajo que se venía adelantando con personas que sí tuvieran conocimiento o fueran sensibles al tema. La propuesta de acciones afirmativas que incluía la sensibilización para funcionarios y colaboradores de la unidad en temas de género e enfoques interseccionales no fue suscrita por la coordinadora en ese momento por un tema presupuestal.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<h2>7. Interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales</h2>
+
+<p>Durante la reunión, se abordó el tema de la interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie explicó que, en casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>La Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de <b>2022</b> aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<h2>8. Guías, líneas técnicas e instrumentos para el proceso de cumplimiento</h2>
+
+<p>Durante la reunión, se abordó el tema de las guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento de las órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre los documentos y procedimientos utilizados hasta <b>2024</b>.</p>
+
+<p>Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer en el proceso de cumplimiento. Estos documentos incluyen instrucciones sobre el análisis de la sentencia, la identificación de los responsables y las acciones a seguir para garantizar el cumplimiento de las órdenes judiciales.</p>
+
+<p>Jamie se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita para su revisión y análisis. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información.</p>
+
+<p>En relación con el enfoque de género en estos instrumentos, Jamie indicó que los manuales operativos del grupo Fondo incluían menciones al enfoque de género. Sin embargo, señaló que la ficha de análisis utilizada para el seguimiento de las órdenes judiciales no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<h2>9. Análisis y valoración de la efectividad de medidas con enfoque de género</h2>
+
+<p>Durante la reunión, se abordó el tema del análisis y valoración de la efectividad de las medidas con enfoque de género implementadas por la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, hasta <b>2024</b>, no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había un cumplimiento total de las órdenes judiciales. La ficha de análisis utilizada para el seguimiento de las órdenes judiciales no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de ese año.</p>
+
+<p>Jamie mencionó que, en la práctica, no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>A pesar de la falta de un análisis formal, Jamie mencionó algunas acciones que podrían considerarse como buenas prácticas, como la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo.</p>
+
+<h2>10. Obstáculos para el cumplimiento de órdenes con enfoque de género</h2>
+
+<p>Durante la reunión, se abordaron los obstáculos identificados para el cumplimiento de las órdenes judiciales con enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie identificó como uno de los principales obstáculos la falta de conocimiento y sensibilización de los funcionarios y funcionarias de la URT en temas de género. Mencionó que el cambio constante de personal dificultaba la continuidad del trabajo con aquellos que sí tenían conocimiento o eran sensibles al tema. Propuso la sensibilización como una acción afirmativa clave para abordar este problema.</p>
+
+<p>Otro obstáculo señalado fue la falta de enfoque de género en algunas órdenes judiciales, que a menudo eran muy generales y no consideraban las necesidades específicas de las mujeres beneficiarias. Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas.</p>
+
+<p>La falta de seguimiento constante y una buena articulación interinstitucional también fueron identificados como obstáculos. Jamie mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT. Además, señaló que la falta de coordinación con otras entidades, como el Ministerio de Vivienda, afectaba el cumplimiento de las órdenes relacionadas con el acceso a subsidios de vivienda.</p>
+
+<p>El desconocimiento de las mujeres de sus derechos y de la sentencia también fue mencionado como un obstáculo. Jamie señaló que, en algunos casos, las mujeres no conocían los detalles de la sentencia o no entendían sus derechos, lo que dificultaba su empoderamiento y participación en el proceso de restitución.</p>
+
+<p>La demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias también fueron identificadas como dificultades. Jamie mencionó que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Señaló que muchas de las beneficiarias eran adultas mayores con enfermedades y situaciones de vulnerabilidad complejas, lo que hacía aún más urgente el cumplimiento de las órdenes.</p>
+
+<p>Jamie criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto a los obstáculos desde otras entidades y desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<h2>11. Demoras en el cumplimiento de órdenes y diferencias entre órdenes cumplidas y cerradas</h2>
+
+<p>Durante la reunión, se abordaron las demoras en el cumplimiento de las órdenes judiciales y las diferencias entre órdenes cumplidas y cerradas, identificando varios factores que contribuyen a estas problemáticas. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine, es decir, por la autoridad judicial mediante un auto en medio de la verificación de cumplimiento de esa orden en una mesa técnica o en las audiencias de posfallo.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie mencionó que, dentro del equipo de seguimiento, hay tres o cuatro personas que son líderes zonales, cada una con la responsabilidad de hacer seguimiento a los enlaces en las direcciones territoriales. Debido a que no alcanzan a participar en todas las audiencias y mesas técnicas, dependen de la información proporcionada por sus enlaces, lo que puede llevar a que se considere una orden como cumplida sin serlo realmente.</p>
+
+<p>Jamie criticó que, en algunos casos, se cerraban órdenes de manera discrecional, por ejemplo, cuando se enviaba un correo al Ministerio de Vivienda con el listado de personas a priorizar para el subsidio de mejoramiento de vivienda, sin verificar si el subsidio realmente se había otorgado. Esto generaba una diferencia entre el estado de "cumplida" y "cerrada", ya que la orden podía estar cumplida en términos de gestión, pero no cerrada porque no se había verificado el resultado final.</p>
+
+<p>Jamie enfatizó que las órdenes solo deben cerrarse cuando la autoridad judicial así lo determine, ya sea por medio de un auto en una mesa técnica o en una audiencia de posfallo. Mientras tanto, la orden puede estar cumplida, pero no cerrada. Esta distinción es crucial para garantizar que se realice un seguimiento adecuado y se verifique el cumplimiento real de las órdenes judiciales.</p>
+
+<p>Jamie señaló que la falta de seguimiento constante y una buena articulación interinstitucional también contribuyen a las demoras en el cumplimiento de las órdenes. Mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT.</p>
+
+<p>Jamie propuso que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<h2>12. Obstáculos desde la Unidad de Restitución, otras entidades y el aparato judicial para la implementación y seguimiento de órdenes judiciales</h2>
+
+<p>Durante la reunión, se abordaron los obstáculos que dificultan la implementación y el seguimiento de las órdenes judiciales, tanto desde la Unidad de Restitución de Tierras (URT) como desde otras entidades y el aparato judicial. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie identificó como uno de los principales obstáculos la falta de conocimiento y sensibilización de los funcionarios y funcionarias de la URT en temas de género. Mencionó que el cambio constante de personal dificultaba la continuidad del trabajo con aquellos que sí tenían conocimiento o eran sensibles al tema. Propuso la sensibilización como una acción afirmativa clave para abordar este problema. La propuesta de acciones afirmativas que incluía la sensibilización para funcionarios y colaboradores de la unidad en temas de género e enfoques interseccionales no fue suscrita por la coordinadora en ese momento por un tema presupuestal.</p>
+
+<p>Otro obstáculo señalado fue la falta de enfoque de género en algunas órdenes judiciales, que a menudo eran muy generales y no consideraban las necesidades específicas de las mujeres beneficiarias. Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Indicó que muchas órdenes vienen sin enfoque de género y de manera muy general.</p>
+
+<p>La falta de seguimiento constante y una buena articulación interinstitucional también fueron identificados como obstáculos. Jamie mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT. Además, señaló que la falta de coordinación con otras entidades, como el Ministerio de Vivienda, afectaba el cumplimiento de las órdenes relacionadas con el acceso a subsidios de vivienda.</p>
+
+<p>El desconocimiento de las mujeres de sus derechos y de la sentencia también fue mencionado como un obstáculo. Jamie señaló que, en algunos casos, las mujeres no conocían los detalles de la sentencia o no entendían sus derechos, lo que dificultaba su empoderamiento y participación en el proceso de restitución.</p>
+
+<p>La demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias también fueron identificadas como dificultades. Jamie mencionó que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Señaló que muchas de las beneficiarias eran adultas mayores con enfermedades y situaciones de vulnerabilidad complejas, lo que hacía aún más urgente el cumplimiento de las órdenes.</p>
+
+<p>Jamie criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine, es decir, por la autoridad judicial mediante un auto en medio de la verificación de cumplimiento de esa orden en una mesa técnica o en las audiencias de posfallo.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<p>En relación con los obstáculos desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<h2>13. Frecuencia de audiencias de posfallo y labor del operador judicial</h2>
+
+<p>Durante la reunión, se abordó la frecuencia de las audiencias de posfallo y la labor del operador judicial en el proceso de restitución de tierras. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia. Indicó que, en algunos casos, había una audiencia en febrero y la próxima se realizaba entre cuatro, cinco o seis meses después, e incluso en algunos casos no se había hecho ninguna. Señaló que los apoderados de las víctimas pueden solicitar que se realicen estas audiencias, pero en su mayoría no lo hacen, entendiendo el volumen de trabajo que tienen.</p>
+
+<p>En los casos de mayor relevancia, las audiencias se realizaban aproximadamente cada tres o cuatro meses. En estas audiencias, cada entidad presenta las acciones que ha realizado y el juez o magistrado toma la decisión de solicitar alguna otra acción, informe o situación. Sin embargo, las solicitudes de cierre de casos se hacían por medio de memoriales que luego se presentaban en las diligencias judiciales, y en algunos casos los jueces decidían no cerrar el caso y solicitaban un informe adicional.</p>
+
+<p>En cuanto a la labor del operador judicial, Jamie mencionó que, en la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. Sin embargo, en el caso de Somoproca, la magistrada hacía énfasis en que se trataba de una asociación de mujeres y en la importancia del cumplimiento rápido de las órdenes.</p>
+
+<p>Jamie sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir, desde lo que efectivamente está pasando, y no solamente a las entidades que dicen "sí, ya cumplí, ya cumplí, ya cumplí".</p>
+[Error: No se pudo procesar Buenas prácticas y experiencias exitosas desde la unidad y la rama judicial. Máximo número de intentos alcanzado.]
+<h2>14. Buenas prácticas y experiencias exitosas en la Unidad y la rama judicial</h2>
+
+<p>Durante la reunión, se abordó el tema de las buenas prácticas y experiencias exitosas tanto en la Unidad de Restitución de Tierras (URT) como en la rama judicial, con el objetivo de identificar estrategias y acciones que hayan demostrado ser efectivas en el proceso de restitución de tierras, especialmente en lo que respecta al enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Desde la perspectiva de la URT, Jamie mencionó como una buena práctica la priorización que se le dio al caso de Somoproca, una asociación de mujeres, lo que permitió un seguimiento más cercano y una atención más rápida a sus necesidades. Sin embargo, reconoció que este caso era emblemático y que no siempre se podía replicar el mismo nivel de atención en otros casos.</p>
+
+<p>Otra buena práctica identificada fue el procurar que los proyectos productivos tuvieran como titular a las mujeres, las esposas o compañeras de los solicitantes. Esta acción buscaba empoderar a las mujeres y garantizar su participación en la toma de decisiones relacionadas con el desarrollo de sus comunidades.</p>
+
+<p>Jamie también destacó la mención del enfoque de género en los manuales operativos del grupo Fondo como una buena práctica. Aunque reconoció que estos manuales no eran perfectos y que se les había propuesto ajustes e inclusiones, consideró que su existencia era un paso importante para sensibilizar a los funcionarios y funcionarias de la URT en temas de género.</p>
+
+<p>La participación del grupo Fondo en espacios y mesas donde se hablaba del tema de género también fue mencionada como una buena práctica. Jamie señaló que, aunque solo fueran dos personas las que participaban en estos espacios, su presencia permitía estar al tanto de las últimas tendencias y acciones afirmativas para las mujeres restituidas desde la etapa de posfallo.</p>
+
+<p>En cuanto a la rama judicial, Jamie reconoció que, en la mayoría de los casos que conoció, las órdenes judiciales no tenían un enfoque de género más allá de la titularidad. Sin embargo, mencionó el caso de Somoproca, donde la magistrada hacía énfasis en que se trataba de una asociación de mujeres y en la importancia del cumplimiento rápido de las órdenes.</p>
+
+<p>Jamie sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir, desde lo que efectivamente está pasando, y no solamente a las entidades que dicen "sí, ya cumplí, ya cumplí, ya cumplí".</p>
+
+<h2>15. Fortalecimiento institucional de la Unidad para mejorar el seguimiento a sentencias con enfoque de género</h2>
+
+<p>Durante la reunión, se abordó el tema del fortalecimiento institucional de la Unidad de Restitución de Tierras (URT) para mejorar el seguimiento a sentencias con enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie enfatizó que la sensibilización en temas de género debe ser un eje transversal de la unidad, involucrando a todas las direcciones y misionales. Propuso que no se vea como un requisito, sino que se le dé el espacio y la importancia que merece. Esta sensibilización debe dirigirse no solo a los funcionarios y funcionarias de la URT, sino también a los apoderados judiciales y a los enlaces del grupo Fondo.</p>
+
+<p>Jamie sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También propuso que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que la falta de seguimiento constante y una buena articulación interinstitucional también dificultan el cumplimiento de las órdenes con enfoque de género. Propuso que se fortalezca el seguimiento por parte de los apoderados judiciales y que se mejore la coordinación con otras entidades, como el Ministerio de Vivienda.</p>
+
+<p>Jamie destacó la importancia de empoderar a las mujeres beneficiarias de la restitución de tierras, brindándoles información clara y accesible sobre sus derechos y sobre los detalles de la sentencia. Propuso que se realicen talleres y capacitaciones para fortalecer su conocimiento y su capacidad de participar activamente en el proceso.</p>
+
+<p>Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Indicó que muchas órdenes vienen sin enfoque de género y de manera muy general.</p>
+
+<p>Jamie propuso que se fortalezca el equipo de seguimiento de la URT, garantizando que cuente con personal suficiente y con la capacitación necesaria en temas de género. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado, lo que ha afectado el acompañamiento cercano a algunos casos.</p>
+
+<p>Jamie se comprometió a buscar los manuales y documentos mencionados y a enviarlos a Rita. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información. Se acordó mantener la comunicación a través de WhatsApp para cualquier dato adicional.</p>
+
+<h2>16. Información desagregada por sexo, etnia y otras variables en la ficha de análisis</h2>
+
+<p>Durante la reunión, se abordó el tema de la información desagregada por sexo, etnia y otras variables en la ficha de análisis utilizada por la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó información sobre cómo se registraba y utilizaba esta información hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica.</p>
+
+<p>Jamie confirmó que la información de identificación de las personas en la ficha estaba desagregada por sexo, edad y condición. No obstante, no especificó si la ficha incluía información sobre etnia u otras variables adicionales más allá de las ya mencionadas.</p>
+
+<p>Para obtener información más detallada sobre la desagregación de datos en la ficha de análisis, Jamie sugirió contactar a <b>John Álvarez</b>, quien era el encargado de tener todas las tablas, indicadores y datos del cumplimiento de sentencias, incluyendo datos desagregados por tema de género, tanto de proyectos productivos como de titularidad en el marco del reconocimiento del derecho de restitución.</p>
+[Error: No se pudo procesar Cierre. Máximo número de intentos alcanzado.]
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión sobre Diagnóstico y Protocolo de Acción Conjunta URT - Rama Judicial</h1>
+  <p><strong>Fecha:</strong> [NO ESPECIFICADO] de [NO ESPECIFICADO] de [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> Rita</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Jamie - Ex Fondo URT</li>
+    <li>Melissa - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Seguimiento general a sentencias de restitución de tierras</li>
+    <li>Acciones de la Unidad de Restitución de Tierras en el seguimiento de sentencias (2024 y años anteriores)</li>
+    <li>Implementación de la medida de participación del núcleo familiar en proyectos productivos</li>
+    <li>Análisis y ponderación de la ficha de análisis para prelación de casos</li>
+    <li>Interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales</li>
+    <li>Guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento</li>
+    <li>Análisis y valoración de la efectividad de medidas con enfoque de género</li>
+    <li>Obstáculos para el cumplimiento de órdenes con enfoque de género</li>
+    <li>Buenas prácticas y experiencias exitosas en la Unidad y la rama judicial</li>
+    <li>Fortalecimiento institucional de la Unidad para mejorar el seguimiento a sentencias con enfoque de género</li>
+  </ol>
+</header>
+
+<h2>1. Verificación de información del equipo de seguimiento y fondo para diagnóstico y protocolo de acción conjunta URT y rama judicial</h2>
+
+<p>Se inició la discusión con el objetivo de verificar la información disponible desde el equipo de seguimiento y el Fondo, con el fin de nutrir el diagnóstico y el protocolo de acción conjunta entre la URT y la rama judicial. Rita dirigió la conversación, formulando preguntas específicas para obtener información detallada sobre las acciones realizadas y los datos disponibles.</p>
+
+<p>Jamie, ex miembro del Fondo URT, aclaró que su información se limitaría a las acciones realizadas hasta el año anterior. Para obtener información sobre las acciones actuales, sugirió contactar a <b>John Álvarez</b> (encargado de las tablas, indicadores y datos de cumplimiento de sentencias, incluyendo datos desagregados por género) y <b>Giselle Cáceres</b> (responsable del acompañamiento y verificación del cumplimiento de indicadores COMPES en temas de género). Adicionalmente, recomendó contactar a <b>Elizabeth</b>, actual coordinadora de proyectos productivos, para obtener información sobre titularidad y acciones afirmativas en proyectos productivos para familias restituidas.</p>
+
+<p>En relación con las acciones realizadas por la Unidad de Restitución de Tierras en el seguimiento de sentencias hasta 2024, Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie destacó la importancia de tener en cuenta la prelación en el análisis de la sentencia al implementar proyectos productivos. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>Melissa intervino para preguntar sobre la fecha de inicio de la medida que requería la participación de todo el núcleo familiar, con el fin de evaluar su impacto en el tiempo. Jamie respondió que la implementación de esta medida se intensificó alrededor de abril. Sugirió revisar las tablas de John Álvarez para analizar la titularidad y evaluar el impacto de la medida. Aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora Elizabeth debería tener información clara al respecto.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>En cuanto a las órdenes judiciales, Jamie aclaró que la ficha de análisis incluía todas las órdenes, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>Jamie explicó que la Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de 2022 aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>En cuanto a las guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento, Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer. Se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita.</p>
+
+<p>Jamie indicó que no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había cumplimiento de las órdenes. La ficha no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<p>En cuanto a los obstáculos para el cumplimiento de las órdenes con enfoque de género, Jamie mencionó la falta de conocimiento y sensibilización de los funcionarios y funcionarias, así como el cambio constante de personal. Propuso la sensibilización como una acción afirmativa clave. Otros obstáculos identificados fueron la falta de enfoque de género en algunas órdenes judiciales, la falta de seguimiento constante, la falta de articulación interinstitucional y el desconocimiento de las mujeres de sus derechos y de la sentencia. También mencionó la demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>En cuanto a los obstáculos desde otras entidades y desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<p>En cuanto a las buenas prácticas y experiencias exitosas, Jamie mencionó la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo. Destacó la participación del grupo Fondo en espacios donde se hablaba del tema de género y la formulación de acciones afirmativas para las mujeres restituidas desde la etapa de posfallo.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<p>Finalmente, Jamie se comprometió a buscar los manuales y documentos mencionados y a enviarlos a Rita. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información. Se acordó mantener la comunicación a través de WhatsApp para cualquier dato adicional.</p>
+
+<h2>2. Acciones de la Unidad de Restitución de Tierras en el seguimiento de sentencias (2024 y años anteriores)</h2>
+
+<p>En relación con las acciones realizadas por la Unidad de Restitución de Tierras en el seguimiento de sentencias hasta <b>2024</b>, Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie destacó la importancia de tener en cuenta la prelación en el análisis de la sentencia al implementar proyectos productivos. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>La implementación de la medida que requería la participación de todo el núcleo familiar se intensificó alrededor de abril. Se sugirió revisar las tablas de John Álvarez para analizar la titularidad y evaluar el impacto de la medida. Se aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora Elizabeth debería tener información clara al respecto.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>La Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de <b>2022</b> aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer. Se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita.</p>
+
+<p>Jamie indicó que no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había cumplimiento de las órdenes. La ficha no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<p>Jamie mencionó la falta de conocimiento y sensibilización de los funcionarios y funcionarias, así como el cambio constante de personal, como obstáculos para el cumplimiento de las órdenes con enfoque de género. Propuso la sensibilización como una acción afirmativa clave. Otros obstáculos identificados fueron la falta de enfoque de género en algunas órdenes judiciales, la falta de seguimiento constante, la falta de articulación interinstitucional y el desconocimiento de las mujeres de sus derechos y de la sentencia. También mencionó la demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<p>Jamie mencionó la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo como buenas prácticas.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<h2>3. Análisis de fichas de sentencias y datos importantes para prelación y enfoque diferencial</h2>
+
+<p>Durante la reunión, se discutió el análisis de las fichas de sentencias y los datos relevantes para la prelación y el enfoque diferencial en el seguimiento de las órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie explicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica. Esta prelación se utilizaba para el seguimiento del cumplimiento de órdenes judiciales.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Sin embargo, reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>Jamie indicó que la información de identificación de las personas en la ficha estaba desagregada por sexo, edad y condición.</p>
+
+<h2>4. Implementación de la medida de participación del núcleo familiar en proyectos productivos</h2>
+
+<p>Durante la reunión, se abordó la implementación de la medida de participación del núcleo familiar en proyectos productivos, con el objetivo de asegurar que todos los beneficiarios del derecho de restitución estén informados y participen en las decisiones relacionadas con la titularidad y el desarrollo de los proyectos. Jamie, ex miembro del Fondo URT, proporcionó información sobre las acciones realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis para determinar si había una mujer en la titularidad del reconocimiento de restitución. Se buscaba contactar a los miembros del núcleo familiar para determinar quién sería el titular del proyecto productivo. Se insistió en que las reuniones de concertación incluyeran a todos los beneficiarios del derecho, incluyendo a la compañera o ex esposa, para asegurar que estuvieran informadas y participaran en la decisión de la titularidad. Se promovió que la titularidad recayera en dos personas, reconociendo a ambos titulares del derecho de restitución.</p>
+
+<p>Melissa preguntó sobre la fecha de inicio de la medida que requería la participación de todo el núcleo familiar, con el fin de evaluar su impacto en el tiempo. Jamie respondió que la implementación de esta medida se intensificó alrededor de abril. Sugirió revisar las tablas de <b>John Álvarez</b> para analizar la titularidad y evaluar el impacto de la medida. Aclaró que, aunque la participación del núcleo familiar es necesaria, la titularidad es un tema diferente, y que la coordinadora <b>Elizabeth</b> debería tener información clara al respecto.</p>
+
+<p>Jamie mencionó que los manuales operativos de la entidad contemplan la participación del núcleo familiar, incluyendo a los jóvenes, en la implementación y desarrollo de los proyectos productivos.</p>
+
+<h2>5. Ponderación y calificación en la ficha de análisis para prelación</h2>
+
+<p>Durante la reunión, se discutió la ponderación y calificación en la ficha de análisis utilizada para establecer la prelación de casos en la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó detalles sobre cómo se realizaba este proceso hasta <b>2024</b>.</p>
+
+<p>Jamie confirmó que la ficha de análisis incluía una ponderación para identificar qué casos debían tener prelación y un porcentaje para determinar el seguimiento constante y el cumplimiento más rápido. Este análisis se realizaba tras la emisión de una sentencia de restitución, con el objetivo de determinar si había una mujer en la titularidad del reconocimiento de restitución. Se identificaban datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica.</p>
+
+<p>Sin embargo, Jamie reconoció que en la práctica no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>La ficha de análisis incluía todas las órdenes judiciales, junto con los responsables y las entidades correspondientes. En los casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<h2>6. Sensibilización en materia de género en el territorio</h2>
+
+<p>Durante la discusión sobre el análisis de las fichas de sentencias y los datos relevantes para la prelación y el enfoque diferencial, Jamie, ex miembro del Fondo URT, destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante. Mencionó que la sensibilización en este tema era baja entre los profesionales de la unidad hasta <b>2024</b>.</p>
+
+<p>Jamie relató que, en algunas ocasiones, durante reuniones con todas las misionales, se ponía de presente la necesidad de sensibilizar en el tema de género a los profesionales de la unidad en territorio. Describió incidentes en los que compañeros de la territorial de Magdalena se referían despectivamente a las mujeres de Asomoproca, lo que evidenciaba la falta de enfoque y sensibilización en el tema.</p>
+
+<p>Jamie propuso la sensibilización como una acción afirmativa clave para abordar este obstáculo. Señaló que el cambio constante de funcionarios no permitía la continuidad del trabajo que se venía adelantando con personas que sí tuvieran conocimiento o fueran sensibles al tema. La propuesta de acciones afirmativas que incluía la sensibilización para funcionarios y colaboradores de la unidad en temas de género e enfoques interseccionales no fue suscrita por la coordinadora en ese momento por un tema presupuestal.</p>
+
+<p>Para fortalecer institucionalmente a la Unidad y mejorar el seguimiento a sentencias desde un enfoque de género, Jamie enfatizó la importancia de la sensibilización y de que el seguimiento sea un eje transversal de la unidad. Propuso que no sea un tema de un requisito, sino que se le dé el espacio y la importancia que merece.</p>
+
+<h2>7. Interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales</h2>
+
+<p>Durante la reunión, se abordó el tema de la interlocución con otras entidades para verificar el cumplimiento de órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie explicó que, en casos de relevancia que eran emblemáticos ante la DIJUR, se hacía seguimiento del cumplimiento de las órdenes que estaban bajo la responsabilidad de otras entidades. En los demás casos, se esperaba que los apoderados judiciales presentaran informes de no cumplimiento, aunque esto no siempre ocurría. Se propuso que esto formara parte de un tema de litigio estratégico.</p>
+
+<p>La Unidad se focalizaba principalmente en el cumplimiento de las órdenes judiciales dirigidas a la entidad. Sin embargo, también se coordinaba y articulaba con otras entidades, como el Ministerio de Vivienda, para priorizar a las familias en el acceso a subsidios de vivienda. Señaló que la reducción del grupo Fondo ha afectado el acompañamiento cercano a algunos casos, y que algunas sentencias de <b>2022</b> aún no tienen doliente. Hizo un llamado urgente a atender esta situación.</p>
+
+<p>Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. En el caso de Somoproca, la magistrada hizo énfasis en que se trataba de una asociación de mujeres.</p>
+
+<h2>8. Guías, líneas técnicas e instrumentos para el proceso de cumplimiento</h2>
+
+<p>Durante la reunión, se abordó el tema de las guías, líneas técnicas e instrumentos que orientan el proceso de cumplimiento de las órdenes judiciales. Jamie, ex miembro del Fondo URT, proporcionó información sobre los documentos y procedimientos utilizados hasta <b>2024</b>.</p>
+
+<p>Jamie mencionó que existen manuales operativos y formatos de procedimientos que detallan el paso a paso de lo que se debe hacer en el proceso de cumplimiento. Estos documentos incluyen instrucciones sobre el análisis de la sentencia, la identificación de los responsables y las acciones a seguir para garantizar el cumplimiento de las órdenes judiciales.</p>
+
+<p>Jamie se comprometió a revisar si aún tiene acceso a una carpeta con estos documentos y a enviarlos a Rita para su revisión y análisis. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información.</p>
+
+<p>En relación con el enfoque de género en estos instrumentos, Jamie indicó que los manuales operativos del grupo Fondo incluían menciones al enfoque de género. Sin embargo, señaló que la ficha de análisis utilizada para el seguimiento de las órdenes judiciales no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de este año.</p>
+
+<h2>9. Análisis y valoración de la efectividad de medidas con enfoque de género</h2>
+
+<p>Durante la reunión, se abordó el tema del análisis y valoración de la efectividad de las medidas con enfoque de género implementadas por la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó información sobre las prácticas realizadas hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, hasta <b>2024</b>, no se realizaba un análisis o valoración de la efectividad de las medidas con enfoque de género para cambiar las condiciones de las mujeres en el territorio, ya que no había un cumplimiento total de las órdenes judiciales. La ficha de análisis utilizada para el seguimiento de las órdenes judiciales no tenía un apartado especial para los enfoques diferenciales, aunque se estaba trabajando en ello a principios de ese año.</p>
+
+<p>Jamie mencionó que, en la práctica, no siempre se priorizaban los casos de mujeres con vulnerabilidades complejas debido a rezagos y otras dificultades. Destacó que la falta de conocimiento en materia de género en el territorio era una preocupación constante, y que la sensibilización en este tema era baja entre los profesionales de la unidad.</p>
+
+<p>A pesar de la falta de un análisis formal, Jamie mencionó algunas acciones que podrían considerarse como buenas prácticas, como la priorización que se le dio a Somoproca, el procurar que los proyectos productivos tuvieran como titular a las mujeres, y la mención del enfoque de género en los manuales operativos del grupo Fondo.</p>
+
+<h2>10. Obstáculos para el cumplimiento de órdenes con enfoque de género</h2>
+
+<p>Durante la reunión, se abordaron los obstáculos identificados para el cumplimiento de las órdenes judiciales con enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie identificó como uno de los principales obstáculos la falta de conocimiento y sensibilización de los funcionarios y funcionarias de la URT en temas de género. Mencionó que el cambio constante de personal dificultaba la continuidad del trabajo con aquellos que sí tenían conocimiento o eran sensibles al tema. Propuso la sensibilización como una acción afirmativa clave para abordar este problema.</p>
+
+<p>Otro obstáculo señalado fue la falta de enfoque de género en algunas órdenes judiciales, que a menudo eran muy generales y no consideraban las necesidades específicas de las mujeres beneficiarias. Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas.</p>
+
+<p>La falta de seguimiento constante y una buena articulación interinstitucional también fueron identificados como obstáculos. Jamie mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT. Además, señaló que la falta de coordinación con otras entidades, como el Ministerio de Vivienda, afectaba el cumplimiento de las órdenes relacionadas con el acceso a subsidios de vivienda.</p>
+
+<p>El desconocimiento de las mujeres de sus derechos y de la sentencia también fue mencionado como un obstáculo. Jamie señaló que, en algunos casos, las mujeres no conocían los detalles de la sentencia o no entendían sus derechos, lo que dificultaba su empoderamiento y participación en el proceso de restitución.</p>
+
+<p>La demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias también fueron identificadas como dificultades. Jamie mencionó que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Señaló que muchas de las beneficiarias eran adultas mayores con enfermedades y situaciones de vulnerabilidad complejas, lo que hacía aún más urgente el cumplimiento de las órdenes.</p>
+
+<p>Jamie criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine.</p>
+
+<p>En cuanto a los obstáculos desde otras entidades y desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<h2>11. Demoras en el cumplimiento de órdenes y diferencias entre órdenes cumplidas y cerradas</h2>
+
+<p>Durante la reunión, se abordaron las demoras en el cumplimiento de las órdenes judiciales y las diferencias entre órdenes cumplidas y cerradas, identificando varios factores que contribuyen a estas problemáticas. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie señaló que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine, es decir, por la autoridad judicial mediante un auto en medio de la verificación de cumplimiento de esa orden en una mesa técnica o en las audiencias de posfallo.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie mencionó que, dentro del equipo de seguimiento, hay tres o cuatro personas que son líderes zonales, cada una con la responsabilidad de hacer seguimiento a los enlaces en las direcciones territoriales. Debido a que no alcanzan a participar en todas las audiencias y mesas técnicas, dependen de la información proporcionada por sus enlaces, lo que puede llevar a que se considere una orden como cumplida sin serlo realmente.</p>
+
+<p>Jamie criticó que, en algunos casos, se cerraban órdenes de manera discrecional, por ejemplo, cuando se enviaba un correo al Ministerio de Vivienda con el listado de personas a priorizar para el subsidio de mejoramiento de vivienda, sin verificar si el subsidio realmente se había otorgado. Esto generaba una diferencia entre el estado de "cumplida" y "cerrada", ya que la orden podía estar cumplida en términos de gestión, pero no cerrada porque no se había verificado el resultado final.</p>
+
+<p>Jamie enfatizó que las órdenes solo deben cerrarse cuando la autoridad judicial así lo determine, ya sea por medio de un auto en una mesa técnica o en una audiencia de posfallo. Mientras tanto, la orden puede estar cumplida, pero no cerrada. Esta distinción es crucial para garantizar que se realice un seguimiento adecuado y se verifique el cumplimiento real de las órdenes judiciales.</p>
+
+<p>Jamie señaló que la falta de seguimiento constante y una buena articulación interinstitucional también contribuyen a las demoras en el cumplimiento de las órdenes. Mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT.</p>
+
+<p>Jamie propuso que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<h2>12. Obstáculos desde la Unidad de Restitución, otras entidades y el aparato judicial para la implementación y seguimiento de órdenes judiciales</h2>
+
+<p>Durante la reunión, se abordaron los obstáculos que dificultan la implementación y el seguimiento de las órdenes judiciales, tanto desde la Unidad de Restitución de Tierras (URT) como desde otras entidades y el aparato judicial. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie identificó como uno de los principales obstáculos la falta de conocimiento y sensibilización de los funcionarios y funcionarias de la URT en temas de género. Mencionó que el cambio constante de personal dificultaba la continuidad del trabajo con aquellos que sí tenían conocimiento o eran sensibles al tema. Propuso la sensibilización como una acción afirmativa clave para abordar este problema. La propuesta de acciones afirmativas que incluía la sensibilización para funcionarios y colaboradores de la unidad en temas de género e enfoques interseccionales no fue suscrita por la coordinadora en ese momento por un tema presupuestal.</p>
+
+<p>Otro obstáculo señalado fue la falta de enfoque de género en algunas órdenes judiciales, que a menudo eran muy generales y no consideraban las necesidades específicas de las mujeres beneficiarias. Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Indicó que muchas órdenes vienen sin enfoque de género y de manera muy general.</p>
+
+<p>La falta de seguimiento constante y una buena articulación interinstitucional también fueron identificados como obstáculos. Jamie mencionó que, en algunos casos, los apoderados judiciales no presentaban informes de no cumplimiento de las órdenes, lo que dificultaba el seguimiento por parte de la URT. Además, señaló que la falta de coordinación con otras entidades, como el Ministerio de Vivienda, afectaba el cumplimiento de las órdenes relacionadas con el acceso a subsidios de vivienda.</p>
+
+<p>El desconocimiento de las mujeres de sus derechos y de la sentencia también fue mencionado como un obstáculo. Jamie señaló que, en algunos casos, las mujeres no conocían los detalles de la sentencia o no entendían sus derechos, lo que dificultaba su empoderamiento y participación en el proceso de restitución.</p>
+
+<p>La demora en las resoluciones y la situación de vulnerabilidad de muchas de las beneficiarias también fueron identificadas como dificultades. Jamie mencionó que había casos en donde las sentencias eran de <b>2022</b> y aún no estaban cumplidas en <b>2025</b>. Señaló que muchas de las beneficiarias eran adultas mayores con enfermedades y situaciones de vulnerabilidad complejas, lo que hacía aún más urgente el cumplimiento de las órdenes.</p>
+
+<p>Jamie criticó que, en algunos casos, se consideraba como cumplimiento el simple envío de un memorial al despacho, sin verificar el cumplimiento real de la orden. Mencionó que la entidad manejaba tres estados para las órdenes: no cumplida, cumplida y cerrada, y que en algunos casos se cerraban órdenes de manera discrecional, sin que la autoridad judicial lo autorizara. Insistió en que las órdenes solo deben cerrarse cuando la autoridad judicial lo determine, es decir, por la autoridad judicial mediante un auto en medio de la verificación de cumplimiento de esa orden en una mesa técnica o en las audiencias de posfallo.</p>
+
+<p>En cuanto al procedimiento interno de la Unidad para el cierre de órdenes, Jamie explicó que los líderes zonales hacían seguimiento a los enlaces en las direcciones territoriales, pero no siempre participaban en todas las audiencias y mesas técnicas. La información no siempre se enviaba mensualmente como debía ser. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado.</p>
+
+<p>Jamie sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia, y que los apoderados de las víctimas pueden solicitar que se realicen. En los casos de mayor relevancia, se realizaban cada tres o cuatro meses. En la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad.</p>
+
+<p>En relación con los obstáculos desde el aparato judicial, Jamie señaló que muchas órdenes vienen sin enfoque de género y de manera muy general. Sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto. Propuso que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<h2>13. Frecuencia de audiencias de posfallo y labor del operador judicial</h2>
+
+<p>Durante la reunión, se abordó la frecuencia de las audiencias de posfallo y la labor del operador judicial en el proceso de restitución de tierras. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie mencionó que las audiencias de posfallo se realizan con poca frecuencia. Indicó que, en algunos casos, había una audiencia en febrero y la próxima se realizaba entre cuatro, cinco o seis meses después, e incluso en algunos casos no se había hecho ninguna. Señaló que los apoderados de las víctimas pueden solicitar que se realicen estas audiencias, pero en su mayoría no lo hacen, entendiendo el volumen de trabajo que tienen.</p>
+
+<p>En los casos de mayor relevancia, las audiencias se realizaban aproximadamente cada tres o cuatro meses. En estas audiencias, cada entidad presenta las acciones que ha realizado y el juez o magistrado toma la decisión de solicitar alguna otra acción, informe o situación. Sin embargo, las solicitudes de cierre de casos se hacían por medio de memoriales que luego se presentaban en las diligencias judiciales, y en algunos casos los jueces decidían no cerrar el caso y solicitaban un informe adicional.</p>
+
+<p>En cuanto a la labor del operador judicial, Jamie mencionó que, en la mayoría de los casos que conoció, las órdenes no tenían un enfoque de género más allá de la titularidad. Sin embargo, en el caso de Somoproca, la magistrada hacía énfasis en que se trataba de una asociación de mujeres y en la importancia del cumplimiento rápido de las órdenes.</p>
+
+<p>Jamie sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir, desde lo que efectivamente está pasando, y no solamente a las entidades que dicen "sí, ya cumplí, ya cumplí, ya cumplí".</p>
+[Error: No se pudo procesar Buenas prácticas y experiencias exitosas desde la unidad y la rama judicial. Máximo número de intentos alcanzado.]
+<h2>14. Buenas prácticas y experiencias exitosas en la Unidad y la rama judicial</h2>
+
+<p>Durante la reunión, se abordó el tema de las buenas prácticas y experiencias exitosas tanto en la Unidad de Restitución de Tierras (URT) como en la rama judicial, con el objetivo de identificar estrategias y acciones que hayan demostrado ser efectivas en el proceso de restitución de tierras, especialmente en lo que respecta al enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Desde la perspectiva de la URT, Jamie mencionó como una buena práctica la priorización que se le dio al caso de Somoproca, una asociación de mujeres, lo que permitió un seguimiento más cercano y una atención más rápida a sus necesidades. Sin embargo, reconoció que este caso era emblemático y que no siempre se podía replicar el mismo nivel de atención en otros casos.</p>
+
+<p>Otra buena práctica identificada fue el procurar que los proyectos productivos tuvieran como titular a las mujeres, las esposas o compañeras de los solicitantes. Esta acción buscaba empoderar a las mujeres y garantizar su participación en la toma de decisiones relacionadas con el desarrollo de sus comunidades.</p>
+
+<p>Jamie también destacó la mención del enfoque de género en los manuales operativos del grupo Fondo como una buena práctica. Aunque reconoció que estos manuales no eran perfectos y que se les había propuesto ajustes e inclusiones, consideró que su existencia era un paso importante para sensibilizar a los funcionarios y funcionarias de la URT en temas de género.</p>
+
+<p>La participación del grupo Fondo en espacios y mesas donde se hablaba del tema de género también fue mencionada como una buena práctica. Jamie señaló que, aunque solo fueran dos personas las que participaban en estos espacios, su presencia permitía estar al tanto de las últimas tendencias y acciones afirmativas para las mujeres restituidas desde la etapa de posfallo.</p>
+
+<p>En cuanto a la rama judicial, Jamie reconoció que, en la mayoría de los casos que conoció, las órdenes judiciales no tenían un enfoque de género más allá de la titularidad. Sin embargo, mencionó el caso de Somoproca, donde la magistrada hacía énfasis en que se trataba de una asociación de mujeres y en la importancia del cumplimiento rápido de las órdenes.</p>
+
+<p>Jamie sugirió que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir, desde lo que efectivamente está pasando, y no solamente a las entidades que dicen "sí, ya cumplí, ya cumplí, ya cumplí".</p>
+
+<h2>15. Fortalecimiento institucional de la Unidad para mejorar el seguimiento a sentencias con enfoque de género</h2>
+
+<p>Durante la reunión, se abordó el tema del fortalecimiento institucional de la Unidad de Restitución de Tierras (URT) para mejorar el seguimiento a sentencias con enfoque de género. Jamie, ex miembro del Fondo URT, compartió su experiencia y observaciones sobre este tema, basadas en su trabajo hasta <b>2024</b>.</p>
+
+<p>Jamie enfatizó que la sensibilización en temas de género debe ser un eje transversal de la unidad, involucrando a todas las direcciones y misionales. Propuso que no se vea como un requisito, sino que se le dé el espacio y la importancia que merece. Esta sensibilización debe dirigirse no solo a los funcionarios y funcionarias de la URT, sino también a los apoderados judiciales y a los enlaces del grupo Fondo.</p>
+
+<p>Jamie sugirió que se ordene la articulación con la Unidad como titular de la política pública de restitución de tierras y que se dé prelación al cumplimiento de las órdenes en donde las beneficiarias son mujeres con vulnerabilidades específicas. También propuso que los jueces y magistrados se sensibilicen en el tema de género y que escuchen a las mujeres desde su sentir.</p>
+
+<p>Jamie mencionó que la falta de seguimiento constante y una buena articulación interinstitucional también dificultan el cumplimiento de las órdenes con enfoque de género. Propuso que se fortalezca el seguimiento por parte de los apoderados judiciales y que se mejore la coordinación con otras entidades, como el Ministerio de Vivienda.</p>
+
+<p>Jamie destacó la importancia de empoderar a las mujeres beneficiarias de la restitución de tierras, brindándoles información clara y accesible sobre sus derechos y sobre los detalles de la sentencia. Propuso que se realicen talleres y capacitaciones para fortalecer su conocimiento y su capacidad de participar activamente en el proceso.</p>
+
+<p>Jamie sugirió que se ordene que las sentencias de restitución de tierras donde las mujeres son titulares beneficiarias tengan una prelación frente al resto, especialmente si son madres cabeza de familia o tienen condiciones de salud complejas. Indicó que muchas órdenes vienen sin enfoque de género y de manera muy general.</p>
+
+<p>Jamie propuso que se fortalezca el equipo de seguimiento de la URT, garantizando que cuente con personal suficiente y con la capacitación necesaria en temas de género. Señaló que el equipo grande de Fondo se redujo a la mitad el año pasado, lo que ha afectado el acompañamiento cercano a algunos casos.</p>
+
+<p>Jamie se comprometió a buscar los manuales y documentos mencionados y a enviarlos a Rita. Melissa ofreció revisar las carpetas de entrega del PAEN para buscar la información. Se acordó mantener la comunicación a través de WhatsApp para cualquier dato adicional.</p>
+
+<h2>16. Información desagregada por sexo, etnia y otras variables en la ficha de análisis</h2>
+
+<p>Durante la reunión, se abordó el tema de la información desagregada por sexo, etnia y otras variables en la ficha de análisis utilizada por la Unidad de Restitución de Tierras (URT). Jamie, ex miembro del Fondo URT, proporcionó información sobre cómo se registraba y utilizaba esta información hasta <b>2024</b>.</p>
+
+<p>Jamie indicó que, tras la emisión de una sentencia de restitución, se realizaba un análisis mediante una ficha para determinar si había una mujer en la titularidad del reconocimiento de restitución. Este análisis incluía la identificación de datos importantes como nombre completo y edad, para clasificar los casos según prelaciones. Se consideraban factores como si la mujer era cabeza de hogar, tenía hijos a cargo, era adulta mayor o tenía alguna condición de salud específica.</p>
+
+<p>Jamie confirmó que la información de identificación de las personas en la ficha estaba desagregada por sexo, edad y condición. No obstante, no especificó si la ficha incluía información sobre etnia u otras variables adicionales más allá de las ya mencionadas.</p>
+
+<p>Para obtener información más detallada sobre la desagregación de datos en la ficha de análisis, Jamie sugirió contactar a <b>John Álvarez</b>, quien era el encargado de tener todas las tablas, indicadores y datos del cumplimiento de sentencias, incluyendo datos desagregados por tema de género, tanto de proyectos productivos como de titularidad en el marco del reconocimiento del derecho de restitución.</p>
+[Error: No se pudo procesar Cierre. Máximo número de intentos alcanzado.]
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/i6pqDBQL5Ejrcim
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/i6pqDBQL5Ejrcim
+Generando URL pública para Transcripcion.txt (EXISTENTE): enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/c3eJs2GCwYojono
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/c3eJs2GCwYojono
