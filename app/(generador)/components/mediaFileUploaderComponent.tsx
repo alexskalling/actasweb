@@ -102,7 +102,6 @@ export default function MediaFileUploaderComponent({
     const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
     setFile(nombreNormalizado);
     setRoomName(nombreCarpeta);
-
     setFolder(nombreCarpeta);
 
     if (!file) return;
@@ -376,7 +375,9 @@ export default function MediaFileUploaderComponent({
         const ejecutarCrearActa = async () => {
           try {
             if (result.uploadUrl) {
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), '', result.uploadUrl, '', '', '');
+              const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ?"soporte" : "acta";
+
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo , result.uploadUrl, '', '', '');
             }
           } catch (error: unknown) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
