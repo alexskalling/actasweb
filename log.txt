@@ -3502,3 +3502,650 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): enfoque_de_genero_en_
 Compartiendo archivo existente para obtener URL pública: /Actas/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita/enfoque_de_genero_en_el_seguimiento_de_sentencias-20250704_103132-grabacion_de_la_reunion_rita_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/c3eJs2GCwYojono
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/c3eJs2GCwYojono
+Verificando si existe transcripción: grabacion_ybb_Transcripcion.txt en carpeta grabacion_ybb
+[2025-07-17T22:42:38.337Z] Verificando existencia del archivo grabacion_ybb_Transcripcion.txt en Nextcloud carpeta grabacion_ybb.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/grabacion_ybb/grabacion_ybb_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T22:42:40.188Z] Archivo "grabacion_ybb_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "grabacion_ybb".
+Iniciando transcripción con AssemblyAI para: grabacion_ybb.wav
+[2025-07-17T22:42:41.817Z] Error en transcripAction: Transcript creation error, audio_url not found.
+Verificando si existe transcripción: grabacion_ybb__Transcripcion.txt en carpeta grabacion_ybb_
+[2025-07-17T22:44:44.126Z] Verificando existencia del archivo grabacion_ybb__Transcripcion.txt en Nextcloud carpeta grabacion_ybb_.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/grabacion_ybb_/grabacion_ybb__Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T22:44:45.533Z] Archivo "grabacion_ybb__Transcripcion.txt" EXISTE en Nextcloud en la carpeta "grabacion_ybb_".
+Transcripción existente encontrada: grabacion_ybb_. Obteniendo contenido.
+Verificando contenido existente: grabacion_ybb__Contenido.txt
+[2025-07-17T22:44:46.958Z] Verificando existencia del archivo grabacion_ybb__Contenido.txt en Nextcloud carpeta grabacion_ybb_.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/grabacion_ybb_/grabacion_ybb__Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T22:44:47.826Z] Archivo "grabacion_ybb__Contenido.txt" NO encontrado en Nextcloud en la carpeta "grabacion_ybb_".
+Generando contenido para: grabacion_ybb_.wav
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: grabacion_ybb__Transcripcion.txt
+[2025-07-17T22:44:47.827Z] Verificando existencia del archivo grabacion_ybb__Transcripcion.txt en Nextcloud carpeta grabacion_ybb_.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/grabacion_ybb_/grabacion_ybb__Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T22:44:48.702Z] Archivo "grabacion_ybb__Transcripcion.txt" EXISTE en Nextcloud en la carpeta "grabacion_ybb_".
+Transcripción encontrada: grabacion_ybb__Transcripcion.txt. Obteniendo contenido.
+[2025-07-17T22:44:49.928Z] Contenido del archivo "grabacion_ybb__Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: grabacion_ybb_.wav
+Guardando contenido en Nextcloud: grabacion_ybb__Contenido.txt
+Contenido guardado: grabacion_ybb__Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: grabacion_ybb_.wav en carpeta: grabacion_ybb_
+Verificando Borrador .docx existente: grabacion_ybb__Borrador.docx
+[2025-07-17T22:45:59.708Z] Verificando existencia del archivo grabacion_ybb__Borrador.docx en Nextcloud carpeta grabacion_ybb_.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/grabacion_ybb_/grabacion_ybb__Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T22:46:00.581Z] Archivo "grabacion_ybb__Borrador.docx" NO encontrado en Nextcloud en la carpeta "grabacion_ybb_".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: grabacion_ybb__Borrador.docx
+Preparando guardado .docx en Nextcloud: grabacion_ybb__Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión Aclaración Cobro Aprobado por la Asamblea</h1>
+  <p><strong>Fecha:</strong> 15 de Julio de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 5:30 PM - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> Virtual</p>
+  <p><strong>Moderador:</strong> Luisa</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Claudia - Consejera</li>
+    <li>Hernán - Consejero</li>
+    <li>María Clara - [CARGO NO ESPECIFICADO]</li>
+    <li>Cecilia Taborda - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Aclaración del cobro de lo aprobado por la asamblea</li>
+    <li>Presupuesto definitivo y aprobación de la asamblea</li>
+    <li>Saneamiento financiero aprobado por la asamblea</li>
+    <li>Seguro vigencia 2025-2026 y aprobación de la asamblea</li>
+    <li>Endosos de MAFRE para entidades financieras</li>
+    <li>Análisis de facturas de junio y julio de 2025</li>
+    <li>Opciones de facturación para agosto y septiembre</li>
+    <li>Reserva Legal y Cierre Financiero</li>
+  </ol>
+</header>
+
+<h2>1. Autorización de la grabación de la sesión</h2>
+
+<p>Al inicio de la reunión, la moderadora, Luisa, consultó a los asistentes sobre la autorización para grabar la sesión, con el fin de mantener un registro preciso de los temas tratados y las decisiones tomadas. Se solicitó la aprobación explícita de cada uno de los consejeros y asistentes presentes.</p>
+
+<p>María Clara manifestó su autorización para la grabación. Cecilia Taborda, presente junto con otros asesores, también dio su consentimiento. Don Hernán igualmente autorizó la grabación de la sesión.</p>
+
+<p>Con la aprobación unánime de los asistentes, se procedió a la grabación de la reunión, asegurando que todas las intervenciones y acuerdos quedaran debidamente registrados para su posterior consulta y referencia.</p>
+
+<h2>2. Aclaración sobre el cobro de lo aprobado en la asamblea: Presupuesto, saneamiento financiero y seguro</h2>
+
+<p>Con el fin de aclarar el cobro de lo aprobado por la asamblea, la moderadora, Luisa, presentó un comunicado detallando los siguientes puntos: presupuesto definitivo, saneamiento financiero y seguro. Se proporcionaron imágenes de las votaciones del acta de la asamblea y de comunicados previos para respaldar la información.</p>
+
+<p><b>Presupuesto Definitivo:</b> Se informó sobre el incremento del <b>7.5%</b> para la cuota ordinaria de administración, aclarando que este porcentaje no incluye el valor del seguro. Se ajustó la cuota ordinaria al <b>7.5%</b> de incremento definitivo, dado que entre enero y marzo se aplicó un incremento provisional del <b>5.2%</b> correspondiente al IPC. Este cobro se reflejó en la factura como retroactivo y fue comunicado el <b>10 de abril de 2025</b>.</p>
+
+<p><b>Saneamiento Financiero:</b> Se recordó que la asamblea aprobó un recaudo de <b>190.080.700</b> en tres cuotas, adicionales a la cuota de administración ordinaria. Este cobro se efectuó entre abril y junio, figurando en la factura como "extra, resultados anteriores" y fue comunicado el <b>10 de abril de 2025</b>. Se destacó que, gracias a este recaudo, la copropiedad cerró el mes de junio de 2025 al día con los proveedores, por primera vez en los últimos dos años de gestión, logrando así ponerse al día con sus obligaciones.</p>
+
+<p><b>Seguro Vigencia 2025-2026:</b> Se comunicó el recaudo de <b>281.133.600</b> en tres cuotas, aparte de la cuota de administración ordinaria, comenzando en julio. Este cobro fue informado mediante comunicado el <b>10 de julio de 2025</b>. Se anunció que MAFRE, la aseguradora actual, manifestó su decisión de continuar asegurando la copropiedad con un incremento en la prima de solo el <b>3%</b>, con la posibilidad de negociar su pago en tres cuotas a 60 días. No obstante, se aclaró que esta última información aún no está confirmada. El intermediario de seguros está buscando otras propuestas para tomar la mejor decisión para la copropiedad.</p>
+
+<p><b>Endosos de MAFRE:</b> Se explicó que MAFRE expide los endosos para las entidades financieras durante el proceso de renovación y pago de la nueva póliza, pero no expide el paz y salvo dado el acuerdo de pagos. Se enfatizó que cada copropietario con crédito hipotecario o leasing habitacional es responsable de validar con su banco si acepta el endoso sin el paz y salvo, documento que se expedirá en los primeros días de octubre, posterior al pago total de la póliza. Para la nueva vigencia, si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. El paz y salvo solo lo emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeta a las políticas de cada entidad financiera.</p>
+
+<p>Se presentaron imágenes de facturas de un apartamento en junio y julio de 2025 para ilustrar los cobros mencionados. Se plantearon dos opciones para la facturación de agosto y septiembre: la primera, continuar igual que en julio, recaudando los valores aprobados por la asamblea; la segunda, considerar que la asamblea aprobó recaudar tanto el saneamiento financiero como el seguro en seis cuotas, con el fin de ayudar al flujo de caja de los copropietarios. Bajo esta segunda opción, el cobro del seguro sería de julio a septiembre por el mismo valor del saneamiento financiero, y la diferencia se cobraría en octubre. En caso de copropietarios que ya cancelaron el valor de la factura enviada el 11 de julio, cerrarían el mes con el respectivo saldo a favor.</p>
+
+<p>Tras la presentación, Don Hernán sugirió ajustes en la redacción del comunicado, específicamente en la sección del seguro, para mayor claridad. Se propuso complementar la información sobre el incremento de la prima con la posibilidad de negociar el pago en tres cuotas iguales. También se sugirió modificar la redacción sobre los endosos para evitar confusiones, aclarando que la aseguradora expide los endosos y que la aceptación de estos depende de cada entidad financiera.</p>
+
+<p>Se discutió la suficiencia del flujo de caja para pagar la póliza con los pagos en agosto, septiembre y octubre. Luisa informó que el mes anterior se cerró al día con los proveedores y que la reserva legal estaba respaldada en su totalidad, con adiciones de <b>45 millones</b> que cerraron en <b>97 millones</b> en junio. Además, se mencionó que la cuenta bancaria cerró con <b>43 millones</b>. Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió pasar al día con los proveedores.</p>
+
+<p>Se proporcionaron datos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió pasar <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal, y se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Finalmente, se concluyó que la facturación de agosto y septiembre será igual a la de julio. A partir de octubre, se normalizará el cobro de la cuota ordinaria de administración. Con todo lo anterior, se confirma que se están recaudando los valores tal cual fueron aprobados por la asamblea. <i>Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios.</i></p>
+
+<h2>3. Ajustes al comunicado sobre el cobro del seguro y los endosos</h2>
+
+<p>Durante la reunión, se discutieron y aprobaron ajustes al comunicado sobre el cobro del seguro y los endosos, con el objetivo de mejorar la claridad y evitar confusiones entre los copropietarios. Don Hernán propuso modificaciones específicas en la redacción para hacer el comunicado más comprensible y completo.</p>
+
+<p>En relación con la sección del seguro, se acordó complementar la información sobre el incremento de la prima del <b>3%</b> con la posibilidad de negociar el pago en tres cuotas iguales a 60 días. Esta adición busca proporcionar una visión más completa de las opciones disponibles para los copropietarios.</p>
+
+<p>Se revisó la redacción sobre los endosos para evitar confusiones. Se determinó que la aseguradora, si continúa siendo MAFRE, expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. Se enfatizó que la aceptación de estos endosos queda sujeta a las políticas de cada entidad financiera, y que el paz y salvo solo será emitido por la aseguradora una vez que se haya pagado la totalidad de la póliza. La redacción final aprobada fue: "Para la nueva vigencia, si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. El paz y salvo solo lo emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeto a las políticas de cada entidad financiera."</p>
+
+<p>Luisa confirmó que, con los pagos programados para agosto, septiembre y octubre, se contará con el flujo de caja suficiente para pagar la póliza. Se informó que el mes anterior se cerró al día con los proveedores y que la reserva legal estaba respaldada en su totalidad. Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió ponerse al día con los proveedores.</p>
+
+<p>Se proporcionaron datos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió transferir <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal, y se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Finalmente, se ratificó que la facturación de agosto y septiembre será igual a la de julio. A partir de octubre, se normalizará el cobro de la cuota ordinaria de administración. Se añadió una nota al final del comunicado para recordar a los copropietarios la importancia de su participación en la asamblea, donde se toman las decisiones importantes para la copropiedad, decisiones que son vinculantes para todos. La frase final acordada fue: "Con todo lo anterior confirmamos que se están recaudando los valores tal cual fueron aprobados por la asamblea. Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios."</p>
+
+<h2>4. Estado financiero de la copropiedad y respaldo de la reserva legal</h2>
+
+<p>Durante la reunión, se abordó el estado financiero de la copropiedad y el respaldo de la reserva legal. Luisa informó que, gracias al saneamiento financiero aprobado por la asamblea, la copropiedad cerró el mes de junio al día con los proveedores por primera vez en los últimos dos años de gestión. Además, se destacó que la reserva legal estaba respaldada en su totalidad en una fiducuenta.</p>
+
+<p>Se mencionó que se realizaron dos adiciones de <b>45 millones</b> a la fiducia, cerrando en <b>97 millones</b> en junio. Adicionalmente, la cuenta bancaria cerró con <b>43 millones</b>. Luisa indicó que, aunque aún no se disponía de informes detallados, se habían pagado los rubros más importantes, como el aseo y la vigilancia del mes anterior, lo que permitió cerrar el mes al día.</p>
+
+<p>Se proporcionaron datos específicos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió transferir <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal. Se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió ponerse al día con los proveedores. Se enfatizó la importancia de comunicar a los copropietarios que la reserva legal ya es líquida y está respaldada en su totalidad.</p>
+
+<h2>5. Facturación de agosto y septiembre</h2>
+
+<p>Durante la reunión, se discutieron las opciones de facturación para los meses de agosto y septiembre de 2025. Luisa presentó dos alternativas principales para la consideración del consejo.</p>
+
+<p><b>Opción 1:</b> Continuar con la facturación de agosto y septiembre de la misma manera que en julio. Esto implicaría mantener el cobro de la cuota ordinaria, el retroactivo (si aplica), la cuota extra por resultados anteriores (saneamiento financiero) y el cobro correspondiente a la póliza de seguro. Bajo esta opción, se seguirían recaudando los valores aprobados por la asamblea.</p>
+
+<p><b>Opción 2:</b> Considerar que la asamblea aprobó recaudar tanto el saneamiento financiero como el seguro en seis cuotas. Esta opción buscaba aliviar el flujo de caja de los copropietarios. Bajo esta alternativa, el cobro del seguro se realizaría de julio a septiembre por el mismo valor del saneamiento financiero, y la diferencia (<b>91.053.900</b>, resultante de restar los <b>190.080.700</b> del saneamiento a los <b>281.133.600</b> del seguro) se cobraría en octubre para completar el valor total del seguro. En caso de que algunos copropietarios ya hubieran cancelado el valor de la factura enviada el 11 de julio, cerrarían el mes con un saldo a favor, tomando el mayor valor entre el valor facturado el 11 de julio y el valor que se facture nuevamente.</p>
+
+<p>Tras la presentación de las opciones, Don Hernán, Doña Claudia, María Clara y Cecilia Taborda expresaron sus opiniones. Se destacó que la opción 2 podría generar confusión y que era importante mantener la coherencia con lo aprobado en la asamblea. Se mencionó que, aunque la opción 2 podría aliviar el flujo de caja de los copropietarios, no se habían recibido solicitudes formales para diferir los pagos en cuatro meses.</p>
+
+<p>Finalmente, se acordó mantener la facturación de agosto y septiembre igual a la de julio, es decir, continuar con la <b>Opción 1</b>. Se decidió que a partir de octubre se normalizaría el cobro de la cuota ordinaria de administración, sin los cobros adicionales correspondientes al saneamiento financiero y al seguro. Se enfatizó que con esta decisión se estaban recaudando los valores tal como fueron aprobados por la asamblea.</p>
+
+<p>Adicionalmente, se incluyó una nota al final del comunicado para recordar a los copropietarios la importancia de su participación en la asamblea, donde se toman las decisiones importantes para la copropiedad, decisiones que son vinculantes para todos los copropietarios. La frase final acordada fue: "Con todo lo anterior confirmamos que se están recaudando los valores tal cual fueron aprobados por la asamblea. Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios."</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> No especificado</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Ajustar el comunicado sobre el cobro de lo aprobado por la asamblea, incluyendo las sugerencias de Don Hernán y otros consejeros. – <strong>Responsable:</strong> Luisa</li>
+        <li>Si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera, el pasisalvo solo le emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeto a las políticas de cada entidad financiera. – <strong>Responsable:</strong> Luisa (incorporar la redacción final en el comunicado)</li>
+        <li>Incluir en el comunicado que la reserva legal ya es líquida y está respaldada en una fiducuenta. – <strong>Responsable:</strong> Luisa</li>
+        <li>La facturación de agosto y septiembre será igual a la de julio. En octubre solo se cobrará la cuota ordinaria de administración. – <strong>Responsable:</strong> Luisa (incorporar en el comunicado)</li>
+        <li>Enviar el comunicado ajustado mañana después de transferir la plata a la fiducia. – <strong>Responsable:</strong> Luisa y Gina</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión Aclaración Cobro Aprobado por la Asamblea</h1>
+  <p><strong>Fecha:</strong> 15 de Julio de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 5:30 PM - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> Virtual</p>
+  <p><strong>Moderador:</strong> Luisa</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Claudia - Consejera</li>
+    <li>Hernán - Consejero</li>
+    <li>María Clara - [CARGO NO ESPECIFICADO]</li>
+    <li>Cecilia Taborda - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Aclaración del cobro de lo aprobado por la asamblea</li>
+    <li>Presupuesto definitivo y aprobación de la asamblea</li>
+    <li>Saneamiento financiero aprobado por la asamblea</li>
+    <li>Seguro vigencia 2025-2026 y aprobación de la asamblea</li>
+    <li>Endosos de MAFRE para entidades financieras</li>
+    <li>Análisis de facturas de junio y julio de 2025</li>
+    <li>Opciones de facturación para agosto y septiembre</li>
+    <li>Reserva Legal y Cierre Financiero</li>
+  </ol>
+</header>
+
+<h2>1. Autorización de la grabación de la sesión</h2>
+
+<p>Al inicio de la reunión, la moderadora, Luisa, consultó a los asistentes sobre la autorización para grabar la sesión, con el fin de mantener un registro preciso de los temas tratados y las decisiones tomadas. Se solicitó la aprobación explícita de cada uno de los consejeros y asistentes presentes.</p>
+
+<p>María Clara manifestó su autorización para la grabación. Cecilia Taborda, presente junto con otros asesores, también dio su consentimiento. Don Hernán igualmente autorizó la grabación de la sesión.</p>
+
+<p>Con la aprobación unánime de los asistentes, se procedió a la grabación de la reunión, asegurando que todas las intervenciones y acuerdos quedaran debidamente registrados para su posterior consulta y referencia.</p>
+
+<h2>2. Aclaración sobre el cobro de lo aprobado en la asamblea: Presupuesto, saneamiento financiero y seguro</h2>
+
+<p>Con el fin de aclarar el cobro de lo aprobado por la asamblea, la moderadora, Luisa, presentó un comunicado detallando los siguientes puntos: presupuesto definitivo, saneamiento financiero y seguro. Se proporcionaron imágenes de las votaciones del acta de la asamblea y de comunicados previos para respaldar la información.</p>
+
+<p><b>Presupuesto Definitivo:</b> Se informó sobre el incremento del <b>7.5%</b> para la cuota ordinaria de administración, aclarando que este porcentaje no incluye el valor del seguro. Se ajustó la cuota ordinaria al <b>7.5%</b> de incremento definitivo, dado que entre enero y marzo se aplicó un incremento provisional del <b>5.2%</b> correspondiente al IPC. Este cobro se reflejó en la factura como retroactivo y fue comunicado el <b>10 de abril de 2025</b>.</p>
+
+<p><b>Saneamiento Financiero:</b> Se recordó que la asamblea aprobó un recaudo de <b>190.080.700</b> en tres cuotas, adicionales a la cuota de administración ordinaria. Este cobro se efectuó entre abril y junio, figurando en la factura como "extra, resultados anteriores" y fue comunicado el <b>10 de abril de 2025</b>. Se destacó que, gracias a este recaudo, la copropiedad cerró el mes de junio de 2025 al día con los proveedores, por primera vez en los últimos dos años de gestión, logrando así ponerse al día con sus obligaciones.</p>
+
+<p><b>Seguro Vigencia 2025-2026:</b> Se comunicó el recaudo de <b>281.133.600</b> en tres cuotas, aparte de la cuota de administración ordinaria, comenzando en julio. Este cobro fue informado mediante comunicado el <b>10 de julio de 2025</b>. Se anunció que MAFRE, la aseguradora actual, manifestó su decisión de continuar asegurando la copropiedad con un incremento en la prima de solo el <b>3%</b>, con la posibilidad de negociar su pago en tres cuotas a 60 días. No obstante, se aclaró que esta última información aún no está confirmada. El intermediario de seguros está buscando otras propuestas para tomar la mejor decisión para la copropiedad.</p>
+
+<p><b>Endosos de MAFRE:</b> Se explicó que MAFRE expide los endosos para las entidades financieras durante el proceso de renovación y pago de la nueva póliza, pero no expide el paz y salvo dado el acuerdo de pagos. Se enfatizó que cada copropietario con crédito hipotecario o leasing habitacional es responsable de validar con su banco si acepta el endoso sin el paz y salvo, documento que se expedirá en los primeros días de octubre, posterior al pago total de la póliza. Para la nueva vigencia, si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. El paz y salvo solo lo emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeta a las políticas de cada entidad financiera.</p>
+
+<p>Se presentaron imágenes de facturas de un apartamento en junio y julio de 2025 para ilustrar los cobros mencionados. Se plantearon dos opciones para la facturación de agosto y septiembre: la primera, continuar igual que en julio, recaudando los valores aprobados por la asamblea; la segunda, considerar que la asamblea aprobó recaudar tanto el saneamiento financiero como el seguro en seis cuotas, con el fin de ayudar al flujo de caja de los copropietarios. Bajo esta segunda opción, el cobro del seguro sería de julio a septiembre por el mismo valor del saneamiento financiero, y la diferencia se cobraría en octubre. En caso de copropietarios que ya cancelaron el valor de la factura enviada el 11 de julio, cerrarían el mes con el respectivo saldo a favor.</p>
+
+<p>Tras la presentación, Don Hernán sugirió ajustes en la redacción del comunicado, específicamente en la sección del seguro, para mayor claridad. Se propuso complementar la información sobre el incremento de la prima con la posibilidad de negociar el pago en tres cuotas iguales. También se sugirió modificar la redacción sobre los endosos para evitar confusiones, aclarando que la aseguradora expide los endosos y que la aceptación de estos depende de cada entidad financiera.</p>
+
+<p>Se discutió la suficiencia del flujo de caja para pagar la póliza con los pagos en agosto, septiembre y octubre. Luisa informó que el mes anterior se cerró al día con los proveedores y que la reserva legal estaba respaldada en su totalidad, con adiciones de <b>45 millones</b> que cerraron en <b>97 millones</b> en junio. Además, se mencionó que la cuenta bancaria cerró con <b>43 millones</b>. Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió pasar al día con los proveedores.</p>
+
+<p>Se proporcionaron datos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió pasar <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal, y se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Finalmente, se concluyó que la facturación de agosto y septiembre será igual a la de julio. A partir de octubre, se normalizará el cobro de la cuota ordinaria de administración. Con todo lo anterior, se confirma que se están recaudando los valores tal cual fueron aprobados por la asamblea. <i>Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios.</i></p>
+
+<h2>3. Ajustes al comunicado sobre el cobro del seguro y los endosos</h2>
+
+<p>Durante la reunión, se discutieron y aprobaron ajustes al comunicado sobre el cobro del seguro y los endosos, con el objetivo de mejorar la claridad y evitar confusiones entre los copropietarios. Don Hernán propuso modificaciones específicas en la redacción para hacer el comunicado más comprensible y completo.</p>
+
+<p>En relación con la sección del seguro, se acordó complementar la información sobre el incremento de la prima del <b>3%</b> con la posibilidad de negociar el pago en tres cuotas iguales a 60 días. Esta adición busca proporcionar una visión más completa de las opciones disponibles para los copropietarios.</p>
+
+<p>Se revisó la redacción sobre los endosos para evitar confusiones. Se determinó que la aseguradora, si continúa siendo MAFRE, expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. Se enfatizó que la aceptación de estos endosos queda sujeta a las políticas de cada entidad financiera, y que el paz y salvo solo será emitido por la aseguradora una vez que se haya pagado la totalidad de la póliza. La redacción final aprobada fue: "Para la nueva vigencia, si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera. El paz y salvo solo lo emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeto a las políticas de cada entidad financiera."</p>
+
+<p>Luisa confirmó que, con los pagos programados para agosto, septiembre y octubre, se contará con el flujo de caja suficiente para pagar la póliza. Se informó que el mes anterior se cerró al día con los proveedores y que la reserva legal estaba respaldada en su totalidad. Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió ponerse al día con los proveedores.</p>
+
+<p>Se proporcionaron datos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió transferir <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal, y se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Finalmente, se ratificó que la facturación de agosto y septiembre será igual a la de julio. A partir de octubre, se normalizará el cobro de la cuota ordinaria de administración. Se añadió una nota al final del comunicado para recordar a los copropietarios la importancia de su participación en la asamblea, donde se toman las decisiones importantes para la copropiedad, decisiones que son vinculantes para todos. La frase final acordada fue: "Con todo lo anterior confirmamos que se están recaudando los valores tal cual fueron aprobados por la asamblea. Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios."</p>
+
+<h2>4. Estado financiero de la copropiedad y respaldo de la reserva legal</h2>
+
+<p>Durante la reunión, se abordó el estado financiero de la copropiedad y el respaldo de la reserva legal. Luisa informó que, gracias al saneamiento financiero aprobado por la asamblea, la copropiedad cerró el mes de junio al día con los proveedores por primera vez en los últimos dos años de gestión. Además, se destacó que la reserva legal estaba respaldada en su totalidad en una fiducuenta.</p>
+
+<p>Se mencionó que se realizaron dos adiciones de <b>45 millones</b> a la fiducia, cerrando en <b>97 millones</b> en junio. Adicionalmente, la cuenta bancaria cerró con <b>43 millones</b>. Luisa indicó que, aunque aún no se disponía de informes detallados, se habían pagado los rubros más importantes, como el aseo y la vigilancia del mes anterior, lo que permitió cerrar el mes al día.</p>
+
+<p>Se proporcionaron datos específicos sobre la reserva legal a junio, que asciende a <b>108.179.427</b>. Se determinó que la fiducuenta cerró con <b>97.977.422</b>, lo que representa aproximadamente el <b>90%</b> de la reserva legal. Se decidió transferir <b>10 millones</b> adicionales a la fiducia para alcanzar el <b>100%</b> de respaldo de la reserva legal. Se acordó que el comunicado se enviará al día siguiente, una vez realizada la transferencia.</p>
+
+<p>Se acordó incluir en el comunicado que la reserva legal ya está respaldada en una fiducuenta, gracias al saneamiento financiero, lo cual permitió ponerse al día con los proveedores. Se enfatizó la importancia de comunicar a los copropietarios que la reserva legal ya es líquida y está respaldada en su totalidad.</p>
+
+<h2>5. Facturación de agosto y septiembre</h2>
+
+<p>Durante la reunión, se discutieron las opciones de facturación para los meses de agosto y septiembre de 2025. Luisa presentó dos alternativas principales para la consideración del consejo.</p>
+
+<p><b>Opción 1:</b> Continuar con la facturación de agosto y septiembre de la misma manera que en julio. Esto implicaría mantener el cobro de la cuota ordinaria, el retroactivo (si aplica), la cuota extra por resultados anteriores (saneamiento financiero) y el cobro correspondiente a la póliza de seguro. Bajo esta opción, se seguirían recaudando los valores aprobados por la asamblea.</p>
+
+<p><b>Opción 2:</b> Considerar que la asamblea aprobó recaudar tanto el saneamiento financiero como el seguro en seis cuotas. Esta opción buscaba aliviar el flujo de caja de los copropietarios. Bajo esta alternativa, el cobro del seguro se realizaría de julio a septiembre por el mismo valor del saneamiento financiero, y la diferencia (<b>91.053.900</b>, resultante de restar los <b>190.080.700</b> del saneamiento a los <b>281.133.600</b> del seguro) se cobraría en octubre para completar el valor total del seguro. En caso de que algunos copropietarios ya hubieran cancelado el valor de la factura enviada el 11 de julio, cerrarían el mes con un saldo a favor, tomando el mayor valor entre el valor facturado el 11 de julio y el valor que se facture nuevamente.</p>
+
+<p>Tras la presentación de las opciones, Don Hernán, Doña Claudia, María Clara y Cecilia Taborda expresaron sus opiniones. Se destacó que la opción 2 podría generar confusión y que era importante mantener la coherencia con lo aprobado en la asamblea. Se mencionó que, aunque la opción 2 podría aliviar el flujo de caja de los copropietarios, no se habían recibido solicitudes formales para diferir los pagos en cuatro meses.</p>
+
+<p>Finalmente, se acordó mantener la facturación de agosto y septiembre igual a la de julio, es decir, continuar con la <b>Opción 1</b>. Se decidió que a partir de octubre se normalizaría el cobro de la cuota ordinaria de administración, sin los cobros adicionales correspondientes al saneamiento financiero y al seguro. Se enfatizó que con esta decisión se estaban recaudando los valores tal como fueron aprobados por la asamblea.</p>
+
+<p>Adicionalmente, se incluyó una nota al final del comunicado para recordar a los copropietarios la importancia de su participación en la asamblea, donde se toman las decisiones importantes para la copropiedad, decisiones que son vinculantes para todos los copropietarios. La frase final acordada fue: "Con todo lo anterior confirmamos que se están recaudando los valores tal cual fueron aprobados por la asamblea. Recuerda que es importante tu participación en la asamblea, allí se toman las decisiones importantes para la copropiedad y son vinculantes para todos los copropietarios."</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> No especificado</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Ajustar el comunicado sobre el cobro de lo aprobado por la asamblea, incluyendo las sugerencias de Don Hernán y otros consejeros. – <strong>Responsable:</strong> Luisa</li>
+        <li>Si la aseguradora continúa siendo MAFRE, ésta expedirá los endosos, los cuales deben ser entregados por cada copropietario a su entidad financiera, el pasisalvo solo le emitirá la aseguradora cuando se haya pagado la totalidad de la póliza. Por lo tanto, la aceptación de los endosos queda sujeto a las políticas de cada entidad financiera. – <strong>Responsable:</strong> Luisa (incorporar la redacción final en el comunicado)</li>
+        <li>Incluir en el comunicado que la reserva legal ya es líquida y está respaldada en una fiducuenta. – <strong>Responsable:</strong> Luisa</li>
+        <li>La facturación de agosto y septiembre será igual a la de julio. En octubre solo se cobrará la cuota ordinaria de administración. – <strong>Responsable:</strong> Luisa (incorporar en el comunicado)</li>
+        <li>Enviar el comunicado ajustado mañana después de transferir la plata a la fiducia. – <strong>Responsable:</strong> Luisa y Gina</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): grabacion_ybb__Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/grabacion_ybb_/grabacion_ybb__Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/A6Apy7RRw9bG2HA
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/A6Apy7RRw9bG2HA
+Generando URL pública para Transcripcion.txt (EXISTENTE): grabacion_ybb__Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/grabacion_ybb_/grabacion_ybb__Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/kXeq2aRwzBeCCTe
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/kXeq2aRwzBeCCTe
+Verificando si existe transcripción: 17_jul._9.37_a._m.__Transcripcion.txt en carpeta 17_jul._9.37_a._m._
+[2025-07-17T22:50:09.201Z] Verificando existencia del archivo 17_jul._9.37_a._m.__Transcripcion.txt en Nextcloud carpeta 17_jul._9.37_a._m._.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T22:50:10.747Z] Archivo "17_jul._9.37_a._m.__Transcripcion.txt" EXISTE en Nextcloud en la carpeta "17_jul._9.37_a._m._".
+Transcripción existente encontrada: 17_jul._9.37_a._m._. Obteniendo contenido.
+Verificando contenido existente: 17_jul._9.37_a._m.__Contenido.txt
+[2025-07-17T22:50:12.360Z] Verificando existencia del archivo 17_jul._9.37_a._m.__Contenido.txt en Nextcloud carpeta 17_jul._9.37_a._m._.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T22:50:13.306Z] Archivo "17_jul._9.37_a._m.__Contenido.txt" NO encontrado en Nextcloud en la carpeta "17_jul._9.37_a._m._".
+Generando contenido para: 17_jul._9.37_a._m._.wav
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: 17_jul._9.37_a._m.__Transcripcion.txt
+[2025-07-17T22:50:13.308Z] Verificando existencia del archivo 17_jul._9.37_a._m.__Transcripcion.txt en Nextcloud carpeta 17_jul._9.37_a._m._.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T22:50:14.198Z] Archivo "17_jul._9.37_a._m.__Transcripcion.txt" EXISTE en Nextcloud en la carpeta "17_jul._9.37_a._m._".
+Transcripción encontrada: 17_jul._9.37_a._m.__Transcripcion.txt. Obteniendo contenido.
+[2025-07-17T22:50:16.380Z] Contenido del archivo "17_jul._9.37_a._m.__Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: 17_jul._9.37_a._m._.wav
+Guardando contenido en Nextcloud: 17_jul._9.37_a._m.__Contenido.txt
+Contenido guardado: 17_jul._9.37_a._m.__Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 17_jul._9.37_a._m._.wav en carpeta: 17_jul._9.37_a._m._
+Verificando Borrador .docx existente: 17_jul._9.37_a._m.__Borrador.docx
+[2025-07-17T22:51:38.822Z] Verificando existencia del archivo 17_jul._9.37_a._m.__Borrador.docx en Nextcloud carpeta 17_jul._9.37_a._m._.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T22:51:39.656Z] Archivo "17_jul._9.37_a._m.__Borrador.docx" NO encontrado en Nextcloud en la carpeta "17_jul._9.37_a._m._".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 17_jul._9.37_a._m.__Borrador.docx
+Preparando guardado .docx en Nextcloud: 17_jul._9.37_a._m.__Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Revisión del concepto de saldos a favor</h1>
+  <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+  <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+  <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+  <p><strong>Moderador:</strong> [NOMBRE DEL MODERADOR]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>John - Tesorería</li>
+    <li>Consuelo</li>
+    <li>Guillermo</li>
+    <li>Olga</li>
+    <li>Vero</li>
+    <li>Carmen Elisa</li>
+    <li>Luis Tam</li>
+    <li>Claudia - Ingeniera</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Análisis de saldos a favor y su aplicación en vigencias anteriores</li>
+    <li>Problemas con la aplicación de saldos a favor en el sistema B debido a la falta de histórico</li>
+    <li>Propuesta de creación de códigos alternos para afectar solo la cuenta corriente y no la contabilidad</li>
+    <li>Revisión de auxiliares de enero a junio para reversión de saldos a favor</li>
+    <li>Discusión sobre valores dobles y la creación de una cuenta temporal para pagos dobles</li>
+    <li>Revisión de tres casos específicos de aplicación de saldos a favor de la vigencia actual</li>
+    <li>Propuesta de que los ajustes de saldo a favor 2025 se hagan por tesorería</li>
+    <li>Identificación de valores pequeños cargados por cuenta corriente sin interfaz a presupuesto</li>
+    <li>Análisis de la posibilidad de ajustar el recaudo en el mes de junio</li>
+    <li>Seguimiento al desarrollo del sistema B para la gestión de saldos a favor</li>
+  </ol>
+</header>
+
+<h2>1. Análisis de movimientos contables y tipos de ajustes (saldos a favor, exoneraciones, exclusiones, cambios de estratificación)</h2>
+
+<p>Durante la reunión, se abordó el análisis de diversos tipos de movimientos contables y ajustes realizados, incluyendo saldos a favor, exoneraciones, exclusiones y cambios de estratificación. Se identificó que existen varios tipos de ajustes que se realizan internamente, siendo el concepto de saldos a favor el que genera mayor interrogante. Se solicitó que se incluyera el concepto en los auxiliares contables, ya que anteriormente no se visualizaba la descripción en contabilidad al revisar los ingresos por el módulo de predial. Ahora, al revisar por ingresos, se puede determinar a qué corresponde cada comprobante, qué operación o actividad se está realizando con él.</p>
+
+<p>Se identificaron varios tipos de ajustes, entre ellos, saldos a favor, exoneraciones, ajustes por exclusiones, cambios de estratificación y convenios. Se aclaró que las exoneraciones no presentan inconvenientes, ya que el movimiento se refleja correctamente en contabilidad, disminuyendo la cuenta contra el ingreso. La principal duda se centra en los saldos a favor.</p>
+
+<p>Se analizó que en la vigencia 2025 existen dos tipos de saldos a favor: los que se aplican y corresponden a vigencias anteriores, y los de la vigencia actual. Los saldos a favor de vigencias anteriores ya aparecían en la cartera o en el estado de cuenta del contribuyente y debían aplicarse en el presente año. Se observó que, al registrar estos saldos a favor, las parametrizaciones están asociadas al concepto de predial y no de saldo a favor, lo que genera un registro en contabilidad como si fuera un registro de predial, afectando la cuenta 1305 como si fuera una causación 30507 y la 41. Se cuestionó si este registro es correcto, ya que estos recursos ya fueron aplicados en la vigencia anterior y registrados contablemente al momento de subir el recaudo desde Tesorería, afectando Contabilidad, Presupuesto y Cartera.</p>
+
+<p>Se sugirió revisar cómo se están afectando estos conceptos y con qué tipo de documento, para que no tengan efecto contable o se vayan a cuentas diferentes y no toquen las parametrizaciones ya afectadas con el código de predial. Se indicó que, de lo contrario, se estaría teniendo un registro doble en Contabilidad, ya que presupuestalmente no afecta porque ya se afectó en su momento. Se planteó la posibilidad de quitarlo o reclasificarlo para que no tenga efecto contable sobre las vigencias anteriores.</p>
+
+<p>Se explicó que el problema con la aplicación de saldos a favor de vigencias anteriores surge porque el sistema B no tiene un histórico ni realizó un traslado de la información anterior. Al aplicar un saldo a favor a un predio que actualmente solo debe la vigencia 2025, se afecta esta vigencia, ya que el sistema no tiene un módulo específico para saldos a favor. Se mencionó el caso de un predio con exoneración del 100% por área de reserva forestal, donde se aplicó la exoneración y se dejó en cero el impuesto predial, pero quedaron pendientes las sobretasas. Al aplicar un saldo a favor de años anteriores, se buscó la forma de hacerlo mediante una cancelación de cuenta, pero no fue posible debido a la exoneración. Se optó por una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Se recordó que, en el sistema anterior, los saldos a favor afectaban directamente el presupuesto al momento de devolverlos, pero no afectaban el gasto cuando eran de vigencias anteriores. Se mencionó que el sistema internamente guardaba el saldo a favor, aunque no se tenía un auxiliar contable que mostrara todos los saldos a favor de años anteriores. Se consultó si existe un listado de todos los saldos a favor que hayan quedado, a lo que se respondió que sí se tiene un listado, pero que muchos saldos a favor generados por el sistema no son reales y deben revisarse uno por uno.</p>
+
+<p>Se describió un problema con el sistema B, donde no se puede realizar la situación de doble pago, ya que no permite subir un segundo pago si no encuentra deuda. Esto genera que no se sepa si hay un saldo a favor hasta que el contribuyente lo notifica. Se planteó la necesidad de que el sistema B haga las correcciones necesarias para solucionar este problema.</p>
+
+<p>Se discutió la posibilidad de que se sigan aplicando los saldos a favor, pero sin afectar la contabilidad. Se propuso solicitar a los encargados del sistema B que proporcionen códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se mencionó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad.</p>
+
+<p>Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados. Se planteó la posibilidad de que se corrijan los registros ya subidos o que se hagan comprobantes para ajustar la situación. Se consideró que lo más ortodoxo sería que se hiciera un ajuste en contabilidad y se dejara caminar, ya que solicitar la corrección podría tardar demasiado. Se acordó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión.</p>
+
+<p>En cuanto a la vigencia actual, se mencionó que John ha solicitado que se haga algo con los valores dobles. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se aclaró que la creación del pasivo fue una solución temporal para evitar la partida conciliatoria, pero que la cuenta corriente no se da cuenta de esta situación. En la última reunión en Hacienda, se mencionó que se trataría de subir todos los pagos dobles al 30 de junio para que se mostraran los saldos a favor en el sistema. Se mencionó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual. En el primer caso, se identificó que se volvió a facturar y se hizo un débito y un crédito como si se estuviera anulando el registro. Se observó que, al restar el último recaudo a la factura inicial, se obtiene el valor del ajuste, pero se vuelve a hacer el registro de la facturación por la diferencia, afectando contabilidad pero no presupuesto. En el segundo caso, se identificó una diferencia en la factura, pero se necesita ver qué solicitó la persona para determinar la razón de la diferencia. En el tercer caso, no se encontraron problemas en la facturación, ya que se aplicó el saldo a favor a un predio diferente, pero el valor aplicado no está afectando el presupuesto.</p>
+
+<p>Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán haciendo como hasta ahora, teniendo en cuenta si se crean los conceptos para la aplicación de saldos a favor.</p>
+
+<p>Se identificaron valores pequeños cargados por cuenta corriente sin interfaz a presupuesto, correspondientes a recaudos. Se consultó si se puede hacer el ajuste en el recaudo de predial, pero se indicó que no se puede hacer el registro que hicieron desde cuenta corriente no afectó presupuesto. Se necesita validar si existe algún documento que permita ajustar o aumentar el recaudo. Se mencionó un caso en el que se retuvo el mismo valor que se pagó, generando una anulación en el informe, pero el valor sigue saliendo. Se concluyó que se debe preguntar si se puede hacer el ajuste o si se debe radicar para que anulen lo que se hizo.</p>
+
+<h2>2. Discusión sobre la parametrización y registro de saldos a favor de vigencias anteriores</h2>
+
+<p>Durante la reunión, se abordó la problemática relacionada con la parametrización y el registro contable de los saldos a favor provenientes de vigencias anteriores. Se identificó que, al aplicar estos saldos, el sistema los registra bajo el concepto de predial en lugar de saldo a favor, lo que genera un registro contable incorrecto, afectando la cuenta 1305 como si fuera una causación 30507 y la 41. Se cuestionó la validez de este registro, dado que estos recursos ya fueron aplicados y registrados contablemente en la vigencia anterior al momento de subir el recaudo desde Tesorería, impactando Contabilidad, Presupuesto y Cartera.</p>
+
+<p>Se explicó que el sistema B carece de un histórico de información anterior, lo que impide aplicar correctamente los saldos a favor a las vigencias correspondientes. Al intentar aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad. Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados, ya sea corrigiendo los registros ya subidos o realizando comprobantes para ajustar la situación. Se acordó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión.</p>
+
+<p>Se discutió la situación de los valores dobles en la vigencia actual, donde John ha solicitado una solución. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán haciendo como hasta ahora, teniendo en cuenta si se crean los conceptos para la aplicación de saldos a favor.</p>
+
+<h2>3. Problemáticas del sistema B para el manejo de saldos a favor y pagos duplicados</h2>
+
+<p>Durante la reunión, se discutieron las problemáticas que presenta el sistema B en relación con el manejo de saldos a favor y pagos duplicados. Se identificó que el sistema B no cuenta con un módulo específico para la gestión de saldos a favor, lo que genera inconvenientes al momento de aplicar estos saldos a las vigencias correspondientes. Específicamente, se mencionó que el sistema no tiene un histórico de información anterior, lo que impide aplicar correctamente los saldos a favor a las vigencias a las que pertenecen.</p>
+
+<p>Se explicó que, al intentar aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual. Se destacó que el sistema B no tiene parametrizado un saldo a favor, sino que lo maneja como una nota crédito a la vigencia.</p>
+
+<p>Otro problema identificado es que el sistema B no permite realizar la situación de doble pago, ya que no permite subir un segundo pago si no encuentra deuda. Esto genera que no se sepa si hay un saldo a favor hasta que el contribuyente lo notifica. Se planteó la necesidad de que el sistema B haga las correcciones necesarias para solucionar este problema.</p>
+
+<p>Se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad. Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados, ya sea corrigiendo los registros ya subidos o realizando comprobantes para ajustar la situación.</p>
+
+<p>En cuanto a la vigencia actual, se mencionó que John ha solicitado una solución para los valores dobles. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique.</p>
+
+<h2>4. Propuesta de creación de códigos alternos para afectación de cuenta corriente y no contable/presupuestal</h2>
+
+<p>Durante la reunión, se discutió la necesidad de crear códigos alternos en el sistema B para el manejo de saldos a favor, con el objetivo de que las aplicaciones de estos saldos afecten únicamente la cuenta corriente y no impacten la contabilidad ni el presupuesto, especialmente en lo que respecta a vigencias anteriores. Se identificó que el sistema actual registra los saldos a favor bajo el concepto de predial, generando registros contables incorrectos.</p>
+
+<p>Se explicó que el sistema B carece de un histórico de información anterior, lo que dificulta la correcta aplicación de los saldos a favor a las vigencias correspondientes. Al aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Ante esta situación, se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores. Estos códigos permitirían que los movimientos afecten solo la cuenta corriente, sin impactar la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad.</p>
+
+<p>Se concluyó que esta solución permitiría seguir aplicando los saldos a favor sin generar distorsiones en los registros contables y presupuestales, especialmente en lo que respecta a las vigencias anteriores. Se acordó elevar esta solicitud a los responsables del sistema B para su análisis e implementación.</p>
+
+<h2>5. Revisión de casos específicos de aplicación de saldos a favor y pagos duplicados (Batallón, señora de Diego Fabián González, otro predio)</h2>
+
+<p>Durante la reunión, se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, con el objetivo de identificar problemas en la facturación y la afectación presupuestal. Se buscaba determinar si los procedimientos aplicados estaban generando distorsiones en los registros contables y presupuestales.</p>
+
+<p>En el <b>primer caso</b>, se identificó que, tras la facturación inicial, se realizó un asiento de factura que implicó volver a facturar, generando un débito y un crédito como si se estuviera anulando el registro original. Se observó que, al restar el último recaudo a la factura inicial, se obtenía el valor del ajuste, pero se volvía a registrar la facturación por la diferencia. Este procedimiento afectaba la contabilidad, pero no el presupuesto. Se explicó que esta forma de proceder se debe a que el sistema B no cuenta con un módulo de ajustes que permita realizar correcciones sin impactar el presupuesto, obligando a utilizar el módulo de facturación para realizar los ajustes necesarios, lo cual genera una nueva causación.</p>
+
+<p>En el <b>segundo caso</b>, correspondiente a la señora de Diego Fabián González, se identificó una diferencia en la factura. Se determinó que la señora tenía cuatro facturas iniciales y realizó pagos que cubrían parte de estas. Sin embargo, quedó una diferencia de **22 millones de pesos** pendiente. Se concluyó que para analizar esta diferencia, era necesario revisar la solicitud original de la señora, ya que la diferencia podría deberse a que el pago se realizó durante el período de descuento y la solicitud de traslado de pago se hizo posteriormente, lo que implicaría tener en cuenta el descuento aplicado en su momento.</p>
+
+<p>En el <b>tercer caso</b>, no se encontraron problemas en la facturación. Se determinó que el saldo a favor se aplicó a un predio diferente, perteneciente a un tercero. Aunque este procedimiento no generó doble facturación, se observó que el valor aplicado no estaba afectando el presupuesto. Esto se debe a que John ya había subido el valor inicialmente al pasivo, pero no se había realizado el efecto correspondiente en el presupuesto.</p>
+
+<p>Ante estas situaciones, se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionen a través de tesorería. De esta manera, se podrían realizar los ajustes correspondientes, ya que no hay forma de visualizarlos en el sistema B. Se acordó que se enviará la factura a tesorería para que se aplique el saldo a favor, y se responderá al contribuyente confirmando la aplicación. En caso de ser necesario, se crearía la deuda correspondiente. Se concluyó que se continuará con el desarrollo del sistema B, y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán gestionando como hasta ahora, teniendo en cuenta la creación de conceptos específicos para la aplicación de saldos a favor.</p>
+
+<p>Se mencionó el caso específico del Batallón, donde se aplicó el pago en exceso a otro predio. Se explicó que se revirtió el registro y se generó un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<h2>6. Discusión sobre la reversión de movimientos y la necesidad de ajustes o anulación de registros</h2>
+
+<p>Durante la reunión, se abordó la necesidad de revertir ciertos movimientos y realizar ajustes o anulaciones de registros, identificando varios escenarios que requieren atención. Se discutió la problemática de los saldos a favor, los pagos dobles y los valores cargados incorrectamente, así como la necesidad de coordinar con el área de tesorería y los encargados del sistema B para llevar a cabo las correcciones necesarias.</p>
+
+<p>Se mencionó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión de los registros ya cargados. Se planteó la posibilidad de corregir los registros ya subidos o de hacer comprobantes para ajustar la situación. Se consideró que lo más ortodoxo sería que se hiciera un ajuste en contabilidad y se dejara caminar, ya que solicitar la corrección podría tardar demasiado.</p>
+
+<p>En cuanto a los valores dobles en la vigencia actual, se mencionó que John ha solicitado una solución. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio. Se explicó que se revirtió el registro y se generó un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique.</p>
+
+<p>Se identificaron valores pequeños cargados por cuenta corriente sin interfaz a presupuesto, correspondientes a recaudos. Se consultó si se puede hacer el ajuste en el recaudo de predial, pero se indicó que no se puede hacer el registro que hicieron desde cuenta corriente no afectó presupuesto. Se necesita validar si existe algún documento que permita ajustar o aumentar el recaudo. Se mencionó un caso en el que se retuvo el mismo valor que se pagó, generando una anulación en el informe, pero el valor sigue saliendo. Se concluyó que se debe preguntar si se puede hacer el ajuste o si se debe radicar para que anulen lo que se hizo.</p>
+
+<p>Se discutió la necesidad de coordinar con los encargados del sistema B para solicitar la anulación de ciertos documentos y la corrección de errores en los registros. Se mencionó que existen limitaciones en el sistema actual que impiden realizar ajustes y reversiones de manera eficiente, lo que dificulta la conciliación de la información y genera problemas en la contabilidad y el presupuesto.</p>
+
+<h2>7. Propuesta de procedimiento para futuros saldos a favor y traslados</h2>
+
+<p>Durante la reunión, se propuso un nuevo procedimiento para gestionar los saldos a favor de la vigencia 2025 y los traslados de saldos a favor, con el objetivo de mejorar el control y la trazabilidad de estos movimientos. Se identificó que el sistema B presenta limitaciones para el manejo adecuado de estos saldos, lo que genera problemas en la contabilidad y el presupuesto.</p>
+
+<p>Se planteó que, de ahora en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionen a través de la tesorería. Bajo este esquema, la factura o el abono correspondiente se enviaría a tesorería para su aplicación. Posteriormente, se informaría al contribuyente que el saldo a favor ha sido aplicado, creando la deuda si es necesario. Este procedimiento busca centralizar la gestión de los saldos a favor en tesorería, permitiendo un mayor control y la realización de los ajustes necesarios.</p>
+
+<p>Se acordó que se continuará con el desarrollo del sistema B, pero mientras tanto, los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor de vigencias anteriores se seguirán gestionando como hasta ahora, teniendo en cuenta la posible creación de conceptos específicos para la aplicación de saldos a favor.</p>
+
+<p>Se mencionó que este nuevo procedimiento permitirá conciliar los valores que se han cargado en contabilidad, siempre y cuando se haya realizado el registro de manera juiciosa. Se reconoció que existen errores en los pagos, como facturas con referencias incorrectas, que dificultan la conciliación. Se acordó que se proporcionará a tesorería la información necesaria para identificar estos casos, incluyendo el número de factura, el número de predio y la fecha de pago.</p>
+
+<p>Se destacó la importancia de dar de baja los tres casos específicos de aplicación de saldos a favor que se analizaron previamente. Se planteó la posibilidad de que Carmen Elisa realice un ajuste presupuestal o que se anulen los registros y se vuelvan a cargar. Se concluyó que la decisión sobre el procedimiento a seguir queda en manos de Carmen Elisa, teniendo en cuenta que no se puede afectar la conciliación bancaria.</p>
+
+<p>En resumen, la propuesta busca mejorar la gestión de los saldos a favor de 2025 y los traslados de saldos a favor, centralizando su aplicación en tesorería y coordinando con contabilidad para garantizar la conciliación de la información. Se espera que este nuevo procedimiento permita un mayor control y trazabilidad de estos movimientos, evitando problemas en la contabilidad y el presupuesto.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> No especificado</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Se solicitará a B la creación de códigos alternos que solo afecten la cuenta corriente y no la contabilidad, para los saldos a favor de vigencias anteriores. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se revisará el auxiliar de enero a junio para identificar los registros de saldos a favor y realizar la reversión necesaria. – <strong>Responsable:</strong> Doña Olga y Vero</li>
+        <li>John subirá al pasivo toda la información de pagos dobles para evitar partidas conciliatorias. – <strong>Responsable:</strong> John</li>
+        <li>A partir de ahora, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionarán por tesorería. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se solicitará a Carmen Elisa que ajuste o anule los registros de los tres casos revisados. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se seguirá con el desarrollo de la herramienta para la gestión de saldos a favor. – <strong>Responsable:</strong> No especificado</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Revisión del concepto de saldos a favor</h1>
+  <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+  <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+  <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+  <p><strong>Moderador:</strong> [NOMBRE DEL MODERADOR]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>John - Tesorería</li>
+    <li>Consuelo</li>
+    <li>Guillermo</li>
+    <li>Olga</li>
+    <li>Vero</li>
+    <li>Carmen Elisa</li>
+    <li>Luis Tam</li>
+    <li>Claudia - Ingeniera</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Análisis de saldos a favor y su aplicación en vigencias anteriores</li>
+    <li>Problemas con la aplicación de saldos a favor en el sistema B debido a la falta de histórico</li>
+    <li>Propuesta de creación de códigos alternos para afectar solo la cuenta corriente y no la contabilidad</li>
+    <li>Revisión de auxiliares de enero a junio para reversión de saldos a favor</li>
+    <li>Discusión sobre valores dobles y la creación de una cuenta temporal para pagos dobles</li>
+    <li>Revisión de tres casos específicos de aplicación de saldos a favor de la vigencia actual</li>
+    <li>Propuesta de que los ajustes de saldo a favor 2025 se hagan por tesorería</li>
+    <li>Identificación de valores pequeños cargados por cuenta corriente sin interfaz a presupuesto</li>
+    <li>Análisis de la posibilidad de ajustar el recaudo en el mes de junio</li>
+    <li>Seguimiento al desarrollo del sistema B para la gestión de saldos a favor</li>
+  </ol>
+</header>
+
+<h2>1. Análisis de movimientos contables y tipos de ajustes (saldos a favor, exoneraciones, exclusiones, cambios de estratificación)</h2>
+
+<p>Durante la reunión, se abordó el análisis de diversos tipos de movimientos contables y ajustes realizados, incluyendo saldos a favor, exoneraciones, exclusiones y cambios de estratificación. Se identificó que existen varios tipos de ajustes que se realizan internamente, siendo el concepto de saldos a favor el que genera mayor interrogante. Se solicitó que se incluyera el concepto en los auxiliares contables, ya que anteriormente no se visualizaba la descripción en contabilidad al revisar los ingresos por el módulo de predial. Ahora, al revisar por ingresos, se puede determinar a qué corresponde cada comprobante, qué operación o actividad se está realizando con él.</p>
+
+<p>Se identificaron varios tipos de ajustes, entre ellos, saldos a favor, exoneraciones, ajustes por exclusiones, cambios de estratificación y convenios. Se aclaró que las exoneraciones no presentan inconvenientes, ya que el movimiento se refleja correctamente en contabilidad, disminuyendo la cuenta contra el ingreso. La principal duda se centra en los saldos a favor.</p>
+
+<p>Se analizó que en la vigencia 2025 existen dos tipos de saldos a favor: los que se aplican y corresponden a vigencias anteriores, y los de la vigencia actual. Los saldos a favor de vigencias anteriores ya aparecían en la cartera o en el estado de cuenta del contribuyente y debían aplicarse en el presente año. Se observó que, al registrar estos saldos a favor, las parametrizaciones están asociadas al concepto de predial y no de saldo a favor, lo que genera un registro en contabilidad como si fuera un registro de predial, afectando la cuenta 1305 como si fuera una causación 30507 y la 41. Se cuestionó si este registro es correcto, ya que estos recursos ya fueron aplicados en la vigencia anterior y registrados contablemente al momento de subir el recaudo desde Tesorería, afectando Contabilidad, Presupuesto y Cartera.</p>
+
+<p>Se sugirió revisar cómo se están afectando estos conceptos y con qué tipo de documento, para que no tengan efecto contable o se vayan a cuentas diferentes y no toquen las parametrizaciones ya afectadas con el código de predial. Se indicó que, de lo contrario, se estaría teniendo un registro doble en Contabilidad, ya que presupuestalmente no afecta porque ya se afectó en su momento. Se planteó la posibilidad de quitarlo o reclasificarlo para que no tenga efecto contable sobre las vigencias anteriores.</p>
+
+<p>Se explicó que el problema con la aplicación de saldos a favor de vigencias anteriores surge porque el sistema B no tiene un histórico ni realizó un traslado de la información anterior. Al aplicar un saldo a favor a un predio que actualmente solo debe la vigencia 2025, se afecta esta vigencia, ya que el sistema no tiene un módulo específico para saldos a favor. Se mencionó el caso de un predio con exoneración del 100% por área de reserva forestal, donde se aplicó la exoneración y se dejó en cero el impuesto predial, pero quedaron pendientes las sobretasas. Al aplicar un saldo a favor de años anteriores, se buscó la forma de hacerlo mediante una cancelación de cuenta, pero no fue posible debido a la exoneración. Se optó por una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Se recordó que, en el sistema anterior, los saldos a favor afectaban directamente el presupuesto al momento de devolverlos, pero no afectaban el gasto cuando eran de vigencias anteriores. Se mencionó que el sistema internamente guardaba el saldo a favor, aunque no se tenía un auxiliar contable que mostrara todos los saldos a favor de años anteriores. Se consultó si existe un listado de todos los saldos a favor que hayan quedado, a lo que se respondió que sí se tiene un listado, pero que muchos saldos a favor generados por el sistema no son reales y deben revisarse uno por uno.</p>
+
+<p>Se describió un problema con el sistema B, donde no se puede realizar la situación de doble pago, ya que no permite subir un segundo pago si no encuentra deuda. Esto genera que no se sepa si hay un saldo a favor hasta que el contribuyente lo notifica. Se planteó la necesidad de que el sistema B haga las correcciones necesarias para solucionar este problema.</p>
+
+<p>Se discutió la posibilidad de que se sigan aplicando los saldos a favor, pero sin afectar la contabilidad. Se propuso solicitar a los encargados del sistema B que proporcionen códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se mencionó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad.</p>
+
+<p>Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados. Se planteó la posibilidad de que se corrijan los registros ya subidos o que se hagan comprobantes para ajustar la situación. Se consideró que lo más ortodoxo sería que se hiciera un ajuste en contabilidad y se dejara caminar, ya que solicitar la corrección podría tardar demasiado. Se acordó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión.</p>
+
+<p>En cuanto a la vigencia actual, se mencionó que John ha solicitado que se haga algo con los valores dobles. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se aclaró que la creación del pasivo fue una solución temporal para evitar la partida conciliatoria, pero que la cuenta corriente no se da cuenta de esta situación. En la última reunión en Hacienda, se mencionó que se trataría de subir todos los pagos dobles al 30 de junio para que se mostraran los saldos a favor en el sistema. Se mencionó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual. En el primer caso, se identificó que se volvió a facturar y se hizo un débito y un crédito como si se estuviera anulando el registro. Se observó que, al restar el último recaudo a la factura inicial, se obtiene el valor del ajuste, pero se vuelve a hacer el registro de la facturación por la diferencia, afectando contabilidad pero no presupuesto. En el segundo caso, se identificó una diferencia en la factura, pero se necesita ver qué solicitó la persona para determinar la razón de la diferencia. En el tercer caso, no se encontraron problemas en la facturación, ya que se aplicó el saldo a favor a un predio diferente, pero el valor aplicado no está afectando el presupuesto.</p>
+
+<p>Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán haciendo como hasta ahora, teniendo en cuenta si se crean los conceptos para la aplicación de saldos a favor.</p>
+
+<p>Se identificaron valores pequeños cargados por cuenta corriente sin interfaz a presupuesto, correspondientes a recaudos. Se consultó si se puede hacer el ajuste en el recaudo de predial, pero se indicó que no se puede hacer el registro que hicieron desde cuenta corriente no afectó presupuesto. Se necesita validar si existe algún documento que permita ajustar o aumentar el recaudo. Se mencionó un caso en el que se retuvo el mismo valor que se pagó, generando una anulación en el informe, pero el valor sigue saliendo. Se concluyó que se debe preguntar si se puede hacer el ajuste o si se debe radicar para que anulen lo que se hizo.</p>
+
+<h2>2. Discusión sobre la parametrización y registro de saldos a favor de vigencias anteriores</h2>
+
+<p>Durante la reunión, se abordó la problemática relacionada con la parametrización y el registro contable de los saldos a favor provenientes de vigencias anteriores. Se identificó que, al aplicar estos saldos, el sistema los registra bajo el concepto de predial en lugar de saldo a favor, lo que genera un registro contable incorrecto, afectando la cuenta 1305 como si fuera una causación 30507 y la 41. Se cuestionó la validez de este registro, dado que estos recursos ya fueron aplicados y registrados contablemente en la vigencia anterior al momento de subir el recaudo desde Tesorería, impactando Contabilidad, Presupuesto y Cartera.</p>
+
+<p>Se explicó que el sistema B carece de un histórico de información anterior, lo que impide aplicar correctamente los saldos a favor a las vigencias correspondientes. Al intentar aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad. Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados, ya sea corrigiendo los registros ya subidos o realizando comprobantes para ajustar la situación. Se acordó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión.</p>
+
+<p>Se discutió la situación de los valores dobles en la vigencia actual, donde John ha solicitado una solución. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán haciendo como hasta ahora, teniendo en cuenta si se crean los conceptos para la aplicación de saldos a favor.</p>
+
+<h2>3. Problemáticas del sistema B para el manejo de saldos a favor y pagos duplicados</h2>
+
+<p>Durante la reunión, se discutieron las problemáticas que presenta el sistema B en relación con el manejo de saldos a favor y pagos duplicados. Se identificó que el sistema B no cuenta con un módulo específico para la gestión de saldos a favor, lo que genera inconvenientes al momento de aplicar estos saldos a las vigencias correspondientes. Específicamente, se mencionó que el sistema no tiene un histórico de información anterior, lo que impide aplicar correctamente los saldos a favor a las vigencias a las que pertenecen.</p>
+
+<p>Se explicó que, al intentar aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual. Se destacó que el sistema B no tiene parametrizado un saldo a favor, sino que lo maneja como una nota crédito a la vigencia.</p>
+
+<p>Otro problema identificado es que el sistema B no permite realizar la situación de doble pago, ya que no permite subir un segundo pago si no encuentra deuda. Esto genera que no se sepa si hay un saldo a favor hasta que el contribuyente lo notifica. Se planteó la necesidad de que el sistema B haga las correcciones necesarias para solucionar este problema.</p>
+
+<p>Se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores, de manera que solo afecten la cuenta corriente y no la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad. Se sugirió revisar los auxiliares de enero a junio para revertir los saldos a favor y corregir los movimientos ya cargados, ya sea corrigiendo los registros ya subidos o realizando comprobantes para ajustar la situación.</p>
+
+<p>En cuanto a la vigencia actual, se mencionó que John ha solicitado una solución para los valores dobles. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio, revirtiendo el registro y generando un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique.</p>
+
+<h2>4. Propuesta de creación de códigos alternos para afectación de cuenta corriente y no contable/presupuestal</h2>
+
+<p>Durante la reunión, se discutió la necesidad de crear códigos alternos en el sistema B para el manejo de saldos a favor, con el objetivo de que las aplicaciones de estos saldos afecten únicamente la cuenta corriente y no impacten la contabilidad ni el presupuesto, especialmente en lo que respecta a vigencias anteriores. Se identificó que el sistema actual registra los saldos a favor bajo el concepto de predial, generando registros contables incorrectos.</p>
+
+<p>Se explicó que el sistema B carece de un histórico de información anterior, lo que dificulta la correcta aplicación de los saldos a favor a las vigencias correspondientes. Al aplicar un saldo a favor a un predio que solo debe la vigencia 2025, el sistema afecta esta última vigencia, ya que no cuenta con un módulo específico para gestionar saldos a favor. Se citó el ejemplo de un predio con exoneración del 100% por área de reserva forestal, donde la aplicación de un saldo a favor de años anteriores requirió una nueva facturación utilizando los códigos de sobretasa, generando una nota crédito a la vigencia actual.</p>
+
+<p>Ante esta situación, se propuso solicitar a los encargados del sistema B la creación de códigos alternos para la aplicación de predial unificado y otros impuestos de vigencias anteriores. Estos códigos permitirían que los movimientos afecten solo la cuenta corriente, sin impactar la contabilidad ni el presupuesto. Se recordó que en el sistema anterior se podía elegir si afectar o no los pagos, y que al mover la cuenta corriente no se afectaba la contabilidad.</p>
+
+<p>Se concluyó que esta solución permitiría seguir aplicando los saldos a favor sin generar distorsiones en los registros contables y presupuestales, especialmente en lo que respecta a las vigencias anteriores. Se acordó elevar esta solicitud a los responsables del sistema B para su análisis e implementación.</p>
+
+<h2>5. Revisión de casos específicos de aplicación de saldos a favor y pagos duplicados (Batallón, señora de Diego Fabián González, otro predio)</h2>
+
+<p>Durante la reunión, se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, con el objetivo de identificar problemas en la facturación y la afectación presupuestal. Se buscaba determinar si los procedimientos aplicados estaban generando distorsiones en los registros contables y presupuestales.</p>
+
+<p>En el <b>primer caso</b>, se identificó que, tras la facturación inicial, se realizó un asiento de factura que implicó volver a facturar, generando un débito y un crédito como si se estuviera anulando el registro original. Se observó que, al restar el último recaudo a la factura inicial, se obtenía el valor del ajuste, pero se volvía a registrar la facturación por la diferencia. Este procedimiento afectaba la contabilidad, pero no el presupuesto. Se explicó que esta forma de proceder se debe a que el sistema B no cuenta con un módulo de ajustes que permita realizar correcciones sin impactar el presupuesto, obligando a utilizar el módulo de facturación para realizar los ajustes necesarios, lo cual genera una nueva causación.</p>
+
+<p>En el <b>segundo caso</b>, correspondiente a la señora de Diego Fabián González, se identificó una diferencia en la factura. Se determinó que la señora tenía cuatro facturas iniciales y realizó pagos que cubrían parte de estas. Sin embargo, quedó una diferencia de **22 millones de pesos** pendiente. Se concluyó que para analizar esta diferencia, era necesario revisar la solicitud original de la señora, ya que la diferencia podría deberse a que el pago se realizó durante el período de descuento y la solicitud de traslado de pago se hizo posteriormente, lo que implicaría tener en cuenta el descuento aplicado en su momento.</p>
+
+<p>En el <b>tercer caso</b>, no se encontraron problemas en la facturación. Se determinó que el saldo a favor se aplicó a un predio diferente, perteneciente a un tercero. Aunque este procedimiento no generó doble facturación, se observó que el valor aplicado no estaba afectando el presupuesto. Esto se debe a que John ya había subido el valor inicialmente al pasivo, pero no se había realizado el efecto correspondiente en el presupuesto.</p>
+
+<p>Ante estas situaciones, se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionen a través de tesorería. De esta manera, se podrían realizar los ajustes correspondientes, ya que no hay forma de visualizarlos en el sistema B. Se acordó que se enviará la factura a tesorería para que se aplique el saldo a favor, y se responderá al contribuyente confirmando la aplicación. En caso de ser necesario, se crearía la deuda correspondiente. Se concluyó que se continuará con el desarrollo del sistema B, y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor anteriores se seguirán gestionando como hasta ahora, teniendo en cuenta la creación de conceptos específicos para la aplicación de saldos a favor.</p>
+
+<p>Se mencionó el caso específico del Batallón, donde se aplicó el pago en exceso a otro predio. Se explicó que se revirtió el registro y se generó un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<h2>6. Discusión sobre la reversión de movimientos y la necesidad de ajustes o anulación de registros</h2>
+
+<p>Durante la reunión, se abordó la necesidad de revertir ciertos movimientos y realizar ajustes o anulaciones de registros, identificando varios escenarios que requieren atención. Se discutió la problemática de los saldos a favor, los pagos dobles y los valores cargados incorrectamente, así como la necesidad de coordinar con el área de tesorería y los encargados del sistema B para llevar a cabo las correcciones necesarias.</p>
+
+<p>Se mencionó que Olga y Vero revisarán el auxiliar de enero a junio para identificar los saldos a favor y realizar la reversión de los registros ya cargados. Se planteó la posibilidad de corregir los registros ya subidos o de hacer comprobantes para ajustar la situación. Se consideró que lo más ortodoxo sería que se hiciera un ajuste en contabilidad y se dejara caminar, ya que solicitar la corrección podría tardar demasiado.</p>
+
+<p>En cuanto a los valores dobles en la vigencia actual, se mencionó que John ha solicitado una solución. Se creó un concepto y una cuenta temporal por pagar llamada "saldos a favor" para subir estos valores a la contabilidad y evitar que queden como partida conciliatoria en el banco. Hasta el momento, se tiene un saldo de **42 millones** en esta cuenta. Se espera que el sistema B realice un desarrollo para que se muestren estos saldos a favor en el sistema.</p>
+
+<p>Se analizó el caso del Batallón, donde se aplicó el pago en exceso a otro predio. Se explicó que se revirtió el registro y se generó un nuevo registro para afectar Contabilidad, Presupuesto y Cartera. Se concluyó que, para los saldos a favor de 2025, se generaría la factura o el abono y se solicitaría que se aplique como se hizo en el caso del Batallón.</p>
+
+<p>Se analizaron tres casos específicos de aplicación de saldos a favor de la vigencia actual, identificando problemas en la facturación y la afectación presupuestal. Se propuso que, de aquí en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se hagan por tesorería para poder realizar los ajustes correspondientes, ya que no hay forma de verlos en el sistema. Se enviará la factura para que se aplique y se responderá al contribuyente que ya se aplicó, creando la deuda si es necesario. Se acordó que se seguirá con el desarrollo del sistema y que los saldos a favor de 2025 se pasarán a tesorería para que los aplique.</p>
+
+<p>Se identificaron valores pequeños cargados por cuenta corriente sin interfaz a presupuesto, correspondientes a recaudos. Se consultó si se puede hacer el ajuste en el recaudo de predial, pero se indicó que no se puede hacer el registro que hicieron desde cuenta corriente no afectó presupuesto. Se necesita validar si existe algún documento que permita ajustar o aumentar el recaudo. Se mencionó un caso en el que se retuvo el mismo valor que se pagó, generando una anulación en el informe, pero el valor sigue saliendo. Se concluyó que se debe preguntar si se puede hacer el ajuste o si se debe radicar para que anulen lo que se hizo.</p>
+
+<p>Se discutió la necesidad de coordinar con los encargados del sistema B para solicitar la anulación de ciertos documentos y la corrección de errores en los registros. Se mencionó que existen limitaciones en el sistema actual que impiden realizar ajustes y reversiones de manera eficiente, lo que dificulta la conciliación de la información y genera problemas en la contabilidad y el presupuesto.</p>
+
+<h2>7. Propuesta de procedimiento para futuros saldos a favor y traslados</h2>
+
+<p>Durante la reunión, se propuso un nuevo procedimiento para gestionar los saldos a favor de la vigencia 2025 y los traslados de saldos a favor, con el objetivo de mejorar el control y la trazabilidad de estos movimientos. Se identificó que el sistema B presenta limitaciones para el manejo adecuado de estos saldos, lo que genera problemas en la contabilidad y el presupuesto.</p>
+
+<p>Se planteó que, de ahora en adelante, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionen a través de la tesorería. Bajo este esquema, la factura o el abono correspondiente se enviaría a tesorería para su aplicación. Posteriormente, se informaría al contribuyente que el saldo a favor ha sido aplicado, creando la deuda si es necesario. Este procedimiento busca centralizar la gestión de los saldos a favor en tesorería, permitiendo un mayor control y la realización de los ajustes necesarios.</p>
+
+<p>Se acordó que se continuará con el desarrollo del sistema B, pero mientras tanto, los saldos a favor de 2025 se pasarán a tesorería para que los aplique. Los saldos a favor de vigencias anteriores se seguirán gestionando como hasta ahora, teniendo en cuenta la posible creación de conceptos específicos para la aplicación de saldos a favor.</p>
+
+<p>Se mencionó que este nuevo procedimiento permitirá conciliar los valores que se han cargado en contabilidad, siempre y cuando se haya realizado el registro de manera juiciosa. Se reconoció que existen errores en los pagos, como facturas con referencias incorrectas, que dificultan la conciliación. Se acordó que se proporcionará a tesorería la información necesaria para identificar estos casos, incluyendo el número de factura, el número de predio y la fecha de pago.</p>
+
+<p>Se destacó la importancia de dar de baja los tres casos específicos de aplicación de saldos a favor que se analizaron previamente. Se planteó la posibilidad de que Carmen Elisa realice un ajuste presupuestal o que se anulen los registros y se vuelvan a cargar. Se concluyó que la decisión sobre el procedimiento a seguir queda en manos de Carmen Elisa, teniendo en cuenta que no se puede afectar la conciliación bancaria.</p>
+
+<p>En resumen, la propuesta busca mejorar la gestión de los saldos a favor de 2025 y los traslados de saldos a favor, centralizando su aplicación en tesorería y coordinando con contabilidad para garantizar la conciliación de la información. Se espera que este nuevo procedimiento permita un mayor control y trazabilidad de estos movimientos, evitando problemas en la contabilidad y el presupuesto.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> No especificado</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Se solicitará a B la creación de códigos alternos que solo afecten la cuenta corriente y no la contabilidad, para los saldos a favor de vigencias anteriores. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se revisará el auxiliar de enero a junio para identificar los registros de saldos a favor y realizar la reversión necesaria. – <strong>Responsable:</strong> Doña Olga y Vero</li>
+        <li>John subirá al pasivo toda la información de pagos dobles para evitar partidas conciliatorias. – <strong>Responsable:</strong> John</li>
+        <li>A partir de ahora, los saldos a favor de 2025 y otros traslados de saldo a favor se gestionarán por tesorería. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se solicitará a Carmen Elisa que ajuste o anule los registros de los tres casos revisados. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se seguirá con el desarrollo de la herramienta para la gestión de saldos a favor. – <strong>Responsable:</strong> No especificado</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 17_jul._9.37_a._m.__Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/PstkdE5aZdfHK3F
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/PstkdE5aZdfHK3F
+Generando URL pública para Transcripcion.txt (EXISTENTE): 17_jul._9.37_a._m.__Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/YQYFAbRYD2qKAJi
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/YQYFAbRYD2qKAJi
