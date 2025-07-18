@@ -4149,3 +4149,612 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 17_jul._9.37_a._m.__T
 Compartiendo archivo existente para obtener URL pública: /Actas/17_jul._9.37_a._m._/17_jul._9.37_a._m.__Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/YQYFAbRYD2qKAJi
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/YQYFAbRYD2qKAJi
+Verificando si existe transcripción: consejo_loma_linda_julio_01_2025_Transcripcion.txt en carpeta consejo_loma_linda_julio_01_2025
+[2025-07-17T23:14:46.842Z] Verificando existencia del archivo consejo_loma_linda_julio_01_2025_Transcripcion.txt en Nextcloud carpeta consejo_loma_linda_julio_01_2025.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T23:14:48.483Z] Archivo "consejo_loma_linda_julio_01_2025_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_loma_linda_julio_01_2025".
+Transcripción existente encontrada: consejo_loma_linda_julio_01_2025. Obteniendo contenido.
+Verificando contenido existente: consejo_loma_linda_julio_01_2025_Contenido.txt
+[2025-07-17T23:14:50.120Z] Verificando existencia del archivo consejo_loma_linda_julio_01_2025_Contenido.txt en Nextcloud carpeta consejo_loma_linda_julio_01_2025.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T23:14:51.039Z] Archivo "consejo_loma_linda_julio_01_2025_Contenido.txt" NO encontrado en Nextcloud en la carpeta "consejo_loma_linda_julio_01_2025".
+Generando contenido para: consejo_loma_linda_julio_01_2025.wav
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: consejo_loma_linda_julio_01_2025_Transcripcion.txt
+[2025-07-17T23:14:51.040Z] Verificando existencia del archivo consejo_loma_linda_julio_01_2025_Transcripcion.txt en Nextcloud carpeta consejo_loma_linda_julio_01_2025.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-17T23:14:51.942Z] Archivo "consejo_loma_linda_julio_01_2025_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_loma_linda_julio_01_2025".
+Transcripción encontrada: consejo_loma_linda_julio_01_2025_Transcripcion.txt. Obteniendo contenido.
+[2025-07-17T23:14:53.292Z] Contenido del archivo "consejo_loma_linda_julio_01_2025_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: consejo_loma_linda_julio_01_2025.wav
+Guardando contenido en Nextcloud: consejo_loma_linda_julio_01_2025_Contenido.txt
+Contenido guardado: consejo_loma_linda_julio_01_2025_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_loma_linda_julio_01_2025.wav en carpeta: consejo_loma_linda_julio_01_2025
+Verificando Borrador .docx existente: consejo_loma_linda_julio_01_2025_Borrador.docx
+[2025-07-17T23:17:03.241Z] Verificando existencia del archivo consejo_loma_linda_julio_01_2025_Borrador.docx en Nextcloud carpeta consejo_loma_linda_julio_01_2025.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-17T23:17:04.177Z] Archivo "consejo_loma_linda_julio_01_2025_Borrador.docx" NO encontrado en Nextcloud en la carpeta "consejo_loma_linda_julio_01_2025".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: consejo_loma_linda_julio_01_2025_Borrador.docx
+Preparando guardado .docx en Nextcloud: consejo_loma_linda_julio_01_2025_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión de Consejo del Conjunto Residencial Loma Linda</h1>
+  <p><strong>Fecha:</strong> 1 de julio de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 7:10 PM - Cierre: 8:50 PM</p>
+  <p><strong>Lugar:</strong> Conjunto Residencial Loma Linda</p>
+  <p><strong>Moderador:</strong> Omar (Administrador)</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Catalina Echeverri - Consejera</li>
+    <li>Liana Ríos - Consejera</li>
+    <li>Iván Escobar - Consejero</li>
+    <li>Beatriz - Consejera (1503)</li>
+    <li>Gabriela Muñoz - Revisora Fiscal</li>
+    <li>Paula Zapata - Contadora</li>
+    <li>Alberto - Consejero</li>
+    <li>Diana - Consejera</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Verificación del Quórum</li>
+    <li>Aprobación del Acta de Consejo del 27 de mayo de 2025</li>
+    <li>Informe Contable y Auditoría del Mes de Mayo de 2025</li>
+    <li>Discusión sobre el Pago a TDS Soluciones SaaS</li>
+    <li>Revisión de Egresos y Pagos a Contratistas</li>
+    <li>Seguimiento al Servicio de Fumigación</li>
+    <li>Revisión de la Inversión del CDT</li>
+    <li>Análisis de la Cartera y Recuperación de Deuda</li>
+    <li>Estado del Motor de la Piscina y Mantenimiento</li>
+    <li>Reducción de Horas de los Trabajadores</li>
+    <li>Seguimiento a Tareas Pendientes del Consejo</li>
+    <li>Estado de los Parqueaderos con Discapacidad</li>
+    <li>Reunión con Dueños de Mascotas</li>
+    <li>Humedad en el Turco y Parqueaderos</li>
+    <li>Propuestas y Varios</li>
+  </ol>
+</header>
+
+<h2>1. Verificación del Quórum</h2>
+
+<p>El administrador, Omar, inició la reunión a las 7:10 PM del 1 de julio de 2025, indicando que procedería con la verificación del quórum. Constató la presencia de Catalina Echeverri, Liana Ríos e Iván Escobar, confirmando que existía quórum para deliberar. Posteriormente, se unieron Gabriela Muñoz, revisora fiscal, y Paula Zapata, contadora.</p>
+
+<p>Durante la verificación del quórum, se incorporó Beatriz (consejera del 1503) a la reunión, quedando también incluida en el registro de asistencia.</p>
+
+<h2>2. Aprobación del acta de Consejo del 27 de mayo de 2025</h2>
+
+<p>Se procedió a la aprobación del acta de Consejo del 27 de mayo de 2025. El administrador, Omar, consultó a los consejeros sobre posibles cambios de fondo o de forma al acta, la cual había sido previamente enviada por correo electrónico.</p>
+
+<p>Los consejeros expresaron sus opiniones de la siguiente manera:</p>
+
+<ul>
+    <li>Catalina Echeverri: <b>Aprobada</b>.</li>
+    <li>Liana Ríos: Se acopló a la decisión de los demás consejeros, indicando que no había estado presente en la reunión anterior.</li>
+    <li>Beatriz (Consejera del 1503): <b>Aprobada</b>, mencionando no haber leído el acta para correcciones debido a enfermedad.</li>
+    <li>Iván Escobar: <b>Aprobada</b>.</li>
+</ul>
+
+<p>En vista de las aprobaciones recibidas y la ausencia de correcciones propuestas, se dio por aprobada el acta de Consejo del 27 de mayo de 2025.</p>
+
+<h2>3. Informe Contable y Auditoría del Mes de Mayo de 2025</h2>
+
+<p>Paula Zapata, contadora, inició la presentación del informe contable y la auditoría del mes de mayo de 2025. Propuso realizar la exposición de manera conjunta con Gabriela Muñoz, revisora fiscal, para evitar repeticiones y enfocarse en los aspectos más relevantes. Esta propuesta fue aceptada por los asistentes.</p>
+
+<p>Gabriela Muñoz comenzó su informe destacando que, a menos que se indicara lo contrario, todas las acciones encontradas se consideraban acordes con el control interno de la copropiedad. En la descripción de los egresos, se refirió al pago realizado a TDS Soluciones SaaS. Señaló que los pagos se estaban consignando en una cuenta que no pertenecía al titular del contrato, el Sr. TDS Soluciones. Aunque la factura emitida autorizaba el pago a dicha cuenta, Gabriela enfatizó la importancia de que constara en el acta el consenso general para autorizar esta situación específica, indicando si era transitoria y si el administrador y los consejeros estaban al tanto de la razón.</p>
+
+<p>El administrador, Omar, explicó que los pagos se realizaban a nombre de la Sra. Sara, esposa y socia del Sr. TDS Soluciones, debido a que la cuenta de este último estaba embargada. Iván Escobar manifestó su desacuerdo con esta práctica y sugirió que, para los próximos pagos, el egreso se registrara directamente a nombre de la Sra. Sara. Beatriz también expresó su preocupación, argumentando que pagar a un tercero podría generar problemas legales futuros, como una posible demanda por falta de pago.</p>
+
+<p>Gabriela Muñoz recomendó que el Sr. TDS Soluciones buscara una solución a su problema financiero, como abrir una cuenta no embargable. Sugirió que, de no ser posible, el Consejo no debería permitir que continuara como contratista. Beatriz coincidió en que se debería buscar otro contratista para evitar posibles complicaciones legales. Se acordó que no se seguiría contratando a DSC bajo las condiciones actuales, aunque se reconoció que la Sra. Sara era socia en DSC.</p>
+
+<p>En relación con los egresos, Gabriela Muñoz mencionó un pago a la persona que colabora en temas de seguridad en el trabajo. Indicó que la descripción en su factura mencionaba "Implementación del Sistema de Gestión", pero esta implementación ya había sido cancelada el año anterior. Por lo tanto, solicitó que se modificara la descripción en futuras facturas y se adjuntara un anexo detallando las acciones realizadas durante el mes o trimestre, como capacitaciones y avances en el programa a su cargo. Omar informó que ya había solicitado esta modificación.</p>
+
+<p>Gabriela Muñoz también señaló que, según la normativa, Paula Zapata debería incluir en su cuenta de cobro el aporte a la Seguridad Social. Paula respondió que sí estaba realizando estos aportes y que había enviado la copia de la seguridad social junto con la cuenta de cobro a Omar. Se aclaró que se trató de un olvido en la presentación inicial del documento.</p>
+
+<p>En cuanto al servicio de fumigación, se reportó que solo <b>207 apartamentos</b>, correspondientes al <b>80%</b> del total, habían sido fumigados. Gabriela Muñoz resaltó la importancia de que todos los apartamentos realizaran la fumigación para asegurar la efectividad del servicio en toda la copropiedad. Sin embargo, reconoció que no se puede obligar a los residentes a fumigar.</p>
+
+<p>Se mencionó la compra de <b>250 obsequios</b> por un valor de <b>$1.250.000</b> para la celebración del Día de las Madres (egreso 422). Gabriela Muñoz solicitó que la declaración se presentara con suficiente anticipación para evitar que el pago se realizara desde la cuenta personal de Omar y luego se le reintegrara. Esto también aplicaba al ICA. Se informó que el CDT se renovó hasta el mes de diciembre, siguiendo la recomendación de Gabriela Muñoz.</p>
+
+<p>Se informó que se radicó la solicitud de devolución de la compensación del primer semestre por <b>$580.000</b>, que se espera sea consignada en la cuenta corriente en un plazo de <b>50 días</b>. Se destacó el cumplimiento legal en la presentación anticipada de la exógena y las declaraciones de retención en la fuente.</p>
+
+<p>En cuanto a la cartera por pagar, Gabriela Muñoz indicó que estaba bien manejada, con excepción de los pagos a la revisoría, la contabilidad y algunos proveedores, cuya razón para no haber sido cancelados fue explicada por Omar. Este aclaró que los pagos a Paula y Juan Carlos Torres (pegatina de Torre 1) y Juan Carlos Vargas (impermeabilización de canoas en parqueaderos) estaban pendientes debido a que los trabajos no se habían completado.</p>
+
+<p>Se informó que, tras el ajuste de la reinversión, la copropiedad disponía de <b>$31.700.000</b>, cuya utilización quedaba a criterio del Consejo, siempre cuidando la liquidez. Además, se contaban con los saldos de la cuota extra del 2022 y algo de la cuota extra del 2024, sumando un total de <b>$59.000.000</b> disponibles para obras, algunas ya determinadas y otras a decisión del Consejo. Se recomendó aplicar el principio de la prudencia en la utilización de estos recursos.</p>
+
+<p>En la ejecución presupuestal, se observó que el gasto de energía estaba bien presupuestado, mientras que los gastos en jardines y zonas verdes estaban sobre ejecutados. Se sugirió equilibrar estas partidas en los meses restantes. Lo mismo se observó con la planta eléctrica. En mantenimiento general, se consideró que el presupuesto estaba bien ejecutado, con un <b>19%</b> de sobre ejecución en <b>5 meses</b>. La asamblea se iría cuadrando con el pasar de los meses. La póliza de la copropiedad iba bien, al igual que la fumigación. El mantenimiento de puertas y motores y bombas presentaban sobre ejecución, que no se esperaba que se repitiera. Paula Zapata añadió que los gastos estaban detallados en las notas.</p>
+
+<p>En cuanto a los gastos sub ejecutados, se mencionó el sistema de gestión, donde solo se habían gastado <b>$750.000</b>. También se mencionó la recarga de los extintores con los empleados varios, que se esperaba se cuadrara en julio con la reducción de la jornada. Lo mismo ocurría con las actividades de convivencia, que se realizaban al final del año. El mantenimiento de los ascensores presentaba una ligera sub ejecución, mientras que el lavado de tanques debía programarse (se realizó en junio). La vigilancia también jugaba con el tema de la jornada. Gabriela Muñoz concluyó que la ejecución presupuestal iba bien, ya que los gastos sobre ejecutados obedecían a necesidades específicas, exceptuando la jardinería.</p>
+
+<p>Se indicó que, dentro del resultado final, se tenía una sub ejecución de <b>$458.000</b>, pero ya estaban incluidos los <b>$13.000.000</b> gestionados en vía administrativa, como intereses de mora, intereses financieros, intereses del CDT, salón social, cosco, multa por parqueaderos y multa por inasistencia a la asamblea. Se revisó una multa a un apartamento debido al debido proceso realizado por el administrador con las carteleras.</p>
+
+<p>Gabriela Muñoz preguntó por qué el ingreso por carteleras aparecía a nombre de BTG, una empresa de valores. Omar se comprometió a investigar la razón, ya que normalmente los pagos se recibían a través de COS.</p>
+
+<p>Como observaciones finales, se mencionó que se causó el descuento de la presta desde vigilancia por <b>$30.700.000</b> por renovar el contrato a dos años. Se solicitó a Omar que se constatara el contrato. Se reiteró la importancia de analizar con detenimiento el gasto de la primer para ejercer control en los meses restantes de 2025. Se instó a conformar el avance de la reclamación a Bancolombia por el 4 por mil. Omar informó que ya se había enviado un derecho de petición y se estaba a la espera de la respuesta para proceder con una segunda apelación.</p>
+
+<p>Beatriz preguntó si el gasto en jardinería correspondía solo a un mes. Gabriela Muñoz explicó que el presupuesto acumulaba todos los gastos del año, pero la jardinería era un ítem que no se podía fraccionar. Omar añadió que la sobre ejecución en jardinería se debía a la compra de plantas, asesoría y tala de árboles, gastos no presupuestados. Gabriela Muñoz sugirió llevar estos gastos a un rubro no presupuestado. Omar explicó que se realizaba un análisis al final del año para reclasificar los gastos. Gabriela Muñoz recomendó crear un gasto llamado "imprevistos de jardinería".</p>
+
+<p>Se recordó la necesidad de hacer una copia de seguridad de toda la información contable y de titularizar los tres contratos que aún aparecían a nombre de Promotora Lo Malinda en liquidación. Gabriela Muñoz señaló que las facturas electrónicas estaban saliendo a nombre de Promotora Loma Linda.</p>
+
+<p>Paula Zapata indicó que no tenía nada más que agregar y que se habían tocado todos los puntos relevantes. Los consejeros aprobaron los informes contables y la auditoría del mes de mayo de 2025.</p>
+
+<h2>4. Discusión sobre el pago a TDS Soluciones</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, hizo referencia al pago realizado a TDS Soluciones SaaS. Señaló que los pagos se estaban consignando en una cuenta que no pertenecía al titular del contrato, el Sr. TDS Soluciones. Aunque la factura emitida autorizaba el pago a dicha cuenta, Gabriela enfatizó la importancia de que constara en el acta el consenso general para autorizar esta situación específica, indicando si era transitoria y si el administrador y los consejeros estaban al tanto de la razón.</p>
+
+<p>El administrador, Omar, explicó que los pagos se realizaban a nombre de la Sra. Sara, esposa y socia del Sr. TDS Soluciones, debido a que la cuenta de este último estaba embargada. Iván Escobar manifestó su desacuerdo con esta práctica y sugirió que, para los próximos pagos, el egreso se registrara directamente a nombre de la Sra. Sara. Beatriz también expresó su preocupación, argumentando que pagar a un tercero podría generar problemas legales futuros, como una posible demanda por falta de pago.</p>
+
+<p>Gabriela Muñoz recomendó que el Sr. TDS Soluciones buscara una solución a su problema financiero, como abrir una cuenta no embargable. Sugirió que, de no ser posible, el Consejo no debería permitir que continuara como contratista. Beatriz coincidió en que se debería buscar otro contratista para evitar posibles complicaciones legales. Se acordó que no se seguiría contratando a DSC bajo las condiciones actuales, aunque se reconoció que la Sra. Sara era socia en DSC.</p>
+
+<h2>5. Revisión de pagos a contratistas y seguridad social</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, señaló que, según la normativa, Paula Zapata debería incluir en su cuenta de cobro el aporte a la Seguridad Social. Paula respondió que sí estaba realizando estos aportes y que había enviado la copia de la seguridad social junto con la cuenta de cobro a Omar. Se aclaró que se trató de un olvido en la presentación inicial del documento.</p>
+
+<p>En relación con los egresos, Gabriela Muñoz mencionó un pago a la persona que colabora en temas de seguridad en el trabajo. Indicó que la descripción en su factura mencionaba "Implementación del Sistema de Gestión", pero esta implementación ya había sido cancelada el año anterior. Por lo tanto, solicitó que se modificara la descripción en futuras facturas y se adjuntara un anexo detallando las acciones realizadas durante el mes o trimestre, como capacitaciones y avances en el programa a su cargo. Omar informó que ya había solicitado esta modificación.</p>
+
+<p>Se recordó la necesidad de hacer una copia de seguridad de toda la información contable y de titularizar los tres contratos que aún aparecían a nombre de Promotora Lo Malinda en liquidación. Gabriela Muñoz señaló que las facturas electrónicas estaban saliendo a nombre de Promotora Loma Linda.</p>
+
+<h2>6. Fumigación y Día de las Madres</h2>
+
+<p>En relación con el servicio de fumigación, se reportó que solo <b>207 apartamentos</b>, correspondientes al <b>80%</b> del total, habían sido fumigados. Gabriela Muñoz resaltó la importancia de que todos los apartamentos realizaran la fumigación para asegurar la efectividad del servicio en toda la copropiedad. Sin embargo, reconoció que no se puede obligar a los residentes a fumigar.</p>
+
+<p>En el mes se celebró el Día de las Madres, y se reportó la compra de <b>250 obsequios</b> por un valor de <b>$1.250.000</b> en el egreso 422. Gabriela Muñoz solicitó que la declaración se presentara con suficiente anticipación para evitar que el pago se realizara desde la cuenta personal de Omar y luego se le reintegrara, sino que saliera directamente de la cuenta de la copropiedad. Esto también aplicaba al ICA.</p>
+
+<h2>7. Renovación del CDT y solicitud de devolución de compensación</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se informó que el CDT se renovó hasta el mes de diciembre, siguiendo la recomendación de Gabriela Muñoz. También se comunicó que se radicó la solicitud de devolución de la compensación del primer semestre por <b>$580.000</b>, que se espera sea consignada en la cuenta corriente en un plazo de <b>50 días</b>. Se destacó el cumplimiento legal en la presentación anticipada de la exógena y las declaraciones de retención en la fuente.</p>
+
+<h2>8. Cartera por pagar y ajuste de la reinversión</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, indicó que la cartera por pagar estaba bien manejada, con excepción de los pagos a la revisoría, la contabilidad y algunos proveedores. Omar, el administrador, explicó que los pagos a Paula y Juan Carlos Torres (pegatina de Torre 1) y Juan Carlos Vargas (impermeabilización de canoas en parqueaderos) estaban pendientes debido a que los trabajos no se habían completado.</p>
+
+<p>Se informó que, tras el ajuste de la reinversión, la copropiedad disponía de <b>$31.700.000</b>, cuya utilización quedaba a criterio del Consejo, siempre cuidando la liquidez. Además, se contaban con los saldos de la cuota extra del 2022 y algo de la cuota extra del 2024, sumando un total de <b>$59.000.000</b> disponibles para obras, algunas ya determinadas y otras a decisión del Consejo. Se recomendó aplicar el principio de la prudencia en la utilización de estos recursos.</p>
+
+<p>En relación con la cartera, Omar informó que el apartamento 2001 pagó <b>$25.000.000</b> el 11 de junio, quedando debidamente referenciado. En julio se verá la rebaja tanto de los <b>$25.000.000</b> como de los intereses moratorios en este de parqueaderos y cuartos útiles. Se está en el proceso de buscar las matrículas inmobiliarias para solicitar los prediales de estos dos parqueaderos y empezar a hacer la gestión. Apenas se tengan, se presentarán.</p>
+
+<p>Con respecto a Rodolfo, indicó que dijo que pagaba el mes pasado, pero no pagó, por lo que va para cobro jurídico. Ya se le notificó y ya se le pasa el poder a Cobrantioqui 1910. No se ha verificado si el 1910 canceló, ya que el mes se acabó ayer. Él se comprometió a pagarlo el fin de mes. El 1605 está con prejurídico y el resto con cartas.</p>
+
+<p>La cartera subió alrededor de <b>$3.000.000</b> y punta más, pero ésta subió en tres, dos y una cuota. Se llegó a 49 unidades habitacionales con <b>$29.700.000</b>. Se está dentro de lo normal, con los que siempre se está pendiente de que no se pasen, de que estén pagando, mandándole la carta o haciéndole las llamaditas. También se van a colocar en venta algunos apartamentos, pero no han informado si lo van a vender o no. La cartera está muy similar a la anterior, simplemente el incremento es por tres, dos y una cuota.</p>
+
+<p>Se considera que con esa recuperación del 2001, la cartera quedó muy saneada. Se resalta la importancia de no bajar la guardia con las actividades, sobre todo los avisos en los ascensores, para que no se vayan a subir tanto y empezar una deuda incobrable. Se debe tratar de no dejarlo subir tanto, a ver si no vuelve a pasar lo mismo del 2001.</p>
+
+<h2>9. Ejecución presupuestal y gastos de jardinería</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se analizó la ejecución presupuestal, observándose que el gasto de energía estaba bien presupuestado, mientras que los gastos en jardines y zonas verdes estaban sobre ejecutados. Se sugirió equilibrar estas partidas en los meses restantes. Lo mismo se observó con la planta eléctrica. En mantenimiento general, se consideró que el presupuesto estaba bien ejecutado, con un <b>19%</b> de sobre ejecución en <b>5 meses</b>. La asamblea se iría cuadrando con el pasar de los meses. La póliza de la copropiedad iba bien, al igual que la fumigación. El mantenimiento de puertas y motores y bombas presentaban sobre ejecución, que no se esperaba que se repitiera. Paula Zapata añadió que los gastos estaban detallados en las notas.</p>
+
+<p>En cuanto a los gastos sub ejecutados, se mencionó el sistema de gestión, donde solo se habían gastado <b>$750.000</b>. También se mencionó la recarga de los extintores con los empleados varios, que se esperaba se cuadrara en julio con la reducción de la jornada. Lo mismo ocurría con las actividades de convivencia, que se realizaban al final del año. El mantenimiento de los ascensores presentaba una ligera sub ejecución, mientras que el lavado de tanques debía programarse (se realizó en junio). La vigilancia también jugaba con el tema de la jornada. Gabriela Muñoz concluyó que la ejecución presupuestal iba bien, ya que los gastos sobre ejecutados obedecían a necesidades específicas, exceptuando la jardinería.</p>
+
+<p>Se indicó que, dentro del resultado final, se tenía una sub ejecución de <b>$458.000</b>, pero ya estaban incluidos los <b>$13.000.000</b> gestionados en vía administrativa, como intereses de mora, intereses financieros, intereses del CDT, salón social, cosco, multa por parqueaderos y multa por inasistencia a la asamblea.</p>
+
+<p>Beatriz preguntó si el gasto en jardinería correspondía solo a un mes. Gabriela Muñoz explicó que el presupuesto acumulaba todos los gastos del año, pero la jardinería era un ítem que no se podía fraccionar. Omar añadió que la sobre ejecución en jardinería se debía a la compra de plantas, asesoría y tala de árboles, gastos no presupuestados. Gabriela Muñoz sugirió llevar estos gastos a un rubro no presupuestado. Omar explicó que se realizaba un análisis al final del año para reclasificar los gastos. Gabriela Muñoz recomendó crear un gasto llamado "imprevistos de jardinería".</p>
+
+<h2>10. Copia de seguridad de información contable y titularización de contratos</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se recordó la necesidad de hacer una copia de seguridad de toda la información contable, por las razones expuestas en una reunión anterior. Este tema quedó pendiente y se sugirió a la administración darle seguimiento.</p>
+
+<p>Adicionalmente, se sugirió a la administración realizar la titularización de los tres contratos que aún aparecen a nombre de Promotora Lo Malinda en liquidación. Se indicó que los otros dos contratos de los cinco existentes sí están correctamente a nombre de Urbanización Loma Linda. Se solicitó hacer la gestión con RTM para titularizar estos contratos, ya que las facturas electrónicas están saliendo a nombre de Promotora Loma Linda.</p>
+
+<h2>11. Presentación y discusión sobre la cartera</h2>
+
+<p>El administrador, Omar, presentó el informe sobre la cartera, indicando que el apartamento 2001 realizó un pago de <b>$25.000.000</b> el 11 de junio, quedando debidamente referenciado. Se espera que en el mes de julio se vea reflejada la rebaja tanto de los <b>$25.000.000</b> como de los intereses moratorios correspondientes a los parqueaderos y cuartos útiles. Se informó que se está en proceso de buscar las matrículas inmobiliarias para solicitar los prediales de estos dos parqueaderos y comenzar la gestión, y que se presentarán una vez se tengan.</p>
+
+<p>Con respecto al residente Rodolfo, se indicó que, a pesar de haber prometido pagar el mes anterior, no lo hizo, por lo que su caso pasará a cobro jurídico. Ya se le notificó y se le pasará el poder a Cobrantioqui 1910. No se ha verificado si el residente del apartamento 1910 canceló, ya que el mes se acabó el día anterior. El residente del apartamento 1605 está en prejurídico y el resto de los casos se están gestionando mediante cartas.</p>
+
+<p>Se informó que la cartera subió alrededor de <b>$3.000.000</b> y punta más, debido a incrementos en tres, dos y una cuota. Se llegó a un total de 49 unidades habitacionales con una deuda de <b>$29.700.000</b>. Se considera que esta cifra está dentro de lo normal, y se mantiene un seguimiento constante para evitar que los residentes se atrasen en sus pagos, enviando cartas y realizando llamadas. Algunos apartamentos están en proceso de venta, pero aún no se ha confirmado si se concretarán las ventas. La cartera se mantiene similar a la anterior, con el incremento debido a los atrasos en las cuotas.</p>
+
+<p>Se considera que, con la recuperación del pago del apartamento 2001, la cartera quedó muy saneada. Se resaltó la importancia de no bajar la guardia con las actividades de recordatorio, especialmente los avisos en los ascensores, para evitar que las deudas aumenten y se conviertan en incobrables. Se enfatizó la necesidad de evitar que las deudas aumenten demasiado, para no repetir la situación del apartamento 2001.</p>
+
+<h2>12. Estado del motor de la piscina y bombas de calor</h2>
+
+<p>El administrador, Omar, informó que el motor de la piscina había presentado una nueva falla. Inicialmente, el motor encendía pero no recirculaba el agua. Posteriormente, dejó de funcionar por completo. El motor fue retirado para su diagnóstico y reparación. Se espera un dictamen para el día siguiente, lo que impediría la apertura de la piscina en la fecha prevista. Se consideró la posibilidad de informar a los residentes sobre el cierre temporal de la piscina, ya sea mediante carteleras o esperando el diagnóstico para tomar una decisión.</p>
+
+<p>Beatriz consultó sobre la ubicación del motor y si correspondía a una estructura de cemento cercana a las guaduas. Omar aclaró que esa estructura corresponde a las bombas de calor, que son diferentes al motor de la piscina, el cual se encuentra en el cuarto de máquinas.</p>
+
+<p>Alberto preguntó sobre la frecuencia del mantenimiento de los motores de la piscina. Omar respondió que el motor de la piscina recibe seguimiento cada tres meses, mientras que las motobombas y la parte de hidro reciben mantenimiento mensual. El motor de la piscina es atendido por MQ Piscinas, y las motobombas por Beta Soluciones, siendo dos proveedores diferentes.</p>
+
+<p>Iván Escobar cuestionó si, tras la reparación anterior del motor, se realizó una revisión general para evitar fallas recurrentes. Omar indicó que el motor había sido reparado por un ruido inusual y que, tras la reparación, funcionó durante tres días antes de presentar la nueva falla. Iván Escobar sugirió que el proveedor no estaba realizando chequeos y verificaciones adecuadas, lo que ponía en entredicho su trabajo. Alberto coincidió en la necesidad de reclamar al proveedor por la recurrencia de la falla y la afectación al servicio de la piscina.</p>
+
+<p>Omar indicó que aún no se tenía el dictamen sobre la causa de la nueva falla y que se comunicaría con el proveedor para obtenerlo. En caso de no obtener una respuesta satisfactoria, se consideraría buscar otro proveedor. Se mencionó que una de las motobombas se había quemado y que se estaba gestionando la reclamación ante la aseguradora.</p>
+
+<h2>13. Estado del ascensor</h2>
+
+<p>Durante la reunión, Beatriz reportó que el ascensor estaba nuevamente fuera de servicio. Se indicó que ya se había reportado el incidente y se había contactado a la empresa encargada del mantenimiento, Ascensores Estilo, para su reparación.</p>
+
+<h2>14. Mantenimiento de paredes y reducción de horas de trabajadores</h2>
+
+<p>En relación con el mantenimiento de paredes, se informó que se está llevando a cabo un lavado de todas las paredes y señalizaciones, siguiendo lo acordado el año anterior. Se mencionó que se está dedicando un día a la semana para realizar esta tarea y que posteriormente se informará sobre el avance de los trabajos.</p>
+
+<p>En cuanto a la reducción de horas de los trabajadores, el administrador, Omar, informó que a partir del 16 de julio se reducirán nuevamente dos horas en la jornada laboral de los empleados. Se está analizando con Aseo Seguro la forma de implementar esta reducción para minimizar el impacto en el servicio prestado a la copropiedad.</p>
+
+<h2>15. Inicio de trabajos con Bonnie y Simón</h2>
+
+<p>El administrador, Omar, informó que se está a la espera de que Bonnie envíe la factura correspondiente al anticipo acordado para el inicio de los trabajos. Se le proporcionó a Bonnie toda la documentación necesaria, incluyendo la representación del RUT, para que pueda emitir la cuenta de cobro. Se acordó que la cuenta de cobro corresponderá al piso, para facilitar el pago del anticipo.</p>
+
+<p>Se confirmó que el inicio de los trabajos con Bonnie y Simón está programado para el 7 de julio, coincidiendo con el regreso de los jóvenes a sus actividades. Bonnie manifestó no tener inconveniente en comenzar en esa fecha.</p>
+
+<h2>16. Pintura de parqueaderos y cancha</h2>
+
+<p>En relación con la pintura de los parqueaderos con discapacidad, el administrador, Omar, informó que se había presentado un problema debido a la época de invierno. Explicó que, aunque no estuviera lloviendo, el asfalto contenía humedad que afectaba la adherencia de la pintura, provocando que se soplara desde adentro hacia afuera. Se solicitó la opinión de Diana, consejera con conocimientos en pintura plástica, quien podría aportar mayor claridad sobre este fenómeno.</p>
+
+<p>Omar recordó que este trabajo se iba a realizar en conjunto con la pintura de la cancha. Sin embargo, en una reunión de consejo anterior, se decidió no realizar la pintura de la cancha por el momento. No obstante, se mantiene pendiente la donación ofrecida por Liana para este propósito.</p>
+
+<p>Posteriormente, Liana Ríos expresó su opinión sobre el tema de la cancha, indicando que, si bien se trata de una donación y la unidad no incurrirá en costos por la pintura, es importante garantizar la calidad del trabajo. Para ello, sugirió que la aplicación de la pintura sea realizada por una empresa competente, con experiencia en el manejo de pinturas y espacios deportivos. Esto aseguraría que se cumplan las garantías y evitaría futuras reclamaciones relacionadas con la calidad de la pintura.</p>
+
+<p>Se mencionó que la propuesta inicial de pintar la cancha con una empresa reconocida y con garantías resultó costosa y no estaba presupuestada. Además, debido a los gastos adicionales que se han presentado, como el nuevo impuesto, se consideró que no era una prioridad en este momento y se pospuso para una fecha posterior. Se evaluará la disponibilidad de Liana para mantener la donación y se explorarán otras opciones en el futuro.</p>
+
+<h2>17. Hábeas Data</h2>
+
+<p>En relación con el tema de Hábeas Data, el administrador, Omar, informó que se continúa enviando el formato correspondiente a los proveedores y a los nuevos residentes. Se mencionó que ya se había enviado el formato a Gabriela Muñoz, revisora fiscal, que era el que faltaba. Se reiteró que se realiza un recordatorio a las personas nuevas que ingresan a la copropiedad para que lo firmen. La administración tiene como objetivo seguir realizando campañas informativas a través de correo electrónico para reforzar el cumplimiento de la normativa de Hábeas Data.</p>
+
+<h2>18. Reunión con dueños de mascotas y aplicación de multas</h2>
+
+<p>Se abordó el tema de la reunión con dueños de mascotas y la aplicación de multas, destacando la importancia de concientizar a los propietarios sobre las responsabilidades que implica tener un animal en la copropiedad. Beatriz indicó que podría contactar a un entrenador para colaborar en una capacitación sobre el manejo de mascotas.</p>
+
+<p>El administrador, Omar, informó que ya contaba con un listado de las mascotas registradas en la copropiedad. Se propuso coordinar con Beatriz para programar una capacitación, sugiriendo que el entrenador ofreciera una charla sobre el manejo de mascotas. Se enfatizó la necesidad de concientizar a las personas, más que a los animales, y de contar con la disposición de los dueños para asistir a la reunión.</p>
+
+<p>Catalina sugirió programar la reunión y citar directamente a los dueños de mascotas, en lugar de preguntarles si podían asistir. Propuso enviar invitaciones y colocar avisos en los ascensores para asegurar una mayor participación. Se planteó la posibilidad de realizar la reunión durante el fin de semana, en un horario accesible para la mayoría de los residentes.</p>
+
+<p>Daniel sugirió una estrategia para atraer a los dueños de mascotas, similar a las degustaciones en los almacenes de cadena. Propuso ofrecer snacks para las mascotas y crear un ambiente de distracción, para luego realizar la charla de concientización. Esta idea fue bien recibida, y Beatriz se comprometió a consultar con el entrenador si podía colaborar con esta iniciativa.</p>
+
+<p>Alberto enfatizó la importancia de aplicar multas a los dueños que no cumplan con las normas de la copropiedad, argumentando que esta es la forma más efectiva de concientizar a las personas. Señaló que, a pesar de los letreros, algunos residentes continúan llevando a sus mascotas a lugares prohibidos y no recogen sus excrementos. Destacó la necesidad de explicar a los dueños las necesidades de sus mascotas y las responsabilidades que implica tener un animal a cargo.</p>
+
+<p>Se propuso ofrecer un pequeño obsequio a los dueños de mascotas, como un dispensador de bolsas en forma de huesito personalizado con el logo de Loma Linda, como un incentivo para recoger los excrementos de sus mascotas. Se sugirió buscar un patrocinador para la reunión, como una empresa de alimentos para mascotas o un veterinario, que pudiera ofrecer charlas y promocionar sus productos.</p>
+
+<p>Se mencionó que ya se han aplicado algunas multas a dueños de mascotas que no recogen sus excrementos, y que esta medida ha resultado efectiva para restringir esta conducta. Se recordó la importancia de contar con cámaras de seguridad que cubran las áreas donde se suelen presentar estos incidentes.</p>
+
+<p>Se concluyó que se coordinará con Beatriz para programar la reunión con los dueños de mascotas, buscando un patrocinador que pueda ofrecer charlas y obsequios. Se reiteró la importancia de aplicar multas a los infractores y de realizar campañas de concientización para promover la tenencia responsable de mascotas.</p>
+
+<h2>19. Humedad en el turco y parqueaderos</h2>
+
+<p>Durante la reunión, Catalina preguntó si se podía considerar abrir el turco ciertos días con el fin de mitigar la humedad, mientras se espera recoger la cuota para realizar la obra. El administrador, Omar, indicó que esta decisión debía ser tomada por el Consejo y sería aplicada por la administración.</p>
+
+<p>Catalina argumentó que su pregunta se debía al tema de la humedad, que seguía sin avanzar mucho. Omar respondió que la humedad en el turco siempre ha sido la misma, afectando los muros del gimnasio y el salón social, y que ahora se está ocasionando un charco en la losa que baja al parqueadero, lo cual mantiene a un residente bastante inconforme con el agua que cae.</p>
+
+<p>Se mencionó que, si el turco no se apaga, el agua siempre estará presente. Sin embargo, en el momento no se considera viable abrirlo, debido a la incomodidad que esto generaría. Beatriz preguntó si la humedad podría causar algún daño estructural. Iván Escobar cuestionó si la humedad podría tumbar algo o dañar algo adicional.</p>
+
+<p>Omar respondió que la humedad de los muros colindantes del turco, el gimnasio y el salón social ha sido constante durante los seis años que lleva en Loma Linda. Añadió que las losas internas no están impermeabilizadas, por lo que el agua hace surcos y cae en forma de goteras, pero no causa un daño estructural mayor. El agua filtra, pero cuando se seca, la losa recupera su dureza normal.</p>
+
+<p>Beatriz preguntó si se había consultado a un ingeniero para evaluar el peligro real de la humedad. Omar respondió que no se ha hecho porque no se han observado daños evidentes en las losas, como hundimientos o exposición de las varillas de hierro. Sin embargo, se consideró la posibilidad de llamar a un ingeniero estructural para realizar un diagnóstico.</p>
+
+<p>Omar explicó que se está achicando el agua que se acumula en la losa principal del parqueadero, debido a los desniveles que se forman con el tiempo. Esta agua se achica para evitar que filtre y cause daños. Se aclaró que el agua afecta más a la obra civil blanca, como el estuco y el superboa, pero no causa daños mayores a la estructura.</p>
+
+<p>Beatriz insistió en que la humedad lleva muchos años y que no se sabe qué daños puede ocasionar en el fondo. Se recordó que este tema fue uno de los principales para la Asamblea, donde se aprobó como una prioridad y se aceptó tener el dinero para solucionarlo al 100%.</p>
+
+<p>Iván Escobar sugirió solucionar primero el problema de la piscina y luego evaluar si es necesario cerrar el turco. Se propuso evaluar si la humedad realmente representa un peligro y sopesar todas las opciones antes de tomar una decisión.</p>
+
+<p>Se concluyó que se seguirá achicando el agua y secando la zona afectada, y que se retomará el tema más adelante, una vez que esté todo funcionando correctamente. Omar se comprometió a empezar a actualizar toda la parte del turco.</p>
+
+<h2>20. Reunión de proyectos</h2>
+
+<p>En la revisión de los temas pendientes, se mencionó la necesidad de abordar la reunión de proyectos, tema que había quedado pendiente en asambleas anteriores. Se enfatizó la importancia de no dilatar más este asunto.</p>
+
+<h2>21. Proposiciones y varios</h2>
+
+<p>Dentro del tema de Proposiciones y Varios, se abordaron diversos puntos adicionales. Catalina sugirió que, para la reunión con los dueños de mascotas, se podría replicar la estrategia utilizada en los almacenes de cadena, donde se ofrecen degustaciones para atraer al público. Propuso ofrecer snacks para las mascotas y crear un ambiente de distracción, como gancho para luego realizar una charla de concientización dirigida a los dueños. Daniel apoyó esta idea, resaltando que el objetivo principal es crear conciencia en los dueños de las mascotas, más que en los animales.</p>
+
+<p>Alberto enfatizó la importancia de aplicar multas a los dueños que no cumplan con las normas de la copropiedad, argumentando que esta es la forma más efectiva de concientizar a las personas. Señaló que, a pesar de los letreros, algunos residentes continúan llevando a sus mascotas a lugares prohibidos y no recogen sus excrementos. Destacó la necesidad de explicar a los dueños las necesidades de sus mascotas y las responsabilidades que implica tener un animal a cargo.</p>
+
+<p>Eliana sugirió ofrecer un pequeño obsequio a los dueños de mascotas, como un dispensador de bolsas en forma de huesito personalizado con el logo de Loma Linda, como un incentivo para recoger los excrementos de sus mascotas. Propuso buscar un patrocinador para la reunión, como una empresa de alimentos para mascotas o un veterinario, que pudiera ofrecer charlas y promocionar sus productos.</p>
+
+<p>Omar informó que ya se han aplicado algunas multas a dueños de mascotas que no recogen sus excrementos, y que esta medida ha resultado efectiva para restringir esta conducta. Se recordó la importancia de contar con cámaras de seguridad que cubran las áreas donde se suelen presentar estos incidentes.</p>
+
+<p>En relación con la pintura de la cancha, Liana Ríos expresó su opinión, indicando que, si bien se trata de una donación y la unidad no incurrirá en costos por la pintura, es importante garantizar la calidad del trabajo. Para ello, sugirió que la aplicación de la pintura sea realizada por una empresa competente, con experiencia en el manejo de pinturas y espacios deportivos. Esto aseguraría que se cumplan las garantías y evitaría futuras reclamaciones relacionadas con la calidad de la pintura.</p>
+
+<p>Diana expresó su opinión sobre el orden de prioridades de los proyectos, sugiriendo que se le dé prioridad al tema del turco sobre el parque de los niños, ya que el turco está causando afectaciones al salón social, al gimnasio y a los residentes. Sin embargo, se decidió mantener el orden de prioridades establecido, comenzando con el parque de los niños y luego el turco.</p>
+
+<p>Finalmente, se recordó la necesidad de abordar la reunión de proyectos, tema que había quedado pendiente en asambleas anteriores. Se enfatizó la importancia de no dilatar más este asunto.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> 20:50</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>No se seguirá contratando a DSC en las condiciones actuales (pagos a nombre de terceros). – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se solicitará a la persona que ayuda con la seguridad en el trabajo que modifique la descripción de sus facturas y anexe un informe de las acciones realizadas. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se retomará el informe de gestión bimensual de los avances de las obras. – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se programará una reunión con los dueños de mascotas para concientización. – <strong>Responsable:</strong> Beatriz y Omar (Administrador)</li>
+        <li>Se actualizarán las cotizaciones para la obra del turco. – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se buscará un patrocinador para la reunión con los dueños de mascotas. – <strong>Responsable:</strong> Omar (Administrador)</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Reunión de Consejo del Conjunto Residencial Loma Linda</h1>
+  <p><strong>Fecha:</strong> 1 de julio de 2025</p>
+  <p><strong>Hora:</strong> Inicio: 7:10 PM - Cierre: 8:50 PM</p>
+  <p><strong>Lugar:</strong> Conjunto Residencial Loma Linda</p>
+  <p><strong>Moderador:</strong> Omar (Administrador)</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>Catalina Echeverri - Consejera</li>
+    <li>Liana Ríos - Consejera</li>
+    <li>Iván Escobar - Consejero</li>
+    <li>Beatriz - Consejera (1503)</li>
+    <li>Gabriela Muñoz - Revisora Fiscal</li>
+    <li>Paula Zapata - Contadora</li>
+    <li>Alberto - Consejero</li>
+    <li>Diana - Consejera</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Verificación del Quórum</li>
+    <li>Aprobación del Acta de Consejo del 27 de mayo de 2025</li>
+    <li>Informe Contable y Auditoría del Mes de Mayo de 2025</li>
+    <li>Discusión sobre el Pago a TDS Soluciones SaaS</li>
+    <li>Revisión de Egresos y Pagos a Contratistas</li>
+    <li>Seguimiento al Servicio de Fumigación</li>
+    <li>Revisión de la Inversión del CDT</li>
+    <li>Análisis de la Cartera y Recuperación de Deuda</li>
+    <li>Estado del Motor de la Piscina y Mantenimiento</li>
+    <li>Reducción de Horas de los Trabajadores</li>
+    <li>Seguimiento a Tareas Pendientes del Consejo</li>
+    <li>Estado de los Parqueaderos con Discapacidad</li>
+    <li>Reunión con Dueños de Mascotas</li>
+    <li>Humedad en el Turco y Parqueaderos</li>
+    <li>Propuestas y Varios</li>
+  </ol>
+</header>
+
+<h2>1. Verificación del Quórum</h2>
+
+<p>El administrador, Omar, inició la reunión a las 7:10 PM del 1 de julio de 2025, indicando que procedería con la verificación del quórum. Constató la presencia de Catalina Echeverri, Liana Ríos e Iván Escobar, confirmando que existía quórum para deliberar. Posteriormente, se unieron Gabriela Muñoz, revisora fiscal, y Paula Zapata, contadora.</p>
+
+<p>Durante la verificación del quórum, se incorporó Beatriz (consejera del 1503) a la reunión, quedando también incluida en el registro de asistencia.</p>
+
+<h2>2. Aprobación del acta de Consejo del 27 de mayo de 2025</h2>
+
+<p>Se procedió a la aprobación del acta de Consejo del 27 de mayo de 2025. El administrador, Omar, consultó a los consejeros sobre posibles cambios de fondo o de forma al acta, la cual había sido previamente enviada por correo electrónico.</p>
+
+<p>Los consejeros expresaron sus opiniones de la siguiente manera:</p>
+
+<ul>
+    <li>Catalina Echeverri: <b>Aprobada</b>.</li>
+    <li>Liana Ríos: Se acopló a la decisión de los demás consejeros, indicando que no había estado presente en la reunión anterior.</li>
+    <li>Beatriz (Consejera del 1503): <b>Aprobada</b>, mencionando no haber leído el acta para correcciones debido a enfermedad.</li>
+    <li>Iván Escobar: <b>Aprobada</b>.</li>
+</ul>
+
+<p>En vista de las aprobaciones recibidas y la ausencia de correcciones propuestas, se dio por aprobada el acta de Consejo del 27 de mayo de 2025.</p>
+
+<h2>3. Informe Contable y Auditoría del Mes de Mayo de 2025</h2>
+
+<p>Paula Zapata, contadora, inició la presentación del informe contable y la auditoría del mes de mayo de 2025. Propuso realizar la exposición de manera conjunta con Gabriela Muñoz, revisora fiscal, para evitar repeticiones y enfocarse en los aspectos más relevantes. Esta propuesta fue aceptada por los asistentes.</p>
+
+<p>Gabriela Muñoz comenzó su informe destacando que, a menos que se indicara lo contrario, todas las acciones encontradas se consideraban acordes con el control interno de la copropiedad. En la descripción de los egresos, se refirió al pago realizado a TDS Soluciones SaaS. Señaló que los pagos se estaban consignando en una cuenta que no pertenecía al titular del contrato, el Sr. TDS Soluciones. Aunque la factura emitida autorizaba el pago a dicha cuenta, Gabriela enfatizó la importancia de que constara en el acta el consenso general para autorizar esta situación específica, indicando si era transitoria y si el administrador y los consejeros estaban al tanto de la razón.</p>
+
+<p>El administrador, Omar, explicó que los pagos se realizaban a nombre de la Sra. Sara, esposa y socia del Sr. TDS Soluciones, debido a que la cuenta de este último estaba embargada. Iván Escobar manifestó su desacuerdo con esta práctica y sugirió que, para los próximos pagos, el egreso se registrara directamente a nombre de la Sra. Sara. Beatriz también expresó su preocupación, argumentando que pagar a un tercero podría generar problemas legales futuros, como una posible demanda por falta de pago.</p>
+
+<p>Gabriela Muñoz recomendó que el Sr. TDS Soluciones buscara una solución a su problema financiero, como abrir una cuenta no embargable. Sugirió que, de no ser posible, el Consejo no debería permitir que continuara como contratista. Beatriz coincidió en que se debería buscar otro contratista para evitar posibles complicaciones legales. Se acordó que no se seguiría contratando a DSC bajo las condiciones actuales, aunque se reconoció que la Sra. Sara era socia en DSC.</p>
+
+<p>En relación con los egresos, Gabriela Muñoz mencionó un pago a la persona que colabora en temas de seguridad en el trabajo. Indicó que la descripción en su factura mencionaba "Implementación del Sistema de Gestión", pero esta implementación ya había sido cancelada el año anterior. Por lo tanto, solicitó que se modificara la descripción en futuras facturas y se adjuntara un anexo detallando las acciones realizadas durante el mes o trimestre, como capacitaciones y avances en el programa a su cargo. Omar informó que ya había solicitado esta modificación.</p>
+
+<p>Gabriela Muñoz también señaló que, según la normativa, Paula Zapata debería incluir en su cuenta de cobro el aporte a la Seguridad Social. Paula respondió que sí estaba realizando estos aportes y que había enviado la copia de la seguridad social junto con la cuenta de cobro a Omar. Se aclaró que se trató de un olvido en la presentación inicial del documento.</p>
+
+<p>En cuanto al servicio de fumigación, se reportó que solo <b>207 apartamentos</b>, correspondientes al <b>80%</b> del total, habían sido fumigados. Gabriela Muñoz resaltó la importancia de que todos los apartamentos realizaran la fumigación para asegurar la efectividad del servicio en toda la copropiedad. Sin embargo, reconoció que no se puede obligar a los residentes a fumigar.</p>
+
+<p>Se mencionó la compra de <b>250 obsequios</b> por un valor de <b>$1.250.000</b> para la celebración del Día de las Madres (egreso 422). Gabriela Muñoz solicitó que la declaración se presentara con suficiente anticipación para evitar que el pago se realizara desde la cuenta personal de Omar y luego se le reintegrara. Esto también aplicaba al ICA. Se informó que el CDT se renovó hasta el mes de diciembre, siguiendo la recomendación de Gabriela Muñoz.</p>
+
+<p>Se informó que se radicó la solicitud de devolución de la compensación del primer semestre por <b>$580.000</b>, que se espera sea consignada en la cuenta corriente en un plazo de <b>50 días</b>. Se destacó el cumplimiento legal en la presentación anticipada de la exógena y las declaraciones de retención en la fuente.</p>
+
+<p>En cuanto a la cartera por pagar, Gabriela Muñoz indicó que estaba bien manejada, con excepción de los pagos a la revisoría, la contabilidad y algunos proveedores, cuya razón para no haber sido cancelados fue explicada por Omar. Este aclaró que los pagos a Paula y Juan Carlos Torres (pegatina de Torre 1) y Juan Carlos Vargas (impermeabilización de canoas en parqueaderos) estaban pendientes debido a que los trabajos no se habían completado.</p>
+
+<p>Se informó que, tras el ajuste de la reinversión, la copropiedad disponía de <b>$31.700.000</b>, cuya utilización quedaba a criterio del Consejo, siempre cuidando la liquidez. Además, se contaban con los saldos de la cuota extra del 2022 y algo de la cuota extra del 2024, sumando un total de <b>$59.000.000</b> disponibles para obras, algunas ya determinadas y otras a decisión del Consejo. Se recomendó aplicar el principio de la prudencia en la utilización de estos recursos.</p>
+
+<p>En la ejecución presupuestal, se observó que el gasto de energía estaba bien presupuestado, mientras que los gastos en jardines y zonas verdes estaban sobre ejecutados. Se sugirió equilibrar estas partidas en los meses restantes. Lo mismo se observó con la planta eléctrica. En mantenimiento general, se consideró que el presupuesto estaba bien ejecutado, con un <b>19%</b> de sobre ejecución en <b>5 meses</b>. La asamblea se iría cuadrando con el pasar de los meses. La póliza de la copropiedad iba bien, al igual que la fumigación. El mantenimiento de puertas y motores y bombas presentaban sobre ejecución, que no se esperaba que se repitiera. Paula Zapata añadió que los gastos estaban detallados en las notas.</p>
+
+<p>En cuanto a los gastos sub ejecutados, se mencionó el sistema de gestión, donde solo se habían gastado <b>$750.000</b>. También se mencionó la recarga de los extintores con los empleados varios, que se esperaba se cuadrara en julio con la reducción de la jornada. Lo mismo ocurría con las actividades de convivencia, que se realizaban al final del año. El mantenimiento de los ascensores presentaba una ligera sub ejecución, mientras que el lavado de tanques debía programarse (se realizó en junio). La vigilancia también jugaba con el tema de la jornada. Gabriela Muñoz concluyó que la ejecución presupuestal iba bien, ya que los gastos sobre ejecutados obedecían a necesidades específicas, exceptuando la jardinería.</p>
+
+<p>Se indicó que, dentro del resultado final, se tenía una sub ejecución de <b>$458.000</b>, pero ya estaban incluidos los <b>$13.000.000</b> gestionados en vía administrativa, como intereses de mora, intereses financieros, intereses del CDT, salón social, cosco, multa por parqueaderos y multa por inasistencia a la asamblea. Se revisó una multa a un apartamento debido al debido proceso realizado por el administrador con las carteleras.</p>
+
+<p>Gabriela Muñoz preguntó por qué el ingreso por carteleras aparecía a nombre de BTG, una empresa de valores. Omar se comprometió a investigar la razón, ya que normalmente los pagos se recibían a través de COS.</p>
+
+<p>Como observaciones finales, se mencionó que se causó el descuento de la presta desde vigilancia por <b>$30.700.000</b> por renovar el contrato a dos años. Se solicitó a Omar que se constatara el contrato. Se reiteró la importancia de analizar con detenimiento el gasto de la primer para ejercer control en los meses restantes de 2025. Se instó a conformar el avance de la reclamación a Bancolombia por el 4 por mil. Omar informó que ya se había enviado un derecho de petición y se estaba a la espera de la respuesta para proceder con una segunda apelación.</p>
+
+<p>Beatriz preguntó si el gasto en jardinería correspondía solo a un mes. Gabriela Muñoz explicó que el presupuesto acumulaba todos los gastos del año, pero la jardinería era un ítem que no se podía fraccionar. Omar añadió que la sobre ejecución en jardinería se debía a la compra de plantas, asesoría y tala de árboles, gastos no presupuestados. Gabriela Muñoz sugirió llevar estos gastos a un rubro no presupuestado. Omar explicó que se realizaba un análisis al final del año para reclasificar los gastos. Gabriela Muñoz recomendó crear un gasto llamado "imprevistos de jardinería".</p>
+
+<p>Se recordó la necesidad de hacer una copia de seguridad de toda la información contable y de titularizar los tres contratos que aún aparecían a nombre de Promotora Lo Malinda en liquidación. Gabriela Muñoz señaló que las facturas electrónicas estaban saliendo a nombre de Promotora Loma Linda.</p>
+
+<p>Paula Zapata indicó que no tenía nada más que agregar y que se habían tocado todos los puntos relevantes. Los consejeros aprobaron los informes contables y la auditoría del mes de mayo de 2025.</p>
+
+<h2>4. Discusión sobre el pago a TDS Soluciones</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, hizo referencia al pago realizado a TDS Soluciones SaaS. Señaló que los pagos se estaban consignando en una cuenta que no pertenecía al titular del contrato, el Sr. TDS Soluciones. Aunque la factura emitida autorizaba el pago a dicha cuenta, Gabriela enfatizó la importancia de que constara en el acta el consenso general para autorizar esta situación específica, indicando si era transitoria y si el administrador y los consejeros estaban al tanto de la razón.</p>
+
+<p>El administrador, Omar, explicó que los pagos se realizaban a nombre de la Sra. Sara, esposa y socia del Sr. TDS Soluciones, debido a que la cuenta de este último estaba embargada. Iván Escobar manifestó su desacuerdo con esta práctica y sugirió que, para los próximos pagos, el egreso se registrara directamente a nombre de la Sra. Sara. Beatriz también expresó su preocupación, argumentando que pagar a un tercero podría generar problemas legales futuros, como una posible demanda por falta de pago.</p>
+
+<p>Gabriela Muñoz recomendó que el Sr. TDS Soluciones buscara una solución a su problema financiero, como abrir una cuenta no embargable. Sugirió que, de no ser posible, el Consejo no debería permitir que continuara como contratista. Beatriz coincidió en que se debería buscar otro contratista para evitar posibles complicaciones legales. Se acordó que no se seguiría contratando a DSC bajo las condiciones actuales, aunque se reconoció que la Sra. Sara era socia en DSC.</p>
+
+<h2>5. Revisión de pagos a contratistas y seguridad social</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, señaló que, según la normativa, Paula Zapata debería incluir en su cuenta de cobro el aporte a la Seguridad Social. Paula respondió que sí estaba realizando estos aportes y que había enviado la copia de la seguridad social junto con la cuenta de cobro a Omar. Se aclaró que se trató de un olvido en la presentación inicial del documento.</p>
+
+<p>En relación con los egresos, Gabriela Muñoz mencionó un pago a la persona que colabora en temas de seguridad en el trabajo. Indicó que la descripción en su factura mencionaba "Implementación del Sistema de Gestión", pero esta implementación ya había sido cancelada el año anterior. Por lo tanto, solicitó que se modificara la descripción en futuras facturas y se adjuntara un anexo detallando las acciones realizadas durante el mes o trimestre, como capacitaciones y avances en el programa a su cargo. Omar informó que ya había solicitado esta modificación.</p>
+
+<p>Se recordó la necesidad de hacer una copia de seguridad de toda la información contable y de titularizar los tres contratos que aún aparecían a nombre de Promotora Lo Malinda en liquidación. Gabriela Muñoz señaló que las facturas electrónicas estaban saliendo a nombre de Promotora Loma Linda.</p>
+
+<h2>6. Fumigación y Día de las Madres</h2>
+
+<p>En relación con el servicio de fumigación, se reportó que solo <b>207 apartamentos</b>, correspondientes al <b>80%</b> del total, habían sido fumigados. Gabriela Muñoz resaltó la importancia de que todos los apartamentos realizaran la fumigación para asegurar la efectividad del servicio en toda la copropiedad. Sin embargo, reconoció que no se puede obligar a los residentes a fumigar.</p>
+
+<p>En el mes se celebró el Día de las Madres, y se reportó la compra de <b>250 obsequios</b> por un valor de <b>$1.250.000</b> en el egreso 422. Gabriela Muñoz solicitó que la declaración se presentara con suficiente anticipación para evitar que el pago se realizara desde la cuenta personal de Omar y luego se le reintegrara, sino que saliera directamente de la cuenta de la copropiedad. Esto también aplicaba al ICA.</p>
+
+<h2>7. Renovación del CDT y solicitud de devolución de compensación</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se informó que el CDT se renovó hasta el mes de diciembre, siguiendo la recomendación de Gabriela Muñoz. También se comunicó que se radicó la solicitud de devolución de la compensación del primer semestre por <b>$580.000</b>, que se espera sea consignada en la cuenta corriente en un plazo de <b>50 días</b>. Se destacó el cumplimiento legal en la presentación anticipada de la exógena y las declaraciones de retención en la fuente.</p>
+
+<h2>8. Cartera por pagar y ajuste de la reinversión</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, Gabriela Muñoz, revisora fiscal, indicó que la cartera por pagar estaba bien manejada, con excepción de los pagos a la revisoría, la contabilidad y algunos proveedores. Omar, el administrador, explicó que los pagos a Paula y Juan Carlos Torres (pegatina de Torre 1) y Juan Carlos Vargas (impermeabilización de canoas en parqueaderos) estaban pendientes debido a que los trabajos no se habían completado.</p>
+
+<p>Se informó que, tras el ajuste de la reinversión, la copropiedad disponía de <b>$31.700.000</b>, cuya utilización quedaba a criterio del Consejo, siempre cuidando la liquidez. Además, se contaban con los saldos de la cuota extra del 2022 y algo de la cuota extra del 2024, sumando un total de <b>$59.000.000</b> disponibles para obras, algunas ya determinadas y otras a decisión del Consejo. Se recomendó aplicar el principio de la prudencia en la utilización de estos recursos.</p>
+
+<p>En relación con la cartera, Omar informó que el apartamento 2001 pagó <b>$25.000.000</b> el 11 de junio, quedando debidamente referenciado. En julio se verá la rebaja tanto de los <b>$25.000.000</b> como de los intereses moratorios en este de parqueaderos y cuartos útiles. Se está en el proceso de buscar las matrículas inmobiliarias para solicitar los prediales de estos dos parqueaderos y empezar a hacer la gestión. Apenas se tengan, se presentarán.</p>
+
+<p>Con respecto a Rodolfo, indicó que dijo que pagaba el mes pasado, pero no pagó, por lo que va para cobro jurídico. Ya se le notificó y ya se le pasa el poder a Cobrantioqui 1910. No se ha verificado si el 1910 canceló, ya que el mes se acabó ayer. Él se comprometió a pagarlo el fin de mes. El 1605 está con prejurídico y el resto con cartas.</p>
+
+<p>La cartera subió alrededor de <b>$3.000.000</b> y punta más, pero ésta subió en tres, dos y una cuota. Se llegó a 49 unidades habitacionales con <b>$29.700.000</b>. Se está dentro de lo normal, con los que siempre se está pendiente de que no se pasen, de que estén pagando, mandándole la carta o haciéndole las llamaditas. También se van a colocar en venta algunos apartamentos, pero no han informado si lo van a vender o no. La cartera está muy similar a la anterior, simplemente el incremento es por tres, dos y una cuota.</p>
+
+<p>Se considera que con esa recuperación del 2001, la cartera quedó muy saneada. Se resalta la importancia de no bajar la guardia con las actividades, sobre todo los avisos en los ascensores, para que no se vayan a subir tanto y empezar una deuda incobrable. Se debe tratar de no dejarlo subir tanto, a ver si no vuelve a pasar lo mismo del 2001.</p>
+
+<h2>9. Ejecución presupuestal y gastos de jardinería</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se analizó la ejecución presupuestal, observándose que el gasto de energía estaba bien presupuestado, mientras que los gastos en jardines y zonas verdes estaban sobre ejecutados. Se sugirió equilibrar estas partidas en los meses restantes. Lo mismo se observó con la planta eléctrica. En mantenimiento general, se consideró que el presupuesto estaba bien ejecutado, con un <b>19%</b> de sobre ejecución en <b>5 meses</b>. La asamblea se iría cuadrando con el pasar de los meses. La póliza de la copropiedad iba bien, al igual que la fumigación. El mantenimiento de puertas y motores y bombas presentaban sobre ejecución, que no se esperaba que se repitiera. Paula Zapata añadió que los gastos estaban detallados en las notas.</p>
+
+<p>En cuanto a los gastos sub ejecutados, se mencionó el sistema de gestión, donde solo se habían gastado <b>$750.000</b>. También se mencionó la recarga de los extintores con los empleados varios, que se esperaba se cuadrara en julio con la reducción de la jornada. Lo mismo ocurría con las actividades de convivencia, que se realizaban al final del año. El mantenimiento de los ascensores presentaba una ligera sub ejecución, mientras que el lavado de tanques debía programarse (se realizó en junio). La vigilancia también jugaba con el tema de la jornada. Gabriela Muñoz concluyó que la ejecución presupuestal iba bien, ya que los gastos sobre ejecutados obedecían a necesidades específicas, exceptuando la jardinería.</p>
+
+<p>Se indicó que, dentro del resultado final, se tenía una sub ejecución de <b>$458.000</b>, pero ya estaban incluidos los <b>$13.000.000</b> gestionados en vía administrativa, como intereses de mora, intereses financieros, intereses del CDT, salón social, cosco, multa por parqueaderos y multa por inasistencia a la asamblea.</p>
+
+<p>Beatriz preguntó si el gasto en jardinería correspondía solo a un mes. Gabriela Muñoz explicó que el presupuesto acumulaba todos los gastos del año, pero la jardinería era un ítem que no se podía fraccionar. Omar añadió que la sobre ejecución en jardinería se debía a la compra de plantas, asesoría y tala de árboles, gastos no presupuestados. Gabriela Muñoz sugirió llevar estos gastos a un rubro no presupuestado. Omar explicó que se realizaba un análisis al final del año para reclasificar los gastos. Gabriela Muñoz recomendó crear un gasto llamado "imprevistos de jardinería".</p>
+
+<h2>10. Copia de seguridad de información contable y titularización de contratos</h2>
+
+<p>Durante la presentación del informe contable y la auditoría del mes de mayo de 2025, se recordó la necesidad de hacer una copia de seguridad de toda la información contable, por las razones expuestas en una reunión anterior. Este tema quedó pendiente y se sugirió a la administración darle seguimiento.</p>
+
+<p>Adicionalmente, se sugirió a la administración realizar la titularización de los tres contratos que aún aparecen a nombre de Promotora Lo Malinda en liquidación. Se indicó que los otros dos contratos de los cinco existentes sí están correctamente a nombre de Urbanización Loma Linda. Se solicitó hacer la gestión con RTM para titularizar estos contratos, ya que las facturas electrónicas están saliendo a nombre de Promotora Loma Linda.</p>
+
+<h2>11. Presentación y discusión sobre la cartera</h2>
+
+<p>El administrador, Omar, presentó el informe sobre la cartera, indicando que el apartamento 2001 realizó un pago de <b>$25.000.000</b> el 11 de junio, quedando debidamente referenciado. Se espera que en el mes de julio se vea reflejada la rebaja tanto de los <b>$25.000.000</b> como de los intereses moratorios correspondientes a los parqueaderos y cuartos útiles. Se informó que se está en proceso de buscar las matrículas inmobiliarias para solicitar los prediales de estos dos parqueaderos y comenzar la gestión, y que se presentarán una vez se tengan.</p>
+
+<p>Con respecto al residente Rodolfo, se indicó que, a pesar de haber prometido pagar el mes anterior, no lo hizo, por lo que su caso pasará a cobro jurídico. Ya se le notificó y se le pasará el poder a Cobrantioqui 1910. No se ha verificado si el residente del apartamento 1910 canceló, ya que el mes se acabó el día anterior. El residente del apartamento 1605 está en prejurídico y el resto de los casos se están gestionando mediante cartas.</p>
+
+<p>Se informó que la cartera subió alrededor de <b>$3.000.000</b> y punta más, debido a incrementos en tres, dos y una cuota. Se llegó a un total de 49 unidades habitacionales con una deuda de <b>$29.700.000</b>. Se considera que esta cifra está dentro de lo normal, y se mantiene un seguimiento constante para evitar que los residentes se atrasen en sus pagos, enviando cartas y realizando llamadas. Algunos apartamentos están en proceso de venta, pero aún no se ha confirmado si se concretarán las ventas. La cartera se mantiene similar a la anterior, con el incremento debido a los atrasos en las cuotas.</p>
+
+<p>Se considera que, con la recuperación del pago del apartamento 2001, la cartera quedó muy saneada. Se resaltó la importancia de no bajar la guardia con las actividades de recordatorio, especialmente los avisos en los ascensores, para evitar que las deudas aumenten y se conviertan en incobrables. Se enfatizó la necesidad de evitar que las deudas aumenten demasiado, para no repetir la situación del apartamento 2001.</p>
+
+<h2>12. Estado del motor de la piscina y bombas de calor</h2>
+
+<p>El administrador, Omar, informó que el motor de la piscina había presentado una nueva falla. Inicialmente, el motor encendía pero no recirculaba el agua. Posteriormente, dejó de funcionar por completo. El motor fue retirado para su diagnóstico y reparación. Se espera un dictamen para el día siguiente, lo que impediría la apertura de la piscina en la fecha prevista. Se consideró la posibilidad de informar a los residentes sobre el cierre temporal de la piscina, ya sea mediante carteleras o esperando el diagnóstico para tomar una decisión.</p>
+
+<p>Beatriz consultó sobre la ubicación del motor y si correspondía a una estructura de cemento cercana a las guaduas. Omar aclaró que esa estructura corresponde a las bombas de calor, que son diferentes al motor de la piscina, el cual se encuentra en el cuarto de máquinas.</p>
+
+<p>Alberto preguntó sobre la frecuencia del mantenimiento de los motores de la piscina. Omar respondió que el motor de la piscina recibe seguimiento cada tres meses, mientras que las motobombas y la parte de hidro reciben mantenimiento mensual. El motor de la piscina es atendido por MQ Piscinas, y las motobombas por Beta Soluciones, siendo dos proveedores diferentes.</p>
+
+<p>Iván Escobar cuestionó si, tras la reparación anterior del motor, se realizó una revisión general para evitar fallas recurrentes. Omar indicó que el motor había sido reparado por un ruido inusual y que, tras la reparación, funcionó durante tres días antes de presentar la nueva falla. Iván Escobar sugirió que el proveedor no estaba realizando chequeos y verificaciones adecuadas, lo que ponía en entredicho su trabajo. Alberto coincidió en la necesidad de reclamar al proveedor por la recurrencia de la falla y la afectación al servicio de la piscina.</p>
+
+<p>Omar indicó que aún no se tenía el dictamen sobre la causa de la nueva falla y que se comunicaría con el proveedor para obtenerlo. En caso de no obtener una respuesta satisfactoria, se consideraría buscar otro proveedor. Se mencionó que una de las motobombas se había quemado y que se estaba gestionando la reclamación ante la aseguradora.</p>
+
+<h2>13. Estado del ascensor</h2>
+
+<p>Durante la reunión, Beatriz reportó que el ascensor estaba nuevamente fuera de servicio. Se indicó que ya se había reportado el incidente y se había contactado a la empresa encargada del mantenimiento, Ascensores Estilo, para su reparación.</p>
+
+<h2>14. Mantenimiento de paredes y reducción de horas de trabajadores</h2>
+
+<p>En relación con el mantenimiento de paredes, se informó que se está llevando a cabo un lavado de todas las paredes y señalizaciones, siguiendo lo acordado el año anterior. Se mencionó que se está dedicando un día a la semana para realizar esta tarea y que posteriormente se informará sobre el avance de los trabajos.</p>
+
+<p>En cuanto a la reducción de horas de los trabajadores, el administrador, Omar, informó que a partir del 16 de julio se reducirán nuevamente dos horas en la jornada laboral de los empleados. Se está analizando con Aseo Seguro la forma de implementar esta reducción para minimizar el impacto en el servicio prestado a la copropiedad.</p>
+
+<h2>15. Inicio de trabajos con Bonnie y Simón</h2>
+
+<p>El administrador, Omar, informó que se está a la espera de que Bonnie envíe la factura correspondiente al anticipo acordado para el inicio de los trabajos. Se le proporcionó a Bonnie toda la documentación necesaria, incluyendo la representación del RUT, para que pueda emitir la cuenta de cobro. Se acordó que la cuenta de cobro corresponderá al piso, para facilitar el pago del anticipo.</p>
+
+<p>Se confirmó que el inicio de los trabajos con Bonnie y Simón está programado para el 7 de julio, coincidiendo con el regreso de los jóvenes a sus actividades. Bonnie manifestó no tener inconveniente en comenzar en esa fecha.</p>
+
+<h2>16. Pintura de parqueaderos y cancha</h2>
+
+<p>En relación con la pintura de los parqueaderos con discapacidad, el administrador, Omar, informó que se había presentado un problema debido a la época de invierno. Explicó que, aunque no estuviera lloviendo, el asfalto contenía humedad que afectaba la adherencia de la pintura, provocando que se soplara desde adentro hacia afuera. Se solicitó la opinión de Diana, consejera con conocimientos en pintura plástica, quien podría aportar mayor claridad sobre este fenómeno.</p>
+
+<p>Omar recordó que este trabajo se iba a realizar en conjunto con la pintura de la cancha. Sin embargo, en una reunión de consejo anterior, se decidió no realizar la pintura de la cancha por el momento. No obstante, se mantiene pendiente la donación ofrecida por Liana para este propósito.</p>
+
+<p>Posteriormente, Liana Ríos expresó su opinión sobre el tema de la cancha, indicando que, si bien se trata de una donación y la unidad no incurrirá en costos por la pintura, es importante garantizar la calidad del trabajo. Para ello, sugirió que la aplicación de la pintura sea realizada por una empresa competente, con experiencia en el manejo de pinturas y espacios deportivos. Esto aseguraría que se cumplan las garantías y evitaría futuras reclamaciones relacionadas con la calidad de la pintura.</p>
+
+<p>Se mencionó que la propuesta inicial de pintar la cancha con una empresa reconocida y con garantías resultó costosa y no estaba presupuestada. Además, debido a los gastos adicionales que se han presentado, como el nuevo impuesto, se consideró que no era una prioridad en este momento y se pospuso para una fecha posterior. Se evaluará la disponibilidad de Liana para mantener la donación y se explorarán otras opciones en el futuro.</p>
+
+<h2>17. Hábeas Data</h2>
+
+<p>En relación con el tema de Hábeas Data, el administrador, Omar, informó que se continúa enviando el formato correspondiente a los proveedores y a los nuevos residentes. Se mencionó que ya se había enviado el formato a Gabriela Muñoz, revisora fiscal, que era el que faltaba. Se reiteró que se realiza un recordatorio a las personas nuevas que ingresan a la copropiedad para que lo firmen. La administración tiene como objetivo seguir realizando campañas informativas a través de correo electrónico para reforzar el cumplimiento de la normativa de Hábeas Data.</p>
+
+<h2>18. Reunión con dueños de mascotas y aplicación de multas</h2>
+
+<p>Se abordó el tema de la reunión con dueños de mascotas y la aplicación de multas, destacando la importancia de concientizar a los propietarios sobre las responsabilidades que implica tener un animal en la copropiedad. Beatriz indicó que podría contactar a un entrenador para colaborar en una capacitación sobre el manejo de mascotas.</p>
+
+<p>El administrador, Omar, informó que ya contaba con un listado de las mascotas registradas en la copropiedad. Se propuso coordinar con Beatriz para programar una capacitación, sugiriendo que el entrenador ofreciera una charla sobre el manejo de mascotas. Se enfatizó la necesidad de concientizar a las personas, más que a los animales, y de contar con la disposición de los dueños para asistir a la reunión.</p>
+
+<p>Catalina sugirió programar la reunión y citar directamente a los dueños de mascotas, en lugar de preguntarles si podían asistir. Propuso enviar invitaciones y colocar avisos en los ascensores para asegurar una mayor participación. Se planteó la posibilidad de realizar la reunión durante el fin de semana, en un horario accesible para la mayoría de los residentes.</p>
+
+<p>Daniel sugirió una estrategia para atraer a los dueños de mascotas, similar a las degustaciones en los almacenes de cadena. Propuso ofrecer snacks para las mascotas y crear un ambiente de distracción, para luego realizar la charla de concientización. Esta idea fue bien recibida, y Beatriz se comprometió a consultar con el entrenador si podía colaborar con esta iniciativa.</p>
+
+<p>Alberto enfatizó la importancia de aplicar multas a los dueños que no cumplan con las normas de la copropiedad, argumentando que esta es la forma más efectiva de concientizar a las personas. Señaló que, a pesar de los letreros, algunos residentes continúan llevando a sus mascotas a lugares prohibidos y no recogen sus excrementos. Destacó la necesidad de explicar a los dueños las necesidades de sus mascotas y las responsabilidades que implica tener un animal a cargo.</p>
+
+<p>Se propuso ofrecer un pequeño obsequio a los dueños de mascotas, como un dispensador de bolsas en forma de huesito personalizado con el logo de Loma Linda, como un incentivo para recoger los excrementos de sus mascotas. Se sugirió buscar un patrocinador para la reunión, como una empresa de alimentos para mascotas o un veterinario, que pudiera ofrecer charlas y promocionar sus productos.</p>
+
+<p>Se mencionó que ya se han aplicado algunas multas a dueños de mascotas que no recogen sus excrementos, y que esta medida ha resultado efectiva para restringir esta conducta. Se recordó la importancia de contar con cámaras de seguridad que cubran las áreas donde se suelen presentar estos incidentes.</p>
+
+<p>Se concluyó que se coordinará con Beatriz para programar la reunión con los dueños de mascotas, buscando un patrocinador que pueda ofrecer charlas y obsequios. Se reiteró la importancia de aplicar multas a los infractores y de realizar campañas de concientización para promover la tenencia responsable de mascotas.</p>
+
+<h2>19. Humedad en el turco y parqueaderos</h2>
+
+<p>Durante la reunión, Catalina preguntó si se podía considerar abrir el turco ciertos días con el fin de mitigar la humedad, mientras se espera recoger la cuota para realizar la obra. El administrador, Omar, indicó que esta decisión debía ser tomada por el Consejo y sería aplicada por la administración.</p>
+
+<p>Catalina argumentó que su pregunta se debía al tema de la humedad, que seguía sin avanzar mucho. Omar respondió que la humedad en el turco siempre ha sido la misma, afectando los muros del gimnasio y el salón social, y que ahora se está ocasionando un charco en la losa que baja al parqueadero, lo cual mantiene a un residente bastante inconforme con el agua que cae.</p>
+
+<p>Se mencionó que, si el turco no se apaga, el agua siempre estará presente. Sin embargo, en el momento no se considera viable abrirlo, debido a la incomodidad que esto generaría. Beatriz preguntó si la humedad podría causar algún daño estructural. Iván Escobar cuestionó si la humedad podría tumbar algo o dañar algo adicional.</p>
+
+<p>Omar respondió que la humedad de los muros colindantes del turco, el gimnasio y el salón social ha sido constante durante los seis años que lleva en Loma Linda. Añadió que las losas internas no están impermeabilizadas, por lo que el agua hace surcos y cae en forma de goteras, pero no causa un daño estructural mayor. El agua filtra, pero cuando se seca, la losa recupera su dureza normal.</p>
+
+<p>Beatriz preguntó si se había consultado a un ingeniero para evaluar el peligro real de la humedad. Omar respondió que no se ha hecho porque no se han observado daños evidentes en las losas, como hundimientos o exposición de las varillas de hierro. Sin embargo, se consideró la posibilidad de llamar a un ingeniero estructural para realizar un diagnóstico.</p>
+
+<p>Omar explicó que se está achicando el agua que se acumula en la losa principal del parqueadero, debido a los desniveles que se forman con el tiempo. Esta agua se achica para evitar que filtre y cause daños. Se aclaró que el agua afecta más a la obra civil blanca, como el estuco y el superboa, pero no causa daños mayores a la estructura.</p>
+
+<p>Beatriz insistió en que la humedad lleva muchos años y que no se sabe qué daños puede ocasionar en el fondo. Se recordó que este tema fue uno de los principales para la Asamblea, donde se aprobó como una prioridad y se aceptó tener el dinero para solucionarlo al 100%.</p>
+
+<p>Iván Escobar sugirió solucionar primero el problema de la piscina y luego evaluar si es necesario cerrar el turco. Se propuso evaluar si la humedad realmente representa un peligro y sopesar todas las opciones antes de tomar una decisión.</p>
+
+<p>Se concluyó que se seguirá achicando el agua y secando la zona afectada, y que se retomará el tema más adelante, una vez que esté todo funcionando correctamente. Omar se comprometió a empezar a actualizar toda la parte del turco.</p>
+
+<h2>20. Reunión de proyectos</h2>
+
+<p>En la revisión de los temas pendientes, se mencionó la necesidad de abordar la reunión de proyectos, tema que había quedado pendiente en asambleas anteriores. Se enfatizó la importancia de no dilatar más este asunto.</p>
+
+<h2>21. Proposiciones y varios</h2>
+
+<p>Dentro del tema de Proposiciones y Varios, se abordaron diversos puntos adicionales. Catalina sugirió que, para la reunión con los dueños de mascotas, se podría replicar la estrategia utilizada en los almacenes de cadena, donde se ofrecen degustaciones para atraer al público. Propuso ofrecer snacks para las mascotas y crear un ambiente de distracción, como gancho para luego realizar una charla de concientización dirigida a los dueños. Daniel apoyó esta idea, resaltando que el objetivo principal es crear conciencia en los dueños de las mascotas, más que en los animales.</p>
+
+<p>Alberto enfatizó la importancia de aplicar multas a los dueños que no cumplan con las normas de la copropiedad, argumentando que esta es la forma más efectiva de concientizar a las personas. Señaló que, a pesar de los letreros, algunos residentes continúan llevando a sus mascotas a lugares prohibidos y no recogen sus excrementos. Destacó la necesidad de explicar a los dueños las necesidades de sus mascotas y las responsabilidades que implica tener un animal a cargo.</p>
+
+<p>Eliana sugirió ofrecer un pequeño obsequio a los dueños de mascotas, como un dispensador de bolsas en forma de huesito personalizado con el logo de Loma Linda, como un incentivo para recoger los excrementos de sus mascotas. Propuso buscar un patrocinador para la reunión, como una empresa de alimentos para mascotas o un veterinario, que pudiera ofrecer charlas y promocionar sus productos.</p>
+
+<p>Omar informó que ya se han aplicado algunas multas a dueños de mascotas que no recogen sus excrementos, y que esta medida ha resultado efectiva para restringir esta conducta. Se recordó la importancia de contar con cámaras de seguridad que cubran las áreas donde se suelen presentar estos incidentes.</p>
+
+<p>En relación con la pintura de la cancha, Liana Ríos expresó su opinión, indicando que, si bien se trata de una donación y la unidad no incurrirá en costos por la pintura, es importante garantizar la calidad del trabajo. Para ello, sugirió que la aplicación de la pintura sea realizada por una empresa competente, con experiencia en el manejo de pinturas y espacios deportivos. Esto aseguraría que se cumplan las garantías y evitaría futuras reclamaciones relacionadas con la calidad de la pintura.</p>
+
+<p>Diana expresó su opinión sobre el orden de prioridades de los proyectos, sugiriendo que se le dé prioridad al tema del turco sobre el parque de los niños, ya que el turco está causando afectaciones al salón social, al gimnasio y a los residentes. Sin embargo, se decidió mantener el orden de prioridades establecido, comenzando con el parque de los niños y luego el turco.</p>
+
+<p>Finalmente, se recordó la necesidad de abordar la reunión de proyectos, tema que había quedado pendiente en asambleas anteriores. Se enfatizó la importancia de no dilatar más este asunto.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> 20:50</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>No se seguirá contratando a DSC en las condiciones actuales (pagos a nombre de terceros). – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se solicitará a la persona que ayuda con la seguridad en el trabajo que modifique la descripción de sus facturas y anexe un informe de las acciones realizadas. – <strong>Responsable:</strong> No especificado</li>
+        <li>Se retomará el informe de gestión bimensual de los avances de las obras. – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se programará una reunión con los dueños de mascotas para concientización. – <strong>Responsable:</strong> Beatriz y Omar (Administrador)</li>
+        <li>Se actualizarán las cotizaciones para la obra del turco. – <strong>Responsable:</strong> Omar (Administrador)</li>
+        <li>Se buscará un patrocinador para la reunión con los dueños de mascotas. – <strong>Responsable:</strong> Omar (Administrador)</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): consejo_loma_linda_julio_01_2025_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/HmBXa9PsoGszNXZ
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/HmBXa9PsoGszNXZ
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_loma_linda_julio_01_2025_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_loma_linda_julio_01_2025/consejo_loma_linda_julio_01_2025_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Bpm3ZPK94YHBZbG
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Bpm3ZPK94YHBZbG
