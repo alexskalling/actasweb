@@ -98,7 +98,7 @@ export async function generateContenta(
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 3;
-    let modelNameOrdenDelDia = "gemini-2.5-flash"; // Puedes mantener este modelo inicial
+    let modelNameOrdenDelDia = "gemini-2.0-flash"; // Puedes mantener este modelo inicial
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
@@ -126,8 +126,8 @@ export async function generateContenta(
         );
         retryCountOrdenDelDia++;
         if (retryCountOrdenDelDia > 1) {
-          modelNameOrdenDelDia = "gemini-2.0-flash"; // Mantener el mismo modelo o cambiar si lo prefieres
-          console.log("Cambio de modelo (Orden del Día) a gemini-2.0-flash");
+          modelNameOrdenDelDia = "gemini-2.5-flash"; // Mantener el mismo modelo o cambiar si lo prefieres
+          console.log("Cambio de modelo (Orden del Día) a gemini-2.5-flash");
         }
         if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
           console.error(
@@ -212,7 +212,7 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.5-flash";
+  let modelName = "gemini-2.0-flash";
   const maxRetries = 3;
   let retryCount = 0;
 
@@ -266,8 +266,8 @@ async function procesarOrdenDelDia(
 
         retryCount++;
         if (retryCount > 1) {
-          modelName = "gemini-2.0-flash";
-          console.log("Cambio de modelo a gemini-2.0-flash");
+          modelName = "gemini-2.5-flash";
+          console.log("Cambio de modelo a gemini-2.5-flash");
         }
 
         if (retryCount >= maxRetries) {
