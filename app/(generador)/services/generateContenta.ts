@@ -294,7 +294,7 @@ async function getSystemPromt(tipo: string) {
 
   switch (tipo) {
     case "Orden":
-      systemPromt = `Procesar transcripciones de reuniones y generar un orden del día en formato JSON.
+      systemPromt = `Procesar transcripciones de reuniones y generar un orden del día en formato JSON. Respete el orden del dia  no deje ninguan elemento del JSON pro fuera
 Instrucciones Específicas:
 
 Formato de Respuesta: Responde únicamente con un objeto JSON válido. No incluyas texto adicional, explicaciones o comentarios antes o después del JSON.
@@ -521,6 +521,8 @@ async function getUserPromt(
   switch (tipo) {
     case "Orden":
       userPromt = `Claro, aquí tienes el prompt con los ejemplos integrados dentro de las instrucciones:
+
+      No deje ningun eleento del orden del dia del JSON fuera
 
 Procesa la siguiente transcripción de una reunión, la cual se encuentra contenida en la variable ${content}, y extrae el orden del día en formato JSON, siguiendo estrictamente las reglas establecidas.
 
