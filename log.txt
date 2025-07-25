@@ -2875,3 +2875,150 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 20250710_220713_Trans
 Compartiendo archivo existente para obtener URL pública: /Actas/20250710_220713/20250710_220713_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/qoMzgHaTZEb3Nk2
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/qoMzgHaTZEb3Nk2
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-24T23:57:23.012Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-24T23:57:24.257Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-24T23:57:25.378Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-24T23:57:26.135Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-24T23:57:27.061Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-24T23:57:27.063Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-24T23:57:27.816Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/DiDxXycMTjxKfeF
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/DiDxXycMTjxKfeF
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/gjWKxa8GyK2PXNP
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/gjWKxa8GyK2PXNP
+Verificando si existe transcripción: consejo_directivo_40_Transcripcion.txt en carpeta consejo_directivo_40
+[2025-07-25T00:01:07.228Z] Verificando existencia del archivo consejo_directivo_40_Transcripcion.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-25T00:01:08.362Z] Archivo "consejo_directivo_40_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Transcripción existente encontrada: consejo_directivo_40. Obteniendo contenido.
+Verificando contenido existente: consejo_directivo_40_Contenido.txt
+[2025-07-25T00:01:09.435Z] Verificando existencia del archivo consejo_directivo_40_Contenido.txt en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-25T00:01:10.200Z] Archivo "consejo_directivo_40_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Contenido existente: consejo_directivo_40_Contenido.txt. Cargando.
+[2025-07-25T00:01:11.097Z] Contenido del archivo "consejo_directivo_40_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_40.mp3 en carpeta: consejo_directivo_40
+Verificando Borrador .docx existente: consejo_directivo_40_Borrador.docx
+[2025-07-25T00:01:11.100Z] Verificando existencia del archivo consejo_directivo_40_Borrador.docx en Nextcloud carpeta consejo_directivo_40.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-25T00:01:11.852Z] Archivo "consejo_directivo_40_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_directivo_40".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_directivo_40_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/6aXyiBJtk2iidwe
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/6aXyiBJtk2iidwe
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_directivo_40_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_directivo_40/consejo_directivo_40_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/zJ77D5K6c55rFB2
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/zJ77D5K6c55rFB2
+Verificando si existe transcripción: consejo_directivo_402_Transcripcion.txt en carpeta consejo_directivo_402
+[2025-07-25T00:05:46.890Z] Verificando existencia del archivo consejo_directivo_402_Transcripcion.txt en Nextcloud carpeta consejo_directivo_402.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_402/consejo_directivo_402_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-25T00:05:48.066Z] Archivo "consejo_directivo_402_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "consejo_directivo_402".
+Iniciando transcripción con AssemblyAI para: consejo_directivo_402.mp3
+Guardando transcripción: consejo_directivo_402_Transcripcion.txt en carpeta consejo_directivo_402
+Transcripción guardada: consejo_directivo_402_Transcripcion.txt
+Verificando contenido existente: consejo_directivo_402_Contenido.txt
+[2025-07-25T00:05:56.085Z] Verificando existencia del archivo consejo_directivo_402_Contenido.txt en Nextcloud carpeta consejo_directivo_402.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_402/consejo_directivo_402_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-25T00:05:56.850Z] Archivo "consejo_directivo_402_Contenido.txt" NO encontrado en Nextcloud en la carpeta "consejo_directivo_402".
+Generando contenido para: consejo_directivo_402.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: consejo_directivo_402.mp3
+Guardando contenido en Nextcloud: consejo_directivo_402_Contenido.txt
+Contenido guardado: consejo_directivo_402_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_directivo_402.mp3 en carpeta: consejo_directivo_402
+Verificando Borrador .docx existente: consejo_directivo_402_Borrador.docx
+[2025-07-25T00:07:00.905Z] Verificando existencia del archivo consejo_directivo_402_Borrador.docx en Nextcloud carpeta consejo_directivo_402.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_directivo_402/consejo_directivo_402_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-25T00:07:01.666Z] Archivo "consejo_directivo_402_Borrador.docx" NO encontrado en Nextcloud en la carpeta "consejo_directivo_402".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: consejo_directivo_402_Borrador.docx
+Preparando guardado .docx en Nextcloud: consejo_directivo_402_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de la Reunión</h1><p><strong>Fecha:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>[GRAN TEMA 1]</li>
+    <li>[GRAN TEMA 2]</li>
+    <li>[GRAN TEMA 3]</li>
+    <li>[GRAN TEMA 4]</li>
+  </ol>
+</header>
+De acuerdo a las instrucciones proporcionadas, a continuación se presenta el desarrollo del acta de la reunión, enfocándose en un tema específico y siguiendo las directrices de redacción, estructura y formato indicadas.
+
+
+<h2>1. Título claro y diciente</h2>
+
+<p>Tras una exhaustiva revisión de la transcripción de la reunión, se constata que el tema denominado "Título claro y diciente", incluido en el orden del día, <b>no fue abordado</b> durante el desarrollo de la sesión. Por lo tanto, no se dispone de información relevante para detallar en este apartado del acta.</p>
+
+<p>Se deja constancia de que, a pesar de estar contemplado en la agenda, la discusión sobre "Título claro y diciente" no se llevó a cabo, y en consecuencia, no se generaron acuerdos, decisiones ni comentarios relacionados con este tema en particular.</p>
+[Error: No se pudo procesar Cierre. Máximo número de intentos alcanzado.]
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de la Reunión</h1><p><strong>Fecha:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>[GRAN TEMA 1]</li>
+    <li>[GRAN TEMA 2]</li>
+    <li>[GRAN TEMA 3]</li>
+    <li>[GRAN TEMA 4]</li>
+  </ol>
+</header>
+De acuerdo a las instrucciones proporcionadas, a continuación se presenta el desarrollo del acta de la reunión, enfocándose en un tema específico y siguiendo las directrices de redacción, estructura y formato indicadas.
+
+
+<h2>1. Título claro y diciente</h2>
+
+<p>Tras una exhaustiva revisión de la transcripción de la reunión, se constata que el tema denominado "Título claro y diciente", incluido en el orden del día, <b>no fue abordado</b> durante el desarrollo de la sesión. Por lo tanto, no se dispone de información relevante para detallar en este apartado del acta.</p>
+
+<p>Se deja constancia de que, a pesar de estar contemplado en la agenda, la discusión sobre "Título claro y diciente" no se llevó a cabo, y en consecuencia, no se generaron acuerdos, decisiones ni comentarios relacionados con este tema en particular.</p>
+[Error: No se pudo procesar Cierre. Máximo número de intentos alcanzado.]
+[2025-07-25T00:07:01.972Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
