@@ -398,8 +398,8 @@ export default function MediaFileUploaderComponent({
               if (industriaId == null) {
                 setIndustriaId(99);
               }
-              console.log(industriaId)
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), '', result.uploadUrl, '', '', '', industriaId);
+              const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ?"soporte" : "acta";
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId);
             }
           } catch (error: unknown) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
