@@ -4,6 +4,8 @@ import {
   text,
   timestamp,
   bigint,
+  serial,
+  integer,
 } from "drizzle-orm/pg-core";
 import {
   relations
@@ -64,6 +66,12 @@ export const actas = pgTable("actas", {
   idUsuario: uuid("id_usuario")
     .defaultRandom() // Puedes cambiar esto si usas auth.uid()
     .references(() => usuarios.id),
+  idIndustria: integer('id_industria').references(() => industrias.id),
+});
+// Tabla: industrias
+export const industrias = pgTable('industrias', {
+  id: serial('id_industria').primaryKey(),
+  nombre: text('nombre_industria').notNull().unique(),
 });
 
 export const actasRelations = relations(actas, ({ one }) => ({
@@ -74,5 +82,9 @@ export const actasRelations = relations(actas, ({ one }) => ({
   usuario: one(usuarios, {
     fields: [actas.idUsuario],
     references: [usuarios.id],
+  }),
+  industria: one(industrias, {
+    fields: [actas.idIndustria],
+    references: [industrias.id],
   }),
 }));

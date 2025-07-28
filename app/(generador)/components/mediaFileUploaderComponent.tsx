@@ -18,6 +18,7 @@ import { uploadFileToAssemblyAI } from "../services/assemblyActions";
 import { useSession } from "next-auth/react";
 import { GuardarNuevoProceso } from "../services/guardarNuevoProceso";
 import { ActualizarProceso } from "../services/actualizarProceso";
+import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
 
 
 interface MediaSelectorProps {
@@ -57,7 +58,25 @@ export default function MediaFileUploaderComponent({
   const [showModal, setShowModal] = React.useState(false);
   const [modalMessage, setModalMessage] = React.useState("");
   const [showPaymentModal, setShowPaymentModal] = React.useState(false);
+  const [industriaId, setIndustriaId] = React.useState<number | null>(null)
   const { data: session } = useSession();
+
+  const handleContinue = () => {
+    if (session && !industriaId) {
+      setModalMessage("Por favor selecciona una industria afin a los temas de tu acta.");
+      setShowModal(true);
+      return;
+    }
+
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      window.gtag('event', 'continue_button_click', {
+        'event_category': 'engagement',
+        'event_label': 'continue_button_clicked'
+      });
+    }
+
+    handleUploadFile();
+  };
 
   const handleFileSelect = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -88,7 +107,7 @@ export default function MediaFileUploaderComponent({
         setError("El archivo seleccionado está vacío. Por favor selecciona un archivo válido.");
         return;
       }
-      
+
       // Verificar que el archivo tenga un nombre válido
       if (!file.name || file.name.trim() === '') {
         setError("El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo.");
@@ -120,7 +139,7 @@ export default function MediaFileUploaderComponent({
     // Verificar si es un archivo de audio/video por tipo MIME o extensión
     if (!file.type.match(/^(audio|video)/) && !allowedExtensions.includes(fileExtension)) {
       setError("Por favor selecciona un archivo de audio o video válido. Formatos permitidos: " + allowedExtensions.join(', '));
-      
+
       // Track error validación archivo
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
         window.gtag('event', 'error_validacion_archivo', {
@@ -351,7 +370,7 @@ export default function MediaFileUploaderComponent({
       const result = await uploadFileToAssemblyAI(formData, (progress) => {
         const progressRounded = Math.round(progress);
         setUploadProgress(progressRounded);
-        
+
         // Track progreso subida cada 25%
         if (progressRounded % 25 === 0 && progressRounded > 0) {
           if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
@@ -375,9 +394,12 @@ export default function MediaFileUploaderComponent({
         const ejecutarCrearActa = async () => {
           try {
             if (result.uploadUrl) {
+              if (industriaId == null) {
+                setIndustriaId(99);
+              }
               const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ?"soporte" : "acta";
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId);
 
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo , result.uploadUrl, '', '', '');
             }
           } catch (error: unknown) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
@@ -391,7 +413,7 @@ export default function MediaFileUploaderComponent({
               msg.includes("DUPLICATE_ACTA")
             ) {
               console.warn("⚠️ Duplicado detectado");
-              setModalMessage("Por favor usa otro nombre.");
+              setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
               setShowModal(true);
             } else {
               // otro error
@@ -512,7 +534,7 @@ export default function MediaFileUploaderComponent({
         setTimeout(() => {
           if (acta) {
             downloadFile(transcripcion);
-            
+
             // Track descarga documento completada y conversión
             if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
               window.gtag('event', 'descarga_documento_completada', {
@@ -521,7 +543,7 @@ export default function MediaFileUploaderComponent({
                 'tipo_documento': 'acta_y_transcripcion',
                 'nombre_archivo': file
               });
-              
+
               // Track conversión completada
               window.gtag('event', 'conversion_completada', {
                 'event_category': 'conversion',
@@ -633,7 +655,7 @@ export default function MediaFileUploaderComponent({
       {showModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
-            <h2 className="text-lg font-bold text-gray-800 mb-4 text-center">⚠️ No puedes tener actas con el mismo nombre</h2>
+            <h2 className="text-lg font-bold text-gray-800 mb-4 text-center">⚠️ Alerta ⚠️</h2>
             <p className="text-gray-600 mb-4">
               {modalMessage}
             </p>
@@ -653,11 +675,11 @@ export default function MediaFileUploaderComponent({
             <div className="text-center">
               <h2 className="text-xl font-bold text-gray-800 mb-4">💳 Recuerda</h2>
               <p className="text-gray-600 mb-6">
-                Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en <span className="font-bold text-purple-600"> &quot;Finalizar Proceso&quot; </span> o <span className="font-bold text-purple-600"> &quot;Redirigir al Comercio&quot; </span> 
+                Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en <span className="font-bold text-purple-600"> &quot;Finalizar Proceso&quot; </span> o <span className="font-bold text-purple-600"> &quot;Redirigir al Comercio&quot; </span>
                 para generar tu acta. Si es que no se da de manera automatica.
               </p>
               <div className="flex gap-3 justify-center">
-     
+
                 <button
                   onClick={() => {
                     setShowPaymentModal(false);
@@ -774,6 +796,14 @@ export default function MediaFileUploaderComponent({
               </div>
             )}
             <div className="flex gap-4">
+              {session != null && (
+                <DropdownIndustrias onSelect={setIndustriaId} />
+              )}
+
+            </div>
+
+            <div className="flex gap-4" id="DivBotonesUpload">
+
               {acta == null && transcripcion == null && (
                 <Button
                   className="w-full rounded-sm"
@@ -820,16 +850,7 @@ export default function MediaFileUploaderComponent({
                 !procesando && (
                   <Button
                     className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
-                    onClick={() => {
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-
-                        window.gtag('event', 'continue_button_click', {
-                          'event_category': 'engagement',
-                          'event_label': 'continue_button_clicked'
-                        });
-                      }
-                      handleUploadFile();
-                    }}
+                    onClick={handleContinue}
                     disabled={calculando}
                   >
                     {calculando ? (

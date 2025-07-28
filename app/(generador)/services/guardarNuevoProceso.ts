@@ -16,6 +16,7 @@ export async function GuardarNuevoProceso(
   referencia: string,
   urlTranscripcion: string | null | undefined,
   urlborrador: string | null | undefined,
+  Industria: number | null | undefined,
 ) {
   try {
     // 📨 obtener usuario
@@ -36,6 +37,7 @@ export async function GuardarNuevoProceso(
       referencia,
       urlTranscripcion,
       urlBorrador: urlborrador,
+      idIndustria: Industria,
     };
 
     // 🔎 buscar si ya existe con estado <6
