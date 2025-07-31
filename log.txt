@@ -2926,3 +2926,508 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_llano_azul_ju
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_llano_azul_julio_19_de_2025_carlos_andres_castano_giraldo/consejo_llano_azul_julio_19_de_2025_carlos_andres_castano_giraldo_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Ny5WtDM8omPsrBB
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Ny5WtDM8omPsrBB
+Verificando si existe transcripción: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt en carpeta whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz
+[2025-07-31T18:27:15.104Z] Verificando existencia del archivo whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt en Nextcloud carpeta whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-31T18:27:16.380Z] Archivo "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz".
+Transcripción existente encontrada: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz. Obteniendo contenido.
+Verificando contenido existente: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt
+[2025-07-31T18:27:17.522Z] Verificando existencia del archivo whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt en Nextcloud carpeta whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-31T18:27:18.280Z] Archivo "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt" NO encontrado en Nextcloud en la carpeta "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz".
+Generando contenido para: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.mp4
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt
+[2025-07-31T18:27:18.282Z] Verificando existencia del archivo whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt en Nextcloud carpeta whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-07-31T18:27:19.017Z] Archivo "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz".
+Transcripción encontrada: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt. Obteniendo contenido.
+[2025-07-31T18:27:19.961Z] Contenido del archivo "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.mp4
+Guardando contenido en Nextcloud: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt
+Contenido guardado: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.mp4 en carpeta: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz
+Verificando Borrador .docx existente: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+[2025-07-31T18:28:27.580Z] Verificando existencia del archivo whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx en Nextcloud carpeta whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-07-31T18:28:28.337Z] Archivo "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx" NO encontrado en Nextcloud en la carpeta "whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+Preparando guardado .docx en Nextcloud: whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de la Reunión</h1>
+  <p>Fecha: No Especificada</p>
+  <p>Hora: Inicio: No Especificada - Cierre: [HORA DE CIERRE]</p>
+  <p>Lugar: [UBICACIÓN NO ESPECIFICADA]</p>
+  <p>Moderador: [NO ESPECIFICADO]</p>
+  <p>Asistentes:</p>
+  <ul>
+    <li>Alejandra - directora de obra</li>
+    <li>Laura - [CARGO NO ESPECIFICADO]</li>
+    <li>Edgar - [CARGO NO ESPECIFICADO]</li>
+    <li>Eliana - [CARGO NO ESPECIFICADO]</li>
+    <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+    <li>José Bopas - [CARGO NO ESPECIFICADO]</li>
+    <li>Mildred - [CARGO NO ESPECIFICADO]</li>
+    <li>Dani - [CARGO NO ESPECIFICADO]</li>
+    <li>Joan - [CARGO NO ESPECIFICADO]</li>
+    <li>Carlos - [CARGO NO ESPECIFICADO]</li>
+    <li>David - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Autorización de recursos adicionales para Torre 3 y postventas</li>
+    <li>Problemas de energización en cuartos útiles de Torre 2: Diagnóstico, responsabilidades y soluciones</li>
+    <li>Seguimiento a la red contra incendios: estado actual, reparaciones, repuestos y responsabilidades</li>
+    <li>Pendientes de Torre 2: Revisión de puntos, programación y responsables</li>
+    <li>Impermeabilización de la cancha: inicio de trabajos y comunicación a residentes</li>
+    <li>Estado del tablero de breques y pago de afectaciones</li>
+    <li>Revisión del parque de niños: estado, reparaciones y diseño</li>
+    <li>Filtraciones en parqueaderos y losa: puntos críticos y responsabilidades</li>
+    <li>Cierre de accesos a escaleras de emergencia y seguridad</li>
+    <li>Solicitud de planos eléctricos y revisión por terceros</li>
+    <li>Revisión de la zona de mascotas</li>
+    <li>Temas de jardinería y plantas</li>
+    <li>Revisión de tendedero en balcón de Torre 1</li>
+    <li>Cerramiento y seguridad</li>
+    <li>Revisión de filtraciones en escaleras de emergencia</li>
+  </ol>
+</header>
+<h2>1. Autorización de recursos adicionales para Torre 3 y postventas</h2>
+
+<p>Durante la reunión, se discutió la necesidad de autorizar recursos adicionales para la Torre 3 y el área de postventas. Se reconoció que los recursos existentes no son suficientes para atender de manera oportuna las necesidades actuales, dado el volumen de trabajo en la compañía.</p>
+
+<p>Se informó que se está en proceso de contratación de un nuevo recurso para dedicarse a los temas pendientes. Esta persona acompañará a la directora de obra y al señor Manejo. La finalidad es contar con un profesional, preferiblemente un arquitecto, que se dedique a cerrar los temas pendientes, actuando como enlace directo con Laura y otros involucrados, sin depender de la disponibilidad de Alejandra, quien está principalmente enfocada en la Torre 3.</p>
+
+<p>Se espera que este nuevo profesional se vincule la próxima semana, junto con unos oficiales, para abordar la mayoría de los temas pendientes y coordinar con contratistas cuando sea necesario. El objetivo es liderar y atender las necesidades, facilitando la comunicación y resolución de problemas de manera más eficiente.</p>
+<h2>2. Problemas de energización en cuartos útiles de Torre 2: Diagnóstico, responsabilidades y soluciones</h2>
+
+<p>Durante la reunión, se abordó la problemática de la falta de energización en los cuartos útiles de la Torre 2. Se mencionó que este problema no es reciente, existiendo un historial de correos electrónicos que evidencian la falta de energía en estos espacios desde el piso PP. Se indicó que, ante cada requerimiento, se generó un correo electrónico solicitando la energización, pero se desconoce si se realizaron los empalmes necesarios.</p>
+
+<p>Se expresó la preocupación de que, al realizar el empalme de la Torre 2 con la Torre 1, los cuartos útiles de la Torre 2 perdieron la energía en todo el piso. Se solicitó una revisión técnica y un reporte para determinar si el trabajo fue terminado correctamente, sugiriendo que podría tratarse de una mala práctica de construcción.</p>
+
+<p>Se mencionó que algunos propietarios realizaron modificaciones en sus cuartos útiles, como la instalación de tomas para conectar herramientas. Sin embargo, se argumentó que estas modificaciones no deberían ser la causa de un cortocircuito generalizado, ya que cada cuarto útil está conectado en paralelo a la red eléctrica. Se insistió en que la causa principal podría ser una mala práctica en la construcción y la falta de finalización adecuada de las conexiones de la red eléctrica.</p>
+
+<p>Se informó que Conaltura está llevando a cabo un proceso con la empresa Conaltura, que incluye la presentación de una PQR (Petición, Queja o Reclamo), la atención inicial, la intervención, la recurrencia del problema y la posterior comunicación con el equipo de Alejandra. Se indicó que el informe proporcionado a los residentes reflejó lo que los técnicos electricistas informaron, quienes manifestaron no poder identificar la causa del cortocircuito debido a la falta de conocimiento sobre cómo se ejecutó el circuito. Se sugirió solicitar al personal que intervino inicialmente los circuitos para identificar el origen del problema.</p>
+
+<p>Se señaló que los cuartos útiles de la Torre 1 son los únicos que tienen energía, mientras que los de la Torre 2 no. Se mencionó que se estaba realizando un empalme entre los números 205 (Torre 1) y 206 (Torre 2) de los cuartos útiles, tomando la energía de los cuartos útiles de la Torre 1. Se expresó la preocupación de que se estén generando cortocircuitos que antes no ocurrían.</p>
+
+<p>Se argumentó que la Torre 2 fue construida durante la pandemia, lo que obligó a Conaltura a reducir costos, resultando en una diferencia de calidad notable en comparación con la Torre 1. Se puso como ejemplo la instalación de un ascensor de una marca diferente debido a problemas con el proveedor original.</p>
+
+<p>Se insistió en la necesidad de revisar la instalación eléctrica, ya que, aunque se entregaron los cuartos útiles, podría haber una mala ejecución. Se sugirió que Conaltura debe tener un residente eléctrico o un ingeniero que entienda de electricidad para revisar la situación y dar un parte de tranquilidad a los residentes. Se propuso establecer una fecha para un segundo "checkpoint" para revisar los temas, sentarse con Laura, establecer compromisos y enviar una notificación con la fecha en que se consultará el estatus del avance.</p>
+
+<p>Se acordó que en el comunicado que se organizará con Laura, se informará sobre un chequeo el lunes, del cual saldrá un diagnóstico. Se reconoció que Conaltura tiene una tendencia a no dar seguimiento a los temas, pero se expresó la esperanza de que esta vez sea diferente, recordando que ya existen actas firmadas y fotografías de los problemas.</p>
+
+<h2>3. Seguimiento a la red contra incendios: estado actual, reparaciones, repuestos y responsabilidades</h2>
+
+<p>Durante la reunión, se realizó un seguimiento exhaustivo a la red contra incendios (RCI), abordando su estado actual, las reparaciones necesarias, la disponibilidad de repuestos y las responsabilidades asignadas. Edgar presentó un oficio de 25 páginas, resultado de un trabajo de compilación realizado durante abril y mayo, que incluye la trazabilidad de las solicitudes y respuestas emitidas por Conaltura. Este documento detalla las dificultades encontradas para obtener respuestas de fondo a las solicitudes, incluyendo problemas con la plataforma de Conaltura que dificultan la carga de información.</p>
+
+<p>Se expresó la preocupación por la falta de respuestas concretas a solicitudes relacionadas con la RCI, así como con la evaluación de la fachada, filtraciones y el estado del tablero de breques. Se mencionó que el panel de la RCI emite alertas cada 10 minutos, y que existen fallas tanto en el sistema de extinción como en el de detección. Se identificaron problemas con los equipos de impulsión y se mencionó un tema pendiente con unos embobinados, cuya trazabilidad ya se realizó para determinar el monto adeudado. José Bopas ya solicitó el embobinado, pero se requiere claridad sobre cuándo Conaltura realizará el pago correspondiente.</p>
+
+<p>Se solicitó información sobre la programación para el recorrido de cierre de los temas relacionados con la RCI, debido a las constantes preguntas de los propietarios. Se destacó la importancia de abordar el deterioro del concreto en la losa, donde el acero está expuesto a la humedad, lo que podría generar problemas estructurales a largo plazo. Se recordó que se realizó una interventoría y se está a la espera de un dictamen al respecto.</p>
+
+<p>Mauricio reconoció la importancia de solucionar los problemas de la RCI y otros temas pendientes, mencionando que se está buscando un recurso exclusivo para atender estos temas de manera más eficiente. Se espera que este profesional se dedique a cerrar los temas pendientes con el apoyo de los contratistas necesarios, aliviando la carga de Alejandra, quien está enfocada en la Torre 3. Se mencionó que se cuenta con un listado de PQR y reuniones previas con María Antonieta y Laura, que se evalúa semanalmente para priorizar la atención de los temas.</p>
+
+<p>Se reiteró el compromiso de cerrar los temas pendientes, incluyendo la impermeabilización, los parqueaderos, la cancha, la red contra incendios y la iluminación de los depósitos. Se reconoció que la situación de los cuartos útiles es complicada, pero se considera que puede resolverse con una revisión eléctrica exhaustiva. Se mencionó que se realizará un chequeo el lunes para obtener un diagnóstico y establecer un plan de acción.</p>
+
+<p>Se discutió el estado de la bomba de la RCI, mencionando que se han cambiado varios repuestos, incluyendo el inyector y el tallo. Sin embargo, el sistema aún no se ha puesto en funcionamiento para evaluar su correcto funcionamiento. Se mencionó que se está esperando un repuesto del exterior para priorizar la reparación de la bomba. Se indicó que ya se pidió el repuesto y que se espera su llegada esta semana para montar nuevamente la bomba, ensamblar el equipo, revisar el sistema y realizar pruebas.</p>
+
+<p>Se informó que la reparación de la red contra incendios asciende aproximadamente a 50 millones de pesos, costo que está asumiendo la administración. Se aseguró que no se ingresa a la zona de la bomba sin anunciar y sin la autorización de la administración, debido a la pérdida de un repuesto valorado en 600 mil pesos.</p>
+
+<p>Se mencionó que el tercer tanque presenta una pequeña fisura que podría repararse con una soldadura. Se discutió la necesidad de vaciar los tanques para realizar la reparación, lo que implicaría una pérdida considerable de agua. Joan sugirió explorar la posibilidad de reparar la fisura por fuera para evitar el desperdicio de agua. Se recordó que la reparación del PN y el tallo también generó pérdida de agua, lo que obligó a romper el paso peatonal. Se mencionó que la factura de agua de 2024 ascendió a 50 millones de pesos adicionales, debido a un escape en el tanque inferior, que no se solucionó con una reparación inicial de 30 millones de pesos. Este tema se está tratando con la gerencia para determinar las responsabilidades económicas y técnicas.</p>
+
+<p>Se preguntó sobre el estado del ARC y el tubo que no está conectado en la galería detrás de la torre uno. Se indicó que se revisará si se trata de un pase o si requiere conexión. Se mencionó que se solicitarán los documentos a Conaltura para evaluar la situación.</p>
+
+<h2>4. Pendientes de Torre 2: Revisión de puntos, programación y responsables</h2>
+
+<p>Durante la reunión, se abordaron varios puntos pendientes relacionados con la Torre 2, incluyendo la revisión de los mismos, la programación de las acciones necesarias y la asignación de responsables. Se hizo referencia a una lista de 10 puntos pendientes tomados en cuenta durante un recorrido previo por la Torre 2.</p>
+
+<p>Se mencionó que la programación de fechas para abordar estos pendientes se enviaría el lunes. Entre los puntos específicos de la Torre 2 que se encontraban pendientes, se mencionaron:</p>
+
+<ul>
+    <li>Las dos puertas portafuego, indicando que una de ellas ya se había cortado.</li>
+    <li>El ascensor de parqueo que cambia de piso.</li>
+    <li>La reubicación del tablero, cuya programación se esperaba realizar en el transcurso del mes.</li>
+    <li>Un muro fisurado en el paso donde se hizo el paso provisional.</li>
+    <li>La teoría de la red contra incendios.</li>
+    <li>La revisión de los muros de tierra armada.</li>
+    <li>La energización de los cuartos útiles, tema que ya había sido conversado.</li>
+    <li>El tema de la cancha.</li>
+    <li>Los 10 puntos faltantes de la Torre 2, para los cuales se regresaría con la información y confirmación.</li>
+</ul>
+
+<p>Se indicó que Laura se comprometió a enviar un correo el lunes con las fechas de cumplimiento de estos temas. Se sugirió realizar una pasada por la cancha para revisar los pendientes en ese lugar.</p>
+
+<h2>5. Impermeabilización de la cancha: inicio de trabajos y comunicación a residentes</h2>
+
+<p>Durante la reunión, se discutió el inicio de los trabajos de impermeabilización de la cancha y la necesidad de comunicar esta información a los residentes. Se mencionó que los trabajos comenzarían pronto y se destacó la importancia de informar a los residentes sobre las posibles molestias que podrían surgir debido al polvo generado por la "destroyadora" (término utilizado para referirse a la maquinaria utilizada en la obra).</p>
+
+<p>Se acordó que se enviaría un comunicado a los residentes informando sobre el inicio de los trabajos, la fecha de inicio (establecida para el día siguiente) y las medidas que se tomarían para mitigar el impacto del polvo. Se solicitó que el comunicado incluyera los nombres y datos de las personas que trabajarían en la obra, así como información para la vigilancia sobre la circulación del personal.</p>
+
+<p>Se indicó que la impermeabilización y la demarcación de la cancha se realizarían de manera simultánea, con el objetivo de entregar la cancha lista para su uso. Sin embargo, se reconoció que existen otros aspectos a considerar para la entrega final de la cancha, como los accesos, las caídas y la seguridad de los niños. Estos aspectos se tratarán en detalle más adelante en la reunión.</p>
+
+<p>Laura se comprometió a formalizar el comunicado y enviarlo para su distribución. Se mencionó la importancia de sincronizar la información con Mildred y otros miembros del equipo para asegurar que todos estén al tanto de los detalles de la obra y puedan responder a las preguntas de los residentes.</p>
+
+<h2>6. Estado del tablero de breques y pago de afectaciones</h2>
+
+<p>Durante la reunión, se abordó el estado del tablero de breques y el pago de afectaciones. Se mencionó que este tema está relacionado con la falta de respuestas de fondo a solicitudes realizadas, como se indicó en el punto anterior sobre el seguimiento a la red contra incendios.</p>
+
+<p>Se expresó la preocupación por la falta de atención a este tema, así como a la evaluación de la fachada y las filtraciones. Se destacó la importancia de abordar el tablero de breques, ya que su mal estado puede estar relacionado con la filtración de agua y los daños ocasionados, como se mencionó en la discusión sobre la red contra incendios.</p>
+
+<p>Se hizo referencia a un informe sobre las patas con lectura, indicando que se espera un pago de aproximadamente 6 millones de pesos. Este pago está relacionado con un proceso que involucra a Marantonieta, Mauricio y David, y se refiere a la pérdida de agua debido a un escape en el tanque inferior, como se mencionó anteriormente.</p>
+
+<p>Se enfatizó la necesidad de prestar atención a los breques, ya que su daño se debe a la filtración de agua. Se solicitó que se considere este tema al montar una matriz de planeación de proyectos.</p>
+
+<h2>7. Revisión del parque de niños: estado, reparaciones y diseño</h2>
+
+<p>Durante la reunión, se mencionó la necesidad de revisar los pendientes del parque de niños, haciendo referencia a un listado en Excel que contiene los temas sin solucionar. Se señaló que estos temas no se han solucionado a pesar de las múltiples reuniones y seguimientos realizados.</p>
+
+<p>Se recordó que dentro de los metales de estago (sic), el ingeniero había mencionado las cañuelas faltantes en Fortune, indicando que una yacet (sic) se terminó de dañar, no por falta de mantenimiento, sino por un daño inicial. Se aclaró que la atención inicial se centró en el piso del parque.</p>
+
+<p>Se expresó la preocupación de que la superficie del parque no se cristaliza y se desharina sola, lo que sugiere un mal diseño o mala calidad. Se comparó con el parque de la Floresta, señalando que este último ya tiene su diseño definido.</p>
+
+<p>Se hizo referencia a que en el acta de entrega aparecen los puntos relacionados con el parque de niños.</p>
+
+<p>Posteriormente, durante la discusión sobre la cancha, se mencionó que si la cancha se entregaba este año, se debía considerar la teoría de Eliana sobre el alrededor de la cancha, en la zona común, el piso en tableta y los volados peligrosos. Se diferenció entre solucionar la problemática de la filtración de agua y preparar la entrega de una zona común de una cancha. Se preguntó qué se había hecho alrededor para poder entregar la cancha, mencionando un ascensor, materiales, escombros y un piso en mal estado. Se sugirió poner vallas para que la gente no se pasara a la parte no construida, pero también se consideró que los que subirían serían niños. Se mencionó que había cables de luz saliendo de la pared y que así no se podía entregar la cancha. Se concluyó que si se iba a entregar, debía ser para poder utilizarla.</p>
+
+<h2>8. Filtraciones en parqueaderos y losa: puntos críticos y responsabilidades</h2>
+
+<p>Durante la reunión, se abordó el tema de las filtraciones en los parqueaderos y la losa, identificando los puntos críticos y las responsabilidades correspondientes. Se mencionó que existen varias filtraciones, aproximadamente 16 puntos, y que el parqueadero 93 presenta una situación particularmente grave. Además, se señaló que en el edificio de parqueaderos de la Torre 2 se identificaron 17 puntos de filtración.</p>
+
+<p>Se indicó que en algunos cuartos útiles se observó salida de agua, y que en una PQR (Petición, Queja o Reclamo) se respondió que esto era responsabilidad de la administración. Se expresó la opinión de que esta respuesta forma parte de una estrategia del departamento jurídico para desgastar a la administración, dado el número de solicitudes realizadas desde el año anterior (aproximadamente 50 solicitudes).</p>
+
+<p>Posteriormente, durante la discusión sobre la cancha y la posibilidad de su entrega, se hizo referencia a la necesidad de solucionar la problemática de la filtración de agua como un aspecto fundamental para considerar la entrega de la zona común.</p>
+
+<p>Finalmente, al revisar los temas pendientes, se incluyó explícitamente el tema de la "Filtración de 4º" (filtración de cuartos) como un punto a tratar, junto con la revisión de la zona de mascotas y el caminerío.</p>
+
+<h2>9. Cierre de accesos a escaleras de emergencia y seguridad</h2>
+
+<p>Durante la reunión, se abordó el tema del cierre de accesos a las escaleras de emergencia y la seguridad. Se mencionó que Alejandra había indicado que ya se había cerrado el acceso en un punto, pero se identificaron otros accesos que requerían atención.</p>
+
+<p>Se señaló que el día en que se realizó un trabajo pesado, una división se cayó, haciendo referencia a un incidente relacionado con Fausto y Tro. Se mencionó la existencia de una puerta con candado, que debería ser la única existente, ubicada en el PP (piso principal) fuera de la Torre 2, que debería ser la entrada oficial. Se indicó que la que se encuentra en el PP al fondo es la bodega de Fausto y Don Alberto, y que ellos no deberían tener acceso por ahí. Se identificaron otras entradas en el piso 94 y se mencionó otra en el 95.</p>
+
+<p>Se solicitó que se cerraran todos los accesos, ya que ningún vigilante ni oficial debería estar dentro de la unidad. Se mencionó que se habían tenido incidentes de seguridad y que, por seguridad, lo ideal era cerrar esos accesos. Se mencionó que incluso los bombillos que se ponían en el shut eran robados y que se orinaba en el lugar.</p>
+
+<p>Se coordinó que todos los accesos quedaran cerrados en el transcurso de la semana.</p>
+
+<h2>10. Solicitud de planos eléctricos y revisión por terceros</h2>
+
+<p>Durante la reunión, se abordó la solicitud de los planos eléctricos y la posibilidad de una revisión por parte de terceros. Este tema surgió en el contexto de la discusión sobre los problemas de energización en los cuartos útiles de la Torre 2, donde se mencionó la importancia de contar con los planos para identificar posibles malas prácticas de construcción y determinar si el trabajo de empalme entre la Torre 2 y la Torre 1 se realizó correctamente.</p>
+
+<p>Se mencionó que la revisión por un tercero podría ayudar a determinar si la instalación eléctrica se ejecutó correctamente, ya que, aunque los cuartos útiles se entregaron, podría haber una mala ejecución. Se sugirió que este tercero sea un ingeniero eléctrico o un residente eléctrico de Conaltura, capaz de dar un parte de tranquilidad a los residentes.</p>
+
+<p>Posteriormente, al final de la reunión, se retomó el tema de la solicitud de los planos eléctricos, enfatizando la necesidad de atenderlo y de realizar una revisión para verificar que todo esté correcto, según la norma. Se expresó la preocupación de que la empresa que realice la revisión sea realmente imparcial y no una mera formalidad ("yo con yo").</p>
+
+<h2>11. Revisión de la zona de mascotas</h2>
+
+<p>Durante la reunión, al revisar los temas pendientes, se incluyó el tema de la "zona de animales" como un punto a tratar, junto con la "Filtración de 4º" (filtración de cuartos) y el caminerío.</p>
+
+<p>Posteriormente, se hizo referencia al techo de la zona de mascotas, indicando que también está dañado. Se mencionó que ya se había limpiado esa zona.</p>
+
+<p>Finalmente, se mencionó que siempre que se visita el paso peatonal, se observa a una señora que deja al perro orinando en el lugar, y que los pinitos se han puesto. Se indicó que tiene que tener la rejilla, y que hay que ponerla.</p>
+
+<h2>12. Temas de jardinería y plantas</h2>
+
+<p>Durante la reunión, en el contexto de la discusión sobre la cancha y la seguridad, se mencionó la posibilidad de utilizar jardines como una barrera natural. Se sugirió que, en lugar de poner vallas para evitar el acceso a áreas no construidas alrededor de la cancha, se podrían utilizar jardines para delimitar el espacio de manera más estética y segura.</p>
+
+<p>Posteriormente, al discutir sobre el cerramiento, se mencionó que el electricista había indicado que la lámpara nocturna iba a dar a las plantas que se colocarían en el lugar. Se especificó que no se quería la misma planta morada de monte que se había puesto anteriormente.</p>
+
+<p>Se explicó que la razón para no querer la planta morada de monte es que, aunque se contrató a un jardinero para quitarla y colocar matagüena, la planta morada volvió a crecer. Esto se utilizó como evidencia de que se trataba de monte.</p>
+
+<p>Finalmente, se hizo referencia a la necesidad de quitar una planta que está cerca del cuarto de máquinas, raspando el área y revisando si en otro taco pasa lo mismo. Se sugirió quitar también otra planta que se considera fea y que está ubicada en el mismo lugar.</p>
+
+<p>Adicionalmente, se mencionó que siempre que se visita el paso peatonal, se observaba a una señora que dejaba al perro orinando en el lugar, a pesar de que se habían puesto pinitos. Se insistió en la necesidad de colocar una rejilla en ese lugar.</p>
+
+<p>En el contexto de la discusión sobre la seguridad en la zona de la cancha, se mencionó que sería bueno tener en consideración sustratos hidráulicos, pero no mallas de tela.</p>
+
+<h2>13. Revisión de tendedero en balcón de Torre 1</h2>
+
+<p>Durante la reunión, se mencionó brevemente la revisión del tendedero en balcón de la Torre 1. Se indicó que se revisaría qué apartamento tenía instalado un tendedero en el balcón.</p>
+
+<p>Se expresó el interés en verificar si el propietario del apartamento había sacado una conexión eléctrica desde el área común, debido a los problemas de cortocircuitos que se estaban presentando. Se manifestó la preocupación de que estas conexiones pudieran afectar y generar más problemas eléctricos.</p>
+
+<h2>14. Cerramiento y seguridad</h2>
+
+<p>Durante la reunión, se abordó el tema del cerramiento y la seguridad, haciendo referencia a la discusión sobre la cancha y la posibilidad de utilizar jardines como una barrera natural en lugar de vallas. Se mencionó que, en el contexto de los temas de jardinería y plantas, se había sugerido que, en lugar de poner vallas para evitar el acceso a áreas no construidas alrededor de la cancha, se podrían utilizar jardines para delimitar el espacio de manera más estética y segura.</p>
+
+<p>Se explicó que el cerramiento actual se va a correr hacia donde está todo lo que se pudo, y que incluso se está pendiente de montar una PQR con respecto a eso, ya que existen fotografías que evidencian que el cerramiento debe correrse por seguridad.</p>
+
+<p>Se mencionó que el electricista había indicado que la lámpara nocturna iba a dar a las plantas que se colocarían en el lugar. Este punto se relaciona con la discusión sobre los temas de jardinería y plantas, donde se especificó que no se quería la misma planta morada de monte que se había puesto anteriormente.</p>
+
+<h2>15. Revisión de filtraciones en escaleras de emergencia</h2>
+
+<p>Durante la reunión, se abordó el tema de la revisión de filtraciones en las escaleras de emergencia. Se mencionó que Laura había estado revisando las escalas de emergencia y que se había percatado de que la tubería contra incendios de todas las escalas carecía de tapas. Se indicó que alguien había desocupado las coilas (sic).</p>
+
+<p>Se hizo referencia a la filtración de las escaleras que dañó el ascensor de la entrada de la portería, indicando que era la misma filtración y que tenía tiempo, aproximadamente cinco meses. Se especificó que esta filtración provenía desde arriba, desde el piso 95.</p>
+
+<p>Se mencionó que no se había ido al parquecito para mostrarles, refiriéndose a la ubicación de la filtración. Se aclaró que al coche (sic) se le hizo pintura y algunos ajustes de tornillería, pero no al piso.</p>
+
+<p>Se concluyó que la filtración de las escaleras de emergencia era un tema a tratar.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p>Hora de finalización: No especificada</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Se contratará un recurso exclusivo para atender los temas pendientes de la Torre 2, incluyendo la red contra incendios, impermeabilización, y otros – Responsable: No especificado</li>
+        <li>Se colocará una fecha para un checkpoint para revisar los temas pendientes y se enviará una notificación con un compromiso – Responsable: Laura (Conaltura)</li>
+        <li>Se enviará un comunicado mañana informando sobre el inicio de los trabajos de impermeabilización en la cancha – Responsable: Laura (Conaltura)</li>
+        <li>Se revisará la malla de la cancha y se determinará si cumple con la normatividad – Responsable: No especificado</li>
+        <li>Se cerrarán los accesos a las escaleras de emergencia esta semana – Responsable: No especificado</li>
+        <li>Se enviará el lunes un correo con las fechas de cumplimiento de las tareas pendientes – Responsable: Laura (Conaltura)</li>
+        <li>Se revisará con arquitectura la seguridad del área de la cancha, incluyendo la altura de las paredes y la ubicación de elementos peligrosos – Responsable: No especificado</li>
+        <li>Se revisarán los temas de filtraciones y se buscará una solución con la empresa que realizó la impermeabilización – Responsable: No especificado</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de la Reunión</h1>
+  <p>Fecha: No Especificada</p>
+  <p>Hora: Inicio: No Especificada - Cierre: [HORA DE CIERRE]</p>
+  <p>Lugar: [UBICACIÓN NO ESPECIFICADA]</p>
+  <p>Moderador: [NO ESPECIFICADO]</p>
+  <p>Asistentes:</p>
+  <ul>
+    <li>Alejandra - directora de obra</li>
+    <li>Laura - [CARGO NO ESPECIFICADO]</li>
+    <li>Edgar - [CARGO NO ESPECIFICADO]</li>
+    <li>Eliana - [CARGO NO ESPECIFICADO]</li>
+    <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+    <li>José Bopas - [CARGO NO ESPECIFICADO]</li>
+    <li>Mildred - [CARGO NO ESPECIFICADO]</li>
+    <li>Dani - [CARGO NO ESPECIFICADO]</li>
+    <li>Joan - [CARGO NO ESPECIFICADO]</li>
+    <li>Carlos - [CARGO NO ESPECIFICADO]</li>
+    <li>David - [CARGO NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Autorización de recursos adicionales para Torre 3 y postventas</li>
+    <li>Problemas de energización en cuartos útiles de Torre 2: Diagnóstico, responsabilidades y soluciones</li>
+    <li>Seguimiento a la red contra incendios: estado actual, reparaciones, repuestos y responsabilidades</li>
+    <li>Pendientes de Torre 2: Revisión de puntos, programación y responsables</li>
+    <li>Impermeabilización de la cancha: inicio de trabajos y comunicación a residentes</li>
+    <li>Estado del tablero de breques y pago de afectaciones</li>
+    <li>Revisión del parque de niños: estado, reparaciones y diseño</li>
+    <li>Filtraciones en parqueaderos y losa: puntos críticos y responsabilidades</li>
+    <li>Cierre de accesos a escaleras de emergencia y seguridad</li>
+    <li>Solicitud de planos eléctricos y revisión por terceros</li>
+    <li>Revisión de la zona de mascotas</li>
+    <li>Temas de jardinería y plantas</li>
+    <li>Revisión de tendedero en balcón de Torre 1</li>
+    <li>Cerramiento y seguridad</li>
+    <li>Revisión de filtraciones en escaleras de emergencia</li>
+  </ol>
+</header>
+<h2>1. Autorización de recursos adicionales para Torre 3 y postventas</h2>
+
+<p>Durante la reunión, se discutió la necesidad de autorizar recursos adicionales para la Torre 3 y el área de postventas. Se reconoció que los recursos existentes no son suficientes para atender de manera oportuna las necesidades actuales, dado el volumen de trabajo en la compañía.</p>
+
+<p>Se informó que se está en proceso de contratación de un nuevo recurso para dedicarse a los temas pendientes. Esta persona acompañará a la directora de obra y al señor Manejo. La finalidad es contar con un profesional, preferiblemente un arquitecto, que se dedique a cerrar los temas pendientes, actuando como enlace directo con Laura y otros involucrados, sin depender de la disponibilidad de Alejandra, quien está principalmente enfocada en la Torre 3.</p>
+
+<p>Se espera que este nuevo profesional se vincule la próxima semana, junto con unos oficiales, para abordar la mayoría de los temas pendientes y coordinar con contratistas cuando sea necesario. El objetivo es liderar y atender las necesidades, facilitando la comunicación y resolución de problemas de manera más eficiente.</p>
+<h2>2. Problemas de energización en cuartos útiles de Torre 2: Diagnóstico, responsabilidades y soluciones</h2>
+
+<p>Durante la reunión, se abordó la problemática de la falta de energización en los cuartos útiles de la Torre 2. Se mencionó que este problema no es reciente, existiendo un historial de correos electrónicos que evidencian la falta de energía en estos espacios desde el piso PP. Se indicó que, ante cada requerimiento, se generó un correo electrónico solicitando la energización, pero se desconoce si se realizaron los empalmes necesarios.</p>
+
+<p>Se expresó la preocupación de que, al realizar el empalme de la Torre 2 con la Torre 1, los cuartos útiles de la Torre 2 perdieron la energía en todo el piso. Se solicitó una revisión técnica y un reporte para determinar si el trabajo fue terminado correctamente, sugiriendo que podría tratarse de una mala práctica de construcción.</p>
+
+<p>Se mencionó que algunos propietarios realizaron modificaciones en sus cuartos útiles, como la instalación de tomas para conectar herramientas. Sin embargo, se argumentó que estas modificaciones no deberían ser la causa de un cortocircuito generalizado, ya que cada cuarto útil está conectado en paralelo a la red eléctrica. Se insistió en que la causa principal podría ser una mala práctica en la construcción y la falta de finalización adecuada de las conexiones de la red eléctrica.</p>
+
+<p>Se informó que Conaltura está llevando a cabo un proceso con la empresa Conaltura, que incluye la presentación de una PQR (Petición, Queja o Reclamo), la atención inicial, la intervención, la recurrencia del problema y la posterior comunicación con el equipo de Alejandra. Se indicó que el informe proporcionado a los residentes reflejó lo que los técnicos electricistas informaron, quienes manifestaron no poder identificar la causa del cortocircuito debido a la falta de conocimiento sobre cómo se ejecutó el circuito. Se sugirió solicitar al personal que intervino inicialmente los circuitos para identificar el origen del problema.</p>
+
+<p>Se señaló que los cuartos útiles de la Torre 1 son los únicos que tienen energía, mientras que los de la Torre 2 no. Se mencionó que se estaba realizando un empalme entre los números 205 (Torre 1) y 206 (Torre 2) de los cuartos útiles, tomando la energía de los cuartos útiles de la Torre 1. Se expresó la preocupación de que se estén generando cortocircuitos que antes no ocurrían.</p>
+
+<p>Se argumentó que la Torre 2 fue construida durante la pandemia, lo que obligó a Conaltura a reducir costos, resultando en una diferencia de calidad notable en comparación con la Torre 1. Se puso como ejemplo la instalación de un ascensor de una marca diferente debido a problemas con el proveedor original.</p>
+
+<p>Se insistió en la necesidad de revisar la instalación eléctrica, ya que, aunque se entregaron los cuartos útiles, podría haber una mala ejecución. Se sugirió que Conaltura debe tener un residente eléctrico o un ingeniero que entienda de electricidad para revisar la situación y dar un parte de tranquilidad a los residentes. Se propuso establecer una fecha para un segundo "checkpoint" para revisar los temas, sentarse con Laura, establecer compromisos y enviar una notificación con la fecha en que se consultará el estatus del avance.</p>
+
+<p>Se acordó que en el comunicado que se organizará con Laura, se informará sobre un chequeo el lunes, del cual saldrá un diagnóstico. Se reconoció que Conaltura tiene una tendencia a no dar seguimiento a los temas, pero se expresó la esperanza de que esta vez sea diferente, recordando que ya existen actas firmadas y fotografías de los problemas.</p>
+
+<h2>3. Seguimiento a la red contra incendios: estado actual, reparaciones, repuestos y responsabilidades</h2>
+
+<p>Durante la reunión, se realizó un seguimiento exhaustivo a la red contra incendios (RCI), abordando su estado actual, las reparaciones necesarias, la disponibilidad de repuestos y las responsabilidades asignadas. Edgar presentó un oficio de 25 páginas, resultado de un trabajo de compilación realizado durante abril y mayo, que incluye la trazabilidad de las solicitudes y respuestas emitidas por Conaltura. Este documento detalla las dificultades encontradas para obtener respuestas de fondo a las solicitudes, incluyendo problemas con la plataforma de Conaltura que dificultan la carga de información.</p>
+
+<p>Se expresó la preocupación por la falta de respuestas concretas a solicitudes relacionadas con la RCI, así como con la evaluación de la fachada, filtraciones y el estado del tablero de breques. Se mencionó que el panel de la RCI emite alertas cada 10 minutos, y que existen fallas tanto en el sistema de extinción como en el de detección. Se identificaron problemas con los equipos de impulsión y se mencionó un tema pendiente con unos embobinados, cuya trazabilidad ya se realizó para determinar el monto adeudado. José Bopas ya solicitó el embobinado, pero se requiere claridad sobre cuándo Conaltura realizará el pago correspondiente.</p>
+
+<p>Se solicitó información sobre la programación para el recorrido de cierre de los temas relacionados con la RCI, debido a las constantes preguntas de los propietarios. Se destacó la importancia de abordar el deterioro del concreto en la losa, donde el acero está expuesto a la humedad, lo que podría generar problemas estructurales a largo plazo. Se recordó que se realizó una interventoría y se está a la espera de un dictamen al respecto.</p>
+
+<p>Mauricio reconoció la importancia de solucionar los problemas de la RCI y otros temas pendientes, mencionando que se está buscando un recurso exclusivo para atender estos temas de manera más eficiente. Se espera que este profesional se dedique a cerrar los temas pendientes con el apoyo de los contratistas necesarios, aliviando la carga de Alejandra, quien está enfocada en la Torre 3. Se mencionó que se cuenta con un listado de PQR y reuniones previas con María Antonieta y Laura, que se evalúa semanalmente para priorizar la atención de los temas.</p>
+
+<p>Se reiteró el compromiso de cerrar los temas pendientes, incluyendo la impermeabilización, los parqueaderos, la cancha, la red contra incendios y la iluminación de los depósitos. Se reconoció que la situación de los cuartos útiles es complicada, pero se considera que puede resolverse con una revisión eléctrica exhaustiva. Se mencionó que se realizará un chequeo el lunes para obtener un diagnóstico y establecer un plan de acción.</p>
+
+<p>Se discutió el estado de la bomba de la RCI, mencionando que se han cambiado varios repuestos, incluyendo el inyector y el tallo. Sin embargo, el sistema aún no se ha puesto en funcionamiento para evaluar su correcto funcionamiento. Se mencionó que se está esperando un repuesto del exterior para priorizar la reparación de la bomba. Se indicó que ya se pidió el repuesto y que se espera su llegada esta semana para montar nuevamente la bomba, ensamblar el equipo, revisar el sistema y realizar pruebas.</p>
+
+<p>Se informó que la reparación de la red contra incendios asciende aproximadamente a 50 millones de pesos, costo que está asumiendo la administración. Se aseguró que no se ingresa a la zona de la bomba sin anunciar y sin la autorización de la administración, debido a la pérdida de un repuesto valorado en 600 mil pesos.</p>
+
+<p>Se mencionó que el tercer tanque presenta una pequeña fisura que podría repararse con una soldadura. Se discutió la necesidad de vaciar los tanques para realizar la reparación, lo que implicaría una pérdida considerable de agua. Joan sugirió explorar la posibilidad de reparar la fisura por fuera para evitar el desperdicio de agua. Se recordó que la reparación del PN y el tallo también generó pérdida de agua, lo que obligó a romper el paso peatonal. Se mencionó que la factura de agua de 2024 ascendió a 50 millones de pesos adicionales, debido a un escape en el tanque inferior, que no se solucionó con una reparación inicial de 30 millones de pesos. Este tema se está tratando con la gerencia para determinar las responsabilidades económicas y técnicas.</p>
+
+<p>Se preguntó sobre el estado del ARC y el tubo que no está conectado en la galería detrás de la torre uno. Se indicó que se revisará si se trata de un pase o si requiere conexión. Se mencionó que se solicitarán los documentos a Conaltura para evaluar la situación.</p>
+
+<h2>4. Pendientes de Torre 2: Revisión de puntos, programación y responsables</h2>
+
+<p>Durante la reunión, se abordaron varios puntos pendientes relacionados con la Torre 2, incluyendo la revisión de los mismos, la programación de las acciones necesarias y la asignación de responsables. Se hizo referencia a una lista de 10 puntos pendientes tomados en cuenta durante un recorrido previo por la Torre 2.</p>
+
+<p>Se mencionó que la programación de fechas para abordar estos pendientes se enviaría el lunes. Entre los puntos específicos de la Torre 2 que se encontraban pendientes, se mencionaron:</p>
+
+<ul>
+    <li>Las dos puertas portafuego, indicando que una de ellas ya se había cortado.</li>
+    <li>El ascensor de parqueo que cambia de piso.</li>
+    <li>La reubicación del tablero, cuya programación se esperaba realizar en el transcurso del mes.</li>
+    <li>Un muro fisurado en el paso donde se hizo el paso provisional.</li>
+    <li>La teoría de la red contra incendios.</li>
+    <li>La revisión de los muros de tierra armada.</li>
+    <li>La energización de los cuartos útiles, tema que ya había sido conversado.</li>
+    <li>El tema de la cancha.</li>
+    <li>Los 10 puntos faltantes de la Torre 2, para los cuales se regresaría con la información y confirmación.</li>
+</ul>
+
+<p>Se indicó que Laura se comprometió a enviar un correo el lunes con las fechas de cumplimiento de estos temas. Se sugirió realizar una pasada por la cancha para revisar los pendientes en ese lugar.</p>
+
+<h2>5. Impermeabilización de la cancha: inicio de trabajos y comunicación a residentes</h2>
+
+<p>Durante la reunión, se discutió el inicio de los trabajos de impermeabilización de la cancha y la necesidad de comunicar esta información a los residentes. Se mencionó que los trabajos comenzarían pronto y se destacó la importancia de informar a los residentes sobre las posibles molestias que podrían surgir debido al polvo generado por la "destroyadora" (término utilizado para referirse a la maquinaria utilizada en la obra).</p>
+
+<p>Se acordó que se enviaría un comunicado a los residentes informando sobre el inicio de los trabajos, la fecha de inicio (establecida para el día siguiente) y las medidas que se tomarían para mitigar el impacto del polvo. Se solicitó que el comunicado incluyera los nombres y datos de las personas que trabajarían en la obra, así como información para la vigilancia sobre la circulación del personal.</p>
+
+<p>Se indicó que la impermeabilización y la demarcación de la cancha se realizarían de manera simultánea, con el objetivo de entregar la cancha lista para su uso. Sin embargo, se reconoció que existen otros aspectos a considerar para la entrega final de la cancha, como los accesos, las caídas y la seguridad de los niños. Estos aspectos se tratarán en detalle más adelante en la reunión.</p>
+
+<p>Laura se comprometió a formalizar el comunicado y enviarlo para su distribución. Se mencionó la importancia de sincronizar la información con Mildred y otros miembros del equipo para asegurar que todos estén al tanto de los detalles de la obra y puedan responder a las preguntas de los residentes.</p>
+
+<h2>6. Estado del tablero de breques y pago de afectaciones</h2>
+
+<p>Durante la reunión, se abordó el estado del tablero de breques y el pago de afectaciones. Se mencionó que este tema está relacionado con la falta de respuestas de fondo a solicitudes realizadas, como se indicó en el punto anterior sobre el seguimiento a la red contra incendios.</p>
+
+<p>Se expresó la preocupación por la falta de atención a este tema, así como a la evaluación de la fachada y las filtraciones. Se destacó la importancia de abordar el tablero de breques, ya que su mal estado puede estar relacionado con la filtración de agua y los daños ocasionados, como se mencionó en la discusión sobre la red contra incendios.</p>
+
+<p>Se hizo referencia a un informe sobre las patas con lectura, indicando que se espera un pago de aproximadamente 6 millones de pesos. Este pago está relacionado con un proceso que involucra a Marantonieta, Mauricio y David, y se refiere a la pérdida de agua debido a un escape en el tanque inferior, como se mencionó anteriormente.</p>
+
+<p>Se enfatizó la necesidad de prestar atención a los breques, ya que su daño se debe a la filtración de agua. Se solicitó que se considere este tema al montar una matriz de planeación de proyectos.</p>
+
+<h2>7. Revisión del parque de niños: estado, reparaciones y diseño</h2>
+
+<p>Durante la reunión, se mencionó la necesidad de revisar los pendientes del parque de niños, haciendo referencia a un listado en Excel que contiene los temas sin solucionar. Se señaló que estos temas no se han solucionado a pesar de las múltiples reuniones y seguimientos realizados.</p>
+
+<p>Se recordó que dentro de los metales de estago (sic), el ingeniero había mencionado las cañuelas faltantes en Fortune, indicando que una yacet (sic) se terminó de dañar, no por falta de mantenimiento, sino por un daño inicial. Se aclaró que la atención inicial se centró en el piso del parque.</p>
+
+<p>Se expresó la preocupación de que la superficie del parque no se cristaliza y se desharina sola, lo que sugiere un mal diseño o mala calidad. Se comparó con el parque de la Floresta, señalando que este último ya tiene su diseño definido.</p>
+
+<p>Se hizo referencia a que en el acta de entrega aparecen los puntos relacionados con el parque de niños.</p>
+
+<p>Posteriormente, durante la discusión sobre la cancha, se mencionó que si la cancha se entregaba este año, se debía considerar la teoría de Eliana sobre el alrededor de la cancha, en la zona común, el piso en tableta y los volados peligrosos. Se diferenció entre solucionar la problemática de la filtración de agua y preparar la entrega de una zona común de una cancha. Se preguntó qué se había hecho alrededor para poder entregar la cancha, mencionando un ascensor, materiales, escombros y un piso en mal estado. Se sugirió poner vallas para que la gente no se pasara a la parte no construida, pero también se consideró que los que subirían serían niños. Se mencionó que había cables de luz saliendo de la pared y que así no se podía entregar la cancha. Se concluyó que si se iba a entregar, debía ser para poder utilizarla.</p>
+
+<h2>8. Filtraciones en parqueaderos y losa: puntos críticos y responsabilidades</h2>
+
+<p>Durante la reunión, se abordó el tema de las filtraciones en los parqueaderos y la losa, identificando los puntos críticos y las responsabilidades correspondientes. Se mencionó que existen varias filtraciones, aproximadamente 16 puntos, y que el parqueadero 93 presenta una situación particularmente grave. Además, se señaló que en el edificio de parqueaderos de la Torre 2 se identificaron 17 puntos de filtración.</p>
+
+<p>Se indicó que en algunos cuartos útiles se observó salida de agua, y que en una PQR (Petición, Queja o Reclamo) se respondió que esto era responsabilidad de la administración. Se expresó la opinión de que esta respuesta forma parte de una estrategia del departamento jurídico para desgastar a la administración, dado el número de solicitudes realizadas desde el año anterior (aproximadamente 50 solicitudes).</p>
+
+<p>Posteriormente, durante la discusión sobre la cancha y la posibilidad de su entrega, se hizo referencia a la necesidad de solucionar la problemática de la filtración de agua como un aspecto fundamental para considerar la entrega de la zona común.</p>
+
+<p>Finalmente, al revisar los temas pendientes, se incluyó explícitamente el tema de la "Filtración de 4º" (filtración de cuartos) como un punto a tratar, junto con la revisión de la zona de mascotas y el caminerío.</p>
+
+<h2>9. Cierre de accesos a escaleras de emergencia y seguridad</h2>
+
+<p>Durante la reunión, se abordó el tema del cierre de accesos a las escaleras de emergencia y la seguridad. Se mencionó que Alejandra había indicado que ya se había cerrado el acceso en un punto, pero se identificaron otros accesos que requerían atención.</p>
+
+<p>Se señaló que el día en que se realizó un trabajo pesado, una división se cayó, haciendo referencia a un incidente relacionado con Fausto y Tro. Se mencionó la existencia de una puerta con candado, que debería ser la única existente, ubicada en el PP (piso principal) fuera de la Torre 2, que debería ser la entrada oficial. Se indicó que la que se encuentra en el PP al fondo es la bodega de Fausto y Don Alberto, y que ellos no deberían tener acceso por ahí. Se identificaron otras entradas en el piso 94 y se mencionó otra en el 95.</p>
+
+<p>Se solicitó que se cerraran todos los accesos, ya que ningún vigilante ni oficial debería estar dentro de la unidad. Se mencionó que se habían tenido incidentes de seguridad y que, por seguridad, lo ideal era cerrar esos accesos. Se mencionó que incluso los bombillos que se ponían en el shut eran robados y que se orinaba en el lugar.</p>
+
+<p>Se coordinó que todos los accesos quedaran cerrados en el transcurso de la semana.</p>
+
+<h2>10. Solicitud de planos eléctricos y revisión por terceros</h2>
+
+<p>Durante la reunión, se abordó la solicitud de los planos eléctricos y la posibilidad de una revisión por parte de terceros. Este tema surgió en el contexto de la discusión sobre los problemas de energización en los cuartos útiles de la Torre 2, donde se mencionó la importancia de contar con los planos para identificar posibles malas prácticas de construcción y determinar si el trabajo de empalme entre la Torre 2 y la Torre 1 se realizó correctamente.</p>
+
+<p>Se mencionó que la revisión por un tercero podría ayudar a determinar si la instalación eléctrica se ejecutó correctamente, ya que, aunque los cuartos útiles se entregaron, podría haber una mala ejecución. Se sugirió que este tercero sea un ingeniero eléctrico o un residente eléctrico de Conaltura, capaz de dar un parte de tranquilidad a los residentes.</p>
+
+<p>Posteriormente, al final de la reunión, se retomó el tema de la solicitud de los planos eléctricos, enfatizando la necesidad de atenderlo y de realizar una revisión para verificar que todo esté correcto, según la norma. Se expresó la preocupación de que la empresa que realice la revisión sea realmente imparcial y no una mera formalidad ("yo con yo").</p>
+
+<h2>11. Revisión de la zona de mascotas</h2>
+
+<p>Durante la reunión, al revisar los temas pendientes, se incluyó el tema de la "zona de animales" como un punto a tratar, junto con la "Filtración de 4º" (filtración de cuartos) y el caminerío.</p>
+
+<p>Posteriormente, se hizo referencia al techo de la zona de mascotas, indicando que también está dañado. Se mencionó que ya se había limpiado esa zona.</p>
+
+<p>Finalmente, se mencionó que siempre que se visita el paso peatonal, se observa a una señora que deja al perro orinando en el lugar, y que los pinitos se han puesto. Se indicó que tiene que tener la rejilla, y que hay que ponerla.</p>
+
+<h2>12. Temas de jardinería y plantas</h2>
+
+<p>Durante la reunión, en el contexto de la discusión sobre la cancha y la seguridad, se mencionó la posibilidad de utilizar jardines como una barrera natural. Se sugirió que, en lugar de poner vallas para evitar el acceso a áreas no construidas alrededor de la cancha, se podrían utilizar jardines para delimitar el espacio de manera más estética y segura.</p>
+
+<p>Posteriormente, al discutir sobre el cerramiento, se mencionó que el electricista había indicado que la lámpara nocturna iba a dar a las plantas que se colocarían en el lugar. Se especificó que no se quería la misma planta morada de monte que se había puesto anteriormente.</p>
+
+<p>Se explicó que la razón para no querer la planta morada de monte es que, aunque se contrató a un jardinero para quitarla y colocar matagüena, la planta morada volvió a crecer. Esto se utilizó como evidencia de que se trataba de monte.</p>
+
+<p>Finalmente, se hizo referencia a la necesidad de quitar una planta que está cerca del cuarto de máquinas, raspando el área y revisando si en otro taco pasa lo mismo. Se sugirió quitar también otra planta que se considera fea y que está ubicada en el mismo lugar.</p>
+
+<p>Adicionalmente, se mencionó que siempre que se visita el paso peatonal, se observaba a una señora que dejaba al perro orinando en el lugar, a pesar de que se habían puesto pinitos. Se insistió en la necesidad de colocar una rejilla en ese lugar.</p>
+
+<p>En el contexto de la discusión sobre la seguridad en la zona de la cancha, se mencionó que sería bueno tener en consideración sustratos hidráulicos, pero no mallas de tela.</p>
+
+<h2>13. Revisión de tendedero en balcón de Torre 1</h2>
+
+<p>Durante la reunión, se mencionó brevemente la revisión del tendedero en balcón de la Torre 1. Se indicó que se revisaría qué apartamento tenía instalado un tendedero en el balcón.</p>
+
+<p>Se expresó el interés en verificar si el propietario del apartamento había sacado una conexión eléctrica desde el área común, debido a los problemas de cortocircuitos que se estaban presentando. Se manifestó la preocupación de que estas conexiones pudieran afectar y generar más problemas eléctricos.</p>
+
+<h2>14. Cerramiento y seguridad</h2>
+
+<p>Durante la reunión, se abordó el tema del cerramiento y la seguridad, haciendo referencia a la discusión sobre la cancha y la posibilidad de utilizar jardines como una barrera natural en lugar de vallas. Se mencionó que, en el contexto de los temas de jardinería y plantas, se había sugerido que, en lugar de poner vallas para evitar el acceso a áreas no construidas alrededor de la cancha, se podrían utilizar jardines para delimitar el espacio de manera más estética y segura.</p>
+
+<p>Se explicó que el cerramiento actual se va a correr hacia donde está todo lo que se pudo, y que incluso se está pendiente de montar una PQR con respecto a eso, ya que existen fotografías que evidencian que el cerramiento debe correrse por seguridad.</p>
+
+<p>Se mencionó que el electricista había indicado que la lámpara nocturna iba a dar a las plantas que se colocarían en el lugar. Este punto se relaciona con la discusión sobre los temas de jardinería y plantas, donde se especificó que no se quería la misma planta morada de monte que se había puesto anteriormente.</p>
+
+<h2>15. Revisión de filtraciones en escaleras de emergencia</h2>
+
+<p>Durante la reunión, se abordó el tema de la revisión de filtraciones en las escaleras de emergencia. Se mencionó que Laura había estado revisando las escalas de emergencia y que se había percatado de que la tubería contra incendios de todas las escalas carecía de tapas. Se indicó que alguien había desocupado las coilas (sic).</p>
+
+<p>Se hizo referencia a la filtración de las escaleras que dañó el ascensor de la entrada de la portería, indicando que era la misma filtración y que tenía tiempo, aproximadamente cinco meses. Se especificó que esta filtración provenía desde arriba, desde el piso 95.</p>
+
+<p>Se mencionó que no se había ido al parquecito para mostrarles, refiriéndose a la ubicación de la filtración. Se aclaró que al coche (sic) se le hizo pintura y algunos ajustes de tornillería, pero no al piso.</p>
+
+<p>Se concluyó que la filtración de las escaleras de emergencia era un tema a tratar.</p>
+
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p>Hora de finalización: No especificada</p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <ul>
+        <li>Se contratará un recurso exclusivo para atender los temas pendientes de la Torre 2, incluyendo la red contra incendios, impermeabilización, y otros – Responsable: No especificado</li>
+        <li>Se colocará una fecha para un checkpoint para revisar los temas pendientes y se enviará una notificación con un compromiso – Responsable: Laura (Conaltura)</li>
+        <li>Se enviará un comunicado mañana informando sobre el inicio de los trabajos de impermeabilización en la cancha – Responsable: Laura (Conaltura)</li>
+        <li>Se revisará la malla de la cancha y se determinará si cumple con la normatividad – Responsable: No especificado</li>
+        <li>Se cerrarán los accesos a las escaleras de emergencia esta semana – Responsable: No especificado</li>
+        <li>Se enviará el lunes un correo con las fechas de cumplimiento de las tareas pendientes – Responsable: Laura (Conaltura)</li>
+        <li>Se revisará con arquitectura la seguridad del área de la cancha, incluyendo la altura de las paredes y la ubicación de elementos peligrosos – Responsable: No especificado</li>
+        <li>Se revisarán los temas de filtraciones y se buscará una solución con la empresa que realizó la impermeabilización – Responsable: No especificado</li>
+    </ul>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/qMWHioCXFgmd4TD
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/qMWHioCXFgmd4TD
+Generando URL pública para Transcripcion.txt (EXISTENTE): whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz/whatsapp_audio_2025-07-30_at_6.29.02_pm_suleima_ortiz_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Gitby2NrAHSpdDF
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Gitby2NrAHSpdDF
