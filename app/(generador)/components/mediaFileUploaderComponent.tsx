@@ -97,7 +97,7 @@ export default function MediaFileUploaderComponent({
           setShowModal(true);
           clearSelection();
           return;
-          
+
         } else {
           setDuplicado(false);
         }
@@ -676,10 +676,7 @@ export default function MediaFileUploaderComponent({
     const s = Math.floor(seconds % 60).toString().padStart(2, '0');
     return `${h}:${m}:${s}`;
   };
-  type PropsDropdown = {
-    value: number | null
-    onSelect: (id: number | null) => void
-  }
+
   return (
     <>
       {showModal && (
