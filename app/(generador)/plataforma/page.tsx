@@ -19,6 +19,7 @@ import EditProfileForm from './perfil/components/editProfileForm'
 
 export default function PlataformaPage() {
   const { data: session } = useSession()
+  const [reloadTrigger, setReloadTrigger] = useState(0);
   const [showEditForm, setShowEditForm] = useState(false)
 
   // Track acceso a plataforma
@@ -150,7 +151,7 @@ export default function PlataformaPage() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* Uploader Component */}
             <div className="lg:col-start-3 lg:row-end-1">
-              <MediaFileUploaderComponent />
+              <MediaFileUploaderComponent onDownload={() => setReloadTrigger(prev => prev + 1)}/>
             </div>
 
             <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">

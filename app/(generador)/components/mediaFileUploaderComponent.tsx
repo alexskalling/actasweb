@@ -26,12 +26,14 @@ interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
   accept?: string;
   maxSize?: number;
+  onDownload: () => void;
 }
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
-}: MediaSelectorProps) {
+  onDownload,
+}: MediaSelectorProps,) {
   // Función para detectar cualquier navegador en iOS
   const isIOSDevice = () => {
     if (typeof window === 'undefined') return false;
@@ -1535,6 +1537,7 @@ export default function MediaFileUploaderComponent({
                         });
                       }
                       handleDownload();
+                      onDownload();
                     }}
                   >
                     Descargar
