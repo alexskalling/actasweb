@@ -682,3 +682,155 @@ CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
     <p>[Espacio para firmas]</p>
 </div>
 [2025-08-08T21:17:55.856Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: 04_riomistico_audio.mp3_Transcripcion.txt en carpeta 04_riomistico_audio.mp3
+[2025-08-08T21:21:20.381Z] Verificando existencia del archivo 04_riomistico_audio.mp3_Transcripcion.txt en Nextcloud carpeta 04_riomistico_audio.mp3.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio.mp3/04_riomistico_audio.mp3_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:21:21.644Z] Archivo "04_riomistico_audio.mp3_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio.mp3".
+Transcripción existente encontrada: 04_riomistico_audio.mp3. Obteniendo contenido.
+Verificando contenido existente: 04_riomistico_audio.mp3_Contenido.txt
+[2025-08-08T21:21:22.737Z] Verificando existencia del archivo 04_riomistico_audio.mp3_Contenido.txt en Nextcloud carpeta 04_riomistico_audio.mp3.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio.mp3/04_riomistico_audio.mp3_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:21:23.471Z] Archivo "04_riomistico_audio.mp3_Contenido.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio.mp3".
+Contenido existente: 04_riomistico_audio.mp3_Contenido.txt. Cargando.
+[2025-08-08T21:21:24.223Z] Contenido del archivo "04_riomistico_audio.mp3_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 04_riomistico_audio.mp3.mp3 en carpeta: 04_riomistico_audio.mp3
+Verificando Borrador .docx existente: 04_riomistico_audio.mp3_Borrador.docx
+[2025-08-08T21:21:24.224Z] Verificando existencia del archivo 04_riomistico_audio.mp3_Borrador.docx en Nextcloud carpeta 04_riomistico_audio.mp3.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio.mp3/04_riomistico_audio.mp3_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-08T21:21:24.952Z] Archivo "04_riomistico_audio.mp3_Borrador.docx" NO encontrado en Nextcloud en la carpeta "04_riomistico_audio.mp3".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 04_riomistico_audio.mp3_Borrador.docx
+Preparando guardado .docx en Nextcloud: 04_riomistico_audio.mp3_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [NO ESPECIFICADO] de [NO ESPECIFICADO] de [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Tema A</li>
+    <li>Tema B</li>
+    <li>Tema C</li>
+    <li>Tema D</li>
+  </ol>
+</header>
+<h2>1. Grabación de audio</h2>
+
+<p>Se informa que el punto "Grabación de audio" figuraba en el orden del día de la reunión. Sin embargo, durante el desarrollo de la sesión, no se llevó a cabo ninguna discusión, deliberación o toma de decisiones sustantiva en relación con este tema. La mención registrada en la transcripción ("Grabando un audio. Un, dos, tres, un, dos, tres.") corresponde únicamente a una verificación técnica del sistema de grabación al inicio de la reunión, y no a un abordaje del tema como punto de agenda.</p><h2>2. Prueba de sonido</h2>
+
+<p>Se informa que el punto "Prueba de sonido" figuraba en el orden del día de la reunión. Sin embargo, durante el desarrollo de la sesión, no se llevó a cabo ninguna discusión, deliberación o toma de decisiones sustantiva en relación con este tema. La única mención relacionada con aspectos técnicos de audio, registrada al inicio de la reunión ("Grabando un audio. Un, dos, tres, un, dos, tres."), fue consignada previamente bajo el punto "1. Grabación de audio", correspondiendo a una verificación técnica inicial y no a un abordaje del tema "Prueba de sonido" como punto de agenda independiente.</p>
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> </p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <p>No se registraron acuerdos específicos en esta transcripción.</p>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+  <h1 style="text-align: center;">Acta de Reunión</h1>
+  <p><strong>Fecha:</strong> [NO ESPECIFICADO] de [NO ESPECIFICADO] de [NO ESPECIFICADO]</p>
+  <p><strong>Hora:</strong> Inicio: [NO ESPECIFICADO] - Cierre: [NO ESPECIFICADO]</p>
+  <p><strong>Lugar:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+  <p><strong>Asistentes:</strong></p>
+  <ul>
+    <li>[NO ESPECIFICADO] - [NO ESPECIFICADO]</li>
+  </ul>
+  <h2>Orden del Día</h2>
+  <ol>
+    <li>Tema A</li>
+    <li>Tema B</li>
+    <li>Tema C</li>
+    <li>Tema D</li>
+  </ol>
+</header>
+<h2>1. Grabación de audio</h2>
+
+<p>Se informa que el punto "Grabación de audio" figuraba en el orden del día de la reunión. Sin embargo, durante el desarrollo de la sesión, no se llevó a cabo ninguna discusión, deliberación o toma de decisiones sustantiva en relación con este tema. La mención registrada en la transcripción ("Grabando un audio. Un, dos, tres, un, dos, tres.") corresponde únicamente a una verificación técnica del sistema de grabación al inicio de la reunión, y no a un abordaje del tema como punto de agenda.</p><h2>2. Prueba de sonido</h2>
+
+<p>Se informa que el punto "Prueba de sonido" figuraba en el orden del día de la reunión. Sin embargo, durante el desarrollo de la sesión, no se llevó a cabo ninguna discusión, deliberación o toma de decisiones sustantiva en relación con este tema. La única mención relacionada con aspectos técnicos de audio, registrada al inicio de la reunión ("Grabando un audio. Un, dos, tres, un, dos, tres."), fue consignada previamente bajo el punto "1. Grabación de audio", correspondiendo a una verificación técnica inicial y no a un abordaje del tema "Prueba de sonido" como punto de agenda independiente.</p>
+<div class="reunion-cierre">
+    <h2>Cierre de la Reunión</h2>
+    <p><strong>Hora de finalización:</strong> </p>
+
+    <h3>Acuerdos alcanzados:</h3>
+    <p>No se registraron acuerdos específicos en esta transcripción.</p>
+
+    <h3>Firma de los asistentes:</h3>
+    <p>[Espacio para firmas]</p>
+</div>
+[2025-08-08T21:21:25.353Z] Error en formatContent: Error al guardar el archivo .docx en Nextcloud..
+Verificando si existe transcripción: 04_riomistico_audio_Transcripcion.txt en carpeta 04_riomistico_audio
+[2025-08-08T21:30:18.167Z] Verificando existencia del archivo 04_riomistico_audio_Transcripcion.txt en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:30:19.424Z] Archivo "04_riomistico_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Transcripción existente encontrada: 04_riomistico_audio. Obteniendo contenido.
+Verificando contenido existente: 04_riomistico_audio_Contenido.txt
+[2025-08-08T21:30:20.491Z] Verificando existencia del archivo 04_riomistico_audio_Contenido.txt en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:30:21.252Z] Archivo "04_riomistico_audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Contenido existente: 04_riomistico_audio_Contenido.txt. Cargando.
+[2025-08-08T21:30:22.196Z] Contenido del archivo "04_riomistico_audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 04_riomistico_audio.mp3 en carpeta: 04_riomistico_audio
+Verificando Borrador .docx existente: 04_riomistico_audio_Borrador.docx
+[2025-08-08T21:30:22.198Z] Verificando existencia del archivo 04_riomistico_audio_Borrador.docx en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:30:22.933Z] Archivo "04_riomistico_audio_Borrador.docx" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 04_riomistico_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/04_riomistico_audio/04_riomistico_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/tnifTd46ixC5Ra6
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/tnifTd46ixC5Ra6
+Generando URL pública para Transcripcion.txt (EXISTENTE): 04_riomistico_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/04_riomistico_audio/04_riomistico_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/k8bHdkT2zGmTx3b
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/k8bHdkT2zGmTx3b
+Verificando si existe transcripción: 04_riomistico_audio_Transcripcion.txt en carpeta 04_riomistico_audio
+[2025-08-08T21:33:41.017Z] Verificando existencia del archivo 04_riomistico_audio_Transcripcion.txt en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:33:42.132Z] Archivo "04_riomistico_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Transcripción existente encontrada: 04_riomistico_audio. Obteniendo contenido.
+Verificando contenido existente: 04_riomistico_audio_Contenido.txt
+[2025-08-08T21:33:43.228Z] Verificando existencia del archivo 04_riomistico_audio_Contenido.txt en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:33:43.956Z] Archivo "04_riomistico_audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Contenido existente: 04_riomistico_audio_Contenido.txt. Cargando.
+[2025-08-08T21:33:44.863Z] Contenido del archivo "04_riomistico_audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 04_riomistico_audio.mp3 en carpeta: 04_riomistico_audio
+Verificando Borrador .docx existente: 04_riomistico_audio_Borrador.docx
+[2025-08-08T21:33:44.865Z] Verificando existencia del archivo 04_riomistico_audio_Borrador.docx en Nextcloud carpeta 04_riomistico_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_riomistico_audio/04_riomistico_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-08T21:33:45.603Z] Archivo "04_riomistico_audio_Borrador.docx" EXISTE en Nextcloud en la carpeta "04_riomistico_audio".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 04_riomistico_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/04_riomistico_audio/04_riomistico_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Rx73y4J5nDs3Ri3
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Rx73y4J5nDs3Ri3
+Generando URL pública para Transcripcion.txt (EXISTENTE): 04_riomistico_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/04_riomistico_audio/04_riomistico_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/8XacZMCqTpMng3d
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/8XacZMCqTpMng3d
