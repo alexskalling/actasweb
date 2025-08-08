@@ -19,6 +19,7 @@ import { useSession } from "next-auth/react";
 import { GuardarNuevoProceso } from "../services/guardarNuevoProceso";
 import { ActualizarProceso } from "../services/actualizarProceso";
 import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
+import { BuscarAbiertoProceso } from "../services/buscarAbiertoProceso";
 
 
 interface MediaSelectorProps {
@@ -44,6 +45,7 @@ export default function MediaFileUploaderComponent({
   const [uploadStatus, setUploadStatus] = React.useState<string | null>(null);
   const [calculando, setCalculando] = React.useState<boolean>(false);
   const [procesando, setProcesando] = React.useState<boolean>(false);
+  const [duplicado, setDuplicado] = React.useState<boolean>(true);
   const [uploadProgress, setUploadProgress] = React.useState<number>(0);
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
@@ -85,6 +87,28 @@ export default function MediaFileUploaderComponent({
     setError(null);
     setUploadStatus(null);
     setUploadProgress(0);
+
+    try {
+      if (file) {
+        const isDuplicated = await BuscarAbiertoProceso(file.name);
+
+        if (isDuplicated) {
+          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+          setShowModal(true);
+          clearSelection();
+          return;
+
+        } else {
+          setDuplicado(false);
+        }
+      }
+
+    } catch (error: unknown) {
+      console.error(" Error al ejecutar BuscarAbiertoProceso:", error);
+    }
+
+
+
 
     // Track inicio selección archivo
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
@@ -226,7 +250,8 @@ export default function MediaFileUploaderComponent({
     setCalculando(false);
 
     setUploadProgress(0);
-
+    setIndustriaId(null);
+    setDuplicado(true);
     // Track clear selection event
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
 
@@ -394,10 +419,10 @@ export default function MediaFileUploaderComponent({
         const ejecutarCrearActa = async () => {
           try {
             if (result.uploadUrl) {
-              if (industriaId == null) {
+              if (industriaId == null || industriaId == undefined) {
                 setIndustriaId(99);
               }
-              const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ?"soporte" : "acta";
+              const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ? "soporte" : "acta";
               await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId);
 
             }
@@ -415,6 +440,8 @@ export default function MediaFileUploaderComponent({
               console.warn("⚠️ Duplicado detectado");
               setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
               setShowModal(true);
+              clearSelection();
+
             } else {
               // otro error
               setModalMessage("Ocurrió un error al crear el acta. Intenta nuevamente.");
@@ -797,7 +824,7 @@ export default function MediaFileUploaderComponent({
             )}
             <div className="flex gap-4">
               {session != null && (
-                <DropdownIndustrias onSelect={setIndustriaId} />
+                <DropdownIndustrias value={industriaId} onSelect={setIndustriaId} />
               )}
 
             </div>
@@ -828,7 +855,7 @@ export default function MediaFileUploaderComponent({
                 acta == null &&
                 transcripcion == null &&
                 urlAssembly != null &&
-                !procesando && (
+                !procesando && duplicado == false && (
                   <WompiComponent
                     costo={calculatePrice(duration)}
                     file={file}
