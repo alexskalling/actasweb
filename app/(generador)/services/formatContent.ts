@@ -3,7 +3,7 @@
 import htmlToDocx from "html-to-docx";
 //@ts-expect-error revisar despues
 
-import { DOMParser } from "xmldom"; // Asegúrate de tener xmldom: npm install xmldom
+import { DOMParser } from "xmldom";
 
 import {
   manejarError,
@@ -14,7 +14,6 @@ import {
 
 import io from "socket.io-client";
 
-// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
 const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
 
 socketBackendReal.on("connect_error", (error) => {
@@ -73,13 +72,11 @@ export async function formatContent(
     const rutaArchivoTranscripcion = `/Actas/${folder}/${nombreTranscripcionTxt}`;
 
     writeLog(`Verificando Borrador .docx existente: ${nombreBorradorDocx}`);
-    // 1. Verificar si _Borrador.docx ya existe.
     if (await verificarArchivoExistente(nombreBorradorDocx, folder)) {
       writeLog(
         `Borrador .docx existente. Generando URLs públicas para archivos existentes.`
       );
 
-      // Generar URLs públicas para Borrador.docx y Transcripcion.txt (EXISTENTES)
       writeLog(
         `Generando URL pública para Borrador.docx (EXISTENTE): ${nombreBorradorDocx}`
       );
@@ -116,7 +113,6 @@ export async function formatContent(
         `URL pública de Transcripcion.txt (EXISTENTE) obtenida: ${publicUrlTranscripcion}`
       );
 
-      // Extraer fileId de AMBAS URLs públicas
       const fileIdFromUrlBorrador =
         obtenerFileIdDeUrlPublica(publicUrlBorrador);
       if (!fileIdFromUrlBorrador) {
@@ -144,14 +140,11 @@ export async function formatContent(
         acta: `${baseUrlDescargaDirectaBorrador}/${nombreBorradorDocx}`,
       };
     } else {
-      // Borrador.docx NO existe, hay que crearlo
-
       writeLog(
         `Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.`
       );
 
       let actaHTMLContent = contenidoActa;
-      // 2. Priorizar contenidoActa, si no, leer _Contenido.txt
       if (!actaHTMLContent) {
         writeLog(`Contenido del acta no proporcionado. Leyendo _Contenido.txt`);
         //@ts-expect-error revisar despues
@@ -178,7 +171,6 @@ export async function formatContent(
         },
       });
 
-      // 3. Guardar acta .docx en Nextcloud
       const archivoGuardado = await guardarArchivoNextcloudDocx(
         folder,
         nombreBorradorDocx,
@@ -189,7 +181,6 @@ export async function formatContent(
       }
       writeLog(`Borrador .docx guardado exitosamente.`);
 
-      // Generar URLs públicas para Borrador.docx (RECIÉN CREADO) y Transcripcion.txt (EXISTENTE)
       writeLog(
         `Generando URL pública para Borrador.docx (RECIÉN CREADO): ${nombreBorradorDocx}`
       );
@@ -207,8 +198,6 @@ export async function formatContent(
       writeLog(
         `URL pública de Borrador.docx (RECIÉN CREADO) obtenida: ${publicUrlBorrador}`
       );
-
-   
 
       writeLog(
         `Generando URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
@@ -228,7 +217,6 @@ export async function formatContent(
         `URL pública de Transcripcion.txt (EXISTENTE) obtenida: ${publicUrlTranscripcion}`
       );
 
-      // Extraer fileId de AMBAS URLs públicas
       const fileIdFromUrlBorrador =
         obtenerFileIdDeUrlPublica(publicUrlBorrador);
       if (!fileIdFromUrlBorrador) {
@@ -278,7 +266,6 @@ function obtenerFileIdDeUrlPublica(publicUrl: string): string | null {
   }
 
   const partesUrl = publicUrl.split("/");
-  // Buscar el segmento que sigue a '/s/' que debería ser el fileId
   const indiceFileId = partesUrl.indexOf("s") + 1;
 
   if (indiceFileId > 0 && indiceFileId < partesUrl.length) {
@@ -357,8 +344,24 @@ async function obtenerUrlPublicaArchivoExistente(
   }
 }
 
-import fs from "fs/promises";
-import path from "path";
+
+
+function limpiarHTMLParaDocx(htmlContent: string): string {
+  if (!htmlContent) return "";
+
+  let cleanedHTML = htmlContent;
+
+  // SOLUCIÓN DRASTICA: Eliminar completamente las etiquetas de formato
+  // Esto evita que htmlToDocx genere saltos de línea
+  cleanedHTML = cleanedHTML.replace(/<strong>/g, '').replace(/<\/strong>/g, '');
+  cleanedHTML = cleanedHTML.replace(/<b>/g, '').replace(/<\/b>/g, '');
+  
+  // Eliminar <br><br> que causan doble espaciado entre párrafos
+  cleanedHTML = cleanedHTML.replace(/<br><br>/g, '');
+  cleanedHTML = cleanedHTML.replace(/<br\s*\/?>\s*<br\s*\/?>/g, '');
+
+  return cleanedHTML;
+}
 
 async function guardarArchivoNextcloudDocx(
   folder: string,
@@ -366,17 +369,13 @@ async function guardarArchivoNextcloudDocx(
   textoActa: string
 ): Promise<boolean> {
 
-  // **HTML EXTREMADAMENTE SIMPLE DE PRUEBA - DIRECTAMENTE EN EL CÓDIGO**
-  const actaContent = textoActa;
+  const actaContent = limpiarHTMLParaDocx(textoActa);
 
   writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
   writeLog(
     `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
   );
-  console.log("actaContent (HTML Simple de Prueba): ", actaContent);
-  console.log(textoActa);
 
-  // **AÑADIDOS LOGS DE DEBUGGING - INFORMACIÓN DEL ENTORNO**
   writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
   writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
   writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
@@ -385,24 +384,21 @@ async function guardarArchivoNextcloudDocx(
   writeLog(
     `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
   );
-  // LOG DEL CONTENIDO HTML JUSTO ANTES DE htmlToDocx (PARA COMPARAR CON LOCAL)
   writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
 
-
-
   try {
-    const docxBuffer = await htmlToDocx(actaContent);
+    // Configuración mínima sin formato especial
+    const options = {
+      header: false,
+      footer: false,
+      pageNumber: false
+    };
 
-    const rutaArchivoLocalPrueba = path.join(
-      "/tmp",
-      `prueba_${nombreActaDocx}`
-    );
-    await fs.writeFile(rutaArchivoLocalPrueba, Buffer.from(docxBuffer));
 
-    console.log(
-      "Primeros 100 bytes de docxBuffer (hex):",
-      Buffer.from(docxBuffer).subarray(0, 100).toString("hex")
-    );
+
+    const docxBuffer = await htmlToDocx(actaContent, null, options);
+
+
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -424,22 +420,23 @@ async function guardarArchivoNextcloudDocx(
       "Content-Length": contentLength.toString(),
     };
 
-    console.log(`[DEBUG] Subiendo archivo a: ${rutaCompletaArchivoDocx}`);
+
 
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
       headers: cabecerasAutenticacion,
-      body: docxBuffer, // Se envía directamente el buffer sin `duplex`
+      body: docxBuffer,
     });
 
     if (!respuestaGuardado.ok) {
+      const errorText = await respuestaGuardado.text();
       console.error(
-        `Error al guardar .docx en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}`
+        `Error al guardar .docx en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}, Body: ${errorText}`
       );
       return false;
     }
 
-    console.log(`.docx guardado exitosamente en Nextcloud: ${nombreActaDocx}`);
+
     return true;
   } catch (error) {
     console.error("Error en guardarArchivoNextcloudDocx:", error);
