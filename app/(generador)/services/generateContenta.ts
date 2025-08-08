@@ -157,7 +157,7 @@ export async function generateContenta(
           message: `[Contenido] Orden del dia listo `,
         },
       });
-      console.log(ordenDelDiaJSON);
+      console.log('este es el orden del dia'+JSON.stringify(ordenDelDiaJSON));
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
@@ -248,7 +248,7 @@ async function procesarOrdenDelDia(
             promptType,
             tema.nombre,
             contenidoTranscripcion,
-            ordenDelDiaJSON,
+            JSON.stringify(ordenDelDiaJSON),
             index,
             contenido
           ),
@@ -378,13 +378,7 @@ Instrucciones Específicas:
         Moderador: Identifica al moderador.
         Asistentes: Lista los nombres y cargos.
 
-    Genera la sección del Orden del Día a partir de la transcripción:
-        Si la transcripción incluye un orden del día explícito:
-            Utilízalo como base.
-            Analiza la transcripción en busca de otros grandes temas importantes que se hayan discutido pero que no estén incluidos en el orden del día explícito.
-            Integra estos temas adicionales en el orden del día generado, ubicándolos en la secuencia que mejor se ajuste al orden cronológico en que fueron tratados durante la reunión. El objetivo es generar un orden del día final completo y cronológicamente coherente.
-        Si la transcripción no incluye un orden del día explícito:
-            Deduce los temas principales tratados durante la reunión y ordénalos cronológicamente.
+   El orden del dia debe ser tomado del orden que se pase como dato y respetarse a raja tabal no cambia nombre sni nada ni orden no deebes poner nada que no se pase como orden del dia
 
     Formato de Salida EXCLUSIVO: Devuelve ÚNICAMENTE el siguiente código HTML que representa el acta procesada de la transcripción. No incluyas ninguna otra información, explicación, comentario, descripción de tu proceso de pensamiento, ni frases introductorias o de conclusión.
 
@@ -428,6 +422,7 @@ Directrices Específicas:
     Cada tema del acta deberá llevar un título numerado que corresponda **EXACTAMENTE** al tema del orden del día proporcionado en el orden del dia, siguiendo la numeración y el nombre definidos en ella. La estructura general del acta debe replicar fielmente el orden y la numeración de orden del dia para todas las secciones temáticas.
 
     Calidad y Profundidad del Contenido:
+    No iniciees todos lo parrafos con la palabra "Se" es muy mala pracitca trabar de unir lso contenidos  para uan nararacion fluida y de no se posuble se mejro para a redaccion aprece sun robot
         Se espera un nivel de detalle exhaustivo para cada tema, asegurando la inclusión de todos los aspectos relevantes de la discusión. Los temas no deben ser resumidos.
         No se debe omitir información importante ni simplificarla en exceso.
         La redacción debe reflejar fielmente lo discutido, con la extensión necesaria para cada punto.
@@ -593,27 +588,34 @@ Puntos Clave Adicionales:
     `;
       return userPromt;
     case "Cabecera":
-      userPromt = `ORDEN DEL DÍA DE REFERENCIA y base que no se debe modificar a menos de que sea estrictamente necesario:
-Considera el orden del día proporcionado en la variable ${ordendeldia}. **Este debe ser la base prioritaria para la numeración, el orden y los nombres de los temas en el acta.**
+      userPromt = `
+      
+      
+      
+GENERA UNA CABECERA DE ACTA EN FORMATO HTML
+INSTRUCCIONES ESTRICTAS:
+1.  **EXTRACCIÓN DE INFORMACIÓN PARA LA CABECERA y esta el fuente del contenido ${content} (EXCEPTO ORDEN DEL DÍA):**
+    * **Título:** Busca el tipo de reunión o tema principal en la transcripción . Si no se encuentra o no se puede deducir, usa "Acta de Reunión".
+    * **Fecha, Hora y Lugar:** Extrae esta información directamente de la transcripción . Si la hora de inicio y cierre no son explícitas, deja la hora de cierre como "[HORA DE CIERRE]". Si el lugar no es explícito, usa "[UBICACIÓN NO ESPECIFICADA]".
+    * **Moderador:** Identifica a la persona que dirigió la sesión en la transcripción . Si no se identifica claramente, usa "[NO ESPECIFICADO]".
+    * **Asistentes:** Lista los nombres y cargos de los participantes mencionados en la transcripción . Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
 
-GENERACIÓN DE LA CABECERA:
+2.  **GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):**
+    * **LA BASE INALTERABLE ES ${ordendeldia}.** Debes usar *exclusivamente* el contenido de la transcripcion para la numeración y los títulos de los puntos del Orden del Día en el acta final.
+    * **EXCLUSIONES OBLIGATORIAS:** NO INCLUYAS el *primer* elemento (correspondiente a "cabecera") ni el *último* elemento (correspondiente a "cierre") de la variable ${ordendeldia} en el "Orden del Día" final.
+    * **VERIFICACIÓN CON LA TRANSCRIPCIÓN:** Para cada punto del Orden del Día extraído de ${ordendeldia} (excluyendo cabecera y cierre), verifica si el tema fue discutido en la transcripción (${content}).
+       
+    * **NO INVENTAR NI MODIFICAR TEMAS:** Bajo ninguna circunstancia debes inventar nuevos temas para el Orden del Día ni alterar los nombres de los temas proporcionados en ${ordendeldia}.
+    * **NO INCLUIR SUBTEMAS:** El "Orden del Día" debe listar solo los "grandes temas" de ${ordendeldia}, sin desgloses adicionales.
 
-La cabecera del acta debe contener los siguientes elementos, extraídos de la transcripción (${content}):
+3.  **FORMATO DE SALIDA:**
+    * La salida debe ser **HTML puro**. No incluyas ningún texto o formato que no sea HTML.
+    * Usa el siguiente esqueleto HTML. Rellena los corchetes [] con la información extraída y sigue las instrucciones para el Orden del Día pero por lo Bajo ninguan circuantacia resuma cambie o moifique el contenido de de ${ordendeldia} solo pnlo en html.
 
-* **Título:** Busca en la transcripción si se menciona el tipo de reunión o el tema principal. Si no se indica explícitamente o no se puede deducir, utiliza "Acta de Reunión" como título.
-* **Fecha, hora y lugar:** Extrae esta información directamente de la transcripción.
-* **Moderador o presidente:** Identifica quién dirigió la sesión, basándote en la transcripción.
-* **Asistentes:** Lista los nombres y cargos de quienes participaron, según se mencionan en la transcripción.
-* **Orden del Día:**
-    * **Revisa el orden del día proporcionado en la variable ${ordendeldia}. Este contenido es tu base inalterable para la estructura numérica y los títulos de los puntos del Orden del Día final.**
-    * **Analiza la transcripción (${content}) para confirmar que cada uno de los "GRANDES TEMAS" listados en ${ordendeldia} fue discutido. Si un tema de ${ordendeldia} no fue discutido, se indicará como "[NO DISCUTIDO]". No añadas temas que no figuren en ${ordendeldia}.**
-    * Asegúrate de que este Orden del Día final refleje con precisión los grandes temas según ${ordendeldia} y la discusión en la transcripción.
-
-FORMATO DE SALIDA (SOLO HTML):
-HTML
 
 <header>
-  <h1 style="text-align: center;">Acta de la Reunión</h1><p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+  <h1 style="text-align: center;">Acta de la Reunión</h1>
+  <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
   <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
   <p><strong>Lugar:</strong> [UBICACIÓN]</p>
   <p><strong>Moderador:</strong> [NOMBRE]</p>
@@ -630,16 +632,7 @@ HTML
     <li>[GRAN TEMA 3]</li>
     <li>[GRAN TEMA 4]</li>
   </ol>
-</header>
-
-REGLAS ESTRICTAS:
-
-✅ ORDEN DEL DÍA FINAL: El orden del día final para el acta **debe coincidir en numeración y orden con el proporcionado en la variable ${ordendeldia}**. Solo se confirmará su discusión con la transcripción (${content}). Si un tema de ${ordendeldia} no fue tratado en la transcripción, se indicará explícitamente como "[NO DISCUTIDO]" en el acta, manteniendo su posición y numeración original.
-
-✅ Salida en HTML puro. No responder en texto plano ni en otro formato.
-✅ No inventar datos. Si falta información clave, dejar un espacio vacío o indicar "[NO ESPECIFICADO]".
-✅ El "Orden del Día" debe tomar como base casi obligatoria el ${ordendeldia}.
-✅ No incluir subtemas en el orden del día.`;
+</header> `;
 
       return userPromt;
     case "Contenido":
@@ -662,6 +655,7 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
     Se deben integrar los comentarios de los asistentes en la narración del contenido, cuando sea pertinente y aporte valor al acta, **siempre y cuando dichos comentarios correspondan exclusivamente al tema actual en su desarrollo cronológico dentro de la transcripción.**
     El desarrollo del tema debe estar encabezado por la numeración ${numeracion} y el nombre del tema ${tema}.
     No hacer saltos de línea innecesarios y deja el contenido ordenado y claro para que se pueda leer fácilmente.
+    NO es una copiar y pegar el contenido de la trancipcion se debe desarrollar el contenido de la transcripcion y respetar el orden del dia y el tema y solo ahcer citas de ser necesario
 
 🔹 Evitar redundancias y contenido duplicado
 
