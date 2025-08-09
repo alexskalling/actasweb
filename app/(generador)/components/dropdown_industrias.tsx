@@ -11,11 +11,12 @@ interface Industria {
 }
 export default function DropdownIndustrias({
   onSelect,
+  value,
 }: {
-  onSelect: (id: number) => void
+  onSelect: (id: number | null) => void;
+  value: number | null;
 }) {
   const [industrias, setIndustrias] = useState<Industria[]>([])
-  const [selectedId, setSelectedId] = useState<number | null>(null)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -58,16 +59,14 @@ export default function DropdownIndustrias({
     );
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = Number(e.target.value)
-    setSelectedId(value)
-    onSelect(value)
-  }
-
+ const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const value = e.target.value === '' ? null : Number(e.target.value);
+  onSelect(value);
+};
   return (
     <div className="w-full">
       <Select
-        value={selectedId ?? ''}
+        value={value ?? ''}
         onChange={handleChange}
         className="mt-1 block w-full rounded-md border border-gray-300 bg-white p-2 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
       >
