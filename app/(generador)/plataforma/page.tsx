@@ -19,6 +19,7 @@ import EditProfileForm from './perfil/components/editProfileForm'
 
 export default function PlataformaPage() {
   const { data: session } = useSession()
+  const [reloadTrigger, setReloadTrigger] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false)
 
   // Track acceso a plataforma
@@ -93,10 +94,10 @@ export default function PlataformaPage() {
                           'user_name': session?.user?.name
                         });
                       }
-                      
+
                       // Redirección usando la variable de entorno
                       const callbackUrl = process.env.NEXT_PUBLIC_AMBIENTE_URL || 'https://generador.actas.com';
-                      
+
                       signOut({ callbackUrl });
                     }}
                     className="rounded-md bg-purple-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
@@ -150,7 +151,7 @@ export default function PlataformaPage() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* Uploader Component */}
             <div className="lg:col-start-3 lg:row-end-1">
-              <MediaFileUploaderComponent />
+              <MediaFileUploaderComponent  onCheckActa={() => setReloadTrigger(prev => !prev)} />
             </div>
 
             <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
@@ -170,7 +171,7 @@ export default function PlataformaPage() {
 
             {/* Historial Component */}
             <div className="sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2">
-              <HistorialActasComponent />
+              <HistorialActasComponent reloadTrigger={reloadTrigger} />
             </div>
           </div>
 
