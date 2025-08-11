@@ -10,12 +10,14 @@ import {
 import {
   EllipsisVerticalIcon,
 } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 import MediaFileUploaderComponent from '../components/mediaFileUploaderComponent'
 import HistorialActasComponent from '../components/historialActasComponent'
 
 import { useSession, signOut } from 'next-auth/react'
 import EditProfileForm from './perfil/components/editProfileForm'
+import { track } from '../utils/analytics'
 
 export default function PlataformaPage() {
   const { data: session } = useSession()
@@ -24,8 +26,8 @@ export default function PlataformaPage() {
 
   // Track acceso a plataforma
   useEffect(() => {
-    if (session && process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      window.gtag('event', 'acceso_plataforma', {
+    if (session) {
+      track('acceso_plataforma', {
         'event_category': 'plataforma',
         'event_label': 'usuario_accede_plataforma',
         'user_name': session.user?.name,
@@ -48,9 +50,11 @@ export default function PlataformaPage() {
               <div className="flex items-center justify-between gap-x-8">
                 <div className="flex items-center gap-x-6">
                   {session?.user?.image ? (
-                    <img
+                    <Image
                       src={session?.user?.image ?? ""}
                       alt={`Foto de perfil de ${session?.user?.name}`}
+                      width={80}
+                      height={80}
                       className="w-20 h-20 rounded-lg"
                     />
                   ) : (
@@ -71,12 +75,10 @@ export default function PlataformaPage() {
                   <button
                     onClick={() => {
                       // Track edición perfil
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                        window.gtag('event', 'edicion_perfil', {
-                          'event_category': 'plataforma',
-                          'event_label': 'usuario_edita_perfil'
-                        });
-                      }
+                      track('edicion_perfil', {
+                        'event_category': 'plataforma',
+                        'event_label': 'usuario_edita_perfil'
+                      });
                       setShowEditForm(!showEditForm);
                     }}
                     className="text-sm/6 font-semibold text-gray-900"
@@ -87,13 +89,11 @@ export default function PlataformaPage() {
                   <button
                     onClick={() => {
                       // Track cerrar sesión
-                      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-                        window.gtag('event', 'cerrar_sesion', {
-                          'event_category': 'autenticacion',
-                          'event_label': 'usuario_cierra_sesion',
-                          'user_name': session?.user?.name
-                        });
-                      }
+                      track('cerrar_sesion', {
+                        'event_category': 'autenticacion',
+                        'event_label': 'usuario_cierra_sesion',
+                        'user_name': session?.user?.name
+                      });
 
                       // Redirección usando la variable de entorno
                       const callbackUrl = process.env.NEXT_PUBLIC_AMBIENTE_URL || 'https://generador.actas.com';
