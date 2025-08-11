@@ -151,7 +151,7 @@ export default function PlataformaPage() {
           <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {/* Uploader Component */}
             <div className="lg:col-start-3 lg:row-end-1">
-              <MediaFileUploaderComponent  onDownload={() => setReloadTrigger(prev => !prev)} />
+              <MediaFileUploaderComponent  onCheckActa={() => setReloadTrigger(prev => !prev)} />
             </div>
 
             <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">

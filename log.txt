@@ -4260,3 +4260,59 @@ Compartiendo archivo existente para obtener URL pública: /Actas/whatsapp_audio_
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Gitby2NrAHSpdDF
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Gitby2NrAHSpdDF
 >>>>>>> 3e0d9683e1f30eaaf9fa0b456053219735feed4e
+Verificando si existe transcripción: 02_campusreservado_audio_Transcripcion.txt en carpeta 02_campusreservado_audio
+[2025-08-11T14:11:47.992Z] Verificando existencia del archivo 02_campusreservado_audio_Transcripcion.txt en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:11:49.172Z] Archivo "02_campusreservado_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Transcripción existente encontrada: 02_campusreservado_audio. Obteniendo contenido.
+Verificando contenido existente: 02_campusreservado_audio_Contenido.txt
+[2025-08-11T14:11:50.260Z] Verificando existencia del archivo 02_campusreservado_audio_Contenido.txt en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:11:50.981Z] Archivo "02_campusreservado_audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Contenido existente: 02_campusreservado_audio_Contenido.txt. Cargando.
+[2025-08-11T14:11:51.884Z] Contenido del archivo "02_campusreservado_audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 02_campusreservado_audio.mp3 en carpeta: 02_campusreservado_audio
+Verificando Borrador .docx existente: 02_campusreservado_audio_Borrador.docx
+[2025-08-11T14:11:51.886Z] Verificando existencia del archivo 02_campusreservado_audio_Borrador.docx en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:11:52.605Z] Archivo "02_campusreservado_audio_Borrador.docx" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 02_campusreservado_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/02_campusreservado_audio/02_campusreservado_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/FTrj4MPTzo6BdZJ
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/FTrj4MPTzo6BdZJ
+Generando URL pública para Transcripcion.txt (EXISTENTE): 02_campusreservado_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/02_campusreservado_audio/02_campusreservado_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/SEeQxjr8g3cbgS8
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/SEeQxjr8g3cbgS8
+Verificando si existe transcripción: 02_campusreservado_audio_Transcripcion.txt en carpeta 02_campusreservado_audio
+[2025-08-11T14:16:15.177Z] Verificando existencia del archivo 02_campusreservado_audio_Transcripcion.txt en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:16:16.332Z] Archivo "02_campusreservado_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Transcripción existente encontrada: 02_campusreservado_audio. Obteniendo contenido.
+Verificando contenido existente: 02_campusreservado_audio_Contenido.txt
+[2025-08-11T14:16:17.404Z] Verificando existencia del archivo 02_campusreservado_audio_Contenido.txt en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:16:18.137Z] Archivo "02_campusreservado_audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Contenido existente: 02_campusreservado_audio_Contenido.txt. Cargando.
+[2025-08-11T14:16:19.025Z] Contenido del archivo "02_campusreservado_audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 02_campusreservado_audio.mp3 en carpeta: 02_campusreservado_audio
+Verificando Borrador .docx existente: 02_campusreservado_audio_Borrador.docx
+[2025-08-11T14:16:19.027Z] Verificando existencia del archivo 02_campusreservado_audio_Borrador.docx en Nextcloud carpeta 02_campusreservado_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/02_campusreservado_audio/02_campusreservado_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T14:16:19.764Z] Archivo "02_campusreservado_audio_Borrador.docx" EXISTE en Nextcloud en la carpeta "02_campusreservado_audio".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 02_campusreservado_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/02_campusreservado_audio/02_campusreservado_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/qSqQCGd5wT6WmHK
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/qSqQCGd5wT6WmHK
+Generando URL pública para Transcripcion.txt (EXISTENTE): 02_campusreservado_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/02_campusreservado_audio/02_campusreservado_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/7DrjFQLcaFACsZb
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/7DrjFQLcaFACsZb

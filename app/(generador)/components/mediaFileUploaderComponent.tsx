@@ -26,13 +26,13 @@ interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
   accept?: string;
   maxSize?: number;
-  onDownload: () => void;
+  onCheckActa: () => void;
 }
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
-  onDownload,
+  onCheckActa,
 }: MediaSelectorProps,) {
   // Función para detectar cualquier navegador en iOS
   const isIOSDevice = () => {
@@ -292,6 +292,7 @@ export default function MediaFileUploaderComponent({
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
+      onCheckActa();
       setUploadStatus(
         "Todo listo, tu borrador de acta está listo para ser descargado."
       );
@@ -1537,7 +1538,6 @@ export default function MediaFileUploaderComponent({
                         });
                       }
                       handleDownload();
-                      onDownload();
                     }}
                   >
                     Descargar
