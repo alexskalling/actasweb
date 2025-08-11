@@ -2,6 +2,7 @@
 
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   manejarError,
   writeLog,
@@ -104,14 +105,16 @@ export async function generateContenta(
       try {
         responseGeminiOrdenDelDia = await generateText({
           model: google(modelNameOrdenDelDia),
-          maxTokens: 100000,
+          maxTokens: 20000,
           temperature: 0,
+          frequencyPenalty: 0.6,
+          presencePenalty: 0.3,
           system: await getSystemPromt("Orden"),
           prompt: await getUserPromt(
             "Orden",
             "Orden",
             contenidoTranscripcion,
-            "test",
+            "",
             0,
             ""
           ),
@@ -151,6 +154,22 @@ export async function generateContenta(
 
     try {
       const ordenDelDiaJSON = JSON.parse(jsonCleaned);
+      
+      // Validar que el cierre esté presente
+      const tieneCierre = ordenDelDiaJSON.some((item: any) => 
+        item.nombre && item.nombre.toLowerCase().includes('cierre')
+      );
+      
+      if (!tieneCierre) {
+        console.log('Orden del día no incluye cierre, agregando...');
+        ordenDelDiaJSON.push({
+          id: ordenDelDiaJSON.length,
+          nombre: "Cierre",
+          esLecturaActaAnterior: false,
+          discutido: true
+        });
+      }
+      
       socketBackendReal.emit("upload-status", {
         roomName: folder,
         statusData: {
@@ -158,20 +177,29 @@ export async function generateContenta(
         },
       });
       console.log('este es el orden del dia'+JSON.stringify(ordenDelDiaJSON));
+
+      // Crear caché de transcripción en Gemini para reducir tokens por llamada
+      const cachedContentId = await crearCacheGeminiTranscripcion(contenidoTranscripcion);
+
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
         socketBackendReal,
-        contenidoTranscripcion
+        contenidoTranscripcion,
+        cachedContentId
       );
 
+      // Log para verificar que el contenido incluye el cierre
+      console.log("🔍 CONTENIDO COMPLETO - Longitud:", contenido.length);
+      console.log("🔍 CONTENIDO COMPLETO - Incluye 'Cierre':", contenido.includes("Cierre"));
+      console.log("🔍 CONTENIDO COMPLETO - Últimas 500 caracteres:", contenido.slice(-500));
+      
       const contenidoFormato = contenido
         .replace(/```html/g, "")
         .replace(/HTML/g, "")
         .replace(/html/g, "")
         .replace(/```/g, "")
         .replace(/< lang="es">/g, "")
-        .replace(/<\/?>/g, "")
         .replace(/\[Text Wrapping Break\]/g, "")
         .trim();
 
@@ -205,7 +233,8 @@ async function procesarOrdenDelDia(
   //@ts-expect-error revisar después
   socketBackendReal,
   //@ts-expect-error revisar después
-  contenidoTranscripcion
+  contenidoTranscripcion,
+  cachedContentId?: string
 ) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let contenido = "";
@@ -217,7 +246,17 @@ async function procesarOrdenDelDia(
 
   for (const tema of ordenDelDiaJSON) {
     console.log(tema);
-    if (tema.nombre != "Cabecera" && tema.nombre != "Cierre") {
+    
+    // Log específico para el cierre
+    if (tema.nombre === "Cierre") {
+      console.log("🔍 PROCESANDO CIERRE - tema:", tema);
+      socketBackendReal.emit("upload-status", {
+        roomName: folder,
+        statusData: {
+          message: `[Contenido] Procesando Cierre de la Reunión`,
+        },
+      });
+    } else if (tema.nombre != "Cabecera") {
       socketBackendReal.emit("upload-status", {
         roomName: folder,
         statusData: {
@@ -227,34 +266,57 @@ async function procesarOrdenDelDia(
       });
     }
     console.log(index);
+    const nombreTemaNormalizado = String((tema as any)?.nombre ?? "")
+      .trim()
+      .toLowerCase();
     const promptType =
-      tema.nombre === "Cabecera"
+      nombreTemaNormalizado === "cabecera"
         ? "Cabecera"
-        : tema.nombre === "Cierre"
+        : nombreTemaNormalizado === "cierre"
           ? "Cierre"
           : "Contenido";
 
     let responseTema;
     retryCount = 0;
 
+    // Límites por tipo para permitir desarrollo suficiente
+    const maxTokensPorTipo: Record<string, number> = {
+      Cabecera: 12000,
+      Contenido: 20000,
+      Cierre: 12000,
+    };
+
+    // Fuente para el tema: si se indicó que no fue discutido, pasa vacío; de lo contrario, usa la transcripción completa (cacheada externamente por el proveedor si aplica)
+    // EXCEPCIÓN: El cierre siempre necesita la transcripción completa para extraer hora y acuerdos
+    const contenidoTemaFuente = (tema as any)?.discutido === false && nombreTemaNormalizado !== "cierre" ? "" : contenidoTranscripcion;
+
     while (retryCount < maxRetries) {
       try {
         responseTema = await generateText({
           model: google(modelName),
-          maxTokens: 100000,
+          maxTokens: maxTokensPorTipo[promptType] ?? 2000,
           temperature: 0,
+          frequencyPenalty: 0.6,
+          presencePenalty: 0.3,
           system: await getSystemPromt(promptType),
           prompt: await getUserPromt(
             promptType,
             tema.nombre,
-            contenidoTranscripcion,
-            JSON.stringify(ordenDelDiaJSON),
+            contenidoTemaFuente,
+            promptType !== "Cierre" ? JSON.stringify(ordenDelDiaJSON) : "",
             index,
-            contenido
+            ""
           ),
         });
-        console.log(responseTema.text.trim());
+        // Evitamos logs largos; solo acumulamos
         contenido += responseTema.text.trim();
+        
+        // Log específico para el cierre
+        if (tema.nombre === "Cierre") {
+          console.log("✅ CIERRE PROCESADO - Longitud del contenido:", contenido.length);
+          console.log("📄 Últimas 200 caracteres del contenido:", contenido.slice(-200));
+        }
+        
         break;
       } catch (error) {
         console.error(
@@ -287,12 +349,44 @@ async function procesarOrdenDelDia(
   return contenido;
 }
 
+// Crea caché de transcripción en Gemini y devuelve el ID (name)
+async function crearCacheGeminiTranscripcion(transcripcion: string): Promise<string | undefined> {
+  try {
+    if (!transcripcion || transcripcion.trim().length === 0) return undefined;
+    const apiKey = process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GEMINI || "";
+    if (!apiKey) return undefined;
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const cachedContentApi: any = (model as any).cachedContent?.();
+    if (!cachedContentApi || typeof cachedContentApi.create !== "function") {
+      return undefined;
+    }
+    const res = await cachedContentApi.create({
+      contents: [{ role: "user", parts: [{ text: transcripcion }] }],
+      ttl: "1h", 
+    });
+    const name = res?.cachedContent?.name;
+    if (name) writeLog(`[Gemini Cache] creado: ${name}`);
+    return name;
+  } catch (e) {
+    console.warn("No se pudo crear caché en Gemini (opcional):", e);
+    return undefined;
+  }
+}
+
 async function getSystemPromt(tipo: string) {
   let systemPromt = "";
 
   switch (tipo) {
     case "Orden":
-      systemPromt = `Procesar transcripciones de reuniones y generar un orden del día en formato JSON. Respete el orden del día, no deje ningún elemento del JSON por fuera.
+      systemPromt = `Genera un Orden del Día en JSON estricto.
+Regla CRÍTICA: Todo lo dicho en "Lectura del acta anterior" va en un ÚNICO ítem y se resume; está prohibido desarrollarlo aparte o extraer subtemas para la reunión actual.
+
+Formato (array de objetos): { id:number, nombre:string, esLecturaActaAnterior:boolean, discutido:boolean, subtemas?: string[] }
+
+Respeta el orden cronológico de la transcripción. No agregues temas inexistentes. No devuelvas texto adicional fuera del JSON.
+
+Procesar transcripciones de reuniones y generar un orden del día en formato JSON. Respete el orden del día, no deje ningún elemento del JSON por fuera.
 Instrucciones Específicas:
 recuerda no desarollar de manera indivuad l los temas que son parte de proposicines y varios es un apartado donde se deralloan esos temas dando orden
 
@@ -329,6 +423,17 @@ Si la transcripción contiene un "Orden del Día" explícito:
 
     Antes de entregar el resultado final, asegúrate de que no haya temas duplicados en la lista. Si un tema con el mismo nombre (o un tema ya combinado) ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
 
+    Detección EXPLÍCITA de duplicados por similitud (obligatorio):
+      - Normaliza los nombres (minúsculas, sin tildes, sin stopwords básicas) y calcula similitud semántica.
+      - Si dos ítems son casi idénticos (>0.85 de similitud) o difieren solo por prefijos como "re-", "ajuste de", "continuación de", fusiónalos en uno solo manteniendo el orden del primero.
+      - Ejemplos a fusionar: "Fumigación del domo" y "Re fumigación del domo"; "Informe de ascensores" y "Discusión sobre ascensores".
+      - EXCEPCIÓN: "Lectura del acta anterior" nunca se fusiona con otros temas.
+
+    Clasificación de subtemas (obligatorio):
+      - Si un posible ítem es claramente parte de un tema mayor (p.ej., "Re fumigación del domo" dentro de "Mantenimiento áreas comunes"), NO lo listes como tema principal. Inclúyelo en el arreglo "subtemas" del tema mayor.
+      - Los subtemas NO se listan en la cabecera ni como ítems independientes; sirven para guiar la redacción dentro del tema padre.
+      - REGLA FÉRREA: Está ESTRÍCTAMENTE PROHIBIDO dividir un mismo tema en dos ítems del orden del día. Todo su desarrollo debe quedar en un único ítem (con subtemas si aplica). Si reaparece más tarde, trátalo como continuación del mismo ítem, sin crear uno nuevo.
+
 Si la transcripción no contiene un "Orden del Día" explícito:
 
     Genera un orden del día basado en los temas principales discutidos en la transcripción.
@@ -364,10 +469,10 @@ Y finalizar con:
 Nivel de Detalle:
 
 Incluye solo los temas principales. No incluyas subtemas o detalles menores.
-Formato JSON Preciso:
+ Formato JSON Preciso:
 
-La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0) y "nombre" (string con el nombre del tema).
-No incluyas etiquetas o nombres de campos adicionales.
+  La respuesta debe ser un array de objetos JSON con los campos "id" (numérico secuencial, comenzando en 0), "nombre", "esLecturaActaAnterior" y "discutido" (booleano; true si el punto fue tratado, false si no).
+ No incluyas etiquetas o nombres de campos adicionales.
 Transcripción Vacía o Irrelevante:
 
 Si la transcripción está vacía o no contiene información relevante para generar un orden del día, responde con el siguiente JSON:
@@ -400,10 +505,12 @@ Ejemplo de Orden del Día (Solo Referencia):
     case "Cabecera":
       systemPromt = `Rol: Eres un Secretario Ejecutivo profesional, experto en la redacción de actas formales.
 
-Tarea: Convertir transcripciones de reuniones en un documento HTML estructurado, asegurando que la información sea clara, precisa y fiel a lo discutido.
+ Tarea: Convertir transcripciones de reuniones en un documento HTML estructurado, asegurando que la información sea clara, precisa y fiel a lo discutido.
 
-Instrucciones Específicas:
-respesta de manera estricta la cronologia de lso tma y ordenalso en el orden cronologico que ete en el contenido del acta no lo alteres si noes estrictamente neceario
+ Instrucciones Específicas:
+ Respeta de manera estricta la cronología de los temas y ordénalos tal como ocurrieron. No alteres el orden salvo que sea estrictamente necesario para la claridad.
+
+Regla CRÍTICA: Prohibido copiar texto literal de la transcripción. Reescribe siempre en tercera persona y tono de acta. Citas solo si aportan valor, breves (<= 20 palabras) y con atribución.
 
     Procesa la transcripción para extraer la siguiente información y estructurarla en la cabecera del acta:
         Título: Utiliza el nombre de la reunión mencionado. Si no hay un nombre explícito, deduce un título descriptivo del tema principal.
@@ -449,6 +556,14 @@ Restricciones Adicionales:
 
     case "Contenido":
       systemPromt = `En el rol de Secretario Ejecutivo, se requiere la redacción detallada del acta de cada tema tratado durante la reunión. La redacción debe ser clara, formal y estructurada, manteniendo la fidelidad al contenido discutido, sin incurrir en transcripciones literales ni en resúmenes superficiales. SIEMPRE DEBE ESTAR REDACTADO EN TERCERA PERSONA Y EN ESPAÑOL.
+Reglas CRÍTICAS: Está PROHIBIDO copiar texto literal de la transcripción; reescribe con redacción propia en tono de acta. Solo usa citas cuando aporten valor, deben ser breves (<= 20 palabras), entre comillas y con atribución.
+
+Estilo y narrativa profesional:
+- Redacción institucional, precisa y neutral; evita coloquialismos.
+- Cohesión con conectores: "En primer lugar", "Posteriormente", "Por su parte", "En consecuencia", "Finalmente".
+- Varía la sintaxis y evita muletillas; no inicies todos los párrafos con la misma palabra.
+- Estructura por tema: Contexto breve → Desarrollo (posiciones, datos, análisis) → Decisiones/Acuerdos (con responsables y plazos explícitos) → Próximos pasos.
+- Prioriza claridad jurídica y trazabilidad de decisiones. Prohíbe notas meta del tipo "se observa la transcripción" u otras explicaciones del proceso.
 Directrices Específicas:
 Título y Estructura del Acta:
 
@@ -530,8 +645,12 @@ Ejemplo de desarrollo de un tema en HTML:
 
     Título del cierre de la reunión (ejemplo: "Cierre de la Reunión")
     Hora exacta de finalización de la reunión.
+    REGLA OBLIGATORIA: La hora de finalización SIEMPRE debe estar presente. Si no hay una hora explícita en la transcripción, indica "No especificada".
     Lista de los acuerdos más importantes alcanzados, mostrando el responsable de cada acuerdo si está explícito en la transcripción.
     Espacio para firmas, indicando los participantes que deben firmar si es necesario.
+
+Regla CRÍTICA: No copies texto literal de la transcripción. Redacta en tercera persona, tono formal, y usa citas solo cuando aporten valor, breves y con atribución.
+Narrativa del cierre: redacta una síntesis ejecutiva con conectores lógicos, destacando acuerdos, responsables y próximos pasos; evita listas innecesarias salvo la de acuerdos.
 
 Formato de salida esperado (HTML):
 
@@ -598,6 +717,12 @@ Revisa la transcripción para identificar temas importantes que no estén en el 
         * **De igual manera, si aparecen "14. Informe de ascensores" y "15. Discusión sobre ascensores", estos también deben considerarse altamente similares y combinarse.**
     **Al combinar temas, asegúrate de integrar la información y los detalles discutidos en ambos temas originales dentro del nuevo punto combinado, evitando la repetición de información.**
     Solo los temas nuevos y sustantivos que surgen como puntos de discusión independientes *más allá de la mera revisión del acta previa*, deben ser considerados para su inclusión individual en el orden del día de la reunión actual.
+
+**2.1 Detección obligatoria de duplicados por similitud:**
+    - Normaliza nombres: minúsculas, sin tildes, quita prefijos comunes ("re ", "re-", "ajuste de", "seguimiento de", "continuación de"), y elimina stopwords básicas.
+    - Si dos nombres resultan casi idénticos o su similitud es alta (>0.85), fusiónalos en un único ítem. Mantén la posición del primero en la cronología.
+    - Ejemplos a fusionar: "fumigación del domo" ~ "re fumigación del domo"; "mantenimiento de bombas" ~ "ajuste de mantenimiento de bombas".
+    - No fusiones ni reubiques "Lectura del acta anterior".
 
 Antes de entregar el resultado final, asegúrate de que no haya temas duplicados (incluso después de la posible combinación de temas similares) en la lista. Si un tema con el mismo nombre (o un tema ya combinado) ya está presente, no lo incluyas nuevamente. Solo debe aparecer una vez en el orden del día.
 
@@ -702,16 +827,19 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
 🔹 Enfoque preciso en el tema, Delimitación Estricta y Cronología Inquebrantable
 
     Se debe extraer y desarrollar contenido exclusivamente relacionado con el tema ${tema}, respetando SU LUGAR CRONOLÓGICO Y TEMÁTICO EXACTO en la transcripción de manera ABSOLUTA.
+    Si el contenido fuente (segmento) está vacío, declara de forma explícita y concisa que "el tema estaba previsto en el orden del día pero no fue abordado durante la reunión" y NO inventes desarrollo.
     CRÍTICO Y FUNDAMENTAL: Cada intervención, comentario o frase de un participante, sin importar quién sea o cuántas veces hable a lo largo de la reunión, debe ser asignado ÚNICAMENTE y de forma EXCLUSIVA al tema del Orden del Día que se esté discutiendo EN ESE PRECISO MOMENTO cronológico de la reunión, y NUNCA a otro tema o sección si no corresponde a ese instante.
     Si una misma persona habla sobre el Tema A (ej., un proyecto) y, en un momento posterior de la reunión, vuelve a tomar la palabra para hablar sobre el Tema B (ej., "Proposiciones y Varios", haciendo una consulta o un comentario relacionado con el Tema A pero bajo un nuevo punto del orden del día), esa intervención sobre el Tema B DEBE CONSIGNARSE ESTRICTAMENTE y ÚNICAMENTE bajo la sección de "Proposiciones y Varios" cuando corresponda cronológicamente. NO deben ser adelantadas, mezcladas ni duplicadas bajo el Tema A. La fuente única para la ubicación de la información es la cronología de la transcripción y el orden del día.
     Es imperativo NO incluir información que pertenezca explícitamente a "Proposiciones y Varios" o a cualquier otro punto posterior del orden del día en la sección actual del acta. La cronología de la discusión en la transcripción es la guía absoluta para la ubicación precisa de CADA PIEZA de contenido.
+    Detección de solapamientos dentro del acta: antes de escribir, verifica si el tema actual es casi idéntico a uno ya redactado (comparación por similitud de nombre normalizado). Si coincide (>0.85), está ESTRICTAMENTE PROHIBIDO crear otro tema. Integra la información adicional en el tema ya existente o declara explícitamente que es una continuación dentro del mismo tema.
+    Gestión de subtemas: si durante el desarrollo aparecen segmentos claramente subordinados a un tema mayor (p.ej., "re fumigación del domo" bajo "Mantenimiento áreas comunes"), desarróllalos como subapartados (<h3>) dentro del tema padre, no como temas independientes.
     Antes de desarrollar el contenido, se debe revisar el orden del día ${ordendeldia} para asegurarse de que el tema en cuestión no se solape con otros puntos.
-    Se debe realizar una búsqueda exhaustiva y minuciosa dentro de la transcripción para encontrar todos los detalles específicos relacionados con el tema ${tema}.
+    Se debe realizar una búsqueda exhaustiva y minuciosa dentro de la transcripción para encontrar todos los detalles específicos relacionados con el tema ${tema}. Si el segmento es breve pero aporta elementos, DESARROLLA EN DETALLE (no resumas) cada aspecto relevante.
     En caso de no encontrar información relevante, se debe expresar claramente que el tema fue nombrado en el orden del día pero no fue abordado durante el desarrollo de la reunión.
     Se deben integrar los comentarios de los asistentes en la narración del contenido, cuando sea pertinente y aporte valor al acta, siempre y cuando dichos comentarios correspondan exclusivamente al tema actual en su desarrollo cronológico dentro de la transcripción.
     El desarrollo del tema debe estar encabezado por la numeración ${numeracion} y el nombre del tema ${tema}.
     No hacer saltos de línea innecesarios y deja el contenido ordenado y claro para que se pueda leer fácilmente.
-    NO es una copiar y pegar el contenido de la transcripción se debe desarrollar el contenido de la transcripción y respetar el orden del día y el tema y solo hacer citas de ser necesario
+    NO es una copiar y pegar el contenido de la transcripción. Está PROHIBIDO copiar texto literal: reescribe siempre en tercera persona y tono formal. Solo usa citas cuando aporten valor, deben ser breves (<= 20 palabras), entre comillas, con atribución explícita y exclusivamente si fortalecen la comprensión del punto.
 
 🔹 Evitar redundancias y contenido duplicado
 al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa}). de manera estricta y si ya se hablo del tema que stoy por redactar lo omito no quiero reduncandcia de temas o de contenidos repetidos 
@@ -722,7 +850,7 @@ al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa
     Verificar que la información relevante sea precisa y no contradiga lo ya escrito en otros apartados del acta.
 
 🔹 Estilo de redacción
-NO debes copair y pegar la transcripción si no es neceario citas los asisentes a menos que te lo pida el tema o oporte
+NO debes copiar y pegar la transcripción. Citas solo si aportan valor, breves, con atribución y sin exceder 20 palabras.
 
     ✅ Narración formal y en tercera persona: La redacción debe ser formal y estrictamente en tercera persona, sin lenguaje coloquial ni menciones en primera persona.
     ✅ Manejo especial "Lectura del acta anterior": Este es el ÚNICO tema que se puede y debe resumir. Para cualquier otro tema, no se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores o a puntos ya consignados en la presente acta.
@@ -780,14 +908,16 @@ NO debes copair y pegar la transcripción si no es neceario citas los asisentes 
 5️⃣ Estructuración y formato en HTML
 
     El encabezado principal debe ser: <h2>${numeracion}. ${tema}</h2>.
-    Utilizar subtítulos (<h3>) solo para separar aspectos clave del mismo tema.
-    Usar negritas (<strong>) para resaltar cifras y decisiones clave.
-    Utilizar listas (<ul>) para resaltar los resultados de las votaciones.
+    Si existen subtemas en el orden del día (\"subtemas\" del ítem padre), trátalos como secciones internas usando <h3> y desarróllalos dentro de este tema, respetando la cronología.
+    Narrativa: contexto breve → desarrollo (posiciones, evidencias, cifras) → decisiones/acuerdos (con responsables/plazos) → próximos pasos.
+    Usa conectores lógicos ("En primer lugar", "Posteriormente", "Por su parte", "En consecuencia", "Finalmente") para dar fluidez.
+    Utiliza subtítulos (<h3>) solo cuando aporten claridad.
+    Usa negritas (<strong>) para resaltar cifras y decisiones clave, y listas (<ul>) para las votaciones.
     Antes de responder, se debe validar rigurosamente que NO haya contenido repetido o redundante, ni dentro del tema actual ni con el ${contenidoActa} previamente generado, y que la información esté estrictamente contenida en su tema correspondiente sin mezclas con "Proposiciones y Varios" u otros puntos.
 
 📌 Mejoras clave en esta versión:
 
-    ✅ Refuerza la búsqueda minuciosa de la información en la transcripción para garantizar que no se omita ningún detalle relevante.
+    ✅ Refuerza la búsqueda minuciosa de la información en la transcripción para garantizar que no se omita ningún detalle relevante; si hay información suficiente en el segmento, exige DESARROLLO EXHAUSTIVO Y CLARO.
     ✅ Se enfatiza la necesidad de expresar que el tema fue nombrado en el orden del día pero no abordado, si aplica.
     ✅ Garantiza una redacción formal en tercera persona en todo el contenido.
     ✅ Aclara y enfatiza el proceso de revisión activa y comparación con el contenido previamente generado (${contenidoActa}) para eliminar redundancias y asegurar que cada nueva información añada valor.
@@ -802,10 +932,10 @@ NO debes copair y pegar la transcripción si no es neceario citas los asisentes 
       return userPromt;
 
     case "Cierre":
-      userPromt = `Eres un analista de reuniones experto en identificar acuerdos clave y estructurar el cierre de reuniones de manera clara y organizada. A partir de la transcripción proporcionada, tu tarea es extraer los principales acuerdos alcanzados y sus responsables, además de identificar la hora de finalización de la reunión si está explícita en el texto.
+      userPromt = `Eres un analista de reuniones experto en identificar acuerdos clave y estructurar el cierre de reuniones de manera clara y organizada. A partir de la transcripción proporcionada, tu tarea es extraer los principales acuerdos alcanzados y sus responsables, además de identificar la hora de finalización de la reunión.
 Pautas para el análisis:
 
-    Identifica la hora de finalización de la reunión dentro de la transcripción. Si no está mencionada, déjala vacía.
+    Identifica la hora de finalización de la reunión dentro de la transcripción. Si no está mencionada explícitamente, escribe: "No especificada" (la hora NUNCA puede quedar en blanco).
     Extrae los acuerdos más importantes, resumiéndolos de manera clara.
     Identifica al responsable de cada acuerdo si está explícito en la transcripción. Si no se menciona, indica "No especificado".
     Entrega la respuesta en formato HTML con la siguiente estructura:

@@ -351,14 +351,32 @@ function limpiarHTMLParaDocx(htmlContent: string): string {
 
   let cleanedHTML = htmlContent;
 
-  // SOLUCIÓN DRASTICA: Eliminar completamente las etiquetas de formato
-  // Esto evita que htmlToDocx genere saltos de línea
-  cleanedHTML = cleanedHTML.replace(/<strong>/g, '').replace(/<\/strong>/g, '');
-  cleanedHTML = cleanedHTML.replace(/<b>/g, '').replace(/<\/b>/g, '');
-  
-  // Eliminar <br><br> que causan doble espaciado entre párrafos
-  cleanedHTML = cleanedHTML.replace(/<br><br>/g, '');
-  cleanedHTML = cleanedHTML.replace(/<br\s*\/?>\s*<br\s*\/?>/g, '');
+  // Limpieza no destructiva: preservar estructura y formato útil
+  // 1) Quitar fences y marcadores de exportación
+  cleanedHTML = cleanedHTML
+    .replace(/```(?:html)?/gi, "")
+    .replace(/\[Text Wrapping Break\]/g, "");
+
+  // 2) Normalizar espacios no separables y múltiples
+  cleanedHTML = cleanedHTML
+    .replace(/&nbsp;+/gi, " ")
+    .replace(/[ \t]{2,}/g, " ");
+
+  // 3) Compactar saltos de línea y <br> duplicados para evitar dobles espacios
+  cleanedHTML = cleanedHTML
+    .replace(/<br\s*\/?>\s*(?:<br\s*\/?>\s*)+/gi, "<br>")
+    .replace(/\n{3,}/g, "\n\n");
+
+  // 4) Eliminar párrafos vacíos redundantes
+  cleanedHTML = cleanedHTML.replace(/<p>\s*<\/p>/gi, "");
+
+  // 5) Quitar etiquetas de formato vacías (mantener negritas cuando tienen contenido)
+  cleanedHTML = cleanedHTML
+    .replace(/<strong>\s*<\/strong>/gi, "")
+    .replace(/<b>\s*<\/b>/gi, "");
+
+  // 6) Recortar extremos
+  cleanedHTML = cleanedHTML.trim();
 
   return cleanedHTML;
 }
