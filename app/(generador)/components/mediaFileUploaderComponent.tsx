@@ -55,7 +55,7 @@ export default function MediaFileUploaderComponent({
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
   const [file, setFile] = React.useState<string>();
-  const [fileid, setFileid] = React.useState<string>();
+  //const [fileid, setFileid] = React.useState<string>();
   const [acta, setActa] = React.useState<string>();
   const [idtx, setIdtx] = React.useState(null);
   const [transcripcion, setTranscripcion] = React.useState<string>();
@@ -477,7 +477,7 @@ export default function MediaFileUploaderComponent({
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
     window.open(proxyUrl, "_blank");
-    console.log("Descarga iniciada a través del proxy para:", url);
+    
   };
 
   const handleDownload = async () => {
@@ -499,9 +499,7 @@ export default function MediaFileUploaderComponent({
 
       if (transcripcion) {
         downloadFile(acta);
-        console.log(
-          "Esperando 3 segundos antes de descargar la transcripción..."
-        );
+        
         setTimeout(() => {
           if (acta) {
             downloadFile(transcripcion);
@@ -537,7 +535,6 @@ export default function MediaFileUploaderComponent({
       });
     }
   };
-  console.log(fileid);
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
@@ -551,8 +548,8 @@ export default function MediaFileUploaderComponent({
       setIdtx(id);
       //@ts-expect-error revisar despues
       setFile(file);
-      //@ts-expect-error revisar despues
-      setFileid(fileid);
+      ////@ts-expect-error revisar despues
+      //setFileid(fileid);
       setUrlAssembly(fileid);
       //@ts-expect-error revisar despues
       setFolder(folder);
@@ -575,7 +572,6 @@ export default function MediaFileUploaderComponent({
 
 
           if (tx.data.status === "APPROVED") {
-            console.log("tx", tx.data);
             await ActualizarProceso(
               file || '', // nombre
               5, // idEstadoProceso (ejemplo: 4 = aprobado)
@@ -589,8 +585,6 @@ export default function MediaFileUploaderComponent({
             );
 
             handlePayment();
-          } else {
-            console.log("pago aprobado");
           }
         } catch (error) {
           console.error("Error al buscar la transacción:", error);
