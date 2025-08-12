@@ -14,7 +14,7 @@ interface AutomationResponse {
   };
 }
 
-// Función para validar el API key
+// Validar API key
 function validateApiKey(request: NextRequest): boolean {
   const apiKey = request.headers.get("x-api-key");
   const expectedApiKey = process.env.N8N_API_KEY;
@@ -27,34 +27,6 @@ function validateApiKey(request: NextRequest): boolean {
   return apiKey === expectedApiKey;
 }
 
-// Función para validar el archivo
-function validateFile(file: File): { valid: boolean; error?: string } {
-  const allowedExtensions = [
-    '.wav', '.mp3', '.m4a', '.aac', '.ogg', '.wma', '.flac',
-    '.mp4', '.avi', '.mov', '.wmv', '.flv', '.mkv', '.webm'
-  ];
-
-  const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase();
-
-  if (!allowedExtensions.includes(fileExtension)) {
-    return {
-      valid: false,
-      error: `Tipo de archivo no permitido. Extensiones permitidas: ${allowedExtensions.join(', ')}`
-    };
-  }
-
-  // Validar tamaño del archivo (máximo 1GB)
-  const maxSize = 1_000 * 1024 * 1024; // 1000MB (~1GB)
-  if (file.size > maxSize) {
-    return {
-      valid: false,
-      error: "El archivo es demasiado grande. Tamaño máximo: 1GB"
-    };
-  }
-
-  return { valid: true };
-}
-
 export async function POST(request: NextRequest): Promise<NextResponse<AutomationResponse>> {
   try {
     // 1. Validar API key
@@ -62,71 +34,115 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       return NextResponse.json(
         {
           status: "error",
-          message: "API key inválida o no proporcionada"
+          message: "API key inválida o no proporcionada",
         },
         { status: 401 }
       );
     }
 
-    // 2. Obtener el archivo del request
-    const requestFormData = await request.formData();
-    const file = requestFormData.get("file") as File;
-    const email = requestFormData.get("email") as string;
-    const name = requestFormData.get("name") as string;
+    // 2. Obtener JSON con pathDropbox, email y name (en lugar de archivo directamente)
+    const { pathDropbox, email, name } = await request.json();
 
-    // 3. Validar que se proporcionó un archivo
-    if (!file) {
+    if (!pathDropbox) {
       return NextResponse.json(
         {
           status: "error",
-          message: "No se proporcionó ningún archivo"
+          message: "No se proporcionó la ruta del archivo en Dropbox (pathDropbox).",
         },
         { status: 400 }
       );
     }
 
-    // 4. Validar el archivo
-    const fileValidation = validateFile(file);
-    if (!fileValidation.valid) {
+    // 3. Obtener enlace temporal desde Dropbox API
+    const dropboxToken = process.env.DROPBOX_TOKEN;
+    if (!dropboxToken) {
       return NextResponse.json(
         {
           status: "error",
-          message: fileValidation.error!
-        },
-        { status: 400 }
-      );
-    }
-
-    // 5. Validar email y nombre (opcionales pero recomendados)
-    if (!email || !name) {
-      console.warn("Email o nombre no proporcionados, usando valores por defecto");
-    }
-
-    console.log(`Iniciando procesamiento automático para archivo: ${file.name}`);
-
-    // 6. Preparar datos
-    const nombreNormalizado = await normalizarNombreArchivo(file.name);
-    const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
-
-    // 7. Subir archivo a AssemblyAI (server-side con fetch)
-    const apiKey = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
-    if (!apiKey) {
-      return NextResponse.json(
-        {
-          status: "error",
-          message: "Falta API Key de AssemblyAI"
+          message: "Token de Dropbox no configurado en variables de entorno.",
         },
         { status: 500 }
       );
     }
 
-    const arrayBuffer = await file.arrayBuffer();
+    const dropboxLinkRes = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${dropboxToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ path: pathDropbox }),
+    });
+
+    if (!dropboxLinkRes.ok) {
+      const errorText = await dropboxLinkRes.text();
+      return NextResponse.json(
+        {
+          status: "error",
+          message: `Error al obtener enlace temporal de Dropbox: ${dropboxLinkRes.status} - ${errorText}`,
+        },
+        { status: 500 }
+      );
+    }
+
+    const dropboxLinkData = await dropboxLinkRes.json();
+    const fileDownloadUrl = dropboxLinkData.link; // Aquí tienes el link temporal directo al archivo
+console.log(fileDownloadUrl)
+    // 4. Extraer nombre de archivo de la ruta Dropbox
+    const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
+
+    // 5. Validar extensión permitida
+    const allowedExtensions = [
+      ".wav", ".mp3", ".m4a", ".aac", ".ogg", ".wma", ".flac",
+      ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm",
+    ];
+    const ext = "." + nombreArchivo.split(".").pop()?.toLowerCase();
+    if (!allowedExtensions.includes(ext)) {
+      return NextResponse.json(
+        {
+          status: "error",
+          message: `Tipo de archivo no permitido. Extensiones permitidas: ${allowedExtensions.join(", ")}`,
+        },
+        { status: 400 }
+      );
+    }
+
+    // 6. Normalizar nombre
+    const nombreNormalizado = await normalizarNombreArchivo(nombreArchivo);
+    const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
+
+    // 7. Descargar archivo directamente usando fetch y convertir a buffer para subir a AssemblyAI
+    const fileRes = await fetch(fileDownloadUrl);
+    if (!fileRes.ok) {
+      const errText = await fileRes.text();
+      return NextResponse.json(
+        {
+          status: "error",
+          message: `Error al descargar archivo desde Dropbox: ${fileRes.status} - ${errText}`,
+        },
+        { status: 500 }
+      );
+    }
+
+    const arrayBuffer = await fileRes.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+
+    // 8. Subir a AssemblyAI
+    const assemblyApiKey = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
+    if (!assemblyApiKey) {
+      return NextResponse.json(
+        {
+          status: "error",
+          message: "Falta API Key de AssemblyAI",
+        },
+        { status: 500 }
+      );
+    }
 
     const uploadRes = await fetch("https://api.assemblyai.com/v2/upload", {
       method: "POST",
       headers: {
-        Authorization: apiKey,
+        Authorization: assemblyApiKey,
       },
       body: buffer,
     });
@@ -136,7 +152,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       return NextResponse.json(
         {
           status: "error",
-          message: `Error al subir archivo a AssemblyAI: ${uploadRes.status} - ${errorText}`
+          message: `Error al subir archivo a AssemblyAI: ${uploadRes.status} - ${errorText}`,
         },
         { status: 500 }
       );
@@ -145,7 +161,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     const uploadData = await uploadRes.json();
     const uploadUrl = uploadData.upload_url;
 
-    // 8. Guardar proceso en base de datos
+    // 9. Guardar proceso en DB
     try {
       const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
       await GuardarNuevoProceso(
@@ -155,16 +171,17 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         0, // price placeholder
         tipo,
         uploadUrl,
-        '',
-        '',
-        '',
-        99 // industriaId por defecto
+        "",
+        "",
+        "",
+        99,
+        email || "automation@actas.com"
       );
     } catch (error) {
       console.warn("Error al guardar proceso, continuando con el procesamiento:", error);
     }
 
-    // 9. Procesar el archivo
+    // 10. Procesar archivo
     const processResult = await processAction(
       nombreCarpeta,
       nombreNormalizado,
@@ -177,13 +194,13 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       return NextResponse.json(
         {
           status: "error",
-          message: `Error en el procesamiento: ${processResult.message}`
+          message: `Error en el procesamiento: ${processResult.message}`,
         },
         { status: 500 }
       );
     }
 
-    // 10. Retornar respuesta
+    // 11. Retornar respuesta
     return NextResponse.json(
       {
         status: "success",
@@ -191,32 +208,31 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         data: {
           transcription: processResult.transcripcion as string,
           draft: processResult.acta as string,
-          fileId: nombreNormalizado
-        }
+          fileId: nombreNormalizado,
+        },
       },
       { status: 200 }
     );
-
   } catch (error) {
     console.error("Error en el endpoint de automatización:", error);
 
     return NextResponse.json(
       {
         status: "error",
-        message: "Error interno del servidor"
+        message: "Error interno del servidor",
       },
       { status: 500 }
     );
   }
 }
 
-// Método GET para verificar que el endpoint está funcionando
+// GET para verificar endpoint
 export async function GET(): Promise<NextResponse> {
   return NextResponse.json(
     {
       status: "success",
       message: "Endpoint de automatización funcionando correctamente",
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     },
     { status: 200 }
   );

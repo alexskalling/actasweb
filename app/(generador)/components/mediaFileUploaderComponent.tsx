@@ -384,7 +384,7 @@ export default function MediaFileUploaderComponent({
                 setIndustriaId(99);
               }
               const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ? "soporte" : "acta";
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId);
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
 
             }
           } catch (error: unknown) {
