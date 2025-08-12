@@ -9,6 +9,7 @@ declare global {
   }
 }
 import { X } from "lucide-react";
+import { spawn  } from "child_process";
 import { Button } from "@/components/ui/button";
 import { normalizarNombreArchivo } from "../services/utilsActions";
 import WompiComponent from "./wompiComponent";
@@ -35,6 +36,42 @@ interface MediaSelectorProps {
   accept?: string;
   maxSize?: number;
   onCheckActa: () => void;
+}
+function getDurationFromFFprobe(filePath: string): Promise<number> {
+  return new Promise((resolve, reject) => {
+    const ffprobe = spawn("ffprobe", [
+      "-v", "error",
+      "-show_entries", "format=duration",
+      "-of", "default=noprint_wrappers=1:nokey=1",
+      filePath
+    ]);
+
+    let output = "";
+    let errorOutput = "";
+
+    ffprobe.stdout.on("data", (data) => {
+      output += data;
+    });
+
+    ffprobe.stderr.on("data", (data) => {
+      errorOutput += data;
+    });
+
+    ffprobe.on("close", (code) => {
+      if (code !== 0) {
+        reject(new Error(errorOutput.trim() || `ffprobe exited with code ${code}`));
+        return;
+      }
+
+      const duration = parseFloat(output.trim());
+      if (isNaN(duration)) {
+        reject(new Error("No se pudo obtener la duración"));
+        return;
+      }
+
+      resolve(duration); // <-- Devuelve un number
+    });
+  });
 }
 
 export default function MediaFileUploaderComponent({
@@ -181,15 +218,20 @@ export default function MediaFileUploaderComponent({
     const url = URL.createObjectURL(file);
     setPreview(url);
     onFileSelect?.(file);
-
+    
     const media = file.type.startsWith("audio/") || fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
       ? new Audio(url)
       : document.createElement("video");
     media.src = url;
-    media.onloadedmetadata = () => {
-      setDuration(media.duration);
+    media.onloadedmetadata = async () => {
+      try {
+        const duration = await getDurationFromFFprobe(media.src);
+        setDuration(duration);
+      } catch (err) {
+        console.error("Error obteniendo duración:", err);
+      }
+      
     };
-
     // Track file selection event
     track('file_selected', {
       event_category: 'engagement',
@@ -477,7 +519,7 @@ export default function MediaFileUploaderComponent({
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
     window.open(proxyUrl, "_blank");
-    
+
   };
 
   const handleDownload = async () => {
@@ -499,7 +541,7 @@ export default function MediaFileUploaderComponent({
 
       if (transcripcion) {
         downloadFile(acta);
-        
+
         setTimeout(() => {
           if (acta) {
             downloadFile(transcripcion);
@@ -594,7 +636,7 @@ export default function MediaFileUploaderComponent({
     };
 
     fetchTransaction();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idtx]);
 
   return (
