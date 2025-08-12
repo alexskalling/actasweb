@@ -1,0 +1,758 @@
+Verificando si existe transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+[2025-08-11T17:13:29.292Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Transcripcion.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:13:30.494Z] Archivo "gmt20250809-121424_recording_2140x1128_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Iniciando transcripción con AssemblyAI para: gmt20250809-121424_recording_2140x1128.mp4
+Guardando transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+Transcripción guardada: gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Verificando contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt
+[2025-08-11T17:16:03.386Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Contenido.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:16:04.137Z] Archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Generando contenido para: gmt20250809-121424_recording_2140x1128.mp4
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: gmt20250809-121424_recording_2140x1128.mp4
+Guardando contenido en Nextcloud: gmt20250809-121424_recording_2140x1128_Contenido.txt
+Contenido guardado: gmt20250809-121424_recording_2140x1128_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: gmt20250809-121424_recording_2140x1128.mp4 en carpeta: gmt20250809-121424_recording_2140x1128
+Verificando Borrador .docx existente: gmt20250809-121424_recording_2140x1128_Borrador.docx
+[2025-08-11T17:16:53.253Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Borrador.docx en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:16:53.982Z] Archivo "gmt20250809-121424_recording_2140x1128_Borrador.docx" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: gmt20250809-121424_recording_2140x1128_Borrador.docx
+Preparando guardado .docx en Nextcloud: gmt20250809-121424_recording_2140x1128_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Registro de asistencia y verificación del quórum</li>
+ <li>Elección del presidente y secretario de la asamblea extraordinaria</li>
+ <li>Elección de la comisión verificadora del acta de la asamblea extraordinaria</li>
+ <li>Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</li>
+ <li>Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</li>
+ <li>Cierre de la asamblea</li>
+ </ol>
+</header>
+
+<h2>1. Registro de asistencia y verificación del quórum</h2>
+
+<p>En el inicio de la asamblea, se procedió al registro de asistencia y la verificación del quórum. Daniel Puentes, de la empresa Hypal, fue el encargado de dirigir este proceso, informando a los asistentes sobre el estado del quórum en tiempo real a través de la plataforma virtual.</p>
+
+<p>Inicialmente, a las 7:53 de la mañana, se reportó un quórum del 21.43%, con 15 apartamentos conectados. Se recordó a los participantes que la convocatoria estaba programada para las 8:00 a.m. y que se requería un quórum del 50.1% para dar inicio formal a la reunión.</p>
+
+<p>Daniel Puentes proporcionó instrucciones detalladas sobre el uso de la plataforma, destacando que integraba la plataforma Zoom para la videollamada y un panel con información relevante para cada usuario, como el número de apartamento, detalles de representación (si aplica) y un historial de votación. Se explicó que las votaciones se realizarían a través de notificaciones push en los dispositivos de los asistentes y que, en caso de no aparecer, se recomendaba refrescar la página o utilizar el chat de Zoom para expresar su voto.</p>
+
+<p>Se enfatizó que, de acuerdo con el reglamento interno de la copropiedad, solo se contabilizarían los votos de las unidades al día con su cuota de administración. Se aclaró que la plataforma no diferenciaba automáticamente entre quienes estaban al día y quienes estaban en mora, por lo que se realizaría un recuento manual después de cada votación para descontar los votos de las unidades morosas.</p>
+
+<p>Se instó a los propietarios a permanecer conectados en la plataforma para mantener la estabilidad del quórum, ya que la plataforma detectaría automáticamente las ausencias y afectaría el quórum dinámico. Se recordó que los micrófonos estaban cerrados por defecto y que los participantes podían levantar la mano virtualmente para solicitar la palabra.</p>
+
+<p>A las 7:57 a.m., el quórum había aumentado, y se solicitó a los propietarios presentes que informaran a otros vecinos para que se conectaran a la asamblea. Se explicó que la plataforma detectaba automáticamente la asistencia (presentes, ausentes y representados), mostrando los apartamentos presentes en la lista de asistencia del acta de asamblea.</p>
+
+<p>A las 8:00 a.m., el quórum alcanzó el 28.5%. Se reiteró la bienvenida a los participantes y se ofreció asistencia técnica para resolver dudas sobre la plataforma, los micrófonos y otros aspectos técnicos. Se recordó la importancia de dar permisos de acceso al micrófono al ingresar a la sesión.</p>
+
+<p>A las 8:01 a.m., el quórum se situó en el 29.92%, ascendiendo al 31.35% poco después. Se informó que el edificio constaba de 72 unidades inmobiliarias y que 24 de ellas estaban conectadas, representando el 34.2% del total. Se reiteró la importancia de permanecer en la videollamada para mantener el quórum y se recordó el procedimiento para votar y el descuento de votos de unidades morosas.</p>
+
+<p>A las 8:04 a.m., el quórum alcanzó el 41.49%, y se continuó brindando asistencia a los propietarios que tenían dificultades para conectarse. Se recordó nuevamente la importancia de dar permisos de acceso al micrófono.</p>
+
+<p>A las 8:05 a.m., el quórum era del 42.67%. A las 8:07 a.m., el quórum llegó al 44.17%. Se reiteraron las indicaciones sobre el uso de la plataforma, las votaciones y la importancia de la estabilidad de la conexión. Se recordó que solo se contabilizarían los votos de las unidades al día con su cuota de administración.</p>
+
+<p>A las 8:11 a.m., el quórum alcanzó el 46.93%. Se solicitó a quienes tuvieran poderes que indicaran a quién estaban representando en el chat de Zoom.</p>
+
+<p>Finalmente, a las 8:13 a.m., se alcanzó el quórum deliberatorio para comenzar la reunión, con un 50.1% de participación. Se reiteraron las indicaciones sobre la plataforma, el acceso al micrófono y el procedimiento de votación. Se dio la bienvenida a la administración para que diera la bienvenida e introducción a la asamblea.</p>
+
+<p>Álvaro Narváez Ibáñez, Administrador y representante legal del edificio Praia Tower House, dio la bienvenida a los asistentes a la asamblea extraordinaria, que fue citada para el 8 de agosto de 2025 a las 8:00 a.m. Señaló que, siendo las 8:23 a.m., se contaba con el quórum suficiente para iniciar y deliberar los puntos a tratar en la convocatoria.</p>
+
+<p>Daniel Puentes procedió a leer la convocatoria para dejar registro de acuerdo a la Ley 675. La convocatoria indicaba que, al no haber quórum reglamentario en la primera fecha, se realizaría una segunda convocatoria el miércoles 13 de agosto de 2025 a las 8:00 p.m. El orden del día a considerar fue el siguiente: registro de asistencia y verificación del quórum, elección del presidente y secretario de la asamblea extraordinaria, elección de la comisión verificadora del acta de la asamblea extraordinaria, análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal, presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco, y cierre de la asamblea.</p>
+
+<p>Daniel Puentes confirmó que, como primer punto, se contaba con la asistencia y el quórum reglamentario para dar inicio a la reunión, con un quórum del 57% y 40 unidades conectadas de las 72.</p>
+
+<h2>2. Elección del presidente y secretario de la asamblea extraordinaria</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea extraordinaria. Se abrió la discusión para recibir postulaciones.</p>
+
+<p>Oscar García, propietario del apartamento 805 y presidente del actual consejo, propuso a Carolina Gelves para presidir la asamblea, sugiriendo que el administrador actuara como secretario.</p>
+
+<p>Carolina Gelves, del apartamento 306, aceptó la postulación, expresando su intención de "debatir y entrar a definir estos importantes temas para el bienestar de nosotros como copropietarios del edificio Praia".</p>
+
+<p>La administración se postuló como secretario de la asamblea.</p>
+
+<p>El propietario del apartamento 201 solicitó la palabra, señalando que el orden del día no había sido sometido a consideración de la asamblea y cuestionando la elegibilidad de Carolina Gelves, argumentando que, como miembro del Consejo de Administración, no debería presidir la asamblea.</p>
+
+<p>Se dio respuesta al propietario del apartamento 201, indicando que, al tratarse de una asamblea extraordinaria, no es necesario aprobar el orden del día. Además, se aclaró que no existe impedimento en el reglamento de copropiedad para que un miembro del Consejo presida la asamblea.</p>
+
+<p>Ante la falta de más postulaciones para el cargo de presidente, se procedió a la votación. Se consultó a la asamblea si aprobaba la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario.</p>
+
+<p>Se lanzó la pregunta a la plataforma para que los asistentes emitieran su voto, indicando que se descontarían los votos de los apartamentos que se encontraran en mora.</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> A favor</li>
+ <li><strong>Apartamento 1202:</strong> A favor</li>
+ <li><strong>Apartamento 205:</strong> A favor</li>
+ <li><strong>Apartamento 306 (Carolina Gelves):</strong> A favor</li>
+ <li><strong>Apartamento 404:</strong> A favor</li>
+ <li><strong>Apartamento 816:</strong> A favor</li>
+ <li><strong>Apartamento 601:</strong> A favor</li>
+ <li><strong>Apartamento 605:</strong> A favor</li>
+ <li><strong>Apartamento 902:</strong> A favor</li>
+ <li><strong>Apartamento 803:</strong> A favor</li>
+ <li><strong>Apartamento 1103:</strong> En contra</li>
+ <li><strong>Apartamento 1206:</strong> A favor</li>
+ <li><strong>Apartamento 201:</strong> En contra</li>
+</ul>
+
+<p>Tras descontar los votos de los apartamentos en mora, el resultado final fue:</p>
+
+<ul>
+ <li>Aprobación: 90.30%</li>
+ <li>En contra: 7.69%</li>
+</ul>
+
+<p>En consecuencia, se aprobó la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario de la asamblea extraordinaria.</p>
+<h2>3. Elección de la comisión verificadora del acta de la asamblea extraordinaria</h2>
+
+<p>Durante la asamblea, se procedió a la elección de la comisión encargada de verificar el acta de la asamblea extraordinaria. Se requirieron tres personas para conformar dicha comisión, cuya función sería revisar que el acta reflejara fielmente lo acontecido en la reunión.</p>
+
+<p>Inicialmente, se abrió un espacio para que los asambleístas interesados en postularse como miembros de la comisión manifestaran su intención. Se enfatizó que la tarea consistía en verificar el acta elaborada por la empresa, asegurando su concordancia con los puntos deliberados y los acuerdos alcanzados durante la asamblea.</p>
+
+<p>En respuesta al llamado, varios asistentes presentaron sus candidaturas:</p>
+
+<ul>
+ <li><strong>Camilo Escobar Rico del apartamento 704</strong> manifestó su postulación como miembro de la comisión.</li>
+ <li><strong>Camilo Andrés Pachón Guzmán del apartamento 1102</strong> también se postuló para integrar la comisión verificadora.</li>
+ <li><strong>Helen Escobar del apartamento 1106</strong> se ofreció como candidata para completar el número requerido de miembros.</li>
+</ul>
+
+<p>Con tres candidatos disponibles, se sometió a votación la aprobación de los postulados como miembros de la comisión verificadora del acta. La pregunta formulada fue: "¿Se aprueba al señor Camilo Escobar del apartamento 704, al señor Camilo Pachón del 1102 y la señora Helen Escobar del 1106, como miembros de la comisión verificadora del acta de esta asamblea?".</p>
+
+<p>La votación se realizó a través de la plataforma virtual, permitiendo a los asistentes expresar su aprobación o rechazo a la propuesta. Tras el cierre de la votación y el respectivo descuento de los votos correspondientes a los apartamentos en mora, se obtuvieron los siguientes resultados:</p>
+
+<ul>
+ <li><strong>Camilo Escobar (704):</strong> Aprobación</li>
+ <li><strong>Camilo Pachón (1102):</strong> Aprobación</li>
+ <li><strong>Helen Escobar (1106):</strong> Aprobación</li>
+</ul>
+
+<p>La propuesta fue aprobada con una amplia mayoría, alcanzando un 97.43% de votos a favor. En consecuencia, se designó a Camilo Escobar del apartamento 704, Camilo Pachón del 1102 y Helen Escobar del 1106 como miembros de la comisión verificadora del acta de la asamblea extraordinaria.</p><h2>4. Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</h2>
+
+<p>Se dio inicio al análisis y discusión sobre el reajuste de la cuota de administración para el año 2025, motivado por un déficit presupuestal. Se aclaró que cualquier ajuste que se aprobara regiría hasta la Asamblea General Ordinaria de Propietarios del año 2026.</p>
+
+<p>Álvaro Narváez, administrador del edificio, presentó un resumen del informe previamente enviado a los copropietarios, explicando que la terminación del contrato con ATP Antenas generó un impacto negativo de aproximadamente 4 millones 131 mil pesos mensuales, lo que representa un 7.53% del presupuesto. Se estimó una pérdida total de 24 millones 787 mil pesos al finalizar el año 2025. Ante esta situación, se consideró indispensable realizar un ajuste presupuestal para equilibrar los gastos hasta marzo de 2026.</p>
+
+<p>María José Sánchez, contadora, complementó la información mostrando los estados financieros y cómo se reflejaría el déficit a partir de la suspensión del contrato con las antenas. Señaló que el ingreso de las antenas se había tomado como un ingreso presupuestado, financiando los gastos ordinarios de la copropiedad. Al dejar de percibirlo, se desfinanciaría el presupuesto, faltando por ejecutar 23 millones 452 mil pesos a partir de julio.</p>
+
+<p>Javier Rodríguez, del apartamento 806, solicitó un detalle del trabajo realizado por la administración para redistribuir los recursos y gestionar el tema de las antenas, sugiriendo revisar los proveedores y buscar mejores opciones en el mercado. El administrador respondió que se daría respuesta a su inquietud en el desarrollo del punto.</p>
+
+<p>El residente del apartamento 201 manifestó su desacuerdo con el aumento de la cuota de administración, proponiendo buscar otras alternativas y gestionar mejor los recursos, como las pólizas, para evitar siempre recurrir a la cuota de administración. Sugirió buscar otra entidad para ofrecer el servicio de antenas.</p>
+
+<p>César Augusto González Jiménez, del apartamento 502, expresó su desacuerdo con el incremento de la cuota de administración, argumentando que la administración debería haber previsto esta situación al momento de presentar el presupuesto. Propuso reducir costos, por ejemplo, disminuyendo la vigilancia armada en ambos sectores.</p>
+
+<p>Libardo Álvarez, del apartamento 706, señaló que la restricción de votaciones para los morosos solo aplica en decisiones de carácter económico. Indicó que el fondo de imprevistos está creado por ley y puede ser utilizado en caso de déficit presupuestal, con aprobación de la asamblea. Consideró un error aumentar la cuota ordinaria como cuota extraordinaria para el déficit presupuestal.</p>
+
+<p>El residente del apartamento 704 solicitó a la administración si existe una reducción de gastos importante para la cuota, ya que no se trata solo de pedir dinero, sino de ser eficientes en el gasto. Preguntó si existe la posibilidad de un nuevo contrato de antenas.</p>
+
+<p>Carlos Mejía, del apartamento 305, solicitó a la administración que se refiera a la situación financiera actual del edificio, cuál es el déficit completo y si existen problemas con los morosos.</p>
+
+<p>Andrés Cantillo, abogado, explicó que la empresa de antenas terminó el contrato unilateralmente, dentro de las facultades que tenía. Señaló que se intentó contactar a otras empresas, pero no fue sencillo. Indicó que el ingreso de la antena se había llevado al ingreso como si fuera un ingreso operacional, lo cual no es correcto. Lo mejor es que se lleve como un ingreso no operacional y se pueda usar para gastos extraordinarios. El abogado también dijo que la copropiedad es financieramente sana, pero no cuenta con fondos o reservas de gran monto para solventar todo tipo de situaciones.</p>
+
+<p>Javier Rodríguez, del apartamento 806, recordó que en su momento se trató de terminar un contrato de administración anterior, pero no se pudo. Señaló que la cubierta genera gastos adicionales periódicamente. Preguntó cuánto cuesta volver a hacer el mantenimiento de la cubierta.</p>
+
+<p>El residente del apartamento 501 manifestó no estar de acuerdo con el aumento de la cuota de administración.</p>
+
+<p>El residente del apartamento 201 reiteró su desacuerdo con el aumento de la cuota, señalando que se deben buscar otras alternativas. Llamó la atención a que se dedique el área de contabilidad de esta administración.</p>
+
+<p>El residente del apartamento 1106 consideró que todos han sido solidarios en las malas decisiones de las administraciones pasadas. Propuso que se sostengan con lo que se tiene en el momento y esperar a la nueva asamblea. Invitó a la nueva administración a que busque las alternativas para sostener la situación actual.</p>
+
+<p>Iván, del apartamento 202, indicó que el canon de administración se vuelve muy alto, pero se debe comenzar a trabajar con tecnología. Señaló que el edificio está en muy buenas condiciones, pero se está pagando mínimo de mínimo.</p>
+
+<p>El residente del apartamento 1102 solicitó que se comparta el informe detallado de toda la gestión que se hizo en relación con las alternativas de optimización de los gastos fijos y variables.</p>
+
+<p>Libardo Álvarez, del apartamento 706, indicó que el fondo imprevisto puede solucionar la situación que se está pasando. Señaló que hay un fondo de gastos de 14 o 12 millones de pesos, que se puede también amortiguar, aparte de lo que dijo Javier, hay un remanente de 21 millones de pesos.</p>
+
+<p>El residente del apartamento 704 indicó que si se hizo el contrato de estas antenas se aprobó que se utilizará para bajar el costo de administración. Pidió que se redujeran los costos al máximo posible.</p>
+
+<p>Carlos Mejía, del apartamento 305, solo quisiera que la administración se refiriera a cuál es la situación financiera actual del edificio, en el entendido de cuál es el déficit completo y si tenemos problemas con los morosos.</p>
+
+<p>María José Sánchez, contadora, explicó que en los consejos de administración ha llevado la situación y las posibles alternativas que tienen para subsanar el déficit. Señaló que tienen un fondo para inversiones y mejoras de zonas comunes producto de remanentes de gestión anteriores. También tienen un fondo de imprevistos que es la reserva legal. La contadora dijo que no puede ser una contadora que les va a decir a ustedes vamos a gastarnos todo el dinero, vamos a quedarnos en cero, que al final la copropiedad no tenga para pagar proveedores.</p>
+
+<p>Álvaro Narváez, administrador, indicó que se analizó el presupuesto, pero no se pueden hacer descuentos a lo loco. Señaló que ya existe un presupuesto recibido para el año 2025, el cual se ha venido afectando o fue afectado por el tema de las antenas. La idea era escuchar, aprovechando que están en la asamblea y están la mayoría de los copropietarios, hacer un sondeo de las posibles, los posibles caminos que se pueden tomar en la próxima asamblea para intentar subsanar este hueco presupuestal que se tiene.</p>
+
+<p>Oscar García, del apartamento 805, indicó que todos los copropietarios son responsables de que el edificio se mantenga o no se mantenga. Señaló que los 20 millones de pesos fueron aprobados en asamblea anterior para la solución de una entrada de agua en el piso 2 del pasillo y para mejorar en el área esa que hay del piso 2.</p>
+
+<p>Se procedió a someter a votación la siguiente pregunta: ¿La Asamblea aprueba el reajuste de la cuota de administración del periodo 2025 por déficit presupuestal, que regirá hasta que se realice la Asamblea General de propietarios del periodo 2026?</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li>Apartamento 104: <strong>No</strong></li>
+ <li>Apartamento 1202: <strong>No</strong></li>
+ <li>Apartamento 205: <strong>No</strong></li>
+ <li>Apartamento 306: <strong>Sí</strong></li>
+ <li>Apartamento 404: <strong>No</strong></li>
+ <li>Apartamento 805: <strong>Sí</strong></li>
+ <li>Apartamento 1601: <strong>No</strong></li>
+ <li>Apartamento 1605: <strong>No</strong></li>
+ <li>Apartamento 902: <strong>No</strong></li>
+ <li>Apartamento 101: <strong>No</strong></li>
+ <li>Apartamento 202: <strong>Sí</strong></li>
+ <li>Apartamento 301: <strong>No</strong></li>
+ <li>Apartamento 302: <strong>No</strong></li>
+ <li>Apartamento 303: <strong>No</strong></li>
+ <li>Apartamento 304: <strong>No</strong></li>
+ <li>Apartamento 305: <strong>No</strong></li>
+ <li>Apartamento 401: <strong>No</strong></li>
+ <li>Apartamento 402: <strong>No</strong></li>
+ <li>Apartamento 501: <strong>No</strong></li>
+ <li>Apartamento 502: <strong>No</strong></li>
+ <li>Apartamento 603: <strong>No</strong></li>
+ <li>Apartamento 702: <strong>No</strong></li>
+ <li>Apartamento 703: <strong>No</strong></li>
+ <li>Apartamento 704: <strong>No</strong></li>
+ <li>Apartamento 705: <strong>No</strong></li>
+ <li>Apartamento 706: <strong>No</strong></li>
+ <li>Apartamento 801: <strong>No</strong></li>
+ <li>Apartamento 802: <strong>No</strong></li>
+ <li>Apartamento 803: <strong>No</strong></li>
+ <li>Apartamento 804: <strong>No</strong></li>
+ <li>Apartamento 806: <strong>No</strong></li>
+ <li>Apartamento 901: <strong>No</strong></li>
+ <li>Apartamento 1001: <strong>No</strong></li>
+ <li>Apartamento 1101: <strong>No</strong></li>
+ <li>Apartamento 1102: <strong>No</strong></li>
+ <li>Apartamento 1103: <strong>No</strong></li>
+ <li>Apartamento 1106: <strong>No</strong></li>
+ <li>Apartamento 1201: <strong>No</strong></li>
+</ul>
+
+<p>Por coeficiente, la opción "Sí" obtuvo un 23.7% y la opción "No" un 40.6%. Por voto nominal, la opción "Sí" obtuvo el 36.95% y la opción "No" el 64%. Descontando los apartamentos que se encuentran morosos, el resultado final fue: "Sí" con un 23.7% y "No" con un 36.25% por coeficiente. Se concluyó que no fue aprobado el reajuste de la cuota.</p>
+
+<p>Ante la no aprobación del reajuste, se discutieron alternativas para subsanar el déficit presupuestal. Se mencionó la posibilidad de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos.</p>
+
+<p>Se dejó constancia de que, debido a que la asamblea extraordinaria fue convocada específicamente para tratar el tema del reajuste de la cuota de administración y la adquisición del equipo para el baño turco, cualquier decisión sobre el uso de otros fondos o la implementación de medidas adicionales requeriría una nueva convocatoria o un proceso de consulta diferente.</p><h2>5. Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</h2>
+
+<p>Se procedió a la presentación del punto referente a la aprobación de una cuota extraordinaria para la adquisición e instalación de un equipo de baño turco. Se indicó que el equipo actual lleva más de nueve meses averiado.</p>
+
+<p>El administrador señaló que se había considerado presentar a la asamblea la adquisición de un equipo nuevo, así como la mano de obra para su instalación y los materiales necesarios. No obstante, en caso de no ser aprobada la propuesta, se recurriría a la póliza del edificio. Se advirtió que la aprobación por parte de la póliza no está garantizada y depende de la gestión que se realice.</p>
+
+<p>Se presentó información detallada sobre el estado del equipo actual, describiéndolo como "en un estado deplorable internamente" y "todo destrozado o quemado por dentro". Se mencionó una cotización de la administración anterior para la reparación de la resistencia y contactores por un costo de 4 millones de pesos, pero con una garantía de solo tres meses, lo que se consideró inconveniente.</p>
+
+<p>Se informó que la empresa Obelma, ubicada en Medellín, cotizó un equipo nuevo en 9.132.000 pesos, incluyendo el envío a Cartagena y el desagüe automático. Adicionalmente, se estimó un costo de 2 millones de pesos para la mano de obra de instalación y otros accesorios, resultando en un costo total de 11.132.300 pesos para la adquisición e instalación del equipo.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación de la cuota extraordinaria para la adquisición e instalación del equipo de baño turco. La pregunta formulada fue: "¿La asamblea aprueba una única cuota extraordinaria destinada para la adquisición e instalación del equipo del baño turco?". Las opciones eran "Sí" o "No".</p>
+
+<p>Se registraron los siguientes votos individuales:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 105:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 201:</strong> No</li>
+ <li><strong>Apartamento 202:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 205:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 306:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 404:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 405:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 502:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 503:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 601:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 605:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 701:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 704:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 706:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 803:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 805:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 806:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 902:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1102:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1103:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1106:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1206:</strong> No se registra su voto.</li>
+</ul>
+
+<p>Los resultados iniciales mostraron un 22.30% de votos a favor y un 40.7% en contra por coeficiente. En el voto nominal, el 35% de los participantes votó a favor y el 64% en contra. Tras descontar los votos de los apartamentos en mora, el resultado final fue de 36.44% en contra, confirmando que la propuesta no fue aprobada.</p>
+
+<p>Ante la no aprobación de la cuota extraordinaria, se indicó que se procedería a radicar la solicitud ante la póliza del edificio para intentar cubrir los costos del equipo.</p>
+<h2>6. Cierre de la asamblea</h2>
+
+<p>Durante la discusión del punto sobre el cierre de la asamblea, se presentaron diversas mociones y comentarios finales por parte de los asistentes. La señora Presidenta resumió los temas tratados y las decisiones tomadas, agradeciendo la participación de todos los presentes.</p>
+
+<p>Se dio la palabra a los asistentes para comentarios finales, respetando el orden de solicitud de la palabra. Se enfatizó la importancia de la colaboración continua entre la administración, el consejo y los copropietarios para la buena gestión del edificio.</p>
+
+<p>La señora Presidenta indicó que, debido a la falta de aprobación del reajuste de la cuota de administración y la cuota extraordinaria para el baño turco, se buscarán alternativas para la gestión de los recursos y el mantenimiento de las amenidades. Se mencionó la posibilidad de convocar a una nueva asamblea o presentar la información por escrito para la toma de decisiones.</p>
+
+<p>Se recibieron comentarios sobre la necesidad de mejorar la comunicación y la transparencia en la gestión de la copropiedad. Se propuso realizar reuniones informativas periódicas para mantener a los copropietarios al tanto de las decisiones y los avances en la gestión del edificio.</p>
+
+<p>Finalmente, la señora Presidenta declaró cerrada la asamblea, agradeciendo nuevamente la participación de todos los asistentes y reiterando el compromiso de la administración y el consejo de trabajar en beneficio de la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 11:15</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se utilizará el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para subsanar el déficit presupuestal hasta que se realice la Asamblea General de propietarios del periodo 2026 – <strong>Responsable:</strong> No especificado</li>
+ <li>La administración radicará ante la póliza la solicitud para cubrir los costos del equipo de baño turco – <strong>Responsable:</strong> Administración</li>
+ <li>La administración y el consejo se reunirán para revisar los rubros actuales y presentar soluciones para el déficit presupuestal – <strong>Responsable:</strong> Administración y Consejo</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó a las 11:15, tras una extensa deliberación sobre el reajuste de la cuota de administración y la adquisición del equipo para el baño turco. A pesar de que la propuesta inicial de reajuste de la cuota de administración no fue aprobada, se llegó al acuerdo de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para cubrir el déficit presupuestal hasta la próxima Asamblea General. Además, la administración se encargará de gestionar la cobertura de los costos del equipo de baño turco a través de la póliza del edificio. Finalmente, la administración y el consejo se comprometen a reunirse para analizar los rubros actuales y presentar soluciones concretas para abordar el déficit presupuestal, buscando alternativas que minimicen el impacto en los copropietarios.
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Registro de asistencia y verificación del quórum</li>
+ <li>Elección del presidente y secretario de la asamblea extraordinaria</li>
+ <li>Elección de la comisión verificadora del acta de la asamblea extraordinaria</li>
+ <li>Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</li>
+ <li>Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</li>
+ <li>Cierre de la asamblea</li>
+ </ol>
+</header>
+
+<h2>1. Registro de asistencia y verificación del quórum</h2>
+
+<p>En el inicio de la asamblea, se procedió al registro de asistencia y la verificación del quórum. Daniel Puentes, de la empresa Hypal, fue el encargado de dirigir este proceso, informando a los asistentes sobre el estado del quórum en tiempo real a través de la plataforma virtual.</p>
+
+<p>Inicialmente, a las 7:53 de la mañana, se reportó un quórum del 21.43%, con 15 apartamentos conectados. Se recordó a los participantes que la convocatoria estaba programada para las 8:00 a.m. y que se requería un quórum del 50.1% para dar inicio formal a la reunión.</p>
+
+<p>Daniel Puentes proporcionó instrucciones detalladas sobre el uso de la plataforma, destacando que integraba la plataforma Zoom para la videollamada y un panel con información relevante para cada usuario, como el número de apartamento, detalles de representación (si aplica) y un historial de votación. Se explicó que las votaciones se realizarían a través de notificaciones push en los dispositivos de los asistentes y que, en caso de no aparecer, se recomendaba refrescar la página o utilizar el chat de Zoom para expresar su voto.</p>
+
+<p>Se enfatizó que, de acuerdo con el reglamento interno de la copropiedad, solo se contabilizarían los votos de las unidades al día con su cuota de administración. Se aclaró que la plataforma no diferenciaba automáticamente entre quienes estaban al día y quienes estaban en mora, por lo que se realizaría un recuento manual después de cada votación para descontar los votos de las unidades morosas.</p>
+
+<p>Se instó a los propietarios a permanecer conectados en la plataforma para mantener la estabilidad del quórum, ya que la plataforma detectaría automáticamente las ausencias y afectaría el quórum dinámico. Se recordó que los micrófonos estaban cerrados por defecto y que los participantes podían levantar la mano virtualmente para solicitar la palabra.</p>
+
+<p>A las 7:57 a.m., el quórum había aumentado, y se solicitó a los propietarios presentes que informaran a otros vecinos para que se conectaran a la asamblea. Se explicó que la plataforma detectaba automáticamente la asistencia (presentes, ausentes y representados), mostrando los apartamentos presentes en la lista de asistencia del acta de asamblea.</p>
+
+<p>A las 8:00 a.m., el quórum alcanzó el 28.5%. Se reiteró la bienvenida a los participantes y se ofreció asistencia técnica para resolver dudas sobre la plataforma, los micrófonos y otros aspectos técnicos. Se recordó la importancia de dar permisos de acceso al micrófono al ingresar a la sesión.</p>
+
+<p>A las 8:01 a.m., el quórum se situó en el 29.92%, ascendiendo al 31.35% poco después. Se informó que el edificio constaba de 72 unidades inmobiliarias y que 24 de ellas estaban conectadas, representando el 34.2% del total. Se reiteró la importancia de permanecer en la videollamada para mantener el quórum y se recordó el procedimiento para votar y el descuento de votos de unidades morosas.</p>
+
+<p>A las 8:04 a.m., el quórum alcanzó el 41.49%, y se continuó brindando asistencia a los propietarios que tenían dificultades para conectarse. Se recordó nuevamente la importancia de dar permisos de acceso al micrófono.</p>
+
+<p>A las 8:05 a.m., el quórum era del 42.67%. A las 8:07 a.m., el quórum llegó al 44.17%. Se reiteraron las indicaciones sobre el uso de la plataforma, las votaciones y la importancia de la estabilidad de la conexión. Se recordó que solo se contabilizarían los votos de las unidades al día con su cuota de administración.</p>
+
+<p>A las 8:11 a.m., el quórum alcanzó el 46.93%. Se solicitó a quienes tuvieran poderes que indicaran a quién estaban representando en el chat de Zoom.</p>
+
+<p>Finalmente, a las 8:13 a.m., se alcanzó el quórum deliberatorio para comenzar la reunión, con un 50.1% de participación. Se reiteraron las indicaciones sobre la plataforma, el acceso al micrófono y el procedimiento de votación. Se dio la bienvenida a la administración para que diera la bienvenida e introducción a la asamblea.</p>
+
+<p>Álvaro Narváez Ibáñez, Administrador y representante legal del edificio Praia Tower House, dio la bienvenida a los asistentes a la asamblea extraordinaria, que fue citada para el 8 de agosto de 2025 a las 8:00 a.m. Señaló que, siendo las 8:23 a.m., se contaba con el quórum suficiente para iniciar y deliberar los puntos a tratar en la convocatoria.</p>
+
+<p>Daniel Puentes procedió a leer la convocatoria para dejar registro de acuerdo a la Ley 675. La convocatoria indicaba que, al no haber quórum reglamentario en la primera fecha, se realizaría una segunda convocatoria el miércoles 13 de agosto de 2025 a las 8:00 p.m. El orden del día a considerar fue el siguiente: registro de asistencia y verificación del quórum, elección del presidente y secretario de la asamblea extraordinaria, elección de la comisión verificadora del acta de la asamblea extraordinaria, análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal, presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco, y cierre de la asamblea.</p>
+
+<p>Daniel Puentes confirmó que, como primer punto, se contaba con la asistencia y el quórum reglamentario para dar inicio a la reunión, con un quórum del 57% y 40 unidades conectadas de las 72.</p>
+
+<h2>2. Elección del presidente y secretario de la asamblea extraordinaria</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea extraordinaria. Se abrió la discusión para recibir postulaciones.</p>
+
+<p>Oscar García, propietario del apartamento 805 y presidente del actual consejo, propuso a Carolina Gelves para presidir la asamblea, sugiriendo que el administrador actuara como secretario.</p>
+
+<p>Carolina Gelves, del apartamento 306, aceptó la postulación, expresando su intención de "debatir y entrar a definir estos importantes temas para el bienestar de nosotros como copropietarios del edificio Praia".</p>
+
+<p>La administración se postuló como secretario de la asamblea.</p>
+
+<p>El propietario del apartamento 201 solicitó la palabra, señalando que el orden del día no había sido sometido a consideración de la asamblea y cuestionando la elegibilidad de Carolina Gelves, argumentando que, como miembro del Consejo de Administración, no debería presidir la asamblea.</p>
+
+<p>Se dio respuesta al propietario del apartamento 201, indicando que, al tratarse de una asamblea extraordinaria, no es necesario aprobar el orden del día. Además, se aclaró que no existe impedimento en el reglamento de copropiedad para que un miembro del Consejo presida la asamblea.</p>
+
+<p>Ante la falta de más postulaciones para el cargo de presidente, se procedió a la votación. Se consultó a la asamblea si aprobaba la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario.</p>
+
+<p>Se lanzó la pregunta a la plataforma para que los asistentes emitieran su voto, indicando que se descontarían los votos de los apartamentos que se encontraran en mora.</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> A favor</li>
+ <li><strong>Apartamento 1202:</strong> A favor</li>
+ <li><strong>Apartamento 205:</strong> A favor</li>
+ <li><strong>Apartamento 306 (Carolina Gelves):</strong> A favor</li>
+ <li><strong>Apartamento 404:</strong> A favor</li>
+ <li><strong>Apartamento 816:</strong> A favor</li>
+ <li><strong>Apartamento 601:</strong> A favor</li>
+ <li><strong>Apartamento 605:</strong> A favor</li>
+ <li><strong>Apartamento 902:</strong> A favor</li>
+ <li><strong>Apartamento 803:</strong> A favor</li>
+ <li><strong>Apartamento 1103:</strong> En contra</li>
+ <li><strong>Apartamento 1206:</strong> A favor</li>
+ <li><strong>Apartamento 201:</strong> En contra</li>
+</ul>
+
+<p>Tras descontar los votos de los apartamentos en mora, el resultado final fue:</p>
+
+<ul>
+ <li>Aprobación: 90.30%</li>
+ <li>En contra: 7.69%</li>
+</ul>
+
+<p>En consecuencia, se aprobó la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario de la asamblea extraordinaria.</p>
+<h2>3. Elección de la comisión verificadora del acta de la asamblea extraordinaria</h2>
+
+<p>Durante la asamblea, se procedió a la elección de la comisión encargada de verificar el acta de la asamblea extraordinaria. Se requirieron tres personas para conformar dicha comisión, cuya función sería revisar que el acta reflejara fielmente lo acontecido en la reunión.</p>
+
+<p>Inicialmente, se abrió un espacio para que los asambleístas interesados en postularse como miembros de la comisión manifestaran su intención. Se enfatizó que la tarea consistía en verificar el acta elaborada por la empresa, asegurando su concordancia con los puntos deliberados y los acuerdos alcanzados durante la asamblea.</p>
+
+<p>En respuesta al llamado, varios asistentes presentaron sus candidaturas:</p>
+
+<ul>
+ <li><strong>Camilo Escobar Rico del apartamento 704</strong> manifestó su postulación como miembro de la comisión.</li>
+ <li><strong>Camilo Andrés Pachón Guzmán del apartamento 1102</strong> también se postuló para integrar la comisión verificadora.</li>
+ <li><strong>Helen Escobar del apartamento 1106</strong> se ofreció como candidata para completar el número requerido de miembros.</li>
+</ul>
+
+<p>Con tres candidatos disponibles, se sometió a votación la aprobación de los postulados como miembros de la comisión verificadora del acta. La pregunta formulada fue: "¿Se aprueba al señor Camilo Escobar del apartamento 704, al señor Camilo Pachón del 1102 y la señora Helen Escobar del 1106, como miembros de la comisión verificadora del acta de esta asamblea?".</p>
+
+<p>La votación se realizó a través de la plataforma virtual, permitiendo a los asistentes expresar su aprobación o rechazo a la propuesta. Tras el cierre de la votación y el respectivo descuento de los votos correspondientes a los apartamentos en mora, se obtuvieron los siguientes resultados:</p>
+
+<ul>
+ <li><strong>Camilo Escobar (704):</strong> Aprobación</li>
+ <li><strong>Camilo Pachón (1102):</strong> Aprobación</li>
+ <li><strong>Helen Escobar (1106):</strong> Aprobación</li>
+</ul>
+
+<p>La propuesta fue aprobada con una amplia mayoría, alcanzando un 97.43% de votos a favor. En consecuencia, se designó a Camilo Escobar del apartamento 704, Camilo Pachón del 1102 y Helen Escobar del 1106 como miembros de la comisión verificadora del acta de la asamblea extraordinaria.</p><h2>4. Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</h2>
+
+<p>Se dio inicio al análisis y discusión sobre el reajuste de la cuota de administración para el año 2025, motivado por un déficit presupuestal. Se aclaró que cualquier ajuste que se aprobara regiría hasta la Asamblea General Ordinaria de Propietarios del año 2026.</p>
+
+<p>Álvaro Narváez, administrador del edificio, presentó un resumen del informe previamente enviado a los copropietarios, explicando que la terminación del contrato con ATP Antenas generó un impacto negativo de aproximadamente 4 millones 131 mil pesos mensuales, lo que representa un 7.53% del presupuesto. Se estimó una pérdida total de 24 millones 787 mil pesos al finalizar el año 2025. Ante esta situación, se consideró indispensable realizar un ajuste presupuestal para equilibrar los gastos hasta marzo de 2026.</p>
+
+<p>María José Sánchez, contadora, complementó la información mostrando los estados financieros y cómo se reflejaría el déficit a partir de la suspensión del contrato con las antenas. Señaló que el ingreso de las antenas se había tomado como un ingreso presupuestado, financiando los gastos ordinarios de la copropiedad. Al dejar de percibirlo, se desfinanciaría el presupuesto, faltando por ejecutar 23 millones 452 mil pesos a partir de julio.</p>
+
+<p>Javier Rodríguez, del apartamento 806, solicitó un detalle del trabajo realizado por la administración para redistribuir los recursos y gestionar el tema de las antenas, sugiriendo revisar los proveedores y buscar mejores opciones en el mercado. El administrador respondió que se daría respuesta a su inquietud en el desarrollo del punto.</p>
+
+<p>El residente del apartamento 201 manifestó su desacuerdo con el aumento de la cuota de administración, proponiendo buscar otras alternativas y gestionar mejor los recursos, como las pólizas, para evitar siempre recurrir a la cuota de administración. Sugirió buscar otra entidad para ofrecer el servicio de antenas.</p>
+
+<p>César Augusto González Jiménez, del apartamento 502, expresó su desacuerdo con el incremento de la cuota de administración, argumentando que la administración debería haber previsto esta situación al momento de presentar el presupuesto. Propuso reducir costos, por ejemplo, disminuyendo la vigilancia armada en ambos sectores.</p>
+
+<p>Libardo Álvarez, del apartamento 706, señaló que la restricción de votaciones para los morosos solo aplica en decisiones de carácter económico. Indicó que el fondo de imprevistos está creado por ley y puede ser utilizado en caso de déficit presupuestal, con aprobación de la asamblea. Consideró un error aumentar la cuota ordinaria como cuota extraordinaria para el déficit presupuestal.</p>
+
+<p>El residente del apartamento 704 solicitó a la administración si existe una reducción de gastos importante para la cuota, ya que no se trata solo de pedir dinero, sino de ser eficientes en el gasto. Preguntó si existe la posibilidad de un nuevo contrato de antenas.</p>
+
+<p>Carlos Mejía, del apartamento 305, solicitó a la administración que se refiera a la situación financiera actual del edificio, cuál es el déficit completo y si existen problemas con los morosos.</p>
+
+<p>Andrés Cantillo, abogado, explicó que la empresa de antenas terminó el contrato unilateralmente, dentro de las facultades que tenía. Señaló que se intentó contactar a otras empresas, pero no fue sencillo. Indicó que el ingreso de la antena se había llevado al ingreso como si fuera un ingreso operacional, lo cual no es correcto. Lo mejor es que se lleve como un ingreso no operacional y se pueda usar para gastos extraordinarios. El abogado también dijo que la copropiedad es financieramente sana, pero no cuenta con fondos o reservas de gran monto para solventar todo tipo de situaciones.</p>
+
+<p>Javier Rodríguez, del apartamento 806, recordó que en su momento se trató de terminar un contrato de administración anterior, pero no se pudo. Señaló que la cubierta genera gastos adicionales periódicamente. Preguntó cuánto cuesta volver a hacer el mantenimiento de la cubierta.</p>
+
+<p>El residente del apartamento 501 manifestó no estar de acuerdo con el aumento de la cuota de administración.</p>
+
+<p>El residente del apartamento 201 reiteró su desacuerdo con el aumento de la cuota, señalando que se deben buscar otras alternativas. Llamó la atención a que se dedique el área de contabilidad de esta administración.</p>
+
+<p>El residente del apartamento 1106 consideró que todos han sido solidarios en las malas decisiones de las administraciones pasadas. Propuso que se sostengan con lo que se tiene en el momento y esperar a la nueva asamblea. Invitó a la nueva administración a que busque las alternativas para sostener la situación actual.</p>
+
+<p>Iván, del apartamento 202, indicó que el canon de administración se vuelve muy alto, pero se debe comenzar a trabajar con tecnología. Señaló que el edificio está en muy buenas condiciones, pero se está pagando mínimo de mínimo.</p>
+
+<p>El residente del apartamento 1102 solicitó que se comparta el informe detallado de toda la gestión que se hizo en relación con las alternativas de optimización de los gastos fijos y variables.</p>
+
+<p>Libardo Álvarez, del apartamento 706, indicó que el fondo imprevisto puede solucionar la situación que se está pasando. Señaló que hay un fondo de gastos de 14 o 12 millones de pesos, que se puede también amortiguar, aparte de lo que dijo Javier, hay un remanente de 21 millones de pesos.</p>
+
+<p>El residente del apartamento 704 indicó que si se hizo el contrato de estas antenas se aprobó que se utilizará para bajar el costo de administración. Pidió que se redujeran los costos al máximo posible.</p>
+
+<p>Carlos Mejía, del apartamento 305, solo quisiera que la administración se refiriera a cuál es la situación financiera actual del edificio, en el entendido de cuál es el déficit completo y si tenemos problemas con los morosos.</p>
+
+<p>María José Sánchez, contadora, explicó que en los consejos de administración ha llevado la situación y las posibles alternativas que tienen para subsanar el déficit. Señaló que tienen un fondo para inversiones y mejoras de zonas comunes producto de remanentes de gestión anteriores. También tienen un fondo de imprevistos que es la reserva legal. La contadora dijo que no puede ser una contadora que les va a decir a ustedes vamos a gastarnos todo el dinero, vamos a quedarnos en cero, que al final la copropiedad no tenga para pagar proveedores.</p>
+
+<p>Álvaro Narváez, administrador, indicó que se analizó el presupuesto, pero no se pueden hacer descuentos a lo loco. Señaló que ya existe un presupuesto recibido para el año 2025, el cual se ha venido afectando o fue afectado por el tema de las antenas. La idea era escuchar, aprovechando que están en la asamblea y están la mayoría de los copropietarios, hacer un sondeo de las posibles, los posibles caminos que se pueden tomar en la próxima asamblea para intentar subsanar este hueco presupuestal que se tiene.</p>
+
+<p>Oscar García, del apartamento 805, indicó que todos los copropietarios son responsables de que el edificio se mantenga o no se mantenga. Señaló que los 20 millones de pesos fueron aprobados en asamblea anterior para la solución de una entrada de agua en el piso 2 del pasillo y para mejorar en el área esa que hay del piso 2.</p>
+
+<p>Se procedió a someter a votación la siguiente pregunta: ¿La Asamblea aprueba el reajuste de la cuota de administración del periodo 2025 por déficit presupuestal, que regirá hasta que se realice la Asamblea General de propietarios del periodo 2026?</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li>Apartamento 104: <strong>No</strong></li>
+ <li>Apartamento 1202: <strong>No</strong></li>
+ <li>Apartamento 205: <strong>No</strong></li>
+ <li>Apartamento 306: <strong>Sí</strong></li>
+ <li>Apartamento 404: <strong>No</strong></li>
+ <li>Apartamento 805: <strong>Sí</strong></li>
+ <li>Apartamento 1601: <strong>No</strong></li>
+ <li>Apartamento 1605: <strong>No</strong></li>
+ <li>Apartamento 902: <strong>No</strong></li>
+ <li>Apartamento 101: <strong>No</strong></li>
+ <li>Apartamento 202: <strong>Sí</strong></li>
+ <li>Apartamento 301: <strong>No</strong></li>
+ <li>Apartamento 302: <strong>No</strong></li>
+ <li>Apartamento 303: <strong>No</strong></li>
+ <li>Apartamento 304: <strong>No</strong></li>
+ <li>Apartamento 305: <strong>No</strong></li>
+ <li>Apartamento 401: <strong>No</strong></li>
+ <li>Apartamento 402: <strong>No</strong></li>
+ <li>Apartamento 501: <strong>No</strong></li>
+ <li>Apartamento 502: <strong>No</strong></li>
+ <li>Apartamento 603: <strong>No</strong></li>
+ <li>Apartamento 702: <strong>No</strong></li>
+ <li>Apartamento 703: <strong>No</strong></li>
+ <li>Apartamento 704: <strong>No</strong></li>
+ <li>Apartamento 705: <strong>No</strong></li>
+ <li>Apartamento 706: <strong>No</strong></li>
+ <li>Apartamento 801: <strong>No</strong></li>
+ <li>Apartamento 802: <strong>No</strong></li>
+ <li>Apartamento 803: <strong>No</strong></li>
+ <li>Apartamento 804: <strong>No</strong></li>
+ <li>Apartamento 806: <strong>No</strong></li>
+ <li>Apartamento 901: <strong>No</strong></li>
+ <li>Apartamento 1001: <strong>No</strong></li>
+ <li>Apartamento 1101: <strong>No</strong></li>
+ <li>Apartamento 1102: <strong>No</strong></li>
+ <li>Apartamento 1103: <strong>No</strong></li>
+ <li>Apartamento 1106: <strong>No</strong></li>
+ <li>Apartamento 1201: <strong>No</strong></li>
+</ul>
+
+<p>Por coeficiente, la opción "Sí" obtuvo un 23.7% y la opción "No" un 40.6%. Por voto nominal, la opción "Sí" obtuvo el 36.95% y la opción "No" el 64%. Descontando los apartamentos que se encuentran morosos, el resultado final fue: "Sí" con un 23.7% y "No" con un 36.25% por coeficiente. Se concluyó que no fue aprobado el reajuste de la cuota.</p>
+
+<p>Ante la no aprobación del reajuste, se discutieron alternativas para subsanar el déficit presupuestal. Se mencionó la posibilidad de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos.</p>
+
+<p>Se dejó constancia de que, debido a que la asamblea extraordinaria fue convocada específicamente para tratar el tema del reajuste de la cuota de administración y la adquisición del equipo para el baño turco, cualquier decisión sobre el uso de otros fondos o la implementación de medidas adicionales requeriría una nueva convocatoria o un proceso de consulta diferente.</p><h2>5. Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</h2>
+
+<p>Se procedió a la presentación del punto referente a la aprobación de una cuota extraordinaria para la adquisición e instalación de un equipo de baño turco. Se indicó que el equipo actual lleva más de nueve meses averiado.</p>
+
+<p>El administrador señaló que se había considerado presentar a la asamblea la adquisición de un equipo nuevo, así como la mano de obra para su instalación y los materiales necesarios. No obstante, en caso de no ser aprobada la propuesta, se recurriría a la póliza del edificio. Se advirtió que la aprobación por parte de la póliza no está garantizada y depende de la gestión que se realice.</p>
+
+<p>Se presentó información detallada sobre el estado del equipo actual, describiéndolo como "en un estado deplorable internamente" y "todo destrozado o quemado por dentro". Se mencionó una cotización de la administración anterior para la reparación de la resistencia y contactores por un costo de 4 millones de pesos, pero con una garantía de solo tres meses, lo que se consideró inconveniente.</p>
+
+<p>Se informó que la empresa Obelma, ubicada en Medellín, cotizó un equipo nuevo en 9.132.000 pesos, incluyendo el envío a Cartagena y el desagüe automático. Adicionalmente, se estimó un costo de 2 millones de pesos para la mano de obra de instalación y otros accesorios, resultando en un costo total de 11.132.300 pesos para la adquisición e instalación del equipo.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación de la cuota extraordinaria para la adquisición e instalación del equipo de baño turco. La pregunta formulada fue: "¿La asamblea aprueba una única cuota extraordinaria destinada para la adquisición e instalación del equipo del baño turco?". Las opciones eran "Sí" o "No".</p>
+
+<p>Se registraron los siguientes votos individuales:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 105:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 201:</strong> No</li>
+ <li><strong>Apartamento 202:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 205:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 306:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 404:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 405:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 502:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 503:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 601:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 605:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 701:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 704:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 706:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 803:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 805:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 806:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 902:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1102:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1103:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1106:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1206:</strong> No se registra su voto.</li>
+</ul>
+
+<p>Los resultados iniciales mostraron un 22.30% de votos a favor y un 40.7% en contra por coeficiente. En el voto nominal, el 35% de los participantes votó a favor y el 64% en contra. Tras descontar los votos de los apartamentos en mora, el resultado final fue de 36.44% en contra, confirmando que la propuesta no fue aprobada.</p>
+
+<p>Ante la no aprobación de la cuota extraordinaria, se indicó que se procedería a radicar la solicitud ante la póliza del edificio para intentar cubrir los costos del equipo.</p>
+<h2>6. Cierre de la asamblea</h2>
+
+<p>Durante la discusión del punto sobre el cierre de la asamblea, se presentaron diversas mociones y comentarios finales por parte de los asistentes. La señora Presidenta resumió los temas tratados y las decisiones tomadas, agradeciendo la participación de todos los presentes.</p>
+
+<p>Se dio la palabra a los asistentes para comentarios finales, respetando el orden de solicitud de la palabra. Se enfatizó la importancia de la colaboración continua entre la administración, el consejo y los copropietarios para la buena gestión del edificio.</p>
+
+<p>La señora Presidenta indicó que, debido a la falta de aprobación del reajuste de la cuota de administración y la cuota extraordinaria para el baño turco, se buscarán alternativas para la gestión de los recursos y el mantenimiento de las amenidades. Se mencionó la posibilidad de convocar a una nueva asamblea o presentar la información por escrito para la toma de decisiones.</p>
+
+<p>Se recibieron comentarios sobre la necesidad de mejorar la comunicación y la transparencia en la gestión de la copropiedad. Se propuso realizar reuniones informativas periódicas para mantener a los copropietarios al tanto de las decisiones y los avances en la gestión del edificio.</p>
+
+<p>Finalmente, la señora Presidenta declaró cerrada la asamblea, agradeciendo nuevamente la participación de todos los asistentes y reiterando el compromiso de la administración y el consejo de trabajar en beneficio de la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 11:15</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se utilizará el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para subsanar el déficit presupuestal hasta que se realice la Asamblea General de propietarios del periodo 2026 – <strong>Responsable:</strong> No especificado</li>
+ <li>La administración radicará ante la póliza la solicitud para cubrir los costos del equipo de baño turco – <strong>Responsable:</strong> Administración</li>
+ <li>La administración y el consejo se reunirán para revisar los rubros actuales y presentar soluciones para el déficit presupuestal – <strong>Responsable:</strong> Administración y Consejo</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó a las 11:15, tras una extensa deliberación sobre el reajuste de la cuota de administración y la adquisición del equipo para el baño turco. A pesar de que la propuesta inicial de reajuste de la cuota de administración no fue aprobada, se llegó al acuerdo de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para cubrir el déficit presupuestal hasta la próxima Asamblea General. Además, la administración se encargará de gestionar la cobertura de los costos del equipo de baño turco a través de la póliza del edificio. Finalmente, la administración y el consejo se comprometen a reunirse para analizar los rubros actuales y presentar soluciones concretas para abordar el déficit presupuestal, buscando alternativas que minimicen el impacto en los copropietarios.
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): gmt20250809-121424_recording_2140x1128_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/smTawJoKeDBMLYd
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/smTawJoKeDBMLYd
+Generando URL pública para Transcripcion.txt (EXISTENTE): gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/gHxro5D8Xg9AMCL
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/gHxro5D8Xg9AMCL
+Verificando si existe transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+[2025-08-11T18:33:39.591Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Transcripcion.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:40.831Z] Archivo "gmt20250809-121424_recording_2140x1128_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Transcripción existente encontrada: gmt20250809-121424_recording_2140x1128. Obteniendo contenido.
+Verificando contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt
+[2025-08-11T18:33:41.963Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Contenido.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:42.694Z] Archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt. Cargando.
+[2025-08-11T18:33:43.608Z] Contenido del archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: gmt20250809-121424_recording_2140x1128.mp4 en carpeta: gmt20250809-121424_recording_2140x1128
+Verificando Borrador .docx existente: gmt20250809-121424_recording_2140x1128_Borrador.docx
+[2025-08-11T18:33:43.609Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Borrador.docx en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:44.357Z] Archivo "gmt20250809-121424_recording_2140x1128_Borrador.docx" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): gmt20250809-121424_recording_2140x1128_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/wCMq88nrQANB7zs
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/wCMq88nrQANB7zs
+Generando URL pública para Transcripcion.txt (EXISTENTE): gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/896qpAfDoPbfz76
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/896qpAfDoPbfz76
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-11T23:53:28.911Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:30.153Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Iniciando transcripción con AssemblyAI para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Guardando transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Transcripción guardada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-11T23:53:37.611Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:38.380Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Generando contenido para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Guardando contenido en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+Contenido guardado: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-11T23:53:47.366Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:48.116Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Preparando guardado .docx en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Grabación de audio</li>
+ </ol>
+</header>
+
+<h2>1. Grabación de audio</h2>
+
+<p>El tema de la grabación de audio fue brevemente mencionado al inicio de la reunión. Se realizó una prueba de sonido para asegurar la correcta captura de la discusión. No se proporcionaron detalles adicionales ni se tomaron decisiones específicas con respecto a este tema durante la reunión.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>No se identificaron acuerdos específicos en la transcripción proporcionada. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Grabación de audio</li>
+ </ol>
+</header>
+
+<h2>1. Grabación de audio</h2>
+
+<p>El tema de la grabación de audio fue brevemente mencionado al inicio de la reunión. Se realizó una prueba de sonido para asegurar la correcta captura de la discusión. No se proporcionaron detalles adicionales ni se tomaron decisiones específicas con respecto a este tema durante la reunión.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>No se identificaron acuerdos específicos en la transcripción proporcionada. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/jiS58W9B6bddQoX
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/jiS58W9B6bddQoX
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/3s8k6Hj8TNtwnbD
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/3s8k6Hj8TNtwnbD

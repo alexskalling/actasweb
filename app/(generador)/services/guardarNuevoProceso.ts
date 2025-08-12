@@ -17,10 +17,12 @@ export async function GuardarNuevoProceso(
   urlTranscripcion: string | null | undefined,
   urlborrador: string | null | undefined,
   Industria: number | null | undefined,
+  automation_mail: string | null | undefined,
 ) {
   try {
     // 📨 obtener usuario
-    const mail = await getUserEmailFromSession();
+    const hasMail = automation_mail?.trim() !== "";
+    const mail = hasMail ? automation_mail : await getUserEmailFromSession();
     const user_id =
       !mail
         ? 'a817fffe-bc7e-4e29-83f7-b512b039e817'

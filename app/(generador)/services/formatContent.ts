@@ -1,9 +1,6 @@
 "use server";
-//@ts-expect-error revisar despues
 import htmlToDocx from "html-to-docx";
-//@ts-expect-error revisar despues
-
-import { DOMParser } from "xmldom";
+import { DOMParser } from "@xmldom/xmldom";
 
 import {
   manejarError,
@@ -429,7 +426,7 @@ async function guardarArchivoNextcloudDocx(
     const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
     const rutaCompletaArchivoDocx = `${rutaBaseActas}/${folder}/${nombreActaDocx}`;
 
-    const contentLength = Buffer.byteLength(docxBuffer);
+    const contentLength = Buffer.byteLength(docxBuffer as unknown as string);
 
     const cabecerasAutenticacion = {
       Authorization:

@@ -9,6 +9,7 @@ declare global {
   }
 }
 import { X } from "lucide-react";
+//import { exec } from "child_process";
 import { Button } from "@/components/ui/button";
 import { normalizarNombreArchivo } from "../services/utilsActions";
 import WompiComponent from "./wompiComponent";
@@ -36,6 +37,17 @@ interface MediaSelectorProps {
   maxSize?: number;
   onCheckActa: () => void;
 }
+/*function getRealAudioDuration(filePath: string) {
+  return new Promise((resolve, reject) => {
+    exec(`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`,
+      (error, stdout) => {
+        if (error) return reject(error);
+        const duration = parseFloat(stdout.trim());
+        resolve(duration);
+      }
+    );
+  });
+}*/
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
@@ -55,7 +67,7 @@ export default function MediaFileUploaderComponent({
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
   const [folder, setFolder] = React.useState<string>();
   const [file, setFile] = React.useState<string>();
-  const [fileid, setFileid] = React.useState<string>();
+  //const [fileid, setFileid] = React.useState<string>();
   const [acta, setActa] = React.useState<string>();
   const [idtx, setIdtx] = React.useState(null);
   const [transcripcion, setTranscripcion] = React.useState<string>();
@@ -181,12 +193,13 @@ export default function MediaFileUploaderComponent({
     const url = URL.createObjectURL(file);
     setPreview(url);
     onFileSelect?.(file);
-
+    
     const media = file.type.startsWith("audio/") || fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
       ? new Audio(url)
       : document.createElement("video");
     media.src = url;
     media.onloadedmetadata = () => {
+      
       setDuration(media.duration);
     };
 
@@ -384,7 +397,7 @@ export default function MediaFileUploaderComponent({
                 setIndustriaId(99);
               }
               const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ? "soporte" : "acta";
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId);
+              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
 
             }
           } catch (error: unknown) {
@@ -477,7 +490,7 @@ export default function MediaFileUploaderComponent({
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
     window.open(proxyUrl, "_blank");
-    console.log("Descarga iniciada a través del proxy para:", url);
+
   };
 
   const handleDownload = async () => {
@@ -499,9 +512,7 @@ export default function MediaFileUploaderComponent({
 
       if (transcripcion) {
         downloadFile(acta);
-        console.log(
-          "Esperando 3 segundos antes de descargar la transcripción..."
-        );
+
         setTimeout(() => {
           if (acta) {
             downloadFile(transcripcion);
@@ -537,7 +548,6 @@ export default function MediaFileUploaderComponent({
       });
     }
   };
-  console.log(fileid);
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
@@ -551,8 +561,8 @@ export default function MediaFileUploaderComponent({
       setIdtx(id);
       //@ts-expect-error revisar despues
       setFile(file);
-      //@ts-expect-error revisar despues
-      setFileid(fileid);
+      ////@ts-expect-error revisar despues
+      //setFileid(fileid);
       setUrlAssembly(fileid);
       //@ts-expect-error revisar despues
       setFolder(folder);
@@ -575,7 +585,6 @@ export default function MediaFileUploaderComponent({
 
 
           if (tx.data.status === "APPROVED") {
-            console.log("tx", tx.data);
             await ActualizarProceso(
               file || '', // nombre
               5, // idEstadoProceso (ejemplo: 4 = aprobado)
@@ -589,8 +598,6 @@ export default function MediaFileUploaderComponent({
             );
 
             handlePayment();
-          } else {
-            console.log("pago aprobado");
           }
         } catch (error) {
           console.error("Error al buscar la transacción:", error);
@@ -600,7 +607,7 @@ export default function MediaFileUploaderComponent({
     };
 
     fetchTransaction();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idtx]);
 
   return (
