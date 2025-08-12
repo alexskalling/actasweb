@@ -2,21 +2,21 @@ import { NextRequest, NextResponse } from "next/server";
 import { processAction } from "@/app/(generador)/services/processAction";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
-import ffmpeg from "fluent-ffmpeg";
-import { PassThrough } from "stream";
+//import ffmpeg from "fluent-ffmpeg";
+//import { PassThrough } from "stream";
+
+import { parseBuffer } from "music-metadata";
 
 async function getMediaDuration(buffer: Buffer): Promise<number> {
-  return new Promise((resolve, reject) => {
-    const stream = new PassThrough();
-    stream.end(buffer);
-
-    ffmpeg(stream)
-      .ffprobe((err, data) => {
-        if (err) return reject(err);
-        resolve(data.format.duration || 0); // segundos reales
-      });
-  });
+  try {
+    const metadata = await parseBuffer(buffer, undefined, { duration: true });
+    return metadata.format.duration || 0; // en segundos
+  } catch (err) {
+    console.error("Error leyendo duración real:", err);
+    return 0;
+  }
 }
+
 const calculatePrice = (durationInSeconds: number): number => {
   const segments = Math.ceil(durationInSeconds / 60 / 15);
   return segments * 2500;
@@ -125,7 +125,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    
+
 
     // 6. Normalizar nombre
     const nombreNormalizado = await normalizarNombreArchivo(nombreArchivo);
