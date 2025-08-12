@@ -9,7 +9,7 @@ declare global {
   }
 }
 import { X } from "lucide-react";
-import { spawn  } from "child_process";
+//import { exec } from "child_process";
 import { Button } from "@/components/ui/button";
 import { normalizarNombreArchivo } from "../services/utilsActions";
 import WompiComponent from "./wompiComponent";
@@ -37,42 +37,17 @@ interface MediaSelectorProps {
   maxSize?: number;
   onCheckActa: () => void;
 }
-function getDurationFromFFprobe(filePath: string): Promise<number> {
+/*function getRealAudioDuration(filePath: string) {
   return new Promise((resolve, reject) => {
-    const ffprobe = spawn("ffprobe", [
-      "-v", "error",
-      "-show_entries", "format=duration",
-      "-of", "default=noprint_wrappers=1:nokey=1",
-      filePath
-    ]);
-
-    let output = "";
-    let errorOutput = "";
-
-    ffprobe.stdout.on("data", (data) => {
-      output += data;
-    });
-
-    ffprobe.stderr.on("data", (data) => {
-      errorOutput += data;
-    });
-
-    ffprobe.on("close", (code) => {
-      if (code !== 0) {
-        reject(new Error(errorOutput.trim() || `ffprobe exited with code ${code}`));
-        return;
+    exec(`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`,
+      (error, stdout) => {
+        if (error) return reject(error);
+        const duration = parseFloat(stdout.trim());
+        resolve(duration);
       }
-
-      const duration = parseFloat(output.trim());
-      if (isNaN(duration)) {
-        reject(new Error("No se pudo obtener la duración"));
-        return;
-      }
-
-      resolve(duration); // <-- Devuelve un number
-    });
+    );
   });
-}
+}*/
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
@@ -223,15 +198,11 @@ export default function MediaFileUploaderComponent({
       ? new Audio(url)
       : document.createElement("video");
     media.src = url;
-    media.onloadedmetadata = async () => {
-      try {
-        const duration = await getDurationFromFFprobe(media.src);
-        setDuration(duration);
-      } catch (err) {
-        console.error("Error obteniendo duración:", err);
-      }
+    media.onloadedmetadata = () => {
       
+      setDuration(media.duration);
     };
+
     // Track file selection event
     track('file_selected', {
       event_category: 'engagement',
