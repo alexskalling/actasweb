@@ -60,7 +60,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     }
 
     // 2. Obtener JSON con pathDropbox, email y name (en lugar de archivo directamente)
-    const { pathDropbox, email, name } = await request.json();
+    const formData = await request.formData();
+
+    const email = formData.get("email") as string;
+    const name = formData.get("name") as string;
+    const pathDropbox = formData.get("pathDropbox") as string; // si lo mandas
 
     if (!pathDropbox) {
       return NextResponse.json(
@@ -213,7 +217,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       email || "automation@actas.com",
       name || "Usuario Automatizado"
     );
-
     if (processResult.status !== "success") {
       return NextResponse.json(
         {
