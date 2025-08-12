@@ -2,6 +2,25 @@ import { NextRequest, NextResponse } from "next/server";
 import { processAction } from "@/app/(generador)/services/processAction";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
+import ffmpeg from "fluent-ffmpeg";
+import { PassThrough } from "stream";
+
+async function getMediaDuration(buffer: Buffer): Promise<number> {
+  return new Promise((resolve, reject) => {
+    const stream = new PassThrough();
+    stream.end(buffer);
+
+    ffmpeg(stream)
+      .ffprobe((err, data) => {
+        if (err) return reject(err);
+        resolve(data.format.duration || 0); // segundos reales
+      });
+  });
+}
+const calculatePrice = (durationInSeconds: number): number => {
+  const segments = Math.ceil(durationInSeconds / 60 / 15);
+  return segments * 2500;
+};
 
 // Tipos para la respuesta
 interface AutomationResponse {
@@ -87,7 +106,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
 
     const dropboxLinkData = await dropboxLinkRes.json();
     const fileDownloadUrl = dropboxLinkData.link; // Aquí tienes el link temporal directo al archivo
-console.log(fileDownloadUrl)
     // 4. Extraer nombre de archivo de la ruta Dropbox
     const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
 
@@ -106,6 +124,8 @@ console.log(fileDownloadUrl)
         { status: 400 }
       );
     }
+
+    
 
     // 6. Normalizar nombre
     const nombreNormalizado = await normalizarNombreArchivo(nombreArchivo);
@@ -126,6 +146,10 @@ console.log(fileDownloadUrl)
 
     const arrayBuffer = await fileRes.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
+    const durationInSeconds = await getMediaDuration(buffer);
+    const formattedDuration = new Date(durationInSeconds * 1000)
+      .toISOString()
+      .substr(11, 8);
 
     // 8. Subir a AssemblyAI
     const assemblyApiKey = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
@@ -167,8 +191,8 @@ console.log(fileDownloadUrl)
       await GuardarNuevoProceso(
         nombreNormalizado,
         4,
-        "00:00:00", // duration placeholder
-        0, // price placeholder
+        formattedDuration,
+        calculatePrice(durationInSeconds),
         tipo,
         uploadUrl,
         "",
@@ -226,7 +250,6 @@ console.log(fileDownloadUrl)
   }
 }
 
-// GET para verificar endpoint
 export async function GET(): Promise<NextResponse> {
   return NextResponse.json(
     {
