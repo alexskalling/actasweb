@@ -6,11 +6,20 @@ import {
   bigint,
   serial,
   integer,
+  jsonb,
 } from "drizzle-orm/pg-core";
 import {
   relations
 } from "drizzle-orm";
 
+export type DetalleError = {
+  event_category: string;
+  event_label: string;
+  transaction_id: string;
+  file_name: string;
+  duration: string | number;
+  error_message: string;
+};
 // Tabla: estados_proceso
 export const estadosProceso = pgTable("estados_proceso", {
   id: bigint("id_estado_proceso", { mode: "number" })
@@ -73,6 +82,24 @@ export const industrias = pgTable('industrias', {
   id: serial('id_industria').primaryKey(),
   nombre: text('nombre_industria').notNull().unique(),
 });
+
+export const fallosActa = pgTable("fallos_acta", {
+  id: uuid("id_fallo").primaryKey().notNull().defaultRandom(),
+  idActa: uuid("id_acta")
+    .notNull()
+    .references(() => actas.id, { onDelete: "cascade" }),
+  detalleFallo: jsonb("detalle_fallo").$type<DetalleError>(),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+});
+
+export const fallosActaRelations = relations(fallosActa, ({ one }) => ({
+  acta: one(actas, {
+    fields: [fallosActa.idActa],
+    references: [actas.id],
+  }),
+}));
 
 export const actasRelations = relations(actas, ({ one }) => ({
   estadoProceso: one(estadosProceso, {
