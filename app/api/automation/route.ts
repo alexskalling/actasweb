@@ -2,9 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { processAction } from "@/app/(generador)/services/processAction";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
-
-
 import { parseBuffer } from "music-metadata";
+
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {
     const metadata = await parseBuffer(buffer, undefined, { duration: true });
@@ -223,9 +222,9 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         4,
         formattedDuration,
         calculatePrice(durationInSeconds),
-        tipo,
-        uploadUrl,
         "",
+        uploadUrl,
+        tipo,
         "",
         "",
         99,

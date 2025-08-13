@@ -132,7 +132,7 @@ const WompiComponent = (props) => {
           undefined,
           transaction.amountInCents / 100,
           transaction.id,
-         undefined,
+          undefined,
           transaction.reference,
           null, // urlTranscripcion (ajusta según tu flujo)
           null,  // urlborrador (ajusta según tu flujo)
