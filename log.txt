@@ -803,3 +803,1586 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): guillo_test_Transcrip
 Compartiendo archivo existente para obtener URL pública: /Actas/guillo_test/guillo_test_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/cJ5xiRRoECW6yZY
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/cJ5xiRRoECW6yZY
+Verificando si existe transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+[2025-08-11T17:13:29.292Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Transcripcion.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:13:30.494Z] Archivo "gmt20250809-121424_recording_2140x1128_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Iniciando transcripción con AssemblyAI para: gmt20250809-121424_recording_2140x1128.mp4
+Guardando transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+Transcripción guardada: gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Verificando contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt
+[2025-08-11T17:16:03.386Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Contenido.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:16:04.137Z] Archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Generando contenido para: gmt20250809-121424_recording_2140x1128.mp4
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: gmt20250809-121424_recording_2140x1128.mp4
+Guardando contenido en Nextcloud: gmt20250809-121424_recording_2140x1128_Contenido.txt
+Contenido guardado: gmt20250809-121424_recording_2140x1128_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: gmt20250809-121424_recording_2140x1128.mp4 en carpeta: gmt20250809-121424_recording_2140x1128
+Verificando Borrador .docx existente: gmt20250809-121424_recording_2140x1128_Borrador.docx
+[2025-08-11T17:16:53.253Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Borrador.docx en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T17:16:53.982Z] Archivo "gmt20250809-121424_recording_2140x1128_Borrador.docx" NO encontrado en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: gmt20250809-121424_recording_2140x1128_Borrador.docx
+Preparando guardado .docx en Nextcloud: gmt20250809-121424_recording_2140x1128_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Registro de asistencia y verificación del quórum</li>
+ <li>Elección del presidente y secretario de la asamblea extraordinaria</li>
+ <li>Elección de la comisión verificadora del acta de la asamblea extraordinaria</li>
+ <li>Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</li>
+ <li>Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</li>
+ <li>Cierre de la asamblea</li>
+ </ol>
+</header>
+
+<h2>1. Registro de asistencia y verificación del quórum</h2>
+
+<p>En el inicio de la asamblea, se procedió al registro de asistencia y la verificación del quórum. Daniel Puentes, de la empresa Hypal, fue el encargado de dirigir este proceso, informando a los asistentes sobre el estado del quórum en tiempo real a través de la plataforma virtual.</p>
+
+<p>Inicialmente, a las 7:53 de la mañana, se reportó un quórum del 21.43%, con 15 apartamentos conectados. Se recordó a los participantes que la convocatoria estaba programada para las 8:00 a.m. y que se requería un quórum del 50.1% para dar inicio formal a la reunión.</p>
+
+<p>Daniel Puentes proporcionó instrucciones detalladas sobre el uso de la plataforma, destacando que integraba la plataforma Zoom para la videollamada y un panel con información relevante para cada usuario, como el número de apartamento, detalles de representación (si aplica) y un historial de votación. Se explicó que las votaciones se realizarían a través de notificaciones push en los dispositivos de los asistentes y que, en caso de no aparecer, se recomendaba refrescar la página o utilizar el chat de Zoom para expresar su voto.</p>
+
+<p>Se enfatizó que, de acuerdo con el reglamento interno de la copropiedad, solo se contabilizarían los votos de las unidades al día con su cuota de administración. Se aclaró que la plataforma no diferenciaba automáticamente entre quienes estaban al día y quienes estaban en mora, por lo que se realizaría un recuento manual después de cada votación para descontar los votos de las unidades morosas.</p>
+
+<p>Se instó a los propietarios a permanecer conectados en la plataforma para mantener la estabilidad del quórum, ya que la plataforma detectaría automáticamente las ausencias y afectaría el quórum dinámico. Se recordó que los micrófonos estaban cerrados por defecto y que los participantes podían levantar la mano virtualmente para solicitar la palabra.</p>
+
+<p>A las 7:57 a.m., el quórum había aumentado, y se solicitó a los propietarios presentes que informaran a otros vecinos para que se conectaran a la asamblea. Se explicó que la plataforma detectaba automáticamente la asistencia (presentes, ausentes y representados), mostrando los apartamentos presentes en la lista de asistencia del acta de asamblea.</p>
+
+<p>A las 8:00 a.m., el quórum alcanzó el 28.5%. Se reiteró la bienvenida a los participantes y se ofreció asistencia técnica para resolver dudas sobre la plataforma, los micrófonos y otros aspectos técnicos. Se recordó la importancia de dar permisos de acceso al micrófono al ingresar a la sesión.</p>
+
+<p>A las 8:01 a.m., el quórum se situó en el 29.92%, ascendiendo al 31.35% poco después. Se informó que el edificio constaba de 72 unidades inmobiliarias y que 24 de ellas estaban conectadas, representando el 34.2% del total. Se reiteró la importancia de permanecer en la videollamada para mantener el quórum y se recordó el procedimiento para votar y el descuento de votos de unidades morosas.</p>
+
+<p>A las 8:04 a.m., el quórum alcanzó el 41.49%, y se continuó brindando asistencia a los propietarios que tenían dificultades para conectarse. Se recordó nuevamente la importancia de dar permisos de acceso al micrófono.</p>
+
+<p>A las 8:05 a.m., el quórum era del 42.67%. A las 8:07 a.m., el quórum llegó al 44.17%. Se reiteraron las indicaciones sobre el uso de la plataforma, las votaciones y la importancia de la estabilidad de la conexión. Se recordó que solo se contabilizarían los votos de las unidades al día con su cuota de administración.</p>
+
+<p>A las 8:11 a.m., el quórum alcanzó el 46.93%. Se solicitó a quienes tuvieran poderes que indicaran a quién estaban representando en el chat de Zoom.</p>
+
+<p>Finalmente, a las 8:13 a.m., se alcanzó el quórum deliberatorio para comenzar la reunión, con un 50.1% de participación. Se reiteraron las indicaciones sobre la plataforma, el acceso al micrófono y el procedimiento de votación. Se dio la bienvenida a la administración para que diera la bienvenida e introducción a la asamblea.</p>
+
+<p>Álvaro Narváez Ibáñez, Administrador y representante legal del edificio Praia Tower House, dio la bienvenida a los asistentes a la asamblea extraordinaria, que fue citada para el 8 de agosto de 2025 a las 8:00 a.m. Señaló que, siendo las 8:23 a.m., se contaba con el quórum suficiente para iniciar y deliberar los puntos a tratar en la convocatoria.</p>
+
+<p>Daniel Puentes procedió a leer la convocatoria para dejar registro de acuerdo a la Ley 675. La convocatoria indicaba que, al no haber quórum reglamentario en la primera fecha, se realizaría una segunda convocatoria el miércoles 13 de agosto de 2025 a las 8:00 p.m. El orden del día a considerar fue el siguiente: registro de asistencia y verificación del quórum, elección del presidente y secretario de la asamblea extraordinaria, elección de la comisión verificadora del acta de la asamblea extraordinaria, análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal, presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco, y cierre de la asamblea.</p>
+
+<p>Daniel Puentes confirmó que, como primer punto, se contaba con la asistencia y el quórum reglamentario para dar inicio a la reunión, con un quórum del 57% y 40 unidades conectadas de las 72.</p>
+
+<h2>2. Elección del presidente y secretario de la asamblea extraordinaria</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea extraordinaria. Se abrió la discusión para recibir postulaciones.</p>
+
+<p>Oscar García, propietario del apartamento 805 y presidente del actual consejo, propuso a Carolina Gelves para presidir la asamblea, sugiriendo que el administrador actuara como secretario.</p>
+
+<p>Carolina Gelves, del apartamento 306, aceptó la postulación, expresando su intención de "debatir y entrar a definir estos importantes temas para el bienestar de nosotros como copropietarios del edificio Praia".</p>
+
+<p>La administración se postuló como secretario de la asamblea.</p>
+
+<p>El propietario del apartamento 201 solicitó la palabra, señalando que el orden del día no había sido sometido a consideración de la asamblea y cuestionando la elegibilidad de Carolina Gelves, argumentando que, como miembro del Consejo de Administración, no debería presidir la asamblea.</p>
+
+<p>Se dio respuesta al propietario del apartamento 201, indicando que, al tratarse de una asamblea extraordinaria, no es necesario aprobar el orden del día. Además, se aclaró que no existe impedimento en el reglamento de copropiedad para que un miembro del Consejo presida la asamblea.</p>
+
+<p>Ante la falta de más postulaciones para el cargo de presidente, se procedió a la votación. Se consultó a la asamblea si aprobaba la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario.</p>
+
+<p>Se lanzó la pregunta a la plataforma para que los asistentes emitieran su voto, indicando que se descontarían los votos de los apartamentos que se encontraran en mora.</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> A favor</li>
+ <li><strong>Apartamento 1202:</strong> A favor</li>
+ <li><strong>Apartamento 205:</strong> A favor</li>
+ <li><strong>Apartamento 306 (Carolina Gelves):</strong> A favor</li>
+ <li><strong>Apartamento 404:</strong> A favor</li>
+ <li><strong>Apartamento 816:</strong> A favor</li>
+ <li><strong>Apartamento 601:</strong> A favor</li>
+ <li><strong>Apartamento 605:</strong> A favor</li>
+ <li><strong>Apartamento 902:</strong> A favor</li>
+ <li><strong>Apartamento 803:</strong> A favor</li>
+ <li><strong>Apartamento 1103:</strong> En contra</li>
+ <li><strong>Apartamento 1206:</strong> A favor</li>
+ <li><strong>Apartamento 201:</strong> En contra</li>
+</ul>
+
+<p>Tras descontar los votos de los apartamentos en mora, el resultado final fue:</p>
+
+<ul>
+ <li>Aprobación: 90.30%</li>
+ <li>En contra: 7.69%</li>
+</ul>
+
+<p>En consecuencia, se aprobó la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario de la asamblea extraordinaria.</p>
+<h2>3. Elección de la comisión verificadora del acta de la asamblea extraordinaria</h2>
+
+<p>Durante la asamblea, se procedió a la elección de la comisión encargada de verificar el acta de la asamblea extraordinaria. Se requirieron tres personas para conformar dicha comisión, cuya función sería revisar que el acta reflejara fielmente lo acontecido en la reunión.</p>
+
+<p>Inicialmente, se abrió un espacio para que los asambleístas interesados en postularse como miembros de la comisión manifestaran su intención. Se enfatizó que la tarea consistía en verificar el acta elaborada por la empresa, asegurando su concordancia con los puntos deliberados y los acuerdos alcanzados durante la asamblea.</p>
+
+<p>En respuesta al llamado, varios asistentes presentaron sus candidaturas:</p>
+
+<ul>
+ <li><strong>Camilo Escobar Rico del apartamento 704</strong> manifestó su postulación como miembro de la comisión.</li>
+ <li><strong>Camilo Andrés Pachón Guzmán del apartamento 1102</strong> también se postuló para integrar la comisión verificadora.</li>
+ <li><strong>Helen Escobar del apartamento 1106</strong> se ofreció como candidata para completar el número requerido de miembros.</li>
+</ul>
+
+<p>Con tres candidatos disponibles, se sometió a votación la aprobación de los postulados como miembros de la comisión verificadora del acta. La pregunta formulada fue: "¿Se aprueba al señor Camilo Escobar del apartamento 704, al señor Camilo Pachón del 1102 y la señora Helen Escobar del 1106, como miembros de la comisión verificadora del acta de esta asamblea?".</p>
+
+<p>La votación se realizó a través de la plataforma virtual, permitiendo a los asistentes expresar su aprobación o rechazo a la propuesta. Tras el cierre de la votación y el respectivo descuento de los votos correspondientes a los apartamentos en mora, se obtuvieron los siguientes resultados:</p>
+
+<ul>
+ <li><strong>Camilo Escobar (704):</strong> Aprobación</li>
+ <li><strong>Camilo Pachón (1102):</strong> Aprobación</li>
+ <li><strong>Helen Escobar (1106):</strong> Aprobación</li>
+</ul>
+
+<p>La propuesta fue aprobada con una amplia mayoría, alcanzando un 97.43% de votos a favor. En consecuencia, se designó a Camilo Escobar del apartamento 704, Camilo Pachón del 1102 y Helen Escobar del 1106 como miembros de la comisión verificadora del acta de la asamblea extraordinaria.</p><h2>4. Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</h2>
+
+<p>Se dio inicio al análisis y discusión sobre el reajuste de la cuota de administración para el año 2025, motivado por un déficit presupuestal. Se aclaró que cualquier ajuste que se aprobara regiría hasta la Asamblea General Ordinaria de Propietarios del año 2026.</p>
+
+<p>Álvaro Narváez, administrador del edificio, presentó un resumen del informe previamente enviado a los copropietarios, explicando que la terminación del contrato con ATP Antenas generó un impacto negativo de aproximadamente 4 millones 131 mil pesos mensuales, lo que representa un 7.53% del presupuesto. Se estimó una pérdida total de 24 millones 787 mil pesos al finalizar el año 2025. Ante esta situación, se consideró indispensable realizar un ajuste presupuestal para equilibrar los gastos hasta marzo de 2026.</p>
+
+<p>María José Sánchez, contadora, complementó la información mostrando los estados financieros y cómo se reflejaría el déficit a partir de la suspensión del contrato con las antenas. Señaló que el ingreso de las antenas se había tomado como un ingreso presupuestado, financiando los gastos ordinarios de la copropiedad. Al dejar de percibirlo, se desfinanciaría el presupuesto, faltando por ejecutar 23 millones 452 mil pesos a partir de julio.</p>
+
+<p>Javier Rodríguez, del apartamento 806, solicitó un detalle del trabajo realizado por la administración para redistribuir los recursos y gestionar el tema de las antenas, sugiriendo revisar los proveedores y buscar mejores opciones en el mercado. El administrador respondió que se daría respuesta a su inquietud en el desarrollo del punto.</p>
+
+<p>El residente del apartamento 201 manifestó su desacuerdo con el aumento de la cuota de administración, proponiendo buscar otras alternativas y gestionar mejor los recursos, como las pólizas, para evitar siempre recurrir a la cuota de administración. Sugirió buscar otra entidad para ofrecer el servicio de antenas.</p>
+
+<p>César Augusto González Jiménez, del apartamento 502, expresó su desacuerdo con el incremento de la cuota de administración, argumentando que la administración debería haber previsto esta situación al momento de presentar el presupuesto. Propuso reducir costos, por ejemplo, disminuyendo la vigilancia armada en ambos sectores.</p>
+
+<p>Libardo Álvarez, del apartamento 706, señaló que la restricción de votaciones para los morosos solo aplica en decisiones de carácter económico. Indicó que el fondo de imprevistos está creado por ley y puede ser utilizado en caso de déficit presupuestal, con aprobación de la asamblea. Consideró un error aumentar la cuota ordinaria como cuota extraordinaria para el déficit presupuestal.</p>
+
+<p>El residente del apartamento 704 solicitó a la administración si existe una reducción de gastos importante para la cuota, ya que no se trata solo de pedir dinero, sino de ser eficientes en el gasto. Preguntó si existe la posibilidad de un nuevo contrato de antenas.</p>
+
+<p>Carlos Mejía, del apartamento 305, solicitó a la administración que se refiera a la situación financiera actual del edificio, cuál es el déficit completo y si existen problemas con los morosos.</p>
+
+<p>Andrés Cantillo, abogado, explicó que la empresa de antenas terminó el contrato unilateralmente, dentro de las facultades que tenía. Señaló que se intentó contactar a otras empresas, pero no fue sencillo. Indicó que el ingreso de la antena se había llevado al ingreso como si fuera un ingreso operacional, lo cual no es correcto. Lo mejor es que se lleve como un ingreso no operacional y se pueda usar para gastos extraordinarios. El abogado también dijo que la copropiedad es financieramente sana, pero no cuenta con fondos o reservas de gran monto para solventar todo tipo de situaciones.</p>
+
+<p>Javier Rodríguez, del apartamento 806, recordó que en su momento se trató de terminar un contrato de administración anterior, pero no se pudo. Señaló que la cubierta genera gastos adicionales periódicamente. Preguntó cuánto cuesta volver a hacer el mantenimiento de la cubierta.</p>
+
+<p>El residente del apartamento 501 manifestó no estar de acuerdo con el aumento de la cuota de administración.</p>
+
+<p>El residente del apartamento 201 reiteró su desacuerdo con el aumento de la cuota, señalando que se deben buscar otras alternativas. Llamó la atención a que se dedique el área de contabilidad de esta administración.</p>
+
+<p>El residente del apartamento 1106 consideró que todos han sido solidarios en las malas decisiones de las administraciones pasadas. Propuso que se sostengan con lo que se tiene en el momento y esperar a la nueva asamblea. Invitó a la nueva administración a que busque las alternativas para sostener la situación actual.</p>
+
+<p>Iván, del apartamento 202, indicó que el canon de administración se vuelve muy alto, pero se debe comenzar a trabajar con tecnología. Señaló que el edificio está en muy buenas condiciones, pero se está pagando mínimo de mínimo.</p>
+
+<p>El residente del apartamento 1102 solicitó que se comparta el informe detallado de toda la gestión que se hizo en relación con las alternativas de optimización de los gastos fijos y variables.</p>
+
+<p>Libardo Álvarez, del apartamento 706, indicó que el fondo imprevisto puede solucionar la situación que se está pasando. Señaló que hay un fondo de gastos de 14 o 12 millones de pesos, que se puede también amortiguar, aparte de lo que dijo Javier, hay un remanente de 21 millones de pesos.</p>
+
+<p>El residente del apartamento 704 indicó que si se hizo el contrato de estas antenas se aprobó que se utilizará para bajar el costo de administración. Pidió que se redujeran los costos al máximo posible.</p>
+
+<p>Carlos Mejía, del apartamento 305, solo quisiera que la administración se refiriera a cuál es la situación financiera actual del edificio, en el entendido de cuál es el déficit completo y si tenemos problemas con los morosos.</p>
+
+<p>María José Sánchez, contadora, explicó que en los consejos de administración ha llevado la situación y las posibles alternativas que tienen para subsanar el déficit. Señaló que tienen un fondo para inversiones y mejoras de zonas comunes producto de remanentes de gestión anteriores. También tienen un fondo de imprevistos que es la reserva legal. La contadora dijo que no puede ser una contadora que les va a decir a ustedes vamos a gastarnos todo el dinero, vamos a quedarnos en cero, que al final la copropiedad no tenga para pagar proveedores.</p>
+
+<p>Álvaro Narváez, administrador, indicó que se analizó el presupuesto, pero no se pueden hacer descuentos a lo loco. Señaló que ya existe un presupuesto recibido para el año 2025, el cual se ha venido afectando o fue afectado por el tema de las antenas. La idea era escuchar, aprovechando que están en la asamblea y están la mayoría de los copropietarios, hacer un sondeo de las posibles, los posibles caminos que se pueden tomar en la próxima asamblea para intentar subsanar este hueco presupuestal que se tiene.</p>
+
+<p>Oscar García, del apartamento 805, indicó que todos los copropietarios son responsables de que el edificio se mantenga o no se mantenga. Señaló que los 20 millones de pesos fueron aprobados en asamblea anterior para la solución de una entrada de agua en el piso 2 del pasillo y para mejorar en el área esa que hay del piso 2.</p>
+
+<p>Se procedió a someter a votación la siguiente pregunta: ¿La Asamblea aprueba el reajuste de la cuota de administración del periodo 2025 por déficit presupuestal, que regirá hasta que se realice la Asamblea General de propietarios del periodo 2026?</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li>Apartamento 104: <strong>No</strong></li>
+ <li>Apartamento 1202: <strong>No</strong></li>
+ <li>Apartamento 205: <strong>No</strong></li>
+ <li>Apartamento 306: <strong>Sí</strong></li>
+ <li>Apartamento 404: <strong>No</strong></li>
+ <li>Apartamento 805: <strong>Sí</strong></li>
+ <li>Apartamento 1601: <strong>No</strong></li>
+ <li>Apartamento 1605: <strong>No</strong></li>
+ <li>Apartamento 902: <strong>No</strong></li>
+ <li>Apartamento 101: <strong>No</strong></li>
+ <li>Apartamento 202: <strong>Sí</strong></li>
+ <li>Apartamento 301: <strong>No</strong></li>
+ <li>Apartamento 302: <strong>No</strong></li>
+ <li>Apartamento 303: <strong>No</strong></li>
+ <li>Apartamento 304: <strong>No</strong></li>
+ <li>Apartamento 305: <strong>No</strong></li>
+ <li>Apartamento 401: <strong>No</strong></li>
+ <li>Apartamento 402: <strong>No</strong></li>
+ <li>Apartamento 501: <strong>No</strong></li>
+ <li>Apartamento 502: <strong>No</strong></li>
+ <li>Apartamento 603: <strong>No</strong></li>
+ <li>Apartamento 702: <strong>No</strong></li>
+ <li>Apartamento 703: <strong>No</strong></li>
+ <li>Apartamento 704: <strong>No</strong></li>
+ <li>Apartamento 705: <strong>No</strong></li>
+ <li>Apartamento 706: <strong>No</strong></li>
+ <li>Apartamento 801: <strong>No</strong></li>
+ <li>Apartamento 802: <strong>No</strong></li>
+ <li>Apartamento 803: <strong>No</strong></li>
+ <li>Apartamento 804: <strong>No</strong></li>
+ <li>Apartamento 806: <strong>No</strong></li>
+ <li>Apartamento 901: <strong>No</strong></li>
+ <li>Apartamento 1001: <strong>No</strong></li>
+ <li>Apartamento 1101: <strong>No</strong></li>
+ <li>Apartamento 1102: <strong>No</strong></li>
+ <li>Apartamento 1103: <strong>No</strong></li>
+ <li>Apartamento 1106: <strong>No</strong></li>
+ <li>Apartamento 1201: <strong>No</strong></li>
+</ul>
+
+<p>Por coeficiente, la opción "Sí" obtuvo un 23.7% y la opción "No" un 40.6%. Por voto nominal, la opción "Sí" obtuvo el 36.95% y la opción "No" el 64%. Descontando los apartamentos que se encuentran morosos, el resultado final fue: "Sí" con un 23.7% y "No" con un 36.25% por coeficiente. Se concluyó que no fue aprobado el reajuste de la cuota.</p>
+
+<p>Ante la no aprobación del reajuste, se discutieron alternativas para subsanar el déficit presupuestal. Se mencionó la posibilidad de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos.</p>
+
+<p>Se dejó constancia de que, debido a que la asamblea extraordinaria fue convocada específicamente para tratar el tema del reajuste de la cuota de administración y la adquisición del equipo para el baño turco, cualquier decisión sobre el uso de otros fondos o la implementación de medidas adicionales requeriría una nueva convocatoria o un proceso de consulta diferente.</p><h2>5. Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</h2>
+
+<p>Se procedió a la presentación del punto referente a la aprobación de una cuota extraordinaria para la adquisición e instalación de un equipo de baño turco. Se indicó que el equipo actual lleva más de nueve meses averiado.</p>
+
+<p>El administrador señaló que se había considerado presentar a la asamblea la adquisición de un equipo nuevo, así como la mano de obra para su instalación y los materiales necesarios. No obstante, en caso de no ser aprobada la propuesta, se recurriría a la póliza del edificio. Se advirtió que la aprobación por parte de la póliza no está garantizada y depende de la gestión que se realice.</p>
+
+<p>Se presentó información detallada sobre el estado del equipo actual, describiéndolo como "en un estado deplorable internamente" y "todo destrozado o quemado por dentro". Se mencionó una cotización de la administración anterior para la reparación de la resistencia y contactores por un costo de 4 millones de pesos, pero con una garantía de solo tres meses, lo que se consideró inconveniente.</p>
+
+<p>Se informó que la empresa Obelma, ubicada en Medellín, cotizó un equipo nuevo en 9.132.000 pesos, incluyendo el envío a Cartagena y el desagüe automático. Adicionalmente, se estimó un costo de 2 millones de pesos para la mano de obra de instalación y otros accesorios, resultando en un costo total de 11.132.300 pesos para la adquisición e instalación del equipo.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación de la cuota extraordinaria para la adquisición e instalación del equipo de baño turco. La pregunta formulada fue: "¿La asamblea aprueba una única cuota extraordinaria destinada para la adquisición e instalación del equipo del baño turco?". Las opciones eran "Sí" o "No".</p>
+
+<p>Se registraron los siguientes votos individuales:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 105:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 201:</strong> No</li>
+ <li><strong>Apartamento 202:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 205:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 306:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 404:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 405:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 502:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 503:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 601:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 605:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 701:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 704:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 706:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 803:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 805:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 806:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 902:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1102:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1103:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1106:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1206:</strong> No se registra su voto.</li>
+</ul>
+
+<p>Los resultados iniciales mostraron un 22.30% de votos a favor y un 40.7% en contra por coeficiente. En el voto nominal, el 35% de los participantes votó a favor y el 64% en contra. Tras descontar los votos de los apartamentos en mora, el resultado final fue de 36.44% en contra, confirmando que la propuesta no fue aprobada.</p>
+
+<p>Ante la no aprobación de la cuota extraordinaria, se indicó que se procedería a radicar la solicitud ante la póliza del edificio para intentar cubrir los costos del equipo.</p>
+<h2>6. Cierre de la asamblea</h2>
+
+<p>Durante la discusión del punto sobre el cierre de la asamblea, se presentaron diversas mociones y comentarios finales por parte de los asistentes. La señora Presidenta resumió los temas tratados y las decisiones tomadas, agradeciendo la participación de todos los presentes.</p>
+
+<p>Se dio la palabra a los asistentes para comentarios finales, respetando el orden de solicitud de la palabra. Se enfatizó la importancia de la colaboración continua entre la administración, el consejo y los copropietarios para la buena gestión del edificio.</p>
+
+<p>La señora Presidenta indicó que, debido a la falta de aprobación del reajuste de la cuota de administración y la cuota extraordinaria para el baño turco, se buscarán alternativas para la gestión de los recursos y el mantenimiento de las amenidades. Se mencionó la posibilidad de convocar a una nueva asamblea o presentar la información por escrito para la toma de decisiones.</p>
+
+<p>Se recibieron comentarios sobre la necesidad de mejorar la comunicación y la transparencia en la gestión de la copropiedad. Se propuso realizar reuniones informativas periódicas para mantener a los copropietarios al tanto de las decisiones y los avances en la gestión del edificio.</p>
+
+<p>Finalmente, la señora Presidenta declaró cerrada la asamblea, agradeciendo nuevamente la participación de todos los asistentes y reiterando el compromiso de la administración y el consejo de trabajar en beneficio de la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 11:15</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se utilizará el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para subsanar el déficit presupuestal hasta que se realice la Asamblea General de propietarios del periodo 2026 – <strong>Responsable:</strong> No especificado</li>
+ <li>La administración radicará ante la póliza la solicitud para cubrir los costos del equipo de baño turco – <strong>Responsable:</strong> Administración</li>
+ <li>La administración y el consejo se reunirán para revisar los rubros actuales y presentar soluciones para el déficit presupuestal – <strong>Responsable:</strong> Administración y Consejo</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó a las 11:15, tras una extensa deliberación sobre el reajuste de la cuota de administración y la adquisición del equipo para el baño turco. A pesar de que la propuesta inicial de reajuste de la cuota de administración no fue aprobada, se llegó al acuerdo de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para cubrir el déficit presupuestal hasta la próxima Asamblea General. Además, la administración se encargará de gestionar la cobertura de los costos del equipo de baño turco a través de la póliza del edificio. Finalmente, la administración y el consejo se comprometen a reunirse para analizar los rubros actuales y presentar soluciones concretas para abordar el déficit presupuestal, buscando alternativas que minimicen el impacto en los copropietarios.
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Registro de asistencia y verificación del quórum</li>
+ <li>Elección del presidente y secretario de la asamblea extraordinaria</li>
+ <li>Elección de la comisión verificadora del acta de la asamblea extraordinaria</li>
+ <li>Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</li>
+ <li>Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</li>
+ <li>Cierre de la asamblea</li>
+ </ol>
+</header>
+
+<h2>1. Registro de asistencia y verificación del quórum</h2>
+
+<p>En el inicio de la asamblea, se procedió al registro de asistencia y la verificación del quórum. Daniel Puentes, de la empresa Hypal, fue el encargado de dirigir este proceso, informando a los asistentes sobre el estado del quórum en tiempo real a través de la plataforma virtual.</p>
+
+<p>Inicialmente, a las 7:53 de la mañana, se reportó un quórum del 21.43%, con 15 apartamentos conectados. Se recordó a los participantes que la convocatoria estaba programada para las 8:00 a.m. y que se requería un quórum del 50.1% para dar inicio formal a la reunión.</p>
+
+<p>Daniel Puentes proporcionó instrucciones detalladas sobre el uso de la plataforma, destacando que integraba la plataforma Zoom para la videollamada y un panel con información relevante para cada usuario, como el número de apartamento, detalles de representación (si aplica) y un historial de votación. Se explicó que las votaciones se realizarían a través de notificaciones push en los dispositivos de los asistentes y que, en caso de no aparecer, se recomendaba refrescar la página o utilizar el chat de Zoom para expresar su voto.</p>
+
+<p>Se enfatizó que, de acuerdo con el reglamento interno de la copropiedad, solo se contabilizarían los votos de las unidades al día con su cuota de administración. Se aclaró que la plataforma no diferenciaba automáticamente entre quienes estaban al día y quienes estaban en mora, por lo que se realizaría un recuento manual después de cada votación para descontar los votos de las unidades morosas.</p>
+
+<p>Se instó a los propietarios a permanecer conectados en la plataforma para mantener la estabilidad del quórum, ya que la plataforma detectaría automáticamente las ausencias y afectaría el quórum dinámico. Se recordó que los micrófonos estaban cerrados por defecto y que los participantes podían levantar la mano virtualmente para solicitar la palabra.</p>
+
+<p>A las 7:57 a.m., el quórum había aumentado, y se solicitó a los propietarios presentes que informaran a otros vecinos para que se conectaran a la asamblea. Se explicó que la plataforma detectaba automáticamente la asistencia (presentes, ausentes y representados), mostrando los apartamentos presentes en la lista de asistencia del acta de asamblea.</p>
+
+<p>A las 8:00 a.m., el quórum alcanzó el 28.5%. Se reiteró la bienvenida a los participantes y se ofreció asistencia técnica para resolver dudas sobre la plataforma, los micrófonos y otros aspectos técnicos. Se recordó la importancia de dar permisos de acceso al micrófono al ingresar a la sesión.</p>
+
+<p>A las 8:01 a.m., el quórum se situó en el 29.92%, ascendiendo al 31.35% poco después. Se informó que el edificio constaba de 72 unidades inmobiliarias y que 24 de ellas estaban conectadas, representando el 34.2% del total. Se reiteró la importancia de permanecer en la videollamada para mantener el quórum y se recordó el procedimiento para votar y el descuento de votos de unidades morosas.</p>
+
+<p>A las 8:04 a.m., el quórum alcanzó el 41.49%, y se continuó brindando asistencia a los propietarios que tenían dificultades para conectarse. Se recordó nuevamente la importancia de dar permisos de acceso al micrófono.</p>
+
+<p>A las 8:05 a.m., el quórum era del 42.67%. A las 8:07 a.m., el quórum llegó al 44.17%. Se reiteraron las indicaciones sobre el uso de la plataforma, las votaciones y la importancia de la estabilidad de la conexión. Se recordó que solo se contabilizarían los votos de las unidades al día con su cuota de administración.</p>
+
+<p>A las 8:11 a.m., el quórum alcanzó el 46.93%. Se solicitó a quienes tuvieran poderes que indicaran a quién estaban representando en el chat de Zoom.</p>
+
+<p>Finalmente, a las 8:13 a.m., se alcanzó el quórum deliberatorio para comenzar la reunión, con un 50.1% de participación. Se reiteraron las indicaciones sobre la plataforma, el acceso al micrófono y el procedimiento de votación. Se dio la bienvenida a la administración para que diera la bienvenida e introducción a la asamblea.</p>
+
+<p>Álvaro Narváez Ibáñez, Administrador y representante legal del edificio Praia Tower House, dio la bienvenida a los asistentes a la asamblea extraordinaria, que fue citada para el 8 de agosto de 2025 a las 8:00 a.m. Señaló que, siendo las 8:23 a.m., se contaba con el quórum suficiente para iniciar y deliberar los puntos a tratar en la convocatoria.</p>
+
+<p>Daniel Puentes procedió a leer la convocatoria para dejar registro de acuerdo a la Ley 675. La convocatoria indicaba que, al no haber quórum reglamentario en la primera fecha, se realizaría una segunda convocatoria el miércoles 13 de agosto de 2025 a las 8:00 p.m. El orden del día a considerar fue el siguiente: registro de asistencia y verificación del quórum, elección del presidente y secretario de la asamblea extraordinaria, elección de la comisión verificadora del acta de la asamblea extraordinaria, análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal, presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco, y cierre de la asamblea.</p>
+
+<p>Daniel Puentes confirmó que, como primer punto, se contaba con la asistencia y el quórum reglamentario para dar inicio a la reunión, con un quórum del 57% y 40 unidades conectadas de las 72.</p>
+
+<h2>2. Elección del presidente y secretario de la asamblea extraordinaria</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea extraordinaria. Se abrió la discusión para recibir postulaciones.</p>
+
+<p>Oscar García, propietario del apartamento 805 y presidente del actual consejo, propuso a Carolina Gelves para presidir la asamblea, sugiriendo que el administrador actuara como secretario.</p>
+
+<p>Carolina Gelves, del apartamento 306, aceptó la postulación, expresando su intención de "debatir y entrar a definir estos importantes temas para el bienestar de nosotros como copropietarios del edificio Praia".</p>
+
+<p>La administración se postuló como secretario de la asamblea.</p>
+
+<p>El propietario del apartamento 201 solicitó la palabra, señalando que el orden del día no había sido sometido a consideración de la asamblea y cuestionando la elegibilidad de Carolina Gelves, argumentando que, como miembro del Consejo de Administración, no debería presidir la asamblea.</p>
+
+<p>Se dio respuesta al propietario del apartamento 201, indicando que, al tratarse de una asamblea extraordinaria, no es necesario aprobar el orden del día. Además, se aclaró que no existe impedimento en el reglamento de copropiedad para que un miembro del Consejo presida la asamblea.</p>
+
+<p>Ante la falta de más postulaciones para el cargo de presidente, se procedió a la votación. Se consultó a la asamblea si aprobaba la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario.</p>
+
+<p>Se lanzó la pregunta a la plataforma para que los asistentes emitieran su voto, indicando que se descontarían los votos de los apartamentos que se encontraran en mora.</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> A favor</li>
+ <li><strong>Apartamento 1202:</strong> A favor</li>
+ <li><strong>Apartamento 205:</strong> A favor</li>
+ <li><strong>Apartamento 306 (Carolina Gelves):</strong> A favor</li>
+ <li><strong>Apartamento 404:</strong> A favor</li>
+ <li><strong>Apartamento 816:</strong> A favor</li>
+ <li><strong>Apartamento 601:</strong> A favor</li>
+ <li><strong>Apartamento 605:</strong> A favor</li>
+ <li><strong>Apartamento 902:</strong> A favor</li>
+ <li><strong>Apartamento 803:</strong> A favor</li>
+ <li><strong>Apartamento 1103:</strong> En contra</li>
+ <li><strong>Apartamento 1206:</strong> A favor</li>
+ <li><strong>Apartamento 201:</strong> En contra</li>
+</ul>
+
+<p>Tras descontar los votos de los apartamentos en mora, el resultado final fue:</p>
+
+<ul>
+ <li>Aprobación: 90.30%</li>
+ <li>En contra: 7.69%</li>
+</ul>
+
+<p>En consecuencia, se aprobó la elección de Carolina Gelves del apartamento 306 como presidente y a la administración como secretario de la asamblea extraordinaria.</p>
+<h2>3. Elección de la comisión verificadora del acta de la asamblea extraordinaria</h2>
+
+<p>Durante la asamblea, se procedió a la elección de la comisión encargada de verificar el acta de la asamblea extraordinaria. Se requirieron tres personas para conformar dicha comisión, cuya función sería revisar que el acta reflejara fielmente lo acontecido en la reunión.</p>
+
+<p>Inicialmente, se abrió un espacio para que los asambleístas interesados en postularse como miembros de la comisión manifestaran su intención. Se enfatizó que la tarea consistía en verificar el acta elaborada por la empresa, asegurando su concordancia con los puntos deliberados y los acuerdos alcanzados durante la asamblea.</p>
+
+<p>En respuesta al llamado, varios asistentes presentaron sus candidaturas:</p>
+
+<ul>
+ <li><strong>Camilo Escobar Rico del apartamento 704</strong> manifestó su postulación como miembro de la comisión.</li>
+ <li><strong>Camilo Andrés Pachón Guzmán del apartamento 1102</strong> también se postuló para integrar la comisión verificadora.</li>
+ <li><strong>Helen Escobar del apartamento 1106</strong> se ofreció como candidata para completar el número requerido de miembros.</li>
+</ul>
+
+<p>Con tres candidatos disponibles, se sometió a votación la aprobación de los postulados como miembros de la comisión verificadora del acta. La pregunta formulada fue: "¿Se aprueba al señor Camilo Escobar del apartamento 704, al señor Camilo Pachón del 1102 y la señora Helen Escobar del 1106, como miembros de la comisión verificadora del acta de esta asamblea?".</p>
+
+<p>La votación se realizó a través de la plataforma virtual, permitiendo a los asistentes expresar su aprobación o rechazo a la propuesta. Tras el cierre de la votación y el respectivo descuento de los votos correspondientes a los apartamentos en mora, se obtuvieron los siguientes resultados:</p>
+
+<ul>
+ <li><strong>Camilo Escobar (704):</strong> Aprobación</li>
+ <li><strong>Camilo Pachón (1102):</strong> Aprobación</li>
+ <li><strong>Helen Escobar (1106):</strong> Aprobación</li>
+</ul>
+
+<p>La propuesta fue aprobada con una amplia mayoría, alcanzando un 97.43% de votos a favor. En consecuencia, se designó a Camilo Escobar del apartamento 704, Camilo Pachón del 1102 y Helen Escobar del 1106 como miembros de la comisión verificadora del acta de la asamblea extraordinaria.</p><h2>4. Análisis y aprobación del reajuste de la cuota de administración del año 2025 por déficit presupuestal</h2>
+
+<p>Se dio inicio al análisis y discusión sobre el reajuste de la cuota de administración para el año 2025, motivado por un déficit presupuestal. Se aclaró que cualquier ajuste que se aprobara regiría hasta la Asamblea General Ordinaria de Propietarios del año 2026.</p>
+
+<p>Álvaro Narváez, administrador del edificio, presentó un resumen del informe previamente enviado a los copropietarios, explicando que la terminación del contrato con ATP Antenas generó un impacto negativo de aproximadamente 4 millones 131 mil pesos mensuales, lo que representa un 7.53% del presupuesto. Se estimó una pérdida total de 24 millones 787 mil pesos al finalizar el año 2025. Ante esta situación, se consideró indispensable realizar un ajuste presupuestal para equilibrar los gastos hasta marzo de 2026.</p>
+
+<p>María José Sánchez, contadora, complementó la información mostrando los estados financieros y cómo se reflejaría el déficit a partir de la suspensión del contrato con las antenas. Señaló que el ingreso de las antenas se había tomado como un ingreso presupuestado, financiando los gastos ordinarios de la copropiedad. Al dejar de percibirlo, se desfinanciaría el presupuesto, faltando por ejecutar 23 millones 452 mil pesos a partir de julio.</p>
+
+<p>Javier Rodríguez, del apartamento 806, solicitó un detalle del trabajo realizado por la administración para redistribuir los recursos y gestionar el tema de las antenas, sugiriendo revisar los proveedores y buscar mejores opciones en el mercado. El administrador respondió que se daría respuesta a su inquietud en el desarrollo del punto.</p>
+
+<p>El residente del apartamento 201 manifestó su desacuerdo con el aumento de la cuota de administración, proponiendo buscar otras alternativas y gestionar mejor los recursos, como las pólizas, para evitar siempre recurrir a la cuota de administración. Sugirió buscar otra entidad para ofrecer el servicio de antenas.</p>
+
+<p>César Augusto González Jiménez, del apartamento 502, expresó su desacuerdo con el incremento de la cuota de administración, argumentando que la administración debería haber previsto esta situación al momento de presentar el presupuesto. Propuso reducir costos, por ejemplo, disminuyendo la vigilancia armada en ambos sectores.</p>
+
+<p>Libardo Álvarez, del apartamento 706, señaló que la restricción de votaciones para los morosos solo aplica en decisiones de carácter económico. Indicó que el fondo de imprevistos está creado por ley y puede ser utilizado en caso de déficit presupuestal, con aprobación de la asamblea. Consideró un error aumentar la cuota ordinaria como cuota extraordinaria para el déficit presupuestal.</p>
+
+<p>El residente del apartamento 704 solicitó a la administración si existe una reducción de gastos importante para la cuota, ya que no se trata solo de pedir dinero, sino de ser eficientes en el gasto. Preguntó si existe la posibilidad de un nuevo contrato de antenas.</p>
+
+<p>Carlos Mejía, del apartamento 305, solicitó a la administración que se refiera a la situación financiera actual del edificio, cuál es el déficit completo y si existen problemas con los morosos.</p>
+
+<p>Andrés Cantillo, abogado, explicó que la empresa de antenas terminó el contrato unilateralmente, dentro de las facultades que tenía. Señaló que se intentó contactar a otras empresas, pero no fue sencillo. Indicó que el ingreso de la antena se había llevado al ingreso como si fuera un ingreso operacional, lo cual no es correcto. Lo mejor es que se lleve como un ingreso no operacional y se pueda usar para gastos extraordinarios. El abogado también dijo que la copropiedad es financieramente sana, pero no cuenta con fondos o reservas de gran monto para solventar todo tipo de situaciones.</p>
+
+<p>Javier Rodríguez, del apartamento 806, recordó que en su momento se trató de terminar un contrato de administración anterior, pero no se pudo. Señaló que la cubierta genera gastos adicionales periódicamente. Preguntó cuánto cuesta volver a hacer el mantenimiento de la cubierta.</p>
+
+<p>El residente del apartamento 501 manifestó no estar de acuerdo con el aumento de la cuota de administración.</p>
+
+<p>El residente del apartamento 201 reiteró su desacuerdo con el aumento de la cuota, señalando que se deben buscar otras alternativas. Llamó la atención a que se dedique el área de contabilidad de esta administración.</p>
+
+<p>El residente del apartamento 1106 consideró que todos han sido solidarios en las malas decisiones de las administraciones pasadas. Propuso que se sostengan con lo que se tiene en el momento y esperar a la nueva asamblea. Invitó a la nueva administración a que busque las alternativas para sostener la situación actual.</p>
+
+<p>Iván, del apartamento 202, indicó que el canon de administración se vuelve muy alto, pero se debe comenzar a trabajar con tecnología. Señaló que el edificio está en muy buenas condiciones, pero se está pagando mínimo de mínimo.</p>
+
+<p>El residente del apartamento 1102 solicitó que se comparta el informe detallado de toda la gestión que se hizo en relación con las alternativas de optimización de los gastos fijos y variables.</p>
+
+<p>Libardo Álvarez, del apartamento 706, indicó que el fondo imprevisto puede solucionar la situación que se está pasando. Señaló que hay un fondo de gastos de 14 o 12 millones de pesos, que se puede también amortiguar, aparte de lo que dijo Javier, hay un remanente de 21 millones de pesos.</p>
+
+<p>El residente del apartamento 704 indicó que si se hizo el contrato de estas antenas se aprobó que se utilizará para bajar el costo de administración. Pidió que se redujeran los costos al máximo posible.</p>
+
+<p>Carlos Mejía, del apartamento 305, solo quisiera que la administración se refiriera a cuál es la situación financiera actual del edificio, en el entendido de cuál es el déficit completo y si tenemos problemas con los morosos.</p>
+
+<p>María José Sánchez, contadora, explicó que en los consejos de administración ha llevado la situación y las posibles alternativas que tienen para subsanar el déficit. Señaló que tienen un fondo para inversiones y mejoras de zonas comunes producto de remanentes de gestión anteriores. También tienen un fondo de imprevistos que es la reserva legal. La contadora dijo que no puede ser una contadora que les va a decir a ustedes vamos a gastarnos todo el dinero, vamos a quedarnos en cero, que al final la copropiedad no tenga para pagar proveedores.</p>
+
+<p>Álvaro Narváez, administrador, indicó que se analizó el presupuesto, pero no se pueden hacer descuentos a lo loco. Señaló que ya existe un presupuesto recibido para el año 2025, el cual se ha venido afectando o fue afectado por el tema de las antenas. La idea era escuchar, aprovechando que están en la asamblea y están la mayoría de los copropietarios, hacer un sondeo de las posibles, los posibles caminos que se pueden tomar en la próxima asamblea para intentar subsanar este hueco presupuestal que se tiene.</p>
+
+<p>Oscar García, del apartamento 805, indicó que todos los copropietarios son responsables de que el edificio se mantenga o no se mantenga. Señaló que los 20 millones de pesos fueron aprobados en asamblea anterior para la solución de una entrada de agua en el piso 2 del pasillo y para mejorar en el área esa que hay del piso 2.</p>
+
+<p>Se procedió a someter a votación la siguiente pregunta: ¿La Asamblea aprueba el reajuste de la cuota de administración del periodo 2025 por déficit presupuestal, que regirá hasta que se realice la Asamblea General de propietarios del periodo 2026?</p>
+
+<p>Los resultados de la votación fueron los siguientes:</p>
+
+<ul>
+ <li>Apartamento 104: <strong>No</strong></li>
+ <li>Apartamento 1202: <strong>No</strong></li>
+ <li>Apartamento 205: <strong>No</strong></li>
+ <li>Apartamento 306: <strong>Sí</strong></li>
+ <li>Apartamento 404: <strong>No</strong></li>
+ <li>Apartamento 805: <strong>Sí</strong></li>
+ <li>Apartamento 1601: <strong>No</strong></li>
+ <li>Apartamento 1605: <strong>No</strong></li>
+ <li>Apartamento 902: <strong>No</strong></li>
+ <li>Apartamento 101: <strong>No</strong></li>
+ <li>Apartamento 202: <strong>Sí</strong></li>
+ <li>Apartamento 301: <strong>No</strong></li>
+ <li>Apartamento 302: <strong>No</strong></li>
+ <li>Apartamento 303: <strong>No</strong></li>
+ <li>Apartamento 304: <strong>No</strong></li>
+ <li>Apartamento 305: <strong>No</strong></li>
+ <li>Apartamento 401: <strong>No</strong></li>
+ <li>Apartamento 402: <strong>No</strong></li>
+ <li>Apartamento 501: <strong>No</strong></li>
+ <li>Apartamento 502: <strong>No</strong></li>
+ <li>Apartamento 603: <strong>No</strong></li>
+ <li>Apartamento 702: <strong>No</strong></li>
+ <li>Apartamento 703: <strong>No</strong></li>
+ <li>Apartamento 704: <strong>No</strong></li>
+ <li>Apartamento 705: <strong>No</strong></li>
+ <li>Apartamento 706: <strong>No</strong></li>
+ <li>Apartamento 801: <strong>No</strong></li>
+ <li>Apartamento 802: <strong>No</strong></li>
+ <li>Apartamento 803: <strong>No</strong></li>
+ <li>Apartamento 804: <strong>No</strong></li>
+ <li>Apartamento 806: <strong>No</strong></li>
+ <li>Apartamento 901: <strong>No</strong></li>
+ <li>Apartamento 1001: <strong>No</strong></li>
+ <li>Apartamento 1101: <strong>No</strong></li>
+ <li>Apartamento 1102: <strong>No</strong></li>
+ <li>Apartamento 1103: <strong>No</strong></li>
+ <li>Apartamento 1106: <strong>No</strong></li>
+ <li>Apartamento 1201: <strong>No</strong></li>
+</ul>
+
+<p>Por coeficiente, la opción "Sí" obtuvo un 23.7% y la opción "No" un 40.6%. Por voto nominal, la opción "Sí" obtuvo el 36.95% y la opción "No" el 64%. Descontando los apartamentos que se encuentran morosos, el resultado final fue: "Sí" con un 23.7% y "No" con un 36.25% por coeficiente. Se concluyó que no fue aprobado el reajuste de la cuota.</p>
+
+<p>Ante la no aprobación del reajuste, se discutieron alternativas para subsanar el déficit presupuestal. Se mencionó la posibilidad de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos.</p>
+
+<p>Se dejó constancia de que, debido a que la asamblea extraordinaria fue convocada específicamente para tratar el tema del reajuste de la cuota de administración y la adquisición del equipo para el baño turco, cualquier decisión sobre el uso de otros fondos o la implementación de medidas adicionales requeriría una nueva convocatoria o un proceso de consulta diferente.</p><h2>5. Presentación y aprobación de la única cuota extraordinaria destinada para la adquisición e instalación de un equipo de baño turco</h2>
+
+<p>Se procedió a la presentación del punto referente a la aprobación de una cuota extraordinaria para la adquisición e instalación de un equipo de baño turco. Se indicó que el equipo actual lleva más de nueve meses averiado.</p>
+
+<p>El administrador señaló que se había considerado presentar a la asamblea la adquisición de un equipo nuevo, así como la mano de obra para su instalación y los materiales necesarios. No obstante, en caso de no ser aprobada la propuesta, se recurriría a la póliza del edificio. Se advirtió que la aprobación por parte de la póliza no está garantizada y depende de la gestión que se realice.</p>
+
+<p>Se presentó información detallada sobre el estado del equipo actual, describiéndolo como "en un estado deplorable internamente" y "todo destrozado o quemado por dentro". Se mencionó una cotización de la administración anterior para la reparación de la resistencia y contactores por un costo de 4 millones de pesos, pero con una garantía de solo tres meses, lo que se consideró inconveniente.</p>
+
+<p>Se informó que la empresa Obelma, ubicada en Medellín, cotizó un equipo nuevo en 9.132.000 pesos, incluyendo el envío a Cartagena y el desagüe automático. Adicionalmente, se estimó un costo de 2 millones de pesos para la mano de obra de instalación y otros accesorios, resultando en un costo total de 11.132.300 pesos para la adquisición e instalación del equipo.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación de la cuota extraordinaria para la adquisición e instalación del equipo de baño turco. La pregunta formulada fue: "¿La asamblea aprueba una única cuota extraordinaria destinada para la adquisición e instalación del equipo del baño turco?". Las opciones eran "Sí" o "No".</p>
+
+<p>Se registraron los siguientes votos individuales:</p>
+
+<ul>
+ <li><strong>Apartamento 104:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 105:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 201:</strong> No</li>
+ <li><strong>Apartamento 202:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 205:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 306:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 404:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 405:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 502:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 503:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 601:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 605:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 701:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 704:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 706:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 803:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 805:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 806:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 902:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1102:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1103:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1106:</strong> No se registra su voto.</li>
+ <li><strong>Apartamento 1206:</strong> No se registra su voto.</li>
+</ul>
+
+<p>Los resultados iniciales mostraron un 22.30% de votos a favor y un 40.7% en contra por coeficiente. En el voto nominal, el 35% de los participantes votó a favor y el 64% en contra. Tras descontar los votos de los apartamentos en mora, el resultado final fue de 36.44% en contra, confirmando que la propuesta no fue aprobada.</p>
+
+<p>Ante la no aprobación de la cuota extraordinaria, se indicó que se procedería a radicar la solicitud ante la póliza del edificio para intentar cubrir los costos del equipo.</p>
+<h2>6. Cierre de la asamblea</h2>
+
+<p>Durante la discusión del punto sobre el cierre de la asamblea, se presentaron diversas mociones y comentarios finales por parte de los asistentes. La señora Presidenta resumió los temas tratados y las decisiones tomadas, agradeciendo la participación de todos los presentes.</p>
+
+<p>Se dio la palabra a los asistentes para comentarios finales, respetando el orden de solicitud de la palabra. Se enfatizó la importancia de la colaboración continua entre la administración, el consejo y los copropietarios para la buena gestión del edificio.</p>
+
+<p>La señora Presidenta indicó que, debido a la falta de aprobación del reajuste de la cuota de administración y la cuota extraordinaria para el baño turco, se buscarán alternativas para la gestión de los recursos y el mantenimiento de las amenidades. Se mencionó la posibilidad de convocar a una nueva asamblea o presentar la información por escrito para la toma de decisiones.</p>
+
+<p>Se recibieron comentarios sobre la necesidad de mejorar la comunicación y la transparencia en la gestión de la copropiedad. Se propuso realizar reuniones informativas periódicas para mantener a los copropietarios al tanto de las decisiones y los avances en la gestión del edificio.</p>
+
+<p>Finalmente, la señora Presidenta declaró cerrada la asamblea, agradeciendo nuevamente la participación de todos los asistentes y reiterando el compromiso de la administración y el consejo de trabajar en beneficio de la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 11:15</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se utilizará el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para subsanar el déficit presupuestal hasta que se realice la Asamblea General de propietarios del periodo 2026 – <strong>Responsable:</strong> No especificado</li>
+ <li>La administración radicará ante la póliza la solicitud para cubrir los costos del equipo de baño turco – <strong>Responsable:</strong> Administración</li>
+ <li>La administración y el consejo se reunirán para revisar los rubros actuales y presentar soluciones para el déficit presupuestal – <strong>Responsable:</strong> Administración y Consejo</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó a las 11:15, tras una extensa deliberación sobre el reajuste de la cuota de administración y la adquisición del equipo para el baño turco. A pesar de que la propuesta inicial de reajuste de la cuota de administración no fue aprobada, se llegó al acuerdo de utilizar el Fondo de Reservas de Proyectos Especiales y el Fondo de Imprevistos para cubrir el déficit presupuestal hasta la próxima Asamblea General. Además, la administración se encargará de gestionar la cobertura de los costos del equipo de baño turco a través de la póliza del edificio. Finalmente, la administración y el consejo se comprometen a reunirse para analizar los rubros actuales y presentar soluciones concretas para abordar el déficit presupuestal, buscando alternativas que minimicen el impacto en los copropietarios.
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): gmt20250809-121424_recording_2140x1128_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/smTawJoKeDBMLYd
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/smTawJoKeDBMLYd
+Generando URL pública para Transcripcion.txt (EXISTENTE): gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/gHxro5D8Xg9AMCL
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/gHxro5D8Xg9AMCL
+Verificando si existe transcripción: gmt20250809-121424_recording_2140x1128_Transcripcion.txt en carpeta gmt20250809-121424_recording_2140x1128
+[2025-08-11T18:33:39.591Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Transcripcion.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:40.831Z] Archivo "gmt20250809-121424_recording_2140x1128_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Transcripción existente encontrada: gmt20250809-121424_recording_2140x1128. Obteniendo contenido.
+Verificando contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt
+[2025-08-11T18:33:41.963Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Contenido.txt en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:42.694Z] Archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Contenido existente: gmt20250809-121424_recording_2140x1128_Contenido.txt. Cargando.
+[2025-08-11T18:33:43.608Z] Contenido del archivo "gmt20250809-121424_recording_2140x1128_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: gmt20250809-121424_recording_2140x1128.mp4 en carpeta: gmt20250809-121424_recording_2140x1128
+Verificando Borrador .docx existente: gmt20250809-121424_recording_2140x1128_Borrador.docx
+[2025-08-11T18:33:43.609Z] Verificando existencia del archivo gmt20250809-121424_recording_2140x1128_Borrador.docx en Nextcloud carpeta gmt20250809-121424_recording_2140x1128.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-11T18:33:44.357Z] Archivo "gmt20250809-121424_recording_2140x1128_Borrador.docx" EXISTE en Nextcloud en la carpeta "gmt20250809-121424_recording_2140x1128".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): gmt20250809-121424_recording_2140x1128_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/wCMq88nrQANB7zs
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/wCMq88nrQANB7zs
+Generando URL pública para Transcripcion.txt (EXISTENTE): gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/gmt20250809-121424_recording_2140x1128/gmt20250809-121424_recording_2140x1128_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/896qpAfDoPbfz76
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/896qpAfDoPbfz76
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-11T23:53:28.911Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:30.153Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Iniciando transcripción con AssemblyAI para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Guardando transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Transcripción guardada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-11T23:53:37.611Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:38.380Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Generando contenido para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Guardando contenido en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+Contenido guardado: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-11T23:53:47.366Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-11T23:53:48.116Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" NO encontrado en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Preparando guardado .docx en Nextcloud: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Grabación de audio</li>
+ </ol>
+</header>
+
+<h2>1. Grabación de audio</h2>
+
+<p>El tema de la grabación de audio fue brevemente mencionado al inicio de la reunión. Se realizó una prueba de sonido para asegurar la correcta captura de la discusión. No se proporcionaron detalles adicionales ni se tomaron decisiones específicas con respecto a este tema durante la reunión.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>No se identificaron acuerdos específicos en la transcripción proporcionada. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Grabación de audio</li>
+ </ol>
+</header>
+
+<h2>1. Grabación de audio</h2>
+
+<p>El tema de la grabación de audio fue brevemente mencionado al inicio de la reunión. Se realizó una prueba de sonido para asegurar la correcta captura de la discusión. No se proporcionaron detalles adicionales ni se tomaron decisiones específicas con respecto a este tema durante la reunión.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>No se identificaron acuerdos específicos en la transcripción proporcionada. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/jiS58W9B6bddQoX
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/jiS58W9B6bddQoX
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/3s8k6Hj8TNtwnbD
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/3s8k6Hj8TNtwnbD
+Verificando si existe transcripción: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+[2025-08-12T21:06:13.699Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-12T21:06:14.910Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Iniciando transcripción con AssemblyAI para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac
+Guardando transcripción: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+Transcripción guardada: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+Verificando contenido existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[2025-08-12T21:07:16.279Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-12T21:07:17.045Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt" NO encontrado en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Generando contenido para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac
+Guardando contenido en Nextcloud: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+Contenido guardado: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac en carpeta: 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+Verificando Borrador .docx existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[2025-08-12T21:09:30.067Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-12T21:09:30.801Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx" NO encontrado en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+Preparando guardado .docx en Nextcloud: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Lectura y revisión del acta anterior, incluyendo ajustes contables y cartera</li>
+ <li>Ajuste contable y acta de aprobación</li>
+ <li>Estado de cuenta y acuerdos de pago</li>
+ <li>Cartera: estado actual y seguimiento</li>
+ <li>Estados financieros y ejecución presupuestal</li>
+ <li>Conciliación de cartera para parqueaderos</li>
+ <li>Asistente de administración: contrato y seguridad social</li>
+ <li>Propuesta de pago de Doña Nubia (Apartamento 206)</li>
+ <li>Aprobación de descuento en intereses a Doña Nubia</li>
+ <li>Llamado a Colpensiones y tareas pendientes</li>
+ <li>Reja de ingreso al edificio y puerta principal</li>
+ <li>Circular sobre mascotas</li>
+ <li>Manual de convivencia y políticas de cartera</li>
+ <li>Mantenimiento del tanque de agua</li>
+ <li>Asamblea extraordinaria para techos</li>
+ <li>Reparación de techos y goteras</li>
+ <li>Fumigación y control de plagas</li>
+ <li>Evaluación del servicio de administración y asistente</li>
+ <li>Entrega de actas y hojas de vida</li>
+ </ol>
+</header>
+<h2>1. Lectura y revisión del acta anterior, incluyendo ajustes contables y cartera</h2>
+
+<p>Durante la reunión, se abordó la lectura y revisión del acta anterior, incluyendo los ajustes contables y de cartera pendientes. Se mencionó que en la tercera reunión se aprobó el nombre y la caja, según aclaración de uno de los asistentes.</p>
+
+<p>Se identificó la necesidad de realizar ajustes contables relacionados con tres apartamentos morosos, resultado de conciliaciones efectuadas por Don Carlos con la administración anterior. Se recordó que se había enviado un archivo de Excel con la liquidación detallada de cada uno de estos apartamentos, especificando capital e intereses, a los respectivos copropietarios, quienes no presentaron objeciones.</p>
+
+<p>Se enfatizó la importancia de contar con el acta donde se apruebe formalmente el ajuste contable. Se recordó que en la reunión del 9 de septiembre se había quedado en revisar los intereses, los cuales ya fueron corregidos en los archivos de Excel enviados a los propietarios, sin que estos objetaran la deuda.</p>
+
+<p>En relación con los estados de cuenta, se preguntó si se había dado un tiempo determinado a los propietarios para objetarlos. Se confirmó que sí, y que se les había solicitado revisar los pagos realizados y reportar cualquier inconsistencia. Al no recibir objeciones ni reportes de pagos faltantes, se procedió a contactar a los propietarios para establecer acuerdos de pago.</p>
+
+<p>Se mencionó que el propietario del apartamento 105 se comprometió a realizar pagos de 500 mil pesos. Se subrayó la importancia de formalizar estos acuerdos por escrito. Se informó que la cartera total ascendía aproximadamente a 43 millones de pesos, siendo el apartamento 105 el que menos debía.</p>
+
+<p>Se indicó que la propietaria del apartamento 504 no había vuelto a comunicarse, a pesar de haber recibido el estado de cuenta y de haber tenido tiempo para responder. Se presume que está esperando vender el apartamento para saldar la deuda.</p>
+
+<p>Se proporcionaron los siguientes datos sobre los apartamentos en mora:</p>
+
+<ul>
+ <li>Apartamento 105: Debe 3.362.449 pesos, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe 21.285.357 pesos con 40 centavos. Se aclaró que en esta cifra están incluidas cuotas no pagadas, el arreglo de un citófono y multas por moto. Se solicitó a Doña Luz separar las multas de parqueadero, ya que estas no corresponden a cuotas de administración.</li>
+ <li>Apartamento 504: Debe 22.733.290 pesos. Se mencionó que la propietaria no está de acuerdo con los intereses y que ha recibido una carta donde se le cobran 15 millones de pesos, aunque la conciliación arroja un valor menor, cercano a los 13 millones de pesos.</li>
+</ul>
+
+<p>Se reiteró la importancia de estar pendientes de la venta del apartamento 504, ya que al momento de la venta, el notario solicitará un paz y salvo. Se aclaró que algunos notarios no lo exigen, permitiendo la venta con deuda. Se enfatizó que la administración puede cobrar la deuda a cualquier persona que tenga la propiedad a cualquier título, incluyendo inquilinos, albaceas o la SAE, siendo el problema para el nuevo propietario que compra con la deuda.</p><h2>2. Ajuste contable y acta de aprobación</h2>
+
+<p>Durante la reunión, se abordó la necesidad de realizar un ajuste contable relacionado con la conciliación de deudas de tres apartamentos morosos, un proceso que había sido gestionado por don Carlos con la administración anterior. Se buscaba formalizar este ajuste mediante un acta de aprobación.</p>
+
+<p>Se mencionó que se había enviado un archivo de Excel a la administradora con la liquidación detallada de las deudas de los tres apartamentos, especificando el capital y los intereses adeudados. Estos archivos también fueron enviados a los copropietarios correspondientes, quienes no presentaron objeciones a las cifras.</p>
+
+<p>La administradora indicó que no tenía inconvenientes con el ajuste contable en sí, pero requería un acta donde se aprobara formalmente dicho ajuste. Se aclaró que este tema había quedado pendiente de revisión en la reunión del 9 de septiembre, donde se acordó que se revisarían los intereses.</p>
+
+<p>José F. Díaz preguntó si se había dado un plazo a los propietarios para objetar los estados de cuenta. Se confirmó que sí, y que ninguno presentó objeciones ni pagos faltantes. El propietario del apartamento 105 incluso se comprometió a realizar pagos de $500,000 pesos.</p>
+
+<p>Se discutió el estado de cuenta de los apartamentos morosos:</p>
+
+<ul>
+ <li>Apartamento 105: Debe $3,362,449, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe $21,285,357.40, incluyendo cuotas no pagadas, arreglo de citófono y multas por moto.</li>
+ <li>Apartamento 504: Debe $22,733,290 y no está de acuerdo con los intereses.</li>
+</ul>
+
+<p>Se mencionó que la propietaria del apartamento 504 recibió una carta donde se le cobraban $15 millones, aunque la conciliación arrojaba una cifra menor, alrededor de $13 millones. Se considera que está esperando vender el apartamento para saldar la deuda.</p>
+
+<p>La administradora señaló que debía conciliar la cartera del apartamento 206, separando las multas de parqueadero, y que actualizaría la información para el cierre de octubre.</p>
+
+<p>Finalmente, la administradora solicitó el acta para poder cerrar octubre con los ajustes contables y los estados financieros, y que don Carlos le colaborara para poderla incorporar en la carpeta de octubre con los estados financieros y con el acta donde se soportan los estados financieros.</p>
+<h2>3. Estado de cuenta y acuerdos de pago</h2>
+
+<p>Durante la reunión, se abordó el tema del estado de cuenta y los acuerdos de pago, centrándose en la revisión de los estados de cuenta enviados a los copropietarios y las respuestas obtenidas. Se discutieron los casos de algunos apartamentos en mora y las gestiones realizadas para conciliar las deudas.</p>
+
+<p>Se mencionó que, al 30 de septiembre, existía una cartera por cobrar y que se habían realizado ajustes con tres apartamentos morosos, gracias a la conciliación efectuada por Carlos con la administración anterior. Se destacó que se envió un archivo de Excel a cada uno de los copropietarios morosos, detallando el capital y los intereses adeudados, y que ninguno de ellos objetó la liquidación.</p>
+
+<p>José F. Díaz indicó que se había dado un plazo a los propietarios para revisar los estados de cuenta y presentar objeciones, pero que ninguno presentó pagos faltantes. El propietario del apartamento 105 se comprometió a realizar pagos de 500 mil pesos. Se aclaró que se elaborarían acuerdos de pago para aquellos que desearan acogerse a ellos, y que en caso contrario, se recurriría a acciones legales.</p>
+
+<p>Se informó que la cartera total ascendía aproximadamente a 43 millones de pesos, siendo el apartamento 105 el que menos debía. En cuanto al apartamento 504, se indicó que el propietario no había vuelto a contactar a la administración, aparentemente esperando vender el apartamento para saldar la deuda.</p>
+
+<p>Se proporcionaron los siguientes datos sobre las deudas de los apartamentos:</p>
+
+<ul>
+ <li>Apartamento 105: Debe 3.362.449 pesos, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe 21.285.357 pesos con 40 centavos, incluyendo cuotas no pagadas, un arreglo de citófono y multas por moto.</li>
+ <li>Apartamento 504: Debe 22.733.290 pesos, con una diferencia debido a que el propietario no está de acuerdo con los intereses.</li>
+</ul>
+
+<p>Doña Luz aclaró que debía actualizar el estado de cuenta del apartamento 206, separando las multas de parqueadero, ya que estas se contabilizan aparte de las cuotas de administración. Se acordó que esta actualización se realizaría para el cierre de octubre.</p>
+
+<p>Se comentó que el envío de la facturación de motos había generado ingresos adicionales, ya que varios propietarios se habían puesto al día con sus pagos al recibir la cuenta de cobro detallada.</p>
+
+<p>En relación con el apartamento 504, se mencionó que Doña Olga había enviado una carta indicando que se le estaban cobrando 15 millones de pesos, mientras que la conciliación realizada por la administración arrojaba un valor cercano a los 13 millones de pesos. Se presume que los propietarios están esperando vender el apartamento para saldar la deuda, por lo que se debe estar atento al proceso de venta y al requerimiento del paz y salvo notarial.</p>
+
+<p>Se explicó que, legalmente, la administración puede cobrar la deuda a cualquier persona que tenga la propiedad a cualquier título, incluyendo inquilinos o albaceas. Sin embargo, se reconoció que la falta de un paz y salvo podría afectar al nuevo propietario en caso de desconocimiento de la deuda.</p>
+<h2>4. Cartera: estado actual y seguimiento</h2>
+
+<p>En la reunión se abordó el estado actual de la cartera, con corte al 30 de septiembre, y el seguimiento a los ajustes que se realizarían en relación con tres apartamentos morosos. Estos ajustes habían sido conciliados por Carlos con la administración anterior, y se buscaba realizar los ajustes contables correspondientes.</p>
+
+<p>Se mencionó que se había enviado un archivo de Excel con la liquidación detallada de los tres apartamentos a cada uno de los copropietarios morosos, especificando el capital y los intereses adeudados. Se indicó que ninguno de los copropietarios objetó la liquidación y que todos estuvieron de acuerdo con la deuda.</p>
+
+<p>José F. Díaz especificó que se había dado un tiempo determinado a los propietarios para revisar los estados de cuenta y presentar cualquier objeción o pago faltante. Ninguno presentó pagos faltantes y el propietario del apartamento 105 se comprometió a realizar pagos de $500.000.</p>
+
+<p>Se informó que la cartera total ascendía a aproximadamente 43 millones de pesos. Se detalló la situación de los siguientes apartamentos:</p>
+
+<ul>
+ <li><strong>Apartamento 105:</strong> Debe $3.362.449, incluyendo intereses por obra.</li>
+ <li><strong>Apartamento 206:</strong> Debe $21.285.357,40. Se aclaró que esta cifra incluye cuotas de administración no pagadas, el arreglo de un citófono y multas por motos. Se acordó que Doña Luz actualizaría la información de este apartamento, separando las multas de parqueadero, para el cierre de octubre.</li>
+ <li><strong>Apartamento 504:</strong> Debe $22.733.290. Se indicó que el propietario no está de acuerdo con los intereses y que había recibido una carta donde se le cobraban 15 millones de pesos, aunque la conciliación arrojaba un valor cercano a los 13 millones. Se presume que el propietario está esperando vender el apartamento para saldar la deuda.</li>
+</ul>
+
+<p>Se comentó que se había enviado la facturación de las motos a los propietarios, lo cual generó que varios se pusieran al día con sus pagos. Se destacó que cualquier ingreso adicional por este concepto se considera ganancia.</p>
+
+<p>Se discutió la importancia de estar pendientes de los pasisalvos al momento de la venta de los apartamentos, aunque se aclaró que algunos notarios no los exigen. Se enfatizó que la administración puede cobrar la deuda a cualquier título, incluso al inquilino, albacea o a la SAE si es el caso, y que el problema recae sobre el nuevo propietario que compra con la deuda.</p>
+
+<h3>Intereses de mora</h3>
+
+<p>Se mencionó que los intereses de mora se están contabilizando desde julio o agosto y se discriminan en la factura. Sin embargo, se aclaró que estos intereses corresponden a facturación y no necesariamente a recaudo.</p>
+
+<h3>Apartamentos 105, 206, 504</h3>
+
+<p>Se retomó el tema de los apartamentos en mora, mencionando que se requiere el acta donde se apruebe el ajuste contable correspondiente a la conciliación realizada con la administración anterior. Se recordó que en la reunión del 9 de septiembre se había quedado en revisar este tema.</p>
+
+<h3>Facturación de motos</h3>
+
+<p>Se reiteró que el envío de la facturación de las motos generó un recaudo importante, ya que muchos propietarios se sorprendieron al ver el monto adeudado y procedieron a realizar los pagos correspondientes.</p><h2>5. Estados financieros y ejecución presupuestal</h2>
+
+<p>En la reunión se abordó el tema de los estados financieros y la ejecución presupuestal, donde se discutieron los ingresos y gastos, el flujo de caja y los pagos de ABS.</p>
+
+<h3>Ingresos y gastos</h3>
+
+<p>Se mencionó que, hasta el momento, se han facturado 43.311.000 pesos de un presupuesto de ingresos de 57.748.000 pesos. Al comparar el presupuesto de los nueve meses, que asciende a 44.867.000 pesos, con los ingresos ejecutados, se observa un leve excedente de 941.000 pesos, generado por los intereses de mora, que se facturan y se llevan a una cuenta de ingresos no operacionales.</p>
+
+<p>En cuanto a los gastos, se indicó que no se han facturado 14.242.000 pesos por servicio de aseo y 2.520.000 pesos por servicios contables. Los servicios de administración, con un presupuesto de 6.210.000 pesos, se han ejecutado en su totalidad. En servicios públicos, se ha ejecutado un monto de 3.081.000 pesos, superando el presupuesto de 2.700.000 pesos, lo que representa una sobre ejecución de 381.000 pesos. La recarga de citofonía se mantiene en línea con el presupuesto, mientras que el servicio de fumigación aún no se ha ejecutado, pero se espera que se realice en octubre. En la recarga de extintores, se ha ejecutado 149.144 pesos de un presupuesto de 150.000 pesos, lo que resulta en un ahorro de 6.000 pesos.</p>
+
+<p>En lo que respecta a los mantenimientos, se cuenta con un presupuesto de 23.415.000 pesos, de los cuales se han ejecutado 9.331.000 pesos. Se explicó que la administración entrante ha sido austera en los gastos, ya que la ejecución depende del flujo de caja. Se recordó que la ejecución presupuestal y el flujo de caja son conceptos distintos, siendo este último el que determina la contratación de servicios.</p>
+
+<h3>Flujo de caja</h3>
+
+<p>Se presentó un flujo de caja que muestra que en septiembre se recaudaron 4.591.000 pesos, con rendimientos financieros de Colombia que suman 2.388 pesos, lo que da un total de entradas de 4.593.000 pesos. Las salidas ascendieron a 2.913.000 pesos, correspondientes a pagos ordinarios para el sostenimiento, como administración, contabilidad (100.000 pesos), citofonía (188.000 pesos), mantenimiento de zonas verdes (65.000 pesos), mantenimiento de zonas comunes (489.650 pesos), papelería (105.400 pesos), elementos de aseo (37.450 pesos), retención en la fuente (54.400 pesos) y gastos bancarios (14.190 pesos). Se realizó un traslado de 200.000 pesos de la cuenta bancaria. La diferencia entre ingresos y gastos en septiembre, sumada al disponible al 31 de agosto (593.000 pesos), resulta en un disponible de 2.272.000 pesos, distribuido entre la caja general y la caja menor. Esta información corresponde al 30 de septiembre.</p>
+
+<p>Se destacó como particularidad el reconocimiento de los intereses de mora, que se han tenido en cuenta y se han convertido en caja oportunamente. También se resaltó la disminución considerable en la ejecución de los gastos, lo que sugiere una buena gestión de la copropiedad. Se aclaró que el problema no radica en una mala planificación del presupuesto ni en un desfinanciamiento, sino en la necesidad de ser austeros debido a la situación financiera.</p>
+
+<h3>Pagos de ABS</h3>
+
+<p>En cuanto a los pagos de ABS, se informó que se está pagando un mes vencido y un mes actual, con el objetivo de sanear la deuda para diciembre. También se mencionó una deuda de tres meses con la doctora Luz Estela, con la promesa de abonar un mes y el mes corriente. Se señaló que un pago de préstamo afectó la seguridad, ya que esos fondos estaban destinados a la fachada. Se reconoció un error en el presupuesto para las fachadas, lo que generó un desfinanciamiento. Se recordó que en febrero se destinaron 4 millones de pesos y en marzo 2.700.000 pesos para este fin, lo que afectó el flujo de caja y la entrega de la cartera.</p>
+
+<p>Se concluyó que, a pesar de las dificultades, se está realizando un buen trabajo en la portería y se están corrigiendo desórdenes financieros arrastrados de años anteriores. Se reconoció que la falta de ejecución de gastos se debe a la necesidad de priorizar el pago de deudas. Se mencionó que el daño del motor y la cantonera de la reja también han afectado el flujo de caja.</p>
+
+<p>Doña Luz solicitó el acta para poder cerrar octubre con los ajustes correspondientes, y Don Carlos se comprometió a colaborar en este proceso. Se acordó que Doña Luz enviará la carpeta de octubre con los estados financieros y el acta que los respalde. Adicionalmente, se solicitó a Doña Luz conciliar la cartera para el tema de los parqueaderos, específicamente para el apartamento 206, donde se incluyó todo en la misma cuenta. Doña Luz se comprometió a actualizar la información y tenerla lista para el cierre de octubre.</p>
+<h2>6. Conciliación de cartera para parqueaderos</h2>
+<p>Durante la reunión, se abordó la conciliación de cartera para parqueaderos, centrándose específicamente en el caso del apartamento 206. Doña Luz fue encargada de conciliar la cartera de este apartamento, ya que se había incluido el valor del parqueadero en la misma cuenta de las cuotas de administración.</p>
+<p>Se indicó que Doña Luz debía separar las cifras correspondientes al parqueadero y actualizar la información para el cierre de octubre. Se espera que esta conciliación se realice en conjunto con la asistente de Doña Luz, quien proporcionará detalles sobre las retenciones aplicables.</p>
+<h3>Apartamento 206</h3>
+<p>Se discutió la necesidad de separar los valores correspondientes al parqueadero del apartamento 206, ya que estos se habían incluido incorrectamente en la misma cuenta de las cuotas de administración. Doña Luz se comprometió a realizar esta separación y a proporcionar la información actualizada para el cierre contable de octubre.</p>
+<h2>7. Asistente de administración: contrato y seguridad social</h2>
+
+<p>Durante la discusión de este tema, se abordó la situación de la asistente de administración y las inquietudes surgidas respecto a su contrato y seguridad social. La controversia se originó a partir de comentarios realizados por un propietario, Don Iván, quien cuestionó la necesidad de la asistente y el cumplimiento de sus obligaciones de seguridad social.</p>
+
+<p>Se expuso que Don Iván había contactado a otro propietario para expresar su preocupación sobre la contratación de la asistente y el pago de su seguridad social. Ante esta situación, la administración manifestó su desacuerdo con la intervención de Don Iván y defendió la necesidad de contar con el apoyo de la asistente para mejorar la atención y el servicio a la copropiedad.</p>
+
+<p>Se aclaró que la asistente no representaba un costo adicional para la copropiedad, ya que su trabajo se realizaba tanto en el edificio como en otras unidades administradas por la misma administración. Se destacó que la presencia de la asistente buscaba brindar un apoyo constante a la copropiedad, ofreciendo inmediatez en la atención a las necesidades de los residentes.</p>
+
+<p>Para formalizar la situación, se propuso realizar un otrosí al contrato de administración, especificando que la administración suministraría un auxiliar o asistente sin costo adicional para la copropiedad. Sin embargo, se reconoció que la seguridad social de la asistente podría generar un riesgo legal para la copropiedad si no se manejaba adecuadamente.</p>
+
+<p>Ante la preocupación por la seguridad social de la asistente, se sugirió que la administración incluyera en su cuenta de cobro tanto su propia seguridad social como la de su empleada, detallando que la administración actúa como empleador de la asistente. De esta manera, se garantizaría el cumplimiento de las obligaciones legales y se evitarían posibles inconvenientes para la copropiedad.</p>
+
+<p>Se enfatizó que el objetivo de contar con la asistente era brindar un mejor servicio a la copropiedad, ofreciendo un apoyo constante y una atención inmediata a las necesidades de los residentes. Se resaltó que la asistente ha demostrado ser eficiente y comprometida con su trabajo, generando una buena impresión entre los propietarios.</p>
+
+<p>Finalmente, se acordó que la administración continuaría trabajando con la asistente, asegurando el cumplimiento de todas las obligaciones legales y brindando un servicio de calidad a la copropiedad. Se destacó la importancia de mantener una comunicación abierta y transparente con los propietarios para resolver cualquier inquietud o problema que pueda surgir.</p>
+
+<p>No se realizó ninguna votación formal sobre este tema.</p>
+<h2>8. Propuesta de pago de Doña Nubia (Apartamento 206)</h2>
+
+<p>En la reunión, se abordó la propuesta de pago presentada por Doña Nubia, propietaria del apartamento 206, quien se encontraba presente. Se recordó que en la última reunión se había presentado un acuerdo de pago, pero el consejo consideró que los abonos propuestos eran demasiado pequeños y podrían extender el pago de la deuda a un plazo excesivo.</p>
+
+<p>Doña Nubia expuso su situación financiera actual, indicando que percibe el salario mínimo y que su intención es saldar la deuda lo antes posible. En este sentido, propuso realizar un abono de 700.000 pesos mensuales a partir de enero. Adicionalmente, se comprometió a pagar la administración correspondiente al año 2025 en el mes de diciembre, estimando un valor de 1.603.632 pesos, según un cálculo realizado considerando un posible incremento del 16% en el salario mínimo.</p>
+
+<p>Doña Nubia solicitó al consejo considerar la posibilidad de un descuento en los intereses de la deuda, buscando facilitar su pronto saneamiento. Manifestó su deseo de conocer el valor exacto de la deuda a partir de enero, incluyendo el capital y los intereses, para llevar un control organizado de sus pagos.</p>
+
+<p>Se aclaró que la deuda de Doña Nubia corresponde al período comprendido entre el 1 de mayo de 2020 y septiembre de 2024, y que no ha realizado pagos durante el presente año. Se indicó que, de septiembre a diciembre, la deuda podría incrementarse en aproximadamente dos millones de pesos debido a los intereses.</p>
+
+<p>Don Carlos precisó que, según sus cálculos, la deuda con intereses hasta el mes de septiembre ascendía a 21.285.357,40 pesos. Doña Nubia solicitó una revisión de esta cifra, mencionando una carta que le fue entregada con un valor diferente. Se acordó verificar la información y proporcionar a Doña Nubia un estado de cuenta actualizado.</p>
+
+<p>Se explicó que, al firmar un acuerdo de pago, los intereses se congelan a partir de la fecha del acuerdo, pero no se condonan los intereses generados con anterioridad. El consejo podría considerar un acuerdo para reducir dichos intereses. Se informó que la tasa de interés actual es del 2.13% mensual, calculada con base en la Superintendencia Bancaria.</p>
+
+<p>Se discutió la posibilidad de fijar un porcentaje de interés fijo para el acuerdo de pago, pero se advirtió sobre el riesgo de que la tasa de interés del mercado varíe, pudiendo resultar en una pérdida para la copropiedad. Se reiteró que, al incumplir el acuerdo de pago, la deuda se reliquidaría con los intereses correspondientes.</p>
+
+<p>Se propuso someter a votación la propuesta de Doña Nubia, que consiste en pagar la administración del año 2025 en diciembre y abonar 700.000 pesos mensuales a partir de enero, congelando los intereses a partir del mes de octubre. Se procedió a la votación:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> A favor.</li>
+ <li><strong>Doña Claudia:</strong> A favor.</li>
+ <li><strong>Don Nelson:</strong> A favor.</li>
+</ul>
+
+<p>La propuesta fue aprobada por mayoría.</p>
+
+<p>Posteriormente, se sugirió ofrecer a Doña Nubia un descuento del 30% sobre los intereses de mora. Se argumentó que esta medida podría incentivar un pago más rápido de la deuda y evitar un proceso jurídico que podría resultar más costoso y prolongado. Se sometió a votación la propuesta de ofrecer un descuento del 30% sobre los intereses de mora:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Muy de acuerdo.</li>
+</ul>
+
+<p>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206.</p>
+
+<h2>9. Aprobación de descuento en intereses a Doña Nubia</h2>
+
+<p>Se procedió a discutir la propuesta de Doña Nubia, propietaria del apartamento 206, respecto al pago de su deuda. Doña Nubia expuso su situación financiera actual, indicando que percibe el salario mínimo y, a pesar de ello, desea saldar la deuda lo antes posible. Propuso realizar un abono de 700 mil pesos mensuales a partir de enero, y en diciembre pagar la administración correspondiente al año 2025 por un valor aproximado de 1.603.632 pesos.</p>
+
+<p>Doña Nubia solicitó la posibilidad de obtener un descuento en los intereses de la deuda, que ascienden a 7.754.000 pesos. Explicó que su intención es organizar sus finanzas y cumplir con el pago de la deuda en un plazo de dos años y medio, comprometiéndose a pagar las cuotas de administración de forma anticipada cada año.</p>
+
+<p>Se mencionó que la deuda de Doña Nubia corresponde al período comprendido entre el 1 de mayo de 2020 y septiembre de 2024. Se aclaró que, al iniciar los pagos en enero, la deuda total con intereses ascendería a 22.512.096 pesos. Se debatió sobre el incremento anual de la administración, sugiriendo que se calcule con base en el salario mínimo legal vigente, lo cual impactaría los costos de aseo y salarios.</p>
+
+<p>Se explicó que, al firmar un acuerdo de pago y comenzar a realizar los abonos, los intereses se congelarían, es decir, no se seguirían generando intereses sobre la deuda. Sin embargo, los intereses acumulados hasta ese momento no podrían ser condonados, a menos que el consejo de administración llegara a un acuerdo diferente.</p>
+
+<p>Se destacó la importancia de encontrar un punto medio entre los intereses de la copropiedad y la capacidad de pago de la propietaria, evitando que la deuda se extienda indefinidamente. Se enfatizó que, en caso de incumplimiento del acuerdo de pago, la deuda se reliquidaría en su totalidad.</p>
+
+<p>Se sometió a votación la propuesta de Doña Nubia, que consiste en pagar la cuota de administración de 2025 en diciembre (aproximadamente 1.603.632 pesos) y comenzar a pagar 700 mil pesos mensuales a partir de enero, congelando los intereses a partir de octubre. Los votos fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Sí, está de acuerdo.</li>
+ <li><strong>Doña Claudia:</strong> Sí, está de acuerdo.</li>
+ <li><strong>Don Nelson:</strong> A favor.</li>
+</ul>
+
+<p>La propuesta fue aprobada por mayoría.</p>
+
+<p>Posteriormente, se propuso realizar un descuento del 30% sobre los intereses de mora, equivalentes a 7.754.000 pesos. Se argumentó que esta medida incentivaría a Doña Nubia a cumplir con el acuerdo de pago y sanear la deuda más rápidamente. Se destacó la voluntad de pago de la propietaria y se comparó esta situación con los costos y la incertidumbre de un proceso jurídico.</p>
+
+<p>Se sometió a votación la propuesta de otorgar un descuento del 30% sobre los intereses de mora del apartamento 206. Los votos fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Muy de acuerdo con eso.</li>
+</ul>
+
+<p>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206.</p>
+<h2>10. Llamado a Colpensiones y tareas pendientes</h2>
+
+<p>En relación con el tema del llamado a Colpensiones y tareas pendientes, se informa que ya se realizó el llamado a Colpensiones. Se comunicó que la información había llegado a dicha entidad, pero se desconoce el motivo. Se indicó que la Unidad no tiene compromisos con Colpensiones, por lo que se sugiere hacer caso omiso a la información recibida.</p>
+
+<p>En cuanto a las tareas pendientes, se mencionó el gato de la puerta principal, el cual no está cerrando correctamente. Se informa que se va a poner un gato nuevo en la puerta principal, ya que el gato de arriba es más importante. Se aclara que el gato de abajo no está funcionando bien.</p>
+<h2>11. Reja de ingreso al edificio y puerta principal</h2>
+
+<p>Durante la reunión, se abordó el tema de la reja de ingreso al edificio y la puerta principal, centrándose en el estado de funcionamiento de los mecanismos de cierre y las acciones correctivas necesarias.</p>
+
+<p>Se mencionó que el portero automático de la puerta principal no está cerrando correctamente. Se describió el mecanismo como un "gato", similar a una jeringa con líquido que empuja y luego se devuelve. Se indicó que, al parecer, la gente está empujando la puerta en lugar de dejar que el mecanismo cierre por sí solo, lo que podría estar causando el problema.</p>
+
+<p>En relación con la reja de ingreso, se señaló que esta había sido retirada por una persona identificada como Don Iván, aunque posteriormente fue devuelta y reinstalada. No se especificaron los motivos de la remoción inicial.</p>
+
+<p>Ante la situación, se propuso priorizar la reparación del portero automático superior, considerando que el gato actual no está funcionando adecuadamente. Se mencionó que se disponía de un gato nuevo para ser instalado.</p>
+
+<p>Se acordó volver a comunicar a los residentes la instrucción de no forzar el cierre de la puerta, permitiendo que el mecanismo funcione correctamente. Se hizo referencia a circulares enviadas previamente con instrucciones sobre el cuidado de las instalaciones.</p>
+<h2>12. Circular sobre mascotas</h2>
+
+<p>En la reunión se abordó el tema de la circular sobre mascotas, motivado por una llamada de Doña Olga respecto a un perro en el apartamento 401. En consecuencia, se informó que se enviaron circulares tanto sobre cartera como sobre las mascotas.</p>
+
+<p>Se preguntó si se había leído toda la circular, enfatizando que la información sobre los perros se encontraba al final del documento. Se hizo referencia a quejas sobre un perro que lloraba constantemente, posiblemente debido a que lo dejaban solo todo el día.</p>
+
+<p>Doña Nidia comentó: "Hasta yo estoy sufriendo por el bendito perrito, porque no sé si es que lo están dejando solo todo el día, pero el perro no se sino llorar".</p>
+<h2>13. Manual de convivencia y políticas de cartera</h2>
+
+<p>En la reunión, se mencionó que el manual de convivencia y las políticas de cartera ya habían sido montados en el grupo de WhatsApp para su votación. Se solicitó a los miembros del consejo que revisaran los documentos y emitieran su voto a través del enlace proporcionado.</p>
+
+<p>Se hizo hincapié en la importancia de la participación del consejo en la votación, ya que de ello dependen "muchas cosas" para la administración y la copropiedad. Se reconoció que los miembros del consejo trabajan ad honorem y que su tiempo es valioso, pero se insistió en la necesidad de su colaboración para llevar a cabo las tareas pendientes.</p>
+
+<p>Doña Luz preguntó si ya habían leído la circular del acta, a lo que respondió que le faltaba leerla para mirar bien si estaba toda completa y pasarle sugerencias y que hay que cambiar algo. Sí, hágale. Para sacarla.</p>
+<h2>14. Mantenimiento del tanque de agua</h2>
+
+<p>Durante la reunión, se abordó el tema del mantenimiento del tanque de agua, aunque la discusión fue breve debido a limitaciones presupuestarias.</p>
+
+<p>Se reconoció la importancia de realizar el mantenimiento del tanque de agua, mencionando el riesgo potencial de una visita de la Secretaría de Salud en caso de no cumplir con los estándares sanitarios. Se estimó que el costo de este mantenimiento podría oscilar entre 100.000 y 150.000 pesos. Sin embargo, se señaló que no se disponía de fondos suficientes en ese momento para cubrir dicho gasto.</p>
+
+<p>Ante la falta de recursos inmediatos, se propuso evaluar el flujo de caja para determinar cuándo sería posible programar el mantenimiento. Se mencionó que el recaudo mensual se situaba en torno a los dos millones ochocientos mil pesos, pero que existían deudas pendientes con la doctora Luz Estela, lo que limitaba la disponibilidad de fondos.</p>
+
+<p>En resumen, aunque se reconoció la necesidad del mantenimiento del tanque de agua, la falta de presupuesto impidió tomar una decisión inmediata. Se acordó evaluar el flujo de caja para determinar la viabilidad de realizar el mantenimiento en el futuro.</p>
+<h2>15. Asamblea extraordinaria para techos</h2>
+
+<p>Se informa que se tiene proyectado realizar una asamblea extraordinaria para tratar el tema de los techos. Sin embargo, no se ha fijado una fecha específica, ya que la administración está a la espera de obtener las cotizaciones necesarias para su análisis. Se menciona que ya se cuenta con una cotización, pero se requieren dos más para poder tomar una decisión informada.</p>
+
+<p>Se indica que la administración ha recibido quejas sobre los techos de varios apartamentos, mencionando específicamente que los únicos apartamentos que no han presentado quejas son el 503 y el 505, este último perteneciente a doña Tatiana, los cuales se encuentran en buen estado. Se añade que el apartamento 508 ya ha contactado a la administración para expresar su inconformidad.</p>
+
+<p>Don Carlos Diego Zapata comparte su experiencia en construcción, albañilería y pintura, sugiriendo que, en caso de detectarse una gotera en un apartamento, se repare toda la sección del techo afectada, en lugar de realizar remiendos parciales. Argumenta que el manto nuevo no se adhiere correctamente al manto viejo, lo que puede generar problemas a largo plazo. Propone que, si la humedad se encuentra en la sala, se repare toda la sala, y si la gotera está en una habitación, se repare toda la habitación. Considera que esta solución integral puede resultar más económica a largo plazo y ofrecer una mayor garantía.</p>
+
+<p>Se comenta sobre el apartamento 504, el cual presenta problemas de comején, lo que podría afectar la estructura del techo y los muebles del apartamento si no están inmunizados.</p>
+
+<p>Se pregunta quién realizó el cambio de techo en el apartamento de uno de los presentes, con el fin de determinar si la reparación fue realizada por un contratista particular o por la copropiedad.</p>
+<h2>16. Reparación de techos y goteras</h2>
+
+<p>Durante la reunión, se abordó el tema de la reparación de techos y goteras, identificando que varios apartamentos han reportado problemas relacionados con filtraciones. Se mencionó que los apartamentos 504, 506 y 508, entre otros, han presentado quejas sobre este tema. Los únicos apartamentos que no han reportado inconvenientes son el 503 y el 505, este último perteneciente a Doña Tatiana, los cuales se consideran nuevos.</p>
+
+<p>Carlos Diego Zapata, quien cuenta con experiencia y cursos en construcción, albañilería y pintura del Sena, compartió su perspectiva sobre la reparación de techos. Sugirió que, en lugar de realizar remiendos parciales, se debería reparar toda la sección afectada (por ejemplo, toda la sala o toda la habitación) para asegurar una solución duradera. Explicó que la unión entre el manto nuevo y el manto viejo puede ser problemática, llevando a futuras filtraciones si no se aborda de manera integral.</p>
+
+<p>Se planteó la necesidad de obtener cotizaciones para las reparaciones. Se indicó que ya se cuenta con una cotización, pero faltan dos más para poder evaluar las opciones y tomar una decisión informada. No se estableció una fecha específica para la asamblea extraordinaria en la que se discutirán estas cotizaciones, ya que la fecha depende de la obtención de las cotizaciones restantes.</p>
+
+<p>En relación con el apartamento 504, se mencionó que presenta problemas de comején, lo cual podría estar afectando la estructura del techo y los muebles. Se destacó la importancia de abordar este problema de manera integral para evitar daños mayores.</p>
+
+<p>Se aclaró que Doña Tatiana realizó una reparación parcial del techo y pagó aproximadamente 350 mil pesos. Como parte de las funciones de la administración, se le realizará una nota crédito por este valor, que se verá reflejada en su cuenta de administración.</p>
+
+<p>En cuanto a la metodología de reparación, Carlos Diego Zapata explicó que el manto es un pedazo de papel lleno de brea que se derrite con un soplete para adherirlo al techo. Subrayó la importancia de realizar una reparación completa para evitar problemas futuros debido a la unión entre el manto nuevo y el manto viejo.</p><h2>17. Fumigación y control de plagas</h2>
+
+<p>Durante la reunión, se abordó el tema de la fumigación y control de plagas, suscitando diversos comentarios y experiencias entre los asistentes.</p>
+
+<p>Doña Tatiana expresó su inquietud sobre la efectividad del servicio de fumigación en su apartamento, mencionando que, a pesar de la fumigación, había encontrado algunas cucarachas en su cocina. Ante esto, se generó una discusión sobre la posible causa y alcance del problema de plagas en el edificio.</p>
+
+<p>Se mencionó que en el apartamento 405 se había encontrado una gran cantidad de cucarachas, requiriendo incluso una doble fumigación para controlar la situación. Se describió que estas cucarachas eran pequeñas y se alimentaban de su propio excremento, lo que hacía difícil su erradicación.</p>
+
+<p>Ante la persistencia del problema en algunos apartamentos, se propuso realizar una encuesta en el grupo de WhatsApp para identificar a los residentes que desearan una nueva fumigación. La administración se comprometió a contactar nuevamente a la empresa de fumigación para que revisara los apartamentos que lo requirieran.</p>
+
+<p>Se destacó la importancia de fumigar todos los apartamentos para lograr un control efectivo de las plagas, ya que fumigar solo algunos apartamentos podría no ser suficiente para erradicar el problema por completo.</p>
+
+<p>Finalmente, se acordó que la administración preguntaría en el grupo de WhatsApp quiénes deseaban una nueva fumigación y se coordinaría con la empresa para realizarla en los apartamentos que lo solicitaran, prestando especial atención al apartamento 405.</p><h2>18. Evaluación del servicio de administración y asistente</h2>
+
+<p>Durante la reunión, se abordó el tema de la evaluación del servicio de administración y del asistente. Se expuso la decisión de la administración de contar con un asistente como un valor añadido para la copropiedad, mencionando que esta figura no implicaría un costo adicional para la misma.</p>
+
+<p>Se mencionó que la decisión de tener un asistente surgió de conversaciones previas con Don Nelson al momento de la contratación, donde se planteó la necesidad de una presencia más constante en el edificio, más allá de los dos días a la semana que el administrador podía estar presente. Se buscaba brindar un apoyo continuo a la copropiedad y asegurar una atención más inmediata a las necesidades de los residentes.</p>
+
+<p>Se discutió la forma de legalizar la situación del asistente, considerando que no estaba contemplado en el contrato original de la administración. Se propuso realizar un otrosí al contrato, donde se especificara que la administración suministraría un auxiliar o asistente sin costo para la copropiedad.</p>
+
+<p>Se planteó la inquietud sobre la seguridad social del asistente, ya que se requería para trabajar dentro de la unidad. Se aclaró que el administrador se haría cargo de la seguridad social del asistente, incluyéndola en su cuenta de cobro junto con su propia seguridad social.</p>
+
+<p>Se destacó que el objetivo de contar con un asistente era brindar un servicio de apoyo a la copropiedad, ofreciendo inmediatez en la atención y una mayor tranquilidad a los residentes. Se mencionó que el asistente estaba presente en el edificio no solo los días que el administrador asistía, sino también en otros días de la semana.</p>
+
+<p>Se preguntó a los miembros del consejo cómo se habían sentido con el trabajo del administrador y del asistente, buscando retroalimentación para mejorar el servicio. Se recibieron comentarios positivos sobre la eficiencia y la amabilidad del asistente, destacando su pronta respuesta a las solicitudes de los residentes.</p>
+
+<p>Se mencionó que el asistente tenía algunas limitaciones debido a la falta de un espacio físico adecuado para trabajar, lo cual afectaba su desempeño. No se tomaron decisiones específicas sobre este tema en particular.</p>
+<h2>19. Entrega de actas y hojas de vida</h2>
+
+<p>En el desarrollo de este tema, se abordó la entrega de las actas y hojas de vida correspondientes a la administración. Se confirmó que la administración cuenta con una copia de la hoja de vida y que esta quedará archivada en la carpeta de contrato de administración. Adicionalmente, se mencionó que las hojas de vida de los participantes en la convocatoria también están disponibles.</p>
+
+<p>Se indicó que están pendientes tres actas debido a la pérdida de información en el celular de uno de los responsables. Con la entrega de estos documentos, se daría por finalizado este punto del orden del día.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se realizará un ajuste contable basado en el acta donde se aprueba dicho ajuste para los tres apartamentos morosos – <strong>Responsable:</strong> Don Carlos (conciliación con administración anterior) y la administración actual (elaboración del acta).</li>
+ <li>Se congelarán los intereses a partir de octubre para el acuerdo de pago con Doña Nubia del apartamento 206 – <strong>Responsable:</strong> Consejo de Administración.</li>
+ <li>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206 – <strong>Responsable:</strong> Consejo de Administración.</li>
+ <li>La administración suministrará un auxiliar/asistente sin costo para la copropiedad, legalizando la situación mediante un otro sí al contrato existente – <strong>Responsable:</strong> No especificado.</li>
+ <li>Se preguntará en el grupo de WhatsApp quiénes desean una nueva fumigación, y se coordinará con la empresa – <strong>Responsable:</strong> No especificado.</li>
+ </ul>
+
+ <h3>Narrativa del cierre:</h3>
+ <p>
+ En conclusión, la reunión se centró en la revisión de la cartera morosa y la situación financiera de la copropiedad. Se acordó realizar ajustes contables basados en conciliaciones previas, siempre y cuando se documenten en el acta correspondiente. Un punto clave fue la aprobación de un acuerdo de pago con Doña Nubia (apartamento 206), incluyendo la congelación de intereses a partir de octubre y un descuento del 30% en los intereses de demora, buscando un equilibrio entre los intereses de la copropiedad y la capacidad de pago de la propietaria. Además, se discutió la situación del asistente de la administración, acordando legalizar su figura mediante un "otro sí" al contrato existente. Finalmente, se abordó el tema de la fumigación, decidiendo consultar a los residentes sobre la necesidad de una nueva intervención.
+ </p>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Lectura y revisión del acta anterior, incluyendo ajustes contables y cartera</li>
+ <li>Ajuste contable y acta de aprobación</li>
+ <li>Estado de cuenta y acuerdos de pago</li>
+ <li>Cartera: estado actual y seguimiento</li>
+ <li>Estados financieros y ejecución presupuestal</li>
+ <li>Conciliación de cartera para parqueaderos</li>
+ <li>Asistente de administración: contrato y seguridad social</li>
+ <li>Propuesta de pago de Doña Nubia (Apartamento 206)</li>
+ <li>Aprobación de descuento en intereses a Doña Nubia</li>
+ <li>Llamado a Colpensiones y tareas pendientes</li>
+ <li>Reja de ingreso al edificio y puerta principal</li>
+ <li>Circular sobre mascotas</li>
+ <li>Manual de convivencia y políticas de cartera</li>
+ <li>Mantenimiento del tanque de agua</li>
+ <li>Asamblea extraordinaria para techos</li>
+ <li>Reparación de techos y goteras</li>
+ <li>Fumigación y control de plagas</li>
+ <li>Evaluación del servicio de administración y asistente</li>
+ <li>Entrega de actas y hojas de vida</li>
+ </ol>
+</header>
+<h2>1. Lectura y revisión del acta anterior, incluyendo ajustes contables y cartera</h2>
+
+<p>Durante la reunión, se abordó la lectura y revisión del acta anterior, incluyendo los ajustes contables y de cartera pendientes. Se mencionó que en la tercera reunión se aprobó el nombre y la caja, según aclaración de uno de los asistentes.</p>
+
+<p>Se identificó la necesidad de realizar ajustes contables relacionados con tres apartamentos morosos, resultado de conciliaciones efectuadas por Don Carlos con la administración anterior. Se recordó que se había enviado un archivo de Excel con la liquidación detallada de cada uno de estos apartamentos, especificando capital e intereses, a los respectivos copropietarios, quienes no presentaron objeciones.</p>
+
+<p>Se enfatizó la importancia de contar con el acta donde se apruebe formalmente el ajuste contable. Se recordó que en la reunión del 9 de septiembre se había quedado en revisar los intereses, los cuales ya fueron corregidos en los archivos de Excel enviados a los propietarios, sin que estos objetaran la deuda.</p>
+
+<p>En relación con los estados de cuenta, se preguntó si se había dado un tiempo determinado a los propietarios para objetarlos. Se confirmó que sí, y que se les había solicitado revisar los pagos realizados y reportar cualquier inconsistencia. Al no recibir objeciones ni reportes de pagos faltantes, se procedió a contactar a los propietarios para establecer acuerdos de pago.</p>
+
+<p>Se mencionó que el propietario del apartamento 105 se comprometió a realizar pagos de 500 mil pesos. Se subrayó la importancia de formalizar estos acuerdos por escrito. Se informó que la cartera total ascendía aproximadamente a 43 millones de pesos, siendo el apartamento 105 el que menos debía.</p>
+
+<p>Se indicó que la propietaria del apartamento 504 no había vuelto a comunicarse, a pesar de haber recibido el estado de cuenta y de haber tenido tiempo para responder. Se presume que está esperando vender el apartamento para saldar la deuda.</p>
+
+<p>Se proporcionaron los siguientes datos sobre los apartamentos en mora:</p>
+
+<ul>
+ <li>Apartamento 105: Debe 3.362.449 pesos, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe 21.285.357 pesos con 40 centavos. Se aclaró que en esta cifra están incluidas cuotas no pagadas, el arreglo de un citófono y multas por moto. Se solicitó a Doña Luz separar las multas de parqueadero, ya que estas no corresponden a cuotas de administración.</li>
+ <li>Apartamento 504: Debe 22.733.290 pesos. Se mencionó que la propietaria no está de acuerdo con los intereses y que ha recibido una carta donde se le cobran 15 millones de pesos, aunque la conciliación arroja un valor menor, cercano a los 13 millones de pesos.</li>
+</ul>
+
+<p>Se reiteró la importancia de estar pendientes de la venta del apartamento 504, ya que al momento de la venta, el notario solicitará un paz y salvo. Se aclaró que algunos notarios no lo exigen, permitiendo la venta con deuda. Se enfatizó que la administración puede cobrar la deuda a cualquier persona que tenga la propiedad a cualquier título, incluyendo inquilinos, albaceas o la SAE, siendo el problema para el nuevo propietario que compra con la deuda.</p><h2>2. Ajuste contable y acta de aprobación</h2>
+
+<p>Durante la reunión, se abordó la necesidad de realizar un ajuste contable relacionado con la conciliación de deudas de tres apartamentos morosos, un proceso que había sido gestionado por don Carlos con la administración anterior. Se buscaba formalizar este ajuste mediante un acta de aprobación.</p>
+
+<p>Se mencionó que se había enviado un archivo de Excel a la administradora con la liquidación detallada de las deudas de los tres apartamentos, especificando el capital y los intereses adeudados. Estos archivos también fueron enviados a los copropietarios correspondientes, quienes no presentaron objeciones a las cifras.</p>
+
+<p>La administradora indicó que no tenía inconvenientes con el ajuste contable en sí, pero requería un acta donde se aprobara formalmente dicho ajuste. Se aclaró que este tema había quedado pendiente de revisión en la reunión del 9 de septiembre, donde se acordó que se revisarían los intereses.</p>
+
+<p>José F. Díaz preguntó si se había dado un plazo a los propietarios para objetar los estados de cuenta. Se confirmó que sí, y que ninguno presentó objeciones ni pagos faltantes. El propietario del apartamento 105 incluso se comprometió a realizar pagos de $500,000 pesos.</p>
+
+<p>Se discutió el estado de cuenta de los apartamentos morosos:</p>
+
+<ul>
+ <li>Apartamento 105: Debe $3,362,449, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe $21,285,357.40, incluyendo cuotas no pagadas, arreglo de citófono y multas por moto.</li>
+ <li>Apartamento 504: Debe $22,733,290 y no está de acuerdo con los intereses.</li>
+</ul>
+
+<p>Se mencionó que la propietaria del apartamento 504 recibió una carta donde se le cobraban $15 millones, aunque la conciliación arrojaba una cifra menor, alrededor de $13 millones. Se considera que está esperando vender el apartamento para saldar la deuda.</p>
+
+<p>La administradora señaló que debía conciliar la cartera del apartamento 206, separando las multas de parqueadero, y que actualizaría la información para el cierre de octubre.</p>
+
+<p>Finalmente, la administradora solicitó el acta para poder cerrar octubre con los ajustes contables y los estados financieros, y que don Carlos le colaborara para poderla incorporar en la carpeta de octubre con los estados financieros y con el acta donde se soportan los estados financieros.</p>
+<h2>3. Estado de cuenta y acuerdos de pago</h2>
+
+<p>Durante la reunión, se abordó el tema del estado de cuenta y los acuerdos de pago, centrándose en la revisión de los estados de cuenta enviados a los copropietarios y las respuestas obtenidas. Se discutieron los casos de algunos apartamentos en mora y las gestiones realizadas para conciliar las deudas.</p>
+
+<p>Se mencionó que, al 30 de septiembre, existía una cartera por cobrar y que se habían realizado ajustes con tres apartamentos morosos, gracias a la conciliación efectuada por Carlos con la administración anterior. Se destacó que se envió un archivo de Excel a cada uno de los copropietarios morosos, detallando el capital y los intereses adeudados, y que ninguno de ellos objetó la liquidación.</p>
+
+<p>José F. Díaz indicó que se había dado un plazo a los propietarios para revisar los estados de cuenta y presentar objeciones, pero que ninguno presentó pagos faltantes. El propietario del apartamento 105 se comprometió a realizar pagos de 500 mil pesos. Se aclaró que se elaborarían acuerdos de pago para aquellos que desearan acogerse a ellos, y que en caso contrario, se recurriría a acciones legales.</p>
+
+<p>Se informó que la cartera total ascendía aproximadamente a 43 millones de pesos, siendo el apartamento 105 el que menos debía. En cuanto al apartamento 504, se indicó que el propietario no había vuelto a contactar a la administración, aparentemente esperando vender el apartamento para saldar la deuda.</p>
+
+<p>Se proporcionaron los siguientes datos sobre las deudas de los apartamentos:</p>
+
+<ul>
+ <li>Apartamento 105: Debe 3.362.449 pesos, incluyendo intereses por obra.</li>
+ <li>Apartamento 206: Debe 21.285.357 pesos con 40 centavos, incluyendo cuotas no pagadas, un arreglo de citófono y multas por moto.</li>
+ <li>Apartamento 504: Debe 22.733.290 pesos, con una diferencia debido a que el propietario no está de acuerdo con los intereses.</li>
+</ul>
+
+<p>Doña Luz aclaró que debía actualizar el estado de cuenta del apartamento 206, separando las multas de parqueadero, ya que estas se contabilizan aparte de las cuotas de administración. Se acordó que esta actualización se realizaría para el cierre de octubre.</p>
+
+<p>Se comentó que el envío de la facturación de motos había generado ingresos adicionales, ya que varios propietarios se habían puesto al día con sus pagos al recibir la cuenta de cobro detallada.</p>
+
+<p>En relación con el apartamento 504, se mencionó que Doña Olga había enviado una carta indicando que se le estaban cobrando 15 millones de pesos, mientras que la conciliación realizada por la administración arrojaba un valor cercano a los 13 millones de pesos. Se presume que los propietarios están esperando vender el apartamento para saldar la deuda, por lo que se debe estar atento al proceso de venta y al requerimiento del paz y salvo notarial.</p>
+
+<p>Se explicó que, legalmente, la administración puede cobrar la deuda a cualquier persona que tenga la propiedad a cualquier título, incluyendo inquilinos o albaceas. Sin embargo, se reconoció que la falta de un paz y salvo podría afectar al nuevo propietario en caso de desconocimiento de la deuda.</p>
+<h2>4. Cartera: estado actual y seguimiento</h2>
+
+<p>En la reunión se abordó el estado actual de la cartera, con corte al 30 de septiembre, y el seguimiento a los ajustes que se realizarían en relación con tres apartamentos morosos. Estos ajustes habían sido conciliados por Carlos con la administración anterior, y se buscaba realizar los ajustes contables correspondientes.</p>
+
+<p>Se mencionó que se había enviado un archivo de Excel con la liquidación detallada de los tres apartamentos a cada uno de los copropietarios morosos, especificando el capital y los intereses adeudados. Se indicó que ninguno de los copropietarios objetó la liquidación y que todos estuvieron de acuerdo con la deuda.</p>
+
+<p>José F. Díaz especificó que se había dado un tiempo determinado a los propietarios para revisar los estados de cuenta y presentar cualquier objeción o pago faltante. Ninguno presentó pagos faltantes y el propietario del apartamento 105 se comprometió a realizar pagos de $500.000.</p>
+
+<p>Se informó que la cartera total ascendía a aproximadamente 43 millones de pesos. Se detalló la situación de los siguientes apartamentos:</p>
+
+<ul>
+ <li><strong>Apartamento 105:</strong> Debe $3.362.449, incluyendo intereses por obra.</li>
+ <li><strong>Apartamento 206:</strong> Debe $21.285.357,40. Se aclaró que esta cifra incluye cuotas de administración no pagadas, el arreglo de un citófono y multas por motos. Se acordó que Doña Luz actualizaría la información de este apartamento, separando las multas de parqueadero, para el cierre de octubre.</li>
+ <li><strong>Apartamento 504:</strong> Debe $22.733.290. Se indicó que el propietario no está de acuerdo con los intereses y que había recibido una carta donde se le cobraban 15 millones de pesos, aunque la conciliación arrojaba un valor cercano a los 13 millones. Se presume que el propietario está esperando vender el apartamento para saldar la deuda.</li>
+</ul>
+
+<p>Se comentó que se había enviado la facturación de las motos a los propietarios, lo cual generó que varios se pusieran al día con sus pagos. Se destacó que cualquier ingreso adicional por este concepto se considera ganancia.</p>
+
+<p>Se discutió la importancia de estar pendientes de los pasisalvos al momento de la venta de los apartamentos, aunque se aclaró que algunos notarios no los exigen. Se enfatizó que la administración puede cobrar la deuda a cualquier título, incluso al inquilino, albacea o a la SAE si es el caso, y que el problema recae sobre el nuevo propietario que compra con la deuda.</p>
+
+<h3>Intereses de mora</h3>
+
+<p>Se mencionó que los intereses de mora se están contabilizando desde julio o agosto y se discriminan en la factura. Sin embargo, se aclaró que estos intereses corresponden a facturación y no necesariamente a recaudo.</p>
+
+<h3>Apartamentos 105, 206, 504</h3>
+
+<p>Se retomó el tema de los apartamentos en mora, mencionando que se requiere el acta donde se apruebe el ajuste contable correspondiente a la conciliación realizada con la administración anterior. Se recordó que en la reunión del 9 de septiembre se había quedado en revisar este tema.</p>
+
+<h3>Facturación de motos</h3>
+
+<p>Se reiteró que el envío de la facturación de las motos generó un recaudo importante, ya que muchos propietarios se sorprendieron al ver el monto adeudado y procedieron a realizar los pagos correspondientes.</p><h2>5. Estados financieros y ejecución presupuestal</h2>
+
+<p>En la reunión se abordó el tema de los estados financieros y la ejecución presupuestal, donde se discutieron los ingresos y gastos, el flujo de caja y los pagos de ABS.</p>
+
+<h3>Ingresos y gastos</h3>
+
+<p>Se mencionó que, hasta el momento, se han facturado 43.311.000 pesos de un presupuesto de ingresos de 57.748.000 pesos. Al comparar el presupuesto de los nueve meses, que asciende a 44.867.000 pesos, con los ingresos ejecutados, se observa un leve excedente de 941.000 pesos, generado por los intereses de mora, que se facturan y se llevan a una cuenta de ingresos no operacionales.</p>
+
+<p>En cuanto a los gastos, se indicó que no se han facturado 14.242.000 pesos por servicio de aseo y 2.520.000 pesos por servicios contables. Los servicios de administración, con un presupuesto de 6.210.000 pesos, se han ejecutado en su totalidad. En servicios públicos, se ha ejecutado un monto de 3.081.000 pesos, superando el presupuesto de 2.700.000 pesos, lo que representa una sobre ejecución de 381.000 pesos. La recarga de citofonía se mantiene en línea con el presupuesto, mientras que el servicio de fumigación aún no se ha ejecutado, pero se espera que se realice en octubre. En la recarga de extintores, se ha ejecutado 149.144 pesos de un presupuesto de 150.000 pesos, lo que resulta en un ahorro de 6.000 pesos.</p>
+
+<p>En lo que respecta a los mantenimientos, se cuenta con un presupuesto de 23.415.000 pesos, de los cuales se han ejecutado 9.331.000 pesos. Se explicó que la administración entrante ha sido austera en los gastos, ya que la ejecución depende del flujo de caja. Se recordó que la ejecución presupuestal y el flujo de caja son conceptos distintos, siendo este último el que determina la contratación de servicios.</p>
+
+<h3>Flujo de caja</h3>
+
+<p>Se presentó un flujo de caja que muestra que en septiembre se recaudaron 4.591.000 pesos, con rendimientos financieros de Colombia que suman 2.388 pesos, lo que da un total de entradas de 4.593.000 pesos. Las salidas ascendieron a 2.913.000 pesos, correspondientes a pagos ordinarios para el sostenimiento, como administración, contabilidad (100.000 pesos), citofonía (188.000 pesos), mantenimiento de zonas verdes (65.000 pesos), mantenimiento de zonas comunes (489.650 pesos), papelería (105.400 pesos), elementos de aseo (37.450 pesos), retención en la fuente (54.400 pesos) y gastos bancarios (14.190 pesos). Se realizó un traslado de 200.000 pesos de la cuenta bancaria. La diferencia entre ingresos y gastos en septiembre, sumada al disponible al 31 de agosto (593.000 pesos), resulta en un disponible de 2.272.000 pesos, distribuido entre la caja general y la caja menor. Esta información corresponde al 30 de septiembre.</p>
+
+<p>Se destacó como particularidad el reconocimiento de los intereses de mora, que se han tenido en cuenta y se han convertido en caja oportunamente. También se resaltó la disminución considerable en la ejecución de los gastos, lo que sugiere una buena gestión de la copropiedad. Se aclaró que el problema no radica en una mala planificación del presupuesto ni en un desfinanciamiento, sino en la necesidad de ser austeros debido a la situación financiera.</p>
+
+<h3>Pagos de ABS</h3>
+
+<p>En cuanto a los pagos de ABS, se informó que se está pagando un mes vencido y un mes actual, con el objetivo de sanear la deuda para diciembre. También se mencionó una deuda de tres meses con la doctora Luz Estela, con la promesa de abonar un mes y el mes corriente. Se señaló que un pago de préstamo afectó la seguridad, ya que esos fondos estaban destinados a la fachada. Se reconoció un error en el presupuesto para las fachadas, lo que generó un desfinanciamiento. Se recordó que en febrero se destinaron 4 millones de pesos y en marzo 2.700.000 pesos para este fin, lo que afectó el flujo de caja y la entrega de la cartera.</p>
+
+<p>Se concluyó que, a pesar de las dificultades, se está realizando un buen trabajo en la portería y se están corrigiendo desórdenes financieros arrastrados de años anteriores. Se reconoció que la falta de ejecución de gastos se debe a la necesidad de priorizar el pago de deudas. Se mencionó que el daño del motor y la cantonera de la reja también han afectado el flujo de caja.</p>
+
+<p>Doña Luz solicitó el acta para poder cerrar octubre con los ajustes correspondientes, y Don Carlos se comprometió a colaborar en este proceso. Se acordó que Doña Luz enviará la carpeta de octubre con los estados financieros y el acta que los respalde. Adicionalmente, se solicitó a Doña Luz conciliar la cartera para el tema de los parqueaderos, específicamente para el apartamento 206, donde se incluyó todo en la misma cuenta. Doña Luz se comprometió a actualizar la información y tenerla lista para el cierre de octubre.</p>
+<h2>6. Conciliación de cartera para parqueaderos</h2>
+<p>Durante la reunión, se abordó la conciliación de cartera para parqueaderos, centrándose específicamente en el caso del apartamento 206. Doña Luz fue encargada de conciliar la cartera de este apartamento, ya que se había incluido el valor del parqueadero en la misma cuenta de las cuotas de administración.</p>
+<p>Se indicó que Doña Luz debía separar las cifras correspondientes al parqueadero y actualizar la información para el cierre de octubre. Se espera que esta conciliación se realice en conjunto con la asistente de Doña Luz, quien proporcionará detalles sobre las retenciones aplicables.</p>
+<h3>Apartamento 206</h3>
+<p>Se discutió la necesidad de separar los valores correspondientes al parqueadero del apartamento 206, ya que estos se habían incluido incorrectamente en la misma cuenta de las cuotas de administración. Doña Luz se comprometió a realizar esta separación y a proporcionar la información actualizada para el cierre contable de octubre.</p>
+<h2>7. Asistente de administración: contrato y seguridad social</h2>
+
+<p>Durante la discusión de este tema, se abordó la situación de la asistente de administración y las inquietudes surgidas respecto a su contrato y seguridad social. La controversia se originó a partir de comentarios realizados por un propietario, Don Iván, quien cuestionó la necesidad de la asistente y el cumplimiento de sus obligaciones de seguridad social.</p>
+
+<p>Se expuso que Don Iván había contactado a otro propietario para expresar su preocupación sobre la contratación de la asistente y el pago de su seguridad social. Ante esta situación, la administración manifestó su desacuerdo con la intervención de Don Iván y defendió la necesidad de contar con el apoyo de la asistente para mejorar la atención y el servicio a la copropiedad.</p>
+
+<p>Se aclaró que la asistente no representaba un costo adicional para la copropiedad, ya que su trabajo se realizaba tanto en el edificio como en otras unidades administradas por la misma administración. Se destacó que la presencia de la asistente buscaba brindar un apoyo constante a la copropiedad, ofreciendo inmediatez en la atención a las necesidades de los residentes.</p>
+
+<p>Para formalizar la situación, se propuso realizar un otrosí al contrato de administración, especificando que la administración suministraría un auxiliar o asistente sin costo adicional para la copropiedad. Sin embargo, se reconoció que la seguridad social de la asistente podría generar un riesgo legal para la copropiedad si no se manejaba adecuadamente.</p>
+
+<p>Ante la preocupación por la seguridad social de la asistente, se sugirió que la administración incluyera en su cuenta de cobro tanto su propia seguridad social como la de su empleada, detallando que la administración actúa como empleador de la asistente. De esta manera, se garantizaría el cumplimiento de las obligaciones legales y se evitarían posibles inconvenientes para la copropiedad.</p>
+
+<p>Se enfatizó que el objetivo de contar con la asistente era brindar un mejor servicio a la copropiedad, ofreciendo un apoyo constante y una atención inmediata a las necesidades de los residentes. Se resaltó que la asistente ha demostrado ser eficiente y comprometida con su trabajo, generando una buena impresión entre los propietarios.</p>
+
+<p>Finalmente, se acordó que la administración continuaría trabajando con la asistente, asegurando el cumplimiento de todas las obligaciones legales y brindando un servicio de calidad a la copropiedad. Se destacó la importancia de mantener una comunicación abierta y transparente con los propietarios para resolver cualquier inquietud o problema que pueda surgir.</p>
+
+<p>No se realizó ninguna votación formal sobre este tema.</p>
+<h2>8. Propuesta de pago de Doña Nubia (Apartamento 206)</h2>
+
+<p>En la reunión, se abordó la propuesta de pago presentada por Doña Nubia, propietaria del apartamento 206, quien se encontraba presente. Se recordó que en la última reunión se había presentado un acuerdo de pago, pero el consejo consideró que los abonos propuestos eran demasiado pequeños y podrían extender el pago de la deuda a un plazo excesivo.</p>
+
+<p>Doña Nubia expuso su situación financiera actual, indicando que percibe el salario mínimo y que su intención es saldar la deuda lo antes posible. En este sentido, propuso realizar un abono de 700.000 pesos mensuales a partir de enero. Adicionalmente, se comprometió a pagar la administración correspondiente al año 2025 en el mes de diciembre, estimando un valor de 1.603.632 pesos, según un cálculo realizado considerando un posible incremento del 16% en el salario mínimo.</p>
+
+<p>Doña Nubia solicitó al consejo considerar la posibilidad de un descuento en los intereses de la deuda, buscando facilitar su pronto saneamiento. Manifestó su deseo de conocer el valor exacto de la deuda a partir de enero, incluyendo el capital y los intereses, para llevar un control organizado de sus pagos.</p>
+
+<p>Se aclaró que la deuda de Doña Nubia corresponde al período comprendido entre el 1 de mayo de 2020 y septiembre de 2024, y que no ha realizado pagos durante el presente año. Se indicó que, de septiembre a diciembre, la deuda podría incrementarse en aproximadamente dos millones de pesos debido a los intereses.</p>
+
+<p>Don Carlos precisó que, según sus cálculos, la deuda con intereses hasta el mes de septiembre ascendía a 21.285.357,40 pesos. Doña Nubia solicitó una revisión de esta cifra, mencionando una carta que le fue entregada con un valor diferente. Se acordó verificar la información y proporcionar a Doña Nubia un estado de cuenta actualizado.</p>
+
+<p>Se explicó que, al firmar un acuerdo de pago, los intereses se congelan a partir de la fecha del acuerdo, pero no se condonan los intereses generados con anterioridad. El consejo podría considerar un acuerdo para reducir dichos intereses. Se informó que la tasa de interés actual es del 2.13% mensual, calculada con base en la Superintendencia Bancaria.</p>
+
+<p>Se discutió la posibilidad de fijar un porcentaje de interés fijo para el acuerdo de pago, pero se advirtió sobre el riesgo de que la tasa de interés del mercado varíe, pudiendo resultar en una pérdida para la copropiedad. Se reiteró que, al incumplir el acuerdo de pago, la deuda se reliquidaría con los intereses correspondientes.</p>
+
+<p>Se propuso someter a votación la propuesta de Doña Nubia, que consiste en pagar la administración del año 2025 en diciembre y abonar 700.000 pesos mensuales a partir de enero, congelando los intereses a partir del mes de octubre. Se procedió a la votación:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> A favor.</li>
+ <li><strong>Doña Claudia:</strong> A favor.</li>
+ <li><strong>Don Nelson:</strong> A favor.</li>
+</ul>
+
+<p>La propuesta fue aprobada por mayoría.</p>
+
+<p>Posteriormente, se sugirió ofrecer a Doña Nubia un descuento del 30% sobre los intereses de mora. Se argumentó que esta medida podría incentivar un pago más rápido de la deuda y evitar un proceso jurídico que podría resultar más costoso y prolongado. Se sometió a votación la propuesta de ofrecer un descuento del 30% sobre los intereses de mora:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Muy de acuerdo.</li>
+</ul>
+
+<p>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206.</p>
+
+<h2>9. Aprobación de descuento en intereses a Doña Nubia</h2>
+
+<p>Se procedió a discutir la propuesta de Doña Nubia, propietaria del apartamento 206, respecto al pago de su deuda. Doña Nubia expuso su situación financiera actual, indicando que percibe el salario mínimo y, a pesar de ello, desea saldar la deuda lo antes posible. Propuso realizar un abono de 700 mil pesos mensuales a partir de enero, y en diciembre pagar la administración correspondiente al año 2025 por un valor aproximado de 1.603.632 pesos.</p>
+
+<p>Doña Nubia solicitó la posibilidad de obtener un descuento en los intereses de la deuda, que ascienden a 7.754.000 pesos. Explicó que su intención es organizar sus finanzas y cumplir con el pago de la deuda en un plazo de dos años y medio, comprometiéndose a pagar las cuotas de administración de forma anticipada cada año.</p>
+
+<p>Se mencionó que la deuda de Doña Nubia corresponde al período comprendido entre el 1 de mayo de 2020 y septiembre de 2024. Se aclaró que, al iniciar los pagos en enero, la deuda total con intereses ascendería a 22.512.096 pesos. Se debatió sobre el incremento anual de la administración, sugiriendo que se calcule con base en el salario mínimo legal vigente, lo cual impactaría los costos de aseo y salarios.</p>
+
+<p>Se explicó que, al firmar un acuerdo de pago y comenzar a realizar los abonos, los intereses se congelarían, es decir, no se seguirían generando intereses sobre la deuda. Sin embargo, los intereses acumulados hasta ese momento no podrían ser condonados, a menos que el consejo de administración llegara a un acuerdo diferente.</p>
+
+<p>Se destacó la importancia de encontrar un punto medio entre los intereses de la copropiedad y la capacidad de pago de la propietaria, evitando que la deuda se extienda indefinidamente. Se enfatizó que, en caso de incumplimiento del acuerdo de pago, la deuda se reliquidaría en su totalidad.</p>
+
+<p>Se sometió a votación la propuesta de Doña Nubia, que consiste en pagar la cuota de administración de 2025 en diciembre (aproximadamente 1.603.632 pesos) y comenzar a pagar 700 mil pesos mensuales a partir de enero, congelando los intereses a partir de octubre. Los votos fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Sí, está de acuerdo.</li>
+ <li><strong>Doña Claudia:</strong> Sí, está de acuerdo.</li>
+ <li><strong>Don Nelson:</strong> A favor.</li>
+</ul>
+
+<p>La propuesta fue aprobada por mayoría.</p>
+
+<p>Posteriormente, se propuso realizar un descuento del 30% sobre los intereses de mora, equivalentes a 7.754.000 pesos. Se argumentó que esta medida incentivaría a Doña Nubia a cumplir con el acuerdo de pago y sanear la deuda más rápidamente. Se destacó la voluntad de pago de la propietaria y se comparó esta situación con los costos y la incertidumbre de un proceso jurídico.</p>
+
+<p>Se sometió a votación la propuesta de otorgar un descuento del 30% sobre los intereses de mora del apartamento 206. Los votos fueron los siguientes:</p>
+
+<ul>
+ <li><strong>Doña Nidia:</strong> Muy de acuerdo con eso.</li>
+</ul>
+
+<p>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206.</p>
+<h2>10. Llamado a Colpensiones y tareas pendientes</h2>
+
+<p>En relación con el tema del llamado a Colpensiones y tareas pendientes, se informa que ya se realizó el llamado a Colpensiones. Se comunicó que la información había llegado a dicha entidad, pero se desconoce el motivo. Se indicó que la Unidad no tiene compromisos con Colpensiones, por lo que se sugiere hacer caso omiso a la información recibida.</p>
+
+<p>En cuanto a las tareas pendientes, se mencionó el gato de la puerta principal, el cual no está cerrando correctamente. Se informa que se va a poner un gato nuevo en la puerta principal, ya que el gato de arriba es más importante. Se aclara que el gato de abajo no está funcionando bien.</p>
+<h2>11. Reja de ingreso al edificio y puerta principal</h2>
+
+<p>Durante la reunión, se abordó el tema de la reja de ingreso al edificio y la puerta principal, centrándose en el estado de funcionamiento de los mecanismos de cierre y las acciones correctivas necesarias.</p>
+
+<p>Se mencionó que el portero automático de la puerta principal no está cerrando correctamente. Se describió el mecanismo como un "gato", similar a una jeringa con líquido que empuja y luego se devuelve. Se indicó que, al parecer, la gente está empujando la puerta en lugar de dejar que el mecanismo cierre por sí solo, lo que podría estar causando el problema.</p>
+
+<p>En relación con la reja de ingreso, se señaló que esta había sido retirada por una persona identificada como Don Iván, aunque posteriormente fue devuelta y reinstalada. No se especificaron los motivos de la remoción inicial.</p>
+
+<p>Ante la situación, se propuso priorizar la reparación del portero automático superior, considerando que el gato actual no está funcionando adecuadamente. Se mencionó que se disponía de un gato nuevo para ser instalado.</p>
+
+<p>Se acordó volver a comunicar a los residentes la instrucción de no forzar el cierre de la puerta, permitiendo que el mecanismo funcione correctamente. Se hizo referencia a circulares enviadas previamente con instrucciones sobre el cuidado de las instalaciones.</p>
+<h2>12. Circular sobre mascotas</h2>
+
+<p>En la reunión se abordó el tema de la circular sobre mascotas, motivado por una llamada de Doña Olga respecto a un perro en el apartamento 401. En consecuencia, se informó que se enviaron circulares tanto sobre cartera como sobre las mascotas.</p>
+
+<p>Se preguntó si se había leído toda la circular, enfatizando que la información sobre los perros se encontraba al final del documento. Se hizo referencia a quejas sobre un perro que lloraba constantemente, posiblemente debido a que lo dejaban solo todo el día.</p>
+
+<p>Doña Nidia comentó: "Hasta yo estoy sufriendo por el bendito perrito, porque no sé si es que lo están dejando solo todo el día, pero el perro no se sino llorar".</p>
+<h2>13. Manual de convivencia y políticas de cartera</h2>
+
+<p>En la reunión, se mencionó que el manual de convivencia y las políticas de cartera ya habían sido montados en el grupo de WhatsApp para su votación. Se solicitó a los miembros del consejo que revisaran los documentos y emitieran su voto a través del enlace proporcionado.</p>
+
+<p>Se hizo hincapié en la importancia de la participación del consejo en la votación, ya que de ello dependen "muchas cosas" para la administración y la copropiedad. Se reconoció que los miembros del consejo trabajan ad honorem y que su tiempo es valioso, pero se insistió en la necesidad de su colaboración para llevar a cabo las tareas pendientes.</p>
+
+<p>Doña Luz preguntó si ya habían leído la circular del acta, a lo que respondió que le faltaba leerla para mirar bien si estaba toda completa y pasarle sugerencias y que hay que cambiar algo. Sí, hágale. Para sacarla.</p>
+<h2>14. Mantenimiento del tanque de agua</h2>
+
+<p>Durante la reunión, se abordó el tema del mantenimiento del tanque de agua, aunque la discusión fue breve debido a limitaciones presupuestarias.</p>
+
+<p>Se reconoció la importancia de realizar el mantenimiento del tanque de agua, mencionando el riesgo potencial de una visita de la Secretaría de Salud en caso de no cumplir con los estándares sanitarios. Se estimó que el costo de este mantenimiento podría oscilar entre 100.000 y 150.000 pesos. Sin embargo, se señaló que no se disponía de fondos suficientes en ese momento para cubrir dicho gasto.</p>
+
+<p>Ante la falta de recursos inmediatos, se propuso evaluar el flujo de caja para determinar cuándo sería posible programar el mantenimiento. Se mencionó que el recaudo mensual se situaba en torno a los dos millones ochocientos mil pesos, pero que existían deudas pendientes con la doctora Luz Estela, lo que limitaba la disponibilidad de fondos.</p>
+
+<p>En resumen, aunque se reconoció la necesidad del mantenimiento del tanque de agua, la falta de presupuesto impidió tomar una decisión inmediata. Se acordó evaluar el flujo de caja para determinar la viabilidad de realizar el mantenimiento en el futuro.</p>
+<h2>15. Asamblea extraordinaria para techos</h2>
+
+<p>Se informa que se tiene proyectado realizar una asamblea extraordinaria para tratar el tema de los techos. Sin embargo, no se ha fijado una fecha específica, ya que la administración está a la espera de obtener las cotizaciones necesarias para su análisis. Se menciona que ya se cuenta con una cotización, pero se requieren dos más para poder tomar una decisión informada.</p>
+
+<p>Se indica que la administración ha recibido quejas sobre los techos de varios apartamentos, mencionando específicamente que los únicos apartamentos que no han presentado quejas son el 503 y el 505, este último perteneciente a doña Tatiana, los cuales se encuentran en buen estado. Se añade que el apartamento 508 ya ha contactado a la administración para expresar su inconformidad.</p>
+
+<p>Don Carlos Diego Zapata comparte su experiencia en construcción, albañilería y pintura, sugiriendo que, en caso de detectarse una gotera en un apartamento, se repare toda la sección del techo afectada, en lugar de realizar remiendos parciales. Argumenta que el manto nuevo no se adhiere correctamente al manto viejo, lo que puede generar problemas a largo plazo. Propone que, si la humedad se encuentra en la sala, se repare toda la sala, y si la gotera está en una habitación, se repare toda la habitación. Considera que esta solución integral puede resultar más económica a largo plazo y ofrecer una mayor garantía.</p>
+
+<p>Se comenta sobre el apartamento 504, el cual presenta problemas de comején, lo que podría afectar la estructura del techo y los muebles del apartamento si no están inmunizados.</p>
+
+<p>Se pregunta quién realizó el cambio de techo en el apartamento de uno de los presentes, con el fin de determinar si la reparación fue realizada por un contratista particular o por la copropiedad.</p>
+<h2>16. Reparación de techos y goteras</h2>
+
+<p>Durante la reunión, se abordó el tema de la reparación de techos y goteras, identificando que varios apartamentos han reportado problemas relacionados con filtraciones. Se mencionó que los apartamentos 504, 506 y 508, entre otros, han presentado quejas sobre este tema. Los únicos apartamentos que no han reportado inconvenientes son el 503 y el 505, este último perteneciente a Doña Tatiana, los cuales se consideran nuevos.</p>
+
+<p>Carlos Diego Zapata, quien cuenta con experiencia y cursos en construcción, albañilería y pintura del Sena, compartió su perspectiva sobre la reparación de techos. Sugirió que, en lugar de realizar remiendos parciales, se debería reparar toda la sección afectada (por ejemplo, toda la sala o toda la habitación) para asegurar una solución duradera. Explicó que la unión entre el manto nuevo y el manto viejo puede ser problemática, llevando a futuras filtraciones si no se aborda de manera integral.</p>
+
+<p>Se planteó la necesidad de obtener cotizaciones para las reparaciones. Se indicó que ya se cuenta con una cotización, pero faltan dos más para poder evaluar las opciones y tomar una decisión informada. No se estableció una fecha específica para la asamblea extraordinaria en la que se discutirán estas cotizaciones, ya que la fecha depende de la obtención de las cotizaciones restantes.</p>
+
+<p>En relación con el apartamento 504, se mencionó que presenta problemas de comején, lo cual podría estar afectando la estructura del techo y los muebles. Se destacó la importancia de abordar este problema de manera integral para evitar daños mayores.</p>
+
+<p>Se aclaró que Doña Tatiana realizó una reparación parcial del techo y pagó aproximadamente 350 mil pesos. Como parte de las funciones de la administración, se le realizará una nota crédito por este valor, que se verá reflejada en su cuenta de administración.</p>
+
+<p>En cuanto a la metodología de reparación, Carlos Diego Zapata explicó que el manto es un pedazo de papel lleno de brea que se derrite con un soplete para adherirlo al techo. Subrayó la importancia de realizar una reparación completa para evitar problemas futuros debido a la unión entre el manto nuevo y el manto viejo.</p><h2>17. Fumigación y control de plagas</h2>
+
+<p>Durante la reunión, se abordó el tema de la fumigación y control de plagas, suscitando diversos comentarios y experiencias entre los asistentes.</p>
+
+<p>Doña Tatiana expresó su inquietud sobre la efectividad del servicio de fumigación en su apartamento, mencionando que, a pesar de la fumigación, había encontrado algunas cucarachas en su cocina. Ante esto, se generó una discusión sobre la posible causa y alcance del problema de plagas en el edificio.</p>
+
+<p>Se mencionó que en el apartamento 405 se había encontrado una gran cantidad de cucarachas, requiriendo incluso una doble fumigación para controlar la situación. Se describió que estas cucarachas eran pequeñas y se alimentaban de su propio excremento, lo que hacía difícil su erradicación.</p>
+
+<p>Ante la persistencia del problema en algunos apartamentos, se propuso realizar una encuesta en el grupo de WhatsApp para identificar a los residentes que desearan una nueva fumigación. La administración se comprometió a contactar nuevamente a la empresa de fumigación para que revisara los apartamentos que lo requirieran.</p>
+
+<p>Se destacó la importancia de fumigar todos los apartamentos para lograr un control efectivo de las plagas, ya que fumigar solo algunos apartamentos podría no ser suficiente para erradicar el problema por completo.</p>
+
+<p>Finalmente, se acordó que la administración preguntaría en el grupo de WhatsApp quiénes deseaban una nueva fumigación y se coordinaría con la empresa para realizarla en los apartamentos que lo solicitaran, prestando especial atención al apartamento 405.</p><h2>18. Evaluación del servicio de administración y asistente</h2>
+
+<p>Durante la reunión, se abordó el tema de la evaluación del servicio de administración y del asistente. Se expuso la decisión de la administración de contar con un asistente como un valor añadido para la copropiedad, mencionando que esta figura no implicaría un costo adicional para la misma.</p>
+
+<p>Se mencionó que la decisión de tener un asistente surgió de conversaciones previas con Don Nelson al momento de la contratación, donde se planteó la necesidad de una presencia más constante en el edificio, más allá de los dos días a la semana que el administrador podía estar presente. Se buscaba brindar un apoyo continuo a la copropiedad y asegurar una atención más inmediata a las necesidades de los residentes.</p>
+
+<p>Se discutió la forma de legalizar la situación del asistente, considerando que no estaba contemplado en el contrato original de la administración. Se propuso realizar un otrosí al contrato, donde se especificara que la administración suministraría un auxiliar o asistente sin costo para la copropiedad.</p>
+
+<p>Se planteó la inquietud sobre la seguridad social del asistente, ya que se requería para trabajar dentro de la unidad. Se aclaró que el administrador se haría cargo de la seguridad social del asistente, incluyéndola en su cuenta de cobro junto con su propia seguridad social.</p>
+
+<p>Se destacó que el objetivo de contar con un asistente era brindar un servicio de apoyo a la copropiedad, ofreciendo inmediatez en la atención y una mayor tranquilidad a los residentes. Se mencionó que el asistente estaba presente en el edificio no solo los días que el administrador asistía, sino también en otros días de la semana.</p>
+
+<p>Se preguntó a los miembros del consejo cómo se habían sentido con el trabajo del administrador y del asistente, buscando retroalimentación para mejorar el servicio. Se recibieron comentarios positivos sobre la eficiencia y la amabilidad del asistente, destacando su pronta respuesta a las solicitudes de los residentes.</p>
+
+<p>Se mencionó que el asistente tenía algunas limitaciones debido a la falta de un espacio físico adecuado para trabajar, lo cual afectaba su desempeño. No se tomaron decisiones específicas sobre este tema en particular.</p>
+<h2>19. Entrega de actas y hojas de vida</h2>
+
+<p>En el desarrollo de este tema, se abordó la entrega de las actas y hojas de vida correspondientes a la administración. Se confirmó que la administración cuenta con una copia de la hoja de vida y que esta quedará archivada en la carpeta de contrato de administración. Adicionalmente, se mencionó que las hojas de vida de los participantes en la convocatoria también están disponibles.</p>
+
+<p>Se indicó que están pendientes tres actas debido a la pérdida de información en el celular de uno de los responsables. Con la entrega de estos documentos, se daría por finalizado este punto del orden del día.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se realizará un ajuste contable basado en el acta donde se aprueba dicho ajuste para los tres apartamentos morosos – <strong>Responsable:</strong> Don Carlos (conciliación con administración anterior) y la administración actual (elaboración del acta).</li>
+ <li>Se congelarán los intereses a partir de octubre para el acuerdo de pago con Doña Nubia del apartamento 206 – <strong>Responsable:</strong> Consejo de Administración.</li>
+ <li>Se aprueba un descuento del 30% en los intereses de demora del apartamento 206 – <strong>Responsable:</strong> Consejo de Administración.</li>
+ <li>La administración suministrará un auxiliar/asistente sin costo para la copropiedad, legalizando la situación mediante un otro sí al contrato existente – <strong>Responsable:</strong> No especificado.</li>
+ <li>Se preguntará en el grupo de WhatsApp quiénes desean una nueva fumigación, y se coordinará con la empresa – <strong>Responsable:</strong> No especificado.</li>
+ </ul>
+
+ <h3>Narrativa del cierre:</h3>
+ <p>
+ En conclusión, la reunión se centró en la revisión de la cartera morosa y la situación financiera de la copropiedad. Se acordó realizar ajustes contables basados en conciliaciones previas, siempre y cuando se documenten en el acta correspondiente. Un punto clave fue la aprobación de un acuerdo de pago con Doña Nubia (apartamento 206), incluyendo la congelación de intereses a partir de octubre y un descuento del 30% en los intereses de demora, buscando un equilibrio entre los intereses de la copropiedad y la capacidad de pago de la propietaria. Además, se discutió la situación del asistente de la administración, acordando legalizar su figura mediante un "otro sí" al contrato existente. Finalmente, se abordó el tema de la fumigación, decidiendo consultar a los residentes sobre la necesidad de una nueva intervención.
+ </p>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/592YJQWSNNmwDpE
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/592YJQWSNNmwDpE
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/RDMBEKWNGQf3S4c
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/RDMBEKWNGQf3S4c
+Verificando si existe transcripción: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+[2025-08-12T21:22:51.478Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:22:52.698Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Transcripción existente encontrada: 20250812-15.26_-____versallestest____guilloalva230_gmail.com. Obteniendo contenido.
+Verificando contenido existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[2025-08-12T21:22:53.775Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:22:54.535Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Contenido existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt. Cargando.
+[2025-08-12T21:22:55.446Z] Contenido del archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac en carpeta: 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+Verificando Borrador .docx existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[2025-08-12T21:22:55.449Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:22:56.192Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/baH2kMfscEoKqpW
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/baH2kMfscEoKqpW
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/rAdzWDbbX8Afjfr
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/rAdzWDbbX8Afjfr
+Verificando si existe transcripción: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+[2025-08-12T21:24:13.161Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:24:14.303Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Transcripción existente encontrada: 20250812-15.26_-____versallestest____guilloalva230_gmail.com. Obteniendo contenido.
+Verificando contenido existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[2025-08-12T21:24:15.434Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:24:16.176Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Contenido existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt. Cargando.
+[2025-08-12T21:24:17.102Z] Contenido del archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250812-15.26_-____versallestest____guilloalva230_gmail.com.aac en carpeta: 20250812-15.26_-____versallestest____guilloalva230_gmail.com
+Verificando Borrador .docx existente: 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[2025-08-12T21:24:17.104Z] Verificando existencia del archivo 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx en Nextcloud carpeta 20250812-15.26_-____versallestest____guilloalva230_gmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-12T21:24:17.839Z] Archivo "20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250812-15.26_-____versallestest____guilloalva230_gmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/38g6pBf8MsrbZdr
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/38g6pBf8MsrbZdr
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/YkjB9Zw5MazgpWn
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/YkjB9Zw5MazgpWn

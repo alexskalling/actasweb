@@ -97,7 +97,7 @@ const WompiComponent = (props) => {
     return () => {
       document.body.removeChild(script);
     };
-  }, [costo]);
+  }, [costo, props.duration, props.file, props.fileid, props.folder]);
   const handleOpenWidget = () => {
     if (!checkout) {
       console.error("No se ha cargado el script de Wompi.");
@@ -107,7 +107,7 @@ const WompiComponent = (props) => {
     setIsLoading(true);
 
     // Track Wompi payment button click with more details
-    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
   
       window.gtag('event', 'wompi_payment_button_click', {
         'event_category': 'engagement',
@@ -141,7 +141,7 @@ const WompiComponent = (props) => {
         props.handlePayment();
 
         // Track successful payment with transaction details
-        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
       
           window.gtag('event', 'wompi_payment_success', {
             'event_category': 'engagement',
@@ -154,7 +154,7 @@ const WompiComponent = (props) => {
         }
       } else {
         // Track Wompi payment rejection with more details
-        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
       
           window.gtag('event', 'wompi_payment_rejected', {
             'event_category': 'error',

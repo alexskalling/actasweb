@@ -156,7 +156,7 @@ export async function generateContenta(
       const ordenDelDiaJSON = JSON.parse(jsonCleaned);
       
       // Validar que el cierre esté presente
-      const tieneCierre = ordenDelDiaJSON.some((item: any) => 
+      const tieneCierre = ordenDelDiaJSON.some((item: { nombre: string; }) => 
         item.nombre && item.nombre.toLowerCase().includes('cierre')
       );
       
@@ -234,9 +234,10 @@ async function procesarOrdenDelDia(
   socketBackendReal,
   //@ts-expect-error revisar después
   contenidoTranscripcion,
+   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   cachedContentId?: string
 ) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+ 
   let contenido = "";
 
   let index = 0;
@@ -266,7 +267,7 @@ async function procesarOrdenDelDia(
       });
     }
     console.log(index);
-    const nombreTemaNormalizado = String((tema as any)?.nombre ?? "")
+    const nombreTemaNormalizado = String((tema as { nombre: string })?.nombre ?? "")
       .trim()
       .toLowerCase();
     const promptType =
@@ -288,7 +289,7 @@ async function procesarOrdenDelDia(
 
     // Fuente para el tema: si se indicó que no fue discutido, pasa vacío; de lo contrario, usa la transcripción completa (cacheada externamente por el proveedor si aplica)
     // EXCEPCIÓN: El cierre siempre necesita la transcripción completa para extraer hora y acuerdos
-    const contenidoTemaFuente = (tema as any)?.discutido === false && nombreTemaNormalizado !== "cierre" ? "" : contenidoTranscripcion;
+    const contenidoTemaFuente = (tema )?.discutido === false && nombreTemaNormalizado !== "cierre" ? "" : contenidoTranscripcion;
 
     while (retryCount < maxRetries) {
       try {
@@ -357,6 +358,7 @@ async function crearCacheGeminiTranscripcion(transcripcion: string): Promise<str
     if (!apiKey) return undefined;
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const cachedContentApi: any = (model as any).cachedContent?.();
     if (!cachedContentApi || typeof cachedContentApi.create !== "function") {
       return undefined;
