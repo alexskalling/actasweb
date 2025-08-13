@@ -1581,3 +1581,430 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-15.26_-____v
 Compartiendo archivo existente para obtener URL pública: /Actas/20250812-15.26_-____versallestest____guilloalva230_gmail.com/20250812-15.26_-____versallestest____guilloalva230_gmail.com_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/YkjB9Zw5MazgpWn
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/YkjB9Zw5MazgpWn
+Verificando si existe transcripción: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt en carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com
+[2025-08-13T12:59:14.500Z] Verificando existencia del archivo 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt en Nextcloud carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T12:59:15.700Z] Archivo "20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "20250812-20.16_-____audio1400106597____gerencia_admonph.com".
+Iniciando transcripción con AssemblyAI para: 20250812-20.16_-____audio1400106597____gerencia_admonph.com.m4a
+Guardando transcripción: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt en carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com
+Transcripción guardada: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
+Verificando contenido existente: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt
+[2025-08-13T13:00:05.004Z] Verificando existencia del archivo 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt en Nextcloud carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T13:00:05.756Z] Archivo "20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt" NO encontrado en Nextcloud en la carpeta "20250812-20.16_-____audio1400106597____gerencia_admonph.com".
+Generando contenido para: 20250812-20.16_-____audio1400106597____gerencia_admonph.com.m4a
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 20250812-20.16_-____audio1400106597____gerencia_admonph.com.m4a
+Guardando contenido en Nextcloud: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt
+Contenido guardado: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 20250812-20.16_-____audio1400106597____gerencia_admonph.com.m4a en carpeta: 20250812-20.16_-____audio1400106597____gerencia_admonph.com
+Verificando Borrador .docx existente: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+[2025-08-13T13:01:12.154Z] Verificando existencia del archivo 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx en Nextcloud carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T13:01:12.903Z] Archivo "20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx" NO encontrado en Nextcloud en la carpeta "20250812-20.16_-____audio1400106597____gerencia_admonph.com".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+Preparando guardado .docx en Nextcloud: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión sobre Proyecto Ascensor y temas varios</h1>
+ <p><strong>Fecha:</strong> 14 de Agosto de 2024</p>
+ <p><strong>Hora:</strong> Inicio: No especificado - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Obed</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Miriam - [CARGO NO ESPECIFICADO]</li>
+ <li>Mónica - [CARGO NO ESPECIFICADO]</li>
+ <li>Rafael Martínez - Ingeniería</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Lectura y Aprobación del Acta Anterior</li>
+ <li>Informe del Seguro: Reclamaciones y Ajuste</li>
+ <li>Resumen Financiero y Presupuesto</li>
+ <li>Reparación de puerta de salida a la azotea</li>
+ <li>Presentación de Ingeniería y Avance del Proyecto Ascensor</li>
+ <li>Definición de Finalistas y Preparación de Asamblea Extraordinaria</li>
+ </ol>
+</header>
+<h2>1. Lectura y Aprobación del Acta Anterior</h2>
+
+<p>Durante la reunión, se abordó el tema de la lectura y aprobación del acta anterior. Sin embargo, no se proporcionaron detalles específicos sobre los temas tratados en dicha acta, ni se indicó si fue aprobada, modificada o aplazada. Por lo tanto, no es posible generar un resumen detallado en este momento.</p><h2>2. Informe del Seguro: Reclamaciones y Ajuste</h2>
+
+<p>En relación con el informe del seguro, se informa sobre dos reclamaciones que suman aproximadamente 20 millones de pesos, correspondientes a daños en las bombas y el ascensor, cada una por un valor cercano a los 9 millones de pesos. A pesar de la preocupación inicial por el tiempo transcurrido en la presentación de la reclamación del ascensor, la aseguradora no la ha rechazado, pero ha solicitado información adicional.</p>
+
+<p>Se detalla que la aseguradora ha requerido copia del contrato, bitácoras de mantenimiento, fotos y el salvamento. Se indica que, aunque inicialmente se solicitó esta información a Estilo, ante la falta de respuesta, se formalizó la solicitud vía correo electrónico, adjuntando copia de la comunicación de Seguros del Estado. Se menciona que la empresa de mantenimiento es la que debe aportar el salvamento o una certificación de disposición final, mientras que la factura de compra y las bitácoras de mantenimiento pueden ser aportadas por la administración.</p>
+
+<p>Se espera que para el caso de las bombas haya una respuesta en el transcurso del mes, ya que no se han solicitado ampliaciones de información ni se han presentado objeciones a la reclamación. Se añade que Esteban debía proporcionar el estado preciso de este proceso, pero debido a dificultades de conexión, esta información se proporcionará por correo electrónico al día siguiente.</p>
+
+<p>Se destaca la importancia de tener en cuenta la vigencia del seguro hasta el 2026. Adicionalmente, se menciona que el asesor ha realizado un análisis que indica que la copropiedad está infraasegurada, lo cual podría generar objeciones en los reclamos en curso. Ángela informó que se necesitan 8 millones de pesos adicionales para ajustar el valor asegurado según un avalúo de reconstrucción y reposición.</p>
+
+<p>Se propone socializar y resolver el tema del ajuste del seguro en la misma asamblea donde se solicitarán los recursos para el proyecto del ascensor, con el objetivo de evitar riesgos. Se sugiere esperar a que las reclamaciones se cierren antes de solicitar el ajuste para no generar dificultades en el proceso de reconocimiento y pago.</p><h2>3. Resumen Financiero y Presupuesto</h2>
+
+<p>En la reunión, se presenta un resumen del estado financiero y la ejecución del presupuesto correspondiente al mes de julio. Se discuten los ingresos, gastos y desviaciones, así como las acciones propuestas para el saneamiento financiero y el manejo de la cartera.</p>
+
+<h3>Cierre del mes de julio</h3>
+
+<p>Se informa que el mes de julio cerró con un superávit de 9 millones 858 mil pesos. El pasivo más patrimonio asciende a 15 millones 441 mil pesos, resultando en una diferencia de 5 millones 583 mil pesos, respaldada en cuentas por recaudar y anticipos, incluyendo un saldo del seguro pagado por anticipado de aproximadamente un millón de pesos.</p>
+
+<h3>Ejecución del presupuesto</h3>
+
+<p>Se detalla que, para los primeros siete meses del año, se proyectaron ingresos por 136 millones 774 mil pesos, mientras que la ejecución real alcanzó los 140 millones, lo que representa una desviación positiva del 2.4%. Esta desviación se atribuye principalmente a rendimientos financieros e intereses moratorios.</p>
+
+<p>En cuanto a los gastos, se proyectaron 136 millones 774 mil pesos, pero se gastaron 150 millones. Este mayor valor se debe al impacto de los gastos relacionados con las bombas. Se espera que esta situación se subsane con el ingreso del pago del seguro.</p>
+
+<h3>Desviación acumulada y del semestre</h3>
+
+<p>La desviación acumulada y la del semestre se sitúan en 9 millones de pesos. Se proyecta que, de no surgir más inconvenientes, se podría cerrar el año con un balance muy ajustado. En caso contrario, se solicitará a la asamblea autorización para realizar un saneamiento del estado de la situación financiera, ya sea cruzando fondos causados contablemente pero no disponibles por el déficit, o utilizando la reserva legal.</p>
+
+<h3>Saneamiento del estado de la situación financiera</h3>
+
+<p>Se plantea la posibilidad de solicitar permiso a la asamblea para realizar un saneamiento del estado de la situación financiera al cierre del año, en caso de no lograr un balance positivo. Este saneamiento se realizaría cruzando fondos causados contablemente pero no disponibles por el déficit, o utilizando la reserva legal.</p>
+
+<h3>Edades de la cartera y cobro jurídico</h3>
+
+<p>Se indica que solo un propietario, el del apartamento 601, con una deuda de 3 millones 303 mil pesos, ha clasificado para cobro jurídico. Se le dará un plazo final para realizar el pago antes de proceder con las acciones legales correspondientes.</p>
+<h2>4. Reparación de puerta de salida a la azotea</h2>
+
+<p>Durante la reunión, se mencionó un daño en la puerta de la terraza del piso 10, indicando que había sido reparada la semana anterior, pero volvió a dañarse. Se señaló que este incidente no figuraba en el informe presentado.</p>
+
+<p>Se indicó que Carlos había informado sobre la reparación inicial, pero que el daño había reaparecido, sugiriendo la necesidad de un ajuste más adecuado. Se mencionó que Obed no estaba al tanto del daño, lo que resaltó la importancia de registrar todos los incidentes en la bitácora correspondiente, incluyendo la hora de entrada y salida del contratista, así como el trabajo realizado.</p>
+
+<p>Se aclaró que la puerta en cuestión era la de salida a la azotea y que, tras la reparación inicial, el acceso quedó abierto y no se pudo cerrar. Se mencionó que el portero de turno había informado sobre la reparación y enviado un registro fotográfico, pero que, según Miriam, el problema había persistido.</p>
+
+<p>Se acordó verificar con Esteban y con el proveedor que realizó la reparación para entender la situación actual y asegurar una solución definitiva.</p>
+
+<h2>5. Presentación de Ingeniería y Avance del Proyecto Ascensor</h2>
+
+<p>Rafael Martínez de Cinco Ingeniería realizó una presentación sobre el avance del proyecto del ascensor. Inicialmente, se excusó por un problema de audio que le obligó a conectarse con un doble usuario. A continuación, presentó a Cinco Ingeniería como una empresa dedicada a diversas actividades relacionadas con la propiedad horizontal, destacando su labor en el asesoramiento e interventoría de obras. La empresa cuenta con más de 20 años de experiencia en la gestión de modernizaciones, sustituciones, calidad de mantenimiento, evaluaciones de seguridad y aspectos normativos relacionados con proyectos de transporte vertical.</p>
+
+<p>Se explicó que Cinco Ingeniería ofrece servicios de consultoría técnica, interventoría de obras y auditorías. En este caso, se ha contratado un servicio de interventoría que incluye consultoría técnica para la evaluación de propuestas técnico-económicas de las empresas de ascensores que participan en el proceso de modernización o sustitución del ascensor. Una vez seleccionada la empresa, Cinco Ingeniería actuará como interventor, supervisando la ejecución de las obras eléctricas y civiles necesarias para el proyecto.</p>
+
+<p>En respuesta a una pregunta sobre quién decide si se moderniza o se cambia el ascensor, Rafael Martínez aclaró que esta decisión se tomará en conjunto, basándose en sugerencias técnicas, normativas y legales, así como en la evaluación de los costos. Para ello, se presentó un acta de validación de los proponentes para el edificio Torre del Palmar, donde se mencionan las cuatro empresas invitadas a participar en la convocatoria: Ascensores Mitsubishi, Ascensores Schindler, Soluciones Verticales y Estilo Ingeniería.</p>
+
+<p>Se detalló que estas empresas han trabajado con Donovet y Cinco Ingeniería en diferentes proyectos de infraestructura de transporte vertical, tanto en la instalación de ascensores nuevos como en la modernización de los existentes. Se proporcionó información sobre cada una de las empresas:</p>
+
+<ul>
+ <li><strong>Ascensores Mitsubishi:</strong> Marca japonesa con planta de producción en Colombia, capaz de suministrar ambas alternativas (modernización o cambio).</li>
+ <li><strong>Ascensores Schindler:</strong> Empresa multinacional de origen suizo con operaciones a nivel global y en Colombia desde hace aproximadamente 40 o 50 años.</li>
+ <li><strong>Soluciones Verticales:</strong> Empresa nacional de origen antioqueño con sede en Medellín, que representa las marcas Hyundai y SJEC.</li>
+ <li><strong>Estilo Ingeniería:</strong> Empresa nacional representante exclusiva de las marcas Fujitech (japonesa) y Hosting (china), con operaciones en Colombia, Panamá y Costa Rica.</li>
+</ul>
+
+<p>El objetivo de la convocatoria es evaluar nueve aspectos para calificar las propuestas de modernización o cambio total de ascensores. Estos aspectos incluyen:</p>
+
+<ol>
+ <li>Aspectos económicos.</li>
+ <li>Forma de pago.</li>
+ <li>Meses de mantenimiento gratuito.</li>
+ <li>Cobertura y vigencia de las garantías.</li>
+ <li>Niveles de servicio.</li>
+ <li>Valor del mantenimiento mensual.</li>
+ <li>Tecnología, control de operación y máquina.</li>
+ <li>Especificaciones técnicas del producto.</li>
+ <li>Tamaño de la cabina (solo para cambio total).</li>
+</ol>
+
+<p>Se informó que se envió una invitación a las cuatro compañías para que presenten una cotización con aspectos técnicos y documentos complementarios para modernizar o sustituir el ascensor. Se establecieron fechas para las visitas técnicas (del 11 al 16 de agosto) y para la radicación de las ofertas (hasta el 25 de agosto). Se espera dar una respuesta a los proponentes el 30 de septiembre.</p>
+
+<p>Rafael Martínez enfatizó la importancia de considerar los aspectos económicos, señalando que los requerimientos civiles y eléctricos representan entre el 30% y el 40% de la inversión total del proyecto. Por lo tanto, se solicitará a proveedores de obra civil y eléctrica que evalúen el edificio y presenten un estimado de costos para poder presentar a la asamblea un cuadro comparativo completo.</p>
+
+<p>Se puso como ejemplo que un cambio total con requerimientos civiles y eléctricos podría costar 80 millones de pesos, mientras que otra compañía podría proponer el mismo cambio con obras civiles reducidas que no superen los 40 millones. Esta información es crucial para tomar una decisión informada.</p>
+
+<p>Se aclaró que la fecha del 30 de septiembre para notificar a las empresas es discrecional y puede ser modificada. Se propuso correr la fecha de socialización de resultados para permitir la obtención de cotizaciones de obras civiles y eléctricas. Se sugirió que, tras recibir las ofertas el 25 de agosto, se consigan las empresas de ingeniería para el resto de la cotización, lo que podría tomar entre ocho y quince días adicionales. Se planteó tener una reunión el 16 de septiembre, tras el regreso de Ángela, para revisar la información y tomar una decisión para citar a la asamblea extraordinaria, que podría ser el 2 o 3 de octubre. Se acordó informar a las firmas que la socialización de resultados sería alrededor del 9 o 10 de octubre.</p>
+
+<p>En respuesta a una inquietud sobre si las empresas deben ir acompañadas por la empresa de mantenimiento del ascensor al tomar fotos y medidas, Rafael Martínez procedió a explicar las condiciones específicas mencionadas en el documento de la convocatoria. En relación con el tamaño de la cabina en caso de cambio total, aclaró que en ningún edificio se modificará el pozo del ascensor. Algunas empresas ofrecen ascensores de producción en línea con tamaños estándar, mientras que otras fabrican ascensores a medida para aprovechar al máximo el espacio disponible.</p>
+
+<p>Se indicó que se creó un correo electrónico para el proyecto, donde se recibirán los documentos de manera digital, y también se solicitó que se radiquen en el edificio. La validez de las propuestas debe ser de mínimo 60 días. El formato de la propuesta debe ser un documento con una portada a nombre de Don Obed, representante legal. Se exige documentación como índice, invitación, formatos, datos generales del proponente, oferta de sustitución total, especificaciones técnicas, listados de obras civiles, certificados de experiencia, cronograma de intención, RUT, cámara de comercio y fotocopia del representante legal. Los costos asociados a este proceso corren por cuenta de los proponentes. La información se recibirá en castellano.</p>
+
+<p>Se reiteró que el plazo para presentar las ofertas es el lunes 25 de agosto a las 2 de la tarde. Se deben demostrar capacidad técnica y experiencia entregando certificados con la actividad prestada, nombre del cliente, nombre de la obra, dirección y datos del cliente para verificación. Se hacen requerimientos técnicos cumpliendo la norma nacional de ascensores, la revisión técnico mecánica, la norma de instalación de ascensores NTC 2769, el código eléctrico colombiano y el Reglamento Técnico de Instalaciones Eléctricas.</p>
+
+<p>Se evaluarán las propuestas con los nueve aspectos mencionados, de manera homogénea y matemática. La retroalimentación de los resultados se dará cuando se cierre el proceso licitatorio y se dé luz verde. Se mencionaron las causales de rechazo de las propuestas, como el envío fuera de plazo, información incompleta, propuestas que no permitan su evaluación, información confusa o contradictoria, y negociaciones paralelas fuera del proceso.</p>
+
+<p>Se especificó que la propuesta comercial debe incluir sustitución y modernización, con la claridad de que en la modernización hay aprovechamiento de componentes. La propuesta de embellecimiento estético aplica solo para la modernización, incluyendo adecuación del interior de la cabina y restauración de marcos y puertas. Se solicitan dos propuestas de mantenimiento, una básica sin repuestos y otra con full repuestos. Se requieren seis tipos de pólizas: cumplimiento, buen manejo del anticipo, calidad y correcto funcionamiento, provisión de repuestos, pago de salarios y responsabilidad civil extracontractual. Se designan valores porcentuales y duración de cada póliza. Se indica que las monedas deben ser interpretadas como monedas extranjeras, preferiblemente dólares americanos y pesos colombianos.</p>
+
+<p>Se puede dar el retiro, la sustitución o la modificación de la propuesta. Se indica que habrá una interventoría o supervisión del proyecto. Los niveles de servicio solicitados incluyen tiempos de respuesta completos y atención a personas atrapadas. En la modernización, se debe garantizar la disponibilidad de los componentes que se van a dejar por 20 años adicionales. Se solicita una infraestructura mínima con técnicos de instalación, técnicos de ajuste, supervisor de obra y persona de salud y seguridad en el trabajo. Cada elevador se debe entregar certificado por un organismo acreditado ante ONAC con la norma 5926 versión 2021. Se presenta una ficha técnica con las características del ascensor actual. Se mencionan requerimientos técnicos mínimos para la modernización y el cambio total, sugerencias de diseño y acabados, y especificaciones a nivel de energía eléctrica. Se incluye una lista de componentes que se deben incluir para el cambio total y se sugieren cuatro años de garantía de partes y de suministro de la instalación. Para la modernización, se sugiere una valoración de mantener o cambiar algunos componentes de acuerdo a la visita técnica.</p>
+
+<p>En respuesta a una pregunta sobre qué se haría con las partes que se retiren en caso de modernización o cambio, Rafael Martínez explicó que el ascensor es propiedad de la copropiedad y que los componentes retirados deben ser vendidos como chatarra a compañías recuperadoras a través de una subasta. La empresa ganadora debe entregar un certificado de disposición final donde se indique que el material será chatarrizado y no utilizado como repuestos en otros ascensores. Además, se necesitará un espacio disponible para la llegada de los materiales y el retiro de los desechos de obra.</p>
+
+<p>Se mencionó que en las obras pueden haber uno, dos o tres espacios: uno para desechos de obra, otro para la firma de obras civiles y eléctricas, y otro para guardar el material del ascensor. En una modernización, generalmente son suficientes dos espacios, mientras que en un cambio total a veces son necesarios tres. Se sugirió que, si es posible, se haga primero el desmonte del ascensor para que la misma bodega sirva para ambos propósitos.</p>
+
+<p>Se enfatizó la importancia de tomarse el tiempo necesario para evaluar el proyecto y darles tiempo a los residentes y propietarios para analizar la información. Se recordó que se necesita un porcentaje del 70% más uno para aprobar la inversión, ya que supera los cuatro presupuestos mensuales. Se mencionó la necesidad de revisar el tema de la citación para asambleas extraordinarias y se propuso reunirse el 17 de septiembre para presentar lo que se llevará a la asamblea y llegar a una sola voz.</p>
+
+<p>Se sugirió incluir en la citación que se trata de un bien común esencial y que, aunque lo ideal es el 70% más uno, existe piso legal para hacerlo con el 51%. Se propuso invitar a todo el mundo y comunicar la importancia de asistir a la asamblea, ya que tendrá un impacto económico alto.</p>
+
+<p>Rafael Martínez recomendó llevar siempre dos finalistas a la asamblea para facilitar la toma de decisiones. Sugirió que el Consejo, la Interventoría y la Administración hagan un análisis utilizando una matriz de comparación con los criterios técnicos establecidos. Esta matriz permite calificar a las diferentes empresas y seleccionar a los dos finalistas que se presentarán a la asamblea.</p>
+
+<p>Se destacó la importancia de tener los valores completos del proyecto, incluyendo el valor de los ascensores, las obras civiles y eléctricas, los imprevistos, la certificación y la Interventoría. Se mencionó que, al comprar ascensores nuevos y certificarlos ante la UPME, se puede eximir el pago del IVA. Se propuso que cada empresa tenga al menos 20 minutos para presentar sus propuestas al consejo o a la asamblea.</p>
+
+<p>Se acordó que la reunión del 17 de septiembre se hará de manera presencial. Se sugirió que las firmas de ascensores tengan sus 15 minutos para presentar sus productos y sustentar sus ofertas. Se propuso que las dos empresas escogidas tengan media hora para hacer la presentación del proyecto de cada uno. Se solicitó que ambas propuestas sean con ascensor nuevo y con modernización para facilitar las comparaciones.</p>
+<h2>6. Definición de Finalistas y Preparación de Asamblea Extraordinaria</h2>
+
+<p>En relación con la definición de los finalistas para el proyecto del ascensor y la preparación de la asamblea extraordinaria, se discutieron varios aspectos clave. Se hizo hincapié en la importancia de evaluar las propuestas de manera integral, considerando no solo los costos de los ascensores, sino también los requerimientos civiles y eléctricos asociados.</p>
+
+<p>Rafael Martínez de Cinco Ingeniería presentó un resumen del proceso de convocatoria y evaluación de los proponentes. Destacó que se invitó a cuatro empresas líderes en el mercado de transporte vertical: Ascensores Mitsubishi, Ascensores Schindler, Soluciones Verticales y Estilo Ingeniería. Se especificó que estas empresas debían presentar propuestas tanto para la sustitución completa como para la modernización parcial tecnológica del ascensor.</p>
+
+<p>Se definieron nueve aspectos para evaluar las propuestas, incluyendo aspectos económicos, forma de pago, meses de mantenimiento gratuito, cobertura y vigencia de las garantías, niveles de servicio, valor del mantenimiento mensual, tecnología, especificaciones técnicas y tamaño de la cabina (este último solo para el cambio total). Se mencionó que se creó un correo electrónico para recibir las propuestas de manera digital y que también debían radicarse en físico en el edificio.</p>
+
+<p>Rafael Martínez explicó que se solicitó a los proponentes demostrar su capacidad técnica y experiencia, entregando certificados donde se observe la actividad prestada, el nombre del cliente, nombre de la obra, dirección de la misma y datos del cliente para poder hacer verificación cruzada. También se les exigió cumplir con la norma nacional de ascensores, la revisión técnico mecánica, una norma de instalación de ascensores completamente nuevos que es la NTC 2769, el código eléctrico colombiano y el Reglamento Técnico de Instalaciones Eléctricas.</p>
+
+<p>Se discutió la importancia de tener en cuenta los requerimientos civiles y eléctricos inherentes al proyecto, que representan alrededor del 30% o 40% de la inversión total. Se acordó solicitar a proveedores de obra civil y eléctrica que evalúen el edificio y presenten un estimado de costos para poder presentar a la asamblea un cuadro comparativo completo.</p>
+
+<p>Se propuso correr la fecha de socialización de resultados con los proponentes, originalmente prevista para el 30 de septiembre. Se sugirió que, tras recibir las ofertas el 25 de agosto, se consigan las cotizaciones de obra civil y eléctrica, y luego se programe una reunión para el 16 de septiembre, tras el regreso de Ángela, para revisar la información y tomar decisiones sobre la citación a la asamblea extraordinaria. Se acordó que la socialización de resultados a las firmas se realizaría alrededor del 9 o 10 de octubre.</p>
+
+<p>Mónica expresó su inquietud sobre qué hacer con las partes que se retiren del ascensor en caso de modernización o cambio. Rafael Martínez explicó que estos componentes son propiedad de la copropiedad y deben ser vendidos como chatarra a empresas recuperadoras mediante una subasta. Se debe exigir a la empresa ganadora un certificado de disposición final que garantice que el material no se utilizará como repuestos en otros ascensores.</p>
+
+<p>También se discutió la necesidad de tener un espacio disponible para el almacenamiento de materiales durante la obra. Se mencionó que, dependiendo de la magnitud del proyecto, podrían ser necesarios uno, dos o tres espacios: uno para desechos de obra, otro para la empresa de obra civil y eléctrica, y otro para el material del ascensor.</p>
+
+<p>Se hizo hincapié en la importancia de tomarse el tiempo necesario para evaluar todas las propuestas y presentar la información de manera clara y completa a los residentes y propietarios. Se mencionó que, al tratarse de una inversión alta, se requerirá un porcentaje del 70% más uno para la aprobación del proyecto.</p>
+
+<p>Rafael Martínez recomendó llevar a la asamblea solo dos finalistas, en lugar de todas las propuestas, para facilitar la toma de decisiones. Explicó que se utilizará una matriz de comparación para evaluar los criterios técnicos y económicos de cada propuesta y seleccionar a los finalistas. Se destacó la importancia de presentar los valores completos del proyecto, incluyendo los costos de los ascensores, las obras civiles y eléctricas, los imprevistos y la interventoría.</p>
+
+<p>Se mencionó la posibilidad de eximir el IVA mediante una certificación ante la UPME, demostrando que se compró un equipo de transporte vertical clasificación A en ahorro energético.</p>
+
+<p>Se acordó que el Consejo se reunirá presencialmente el 17 de septiembre a las 5 de la tarde para analizar las propuestas y seleccionar a los dos finalistas que se presentarán a la asamblea. Se propuso invitar a las firmas de ascensores a presentar sus propuestas durante 15 minutos cada una en esta reunión.</p>
+
+<h3>Análisis y depuración de propuestas</h3>
+<h3>Selección de dos finalistas</h3>
+<h3>Presentación de valores completos del proyecto</h3>
+<h3>Exención de IVA mediante certificación UPME</h3>
+<h3>Reunión presencial del Consejo el 17 de septiembre</h3>
+<h3>Presentación de los finalistas al Consejo</h3>
+<h3>Mayoría calificada para la inversión (70% + 1)</h3>
+<h3>Citación a asamblea extraordinaria</h3>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se socializará el tema del seguro en la asamblea para decidir si se ajusta o no el valor asegurado – <strong>Responsable:</strong> No especificado</li>
+ <li>Se contactarán proveedores de obra civil y eléctrica para obtener estimados de costos y presentar un cuadro comparativo completo en la asamblea – <strong>Responsable:</strong> Rafael Martínez (Ingeniería)</li>
+ <li>Se correrá la fecha de socialización de resultados con las firmas de ascensores – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una reunión presencial el 17 de septiembre a las 5 PM para depurar las propuestas y seleccionar a los finalistas – <strong>Responsable:</strong> Consejo de Administración, Ingeniería</li>
+ <li>Se presentarán dos finalistas a la asamblea, con valores completos del proyecto (ascensor, obra civil, eléctrica, imprevistos, certificación, interventoría) – <strong>Responsable:</strong> Consejo de Administración, Ingeniería</li>
+ <li>Se solicitará a las firmas de ascensores que presenten propuestas tanto para modernización como para cambio total – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Narrativa del cierre:</h3>
+ <p>
+ La reunión concluyó con varios acuerdos importantes relacionados con el proyecto del ascensor. En primer lugar, se decidió socializar el tema del seguro en la próxima asamblea para determinar si es necesario ajustar el valor asegurado. Además, Rafael Martínez de Ingeniería se encargará de contactar a proveedores de obra civil y eléctrica para obtener estimados de costos, los cuales serán presentados en un cuadro comparativo durante la asamblea.
+ </p>
+ <p>
+ Asimismo, se acordó posponer la fecha de socialización de resultados con las firmas de ascensores. En preparación para la asamblea, se llevará a cabo una reunión presencial el 17 de septiembre a las 5 PM, donde el Consejo de Administración, junto con Ingeniería, depurarán las propuestas y seleccionarán a los finalistas. Se presentarán dos finalistas a la asamblea, proporcionando valores completos del proyecto que incluyan el ascensor, la obra civil, la parte eléctrica, los imprevistos, la certificación y la interventoría. Finalmente, se solicitará a las firmas de ascensores que presenten propuestas tanto para la modernización como para el cambio total del ascensor, permitiendo una comparación exhaustiva de las opciones.
+ </p>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión sobre Proyecto Ascensor y temas varios</h1>
+ <p><strong>Fecha:</strong> 14 de Agosto de 2024</p>
+ <p><strong>Hora:</strong> Inicio: No especificado - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Obed</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Miriam - [CARGO NO ESPECIFICADO]</li>
+ <li>Mónica - [CARGO NO ESPECIFICADO]</li>
+ <li>Rafael Martínez - Ingeniería</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Lectura y Aprobación del Acta Anterior</li>
+ <li>Informe del Seguro: Reclamaciones y Ajuste</li>
+ <li>Resumen Financiero y Presupuesto</li>
+ <li>Reparación de puerta de salida a la azotea</li>
+ <li>Presentación de Ingeniería y Avance del Proyecto Ascensor</li>
+ <li>Definición de Finalistas y Preparación de Asamblea Extraordinaria</li>
+ </ol>
+</header>
+<h2>1. Lectura y Aprobación del Acta Anterior</h2>
+
+<p>Durante la reunión, se abordó el tema de la lectura y aprobación del acta anterior. Sin embargo, no se proporcionaron detalles específicos sobre los temas tratados en dicha acta, ni se indicó si fue aprobada, modificada o aplazada. Por lo tanto, no es posible generar un resumen detallado en este momento.</p><h2>2. Informe del Seguro: Reclamaciones y Ajuste</h2>
+
+<p>En relación con el informe del seguro, se informa sobre dos reclamaciones que suman aproximadamente 20 millones de pesos, correspondientes a daños en las bombas y el ascensor, cada una por un valor cercano a los 9 millones de pesos. A pesar de la preocupación inicial por el tiempo transcurrido en la presentación de la reclamación del ascensor, la aseguradora no la ha rechazado, pero ha solicitado información adicional.</p>
+
+<p>Se detalla que la aseguradora ha requerido copia del contrato, bitácoras de mantenimiento, fotos y el salvamento. Se indica que, aunque inicialmente se solicitó esta información a Estilo, ante la falta de respuesta, se formalizó la solicitud vía correo electrónico, adjuntando copia de la comunicación de Seguros del Estado. Se menciona que la empresa de mantenimiento es la que debe aportar el salvamento o una certificación de disposición final, mientras que la factura de compra y las bitácoras de mantenimiento pueden ser aportadas por la administración.</p>
+
+<p>Se espera que para el caso de las bombas haya una respuesta en el transcurso del mes, ya que no se han solicitado ampliaciones de información ni se han presentado objeciones a la reclamación. Se añade que Esteban debía proporcionar el estado preciso de este proceso, pero debido a dificultades de conexión, esta información se proporcionará por correo electrónico al día siguiente.</p>
+
+<p>Se destaca la importancia de tener en cuenta la vigencia del seguro hasta el 2026. Adicionalmente, se menciona que el asesor ha realizado un análisis que indica que la copropiedad está infraasegurada, lo cual podría generar objeciones en los reclamos en curso. Ángela informó que se necesitan 8 millones de pesos adicionales para ajustar el valor asegurado según un avalúo de reconstrucción y reposición.</p>
+
+<p>Se propone socializar y resolver el tema del ajuste del seguro en la misma asamblea donde se solicitarán los recursos para el proyecto del ascensor, con el objetivo de evitar riesgos. Se sugiere esperar a que las reclamaciones se cierren antes de solicitar el ajuste para no generar dificultades en el proceso de reconocimiento y pago.</p><h2>3. Resumen Financiero y Presupuesto</h2>
+
+<p>En la reunión, se presenta un resumen del estado financiero y la ejecución del presupuesto correspondiente al mes de julio. Se discuten los ingresos, gastos y desviaciones, así como las acciones propuestas para el saneamiento financiero y el manejo de la cartera.</p>
+
+<h3>Cierre del mes de julio</h3>
+
+<p>Se informa que el mes de julio cerró con un superávit de 9 millones 858 mil pesos. El pasivo más patrimonio asciende a 15 millones 441 mil pesos, resultando en una diferencia de 5 millones 583 mil pesos, respaldada en cuentas por recaudar y anticipos, incluyendo un saldo del seguro pagado por anticipado de aproximadamente un millón de pesos.</p>
+
+<h3>Ejecución del presupuesto</h3>
+
+<p>Se detalla que, para los primeros siete meses del año, se proyectaron ingresos por 136 millones 774 mil pesos, mientras que la ejecución real alcanzó los 140 millones, lo que representa una desviación positiva del 2.4%. Esta desviación se atribuye principalmente a rendimientos financieros e intereses moratorios.</p>
+
+<p>En cuanto a los gastos, se proyectaron 136 millones 774 mil pesos, pero se gastaron 150 millones. Este mayor valor se debe al impacto de los gastos relacionados con las bombas. Se espera que esta situación se subsane con el ingreso del pago del seguro.</p>
+
+<h3>Desviación acumulada y del semestre</h3>
+
+<p>La desviación acumulada y la del semestre se sitúan en 9 millones de pesos. Se proyecta que, de no surgir más inconvenientes, se podría cerrar el año con un balance muy ajustado. En caso contrario, se solicitará a la asamblea autorización para realizar un saneamiento del estado de la situación financiera, ya sea cruzando fondos causados contablemente pero no disponibles por el déficit, o utilizando la reserva legal.</p>
+
+<h3>Saneamiento del estado de la situación financiera</h3>
+
+<p>Se plantea la posibilidad de solicitar permiso a la asamblea para realizar un saneamiento del estado de la situación financiera al cierre del año, en caso de no lograr un balance positivo. Este saneamiento se realizaría cruzando fondos causados contablemente pero no disponibles por el déficit, o utilizando la reserva legal.</p>
+
+<h3>Edades de la cartera y cobro jurídico</h3>
+
+<p>Se indica que solo un propietario, el del apartamento 601, con una deuda de 3 millones 303 mil pesos, ha clasificado para cobro jurídico. Se le dará un plazo final para realizar el pago antes de proceder con las acciones legales correspondientes.</p>
+<h2>4. Reparación de puerta de salida a la azotea</h2>
+
+<p>Durante la reunión, se mencionó un daño en la puerta de la terraza del piso 10, indicando que había sido reparada la semana anterior, pero volvió a dañarse. Se señaló que este incidente no figuraba en el informe presentado.</p>
+
+<p>Se indicó que Carlos había informado sobre la reparación inicial, pero que el daño había reaparecido, sugiriendo la necesidad de un ajuste más adecuado. Se mencionó que Obed no estaba al tanto del daño, lo que resaltó la importancia de registrar todos los incidentes en la bitácora correspondiente, incluyendo la hora de entrada y salida del contratista, así como el trabajo realizado.</p>
+
+<p>Se aclaró que la puerta en cuestión era la de salida a la azotea y que, tras la reparación inicial, el acceso quedó abierto y no se pudo cerrar. Se mencionó que el portero de turno había informado sobre la reparación y enviado un registro fotográfico, pero que, según Miriam, el problema había persistido.</p>
+
+<p>Se acordó verificar con Esteban y con el proveedor que realizó la reparación para entender la situación actual y asegurar una solución definitiva.</p>
+
+<h2>5. Presentación de Ingeniería y Avance del Proyecto Ascensor</h2>
+
+<p>Rafael Martínez de Cinco Ingeniería realizó una presentación sobre el avance del proyecto del ascensor. Inicialmente, se excusó por un problema de audio que le obligó a conectarse con un doble usuario. A continuación, presentó a Cinco Ingeniería como una empresa dedicada a diversas actividades relacionadas con la propiedad horizontal, destacando su labor en el asesoramiento e interventoría de obras. La empresa cuenta con más de 20 años de experiencia en la gestión de modernizaciones, sustituciones, calidad de mantenimiento, evaluaciones de seguridad y aspectos normativos relacionados con proyectos de transporte vertical.</p>
+
+<p>Se explicó que Cinco Ingeniería ofrece servicios de consultoría técnica, interventoría de obras y auditorías. En este caso, se ha contratado un servicio de interventoría que incluye consultoría técnica para la evaluación de propuestas técnico-económicas de las empresas de ascensores que participan en el proceso de modernización o sustitución del ascensor. Una vez seleccionada la empresa, Cinco Ingeniería actuará como interventor, supervisando la ejecución de las obras eléctricas y civiles necesarias para el proyecto.</p>
+
+<p>En respuesta a una pregunta sobre quién decide si se moderniza o se cambia el ascensor, Rafael Martínez aclaró que esta decisión se tomará en conjunto, basándose en sugerencias técnicas, normativas y legales, así como en la evaluación de los costos. Para ello, se presentó un acta de validación de los proponentes para el edificio Torre del Palmar, donde se mencionan las cuatro empresas invitadas a participar en la convocatoria: Ascensores Mitsubishi, Ascensores Schindler, Soluciones Verticales y Estilo Ingeniería.</p>
+
+<p>Se detalló que estas empresas han trabajado con Donovet y Cinco Ingeniería en diferentes proyectos de infraestructura de transporte vertical, tanto en la instalación de ascensores nuevos como en la modernización de los existentes. Se proporcionó información sobre cada una de las empresas:</p>
+
+<ul>
+ <li><strong>Ascensores Mitsubishi:</strong> Marca japonesa con planta de producción en Colombia, capaz de suministrar ambas alternativas (modernización o cambio).</li>
+ <li><strong>Ascensores Schindler:</strong> Empresa multinacional de origen suizo con operaciones a nivel global y en Colombia desde hace aproximadamente 40 o 50 años.</li>
+ <li><strong>Soluciones Verticales:</strong> Empresa nacional de origen antioqueño con sede en Medellín, que representa las marcas Hyundai y SJEC.</li>
+ <li><strong>Estilo Ingeniería:</strong> Empresa nacional representante exclusiva de las marcas Fujitech (japonesa) y Hosting (china), con operaciones en Colombia, Panamá y Costa Rica.</li>
+</ul>
+
+<p>El objetivo de la convocatoria es evaluar nueve aspectos para calificar las propuestas de modernización o cambio total de ascensores. Estos aspectos incluyen:</p>
+
+<ol>
+ <li>Aspectos económicos.</li>
+ <li>Forma de pago.</li>
+ <li>Meses de mantenimiento gratuito.</li>
+ <li>Cobertura y vigencia de las garantías.</li>
+ <li>Niveles de servicio.</li>
+ <li>Valor del mantenimiento mensual.</li>
+ <li>Tecnología, control de operación y máquina.</li>
+ <li>Especificaciones técnicas del producto.</li>
+ <li>Tamaño de la cabina (solo para cambio total).</li>
+</ol>
+
+<p>Se informó que se envió una invitación a las cuatro compañías para que presenten una cotización con aspectos técnicos y documentos complementarios para modernizar o sustituir el ascensor. Se establecieron fechas para las visitas técnicas (del 11 al 16 de agosto) y para la radicación de las ofertas (hasta el 25 de agosto). Se espera dar una respuesta a los proponentes el 30 de septiembre.</p>
+
+<p>Rafael Martínez enfatizó la importancia de considerar los aspectos económicos, señalando que los requerimientos civiles y eléctricos representan entre el 30% y el 40% de la inversión total del proyecto. Por lo tanto, se solicitará a proveedores de obra civil y eléctrica que evalúen el edificio y presenten un estimado de costos para poder presentar a la asamblea un cuadro comparativo completo.</p>
+
+<p>Se puso como ejemplo que un cambio total con requerimientos civiles y eléctricos podría costar 80 millones de pesos, mientras que otra compañía podría proponer el mismo cambio con obras civiles reducidas que no superen los 40 millones. Esta información es crucial para tomar una decisión informada.</p>
+
+<p>Se aclaró que la fecha del 30 de septiembre para notificar a las empresas es discrecional y puede ser modificada. Se propuso correr la fecha de socialización de resultados para permitir la obtención de cotizaciones de obras civiles y eléctricas. Se sugirió que, tras recibir las ofertas el 25 de agosto, se consigan las empresas de ingeniería para el resto de la cotización, lo que podría tomar entre ocho y quince días adicionales. Se planteó tener una reunión el 16 de septiembre, tras el regreso de Ángela, para revisar la información y tomar una decisión para citar a la asamblea extraordinaria, que podría ser el 2 o 3 de octubre. Se acordó informar a las firmas que la socialización de resultados sería alrededor del 9 o 10 de octubre.</p>
+
+<p>En respuesta a una inquietud sobre si las empresas deben ir acompañadas por la empresa de mantenimiento del ascensor al tomar fotos y medidas, Rafael Martínez procedió a explicar las condiciones específicas mencionadas en el documento de la convocatoria. En relación con el tamaño de la cabina en caso de cambio total, aclaró que en ningún edificio se modificará el pozo del ascensor. Algunas empresas ofrecen ascensores de producción en línea con tamaños estándar, mientras que otras fabrican ascensores a medida para aprovechar al máximo el espacio disponible.</p>
+
+<p>Se indicó que se creó un correo electrónico para el proyecto, donde se recibirán los documentos de manera digital, y también se solicitó que se radiquen en el edificio. La validez de las propuestas debe ser de mínimo 60 días. El formato de la propuesta debe ser un documento con una portada a nombre de Don Obed, representante legal. Se exige documentación como índice, invitación, formatos, datos generales del proponente, oferta de sustitución total, especificaciones técnicas, listados de obras civiles, certificados de experiencia, cronograma de intención, RUT, cámara de comercio y fotocopia del representante legal. Los costos asociados a este proceso corren por cuenta de los proponentes. La información se recibirá en castellano.</p>
+
+<p>Se reiteró que el plazo para presentar las ofertas es el lunes 25 de agosto a las 2 de la tarde. Se deben demostrar capacidad técnica y experiencia entregando certificados con la actividad prestada, nombre del cliente, nombre de la obra, dirección y datos del cliente para verificación. Se hacen requerimientos técnicos cumpliendo la norma nacional de ascensores, la revisión técnico mecánica, la norma de instalación de ascensores NTC 2769, el código eléctrico colombiano y el Reglamento Técnico de Instalaciones Eléctricas.</p>
+
+<p>Se evaluarán las propuestas con los nueve aspectos mencionados, de manera homogénea y matemática. La retroalimentación de los resultados se dará cuando se cierre el proceso licitatorio y se dé luz verde. Se mencionaron las causales de rechazo de las propuestas, como el envío fuera de plazo, información incompleta, propuestas que no permitan su evaluación, información confusa o contradictoria, y negociaciones paralelas fuera del proceso.</p>
+
+<p>Se especificó que la propuesta comercial debe incluir sustitución y modernización, con la claridad de que en la modernización hay aprovechamiento de componentes. La propuesta de embellecimiento estético aplica solo para la modernización, incluyendo adecuación del interior de la cabina y restauración de marcos y puertas. Se solicitan dos propuestas de mantenimiento, una básica sin repuestos y otra con full repuestos. Se requieren seis tipos de pólizas: cumplimiento, buen manejo del anticipo, calidad y correcto funcionamiento, provisión de repuestos, pago de salarios y responsabilidad civil extracontractual. Se designan valores porcentuales y duración de cada póliza. Se indica que las monedas deben ser interpretadas como monedas extranjeras, preferiblemente dólares americanos y pesos colombianos.</p>
+
+<p>Se puede dar el retiro, la sustitución o la modificación de la propuesta. Se indica que habrá una interventoría o supervisión del proyecto. Los niveles de servicio solicitados incluyen tiempos de respuesta completos y atención a personas atrapadas. En la modernización, se debe garantizar la disponibilidad de los componentes que se van a dejar por 20 años adicionales. Se solicita una infraestructura mínima con técnicos de instalación, técnicos de ajuste, supervisor de obra y persona de salud y seguridad en el trabajo. Cada elevador se debe entregar certificado por un organismo acreditado ante ONAC con la norma 5926 versión 2021. Se presenta una ficha técnica con las características del ascensor actual. Se mencionan requerimientos técnicos mínimos para la modernización y el cambio total, sugerencias de diseño y acabados, y especificaciones a nivel de energía eléctrica. Se incluye una lista de componentes que se deben incluir para el cambio total y se sugieren cuatro años de garantía de partes y de suministro de la instalación. Para la modernización, se sugiere una valoración de mantener o cambiar algunos componentes de acuerdo a la visita técnica.</p>
+
+<p>En respuesta a una pregunta sobre qué se haría con las partes que se retiren en caso de modernización o cambio, Rafael Martínez explicó que el ascensor es propiedad de la copropiedad y que los componentes retirados deben ser vendidos como chatarra a compañías recuperadoras a través de una subasta. La empresa ganadora debe entregar un certificado de disposición final donde se indique que el material será chatarrizado y no utilizado como repuestos en otros ascensores. Además, se necesitará un espacio disponible para la llegada de los materiales y el retiro de los desechos de obra.</p>
+
+<p>Se mencionó que en las obras pueden haber uno, dos o tres espacios: uno para desechos de obra, otro para la firma de obras civiles y eléctricas, y otro para guardar el material del ascensor. En una modernización, generalmente son suficientes dos espacios, mientras que en un cambio total a veces son necesarios tres. Se sugirió que, si es posible, se haga primero el desmonte del ascensor para que la misma bodega sirva para ambos propósitos.</p>
+
+<p>Se enfatizó la importancia de tomarse el tiempo necesario para evaluar el proyecto y darles tiempo a los residentes y propietarios para analizar la información. Se recordó que se necesita un porcentaje del 70% más uno para aprobar la inversión, ya que supera los cuatro presupuestos mensuales. Se mencionó la necesidad de revisar el tema de la citación para asambleas extraordinarias y se propuso reunirse el 17 de septiembre para presentar lo que se llevará a la asamblea y llegar a una sola voz.</p>
+
+<p>Se sugirió incluir en la citación que se trata de un bien común esencial y que, aunque lo ideal es el 70% más uno, existe piso legal para hacerlo con el 51%. Se propuso invitar a todo el mundo y comunicar la importancia de asistir a la asamblea, ya que tendrá un impacto económico alto.</p>
+
+<p>Rafael Martínez recomendó llevar siempre dos finalistas a la asamblea para facilitar la toma de decisiones. Sugirió que el Consejo, la Interventoría y la Administración hagan un análisis utilizando una matriz de comparación con los criterios técnicos establecidos. Esta matriz permite calificar a las diferentes empresas y seleccionar a los dos finalistas que se presentarán a la asamblea.</p>
+
+<p>Se destacó la importancia de tener los valores completos del proyecto, incluyendo el valor de los ascensores, las obras civiles y eléctricas, los imprevistos, la certificación y la Interventoría. Se mencionó que, al comprar ascensores nuevos y certificarlos ante la UPME, se puede eximir el pago del IVA. Se propuso que cada empresa tenga al menos 20 minutos para presentar sus propuestas al consejo o a la asamblea.</p>
+
+<p>Se acordó que la reunión del 17 de septiembre se hará de manera presencial. Se sugirió que las firmas de ascensores tengan sus 15 minutos para presentar sus productos y sustentar sus ofertas. Se propuso que las dos empresas escogidas tengan media hora para hacer la presentación del proyecto de cada uno. Se solicitó que ambas propuestas sean con ascensor nuevo y con modernización para facilitar las comparaciones.</p>
+<h2>6. Definición de Finalistas y Preparación de Asamblea Extraordinaria</h2>
+
+<p>En relación con la definición de los finalistas para el proyecto del ascensor y la preparación de la asamblea extraordinaria, se discutieron varios aspectos clave. Se hizo hincapié en la importancia de evaluar las propuestas de manera integral, considerando no solo los costos de los ascensores, sino también los requerimientos civiles y eléctricos asociados.</p>
+
+<p>Rafael Martínez de Cinco Ingeniería presentó un resumen del proceso de convocatoria y evaluación de los proponentes. Destacó que se invitó a cuatro empresas líderes en el mercado de transporte vertical: Ascensores Mitsubishi, Ascensores Schindler, Soluciones Verticales y Estilo Ingeniería. Se especificó que estas empresas debían presentar propuestas tanto para la sustitución completa como para la modernización parcial tecnológica del ascensor.</p>
+
+<p>Se definieron nueve aspectos para evaluar las propuestas, incluyendo aspectos económicos, forma de pago, meses de mantenimiento gratuito, cobertura y vigencia de las garantías, niveles de servicio, valor del mantenimiento mensual, tecnología, especificaciones técnicas y tamaño de la cabina (este último solo para el cambio total). Se mencionó que se creó un correo electrónico para recibir las propuestas de manera digital y que también debían radicarse en físico en el edificio.</p>
+
+<p>Rafael Martínez explicó que se solicitó a los proponentes demostrar su capacidad técnica y experiencia, entregando certificados donde se observe la actividad prestada, el nombre del cliente, nombre de la obra, dirección de la misma y datos del cliente para poder hacer verificación cruzada. También se les exigió cumplir con la norma nacional de ascensores, la revisión técnico mecánica, una norma de instalación de ascensores completamente nuevos que es la NTC 2769, el código eléctrico colombiano y el Reglamento Técnico de Instalaciones Eléctricas.</p>
+
+<p>Se discutió la importancia de tener en cuenta los requerimientos civiles y eléctricos inherentes al proyecto, que representan alrededor del 30% o 40% de la inversión total. Se acordó solicitar a proveedores de obra civil y eléctrica que evalúen el edificio y presenten un estimado de costos para poder presentar a la asamblea un cuadro comparativo completo.</p>
+
+<p>Se propuso correr la fecha de socialización de resultados con los proponentes, originalmente prevista para el 30 de septiembre. Se sugirió que, tras recibir las ofertas el 25 de agosto, se consigan las cotizaciones de obra civil y eléctrica, y luego se programe una reunión para el 16 de septiembre, tras el regreso de Ángela, para revisar la información y tomar decisiones sobre la citación a la asamblea extraordinaria. Se acordó que la socialización de resultados a las firmas se realizaría alrededor del 9 o 10 de octubre.</p>
+
+<p>Mónica expresó su inquietud sobre qué hacer con las partes que se retiren del ascensor en caso de modernización o cambio. Rafael Martínez explicó que estos componentes son propiedad de la copropiedad y deben ser vendidos como chatarra a empresas recuperadoras mediante una subasta. Se debe exigir a la empresa ganadora un certificado de disposición final que garantice que el material no se utilizará como repuestos en otros ascensores.</p>
+
+<p>También se discutió la necesidad de tener un espacio disponible para el almacenamiento de materiales durante la obra. Se mencionó que, dependiendo de la magnitud del proyecto, podrían ser necesarios uno, dos o tres espacios: uno para desechos de obra, otro para la empresa de obra civil y eléctrica, y otro para el material del ascensor.</p>
+
+<p>Se hizo hincapié en la importancia de tomarse el tiempo necesario para evaluar todas las propuestas y presentar la información de manera clara y completa a los residentes y propietarios. Se mencionó que, al tratarse de una inversión alta, se requerirá un porcentaje del 70% más uno para la aprobación del proyecto.</p>
+
+<p>Rafael Martínez recomendó llevar a la asamblea solo dos finalistas, en lugar de todas las propuestas, para facilitar la toma de decisiones. Explicó que se utilizará una matriz de comparación para evaluar los criterios técnicos y económicos de cada propuesta y seleccionar a los finalistas. Se destacó la importancia de presentar los valores completos del proyecto, incluyendo los costos de los ascensores, las obras civiles y eléctricas, los imprevistos y la interventoría.</p>
+
+<p>Se mencionó la posibilidad de eximir el IVA mediante una certificación ante la UPME, demostrando que se compró un equipo de transporte vertical clasificación A en ahorro energético.</p>
+
+<p>Se acordó que el Consejo se reunirá presencialmente el 17 de septiembre a las 5 de la tarde para analizar las propuestas y seleccionar a los dos finalistas que se presentarán a la asamblea. Se propuso invitar a las firmas de ascensores a presentar sus propuestas durante 15 minutos cada una en esta reunión.</p>
+
+<h3>Análisis y depuración de propuestas</h3>
+<h3>Selección de dos finalistas</h3>
+<h3>Presentación de valores completos del proyecto</h3>
+<h3>Exención de IVA mediante certificación UPME</h3>
+<h3>Reunión presencial del Consejo el 17 de septiembre</h3>
+<h3>Presentación de los finalistas al Consejo</h3>
+<h3>Mayoría calificada para la inversión (70% + 1)</h3>
+<h3>Citación a asamblea extraordinaria</h3>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se socializará el tema del seguro en la asamblea para decidir si se ajusta o no el valor asegurado – <strong>Responsable:</strong> No especificado</li>
+ <li>Se contactarán proveedores de obra civil y eléctrica para obtener estimados de costos y presentar un cuadro comparativo completo en la asamblea – <strong>Responsable:</strong> Rafael Martínez (Ingeniería)</li>
+ <li>Se correrá la fecha de socialización de resultados con las firmas de ascensores – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una reunión presencial el 17 de septiembre a las 5 PM para depurar las propuestas y seleccionar a los finalistas – <strong>Responsable:</strong> Consejo de Administración, Ingeniería</li>
+ <li>Se presentarán dos finalistas a la asamblea, con valores completos del proyecto (ascensor, obra civil, eléctrica, imprevistos, certificación, interventoría) – <strong>Responsable:</strong> Consejo de Administración, Ingeniería</li>
+ <li>Se solicitará a las firmas de ascensores que presenten propuestas tanto para modernización como para cambio total – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Narrativa del cierre:</h3>
+ <p>
+ La reunión concluyó con varios acuerdos importantes relacionados con el proyecto del ascensor. En primer lugar, se decidió socializar el tema del seguro en la próxima asamblea para determinar si es necesario ajustar el valor asegurado. Además, Rafael Martínez de Ingeniería se encargará de contactar a proveedores de obra civil y eléctrica para obtener estimados de costos, los cuales serán presentados en un cuadro comparativo durante la asamblea.
+ </p>
+ <p>
+ Asimismo, se acordó posponer la fecha de socialización de resultados con las firmas de ascensores. En preparación para la asamblea, se llevará a cabo una reunión presencial el 17 de septiembre a las 5 PM, donde el Consejo de Administración, junto con Ingeniería, depurarán las propuestas y seleccionarán a los finalistas. Se presentarán dos finalistas a la asamblea, proporcionando valores completos del proyecto que incluyan el ascensor, la obra civil, la parte eléctrica, los imprevistos, la certificación y la interventoría. Finalmente, se solicitará a las firmas de ascensores que presenten propuestas tanto para la modernización como para el cambio total del ascensor, permitiendo una comparación exhaustiva de las opciones.
+ </p>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/rixWc6Dm8H8irL9
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/rixWc6Dm8H8irL9
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ztTFKkdAGKt6DSK
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ztTFKkdAGKt6DSK

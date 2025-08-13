@@ -2,11 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { processAction } from "@/app/(generador)/services/processAction";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
-//import ffmpeg from "fluent-ffmpeg";
-//import { PassThrough } from "stream";
+
 
 import { parseBuffer } from "music-metadata";
-
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {
     const metadata = await parseBuffer(buffer, undefined, { duration: true });
@@ -17,10 +15,39 @@ async function getMediaDuration(buffer: Buffer): Promise<number> {
   }
 }
 
+async function getDropboxAccessToken() {
+  const clientId = process.env.DROPBOX_APP_KEY;
+  const clientSecret = process.env.DROPBOX_APP_SECRET;
+  const refreshToken = process.env.DROPBOX_REFRESH_TOKEN;
+
+  if (!refreshToken) {
+    throw new Error("Falta DROPBOX_REFRESH_TOKEN en las variables de entorno");
+  }
+
+  const res = await fetch("https://api.dropbox.com/oauth2/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Authorization": "Basic " + Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
+    },
+    body: new URLSearchParams({
+      grant_type: "refresh_token",
+      refresh_token: refreshToken,
+    }).toString(),
+  });
+
+  if (!res.ok) throw new Error("Error obteniendo access token de Dropbox");
+
+  const data = await res.json();
+  return data.access_token as string;
+}
+
+
 const calculatePrice = (durationInSeconds: number): number => {
   const segments = Math.ceil(durationInSeconds / 60 / 15);
   return segments * 2500;
 };
+
 
 // Tipos para la respuesta
 interface AutomationResponse {
@@ -77,7 +104,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     }
 
     // 3. Obtener enlace temporal desde Dropbox API
-    const dropboxToken = process.env.DROPBOX_TOKEN;
+    const dropboxToken = await getDropboxAccessToken();
     if (!dropboxToken) {
       return NextResponse.json(
         {
@@ -192,7 +219,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     // 9. Guardar proceso en DB
     try {
       const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
-      await GuardarNuevoProceso(
+       await GuardarNuevoProceso(
         nombreNormalizado,
         4,
         formattedDuration,
@@ -210,6 +237,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     }
 
     // 10. Procesar archivo
+    
     const processResult = await processAction(
       nombreCarpeta,
       nombreNormalizado,
