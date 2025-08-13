@@ -1,6 +1,5 @@
 import { CardContent } from "@/components/ui/card";
 import MediaFileUploaderComponent from "./mediaFileUploaderComponent";
-import Image from "next/image";
 
 export default function GeneradorContainerContainer() {
   return (
@@ -20,7 +19,7 @@ export default function GeneradorContainerContainer() {
           <CardContent className="flex flex-col items-center justify-center">
 
 
-            <Image
+            <img
               src="https://actasdereuniones.ai/wp-content/uploads/2025/02/actas3.webp"
               alt="Procesador"
               width={800} 
