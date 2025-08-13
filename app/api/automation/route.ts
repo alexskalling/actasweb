@@ -115,28 +115,26 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    const dropboxLinkRes = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${dropboxToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ path: pathDropbox }),
-    });
-
-    if (!dropboxLinkRes.ok) {
-      const errorText = await dropboxLinkRes.text();
-      return NextResponse.json(
-        {
-          status: "error",
-          message: `Error al obtener enlace temporal de Dropbox: ${dropboxLinkRes.status} - ${errorText}`,
+    async function getTemporaryLink() {
+      const res = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${dropboxToken}`,
+          "Content-Type": "application/json",
         },
-        { status: 500 }
-      );
+        body: JSON.stringify({ path: pathDropbox }),
+      });
+    
+      if (!res.ok) {
+        throw new Error(`Error al obtener enlace temporal de Dropbox: ${res.status} - ${await res.text()}`);
+      }
+    
+      const data = await res.json();
+      return data.link as string;
     }
 
-    const dropboxLinkData = await dropboxLinkRes.json();
-    const fileDownloadUrl = dropboxLinkData.link; // Aquí tienes el link temporal directo al archivo
+    const fileDownloadUrl = await getTemporaryLink();
+
     // 4. Extraer nombre de archivo de la ruta Dropbox
     const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
 
@@ -163,6 +161,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
 
     // 7. Descargar archivo directamente usando fetch y convertir a buffer para subir a AssemblyAI
+    console.log("🔗 Dropbox download URL:", fileDownloadUrl);
     const fileRes = await fetch(fileDownloadUrl);
     if (!fileRes.ok) {
       const errText = await fileRes.text();
@@ -237,13 +236,14 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     }
 
     // 10. Procesar archivo
-    
+    console.log("archivo: " + nombreArchivo)
     const processResult = await processAction(
       nombreCarpeta,
-      nombreNormalizado,
+      nombreArchivo,
       uploadUrl,
       email || "automation@actas.com",
-      name || "Usuario Automatizado"
+      name || "Usuario Automatizado",
+      true
     );
     if (processResult.status !== "success") {
       return NextResponse.json(
