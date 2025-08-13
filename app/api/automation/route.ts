@@ -253,6 +253,8 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         },
         { status: 500 }
       );
+    }else{
+      
     }
 
     // 11. Retornar respuesta
