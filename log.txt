@@ -1,0 +1,805 @@
+Verificando si existe transcripción: guillo_test_Transcripcion.txt en carpeta guillo_test
+[2025-08-13T16:15:07.581Z] Verificando existencia del archivo guillo_test_Transcripcion.txt en Nextcloud carpeta guillo_test.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/guillo_test/guillo_test_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T16:15:08.872Z] Archivo "guillo_test_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "guillo_test".
+Iniciando transcripción con AssemblyAI para: guillo_test.mp3
+Guardando transcripción: guillo_test_Transcripcion.txt en carpeta guillo_test
+Transcripción guardada: guillo_test_Transcripcion.txt
+Verificando contenido existente: guillo_test_Contenido.txt
+[2025-08-13T16:18:23.169Z] Verificando existencia del archivo guillo_test_Contenido.txt en Nextcloud carpeta guillo_test.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/guillo_test/guillo_test_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T16:18:23.961Z] Archivo "guillo_test_Contenido.txt" NO encontrado en Nextcloud en la carpeta "guillo_test".
+Generando contenido para: guillo_test.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: guillo_test.mp3
+Guardando contenido en Nextcloud: guillo_test_Contenido.txt
+Contenido guardado: guillo_test_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: guillo_test.mp3 en carpeta: guillo_test
+Verificando Borrador .docx existente: guillo_test_Borrador.docx
+[2025-08-13T16:20:28.376Z] Verificando existencia del archivo guillo_test_Borrador.docx en Nextcloud carpeta guillo_test.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/guillo_test/guillo_test_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T16:20:29.125Z] Archivo "guillo_test_Borrador.docx" NO encontrado en Nextcloud en la carpeta "guillo_test".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: guillo_test_Borrador.docx
+Preparando guardado .docx en Nextcloud: guillo_test_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum</li>
+ <li>Lectura y aprobación del orden del día</li>
+ <li>Lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024)</li>
+ <li>Informe de contabilidad (Agosto y Julio)</li>
+ <li>Informe de revisoría fiscal (Agosto y Julio)</li>
+ <li>Informe de administración (Septiembre y Agosto)</li>
+ <li>Cotización cambio de tubería acueducto por fuga</li>
+ <li>Cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6</li>
+ <li>Proposiciones y varios</li>
+ <li>Definición plan a seguir por vencimiento de póliza</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum</h2>
+
+<p>Durante el inicio de la reunión, se procedió a la verificación del quórum. Se constató la presencia de cinco miembros del consejo, número necesario para dar inicio formal a la sesión.</p>
+
+<p>Se registraron las siguientes asistencias:</p>
+
+<ul>
+ <li>Harold Manjarres</li>
+ <li>Enrique Soto</li>
+ <li>Eugenia Zuluaga</li>
+ <li>Daniela Marín</li>
+ <li>Freddy Celis</li>
+ <li>María Victoria (Revisora fiscal)</li>
+ <li>Anderson Alzada (Contador)</li>
+ <li>Carmen Maya (Administradora)</li>
+</ul>
+
+<p>Con la verificación del quórum, se dio paso al siguiente punto del orden del día.</p><h2>2. Lectura y aprobación del orden del día</h2>
+
+<p>Inicialmente, se procede con la verificación del quórum, tras lo cual se da paso a la lectura del orden del día. El orden del día propuesto incluye los siguientes puntos: verificación del quórum, lectura y aprobación del orden del día, lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024), informe de contabilidad (Agosto y Julio), informe de revisoría fiscal (Agosto y Julio), informe de administración (Septiembre y Agosto), cotización cambio de tubería acueducto por fuga, cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6, proposiciones y varios, definición plan a seguir por vencimiento de póliza y cierre.</p>
+
+<p>Se consulta a los presentes si aprueban el orden del día propuesto.</p>
+
+<p><strong>Decisión:</strong> Se aprueba el orden del día por unanimidad.</p>
+<h2>3. Lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024)</h2>
+
+<p>En el desarrollo de este punto del orden del día, se procedió a la lectura del acta anterior, correspondiente a las reuniones del 29 de septiembre y 1 de agosto de 2024. El acta fue enviada previamente a todos los consejeros vía WhatsApp.</p>
+
+<p>Se mencionaron los temas principales tratados en el acta anterior, incluyendo:</p>
+
+<ul>
+ <li>Verificación del quórum.</li>
+ <li>Aprobación del orden del día.</li>
+ <li>Informe de contabilidad de julio.</li>
+ <li>Informe de revisoría fiscal de julio.</li>
+ <li>Informe de administración de agosto 2024.</li>
+ <li>Cotización de cambio de tubería, acueducto.</li>
+ <li>Mantenimiento fachadas, bloques 4, 5 y 6.</li>
+ <li>Proposiciones y varios.</li>
+</ul>
+
+<p>Se indicó que el acta fue aprobada sin ninguna modificación.</p>
+<h2>4. Informe de contabilidad (Agosto y Julio)</h2>
+
+<p>Durante la reunión, se presentó el informe de contabilidad correspondiente a los meses de agosto y julio. Inicialmente, se tenía previsto presentar el informe de julio, seguido del de agosto. Sin embargo, se alteró el orden para continuar con el informe de agosto después de una breve interrupción.</p>
+
+<p>Luz Karime y Anderson presentaron un informe gerencial destacando los aspectos más importantes de la copropiedad. Se mencionó un indicador financiero clave, el índice de liquidez, que muestra la capacidad de la copropiedad para cubrir sus pasivos con sus activos. El índice se situó en 1.15, lo que indica que por cada peso adeudado, se dispone de 1.15 pesos en activos, sin considerar las cuotas de administración con más de tres meses de mora.</p>
+
+<p>Se informó que los bancos fueron conciliados, arrojando un saldo final al mes de agosto de 8.805.000 pesos. Las cuentas por cobrar de administración ascendieron a 7.956.000 pesos, representadas en 71 apartamentos, lo que equivale al 40% de la cuota de administración facturada, que suma 20 millones de pesos.</p>
+
+<p>En cuanto al comportamiento de pago, se registró un promedio de 22 millones de pesos pagados en el mes de agosto, manteniendo el promedio del año 2024. Los ingresos operacionales facturados fueron de 22.334.000 pesos, provenientes principalmente de las cuotas de administración (20 millones) y del alquiler del local comercial. Los ingresos no operacionales sumaron 377.825 pesos, resultando en un ingreso total facturado de 22.785.000 pesos en agosto.</p>
+
+<p>Las salidas de dinero se detallaron de la siguiente manera: 13.157.000 pesos en gastos laborales (salarios, prestaciones sociales y seguridad social), 1.167.000 pesos en honorarios de contabilidad y revisoría fiscal, 935.329 pesos correspondientes a la amortización del seguro de la copropiedad, 2.300.000 pesos en servicios (acueducto, energía eléctrica, teléfono e internet), 1.858.000 pesos en mantenimientos y reparaciones, 435.250 pesos en diversos (papelería, correo, implementos de aseo y cafetería), el 1% para la reserva legal (Ley 199) y 1.929.000 pesos en gastos financieros. Se explicó que los gastos financieros fueron elevados debido a la causación del interés completo de los pagos por cuotas del seguro.</p>
+
+<p>Se reportó un excedente mensual de 678.934 pesos, pero una pérdida acumulada de 11.802.130 pesos en el período enero-agosto. Se explicó que esta pérdida se debe a la compra de equipos varios de circuito cerrado de televisión y cámaras (8.768.000 pesos), servicios de vigilancia entre febrero y abril (8.000.000 pesos) y un incremento en el consumo de agua en febrero y marzo (9.297.000 pesos), gastos que no estaban presupuestados, sumando un total de 26.160.247 pesos.</p>
+
+<p>Se mencionaron también ítems no presupuestados como la impermeabilización y lavada de tanques, instalaciones eléctricas, recarga de extintores y gastos de ejercicios anteriores, que no se han ejecutado en el año pero estaban presupuestados.</p>
+
+<p>Se presentó un análisis de cumplimiento presupuestal, mostrando que la cuota de administración y el alquiler del local comercial se han cumplido en un 100%. También se ha cumplido al 100% con la revisoría fiscal, la asesoría contable, la administración y facturación, y la reserva legal. Estos cumplimientos suman 24.567.200 pesos. Sin ejecutar, se tienen bonificación de navidad para empleados, reemplazo de vacaciones, asesoría jurídica, instalaciones eléctricas, impermeabilización de tanques, recarga de extintores y gastos de ejercicios anteriores, ascendiendo a 14.424.000 pesos.</p>
+
+<p>Se identificaron ítems por debajo de lo presupuestado, como sueldos (97%), horas extras (98%), dotación y suministros a empleados (97%), aportes a seguridad social (89%), pago plan celular portería (98%), mantenimiento de zonas comunes (50%), mantenimiento de prados y jardines (31%), papelería y útiles y correo (87%), gastos consejo de administración, asamblea y eventos (18%), rifa pago cumplido (78%) y comisión bancaria (68%). Estos valores suman 82.924.263 pesos.</p>
+
+<p>Se encontraron ítems por encima de lo presupuestado, como subsidio de transporte (103%), prestaciones sociales (107%), medios magnéticos (150%), impuesto predial (149%), seguro zonas comunes (103%), acueducto y alcantarillado (2137%, explicado por la fuga de agua), energía eléctrica (110%), mantenimiento de motobomba (150%), mantenimiento circuito cerrado de televisión (548% debido a un gasto de 8 millones en enero), fumigación (162%), implementos de aseo y cafetería (150%), taxis y buses (119%), gastos bancarios (125%), gravamen financiero (1079%) e intereses financieros del seguro (170%), impuestos asumidos por la copropiedad (703%). Estos sobrecostos suman 75.940.451 pesos.</p>
+
+<p>Se detallaron ingresos no presupuestados, como intereses de mora, rendimientos financieros, multas y ajustes al peso, que suman 2.329.480 pesos. Los gastos no presupuestados incluyen el servicio de vigilancia (8.000.000 pesos), mantenimiento de puertas (280.000 pesos) y red de gas (950.000 pesos), sumando 9.324.696 pesos.</p>
+
+<p>Se explicó que el déficit de 11.802.130 pesos se ha cubierto con gastos sin ejecutar (14.000.000 pesos) y gastos por debajo de lo presupuestado (14.000.000 pesos), sumando 29.163.000 pesos.</p>
+
+<p>Se presentó un cuadro de cartera por edades, dividida en de 1 a 30 días (4%), de 31 a 60 días (16%), de 61 a 90 días (21%) y más de 90 días (59%). Los apartamentos con mayor mora son el 9905 (2.200.866 pesos), el 209 (1.647.384 pesos), el 316 (820.085 pesos) y el 105 (646.460 pesos). Se indicó que de 90 unidades de vivienda (86 apartamentos y 5 parqueaderos), el 78% de los copropietarios están al día.</p>
+
+<p>Se mostró un gráfico de cartera del año 2024, indicando que los picos más bajos se tuvieron en abril (cartera corriente) y febrero (cartera no corriente), mientras que en agosto se registraron los picos más altos (3.709.000 pesos en cartera corriente y 5.314.000 pesos en cartera no corriente, con un total de 9.000.000 pesos).</p>
+
+<p>En el gráfico de pagos, se observó que el mes con menos pagos fue mayo (20.512.858 pesos) y el mes con más pagos fue enero (24.806.000 pesos). Se realizó un análisis comparativo desde marzo de 2021 hasta agosto de 2021.</p>
+
+<p>Se presentó un cuadro comparativo de gastos versus cuota de administración, mostrando que la nómina representa el 58% del ingreso (92.552.000 pesos) y los servicios públicos el 16% (26.459.936 pesos). Se ejemplificó cómo se distribuye una cuota de administración de 250.000 pesos en cada uno de los ítems.</p>
+
+<p>Se concluyó que, sin tener en cuenta el arriendo del local y los ingresos no operacionales, el déficit con respecto al gasto sería de 32.331.610 pesos. Sin embargo, gracias a estos ingresos, la diferencia entre ingresos y gastos es de 11.802.130 pesos.</p>
+
+<p>Se informó que, además del informe gerencial, se anexan el informe completo, la ejecución presupuestal, el flujo de caja, los gráficos, la conciliación de cartera y la conciliación bancaria. Se destacó que estas conciliaciones se realizan mensualmente para evitar acumulaciones al final del año.</p>
+
+<p>Ante la presentación, se solicitó que se compartiera la versión final del informe, ya que se identificaron diferencias con el informe previamente enviado por Anderson, especialmente en el gráfico de cartera, que ahora contempla el aumento de deudores en agosto. Luz Karime confirmó que se compartiría el informe actualizado.</p>
+
+<p>Harold Manjarres solicitó una aclaración sobre un cumplimiento presupuestal del 703% correspondiente a "Impuestos Asumidos y ajustes al peso". Se explicó que estos ajustes corresponden a diferencias encontradas en pagos, incluyendo una diferencia de 336.000 pesos en la cuenta de Ave Villas en julio. Estos ajustes se hicieron para cerrar la cuenta de Ave Villas y se llevaron al ítem de gastos no presupuestados.</p>
+
+<p>Se recordó que en el consejo de junio se había decidido cerrar la cuenta de Ave Villas y asumir los 336.010 pesos como gasto para dejar solo Bancolombia como banco. Se mostraron los valores pendientes por conciliar en Ave Villas, correspondientes a 2022, y se confirmó que la decisión de sanearlos se tomó en el consejo de junio.</p>
+
+<p>María Victoria, quien se unió a la reunión más tarde, indicó que analizaría el tema con Luz Karime y Anderson para dar una respuesta definitiva en el informe del mes de agosto.</p>
+
+<p>Fernando agradeció la claridad y nitidez del informe contable del mes de agosto, lo que facilitó su revisión. Luz Karime aseguró que siempre se esfuerzan por presentar la información de la manera más clara posible.</p>
+<h2>5. Informe de revisoría fiscal (Agosto y Julio)</h2>
+
+<p>María Victoria presentó su informe preliminar de revisoría fiscal correspondiente a los meses de julio y agosto. Debido a compromisos laborales, su llegada a la reunión se retrasó, incorporándose a las 7:30 PM. En aras de la agilidad, presentó un informe virtual, indicando que aún no había sido entregado físicamente al Consejo debido a la falta de tiempo. Señaló que el informe estaba terminado en un 90%, a la espera de un análisis final de la información proporcionada por Luz Karime el mismo día.</p>
+
+<p>En relación al informe de julio, María Victoria indicó que el informe preliminar presentado en la reunión del 26 de agosto quedó en firme. Destacó la mejora en la calidad de impresión de los informes contables, lo cual facilitó su análisis.</p>
+
+<p>En cuanto al análisis de los egresos de agosto, mencionó que se mantuvieron las mismas constantes en los gastos de nómina y honorarios, sin variaciones significativas. Agroseguridad recibió el pago de $2,489,000, indicando que la copropiedad está al día con la seguridad social de los empleados. Se realizó un pago de $2,769,000 a EPM, y Carmen Maya aseguró que la facturación se normalizaría a partir de septiembre. María Victoria hizo seguimiento a los valores pagados a EPM desde febrero y marzo, que sumaron alrededor de $26,000,000, y a la gestión de Carmen para recuperar parte o la totalidad de esta suma.</p>
+
+<p>Otros pagos incluyeron los honorarios de Jaime Jaramillo por servicios de aseo y papelería ($390,000), la cuota de Servicrédito ($199,000), el pago a María Elena Gómez por el cambio de proveedor de facturación ($117,000), la provisión y consignación al fondo de imprevistos ($199,000), el pago a Claudia Posada por los medios magnéticos ($648,000), el pago a Javier Aristizábal por el mantenimiento de la motobomba ($363,000), y los pagos a Pedro Luis Pantoja por el suministro y regulación de gas ($950,000). También se realizó el pago a Grupo Imagen Diseño por la dotación de los empleados.</p>
+
+<p>María Victoria informó que se observó el descuento al señor Eduardo Arboleda por un préstamo, con un saldo pendiente de $550,000. Sin embargo, no se observó el abono del acuerdo del señor Julio Cruz, cuya cuenta ascendía a $1,647,000. Se destacó el cambio de proveedor en la facturación y se cotejaron los estados financieros con el balance y el informe contable presentado por Luz Karime (anterior al informe gerencial presentado en la reunión actual).</p>
+
+<p>En cuanto a la cartera, los apartamentos con deudas más significativas eran el 9905 (con $2,200,000) y el 209 (con $1,647,000), sin abonos en agosto. El 304 abonó y quedó en $406,000, el 516 en $554,000, el 105 en $646,000, y el 316 en $820,000, sin mostrar intención de pago. Se resaltó la importancia de la gestión de la administración para evitar que la cartera se dispare, especialmente en los apartamentos que venían mostrando voluntad de pago.</p>
+
+<p>María Victoria expresó su preocupación por los tiempos de entrega de la información, señalando que recibir la información el 24 de septiembre para una reunión el 30 de septiembre le dejaba poco tiempo para realizar un análisis adecuado. Indicó que, aunque siempre se ha dicho que cuenta con ocho días para analizar la información, esta vez no se cumplió ese plazo. Carmen Maya respondió que la información se había entregado el 10 de septiembre a contabilidad, y que Anderson Alzada la había entregado a Harold Manjarres el 23 de septiembre. Harold confirmó haber recibido la carpeta el 23 de septiembre a las 7:54 PM.</p>
+
+<p>En relación con el informe de agosto, María Victoria mencionó que el saldo en bancos era de $15,743,497 en la fiducia y $10,743,497 en la cuenta de Bancolombia. La cartera con más de tres cuotas vencidas incluía el apartamento 9905, con una deuda de $2,461,146 más los honorarios del abogado ($2,707,260). Este apartamento ya había sido vendido y estaba en proceso de escrituración. El apartamento 209 tenía una deuda de $1,869,144, pero la exesposa del propietario solicitó una rebaja de intereses de mora para cancelar la totalidad de la deuda. El apartamento 105 tenía una deuda de $857,389, y se le mandó una carta de administración. El apartamento 316 tenía una deuda de $1,104,160, y también se le mandó una carta de administración.</p>
+
+<p>Carmen Maya añadió que el apartamento 209 canceló $1,770,600, quedando a paz y salvo tras la condonación de los intereses de mora. El apartamento 105 canceló $273,500 en agosto.</p>
+
+<p>Se mencionó que el 14 de agosto se colocó un PQR a EPM para el reconocimiento del valor sobrefacturado por la fuga de agua. La respuesta inicial se esperaba para el 10 de septiembre, pero EPM solicitó una actualización del RUT, que ya fue enviada. Se espera una respuesta para el 11 de octubre. Se realizó el reemplazo de la tubería de PVC a presión desde el contador hasta el cuarto de tanques por un valor de $9,748,675, que fue pagado del Fondo de Imprevistos.</p>
+
+<h2>6. Informe de administración (Septiembre y Agosto)</h2>
+
+<p>Se presenta el informe de administración, destacando el saldo de las cuentas bancarias, la situación de la cartera y el mantenimiento de equipos. Se menciona el mantenimiento de la hidrolavadora y la reparación de una fuga de agua.</p>
+
+<p>Se informa que el 14 de agosto se presentó un PQR a EPM para el reconocimiento del valor facturado por la fuga de agua, con una respuesta esperada para el 10 de septiembre. Se verificó que la cuenta de servicios del sector afectado se canceló en septiembre y el consumo volvió a la normalidad.</p>
+
+<p>Se reporta una fuga de gas en el regulador general y en los contadores de varios apartamentos del bloque 5. Se indica que se cambió el regulador con un contratista externo por un costo de 950 mil pesos.</p>
+
+<p>En cuanto a la cartera, se mencionan algunos apartamentos con deudas significativas, incluyendo el apartamento 105 con una deuda de 914.960 pesos y el apartamento 209 con 1.647.304 pesos. Se explica que este último pasó a nombre de la ex esposa del propietario por decisión jurídica y se está a la espera de recibir la sentencia para comenzar el cobro.</p>
+
+<p>Posteriormente, se retoma el tema del informe de administración, donde Luz Karime presenta un informe gerencial destacando los aspectos más importantes de la copropiedad. Se indica que se demorarán aproximadamente 15 minutos en la presentación.</p>
+
+<p>Luz Karime procede a proyectar el informe gerencial, consultando si los presentes pueden visualizarlo. Se presenta un indicador financiero de índice de liquidez, que muestra qué soporte de activos se tiene para pagar pasivos. Se explica que el valor de 1.5 indica que por cada peso que se debe en el pasivo, se tiene 1.15 pesos para responder en el activo, sin tener en cuenta las cuotas de administración de más de tres meses.</p>
+
+<p>Se informa sobre los bancos conciliados, indicando que siempre se concilian los bancos y se realiza la conciliación bancaria. El saldo final al mes de agosto es de 8.805.000 pesos. Se mencionan las cuentas por cobrar de administración, que suman 7.956.000 pesos, representadas en 71 apartamentos. Se aclara que esto equivale al 40% de la cuota de administración facturada, que suma 20 millones de pesos.</p>
+
+<p>Se presenta el comportamiento en el pago, con un promedio de pago en el mes de agosto de 22 millones de pesos, que es el promedio del 2024. En cuanto a los ingresos, se tienen ingresos operacionales de 22.334.000 pesos facturados, de los cuales 20 millones corresponden a cuotas de administración y el resto al local comercial. Los ingresos no operacionales son de 377.825 pesos, sumando un total de 22.785.000 pesos facturados en agosto.</p>
+
+<p>En cuanto a las salidas, se detallan los gastos laborales, que ascienden a 13.157.000 pesos, incluyendo salarios, prestaciones sociales y pago de seguridad social. Los honorarios de contabilidad y revisoría fiscal suman 1.167.000 pesos. El seguro de la copropiedad en la amortización es de 935.329 pesos. Los servicios suman 2.300.000 pesos, incluyendo acueducto, alcantarillado, energía eléctrica, teléfono e Internet. Los mantenimientos y reparaciones ascienden a 1.858.000 pesos. En diversos, que incluye papelería, correo e implementos de aseo y cafetería, se gastaron 435.250 pesos. La reserva legal es el 1% por ley, 199. Los gastos financieros son de 1.929.000 pesos, explicados por la amortización del interés completo de los pagos por cuotas del seguro.</p>
+
+<p>Se indica que el gasto total es de 22 millones de pesos, resultando en un excedente mensual de 678.934 pesos. Sin embargo, la utilidad de enero a agosto arroja una pérdida de 11.802.130 pesos. Se explica que esta pérdida se debe a la compra de equipos varios de circuito cerrado de televisión y cámaras en enero, por un valor de 8.768.000 pesos, y al servicio de vigilancia entre febrero y abril, por 8 millones de pesos, ambos no presupuestados. También se incluye un incremento en el consumo de agua en febrero y marzo, que suma 9.297.000 pesos. Estos gastos no presupuestados suman 26.160.247 pesos.</p>
+
+<p>Se mencionan ítems no presupuestados como la impermeabilización y lavada de tanques, instalaciones eléctricas, recarga de extintores y gastos de ejercicios anteriores, que no se han ejecutado. Se remite a la ejecución por cumplimiento para más detalles.</p>
+
+<p>Se explica que en la ejecución por cumplimiento se muestra lo que se ha cumplido en el presupuesto a un 100%. Se menciona que la cuota de administración y el alquiler del local comercial se han cumplido en un 100%. También se han cumplido al 100% la revisoría fiscal, la asesoría contable, la administración y facturación, y la reserva. Estos rubros suman 24.567.200 pesos.</p>
+
+<p>Se mencionan rubros sin ejecutar, como la bonificación de Navidad de los empleados, el reemplazo de vacaciones, la asesoría jurídica, las instalaciones eléctricas, la impermeabilización de tanques, la recarga de extintores y los gastos de ejercicios anteriores, que ascienden a 14.424.000 pesos.</p>
+
+<p>Se indican rubros por debajo de lo presupuestado, como sueldos (97%), horas extras (98%), dotación y suministros a empleados (97%), aportes a seguridad social (89%), pago del plan celular de portería (98%), mantenimiento de zonas comunes (50%), mantenimiento de prados y jardines (31%), papelería y útiles de correo (87%), gastos del consejo de administración, asamblea y eventos (18%), rifa (78%) y comisión bancaria (68%). Estos valores suman 82.924.263 pesos.</p>
+
+<p>Se mencionan rubros por encima de lo presupuestado, como el subsidio de transporte (103%), las prestaciones sociales (107%), los medios magnéticos (150%), el impuesto predial (149%), el seguro de zonas comunes (103%), el acueducto y alcantarillado (2137%), la energía eléctrica (110%), el mantenimiento de motobomba (150%), el mantenimiento del circuito cerrado de televisión (548%), la fumigación (162%), los implementos de aseo y cafetería (150%), los taxis y buses (119%), los gastos bancarios (125%), el gravamen financiero (1079%) y los intereses financieros del seguro (170%), impuestos asumidos por la copropiedad (703%). Estos rubros suman 75.940.451 pesos.</p>
+
+<p>Se mencionan gastos e ingresos no presupuestados. Dentro de los ingresos no presupuestados están los ingresos no operacionales, como los intereses de mora, los rendimientos financieros, las multas y los ajustes al peso, que suman 2.329.480 pesos. Los gastos no presupuestados incluyen el servicio de vigilancia (8 millones de pesos), el mantenimiento de puertas (280 mil pesos) y la red de gas (950 mil pesos), sumando 9.324.696 pesos.</p>
+
+<p>Se indica que los gastos totales ascienden a 192.759.000 pesos, mientras que los ingresos totales de enero a agosto son de 180.959.000 pesos, incluyendo los ingresos corrientes (cuota de administración y local comercial) y los no presupuestados. Se explica que el déficit de 11.802.130 pesos se ha cubierto con gastos sin ejecutar y gastos por debajo de lo presupuestado, que suman 29.163.000 pesos.</p>
+
+<p>Se presenta un cuadro de la cartera por edades, dividida en de 1 a 30 días, de 31 a 60, de 61 a 90 y más de 90 días. Se indica que la cartera total de 1 a 30 días equivale al 4%, de 31 a 60 al 16% (1.466.000 pesos), de 61 a 90 al 21% (1.912.000 pesos) y más de 91 días al 59%, representada en cuatro apartamentos. Estos apartamentos son el 9905 (2.200.866 pesos), el 209 (1.647.384 pesos), el 316 (820.085 pesos) y el 105 (646.460 pesos). Se menciona que hay 90 unidades de vivienda, 86 apartamentos y 5 parqueaderos, y que el 78% de los copropietarios están al día.</p>
+
+<p>Se presenta un gráfico de cartera del año 2024, indicando que los picos más bajos se tuvieron en abril en cartera corriente y en febrero en no corriente. En agosto se tuvieron los picos más altos del 2024, con 3.709.000 pesos en cartera corriente y 5.314.000 pesos en cartera no corriente, sumando un total de 9 millones de pesos.</p>
+
+<p>Se presenta un gráfico de pagos, indicando que el mes donde menos pagaron fue mayo (20.512.858 pesos) y el mes donde más pagaron fue enero (24.806.000 pesos). Se realiza un análisis desde marzo de 2021 hasta agosto de 2021.</p>
+
+<p>Se presenta un cuadro comparativo de gastos versus cuota de administración, mostrando que la nómina representa el 58% del ingreso (92.552.000 pesos) y los servicios públicos el 16% (26.459.936 pesos). Se visualiza cómo se distribuye la cuota de administración en cada uno de los ítems. Se indica que, sin tener en cuenta el arriendo del local y los ingresos no operacionales, el déficit con respecto al gasto sería de 32.331.610 pesos. Sin embargo, con el ingreso del local y los ingresos no operacionales, la diferencia entre el ingreso y los gastos es de 11.802.130 pesos.</p>
+
+<p>Se menciona que se anexan al informe la ejecución presupuestal completa, el flujo de caja, los diferentes gráficos, la conciliación de cartera y la conciliación bancaria. Se indica que estas conciliaciones se hacen mensualmente para no dejar todo para diciembre.</p>
+
+<p>Luz Karime pregunta si hay preguntas o dudas sobre el informe. Se espera que el informe sea compartido con el consejo.</p>
+
+<p>Se señala que hay diferencias entre el informe enviado por Anderson y el presentado por Luz Karime, especialmente en el gráfico de cartera, que ahora contempla el último mes de agosto. Se agradece y se solicita la versión final del informe.</p>
+
+<p>Se pregunta sobre un cumplimiento del 703% en el informe gerencial, correspondiente a Impuestos Asumidos y ajustes al peso. Se explica que son diferencias encontradas entre pesitos de pagos y un ajuste en julio de 336.000 pesos en la cuenta de Ave Villas, que se llevaron al ítem de gastos no presupuestados a Impuestos Asumidos y Ajuste al Peso.</p>
+
+<p>Se aclara que en junio se decidió cerrar la cuenta de Ave Villas y asumir esos 336.000 pesos como gasto para cerrar el tema y dejar solo Bancolombia. Se muestra el informe de junio donde se ven los valores pendientes por conciliar en Ave Villas. Se explica que son valores de años anteriores y se tomó la decisión de sanearlos y no seguirlos arrastrando. Anderson aclaró esto en su momento.</p>
+
+<p>María Victoria indica que entrará a analizar el tema aclarado por Luz Karime y dará una respuesta en el informe definitivo de agosto. Agradece a Fernando por la claridad en la impresión del informe contable de agosto.</p>
+
+<p>María Victoria presenta su informe de revisoría fiscal, indicando que lo tiene en un 90% terminado y analizado. Explica que recibió la información el 25 de septiembre y ha venido avanzando en el análisis. Menciona que el sábado presentó una inquietud a Anderson, que Luz Karime resolvió hoy. Esa parte no se ha terminado de analizar.</p>
+
+<p>Se indica que se analizaron todos los egresos y que los gastos constantes como nómina y honorarios se han mantenido. Agroseguridad se pagó 2.489.000 pesos, indicando que la copropiedad está al día con la seguridad social de los empleados. Se hizo un pago de 2.769.000 pesos a EPM, y Carmen asegura que la facturación se normalizará a partir de septiembre. Se menciona que se ha hecho seguimiento a los valores altos pagados a EPM desde febrero y marzo, que suman alrededor de 26 millones de pesos, y que Carmen está gestionando la recuperación de parte o la totalidad de esta cifra.</p>
+
+<p>Se mencionan otros pagos, como los honorarios, el pago a Jaime Jaramillo por aseo y papelería (390.000 pesos), la cuota de Servicrédito (cuota 9 de 10), el pago a María Elena Gómez por la facturación (117.000 pesos), la provisión y consignación del fondo de imprevistos (199.000 pesos), el pago a Claudia Posada por los medios magnéticos (648.000 pesos), el pago a Javier Aristizábal por el mantenimiento de la motobomba (363.000 pesos) y el pago a Pedro Luis Pantoja por el suministro y regulación de gas (950.000 pesos). También se menciona el pago a Grupo Imagen Diseño por la dotación de los empleados.</p>
+
+<p>Se informa que el informe preliminar de julio, presentado el 26 de agosto, quedó en firme. Se vio claramente cómo se le hace el descuento al señor Eduardo Arboleda por un préstamo, quedando con una deuda de 550.000 pesos. No se observó el abono del acuerdo del señor Julio Cruz, cuya cuenta está en 1.647.000 pesos. Se observa un cambio de proveedor en la facturación.</p>
+
+<p>Se indica que se cotejaron todos los estados financieros frente al balance y al informe contable presentado por Anderson la semana pasada. Se espera recibir el informe gerencial de Luz Karime para cotejarlo y complementarlo. Se informa que se canceló la póliza de Servicrédito.</p>
+
+<p>En cuanto a la cartera, se menciona que los que más deben son el 9905 (2.200.000 pesos) y el 209 (1.647.000 pesos), que no hicieron abonos en agosto. El 304 hizo un abono y está en 406.000 pesos, el 516 está en 554.000 pesos, el 105 está en 646.000 pesos y el 316 está en 820.000 pesos, sin mostrar intención de pago. También se menciona el 415, que está en 554.000 pesos. Se considera que la cartera es sana, pero es importante no permitir que los apartamentos que venían bien con una voluntad de pago se relajen.</p>
+
+<p>Se sugiere que la administración realice recordatorios a los copropietarios con mora no coactiva ni prejurídica. Se indica que el informe estará listo a más tardar el miércoles o jueves. Se pregunta si hay alguna duda.</p>
+
+<p>María Victoria expresa su preocupación por el tiempo limitado para analizar la información, ya que recibió la información el 24 de septiembre para una reunión el 30 de septiembre. Indica que necesita tiempo para aclarar dudas con el contador y que no puede hacerlo de inmediato si pasa la información el sábado. Sugiere que se perfeccione el tema con la nueva facturación.</p>
+
+<p>Carmen indica que la información le llega al día siguiente máximo y que su demora es en hacer los egresos y pasar la información al contador. Menciona que se puede demorar dos o tres días en pasar la información de la seguridad social. Sugiere que se aplazan los tiempos.</p>
+
+<p>Se comenta que siempre se cuenta con que María Victoria tiene 8 días para analizar la información, pero esta vez no se le dieron ni siquiera 8 días, ya que recibió la información el 24. María Victoria aclara que no necesita más de 8 días y que siempre los cumple. Sugiere que se repartan los 30 días del mes entre los tres, asignando 10 días a cada uno.</p>
+
+<p>Se indica que normalmente se le dan dos semanas a Anderson y ocho días a María Victoria. Se propone correr los tiempos para que no se afecte a María Victoria. Se pregunta quién pone la fecha en la parte superior de la carpeta. Se aclara que la persona que recibe la información pone la fecha, indicando que contabilidad recibió la información el 10 de septiembre. Se menciona que Harold recibió la carpeta en portería el 23 de septiembre. Se concluye que Anderson se gastó 13 días para hacer la contabilidad y María Victoria se está demorando 5 o 6 días para analizarla. Se sugiere que si se entrega la información de contabilidad el 10, se entregue a María Victoria sobre el 20.</p>
+
+<p>Carmen indica que normalmente entrega la información entre el 8 y el 10, y dos días después complementa la información con la seguridad social. Se acuerda hablar con Luz Karime y Anderson sobre los tiempos de entrega.</p>
+
+<p>Carmen presenta su informe, indicando que el saldo en bancos hoy es de 15.743.497 pesos en la fiducia y 10.743.497 pesos en la cuenta de Bancolombia. La cartera con más de tres cuotas vencidas, con saldos a septiembre, es del 9905, con una deuda de 2.461.146 pesos, más los honorarios del abogado por el prejurídico, que suman 2.707.260 pesos. Se indica que este apartamento ya lo vendieron y están en proceso de escrituras. Carmen habló con el nuevo dueño, quien le dijo que el banco no ha girado la plata, pero que la escritura está hecha y que no se preocupe, que si el anterior dueño no paga, él pagará. Se indica que para hacer el proceso de escritura se necesita el paz y salvo, pero el anterior dueño ya no contesta. Pareciera ser que el nuevo dueño es el que tiene que asumir la deuda.</p>
+
+<p>Se menciona el apartamento 209, con seis cuotas vencidas y una deuda de 1.869.144 pesos. Se indica que el apartamento pasó a nombre de la ex esposa por decisión jurídica y solicitó una rebaja de intereses de mora para cancelar la totalidad de la deuda. La administración debía 1.770.600 pesos y los intereses de mora eran 98.544 pesos. Canceló 1.770.600 pesos, quedando a paz y salvo. Se condonaron los intereses de mora para que pagara el total de la deuda.</p>
+
+<p>Se menciona el apartamento 105, con tres cuotas vencidas y una deuda de 857.389 pesos. Se le mandó carta de administración y canceló en agosto 273.500 pesos. El 316 tiene una deuda de 1.104.160 pesos y también se le mandó carta de administración. No se sabe si pagó o abonó algo en septiembre, porque todavía no se ha conciliado la cartera.</p>
+
+<p>Se informa que el 14 de agosto se colocó un PQR a EPM para reconocimiento del valor sobrefacturado por la fuga de agua. Consultando el radicado, dice que la respuesta se daría el 10 de septiembre. Respondieron solicitando una actualización del RUT, que ya se envió. En la página de EPM dice que responden el 11 de octubre, pero ya habían aprobado el pago de IVA. Están con todo el protocolo de los papeles que hay que enviar para que reconozcan la deuda.</p>
+
+<p>Se realizó el reemplazo de la tubería de PVC a presión desde el contador hasta el cuarto de tanques, por un valor total de 9.748.675 pesos. El dinero fue pagado del Fondo de Imprevistos por ser una emergencia. Se consultó con Harold, y se concertó que esa plata debía salir del Fondo de Imprevistos. Igualmente, cuando EPM reconozca la plata, se puede volver a guardar al Fondo de Imprevistos.</p>
+
+<p>Se presenta una nueva cotización para el mantenimiento de las fachadas 4, 5 y 6 de la empresa Pinturas y Colores, por un valor de 148.326.153 pesos. Se indica que la otra cotización era de 167.723.635 pesos. Se logró conseguir esa más, pero no se tienen más cotizaciones, pues la otra de 70 millones parece absurda.</p>
+
+<p>Carmen indica que el contacto que pasaron Eugenia y ella no contestaron. Después de conseguir esta, no volvió a llamar. Hablando con Harold, se acordó mirar la posibilidad de que de alguna manera se montaran al techo sin hacerle mucho daño, porque en esta última cotización solamente los andamios y los anclajes y la máquina elevadora, porque dicen que hay una fachada, la del bloque 4, que no se puede hacer con andamios por el desnivel que tiene el piso, son 60 millones lo que cobran en eso. Esto está encareciendo demasiado la cotización y el tiempo que se gastan haciendo las cosas con andamios. Se pregunta si se arriesgan o no a que utilicen el techo previendo que sea lo más mínimo en daños para ver si se puede rebajar un poquito esto. Se hizo la cuenta y la cuota extra sería de un millón seiscientos con los 148 más o menos, y si se logra quitar ese tema de los andamios, sería más o menos un millón la cuota extra.</p>
+
+<p>Se aclara que esa opción nunca se ha valorado y que se le ocurrió en vista de que cotizan tan costoso todo lo de los andamios. Se busca que digan si es viable o no es viable, minimizando riesgos. No es el riesgo de que se vayan a caer, sino de que dañen más el techo. Se indica que la parte así es de la única manera que sale más barato y aún así la cuota sería un millón de pesos. Aún así hay que preguntar, porque si eso minimiza gastos.</p>
+
+<p>Se pregunta cuál sería el costo del arreglo del techo si se llegara a dañar algo, y cómo sería el comparativo con lo de los andamios. Se propone dejarlos subir al techo y que estudien esa posibilidad, cuánto es el riesgo de que lo dañen o no. Se indica que siempre se ha dicho que no se pueden subir al techo, pero se quiere analizar esa opción a ver si de pronto puede ser más barato, se puede hacer y no va a valer tanto.</p>
+
+<p>Se aclara que ellos se subirían con el objetivo de tratar de ver la viabilidad y se subirían con Iván, que ya se ha subido al techo en otras ocasiones.</p>
+
+<p>Se comenta que es importante evaluar la posibilidad de que si el techo se daña, mirar la posibilidad de la reparación o el mismo cambio si es necesario. Se sugiere cotizar cuánto cuesta el arreglo en dado caso que se vaya a hacer y mirar si se puede hacer primero uno y luego el otro en caso dado con futuro. Se propone mirar la posibilidad si se puede hacer un mantenimiento en el techo, evaluar la posibilidad si se puede dar algún cambio de estructura y ver cuánto cuesta eso y mirar si después de hacer el cambio en el techo, modificar la estructura del techo, se puede hacer lo de las fachadas. Se menciona que estamos hablando de recolectar de 90 a 148 millones de pesos, una cuota adicional de un millón de pesos. Se pregunta cómo se va a recolectar eso, solamente una cuota adicional a la mensualidad y por cuánto tiempo. También se pregunta en cuánto tiempo se vence la póliza.</p>
+
+<p>Se manifiesta que la administradora muy bien por lo que hizo en cuanto a que se solucionó en teoría ya el problema del agua, pero se indica que no hubo un cronograma o plan estructurado para la reparación de las tuberías. Se recomienda que en futuros procesos se realice un cronograma o plan estructurado para que el consejo y la comunidad se enteren de cómo se van a estar ejecutando los proyectos y los procesos.</p>
+
+<p>Carmen indica que había hablado con Harold sobre invertir las obras, es decir, hacer primero el techo y luego la fachada. Sin embargo, Harold no estuvo muy de acuerdo con eso. Carmen indica que no sabe cuánto pueda valer el techo, pero que la lógica debería ser primero el techo. Se menciona que se habló de la reclamación a la aseguradora, que apremia el tiempo.</p>
+
+<p>Harold comenta que la razón por la que se descartó la idea del techo fue por la reclamación a la aseguradora, ya que no se podría hacer lo de las fachadas inmediatamente porque sería mucha plata junta. Don Enrique pregunta hasta cuándo tenemos efectivamente plazo para hacer esa reclamación.</p>
+
+<p>Harold comenta que qué posibilidades habría de revisar el techo, y propone contratar un servicio de un drone que fuera capaz de hacernos unas tomas, unos vídeos, unas fotos muy claras de todo el techo, de todas las canoas, para que por lo menos los consejeros tengan algún tipo de claridad. Indica que indagó con algunas empresas que prestan el servicio de dron y que cobran 300 mil pesos por una hora con ese dron y entregan tanto vídeos como fotos, todo de forma digital. Solo dependería de que se defina la fecha y el clima, y ellos se encargan de gestionar el permiso para sobrevolar.</p>
+
+<p>Carmen indica que no cree que se vea mucho con el drone, ya que lo que se va a ver por encima es mantotera alfáltica. Para ver qué tiene realmente el techo y cuál es la estructura que tiene, tiene que ser por debajo. Si quieren lo hacen, pero está segura de que eso no se va a ver nada, solamente se va a ver tela asfáltica encima.</p>
+
+<p>Se pregunta si entre la estructura del edificio y el techo hay una parte donde se pueda visualizar. Se sugiere validar con la empresa del drone si hay un descuento si no se logra tener una visualización adecuada.</p>
+
+<p>Se indica que lo del dron no va a aportar datos, y que hacerlo de forma empírica o sin ningún objetivo en específico sería una pérdida. Se propone consultar previamente con alguien que sepa sobre estructuras para que al momento de implementar el drone, enfocarse en puntos objetivos y en lugares específicos para que aporte información precisa y relevante.</p>
+
+<p>Daniela comenta que han sobrevolado la unidad con el dron de ellos y que lo que dice Carmen es cierto, no se alcanza a visualizar muchas cosas. Indica que tiene unas fotos de eso y que las va a buscar y las va a mirar y de pronto las comparte para que miren si justifica pagarle a alguien para realizar ese pago.</p>
+
+<p>Se pregunta cuánto tiempo reconoce la aseguradora por el cumplimiento. Se aclara que no habla de estabilidad de la obra, solamente cumplimiento de la obra como tal. Se pregunta cuánto tiempo tiene uno para reclamar después de que ellos no cumplen.</p>
+
+<p>Daniela pregunta en qué va el tema de la solicitud del techo del parqueadero. Carmen indica que le dijo que definitivamente no se podía hacer y que si él quería, tenía que esperar a una asamblea extraordinaria para que la asamblea como tal lo autorizara, porque ese muro es zona común. Inicialmente le había dicho algo así, él fue el que insistió, insistió en solicitar el permiso, pero Carmen le volvió a decir que eso es zona común y que no se pueden arriesgar a que alguien ponga problema porque lo dejaron utilizar el muro. En eso quedaron, en que si él lo quería hacer, tenía que pedir permiso en la asamblea para que se lo dejaran hacer así.</p>
+
+<p>Carmen indica que las pólizas dieron una vigencia de dos meses. El que dijo que habían cinco años para reclamar fue el abogado. La póliza como tal no dice que en caso de una reclamación la vigencia son dos meses porque se supone que en dos meses el señor terminaba la obra, pero el que dijo y el que nos informó que tenían una vigencia de cinco años era el abogado. La aseguradora nunca dijo que no podían reclamar, o sea, cuando empezaron a reclamar ellos nunca dijeron no, no pueden reclamar porque eso no. Ellos dijeron hagan la obra y luego reclaman si tienen un sobrecausto. Pero lo de los cinco años lo dijo el abogado.</p>
+
+<p>Se pregunta si hay forma de que el abogado pase oficialmente y por escrito esa información.</p>
+
+<p>Don Enrique pregunta si, teniendo en cuenta que lo de las pólizas haya expirado, aún así se plantearía continuar con la fachada de esta misma forma o cambiaría eso los planes. Carmen indica que la fachada hay que terminarla sí o sí. Se pregunta cómo sería y en cuánto tiempo. Carmen indica que toca sentarse a pensar y analizar la forma de recaudar los fondos a esa cuota extraordinaria y el tiempo en que se va a hacer.</p>
+
+<p>Don Enrique pregunta si, en dado caso de que haya tiempo, por ejemplo, que esta póliza venciera ahorita en noviembre de este año, habría forma de recobrar fondos o ejecutar algún plan para este año o definitivamente no. Carmen indica que si la póliza se venciera en noviembre no tendrían forma, ya que es casi imposible pedir una cuota extra de un millón de pesos en dos meses. Se indica que la forma de cobrar la cuota extra la determina la asamblea, y que se podría proponer un año. Se aclara que tiene que ser con asamblea extraordinaria y con un quórum calificado del 70%.</p>
+
+<p>Se indica que la póliza no se puede dejar vencer porque eso perjudicaría mucho. Se menciona que han pasado dos años del evento y no se tiene el dato exacto de cuándo se vence la póliza. Se considera importante tener el concepto por escrito del abogado del porqué dice que en cinco años. Se indica que se ha pedido esa fecha desde hace como tres meses. Se considera que se debió solucionar hace tiempo y tener claros todos esos datos para saber cómo se implementa un plan estructurado para solucionar ese problema. Se indica que se está llegando a un punto de no retorno con esta parte de la fachada.</p>
+
+<p>Se pregunta qué posibilidades hay de tener ese dato para la próxima semana, ya que a partir de ahí se puede empezar a planear. Se considera prioritario lo de la asamblea extraordinaria. Se indica que se le va a pedir al abogado que envíe la información de forma extraoficial.</p>
+
+<p>Carmen indica que está hablando con el abogado por teléfono. El abogado dice que los cinco años son para demandar al contratista por cumplimiento a la aseguradora. A la aseguradora son dos años desde el momento de vencimiento de la póliza, pero con un contrato que muestren que ya tienen un contrato para ejecutar la obra. Responden por ello. La póliza vence en noviembre. No necesariamente tienen que tener ejecutado el contrato, sino ya haber adjudicado el contrato.</p>
+
+<p>Se indica que tenemos 10 minutos para proponer un plan a seguir, ya que la reunión se acaba a las 9 de la noche. Se pregunta qué plan se va a hacer, si se va a ejecutar un plan en base al plazo de la póliza que se vence ahorita en noviembre o se va a dejar vencer la póliza y se va a ejecutar un plan por aparte. Se indica que hay que definir eso ahora, porque si se deja esperar otro mes más, no se puede esperar. Se indica que tenemos 5 minutos para pensar lo que se ha debido pensar en dos años.</p>
+
+<p>Daniela propone llamar a una asamblea extraordinaria este mes. Considera que no se pueden cargar temas legales donde se tome la decisión de que no, no, se ha vencido la póliza, dejémosla vencer. Considera que no se puede tomar esa decisión porque es un tema que no solamente es a los consejeros. Se indica que la póliza vence en noviembre sí o sí. Considera que este tema ya lo tiene que saber la unidad porque se va a venir un problema gigante.</p>
+
+<p>Carmen indica que el consejo podría al menos adjudicar el contrato, porque la asamblea lo que realmente lo que. Se pregunta cómo se va a adjudicar el contrato si no se tienen los recursos en este momento para poder decir es que se lo adjudicamos a este contratista, ya lo tenemos para mostrárselo a la aseguradora, pero con qué se va a soportarle a ese contratista el tema. Se indica que no se puede adjudicar un contrato ni ahora, ni en noviembre, ni con asamblea ni nada, porque el contratista tendría que ser que al contratista le dijeran, vea, vamos a hacer un contrato ya, pero el inicio de la obra va a ser en un año y medio. Se pregunta cómo se va a manejar eso legalmente, pero la fecha de ese contrato sería a un año o año y medio para el tiempo que se necesite para recursos.</p>
+
+<p>Se indica que lo que se está promoviendo es que se necesita una asesoría legal para definir este problema lo más rápido posible. Se pregunta qué tipo de contratación sea. Se indica que, sea el que sea un contratista, se necesita un contrato para poderle presentar a la aseguradora, pero ese contrato tiene que tener fecha de ahora, no se puede que el contrato se va a hacer en un año. Se indica que se necesitan soluciones en 8 minutos. Se propone una asesoría legal.</p>
+
+<p>Wilber indica que la opción más viable es llamar a la asamblea general y mirar qué decisión se puede tomar con la asamblea. Considera que como consejeros no pueden tomar esa decisión de venir y adjudicar un contrato. Indica que no son coadministradores y que no está dentro de las funciones que tienen de acuerdo al reglamento. Cuestiona la gestión de Carmen porque el reglamento lo tiene que conocer a la perfección y es prácticamente como si estuviera delegando la responsabilidad a ellos, cuando eso ella como administradora debió haberle puesto un orden desde el primer momento que se empezaron a presentar estas situaciones.</p>
+
+<p>Se indica que llevan dos por una asamblea extraordinaria. María indica que antes de citar una reunión, por lo menos por ahí en ocho días, deberían hacer una reunión corta, ya no que tenga que ver contadores, mirar los temas como los ven ellos, posibles soluciones, lo miren ellos como el consejo y ya sí solicitar un extraordinario.</p>
+
+<p>Se propone otra reunión en 8 días, el próximo lunes o martes, para que ya tengan más o menos claro, puedan ver como la información doña Carmen envíe como el tema de las pólizas, que sepan ellos como bien y ya digan bueno, nosotros proponemos esto o qué posibilidad hay. Harold opina que puede ser inclusive este sábado. Marta está de acuerdo con Harold y Víctor. Víctor decide porque hay empate. María Victoria indica que ya esto es de asamblea extraordinaria y lo más pronto posible porque saben un problema grandísimo. Después de la reunión pueden citar a la asamblea. Se pregunta cuál sería el objetivo de la reunión, si es para llegar a la misma conclusión de ahora. Se indica que de todas maneras ellos son el consejo y deben estar
+<h2>7. Cotización cambio de tubería acueducto por fuga</h2>
+
+<p>Se discutieron las cotizaciones recibidas para el cambio de la tubería del acueducto debido a una fuga. Se presentaron cuatro cotizaciones, destacándose la del ingeniero Diego Díaz, quien redujo su cotización inicial de 17 millones a 9 millones 748 mil pesos.</p>
+
+<p>Se acordó por mayoría contratar al ingeniero Diego Díaz, siempre y cuando se expidan pólizas de estabilidad y cumplimiento de la obra.</p>
+<h2>8. Cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6</h2>
+
+<p>Se abordó el tema de las cotizaciones para el mantenimiento de las fachadas de los bloques 4, 5 y 6. Se mencionaron dos cotizaciones iniciales: una de 167 millones de pesos de la empresa FEDAS Aplicaciones SAS y otra de 70 millones de pesos de la empresa Ovidomantenimiento SAS. La diferencia entre estas cotizaciones generó preocupación y dudas sobre la validez y justificación de los costos.</p>
+
+<h3>Dificultad para conseguir cotizaciones</h3>
+<p>Se expresó la dificultad para conseguir más cotizaciones debido a las condiciones específicas del trabajo, como el uso de andamio certificado, lo cual encarece la obra y desanima a muchos contratistas.</p>
+
+<h3>Necesidad de más cotizaciones</h3>
+<p>Se enfatizó la necesidad de obtener al menos una cotización adicional para tener un punto de referencia más claro y tomar una decisión informada. Se sugirió que los miembros del consejo también colaboren en la búsqueda de más cotizaciones.</p>
+
+<h3>Propuesta de reunión extraordinaria</h3>
+<p>Se propuso realizar una reunión extraordinaria una vez se consigan más cotizaciones para revisar las opciones y tomar una decisión.</p>
+
+<h3>Preocupación por la calidad de garantía</h3>
+<p>Se destacó la importancia de analizar bien las condiciones al momento de contratar, asegurándose de que el contratista ofrezca garantías adecuadas para el trabajo.</p>
+
+<h3>Viabilidad de montaje en el techo</h3>
+<p>Se discutió la posibilidad de que los contratistas se montaran en el techo para realizar el trabajo, con el fin de reducir los costos asociados al uso de andamios. Se mencionó que esta opción podría implicar riesgos de dañar el techo, por lo que se consideró necesario evaluar la viabilidad y los posibles costos de reparación en caso de daños.</p>
+<p>La administradora, Carmen Maya, informó sobre una nueva cotización de la empresa Pinturas y Colores por un valor de 148.326.160 pesos. Indicó que esta empresa tiene experiencia y que ya había presentado la cotización a Harold Manjarres. Se mencionó que la diferencia entre esta cotización y la anterior de 167 millones radicaba principalmente en los costos de los andamios y anclajes, que ascendían a 60 millones en la fachada del bloque 4 debido al desnivel del piso.</p>
+<p>Carmen Maya sugirió evaluar la posibilidad de que los contratistas utilicen el techo para realizar el trabajo, minimizando los daños. Indicó que, aunque se utilizara el techo, la cuota extra para los propietarios sería de aproximadamente un millón de pesos. Aclaró que esta opción no se ha valorado y que se buscaría la opinión del contratista sobre su viabilidad, minimizando riesgos y evaluando el posible daño al techo.</p>
+<p>María Clara sugirió evaluar el costo de reparación del techo en caso de daños, comparándolo con el costo de los andamios.</p>
+<p>Enrique Soto coincidió en la importancia de evaluar la posibilidad de reparación o cambio del techo en caso de daños, considerando que el costo de los andamios es elevado. Sugirió cotizar el costo de reparación o modificación de la estructura del techo y evaluar si se puede realizar primero el mantenimiento del techo y luego el de las fachadas. Además, preguntó cómo se recolectaría el dinero para la cuota adicional, en cuánto tiempo y cuál es el plazo de vencimiento de la póliza.</p>
+<p>Carmen Maya respondió que, en su opinión, se debería invertir el orden de las obras, realizando primero el techo para evitar problemas futuros. Sin embargo, Harold Manjarres no estuvo de acuerdo con esta propuesta. Carmen Maya explicó que la decisión de priorizar las fachadas se debió a la reclamación a la aseguradora, ya que el tiempo apremiaba.</p>
+<p>Harold Manjarres propuso contratar un servicio de drone para obtener tomas y vídeos del techo, con el fin de tener información clara para la toma de decisiones. Mencionó que este servicio costaría 300 mil pesos e incluiría la gestión de permisos de sobrevuelo.</p>
+<p>Carmen Maya expresó dudas sobre la utilidad de las tomas aéreas, ya que el techo está cubierto de tela asfáltica y no se vería la estructura ni el tipo de teja. Indicó que para ver la estructura del techo sería necesario revisarlo por debajo.</p>
+<p>María Clara sugirió validar con la empresa de drones si se puede obtener una visualización adecuada de la estructura del techo y si se puede obtener un descuento en caso de no lograrlo.</p>
+<p>Enrique Soto consideró que lo del drone podría aportar datos, pero que sería necesario asesorarse previamente con alguien que sepa sobre estructuras para enfocar las tomas en puntos objetivos y obtener información precisa y relevante.</p>
+<p>Daniela Marín informó que ya han sobrevolado la unidad con un drone y que no se visualizan muchas cosas. Se ofreció a buscar las fotos y compartirlas para evaluar si justifica pagar por el servicio.</p>
+<p>Carmen Maya informó que las pólizas tienen una vigencia de dos meses, pero que el abogado indicó que hay cinco años para demandar al contratista por cumplimiento, siempre y cuando se tenga un contrato para ejecutar la obra.</p>
+<p>Enrique Soto preguntó si, en caso de que la póliza haya expirado, se continuaría con la fachada de la misma forma o se cambiarían los planes. Carmen Maya respondió que la fachada hay que terminarla sí o sí.</p>
+<p>Se generó una discusión sobre la necesidad de definir un plan a seguir, considerando el plazo de la póliza. Daniela Marín propuso llamar a una asamblea extraordinaria lo más pronto posible para informar a la unidad sobre la situación y tomar una decisión en conjunto.</p>
+<p>Carmen Maya sugirió que el consejo podría al menos adjudicar el contrato, pero Harold Manjarres cuestionó cómo se adjudicaría un contrato sin tener los recursos para soportarlo. Carmen Maya propuso que el contrato tenga fecha actual, pero con fecha de inicio de obra a un año o año y medio, mientras se recolectan los recursos.</p>
+<p>Wilber Moreno opinó que la opción más viable es llamar a una asamblea general y que el consejo no puede adjudicar un contrato ni fungir como coadministradores. Cuestionó la gestión de Carmen Maya por no haber puesto un orden desde el principio y por delegar la responsabilidad al consejo.</p>
+<p>María Victoria sugirió realizar una reunión corta entre los miembros del consejo para analizar los temas y posibles soluciones antes de solicitar una asamblea extraordinaria.</p>
+<p>Harold Manjarres propuso realizar la reunión la próxima semana o incluso este sábado.</p>
+<p>Daniela Marín insistió en la necesidad de realizar una asamblea extraordinaria lo más pronto posible, sin necesidad de otra reunión previa.</p>
+<p>Ante la divergencia de opiniones, se propuso crear una encuesta en el grupo para definir si se realiza una nueva reunión virtual o se convoca directamente a una asamblea extraordinaria.</p><h2>9. Proposiciones y varios</h2>
+
+<p>En el punto de proposiciones y varios, se abordó inicialmente la posibilidad de suspender la Fiesta de la Familia debido a los gastos imprevistos y la necesidad de realizar preparaciones urgentes. Tras la discusión, se aprobó la suspensión de la Fiesta de la Familia para este año.</p>
+
+<p>Posteriormente, se suscitó un debate sobre la conveniencia de mencionar nombres de propietarios morosos en el acta. Doña Carmen consultó si debía incluir los nombres de las personas con deudas, especialmente en el caso del apartamento 209, donde la deuda había pasado de un propietario a otro. Argumentó que, al leer el acta, podría no quedar claro el motivo del cambio de titularidad de la deuda.</p>
+
+<p>Sin embargo, se presentaron objeciones a esta propuesta. Se argumentó que mencionar nombres podría ser problemático debido a la ley de habeas data y que, dado que el acta es un documento público, no era recomendable incluir información personal de los propietarios, especialmente de aquellos con deudas. En consecuencia, se decidió no incluir los nombres de los propietarios morosos en el acta.</p>
+
+<p>Más adelante, Doña Far solicitó a Luz Karina y Anderson que los informes de contabilidad y revisoría fiscal se presentaran de manera concisa, destacando los aspectos más relevantes en un plazo de 15 minutos. Luz Karina procedió a presentar un informe gerencial destacando los puntos más importantes de la copropiedad.</p>
+
+<p>Durante la discusión sobre las cotizaciones de mantenimiento de fachadas, se mencionó la posibilidad de suspender la Fiesta de la Familia debido a los gastos imprevistos y la necesidad de realizar preparaciones urgentes. Se aprueba suspender la Fiesta de la Familia este año.</p><h2>10. Definición plan a seguir por vencimiento de póliza</h2>
+
+En relación con la definición del plan a seguir por el vencimiento de la póliza, se generó una discusión sobre las acciones a tomar, considerando el plazo de vencimiento y las implicaciones financieras.
+
+Durante la discusión, se mencionó la importancia de definir un plan de acción debido a la proximidad del vencimiento de la póliza en noviembre. Se plantearon diferentes propuestas y se destacó la necesidad de tomar una decisión informada y oportuna.
+
+Daniela propuso convocar a una asamblea extraordinaria lo más pronto posible para informar a la unidad sobre la situación y tomar una decisión en conjunto. Consideró que no se podía tomar la decisión de dejar vencer la póliza sin consultar a la asamblea.
+
+Doña Carmen sugirió que el consejo podría adjudicar el contrato, pero reconoció la falta de recursos para soportar el contrato en ese momento. Planteó la necesidad de una asesoría legal para determinar el tipo de contratación adecuado y la fecha de inicio del contrato.
+
+Wilber expresó su inconformidad con la gestión de la administradora y la falta de un plan estructurado desde el inicio. Propuso llamar a una asamblea general para tomar una decisión en conjunto, ya que el consejo no podía tomar la decisión de adjudicar un contrato.
+
+María Clara propuso realizar una reunión corta entre los miembros del consejo para analizar la información y proponer posibles soluciones antes de solicitar una asamblea extraordinaria.
+
+Don Harold apoyó la propuesta de María Clara y sugirió que la reunión se realizara este sábado. Doña Marta también estuvo de acuerdo con la propuesta de Don Harold.
+
+Ante las diferentes opiniones, se propuso realizar una votación para determinar si se realizaba una nueva reunión virtual o se convocaba a una asamblea extraordinaria.
+
+<ul>
+ <li><strong>Daniela:</strong> A favor de una asamblea extraordinaria lo más pronto posible.</li>
+ <li><strong>Wilber:</strong> A favor de una asamblea extraordinaria.</li>
+ <li><strong>Víctor:</strong> A favor de una asamblea extraordinaria.</li>
+ <li><strong>María Clara:</strong> A favor de una reunión previa.</li>
+ <li><strong>Don Harold:</strong> A favor de una reunión previa.</li>
+ <li><strong>Doña Marta:</strong> A favor de una reunión previa.</li>
+</ul>
+
+El resultado de la votación fue un empate, con tres votos a favor de una reunión previa y tres votos a favor de una asamblea extraordinaria.
+
+Ante el empate, se decidió crear una encuesta en el grupo para que los consejeros expresaran sus opiniones y se tomara una decisión en conjunto. Se acordó que la reunión se daría por terminada y se continuaría la discusión a través de la encuesta.
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 21:00</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se contrará al ingeniero Diego Díaz para el cambio de tubería del acueducto, siempre y cuando se expidan pólizas de estabilidad y cumplimiento de la obra – <strong>Responsable:</strong> No especificado</li>
+ <li>Se suspende la Fiesta de la Familia este año – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una reunión extraordinaria una vez se consigan más cotizaciones para el mantenimiento de fachadas – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará al abogado un documento por escrito sobre el plazo para demandar al contratista por incumplimiento – <strong>Responsable:</strong> Doña Carmen</li>
+ <li>Se creará una encuesta en el grupo para decidir si se realiza una reunión virtual la próxima semana o una asamblea extraordinaria – <strong>Responsable:</strong> Don Enrique</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum</li>
+ <li>Lectura y aprobación del orden del día</li>
+ <li>Lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024)</li>
+ <li>Informe de contabilidad (Agosto y Julio)</li>
+ <li>Informe de revisoría fiscal (Agosto y Julio)</li>
+ <li>Informe de administración (Septiembre y Agosto)</li>
+ <li>Cotización cambio de tubería acueducto por fuga</li>
+ <li>Cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6</li>
+ <li>Proposiciones y varios</li>
+ <li>Definición plan a seguir por vencimiento de póliza</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum</h2>
+
+<p>Durante el inicio de la reunión, se procedió a la verificación del quórum. Se constató la presencia de cinco miembros del consejo, número necesario para dar inicio formal a la sesión.</p>
+
+<p>Se registraron las siguientes asistencias:</p>
+
+<ul>
+ <li>Harold Manjarres</li>
+ <li>Enrique Soto</li>
+ <li>Eugenia Zuluaga</li>
+ <li>Daniela Marín</li>
+ <li>Freddy Celis</li>
+ <li>María Victoria (Revisora fiscal)</li>
+ <li>Anderson Alzada (Contador)</li>
+ <li>Carmen Maya (Administradora)</li>
+</ul>
+
+<p>Con la verificación del quórum, se dio paso al siguiente punto del orden del día.</p><h2>2. Lectura y aprobación del orden del día</h2>
+
+<p>Inicialmente, se procede con la verificación del quórum, tras lo cual se da paso a la lectura del orden del día. El orden del día propuesto incluye los siguientes puntos: verificación del quórum, lectura y aprobación del orden del día, lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024), informe de contabilidad (Agosto y Julio), informe de revisoría fiscal (Agosto y Julio), informe de administración (Septiembre y Agosto), cotización cambio de tubería acueducto por fuga, cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6, proposiciones y varios, definición plan a seguir por vencimiento de póliza y cierre.</p>
+
+<p>Se consulta a los presentes si aprueban el orden del día propuesto.</p>
+
+<p><strong>Decisión:</strong> Se aprueba el orden del día por unanimidad.</p>
+<h2>3. Lectura y aprobación del acta anterior (Septiembre 29 y Agosto 1 de 2024)</h2>
+
+<p>En el desarrollo de este punto del orden del día, se procedió a la lectura del acta anterior, correspondiente a las reuniones del 29 de septiembre y 1 de agosto de 2024. El acta fue enviada previamente a todos los consejeros vía WhatsApp.</p>
+
+<p>Se mencionaron los temas principales tratados en el acta anterior, incluyendo:</p>
+
+<ul>
+ <li>Verificación del quórum.</li>
+ <li>Aprobación del orden del día.</li>
+ <li>Informe de contabilidad de julio.</li>
+ <li>Informe de revisoría fiscal de julio.</li>
+ <li>Informe de administración de agosto 2024.</li>
+ <li>Cotización de cambio de tubería, acueducto.</li>
+ <li>Mantenimiento fachadas, bloques 4, 5 y 6.</li>
+ <li>Proposiciones y varios.</li>
+</ul>
+
+<p>Se indicó que el acta fue aprobada sin ninguna modificación.</p>
+<h2>4. Informe de contabilidad (Agosto y Julio)</h2>
+
+<p>Durante la reunión, se presentó el informe de contabilidad correspondiente a los meses de agosto y julio. Inicialmente, se tenía previsto presentar el informe de julio, seguido del de agosto. Sin embargo, se alteró el orden para continuar con el informe de agosto después de una breve interrupción.</p>
+
+<p>Luz Karime y Anderson presentaron un informe gerencial destacando los aspectos más importantes de la copropiedad. Se mencionó un indicador financiero clave, el índice de liquidez, que muestra la capacidad de la copropiedad para cubrir sus pasivos con sus activos. El índice se situó en 1.15, lo que indica que por cada peso adeudado, se dispone de 1.15 pesos en activos, sin considerar las cuotas de administración con más de tres meses de mora.</p>
+
+<p>Se informó que los bancos fueron conciliados, arrojando un saldo final al mes de agosto de 8.805.000 pesos. Las cuentas por cobrar de administración ascendieron a 7.956.000 pesos, representadas en 71 apartamentos, lo que equivale al 40% de la cuota de administración facturada, que suma 20 millones de pesos.</p>
+
+<p>En cuanto al comportamiento de pago, se registró un promedio de 22 millones de pesos pagados en el mes de agosto, manteniendo el promedio del año 2024. Los ingresos operacionales facturados fueron de 22.334.000 pesos, provenientes principalmente de las cuotas de administración (20 millones) y del alquiler del local comercial. Los ingresos no operacionales sumaron 377.825 pesos, resultando en un ingreso total facturado de 22.785.000 pesos en agosto.</p>
+
+<p>Las salidas de dinero se detallaron de la siguiente manera: 13.157.000 pesos en gastos laborales (salarios, prestaciones sociales y seguridad social), 1.167.000 pesos en honorarios de contabilidad y revisoría fiscal, 935.329 pesos correspondientes a la amortización del seguro de la copropiedad, 2.300.000 pesos en servicios (acueducto, energía eléctrica, teléfono e internet), 1.858.000 pesos en mantenimientos y reparaciones, 435.250 pesos en diversos (papelería, correo, implementos de aseo y cafetería), el 1% para la reserva legal (Ley 199) y 1.929.000 pesos en gastos financieros. Se explicó que los gastos financieros fueron elevados debido a la causación del interés completo de los pagos por cuotas del seguro.</p>
+
+<p>Se reportó un excedente mensual de 678.934 pesos, pero una pérdida acumulada de 11.802.130 pesos en el período enero-agosto. Se explicó que esta pérdida se debe a la compra de equipos varios de circuito cerrado de televisión y cámaras (8.768.000 pesos), servicios de vigilancia entre febrero y abril (8.000.000 pesos) y un incremento en el consumo de agua en febrero y marzo (9.297.000 pesos), gastos que no estaban presupuestados, sumando un total de 26.160.247 pesos.</p>
+
+<p>Se mencionaron también ítems no presupuestados como la impermeabilización y lavada de tanques, instalaciones eléctricas, recarga de extintores y gastos de ejercicios anteriores, que no se han ejecutado en el año pero estaban presupuestados.</p>
+
+<p>Se presentó un análisis de cumplimiento presupuestal, mostrando que la cuota de administración y el alquiler del local comercial se han cumplido en un 100%. También se ha cumplido al 100% con la revisoría fiscal, la asesoría contable, la administración y facturación, y la reserva legal. Estos cumplimientos suman 24.567.200 pesos. Sin ejecutar, se tienen bonificación de navidad para empleados, reemplazo de vacaciones, asesoría jurídica, instalaciones eléctricas, impermeabilización de tanques, recarga de extintores y gastos de ejercicios anteriores, ascendiendo a 14.424.000 pesos.</p>
+
+<p>Se identificaron ítems por debajo de lo presupuestado, como sueldos (97%), horas extras (98%), dotación y suministros a empleados (97%), aportes a seguridad social (89%), pago plan celular portería (98%), mantenimiento de zonas comunes (50%), mantenimiento de prados y jardines (31%), papelería y útiles y correo (87%), gastos consejo de administración, asamblea y eventos (18%), rifa pago cumplido (78%) y comisión bancaria (68%). Estos valores suman 82.924.263 pesos.</p>
+
+<p>Se encontraron ítems por encima de lo presupuestado, como subsidio de transporte (103%), prestaciones sociales (107%), medios magnéticos (150%), impuesto predial (149%), seguro zonas comunes (103%), acueducto y alcantarillado (2137%, explicado por la fuga de agua), energía eléctrica (110%), mantenimiento de motobomba (150%), mantenimiento circuito cerrado de televisión (548% debido a un gasto de 8 millones en enero), fumigación (162%), implementos de aseo y cafetería (150%), taxis y buses (119%), gastos bancarios (125%), gravamen financiero (1079%) e intereses financieros del seguro (170%), impuestos asumidos por la copropiedad (703%). Estos sobrecostos suman 75.940.451 pesos.</p>
+
+<p>Se detallaron ingresos no presupuestados, como intereses de mora, rendimientos financieros, multas y ajustes al peso, que suman 2.329.480 pesos. Los gastos no presupuestados incluyen el servicio de vigilancia (8.000.000 pesos), mantenimiento de puertas (280.000 pesos) y red de gas (950.000 pesos), sumando 9.324.696 pesos.</p>
+
+<p>Se explicó que el déficit de 11.802.130 pesos se ha cubierto con gastos sin ejecutar (14.000.000 pesos) y gastos por debajo de lo presupuestado (14.000.000 pesos), sumando 29.163.000 pesos.</p>
+
+<p>Se presentó un cuadro de cartera por edades, dividida en de 1 a 30 días (4%), de 31 a 60 días (16%), de 61 a 90 días (21%) y más de 90 días (59%). Los apartamentos con mayor mora son el 9905 (2.200.866 pesos), el 209 (1.647.384 pesos), el 316 (820.085 pesos) y el 105 (646.460 pesos). Se indicó que de 90 unidades de vivienda (86 apartamentos y 5 parqueaderos), el 78% de los copropietarios están al día.</p>
+
+<p>Se mostró un gráfico de cartera del año 2024, indicando que los picos más bajos se tuvieron en abril (cartera corriente) y febrero (cartera no corriente), mientras que en agosto se registraron los picos más altos (3.709.000 pesos en cartera corriente y 5.314.000 pesos en cartera no corriente, con un total de 9.000.000 pesos).</p>
+
+<p>En el gráfico de pagos, se observó que el mes con menos pagos fue mayo (20.512.858 pesos) y el mes con más pagos fue enero (24.806.000 pesos). Se realizó un análisis comparativo desde marzo de 2021 hasta agosto de 2021.</p>
+
+<p>Se presentó un cuadro comparativo de gastos versus cuota de administración, mostrando que la nómina representa el 58% del ingreso (92.552.000 pesos) y los servicios públicos el 16% (26.459.936 pesos). Se ejemplificó cómo se distribuye una cuota de administración de 250.000 pesos en cada uno de los ítems.</p>
+
+<p>Se concluyó que, sin tener en cuenta el arriendo del local y los ingresos no operacionales, el déficit con respecto al gasto sería de 32.331.610 pesos. Sin embargo, gracias a estos ingresos, la diferencia entre ingresos y gastos es de 11.802.130 pesos.</p>
+
+<p>Se informó que, además del informe gerencial, se anexan el informe completo, la ejecución presupuestal, el flujo de caja, los gráficos, la conciliación de cartera y la conciliación bancaria. Se destacó que estas conciliaciones se realizan mensualmente para evitar acumulaciones al final del año.</p>
+
+<p>Ante la presentación, se solicitó que se compartiera la versión final del informe, ya que se identificaron diferencias con el informe previamente enviado por Anderson, especialmente en el gráfico de cartera, que ahora contempla el aumento de deudores en agosto. Luz Karime confirmó que se compartiría el informe actualizado.</p>
+
+<p>Harold Manjarres solicitó una aclaración sobre un cumplimiento presupuestal del 703% correspondiente a "Impuestos Asumidos y ajustes al peso". Se explicó que estos ajustes corresponden a diferencias encontradas en pagos, incluyendo una diferencia de 336.000 pesos en la cuenta de Ave Villas en julio. Estos ajustes se hicieron para cerrar la cuenta de Ave Villas y se llevaron al ítem de gastos no presupuestados.</p>
+
+<p>Se recordó que en el consejo de junio se había decidido cerrar la cuenta de Ave Villas y asumir los 336.010 pesos como gasto para dejar solo Bancolombia como banco. Se mostraron los valores pendientes por conciliar en Ave Villas, correspondientes a 2022, y se confirmó que la decisión de sanearlos se tomó en el consejo de junio.</p>
+
+<p>María Victoria, quien se unió a la reunión más tarde, indicó que analizaría el tema con Luz Karime y Anderson para dar una respuesta definitiva en el informe del mes de agosto.</p>
+
+<p>Fernando agradeció la claridad y nitidez del informe contable del mes de agosto, lo que facilitó su revisión. Luz Karime aseguró que siempre se esfuerzan por presentar la información de la manera más clara posible.</p>
+<h2>5. Informe de revisoría fiscal (Agosto y Julio)</h2>
+
+<p>María Victoria presentó su informe preliminar de revisoría fiscal correspondiente a los meses de julio y agosto. Debido a compromisos laborales, su llegada a la reunión se retrasó, incorporándose a las 7:30 PM. En aras de la agilidad, presentó un informe virtual, indicando que aún no había sido entregado físicamente al Consejo debido a la falta de tiempo. Señaló que el informe estaba terminado en un 90%, a la espera de un análisis final de la información proporcionada por Luz Karime el mismo día.</p>
+
+<p>En relación al informe de julio, María Victoria indicó que el informe preliminar presentado en la reunión del 26 de agosto quedó en firme. Destacó la mejora en la calidad de impresión de los informes contables, lo cual facilitó su análisis.</p>
+
+<p>En cuanto al análisis de los egresos de agosto, mencionó que se mantuvieron las mismas constantes en los gastos de nómina y honorarios, sin variaciones significativas. Agroseguridad recibió el pago de $2,489,000, indicando que la copropiedad está al día con la seguridad social de los empleados. Se realizó un pago de $2,769,000 a EPM, y Carmen Maya aseguró que la facturación se normalizaría a partir de septiembre. María Victoria hizo seguimiento a los valores pagados a EPM desde febrero y marzo, que sumaron alrededor de $26,000,000, y a la gestión de Carmen para recuperar parte o la totalidad de esta suma.</p>
+
+<p>Otros pagos incluyeron los honorarios de Jaime Jaramillo por servicios de aseo y papelería ($390,000), la cuota de Servicrédito ($199,000), el pago a María Elena Gómez por el cambio de proveedor de facturación ($117,000), la provisión y consignación al fondo de imprevistos ($199,000), el pago a Claudia Posada por los medios magnéticos ($648,000), el pago a Javier Aristizábal por el mantenimiento de la motobomba ($363,000), y los pagos a Pedro Luis Pantoja por el suministro y regulación de gas ($950,000). También se realizó el pago a Grupo Imagen Diseño por la dotación de los empleados.</p>
+
+<p>María Victoria informó que se observó el descuento al señor Eduardo Arboleda por un préstamo, con un saldo pendiente de $550,000. Sin embargo, no se observó el abono del acuerdo del señor Julio Cruz, cuya cuenta ascendía a $1,647,000. Se destacó el cambio de proveedor en la facturación y se cotejaron los estados financieros con el balance y el informe contable presentado por Luz Karime (anterior al informe gerencial presentado en la reunión actual).</p>
+
+<p>En cuanto a la cartera, los apartamentos con deudas más significativas eran el 9905 (con $2,200,000) y el 209 (con $1,647,000), sin abonos en agosto. El 304 abonó y quedó en $406,000, el 516 en $554,000, el 105 en $646,000, y el 316 en $820,000, sin mostrar intención de pago. Se resaltó la importancia de la gestión de la administración para evitar que la cartera se dispare, especialmente en los apartamentos que venían mostrando voluntad de pago.</p>
+
+<p>María Victoria expresó su preocupación por los tiempos de entrega de la información, señalando que recibir la información el 24 de septiembre para una reunión el 30 de septiembre le dejaba poco tiempo para realizar un análisis adecuado. Indicó que, aunque siempre se ha dicho que cuenta con ocho días para analizar la información, esta vez no se cumplió ese plazo. Carmen Maya respondió que la información se había entregado el 10 de septiembre a contabilidad, y que Anderson Alzada la había entregado a Harold Manjarres el 23 de septiembre. Harold confirmó haber recibido la carpeta el 23 de septiembre a las 7:54 PM.</p>
+
+<p>En relación con el informe de agosto, María Victoria mencionó que el saldo en bancos era de $15,743,497 en la fiducia y $10,743,497 en la cuenta de Bancolombia. La cartera con más de tres cuotas vencidas incluía el apartamento 9905, con una deuda de $2,461,146 más los honorarios del abogado ($2,707,260). Este apartamento ya había sido vendido y estaba en proceso de escrituración. El apartamento 209 tenía una deuda de $1,869,144, pero la exesposa del propietario solicitó una rebaja de intereses de mora para cancelar la totalidad de la deuda. El apartamento 105 tenía una deuda de $857,389, y se le mandó una carta de administración. El apartamento 316 tenía una deuda de $1,104,160, y también se le mandó una carta de administración.</p>
+
+<p>Carmen Maya añadió que el apartamento 209 canceló $1,770,600, quedando a paz y salvo tras la condonación de los intereses de mora. El apartamento 105 canceló $273,500 en agosto.</p>
+
+<p>Se mencionó que el 14 de agosto se colocó un PQR a EPM para el reconocimiento del valor sobrefacturado por la fuga de agua. La respuesta inicial se esperaba para el 10 de septiembre, pero EPM solicitó una actualización del RUT, que ya fue enviada. Se espera una respuesta para el 11 de octubre. Se realizó el reemplazo de la tubería de PVC a presión desde el contador hasta el cuarto de tanques por un valor de $9,748,675, que fue pagado del Fondo de Imprevistos.</p>
+
+<h2>6. Informe de administración (Septiembre y Agosto)</h2>
+
+<p>Se presenta el informe de administración, destacando el saldo de las cuentas bancarias, la situación de la cartera y el mantenimiento de equipos. Se menciona el mantenimiento de la hidrolavadora y la reparación de una fuga de agua.</p>
+
+<p>Se informa que el 14 de agosto se presentó un PQR a EPM para el reconocimiento del valor facturado por la fuga de agua, con una respuesta esperada para el 10 de septiembre. Se verificó que la cuenta de servicios del sector afectado se canceló en septiembre y el consumo volvió a la normalidad.</p>
+
+<p>Se reporta una fuga de gas en el regulador general y en los contadores de varios apartamentos del bloque 5. Se indica que se cambió el regulador con un contratista externo por un costo de 950 mil pesos.</p>
+
+<p>En cuanto a la cartera, se mencionan algunos apartamentos con deudas significativas, incluyendo el apartamento 105 con una deuda de 914.960 pesos y el apartamento 209 con 1.647.304 pesos. Se explica que este último pasó a nombre de la ex esposa del propietario por decisión jurídica y se está a la espera de recibir la sentencia para comenzar el cobro.</p>
+
+<p>Posteriormente, se retoma el tema del informe de administración, donde Luz Karime presenta un informe gerencial destacando los aspectos más importantes de la copropiedad. Se indica que se demorarán aproximadamente 15 minutos en la presentación.</p>
+
+<p>Luz Karime procede a proyectar el informe gerencial, consultando si los presentes pueden visualizarlo. Se presenta un indicador financiero de índice de liquidez, que muestra qué soporte de activos se tiene para pagar pasivos. Se explica que el valor de 1.5 indica que por cada peso que se debe en el pasivo, se tiene 1.15 pesos para responder en el activo, sin tener en cuenta las cuotas de administración de más de tres meses.</p>
+
+<p>Se informa sobre los bancos conciliados, indicando que siempre se concilian los bancos y se realiza la conciliación bancaria. El saldo final al mes de agosto es de 8.805.000 pesos. Se mencionan las cuentas por cobrar de administración, que suman 7.956.000 pesos, representadas en 71 apartamentos. Se aclara que esto equivale al 40% de la cuota de administración facturada, que suma 20 millones de pesos.</p>
+
+<p>Se presenta el comportamiento en el pago, con un promedio de pago en el mes de agosto de 22 millones de pesos, que es el promedio del 2024. En cuanto a los ingresos, se tienen ingresos operacionales de 22.334.000 pesos facturados, de los cuales 20 millones corresponden a cuotas de administración y el resto al local comercial. Los ingresos no operacionales son de 377.825 pesos, sumando un total de 22.785.000 pesos facturados en agosto.</p>
+
+<p>En cuanto a las salidas, se detallan los gastos laborales, que ascienden a 13.157.000 pesos, incluyendo salarios, prestaciones sociales y pago de seguridad social. Los honorarios de contabilidad y revisoría fiscal suman 1.167.000 pesos. El seguro de la copropiedad en la amortización es de 935.329 pesos. Los servicios suman 2.300.000 pesos, incluyendo acueducto, alcantarillado, energía eléctrica, teléfono e Internet. Los mantenimientos y reparaciones ascienden a 1.858.000 pesos. En diversos, que incluye papelería, correo e implementos de aseo y cafetería, se gastaron 435.250 pesos. La reserva legal es el 1% por ley, 199. Los gastos financieros son de 1.929.000 pesos, explicados por la amortización del interés completo de los pagos por cuotas del seguro.</p>
+
+<p>Se indica que el gasto total es de 22 millones de pesos, resultando en un excedente mensual de 678.934 pesos. Sin embargo, la utilidad de enero a agosto arroja una pérdida de 11.802.130 pesos. Se explica que esta pérdida se debe a la compra de equipos varios de circuito cerrado de televisión y cámaras en enero, por un valor de 8.768.000 pesos, y al servicio de vigilancia entre febrero y abril, por 8 millones de pesos, ambos no presupuestados. También se incluye un incremento en el consumo de agua en febrero y marzo, que suma 9.297.000 pesos. Estos gastos no presupuestados suman 26.160.247 pesos.</p>
+
+<p>Se mencionan ítems no presupuestados como la impermeabilización y lavada de tanques, instalaciones eléctricas, recarga de extintores y gastos de ejercicios anteriores, que no se han ejecutado. Se remite a la ejecución por cumplimiento para más detalles.</p>
+
+<p>Se explica que en la ejecución por cumplimiento se muestra lo que se ha cumplido en el presupuesto a un 100%. Se menciona que la cuota de administración y el alquiler del local comercial se han cumplido en un 100%. También se han cumplido al 100% la revisoría fiscal, la asesoría contable, la administración y facturación, y la reserva. Estos rubros suman 24.567.200 pesos.</p>
+
+<p>Se mencionan rubros sin ejecutar, como la bonificación de Navidad de los empleados, el reemplazo de vacaciones, la asesoría jurídica, las instalaciones eléctricas, la impermeabilización de tanques, la recarga de extintores y los gastos de ejercicios anteriores, que ascienden a 14.424.000 pesos.</p>
+
+<p>Se indican rubros por debajo de lo presupuestado, como sueldos (97%), horas extras (98%), dotación y suministros a empleados (97%), aportes a seguridad social (89%), pago del plan celular de portería (98%), mantenimiento de zonas comunes (50%), mantenimiento de prados y jardines (31%), papelería y útiles de correo (87%), gastos del consejo de administración, asamblea y eventos (18%), rifa (78%) y comisión bancaria (68%). Estos valores suman 82.924.263 pesos.</p>
+
+<p>Se mencionan rubros por encima de lo presupuestado, como el subsidio de transporte (103%), las prestaciones sociales (107%), los medios magnéticos (150%), el impuesto predial (149%), el seguro de zonas comunes (103%), el acueducto y alcantarillado (2137%), la energía eléctrica (110%), el mantenimiento de motobomba (150%), el mantenimiento del circuito cerrado de televisión (548%), la fumigación (162%), los implementos de aseo y cafetería (150%), los taxis y buses (119%), los gastos bancarios (125%), el gravamen financiero (1079%) y los intereses financieros del seguro (170%), impuestos asumidos por la copropiedad (703%). Estos rubros suman 75.940.451 pesos.</p>
+
+<p>Se mencionan gastos e ingresos no presupuestados. Dentro de los ingresos no presupuestados están los ingresos no operacionales, como los intereses de mora, los rendimientos financieros, las multas y los ajustes al peso, que suman 2.329.480 pesos. Los gastos no presupuestados incluyen el servicio de vigilancia (8 millones de pesos), el mantenimiento de puertas (280 mil pesos) y la red de gas (950 mil pesos), sumando 9.324.696 pesos.</p>
+
+<p>Se indica que los gastos totales ascienden a 192.759.000 pesos, mientras que los ingresos totales de enero a agosto son de 180.959.000 pesos, incluyendo los ingresos corrientes (cuota de administración y local comercial) y los no presupuestados. Se explica que el déficit de 11.802.130 pesos se ha cubierto con gastos sin ejecutar y gastos por debajo de lo presupuestado, que suman 29.163.000 pesos.</p>
+
+<p>Se presenta un cuadro de la cartera por edades, dividida en de 1 a 30 días, de 31 a 60, de 61 a 90 y más de 90 días. Se indica que la cartera total de 1 a 30 días equivale al 4%, de 31 a 60 al 16% (1.466.000 pesos), de 61 a 90 al 21% (1.912.000 pesos) y más de 91 días al 59%, representada en cuatro apartamentos. Estos apartamentos son el 9905 (2.200.866 pesos), el 209 (1.647.384 pesos), el 316 (820.085 pesos) y el 105 (646.460 pesos). Se menciona que hay 90 unidades de vivienda, 86 apartamentos y 5 parqueaderos, y que el 78% de los copropietarios están al día.</p>
+
+<p>Se presenta un gráfico de cartera del año 2024, indicando que los picos más bajos se tuvieron en abril en cartera corriente y en febrero en no corriente. En agosto se tuvieron los picos más altos del 2024, con 3.709.000 pesos en cartera corriente y 5.314.000 pesos en cartera no corriente, sumando un total de 9 millones de pesos.</p>
+
+<p>Se presenta un gráfico de pagos, indicando que el mes donde menos pagaron fue mayo (20.512.858 pesos) y el mes donde más pagaron fue enero (24.806.000 pesos). Se realiza un análisis desde marzo de 2021 hasta agosto de 2021.</p>
+
+<p>Se presenta un cuadro comparativo de gastos versus cuota de administración, mostrando que la nómina representa el 58% del ingreso (92.552.000 pesos) y los servicios públicos el 16% (26.459.936 pesos). Se visualiza cómo se distribuye la cuota de administración en cada uno de los ítems. Se indica que, sin tener en cuenta el arriendo del local y los ingresos no operacionales, el déficit con respecto al gasto sería de 32.331.610 pesos. Sin embargo, con el ingreso del local y los ingresos no operacionales, la diferencia entre el ingreso y los gastos es de 11.802.130 pesos.</p>
+
+<p>Se menciona que se anexan al informe la ejecución presupuestal completa, el flujo de caja, los diferentes gráficos, la conciliación de cartera y la conciliación bancaria. Se indica que estas conciliaciones se hacen mensualmente para no dejar todo para diciembre.</p>
+
+<p>Luz Karime pregunta si hay preguntas o dudas sobre el informe. Se espera que el informe sea compartido con el consejo.</p>
+
+<p>Se señala que hay diferencias entre el informe enviado por Anderson y el presentado por Luz Karime, especialmente en el gráfico de cartera, que ahora contempla el último mes de agosto. Se agradece y se solicita la versión final del informe.</p>
+
+<p>Se pregunta sobre un cumplimiento del 703% en el informe gerencial, correspondiente a Impuestos Asumidos y ajustes al peso. Se explica que son diferencias encontradas entre pesitos de pagos y un ajuste en julio de 336.000 pesos en la cuenta de Ave Villas, que se llevaron al ítem de gastos no presupuestados a Impuestos Asumidos y Ajuste al Peso.</p>
+
+<p>Se aclara que en junio se decidió cerrar la cuenta de Ave Villas y asumir esos 336.000 pesos como gasto para cerrar el tema y dejar solo Bancolombia. Se muestra el informe de junio donde se ven los valores pendientes por conciliar en Ave Villas. Se explica que son valores de años anteriores y se tomó la decisión de sanearlos y no seguirlos arrastrando. Anderson aclaró esto en su momento.</p>
+
+<p>María Victoria indica que entrará a analizar el tema aclarado por Luz Karime y dará una respuesta en el informe definitivo de agosto. Agradece a Fernando por la claridad en la impresión del informe contable de agosto.</p>
+
+<p>María Victoria presenta su informe de revisoría fiscal, indicando que lo tiene en un 90% terminado y analizado. Explica que recibió la información el 25 de septiembre y ha venido avanzando en el análisis. Menciona que el sábado presentó una inquietud a Anderson, que Luz Karime resolvió hoy. Esa parte no se ha terminado de analizar.</p>
+
+<p>Se indica que se analizaron todos los egresos y que los gastos constantes como nómina y honorarios se han mantenido. Agroseguridad se pagó 2.489.000 pesos, indicando que la copropiedad está al día con la seguridad social de los empleados. Se hizo un pago de 2.769.000 pesos a EPM, y Carmen asegura que la facturación se normalizará a partir de septiembre. Se menciona que se ha hecho seguimiento a los valores altos pagados a EPM desde febrero y marzo, que suman alrededor de 26 millones de pesos, y que Carmen está gestionando la recuperación de parte o la totalidad de esta cifra.</p>
+
+<p>Se mencionan otros pagos, como los honorarios, el pago a Jaime Jaramillo por aseo y papelería (390.000 pesos), la cuota de Servicrédito (cuota 9 de 10), el pago a María Elena Gómez por la facturación (117.000 pesos), la provisión y consignación del fondo de imprevistos (199.000 pesos), el pago a Claudia Posada por los medios magnéticos (648.000 pesos), el pago a Javier Aristizábal por el mantenimiento de la motobomba (363.000 pesos) y el pago a Pedro Luis Pantoja por el suministro y regulación de gas (950.000 pesos). También se menciona el pago a Grupo Imagen Diseño por la dotación de los empleados.</p>
+
+<p>Se informa que el informe preliminar de julio, presentado el 26 de agosto, quedó en firme. Se vio claramente cómo se le hace el descuento al señor Eduardo Arboleda por un préstamo, quedando con una deuda de 550.000 pesos. No se observó el abono del acuerdo del señor Julio Cruz, cuya cuenta está en 1.647.000 pesos. Se observa un cambio de proveedor en la facturación.</p>
+
+<p>Se indica que se cotejaron todos los estados financieros frente al balance y al informe contable presentado por Anderson la semana pasada. Se espera recibir el informe gerencial de Luz Karime para cotejarlo y complementarlo. Se informa que se canceló la póliza de Servicrédito.</p>
+
+<p>En cuanto a la cartera, se menciona que los que más deben son el 9905 (2.200.000 pesos) y el 209 (1.647.000 pesos), que no hicieron abonos en agosto. El 304 hizo un abono y está en 406.000 pesos, el 516 está en 554.000 pesos, el 105 está en 646.000 pesos y el 316 está en 820.000 pesos, sin mostrar intención de pago. También se menciona el 415, que está en 554.000 pesos. Se considera que la cartera es sana, pero es importante no permitir que los apartamentos que venían bien con una voluntad de pago se relajen.</p>
+
+<p>Se sugiere que la administración realice recordatorios a los copropietarios con mora no coactiva ni prejurídica. Se indica que el informe estará listo a más tardar el miércoles o jueves. Se pregunta si hay alguna duda.</p>
+
+<p>María Victoria expresa su preocupación por el tiempo limitado para analizar la información, ya que recibió la información el 24 de septiembre para una reunión el 30 de septiembre. Indica que necesita tiempo para aclarar dudas con el contador y que no puede hacerlo de inmediato si pasa la información el sábado. Sugiere que se perfeccione el tema con la nueva facturación.</p>
+
+<p>Carmen indica que la información le llega al día siguiente máximo y que su demora es en hacer los egresos y pasar la información al contador. Menciona que se puede demorar dos o tres días en pasar la información de la seguridad social. Sugiere que se aplazan los tiempos.</p>
+
+<p>Se comenta que siempre se cuenta con que María Victoria tiene 8 días para analizar la información, pero esta vez no se le dieron ni siquiera 8 días, ya que recibió la información el 24. María Victoria aclara que no necesita más de 8 días y que siempre los cumple. Sugiere que se repartan los 30 días del mes entre los tres, asignando 10 días a cada uno.</p>
+
+<p>Se indica que normalmente se le dan dos semanas a Anderson y ocho días a María Victoria. Se propone correr los tiempos para que no se afecte a María Victoria. Se pregunta quién pone la fecha en la parte superior de la carpeta. Se aclara que la persona que recibe la información pone la fecha, indicando que contabilidad recibió la información el 10 de septiembre. Se menciona que Harold recibió la carpeta en portería el 23 de septiembre. Se concluye que Anderson se gastó 13 días para hacer la contabilidad y María Victoria se está demorando 5 o 6 días para analizarla. Se sugiere que si se entrega la información de contabilidad el 10, se entregue a María Victoria sobre el 20.</p>
+
+<p>Carmen indica que normalmente entrega la información entre el 8 y el 10, y dos días después complementa la información con la seguridad social. Se acuerda hablar con Luz Karime y Anderson sobre los tiempos de entrega.</p>
+
+<p>Carmen presenta su informe, indicando que el saldo en bancos hoy es de 15.743.497 pesos en la fiducia y 10.743.497 pesos en la cuenta de Bancolombia. La cartera con más de tres cuotas vencidas, con saldos a septiembre, es del 9905, con una deuda de 2.461.146 pesos, más los honorarios del abogado por el prejurídico, que suman 2.707.260 pesos. Se indica que este apartamento ya lo vendieron y están en proceso de escrituras. Carmen habló con el nuevo dueño, quien le dijo que el banco no ha girado la plata, pero que la escritura está hecha y que no se preocupe, que si el anterior dueño no paga, él pagará. Se indica que para hacer el proceso de escritura se necesita el paz y salvo, pero el anterior dueño ya no contesta. Pareciera ser que el nuevo dueño es el que tiene que asumir la deuda.</p>
+
+<p>Se menciona el apartamento 209, con seis cuotas vencidas y una deuda de 1.869.144 pesos. Se indica que el apartamento pasó a nombre de la ex esposa por decisión jurídica y solicitó una rebaja de intereses de mora para cancelar la totalidad de la deuda. La administración debía 1.770.600 pesos y los intereses de mora eran 98.544 pesos. Canceló 1.770.600 pesos, quedando a paz y salvo. Se condonaron los intereses de mora para que pagara el total de la deuda.</p>
+
+<p>Se menciona el apartamento 105, con tres cuotas vencidas y una deuda de 857.389 pesos. Se le mandó carta de administración y canceló en agosto 273.500 pesos. El 316 tiene una deuda de 1.104.160 pesos y también se le mandó carta de administración. No se sabe si pagó o abonó algo en septiembre, porque todavía no se ha conciliado la cartera.</p>
+
+<p>Se informa que el 14 de agosto se colocó un PQR a EPM para reconocimiento del valor sobrefacturado por la fuga de agua. Consultando el radicado, dice que la respuesta se daría el 10 de septiembre. Respondieron solicitando una actualización del RUT, que ya se envió. En la página de EPM dice que responden el 11 de octubre, pero ya habían aprobado el pago de IVA. Están con todo el protocolo de los papeles que hay que enviar para que reconozcan la deuda.</p>
+
+<p>Se realizó el reemplazo de la tubería de PVC a presión desde el contador hasta el cuarto de tanques, por un valor total de 9.748.675 pesos. El dinero fue pagado del Fondo de Imprevistos por ser una emergencia. Se consultó con Harold, y se concertó que esa plata debía salir del Fondo de Imprevistos. Igualmente, cuando EPM reconozca la plata, se puede volver a guardar al Fondo de Imprevistos.</p>
+
+<p>Se presenta una nueva cotización para el mantenimiento de las fachadas 4, 5 y 6 de la empresa Pinturas y Colores, por un valor de 148.326.153 pesos. Se indica que la otra cotización era de 167.723.635 pesos. Se logró conseguir esa más, pero no se tienen más cotizaciones, pues la otra de 70 millones parece absurda.</p>
+
+<p>Carmen indica que el contacto que pasaron Eugenia y ella no contestaron. Después de conseguir esta, no volvió a llamar. Hablando con Harold, se acordó mirar la posibilidad de que de alguna manera se montaran al techo sin hacerle mucho daño, porque en esta última cotización solamente los andamios y los anclajes y la máquina elevadora, porque dicen que hay una fachada, la del bloque 4, que no se puede hacer con andamios por el desnivel que tiene el piso, son 60 millones lo que cobran en eso. Esto está encareciendo demasiado la cotización y el tiempo que se gastan haciendo las cosas con andamios. Se pregunta si se arriesgan o no a que utilicen el techo previendo que sea lo más mínimo en daños para ver si se puede rebajar un poquito esto. Se hizo la cuenta y la cuota extra sería de un millón seiscientos con los 148 más o menos, y si se logra quitar ese tema de los andamios, sería más o menos un millón la cuota extra.</p>
+
+<p>Se aclara que esa opción nunca se ha valorado y que se le ocurrió en vista de que cotizan tan costoso todo lo de los andamios. Se busca que digan si es viable o no es viable, minimizando riesgos. No es el riesgo de que se vayan a caer, sino de que dañen más el techo. Se indica que la parte así es de la única manera que sale más barato y aún así la cuota sería un millón de pesos. Aún así hay que preguntar, porque si eso minimiza gastos.</p>
+
+<p>Se pregunta cuál sería el costo del arreglo del techo si se llegara a dañar algo, y cómo sería el comparativo con lo de los andamios. Se propone dejarlos subir al techo y que estudien esa posibilidad, cuánto es el riesgo de que lo dañen o no. Se indica que siempre se ha dicho que no se pueden subir al techo, pero se quiere analizar esa opción a ver si de pronto puede ser más barato, se puede hacer y no va a valer tanto.</p>
+
+<p>Se aclara que ellos se subirían con el objetivo de tratar de ver la viabilidad y se subirían con Iván, que ya se ha subido al techo en otras ocasiones.</p>
+
+<p>Se comenta que es importante evaluar la posibilidad de que si el techo se daña, mirar la posibilidad de la reparación o el mismo cambio si es necesario. Se sugiere cotizar cuánto cuesta el arreglo en dado caso que se vaya a hacer y mirar si se puede hacer primero uno y luego el otro en caso dado con futuro. Se propone mirar la posibilidad si se puede hacer un mantenimiento en el techo, evaluar la posibilidad si se puede dar algún cambio de estructura y ver cuánto cuesta eso y mirar si después de hacer el cambio en el techo, modificar la estructura del techo, se puede hacer lo de las fachadas. Se menciona que estamos hablando de recolectar de 90 a 148 millones de pesos, una cuota adicional de un millón de pesos. Se pregunta cómo se va a recolectar eso, solamente una cuota adicional a la mensualidad y por cuánto tiempo. También se pregunta en cuánto tiempo se vence la póliza.</p>
+
+<p>Se manifiesta que la administradora muy bien por lo que hizo en cuanto a que se solucionó en teoría ya el problema del agua, pero se indica que no hubo un cronograma o plan estructurado para la reparación de las tuberías. Se recomienda que en futuros procesos se realice un cronograma o plan estructurado para que el consejo y la comunidad se enteren de cómo se van a estar ejecutando los proyectos y los procesos.</p>
+
+<p>Carmen indica que había hablado con Harold sobre invertir las obras, es decir, hacer primero el techo y luego la fachada. Sin embargo, Harold no estuvo muy de acuerdo con eso. Carmen indica que no sabe cuánto pueda valer el techo, pero que la lógica debería ser primero el techo. Se menciona que se habló de la reclamación a la aseguradora, que apremia el tiempo.</p>
+
+<p>Harold comenta que la razón por la que se descartó la idea del techo fue por la reclamación a la aseguradora, ya que no se podría hacer lo de las fachadas inmediatamente porque sería mucha plata junta. Don Enrique pregunta hasta cuándo tenemos efectivamente plazo para hacer esa reclamación.</p>
+
+<p>Harold comenta que qué posibilidades habría de revisar el techo, y propone contratar un servicio de un drone que fuera capaz de hacernos unas tomas, unos vídeos, unas fotos muy claras de todo el techo, de todas las canoas, para que por lo menos los consejeros tengan algún tipo de claridad. Indica que indagó con algunas empresas que prestan el servicio de dron y que cobran 300 mil pesos por una hora con ese dron y entregan tanto vídeos como fotos, todo de forma digital. Solo dependería de que se defina la fecha y el clima, y ellos se encargan de gestionar el permiso para sobrevolar.</p>
+
+<p>Carmen indica que no cree que se vea mucho con el drone, ya que lo que se va a ver por encima es mantotera alfáltica. Para ver qué tiene realmente el techo y cuál es la estructura que tiene, tiene que ser por debajo. Si quieren lo hacen, pero está segura de que eso no se va a ver nada, solamente se va a ver tela asfáltica encima.</p>
+
+<p>Se pregunta si entre la estructura del edificio y el techo hay una parte donde se pueda visualizar. Se sugiere validar con la empresa del drone si hay un descuento si no se logra tener una visualización adecuada.</p>
+
+<p>Se indica que lo del dron no va a aportar datos, y que hacerlo de forma empírica o sin ningún objetivo en específico sería una pérdida. Se propone consultar previamente con alguien que sepa sobre estructuras para que al momento de implementar el drone, enfocarse en puntos objetivos y en lugares específicos para que aporte información precisa y relevante.</p>
+
+<p>Daniela comenta que han sobrevolado la unidad con el dron de ellos y que lo que dice Carmen es cierto, no se alcanza a visualizar muchas cosas. Indica que tiene unas fotos de eso y que las va a buscar y las va a mirar y de pronto las comparte para que miren si justifica pagarle a alguien para realizar ese pago.</p>
+
+<p>Se pregunta cuánto tiempo reconoce la aseguradora por el cumplimiento. Se aclara que no habla de estabilidad de la obra, solamente cumplimiento de la obra como tal. Se pregunta cuánto tiempo tiene uno para reclamar después de que ellos no cumplen.</p>
+
+<p>Daniela pregunta en qué va el tema de la solicitud del techo del parqueadero. Carmen indica que le dijo que definitivamente no se podía hacer y que si él quería, tenía que esperar a una asamblea extraordinaria para que la asamblea como tal lo autorizara, porque ese muro es zona común. Inicialmente le había dicho algo así, él fue el que insistió, insistió en solicitar el permiso, pero Carmen le volvió a decir que eso es zona común y que no se pueden arriesgar a que alguien ponga problema porque lo dejaron utilizar el muro. En eso quedaron, en que si él lo quería hacer, tenía que pedir permiso en la asamblea para que se lo dejaran hacer así.</p>
+
+<p>Carmen indica que las pólizas dieron una vigencia de dos meses. El que dijo que habían cinco años para reclamar fue el abogado. La póliza como tal no dice que en caso de una reclamación la vigencia son dos meses porque se supone que en dos meses el señor terminaba la obra, pero el que dijo y el que nos informó que tenían una vigencia de cinco años era el abogado. La aseguradora nunca dijo que no podían reclamar, o sea, cuando empezaron a reclamar ellos nunca dijeron no, no pueden reclamar porque eso no. Ellos dijeron hagan la obra y luego reclaman si tienen un sobrecausto. Pero lo de los cinco años lo dijo el abogado.</p>
+
+<p>Se pregunta si hay forma de que el abogado pase oficialmente y por escrito esa información.</p>
+
+<p>Don Enrique pregunta si, teniendo en cuenta que lo de las pólizas haya expirado, aún así se plantearía continuar con la fachada de esta misma forma o cambiaría eso los planes. Carmen indica que la fachada hay que terminarla sí o sí. Se pregunta cómo sería y en cuánto tiempo. Carmen indica que toca sentarse a pensar y analizar la forma de recaudar los fondos a esa cuota extraordinaria y el tiempo en que se va a hacer.</p>
+
+<p>Don Enrique pregunta si, en dado caso de que haya tiempo, por ejemplo, que esta póliza venciera ahorita en noviembre de este año, habría forma de recobrar fondos o ejecutar algún plan para este año o definitivamente no. Carmen indica que si la póliza se venciera en noviembre no tendrían forma, ya que es casi imposible pedir una cuota extra de un millón de pesos en dos meses. Se indica que la forma de cobrar la cuota extra la determina la asamblea, y que se podría proponer un año. Se aclara que tiene que ser con asamblea extraordinaria y con un quórum calificado del 70%.</p>
+
+<p>Se indica que la póliza no se puede dejar vencer porque eso perjudicaría mucho. Se menciona que han pasado dos años del evento y no se tiene el dato exacto de cuándo se vence la póliza. Se considera importante tener el concepto por escrito del abogado del porqué dice que en cinco años. Se indica que se ha pedido esa fecha desde hace como tres meses. Se considera que se debió solucionar hace tiempo y tener claros todos esos datos para saber cómo se implementa un plan estructurado para solucionar ese problema. Se indica que se está llegando a un punto de no retorno con esta parte de la fachada.</p>
+
+<p>Se pregunta qué posibilidades hay de tener ese dato para la próxima semana, ya que a partir de ahí se puede empezar a planear. Se considera prioritario lo de la asamblea extraordinaria. Se indica que se le va a pedir al abogado que envíe la información de forma extraoficial.</p>
+
+<p>Carmen indica que está hablando con el abogado por teléfono. El abogado dice que los cinco años son para demandar al contratista por cumplimiento a la aseguradora. A la aseguradora son dos años desde el momento de vencimiento de la póliza, pero con un contrato que muestren que ya tienen un contrato para ejecutar la obra. Responden por ello. La póliza vence en noviembre. No necesariamente tienen que tener ejecutado el contrato, sino ya haber adjudicado el contrato.</p>
+
+<p>Se indica que tenemos 10 minutos para proponer un plan a seguir, ya que la reunión se acaba a las 9 de la noche. Se pregunta qué plan se va a hacer, si se va a ejecutar un plan en base al plazo de la póliza que se vence ahorita en noviembre o se va a dejar vencer la póliza y se va a ejecutar un plan por aparte. Se indica que hay que definir eso ahora, porque si se deja esperar otro mes más, no se puede esperar. Se indica que tenemos 5 minutos para pensar lo que se ha debido pensar en dos años.</p>
+
+<p>Daniela propone llamar a una asamblea extraordinaria este mes. Considera que no se pueden cargar temas legales donde se tome la decisión de que no, no, se ha vencido la póliza, dejémosla vencer. Considera que no se puede tomar esa decisión porque es un tema que no solamente es a los consejeros. Se indica que la póliza vence en noviembre sí o sí. Considera que este tema ya lo tiene que saber la unidad porque se va a venir un problema gigante.</p>
+
+<p>Carmen indica que el consejo podría al menos adjudicar el contrato, porque la asamblea lo que realmente lo que. Se pregunta cómo se va a adjudicar el contrato si no se tienen los recursos en este momento para poder decir es que se lo adjudicamos a este contratista, ya lo tenemos para mostrárselo a la aseguradora, pero con qué se va a soportarle a ese contratista el tema. Se indica que no se puede adjudicar un contrato ni ahora, ni en noviembre, ni con asamblea ni nada, porque el contratista tendría que ser que al contratista le dijeran, vea, vamos a hacer un contrato ya, pero el inicio de la obra va a ser en un año y medio. Se pregunta cómo se va a manejar eso legalmente, pero la fecha de ese contrato sería a un año o año y medio para el tiempo que se necesite para recursos.</p>
+
+<p>Se indica que lo que se está promoviendo es que se necesita una asesoría legal para definir este problema lo más rápido posible. Se pregunta qué tipo de contratación sea. Se indica que, sea el que sea un contratista, se necesita un contrato para poderle presentar a la aseguradora, pero ese contrato tiene que tener fecha de ahora, no se puede que el contrato se va a hacer en un año. Se indica que se necesitan soluciones en 8 minutos. Se propone una asesoría legal.</p>
+
+<p>Wilber indica que la opción más viable es llamar a la asamblea general y mirar qué decisión se puede tomar con la asamblea. Considera que como consejeros no pueden tomar esa decisión de venir y adjudicar un contrato. Indica que no son coadministradores y que no está dentro de las funciones que tienen de acuerdo al reglamento. Cuestiona la gestión de Carmen porque el reglamento lo tiene que conocer a la perfección y es prácticamente como si estuviera delegando la responsabilidad a ellos, cuando eso ella como administradora debió haberle puesto un orden desde el primer momento que se empezaron a presentar estas situaciones.</p>
+
+<p>Se indica que llevan dos por una asamblea extraordinaria. María indica que antes de citar una reunión, por lo menos por ahí en ocho días, deberían hacer una reunión corta, ya no que tenga que ver contadores, mirar los temas como los ven ellos, posibles soluciones, lo miren ellos como el consejo y ya sí solicitar un extraordinario.</p>
+
+<p>Se propone otra reunión en 8 días, el próximo lunes o martes, para que ya tengan más o menos claro, puedan ver como la información doña Carmen envíe como el tema de las pólizas, que sepan ellos como bien y ya digan bueno, nosotros proponemos esto o qué posibilidad hay. Harold opina que puede ser inclusive este sábado. Marta está de acuerdo con Harold y Víctor. Víctor decide porque hay empate. María Victoria indica que ya esto es de asamblea extraordinaria y lo más pronto posible porque saben un problema grandísimo. Después de la reunión pueden citar a la asamblea. Se pregunta cuál sería el objetivo de la reunión, si es para llegar a la misma conclusión de ahora. Se indica que de todas maneras ellos son el consejo y deben estar
+<h2>7. Cotización cambio de tubería acueducto por fuga</h2>
+
+<p>Se discutieron las cotizaciones recibidas para el cambio de la tubería del acueducto debido a una fuga. Se presentaron cuatro cotizaciones, destacándose la del ingeniero Diego Díaz, quien redujo su cotización inicial de 17 millones a 9 millones 748 mil pesos.</p>
+
+<p>Se acordó por mayoría contratar al ingeniero Diego Díaz, siempre y cuando se expidan pólizas de estabilidad y cumplimiento de la obra.</p>
+<h2>8. Cotizaciones de mantenimiento de fachadas bloques 4, 5 y 6</h2>
+
+<p>Se abordó el tema de las cotizaciones para el mantenimiento de las fachadas de los bloques 4, 5 y 6. Se mencionaron dos cotizaciones iniciales: una de 167 millones de pesos de la empresa FEDAS Aplicaciones SAS y otra de 70 millones de pesos de la empresa Ovidomantenimiento SAS. La diferencia entre estas cotizaciones generó preocupación y dudas sobre la validez y justificación de los costos.</p>
+
+<h3>Dificultad para conseguir cotizaciones</h3>
+<p>Se expresó la dificultad para conseguir más cotizaciones debido a las condiciones específicas del trabajo, como el uso de andamio certificado, lo cual encarece la obra y desanima a muchos contratistas.</p>
+
+<h3>Necesidad de más cotizaciones</h3>
+<p>Se enfatizó la necesidad de obtener al menos una cotización adicional para tener un punto de referencia más claro y tomar una decisión informada. Se sugirió que los miembros del consejo también colaboren en la búsqueda de más cotizaciones.</p>
+
+<h3>Propuesta de reunión extraordinaria</h3>
+<p>Se propuso realizar una reunión extraordinaria una vez se consigan más cotizaciones para revisar las opciones y tomar una decisión.</p>
+
+<h3>Preocupación por la calidad de garantía</h3>
+<p>Se destacó la importancia de analizar bien las condiciones al momento de contratar, asegurándose de que el contratista ofrezca garantías adecuadas para el trabajo.</p>
+
+<h3>Viabilidad de montaje en el techo</h3>
+<p>Se discutió la posibilidad de que los contratistas se montaran en el techo para realizar el trabajo, con el fin de reducir los costos asociados al uso de andamios. Se mencionó que esta opción podría implicar riesgos de dañar el techo, por lo que se consideró necesario evaluar la viabilidad y los posibles costos de reparación en caso de daños.</p>
+<p>La administradora, Carmen Maya, informó sobre una nueva cotización de la empresa Pinturas y Colores por un valor de 148.326.160 pesos. Indicó que esta empresa tiene experiencia y que ya había presentado la cotización a Harold Manjarres. Se mencionó que la diferencia entre esta cotización y la anterior de 167 millones radicaba principalmente en los costos de los andamios y anclajes, que ascendían a 60 millones en la fachada del bloque 4 debido al desnivel del piso.</p>
+<p>Carmen Maya sugirió evaluar la posibilidad de que los contratistas utilicen el techo para realizar el trabajo, minimizando los daños. Indicó que, aunque se utilizara el techo, la cuota extra para los propietarios sería de aproximadamente un millón de pesos. Aclaró que esta opción no se ha valorado y que se buscaría la opinión del contratista sobre su viabilidad, minimizando riesgos y evaluando el posible daño al techo.</p>
+<p>María Clara sugirió evaluar el costo de reparación del techo en caso de daños, comparándolo con el costo de los andamios.</p>
+<p>Enrique Soto coincidió en la importancia de evaluar la posibilidad de reparación o cambio del techo en caso de daños, considerando que el costo de los andamios es elevado. Sugirió cotizar el costo de reparación o modificación de la estructura del techo y evaluar si se puede realizar primero el mantenimiento del techo y luego el de las fachadas. Además, preguntó cómo se recolectaría el dinero para la cuota adicional, en cuánto tiempo y cuál es el plazo de vencimiento de la póliza.</p>
+<p>Carmen Maya respondió que, en su opinión, se debería invertir el orden de las obras, realizando primero el techo para evitar problemas futuros. Sin embargo, Harold Manjarres no estuvo de acuerdo con esta propuesta. Carmen Maya explicó que la decisión de priorizar las fachadas se debió a la reclamación a la aseguradora, ya que el tiempo apremiaba.</p>
+<p>Harold Manjarres propuso contratar un servicio de drone para obtener tomas y vídeos del techo, con el fin de tener información clara para la toma de decisiones. Mencionó que este servicio costaría 300 mil pesos e incluiría la gestión de permisos de sobrevuelo.</p>
+<p>Carmen Maya expresó dudas sobre la utilidad de las tomas aéreas, ya que el techo está cubierto de tela asfáltica y no se vería la estructura ni el tipo de teja. Indicó que para ver la estructura del techo sería necesario revisarlo por debajo.</p>
+<p>María Clara sugirió validar con la empresa de drones si se puede obtener una visualización adecuada de la estructura del techo y si se puede obtener un descuento en caso de no lograrlo.</p>
+<p>Enrique Soto consideró que lo del drone podría aportar datos, pero que sería necesario asesorarse previamente con alguien que sepa sobre estructuras para enfocar las tomas en puntos objetivos y obtener información precisa y relevante.</p>
+<p>Daniela Marín informó que ya han sobrevolado la unidad con un drone y que no se visualizan muchas cosas. Se ofreció a buscar las fotos y compartirlas para evaluar si justifica pagar por el servicio.</p>
+<p>Carmen Maya informó que las pólizas tienen una vigencia de dos meses, pero que el abogado indicó que hay cinco años para demandar al contratista por cumplimiento, siempre y cuando se tenga un contrato para ejecutar la obra.</p>
+<p>Enrique Soto preguntó si, en caso de que la póliza haya expirado, se continuaría con la fachada de la misma forma o se cambiarían los planes. Carmen Maya respondió que la fachada hay que terminarla sí o sí.</p>
+<p>Se generó una discusión sobre la necesidad de definir un plan a seguir, considerando el plazo de la póliza. Daniela Marín propuso llamar a una asamblea extraordinaria lo más pronto posible para informar a la unidad sobre la situación y tomar una decisión en conjunto.</p>
+<p>Carmen Maya sugirió que el consejo podría al menos adjudicar el contrato, pero Harold Manjarres cuestionó cómo se adjudicaría un contrato sin tener los recursos para soportarlo. Carmen Maya propuso que el contrato tenga fecha actual, pero con fecha de inicio de obra a un año o año y medio, mientras se recolectan los recursos.</p>
+<p>Wilber Moreno opinó que la opción más viable es llamar a una asamblea general y que el consejo no puede adjudicar un contrato ni fungir como coadministradores. Cuestionó la gestión de Carmen Maya por no haber puesto un orden desde el principio y por delegar la responsabilidad al consejo.</p>
+<p>María Victoria sugirió realizar una reunión corta entre los miembros del consejo para analizar los temas y posibles soluciones antes de solicitar una asamblea extraordinaria.</p>
+<p>Harold Manjarres propuso realizar la reunión la próxima semana o incluso este sábado.</p>
+<p>Daniela Marín insistió en la necesidad de realizar una asamblea extraordinaria lo más pronto posible, sin necesidad de otra reunión previa.</p>
+<p>Ante la divergencia de opiniones, se propuso crear una encuesta en el grupo para definir si se realiza una nueva reunión virtual o se convoca directamente a una asamblea extraordinaria.</p><h2>9. Proposiciones y varios</h2>
+
+<p>En el punto de proposiciones y varios, se abordó inicialmente la posibilidad de suspender la Fiesta de la Familia debido a los gastos imprevistos y la necesidad de realizar preparaciones urgentes. Tras la discusión, se aprobó la suspensión de la Fiesta de la Familia para este año.</p>
+
+<p>Posteriormente, se suscitó un debate sobre la conveniencia de mencionar nombres de propietarios morosos en el acta. Doña Carmen consultó si debía incluir los nombres de las personas con deudas, especialmente en el caso del apartamento 209, donde la deuda había pasado de un propietario a otro. Argumentó que, al leer el acta, podría no quedar claro el motivo del cambio de titularidad de la deuda.</p>
+
+<p>Sin embargo, se presentaron objeciones a esta propuesta. Se argumentó que mencionar nombres podría ser problemático debido a la ley de habeas data y que, dado que el acta es un documento público, no era recomendable incluir información personal de los propietarios, especialmente de aquellos con deudas. En consecuencia, se decidió no incluir los nombres de los propietarios morosos en el acta.</p>
+
+<p>Más adelante, Doña Far solicitó a Luz Karina y Anderson que los informes de contabilidad y revisoría fiscal se presentaran de manera concisa, destacando los aspectos más relevantes en un plazo de 15 minutos. Luz Karina procedió a presentar un informe gerencial destacando los puntos más importantes de la copropiedad.</p>
+
+<p>Durante la discusión sobre las cotizaciones de mantenimiento de fachadas, se mencionó la posibilidad de suspender la Fiesta de la Familia debido a los gastos imprevistos y la necesidad de realizar preparaciones urgentes. Se aprueba suspender la Fiesta de la Familia este año.</p><h2>10. Definición plan a seguir por vencimiento de póliza</h2>
+
+En relación con la definición del plan a seguir por el vencimiento de la póliza, se generó una discusión sobre las acciones a tomar, considerando el plazo de vencimiento y las implicaciones financieras.
+
+Durante la discusión, se mencionó la importancia de definir un plan de acción debido a la proximidad del vencimiento de la póliza en noviembre. Se plantearon diferentes propuestas y se destacó la necesidad de tomar una decisión informada y oportuna.
+
+Daniela propuso convocar a una asamblea extraordinaria lo más pronto posible para informar a la unidad sobre la situación y tomar una decisión en conjunto. Consideró que no se podía tomar la decisión de dejar vencer la póliza sin consultar a la asamblea.
+
+Doña Carmen sugirió que el consejo podría adjudicar el contrato, pero reconoció la falta de recursos para soportar el contrato en ese momento. Planteó la necesidad de una asesoría legal para determinar el tipo de contratación adecuado y la fecha de inicio del contrato.
+
+Wilber expresó su inconformidad con la gestión de la administradora y la falta de un plan estructurado desde el inicio. Propuso llamar a una asamblea general para tomar una decisión en conjunto, ya que el consejo no podía tomar la decisión de adjudicar un contrato.
+
+María Clara propuso realizar una reunión corta entre los miembros del consejo para analizar la información y proponer posibles soluciones antes de solicitar una asamblea extraordinaria.
+
+Don Harold apoyó la propuesta de María Clara y sugirió que la reunión se realizara este sábado. Doña Marta también estuvo de acuerdo con la propuesta de Don Harold.
+
+Ante las diferentes opiniones, se propuso realizar una votación para determinar si se realizaba una nueva reunión virtual o se convocaba a una asamblea extraordinaria.
+
+<ul>
+ <li><strong>Daniela:</strong> A favor de una asamblea extraordinaria lo más pronto posible.</li>
+ <li><strong>Wilber:</strong> A favor de una asamblea extraordinaria.</li>
+ <li><strong>Víctor:</strong> A favor de una asamblea extraordinaria.</li>
+ <li><strong>María Clara:</strong> A favor de una reunión previa.</li>
+ <li><strong>Don Harold:</strong> A favor de una reunión previa.</li>
+ <li><strong>Doña Marta:</strong> A favor de una reunión previa.</li>
+</ul>
+
+El resultado de la votación fue un empate, con tres votos a favor de una reunión previa y tres votos a favor de una asamblea extraordinaria.
+
+Ante el empate, se decidió crear una encuesta en el grupo para que los consejeros expresaran sus opiniones y se tomara una decisión en conjunto. Se acordó que la reunión se daría por terminada y se continuaría la discusión a través de la encuesta.
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 21:00</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se contrará al ingeniero Diego Díaz para el cambio de tubería del acueducto, siempre y cuando se expidan pólizas de estabilidad y cumplimiento de la obra – <strong>Responsable:</strong> No especificado</li>
+ <li>Se suspende la Fiesta de la Familia este año – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una reunión extraordinaria una vez se consigan más cotizaciones para el mantenimiento de fachadas – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará al abogado un documento por escrito sobre el plazo para demandar al contratista por incumplimiento – <strong>Responsable:</strong> Doña Carmen</li>
+ <li>Se creará una encuesta en el grupo para decidir si se realiza una reunión virtual la próxima semana o una asamblea extraordinaria – <strong>Responsable:</strong> Don Enrique</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): guillo_test_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/guillo_test/guillo_test_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ne3xZyc4MGFHYEW
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/ne3xZyc4MGFHYEW
+Generando URL pública para Transcripcion.txt (EXISTENTE): guillo_test_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/guillo_test/guillo_test_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/cJ5xiRRoECW6yZY
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/cJ5xiRRoECW6yZY

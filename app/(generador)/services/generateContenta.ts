@@ -670,6 +670,7 @@ Formato de salida esperado (HTML):
 </div>
 
 Instrucciones adicionales:
+y no agreues nada mas que no se ala hora del cierre y los acuerdos alcanzados nada de agreadados
 
     La respuesta debe estar en formato HTML y seguir la estructura indicada.
     El contenido debe ser claro, formal y bien organizado.
@@ -967,6 +968,9 @@ La respuesta en HTML debe generarse así:
 
     <h3>Firma de los asistentes:</h3>
     <p>[Espacio para firmas]</p>
+
+
+    no agrege nada mas que no se ala hora del cierre y los acuerdos alcanzados nada de agreadados u ananlisis no pedidos
 
 
 Transcripción a analizar:
