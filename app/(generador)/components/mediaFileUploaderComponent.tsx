@@ -586,6 +586,7 @@ export default function MediaFileUploaderComponent({
 
           if (tx.data.status === "APPROVED") {
             await ActualizarProceso(
+              
               file || '', // nombre
               5, // idEstadoProceso (ejemplo: 4 = aprobado)
               undefined,
@@ -594,7 +595,8 @@ export default function MediaFileUploaderComponent({
               undefined,
               undefined,
               null, // urlTranscripcion (ajusta según tu flujo)
-              null  // urlborrador (ajusta según tu flujo)
+              null,  // urlborrador (ajusta según tu flujo)
+              null
             );
 
             handlePayment();

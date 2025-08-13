@@ -6,12 +6,14 @@ import { ActualizarProceso } from "./actualizarProceso";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
 
 export async function processAction(
-  folder: string,
+  folder: string ,
   file: string,
   urlAssembly: string,
   email: string,
-  name: string
+  name: string,
+  automation?: boolean
 ) {
+  
   try {
     console.log("Inicio de proceso de acción");
     console.log("Proceso de  trasncripcion" + urlAssembly);
@@ -60,30 +62,38 @@ export async function processAction(
     console.log("Fin de proceso de acción");
     console.log("transcipcion: ", formato.transcripcion);
     console.log("acta: ", formato.acta);
-    await ActualizarProceso(
-      file,
-      6,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      process.env.NEXT_PUBLIC_PAGO,
-      formato.transcripcion,
-      formato.acta
-    );
+    try {
+      await ActualizarProceso(
+        file,
+        6,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        process.env.NEXT_PUBLIC_PAGO,
+        formato.transcripcion,
+        formato.acta,
+        automation
+      );
+      console.log("✅ Actualización realizada");
+    } catch (err) {
+      console.error("❌ Error al actualizar:", err);
+    }
     if (email) {
+
       await sendActaEmail(email, name, formato.acta as string, formato.transcripcion as string, file as string);
       await ActualizarProceso(
-      file,
-      7,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined,
-      undefined
-    );
+        file,
+        7,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        automation,
+      );
     }
 
     return {

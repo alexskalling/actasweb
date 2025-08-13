@@ -16,11 +16,13 @@ export async function ActualizarProceso(
   referencia?: string,
   urlTranscripcion?: string | null,
   urlborrador?: string | null,
+  automation?: boolean | null,
 ) {
   try {
     const mail = await getUserEmailFromSession();
     let user_id;
-    if (!mail) {
+    if(!automation){
+      if (!mail) {
       user_id = 'a817fffe-bc7e-4e29-83f7-b512b039e817';
     } else {
       user_id = await getUserIdByEmail(mail);
@@ -28,6 +30,10 @@ export async function ActualizarProceso(
         user_id = 'a817fffe-bc7e-4e29-83f7-b512b039e817';
       }
     }
+    }else{
+      user_id = "616df7a9-1871-4b31-b853-4a1bcecc00c6"
+    }
+    
 
     // Buscar el acta por nombre y usuario
     const existing = await db.select().from(actas).where(

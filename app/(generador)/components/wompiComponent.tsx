@@ -135,7 +135,8 @@ const WompiComponent = (props) => {
          undefined,
           transaction.reference,
           null, // urlTranscripcion (ajusta según tu flujo)
-          null  // urlborrador (ajusta según tu flujo)
+          null,  // urlborrador (ajusta según tu flujo)
+          null
         );
         console.log("save: ", JSON.stringify(save));
         props.handlePayment();
