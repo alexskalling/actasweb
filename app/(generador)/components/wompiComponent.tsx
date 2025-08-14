@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 import { ActualizarProceso } from "../services/actualizarProceso";
+import { guardarFalloPagoService } from "../services/guardarFalloPagoService";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
   
@@ -154,6 +155,33 @@ const WompiComponent = (props) => {
           });
         }
       } else {
+        const errorPago = await ActualizarProceso(
+          props.file, // nombre
+          9, // pago fallido
+          undefined,
+          transaction.amountInCents / 100,
+          transaction.id,
+          undefined,
+          transaction.reference,
+          null, // urlTranscripcion (ajusta según tu flujo)
+          null,  // urlborrador (ajusta según tu flujo)
+          null
+        );
+        const detalle_error= {
+          'event_category': 'error',
+            'event_label': transaction.status || 'Unknown status',
+            'transaction_id': transaction.id,
+            'file_name': props.file,
+            'duration': props.duration,
+            'error_message': transaction.error_message || 'No error message'
+        }
+
+        guardarFalloPagoService({ //guardar fallo en el pago
+          nombreActa: props.file,
+          detalleFallo: detalle_error
+        })
+
+        console.log("Pago fallido: ", JSON.stringify(errorPago));
         // Track Wompi payment rejection with more details
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
       

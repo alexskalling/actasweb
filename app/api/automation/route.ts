@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { processAction } from "@/app/(generador)/services/processAction";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
 import { parseBuffer } from "music-metadata";
+import { processAction } from "@/app/(generador)/services/processAction";
 
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {
@@ -241,7 +241,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       nombreArchivo,
       uploadUrl,
       email || "automation@actas.com",
-      name || "Usuario Automatizado",
+      name || "Usuario automatizado",
       true
     );
     if (processResult.status !== "success") {
@@ -290,3 +290,5 @@ export async function GET(): Promise<NextResponse> {
     { status: 200 }
   );
 }
+
+
