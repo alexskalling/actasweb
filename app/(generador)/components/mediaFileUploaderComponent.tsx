@@ -77,7 +77,9 @@ export default function MediaFileUploaderComponent({
   const [showModal, setShowModal] = React.useState(false);
   const [modalMessage, setModalMessage] = React.useState("");
   const [showPaymentModal, setShowPaymentModal] = React.useState(false);
-  const [industriaId, setIndustriaId] = React.useState<number | null>(null)
+  const [industriaId, setIndustriaId] = React.useState<number | null>(null);
+  const lastAnimRef = React.useRef<SVGAnimateElement | null>(null);
+  const [animacionTerminada, setAnimacionTerminada] = React.useState(false);
   const { data: session } = useSession();
 
   const handleContinue = () => {
@@ -193,13 +195,13 @@ export default function MediaFileUploaderComponent({
     const url = URL.createObjectURL(file);
     setPreview(url);
     onFileSelect?.(file);
-    
+
     const media = file.type.startsWith("audio/") || fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
       ? new Audio(url)
       : document.createElement("video");
     media.src = url;
     media.onloadedmetadata = () => {
-      
+
       setDuration(media.duration);
     };
 
@@ -548,6 +550,8 @@ export default function MediaFileUploaderComponent({
       });
     }
   };
+
+
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
@@ -567,6 +571,21 @@ export default function MediaFileUploaderComponent({
       //@ts-expect-error revisar despues
       setFolder(folder);
       setRoomName(folder);
+    }
+  }, []);
+
+  React.useEffect(() => {
+    const animEl = lastAnimRef.current;
+    if (animEl) {
+      const onAnimEnd = () => {
+        console.log("Animación del botón procesando terminada");
+        setAnimacionTerminada(true);
+        setProcesando(false); 
+      };
+      animEl.addEventListener("endEvent", onAnimEnd);
+      return () => {
+        animEl.removeEventListener("endEvent", onAnimEnd);
+      };
     }
   }, []);
 
@@ -610,6 +629,7 @@ export default function MediaFileUploaderComponent({
     fetchTransaction();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idtx]);
+
 
   return (
     <>
@@ -1035,7 +1055,7 @@ export default function MediaFileUploaderComponent({
                 )}
               {procesando && (
                 <Button
-                  className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                  id="procesando" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     track('processing_button_click', {
                       event_category: 'engagement',
@@ -1337,11 +1357,13 @@ export default function MediaFileUploaderComponent({
                           values="7.33;1.33;7.33"
                         ></animate>
                         <animate
-                          attributeName="height"
+                          ref={lastAnimRef}
+                          id="svgSpinnersBlocksWave1"
+                          attributeName="x"
                           begin="svgSpinnersBlocksWave0.begin+0.4s"
                           dur="0.6s"
-                          values="7.33;1.33;7.33"
-                        ></animate>
+                          values="15.66;18.66;15.66"
+                        />
                       </rect>
                     </svg>
                     Procesando acta...
@@ -1349,7 +1371,7 @@ export default function MediaFileUploaderComponent({
                 </Button>
               )}
 
-              {acta != null && transcripcion != null && file && (
+              {acta != null && transcripcion != null && file && animacionTerminada && (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
@@ -1365,7 +1387,7 @@ export default function MediaFileUploaderComponent({
                     Generar nueva
                   </Button>
                   <Button
-                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                    id="DownloadBtn" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                     onClick={() => {
                       track('download_button_click', {
                         event_category: 'engagement',
