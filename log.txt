@@ -2814,6 +2814,567 @@ Compartiendo archivo existente para obtener URL pública: /Actas/20250812-20.16_
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ztTFKkdAGKt6DSK
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ztTFKkdAGKt6DSK
 Verificando si existe transcripción: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt en carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording
+<<<<<<< HEAD
+[2025-08-13T15:10:50.544Z] Verificando existencia del archivo comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt en Nextcloud carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T15:10:51.746Z] Archivo "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording".
+Iniciando transcripción con AssemblyAI para: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.mp4
+Guardando transcripción: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt en carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording
+Transcripción guardada: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt
+Verificando contenido existente: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt
+[2025-08-13T15:11:41.041Z] Verificando existencia del archivo comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt en Nextcloud carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T15:11:41.784Z] Archivo "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt" NO encontrado en Nextcloud en la carpeta "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording".
+Generando contenido para: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.mp4
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.mp4
+Guardando contenido en Nextcloud: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt
+Contenido guardado: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.mp4 en carpeta: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording
+Verificando Borrador .docx existente: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+[2025-08-13T15:13:24.882Z] Verificando existencia del archivo comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx en Nextcloud carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-13T15:13:25.630Z] Archivo "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx" NO encontrado en Nextcloud en la carpeta "comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+Preparando guardado .docx en Nextcloud: comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</h1>
+ <p><strong>Fecha:</strong> 12 de agosto de 2025</p>
+ <p><strong>Hora:</strong> Inicio: 9:40 - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Marta</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Marta - Administradora Delegada</li>
+ <li>Germán Portilla - Miembro del Consejo</li>
+ <li>Andrés Marroquín - Inmobiliaria</li>
+ <li>Elise Garzón - Inmobiliaria</li>
+ <li>Sergio - [CARGO NO ESPECIFICADO]</li>
+ <li>Sandra - [CARGO NO ESPECIFICADO]</li>
+ <li>Clara - [CARGO NO ESPECIFICADO]</li>
+ <li>Luis Alejandro Vargas - Consejo</li>
+ <li>Luis Enrique - [CARGO NO ESPECIFICADO]</li>
+ <li>Camilo - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</li>
+ <li>Quejas y problemáticas de convivencia (casa 13): ruidos, basuras, mascotas, reuniones nocturnas, motos en zonas verdes</li>
+ <li>Afectación directa a vecino (casa 12): ruidos y olores de mascotas, comportamientos en áreas comunes</li>
+ <li>Llamado a corregir acciones y posibles sanciones</li>
+ <li>Respuesta de la inmobiliaria y planteamiento de soluciones</li>
+ <li>Medidas a tomar y proceso de restitución de vivienda</li>
+ <li>Aclaraciones sobre acusaciones a otros vecinos y condiciones de arriendo</li>
+ <li>Reflexiones sobre el caso y búsqueda de soluciones</li>
+ <li>Compromisos de la inmobiliaria y plan de acción</li>
+ <li>Proceso interno del condominio y sanciones económicas</li>
+ <li>Oportunidad para conciliar y cierre de la reunión</li>
+ </ol>
+</header>
+<h2>1. Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</h2>
+
+<p>El propósito de la reunión, llevada a cabo el 12 de agosto de 2025, fue mediar en las situaciones de convivencia que afectan la tranquilidad y la sana convivencia en el Conjunto Residencial Cencerro. Marta, la administradora delegada, dio la bienvenida a los miembros del Comité de Convivencia, del Consejo de Administración y a la inmobiliaria, que representa a la casa 13, cuyos propietarios no pudieron asistir debido a la enfermedad de la propietaria.</p>
+
+<p>Marta expuso los temas que han sido motivo de reiteradas comunicaciones a la propietaria, a la inmobiliaria y al arrendatario, destacando el ruido de las motos de alto cilindraje al calentarlas, el manejo inadecuado de las basuras y el reciclaje fuera de los horarios establecidos, los cinco perros que no son manejados con correa y que ladran constantemente, las reuniones nocturnas y la ubicación de las motos en zonas verdes. Tras la intervención de Marta, se le concedió la palabra a Germán Portilla.</p>
+
+<p>Germán Portilla, miembro del Consejo y residente de la casa 12, vecina de la casa 13, complementó lo expuesto por Marta, señalando que el bullicio y el olor a deposiciones de los perros le afectan directamente. Además, manifestó su molestia por la presencia de personas adultas sin camisa y en bóxer en áreas comunes, lo cual considera un acto grotesco frente a su familia. Aclaró que no son dos, sino tres motos, y que los perros son cinco. Reconoció que, aunque hubo una reunión con alto volumen que excedió el tiempo límite, no ha vuelto a escuchar nada similar. Sin embargo, reiteró que el ruido de las motos es recurrente y que en ocasiones circulan a velocidades inapropiadas. Concluyó expresando su desagrado por este tipo de comportamientos, especialmente por la costumbre de salir sin camisa y en bóxer.</p>
+
+<p>La administración hizo un llamado a corregir estas acciones, recordando que existen sanciones convivenciales y la posibilidad de querellas policivas si no se logra una mediación efectiva. Andrés Marroquín y Elise Garzón, en representación de la inmobiliaria, lamentaron las situaciones planteadas y explicaron que han intentado establecer un puente de comunicación con los arrendatarios, aunque sin éxito. Andrés mencionó que, durante una conversación el sábado anterior, los arrendatarios se mostraron groseros y justificaron el ruido de las motos argumentando que es anticonstitucional prohibir motos de alto cilindraje. También indicaron que los perros ladran debido a la presencia de gatos en el barrio y se comprometieron a no parquear más las motos en el pasto. Admitieron que a veces salen de viaje y dejan la basura sin recoger hasta por un mes.</p>
+<h2>2. Quejas y problemáticas de convivencia (casa 13): ruidos, basuras, mascotas, reuniones nocturnas, motos en zonas verdes</h2>
+
+<p>Durante la reunión, se abordaron las quejas y problemáticas de convivencia relacionadas con la casa 13, incluyendo ruidos, manejo de basuras, tenencia de mascotas, reuniones nocturnas y el uso de motos en zonas verdes. Marta Elena, administradora delegada, expuso las reiteradas manifestaciones de inconformidad recibidas por parte de los propietarios.</p>
+
+<h3>Tema de las motos</h3>
+<p>Marta Elena indicó que las motos de alto cilindraje pertenecientes a los residentes de la casa 13 generan perturbación debido al ruido excesivo al ser calentadas, lo cual provoca múltiples llamadas de queja por parte de los propietarios. A pesar de haber notificado a John, el arrendatario, sobre esta situación, este argumenta que es necesario calentar las motos.</p>
+
+<h3>Tema de las basuras</h3>
+<p>Se señaló que los residentes de la casa 13 no cumplen con los horarios establecidos para la disposición de basuras y no realizan el reciclaje adecuado. Las canecas permanecen en el exterior durante largos periodos, requiriendo la intervención de la administración para solicitar su retiro.</p>
+
+<h3>Tema de los perros</h3>
+<p>Se mencionó que los residentes de la casa 13 tienen cinco perros, algunos de los cuales no son manejados con correa en las áreas comunes del condominio. Además, los perros son dejados solos, generando ladridos constantes que perturban a los vecinos. La administración ha recibido quejas al respecto y ha contactado a John, quien ha justificado la situación indicando que se encontraban fuera de la casa.</p>
+
+<h3>Reuniones en la noche</h3>
+<p>Se indicó que, aunque con menor frecuencia, los residentes de la casa 13 realizan reuniones nocturnas que generan molestias a los vecinos.</p>
+
+<h3>Motos en los prados</h3>
+<p>Se reportó que los residentes de la casa 13 estacionaban las motos en zonas verdes y jardines, situación que fue notificada y solicitada su corrección.</p>
+
+<p>Germán Portilla, vecino de la casa 13 y miembro del Consejo, complementó la información proporcionada por Marta Elena, señalando que el bullicio de los perros y el olor a deposiciones afectan directamente su propiedad. Además, manifestó su inconformidad por la presencia de personas adultas sin camisa y en bóxer en áreas comunes, lo cual considera un acto grotesco e inapropiado para los niños del conjunto. Germán Portilla aclaró que no son dos, sino tres motos, y que los perros no son uno, sino cinco. Reconoció que, en una ocasión, hubo una reunión con alto volumen que excedió el tiempo límite, pero que no se ha repetido. Sin embargo, reiteró que el problema de las motos es recurrente y que circulan a velocidades inapropiadas.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, lamentó las situaciones expuestas y reconoció la dificultad para comunicarse con los arrendatarios. Mencionó que, durante una conversación, los arrendatarios argumentaron que no existe ninguna norma en el manual de convivencia que prohíba tener motos de alto cilindraje y que es inevitable que los perros ladren debido a la presencia de gatos. Se comprometieron a no parquear las motos en el pasto y explicaron que, en ocasiones, dejan las canecas de basura afuera debido a viajes prolongados. Andrés Marroquín solicitó pruebas de las quejas para poder abordar la situación de manera efectiva.</p>
+<h2>3. Afectación directa a vecino (casa 12): ruidos y olores de mascotas, comportamientos en áreas comunes</h2>
+
+<p>Durante la reunión, se abordaron las afectaciones directas al vecino de la casa 12, Germán Portilla, derivadas de ruidos y olores de mascotas, así como comportamientos observados en áreas comunes.</p>
+
+<h3>Bullicio de los perros</h3>
+<p>Germán Portilla, vecino de la casa 12, manifestó su afectación directa por el "<strong>bullicio de los perros atrás todo el bendito día</strong>". Indicó que los ladridos constantes de los cinco perros, tres grandes y dos pequeños, perturban la tranquilidad de su hogar. Además, señaló que debe retener a su propio perro debido a la actitud de los perros de la casa 13, que "<strong>apenas hay presencia de alguien en mi patio, comienzan a la tira o a ladrar</strong>".</p>
+
+<h3>Olor a deposición de perros</h3>
+<p>Adicionalmente al ruido, Germán Portilla expresó su molestia por "<strong>el olor que eso emana, porque huele a literalmente a deposición de perros</strong>". Este olor, según su testimonio, es constante y proviene de las deposiciones de los cinco perros.</p>
+
+<h3>Personas sin camisa en áreas comunes</h3>
+<p>Otro aspecto que generó malestar en Germán Portilla fue la presencia de personas "<strong>en boxer y sin camisa en áreas exclusivas o de uso exclusivo del conjunto o de la casa</strong>". Mencionó que estos individuos, a quienes no conoce, han salido en estas condiciones "<strong>afuera en la palmera</strong>", lo cual considera un "<strong>acto grotesco</strong>" que no desea para sus hijos, especialmente teniendo en cuenta que en su hogar conviven su esposa, su madre y niños de 11 años.</p>
+
+<p>Germán Portilla aclaró que, aunque no tiene problemas personales con los residentes de la casa 13 y no le interesa saludarlos, considera inaceptables estos comportamientos en áreas comunes. Reconoció que, aparte de una reunión con alto volumen que se realizó una vez, no ha tenido mayores inconvenientes, pero reiteró su preocupación por el ruido de las motos y la velocidad a la que circulan.</p><h2>4. Llamado a corregir acciones y posibles sanciones</h2>
+
+<p>Durante la reunión, se realizó un llamado formal a corregir las acciones que han afectado la convivencia en el conjunto residencial Cencerro. Se enfatizó que, ante la persistencia de las quejas y la falta de cumplimiento de las normas, podrían aplicarse sanciones convivenciales y querellas policivas.</p>
+
+<p>Se hizo hincapié en que la mediación de convivencia buscaba evitar medidas más severas, pero que la omisión total a los llamados de la administración alteraba la sana convivencia del proyecto, especialmente considerando su tamaño reducido y su ambiente tranquilo.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, lamentó las situaciones presentadas y mencionó las dificultades encontradas al intentar comunicarse con los arrendatarios de la casa 13. Señaló que, durante una conversación, los arrendatarios justificaron el ruido de las motos de alto cilindraje argumentando que no existe una prohibición explícita en el manual de convivencia y que es anticonstitucional prohibirles tenerlas. También mencionaron la presencia de gatos como justificación para los ladridos de sus perros.</p>
+
+<p>Se indicó que los arrendatarios se comprometieron a no parquear las motos en el pasto ni dejar las canecas de basura expuestas, explicando que a veces salen de viaje hasta por un mes. Sin embargo, la conversación se interrumpió abruptamente cuando se abordó el tema de las motos.</p>
+
+<p>Ante esta situación, se solicitó a los presentes aportar pruebas de las infracciones, como fotos o videos, para respaldar las quejas y facilitar la gestión de la inmobiliaria. Se mencionó que este tipo de evidencia ha sido útil en otros casos para aplicar multas y mejorar el cumplimiento de las normas.</p>
+
+<p>Se recordó que la inmobiliaria puede solicitar la restitución de la vivienda en caso de que no haya una solución y se demuestre la falta de sana convivencia. Sin embargo, se reconoció que este proceso puede ser largo y engorroso.</p>
+
+<p>Durante la discusión, los arrendatarios se defendieron argumentando que otros vecinos también incurren en comportamientos inapropiados, como un señor que toma licor y escucha música a alto volumen en una casa cercana a la entrada del conjunto. También mencionaron que a un residente le robaron el logo de su carro dentro del conjunto y que la administración no dio respuesta a su reclamo.</p>
+
+<p>Germán Portilla permitió a la administración ingresar a su casa para tomar pruebas de las infracciones, pero se mostró reacio a participar activamente en la recolección de evidencia, argumentando que no quiere ganarse enemigos ni abusar de la privacidad de las personas. Insistió en que ya existen suficientes pruebas de las infracciones cometidas por los arrendatarios de la casa 13 y que es hora de tomar medidas.</p>
+
+<p>Sandra, residente del conjunto, negó las acusaciones de que en su casa se hace mucha bulla y exigió pruebas de lo contrario. Solicitó a la inmobiliaria incluir cláusulas en los contratos de arrendamiento que establezcan condiciones claras sobre el ruido, el manejo de mascotas y el comportamiento en las áreas comunes.</p>
+
+<p>Clara, miembro del comité de convivencia, invitó a reflexionar sobre el caso y buscar una solución que permita llegar a un acuerdo con los arrendatarios. Sugirió que se les dé la oportunidad de adaptarse a la vida en un condominio y que se les proporcione información clara sobre las normas de convivencia.</p>
+
+<p>En resumen, durante este punto del orden del día, se realizó un llamado a corregir las acciones que afectan la convivencia en el conjunto residencial Cencerro y se exploraron posibles sanciones. Se solicitó a los residentes aportar pruebas de las infracciones y se discutieron las opciones legales disponibles para resolver el problema.</p><h2>5. Respuesta de la inmobiliaria y planteamiento de soluciones</h2>
+
+<p>En este punto de la reunión, Andrés Marroquín y Elise Garzón, en representación de la inmobiliaria, expresaron su pesar por las situaciones de convivencia reportadas en la casa 13. Andrés Marroquín mencionó las dificultades que han tenido para comunicarse con los arrendatarios, describiéndolos como poco receptivos a los llamados de atención.</p>
+
+<h3>Dificultad de comunicación con los arrendatarios</h3>
+<p>Andrés Marroquín relató que, en un intento de mediar, la inmobiliaria contactó a los arrendatarios el sábado anterior a la reunión, pero estos respondieron de manera descortés, incluso llegando a interrumpir la comunicación telefónica en dos ocasiones. A pesar de esto, la inmobiliaria transmitió las justificaciones y posturas de los arrendatarios respecto a las quejas presentadas.</p>
+
+<h3>Justificaciones de los arrendatarios</h3>
+<p>La inmobiliaria expuso los argumentos de los arrendatarios en relación con las quejas recibidas. En cuanto al ruido de las motos, los arrendatarios argumentaron que sus motocicletas son de alto cilindraje y cuestionaron si existía alguna norma en el manual de convivencia que prohibiera este tipo de vehículos. Sobre los perros, indicaron que los ladridos eran una reacción a la presencia de gatos en el área, justificando así el comportamiento de sus mascotas. También se comprometieron a no parquear más las motos en zonas verdes y explicaron que la acumulación de basuras se debía a sus frecuentes viajes, llegando a ausentarse hasta por un mes.</p>
+
+<h3>Solicitud de pruebas</h3>
+<p>Andrés Marroquín solicitó a los presentes que proporcionaran pruebas de las conductas inapropiadas de los arrendatarios, como fotografías o videos, para poder tomar medidas correctivas. Mencionó que desconocían la situación de la persona que salía sin camisa, y que este tipo de evidencia sería útil para sustentar las quejas y proceder con las sanciones correspondientes. Hizo referencia a un caso anterior en otro edificio donde una prueba visual fue determinante para resolver un problema de convivencia.</p>
+
+<p>Sergio preguntó a la inmobiliaria sobre las acciones que podrían tomar si las multas no fueran suficientes para corregir el comportamiento de los arrendatarios. Andrés Marroquín respondió que, en caso de persistir la falta de sana convivencia, la inmobiliaria podría solicitar la restitución de la vivienda, incluso por vía judicial. Aclaró que, aunque los arrendatarios han cumplido puntualmente con los pagos, la inmobiliaria tiene la facultad de exigir el cumplimiento de las normas de convivencia.</p>
+
+<p>Andrés Marroquín también mencionó que los arrendatarios se defendieron de las acusaciones argumentando que otros vecinos también incurrían en comportamientos inapropiados, como un señor que escuchaba música a alto volumen y consumía licor en la entrada del conjunto, y una vecina que colindaba con un barrio donde se realizaban fiestas. Ante esto, reiteró la importancia de presentar pruebas para poder abordar cada situación de manera justa y objetiva.</p>
+
+<p>Marta Elena indicó que poseía fotos de las motos estacionadas en el jardín y de la incorrecta disposición de las basuras, las cuales había compartido con la inmobiliaria. Andrés Marroquín respondió que, aunque ya habían conversado con los arrendatarios sobre estos temas, volverían a hacerlo y solicitaron que se les enviaran nuevas pruebas para reforzar el reclamo.</p>
+
+<p>Germán Portilla manifestó su desacuerdo con la necesidad de aportar pruebas, argumentando que ya existían suficientes reportes y testimonios sobre el comportamiento de los arrendatarios. Sin embargo, Andrés Marroquín reiteró la importancia de contar con evidencia concreta para poder actuar de manera efectiva y evitar posibles controversias legales.</p>
+
+<p>Alejandro Vargas sugirió que la inmobiliaria estandarizara los mecanismos de comunicación con los arrendatarios y que se apoyara en los reportes de la empresa de seguridad como pruebas de los llamados de atención realizados. Andrés Marroquín estuvo de acuerdo con esta propuesta y se comprometió a enviar un correo formal a los arrendatarios, dejando constancia de las quejas y las posibles sanciones.</p>
+
+<p>Luis Enrique señaló que, además de las acciones de la inmobiliaria, el condominio debía aplicar las sanciones económicas estipuladas en el reglamento de propiedad horizontal. Elisa Garzón respondió que era necesario seguir un debido proceso y que no se podía multar a los arrendatarios sin antes darles la oportunidad de corregir su comportamiento. Andrés Marroquín añadió que la aseguradora exigía un tiempo prudencial entre cada llamado de atención para evaluar la evolución de la situación.</p>
+
+<p>Ante la insistencia de algunos miembros del consejo de aplicar una multa de inmediato, Andrés Marroquín solicitó que se le diera la oportunidad de hablar nuevamente con los arrendatarios y presentarles las quejas y las posibles consecuencias de sus actos. Propuso que, si después de esta gestión no se lograba un cambio de actitud, se procediera con la sanción económica. Sin embargo, ante la postura del consejo de seguir adelante con el proceso sancionatorio, la inmobiliaria decidió retirarse de la reunión.</p><h2>6. Medidas a tomar y proceso de restitución de vivienda</h2>
+
+<p>Durante la reunión, se abordó el tema de las medidas a tomar y el proceso de restitución de la vivienda en cuestión, considerando las quejas presentadas y la falta de cumplimiento del reglamento de convivencia.</p>
+
+<h3>Gestión con correos y pruebas de falta de sana convivencia</h3>
+
+<p>Se mencionó la importancia de documentar las faltas a la sana convivencia a través de correos electrónicos y otros medios de prueba. La inmobiliaria se comprometió a enviar correos formales a los arrendatarios, dejando constancia de las quejas y los requerimientos de cumplimiento. Se destacó la necesidad de adjuntar pruebas concretas, como fotografías o videos, para respaldar las reclamaciones y facilitar la gestión ante los arrendatarios y, en caso necesario, ante las autoridades competentes.</p>
+
+<h3>Proceso de restitución ante un juez</h3>
+
+<p>Se explicó que, en caso de que los arrendatarios no corrijan su comportamiento y persistan las faltas a la sana convivencia, se iniciará un proceso de restitución de la vivienda ante un juez. Se indicó que este proceso puede ser largo y complejo, pero es el camino legal para lograr la desocupación del inmueble en caso de incumplimiento del contrato y del reglamento de convivencia. Se señaló que la inmobiliaria cuenta con el respaldo de una aseguradora para llevar adelante este proceso.</p>
+
+<h3>Manejo de quejas sobre otros vecinos</h3>
+
+<p>Se hizo referencia a las quejas presentadas por los arrendatarios sobre el comportamiento de otros vecinos. Se aclaró que cada caso debe ser analizado individualmente y que no es válido justificar las propias faltas con las acciones de terceros. Se instó a los arrendatarios a presentar pruebas concretas de sus অভিযোগ para que la administración pueda tomar las medidas correspondientes.</p><h2>7. Aclaraciones sobre acusaciones a otros vecinos y condiciones de arriendo</h2>
+
+<p>Durante la reunión, se abordaron las acusaciones realizadas por los arrendatarios de la casa 13, quienes mencionaron a un vecino de la entrada y a otro residente de origen costeño como fuentes de perturbación. Estas acusaciones fueron presentadas como parte de su defensa ante las quejas recibidas.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, expuso que los arrendatarios se defendieron indicando que "hay un señor de una casa en la entrada que siempre está tomando y que siempre hay música y que no le dicen nada" y que "en la casa De él, la 13, la señora Tatiana colinda con un barrio y chuntame y que hay una persona atrás que todo el tiempo está haciendo fiesta y que a él lo culpan de que es él quien hace esas reuniones".</p>
+
+<p>Ante estas declaraciones, Sandra, residente del conjunto, manifestó su inconformidad y exigió pruebas de la acusación que la señalaba como fuente de ruidos molestos. "La primera casa a mano izquierda es la mía que hace mucha bulla. Eso es una gran mentira y me tienen que comprobar que eso es verdad, porque eso es mentira. Yo nunca casi hago reuniones", afirmó Sandra, solicitando una aclaración inmediata.</p>
+
+<p>Andrés Marroquín aclaró que la información provenía de los inquilinos de la casa 13 y no de la inmobiliaria. "Ellos dijeron que ahí vio un señor tomando que ha venido la policía a sacarlo y que se han agarrado. Bueno, no sé, no sé qué tan cierto sea. Eso es lo que dice", explicó Marroquín, reiterando la necesidad de pruebas para verificar las acusaciones.</p>
+
+<p>Sandra insistió en la falsedad de las acusaciones y advirtió sobre posibles acciones legales si no se presentaban pruebas. "Necesito que por favor me mande pruebas de eso, porque si no yo sí demando porque para que de verdad se tomen las cosas serias y no sea así, porque eso no es ir hablando de las personas", declaró Sandra.</p>
+
+<p>Germán Portilla intervino para aclarar que los reclamos por ruidos no provenían de la casa de Sandra, sino de la casa 14, donde reside Alejandro Vargas, miembro del Consejo del Conjunto y cuya esposa también forma parte del comité de Convivencia. "Esa casa está en un sanduchito, porque es que está de vecino estoy yo y de vecino está la 14 que también hace parte del Consejo del Conjunto y la esposa de él también hace parte del comité de Convivencia, que es Alejandro Vargas, y él es el que también ha puesto bastante reclamo con el tema de ruidos, no soy yo solamente", explicó Portilla.</p>
+
+<p>La discusión también abordó la importancia de establecer condiciones claras en los contratos de arrendamiento para asegurar la convivencia pacífica en el conjunto residencial. Sandra sugirió que se incluyeran cláusulas específicas sobre el comportamiento de los arrendatarios, el manejo de mascotas y el respeto por las normas de convivencia. "Yo sí pido que por favor cuando ustedes, los señores de la inmobiliaria que arrienden pongan condiciones, que tengan las condiciones y que vean que los perros no se pueden sacar sueltos porque es que uno va por el jardín, por los alrededores y los perros sueltos se recoge nadie", propuso Sandra.</p>
+
+<p>Elise Garzón, también de la inmobiliaria, respondió a las inquietudes sobre las condiciones de arriendo, señalando que se realiza una debida diligencia de 35 filtros de seguridad a los arrendatarios. Sin embargo, reconoció que la conducta humana es impredecible y que es necesario buscar soluciones conjuntas para garantizar la convivencia. "Desafortunadamente la conducta humana solamente la conoce Dios, hasta los mejores médicos les ha arrendado y encuentran a la mujer con un amante y empiezan a tomar, a llegar tarde, a romper las cosas, a pegar la mujer, en fin, esas cosas suceden", comentó Garzón.</p>
+
+<p>En relación con la acusación sobre un residente de origen costeño, Germán Portilla expresó su molestia ante los estereotipos y prejuicios. "Claramente cuando uno es costeño le tienen el dejémonos de vainas en la cabeza, los cachacos traumados, en que el costeño es bullicioso y demás. Yo soy de los costeños que no hago ruido, toco mi acordeón y lo voy a tocar cuantas veces se me dé la gana", afirmó Portilla, defendiendo su derecho a disfrutar de su música sin perturbar la tranquilidad de los demás.</p><h2>8. Reflexiones sobre el caso y búsqueda de soluciones</h2>
+
+<p>Durante la reunión, se dedicó un espacio a reflexionar sobre el caso en cuestión y a explorar posibles soluciones. Se buscó analizar las causas subyacentes de los problemas de convivencia y a proponer medidas que pudieran mejorar la situación.</p>
+
+<h3>Normas de convivencia</h3>
+
+<p>Se hizo hincapié en la importancia de que todos los residentes conozcan y respeten las normas de convivencia establecidas en el reglamento del conjunto residencial. Se sugirió reforzar la difusión de estas normas y promover una cultura de respeto y tolerancia entre los vecinos.</p>
+
+<h3>Importancia de las pruebas</h3>
+
+<p>Se resaltó la necesidad de contar con pruebas sólidas y verificables para respaldar las quejas y acusaciones. Se mencionó que las pruebas objetivas, como fotografías, videos o registros de incidentes, son fundamentales para tomar decisiones informadas y justas.</p>
+
+<h3>Contacto directo con la inmobiliaria</h3>
+
+<p>Se propuso establecer un canal de comunicación directo y eficiente entre los residentes y la inmobiliaria encargada de la administración de la propiedad. Se consideró que este contacto facilitaría la resolución de problemas y la coordinación de acciones para mejorar la convivencia.</p><h2>9. Compromisos de la inmobiliaria y plan de acción</h2>
+
+<p>En relación con las problemáticas de convivencia presentadas en el conjunto residencial Cencerro, la inmobiliaria se compromete a establecer una comunicación formal y efectiva con los arrendatarios de la casa 13. Este compromiso surge tras las dificultades expresadas en la reunión para abordar directamente a los arrendatarios y la necesidad de mediar en los conflictos reportados.</p>
+
+<h3>Comunicación con los arrendatarios</h3>
+
+<p>La inmobiliaria reconoce la importancia de mantener un canal de comunicación abierto y respetuoso con los arrendatarios. Se compromete a realizar una nueva conversación con ellos, haciendo énfasis en las quejas recibidas y buscando soluciones que permitan una convivencia armónica. Andrés Marroquín, en representación de la inmobiliaria, se compromete a llevar a cabo esta gestión.</p>
+
+<h3>Envío de correo formal</h3>
+
+<p>Como parte del plan de acción, la inmobiliaria se compromete a enviar un correo electrónico formal a los arrendatarios, detallando las normas de convivencia del conjunto residencial y las consecuencias de su incumplimiento. Este correo servirá como un llamado de atención por escrito y dejará constancia de las advertencias realizadas. Se espera que este correo contribuya a sensibilizar a los arrendatarios sobre la importancia de respetar las normas y a fomentar un comportamiento más cívico.</p>
+
+<h3>Debido proceso y marco jurídico</h3>
+
+<p>La inmobiliaria manifiesta su compromiso de seguir el debido proceso y respetar el marco jurídico vigente en caso de que los arrendatarios persistan en su comportamiento inapropiado. Se explica que, en caso de no lograr una solución a través del diálogo y la mediación, se iniciará un proceso de restitución de la vivienda ante un juez. La inmobiliaria se compromete a recopilar las pruebas necesarias para respaldar este proceso, incluyendo los llamados de atención escritos, las bitácoras de vigilancia y cualquier otra evidencia que demuestre el incumplimiento de las normas de convivencia.</p>
+
+<p>Elisa Garzón, también de la inmobiliaria, subraya la importancia de contar con pruebas fehacientes para poder actuar legalmente y evitar posibles demandas por parte de los arrendatarios. Se solicita a los miembros del consejo y a los vecinos afectados que colaboren aportando pruebas de las infracciones cometidas, como fotografías, videos o testimonios.</p>
+
+<p>Se reitera que el objetivo principal es lograr una convivencia pacífica y respetuosa en el conjunto residencial Cencerro, y que la inmobiliaria está dispuesta a utilizar todos los medios a su alcance para alcanzar este objetivo.</p><h2>10. Proceso interno del condominio y sanciones económicas</h2>
+
+<p>Durante la reunión, se abordó el proceso interno del condominio en relación con las sanciones económicas aplicables a los residentes que incumplan el reglamento de propiedad horizontal. Se discutieron los llamados de atención y las sanciones que se pueden imponer según el reglamento, así como la comunicación con la aseguradora en caso de ser necesario.</p>
+
+<h3>Llamados de atención y sanciones según el reglamento</h3>
+
+<p>Se mencionó que el reglamento de propiedad horizontal del conjunto establece el proceso a seguir para los llamados de atención y las sanciones económicas. Se indicó que, en el caso de la casa 13, ya se habían realizado varios llamados de atención, tanto verbales como por escrito, debido a las quejas recibidas por parte de otros residentes. La administradora, Marta Elena, confirmó haber enviado un llamado de atención escrito a la inmobiliaria, aunque esta manifestó no haberlo recibido.</p>
+
+<p>Luis Enrique sugirió que, dado que ya se habían realizado los llamados de atención correspondientes, se debía proceder con la imposición de una sanción económica, tal como lo estipula el reglamento. Mencionó que la sanción podría estar entre el 20% y el 50% del valor del canon de arrendamiento.</p>
+
+<p>Elisa Garzón, de la inmobiliaria, expresó su desacuerdo con la imposición inmediata de una multa, argumentando que todas las personas merecen un debido proceso y que es necesario sujetarse a la ley. Señaló que la aseguradora exige un tiempo prudencial entre cada llamado de atención, con un lapso de al menos un mes, para dar a los residentes la oportunidad de corregir su comportamiento.</p>
+
+<p>Andrés Marroquín, también de la inmobiliaria, solicitó que se les diera la oportunidad de hablar con los arrendatarios y comunicarles las quejas recibidas, antes de imponer una multa. Propuso que, después de esta conversación, si no había una mejora en el comportamiento de los arrendatarios, se procediera con la sanción económica.</p>
+
+<p>Sandra expresó su opinión de que algunas de las faltas cometidas por los arrendatarios, como salir semidesnudos en áreas comunes, eran graves y ameritaban una sanción inmediata. Consideró que, al tocar el bolsillo de los infractores, se lograría un cambio en su comportamiento o, en su defecto, su salida del conjunto.</p>
+
+<p>Ante la discusión sobre si se debía o no imponer una multa de inmediato, Clara y Camilo intervinieron para aclarar que la citación a la inmobiliaria tenía como objetivo recibir sus descargos y continuar con el proceso de sanción, de acuerdo con el manual de convivencia del conjunto. Señalaron que la decisión final sobre la imposición de la multa sería tomada por el consejo de administración, en una reunión posterior.</p>
+
+<p>Finalmente, Andrés Marroquín y Elisa Garzón manifestaron su desacuerdo con la decisión de multar a los arrendatarios y anunciaron su retiro de la reunión. Expresaron su intención de hablar con los arrendatarios y buscar una solución al problema, pero consideraron que la imposición de una multa no era la mejor estrategia.</p>
+
+<h3>Comunicación con la aseguradora</h3>
+
+<p>Se mencionó la importancia de mantener una comunicación fluida con la aseguradora en relación con el proceso de restitución de la vivienda. Se indicó que la aseguradora exige pruebas de los llamados de atención realizados a los arrendatarios, así como un tiempo prudencial entre cada llamado, para poder iniciar el proceso de restitución.</p>
+
+<p>Andrés Marroquín señaló que la aseguradora considera como pruebas válidas los llamados de atención escritos realizados por la administración, así como las bitácoras de vigilancia. En este sentido, solicitó a la administración que le proporcionara copias de los llamados de atención escritos enviados a la casa 13.</p>
+
+<h3>Justificación de acciones con actos de otros propietarios</h3>
+
+<p>Durante la discusión, se mencionó que los arrendatarios de la casa 13 habían justificado algunas de sus acciones, como el ruido de las motos, argumentando que otros propietarios también incurrían en comportamientos similares. En particular, se refirieron a un propietario que residía en la entrada del conjunto y que, según ellos, solía consumir licor y escuchar música a alto volumen.</p>
+
+<p>Luis Enrique rechazó esta justificación, argumentando que cada caso debía ser tratado de forma individual y que no era válido justificar las propias acciones con los actos mal hechos de otros propietarios. Señaló que, si el ruido de las motos era tan grave, los arrendatarios debían buscar la manera de salir adelante sin molestar a los demás residentes.</p>
+<h2>11. Oportunidad para conciliar y cierre de la reunión</h2>
+
+<p>Durante este punto de la reunión, se brindó un espacio para la conciliación y se procedió al cierre de la misma. Se abordaron la voluntad de la inmobiliaria para mejorar la situación, la decisión del consejo sobre la multa y los agradecimientos finales.</p>
+
+<h3>Voluntad de la inmobiliaria para mejorar la situación</h3>
+
+<p>La inmobiliaria reiteró su compromiso de mediar con los arrendatarios para lograr una mejora en la convivencia. Andrés Marroquín expresó que, a pesar de las dificultades iniciales en la comunicación, la inmobiliaria se compromete a hablar nuevamente con los arrendatarios, buscando una solución que beneficie a todas las partes. Se mencionó la importancia de presentar pruebas concretas de las infracciones para poder actuar de manera efectiva.</p>
+
+<h3>Decisión del consejo sobre la multa</h3>
+
+<p>Se generó un debate en torno a la imposición de una multa a los arrendatarios de la casa 13. Algunos miembros del consejo consideraron que, dado el historial de quejas y la falta de cumplimiento del reglamento, era necesario aplicar una sanción económica. Otros, en cambio, sugirieron dar una última oportunidad a los arrendatarios para corregir su comportamiento, antes de proceder con la multa. La señora Sandra expresó su desacuerdo con esta postura, argumentando que las faltas cometidas eran graves y merecían una sanción inmediata.</p>
+
+<p>Finalmente, se acordó que el consejo tomaría una decisión sobre la multa en una reunión posterior, tras evaluar los resultados de la nueva comunicación que la inmobiliaria se comprometió a realizar con los arrendatarios. Se tuvo en cuenta la opinión de la señora Clara, quien sugirió que el consejo tomara una decisión informada sobre la multa, considerando los descargos presentados por la inmobiliaria y el comité de convivencia.</p>
+
+<h3>Agradecimientos y cierre</h3>
+
+<p>La señora Marta Elena, administradora delegada, agradeció a todos los presentes por su participación y aportes durante la reunión. Se reconoció la importancia de la colaboración entre la administración, el consejo, el comité de convivencia y la inmobiliaria para resolver los problemas de convivencia en el conjunto residencial. Se dio por concluida la reunión, reiterando el compromiso de seguir trabajando en conjunto para mantener la tranquilidad y la sana convivencia en la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>La inmobiliaria se compromete a comunicarse nuevamente con los arrendatarios para abordar las quejas y buscar soluciones – <strong>Responsable:</strong> Andrés Marroquín y Elise Garzón (Inmobiliaria)</li>
+ <li>Se recopilarán pruebas (fotos, videos, bitácoras) de las infracciones para respaldar las quejas y posibles sanciones – <strong>Responsable:</strong> Miembros del Consejo, Comité de Convivencia y Administración</li>
+ <li>La administración del conjunto (Marta) revisará los llamados de atención escritos existentes para evaluar la aplicación de sanciones económicas según el reglamento de propiedad horizontal – <strong>Responsable:</strong> Marta (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó con el compromiso de la inmobiliaria de retomar la comunicación con los arrendatarios, buscando una solución a las problemáticas de convivencia planteadas. Se enfatizó la necesidad de recopilar pruebas concretas de las infracciones, involucrando a los residentes y a la administración. Marta, la administradora, se encargará de revisar los llamados de atención escritos para evaluar la aplicación de sanciones económicas, siguiendo el reglamento de propiedad horizontal. A pesar de las diferencias de opinión expresadas durante la reunión, se acordó seguir adelante con el proceso establecido, priorizando la búsqueda de una solución que garantice la sana convivencia en el conjunto residencial.
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</h1>
+ <p><strong>Fecha:</strong> 12 de agosto de 2025</p>
+ <p><strong>Hora:</strong> Inicio: 9:40 - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Marta</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Marta - Administradora Delegada</li>
+ <li>Germán Portilla - Miembro del Consejo</li>
+ <li>Andrés Marroquín - Inmobiliaria</li>
+ <li>Elise Garzón - Inmobiliaria</li>
+ <li>Sergio - [CARGO NO ESPECIFICADO]</li>
+ <li>Sandra - [CARGO NO ESPECIFICADO]</li>
+ <li>Clara - [CARGO NO ESPECIFICADO]</li>
+ <li>Luis Alejandro Vargas - Consejo</li>
+ <li>Luis Enrique - [CARGO NO ESPECIFICADO]</li>
+ <li>Camilo - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</li>
+ <li>Quejas y problemáticas de convivencia (casa 13): ruidos, basuras, mascotas, reuniones nocturnas, motos en zonas verdes</li>
+ <li>Afectación directa a vecino (casa 12): ruidos y olores de mascotas, comportamientos en áreas comunes</li>
+ <li>Llamado a corregir acciones y posibles sanciones</li>
+ <li>Respuesta de la inmobiliaria y planteamiento de soluciones</li>
+ <li>Medidas a tomar y proceso de restitución de vivienda</li>
+ <li>Aclaraciones sobre acusaciones a otros vecinos y condiciones de arriendo</li>
+ <li>Reflexiones sobre el caso y búsqueda de soluciones</li>
+ <li>Compromisos de la inmobiliaria y plan de acción</li>
+ <li>Proceso interno del condominio y sanciones económicas</li>
+ <li>Oportunidad para conciliar y cierre de la reunión</li>
+ </ol>
+</header>
+<h2>1. Mediación por situaciones de convivencia en el Conjunto Residencial Cencerro</h2>
+
+<p>El propósito de la reunión, llevada a cabo el 12 de agosto de 2025, fue mediar en las situaciones de convivencia que afectan la tranquilidad y la sana convivencia en el Conjunto Residencial Cencerro. Marta, la administradora delegada, dio la bienvenida a los miembros del Comité de Convivencia, del Consejo de Administración y a la inmobiliaria, que representa a la casa 13, cuyos propietarios no pudieron asistir debido a la enfermedad de la propietaria.</p>
+
+<p>Marta expuso los temas que han sido motivo de reiteradas comunicaciones a la propietaria, a la inmobiliaria y al arrendatario, destacando el ruido de las motos de alto cilindraje al calentarlas, el manejo inadecuado de las basuras y el reciclaje fuera de los horarios establecidos, los cinco perros que no son manejados con correa y que ladran constantemente, las reuniones nocturnas y la ubicación de las motos en zonas verdes. Tras la intervención de Marta, se le concedió la palabra a Germán Portilla.</p>
+
+<p>Germán Portilla, miembro del Consejo y residente de la casa 12, vecina de la casa 13, complementó lo expuesto por Marta, señalando que el bullicio y el olor a deposiciones de los perros le afectan directamente. Además, manifestó su molestia por la presencia de personas adultas sin camisa y en bóxer en áreas comunes, lo cual considera un acto grotesco frente a su familia. Aclaró que no son dos, sino tres motos, y que los perros son cinco. Reconoció que, aunque hubo una reunión con alto volumen que excedió el tiempo límite, no ha vuelto a escuchar nada similar. Sin embargo, reiteró que el ruido de las motos es recurrente y que en ocasiones circulan a velocidades inapropiadas. Concluyó expresando su desagrado por este tipo de comportamientos, especialmente por la costumbre de salir sin camisa y en bóxer.</p>
+
+<p>La administración hizo un llamado a corregir estas acciones, recordando que existen sanciones convivenciales y la posibilidad de querellas policivas si no se logra una mediación efectiva. Andrés Marroquín y Elise Garzón, en representación de la inmobiliaria, lamentaron las situaciones planteadas y explicaron que han intentado establecer un puente de comunicación con los arrendatarios, aunque sin éxito. Andrés mencionó que, durante una conversación el sábado anterior, los arrendatarios se mostraron groseros y justificaron el ruido de las motos argumentando que es anticonstitucional prohibir motos de alto cilindraje. También indicaron que los perros ladran debido a la presencia de gatos en el barrio y se comprometieron a no parquear más las motos en el pasto. Admitieron que a veces salen de viaje y dejan la basura sin recoger hasta por un mes.</p>
+<h2>2. Quejas y problemáticas de convivencia (casa 13): ruidos, basuras, mascotas, reuniones nocturnas, motos en zonas verdes</h2>
+
+<p>Durante la reunión, se abordaron las quejas y problemáticas de convivencia relacionadas con la casa 13, incluyendo ruidos, manejo de basuras, tenencia de mascotas, reuniones nocturnas y el uso de motos en zonas verdes. Marta Elena, administradora delegada, expuso las reiteradas manifestaciones de inconformidad recibidas por parte de los propietarios.</p>
+
+<h3>Tema de las motos</h3>
+<p>Marta Elena indicó que las motos de alto cilindraje pertenecientes a los residentes de la casa 13 generan perturbación debido al ruido excesivo al ser calentadas, lo cual provoca múltiples llamadas de queja por parte de los propietarios. A pesar de haber notificado a John, el arrendatario, sobre esta situación, este argumenta que es necesario calentar las motos.</p>
+
+<h3>Tema de las basuras</h3>
+<p>Se señaló que los residentes de la casa 13 no cumplen con los horarios establecidos para la disposición de basuras y no realizan el reciclaje adecuado. Las canecas permanecen en el exterior durante largos periodos, requiriendo la intervención de la administración para solicitar su retiro.</p>
+
+<h3>Tema de los perros</h3>
+<p>Se mencionó que los residentes de la casa 13 tienen cinco perros, algunos de los cuales no son manejados con correa en las áreas comunes del condominio. Además, los perros son dejados solos, generando ladridos constantes que perturban a los vecinos. La administración ha recibido quejas al respecto y ha contactado a John, quien ha justificado la situación indicando que se encontraban fuera de la casa.</p>
+
+<h3>Reuniones en la noche</h3>
+<p>Se indicó que, aunque con menor frecuencia, los residentes de la casa 13 realizan reuniones nocturnas que generan molestias a los vecinos.</p>
+
+<h3>Motos en los prados</h3>
+<p>Se reportó que los residentes de la casa 13 estacionaban las motos en zonas verdes y jardines, situación que fue notificada y solicitada su corrección.</p>
+
+<p>Germán Portilla, vecino de la casa 13 y miembro del Consejo, complementó la información proporcionada por Marta Elena, señalando que el bullicio de los perros y el olor a deposiciones afectan directamente su propiedad. Además, manifestó su inconformidad por la presencia de personas adultas sin camisa y en bóxer en áreas comunes, lo cual considera un acto grotesco e inapropiado para los niños del conjunto. Germán Portilla aclaró que no son dos, sino tres motos, y que los perros no son uno, sino cinco. Reconoció que, en una ocasión, hubo una reunión con alto volumen que excedió el tiempo límite, pero que no se ha repetido. Sin embargo, reiteró que el problema de las motos es recurrente y que circulan a velocidades inapropiadas.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, lamentó las situaciones expuestas y reconoció la dificultad para comunicarse con los arrendatarios. Mencionó que, durante una conversación, los arrendatarios argumentaron que no existe ninguna norma en el manual de convivencia que prohíba tener motos de alto cilindraje y que es inevitable que los perros ladren debido a la presencia de gatos. Se comprometieron a no parquear las motos en el pasto y explicaron que, en ocasiones, dejan las canecas de basura afuera debido a viajes prolongados. Andrés Marroquín solicitó pruebas de las quejas para poder abordar la situación de manera efectiva.</p>
+<h2>3. Afectación directa a vecino (casa 12): ruidos y olores de mascotas, comportamientos en áreas comunes</h2>
+
+<p>Durante la reunión, se abordaron las afectaciones directas al vecino de la casa 12, Germán Portilla, derivadas de ruidos y olores de mascotas, así como comportamientos observados en áreas comunes.</p>
+
+<h3>Bullicio de los perros</h3>
+<p>Germán Portilla, vecino de la casa 12, manifestó su afectación directa por el "<strong>bullicio de los perros atrás todo el bendito día</strong>". Indicó que los ladridos constantes de los cinco perros, tres grandes y dos pequeños, perturban la tranquilidad de su hogar. Además, señaló que debe retener a su propio perro debido a la actitud de los perros de la casa 13, que "<strong>apenas hay presencia de alguien en mi patio, comienzan a la tira o a ladrar</strong>".</p>
+
+<h3>Olor a deposición de perros</h3>
+<p>Adicionalmente al ruido, Germán Portilla expresó su molestia por "<strong>el olor que eso emana, porque huele a literalmente a deposición de perros</strong>". Este olor, según su testimonio, es constante y proviene de las deposiciones de los cinco perros.</p>
+
+<h3>Personas sin camisa en áreas comunes</h3>
+<p>Otro aspecto que generó malestar en Germán Portilla fue la presencia de personas "<strong>en boxer y sin camisa en áreas exclusivas o de uso exclusivo del conjunto o de la casa</strong>". Mencionó que estos individuos, a quienes no conoce, han salido en estas condiciones "<strong>afuera en la palmera</strong>", lo cual considera un "<strong>acto grotesco</strong>" que no desea para sus hijos, especialmente teniendo en cuenta que en su hogar conviven su esposa, su madre y niños de 11 años.</p>
+
+<p>Germán Portilla aclaró que, aunque no tiene problemas personales con los residentes de la casa 13 y no le interesa saludarlos, considera inaceptables estos comportamientos en áreas comunes. Reconoció que, aparte de una reunión con alto volumen que se realizó una vez, no ha tenido mayores inconvenientes, pero reiteró su preocupación por el ruido de las motos y la velocidad a la que circulan.</p><h2>4. Llamado a corregir acciones y posibles sanciones</h2>
+
+<p>Durante la reunión, se realizó un llamado formal a corregir las acciones que han afectado la convivencia en el conjunto residencial Cencerro. Se enfatizó que, ante la persistencia de las quejas y la falta de cumplimiento de las normas, podrían aplicarse sanciones convivenciales y querellas policivas.</p>
+
+<p>Se hizo hincapié en que la mediación de convivencia buscaba evitar medidas más severas, pero que la omisión total a los llamados de la administración alteraba la sana convivencia del proyecto, especialmente considerando su tamaño reducido y su ambiente tranquilo.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, lamentó las situaciones presentadas y mencionó las dificultades encontradas al intentar comunicarse con los arrendatarios de la casa 13. Señaló que, durante una conversación, los arrendatarios justificaron el ruido de las motos de alto cilindraje argumentando que no existe una prohibición explícita en el manual de convivencia y que es anticonstitucional prohibirles tenerlas. También mencionaron la presencia de gatos como justificación para los ladridos de sus perros.</p>
+
+<p>Se indicó que los arrendatarios se comprometieron a no parquear las motos en el pasto ni dejar las canecas de basura expuestas, explicando que a veces salen de viaje hasta por un mes. Sin embargo, la conversación se interrumpió abruptamente cuando se abordó el tema de las motos.</p>
+
+<p>Ante esta situación, se solicitó a los presentes aportar pruebas de las infracciones, como fotos o videos, para respaldar las quejas y facilitar la gestión de la inmobiliaria. Se mencionó que este tipo de evidencia ha sido útil en otros casos para aplicar multas y mejorar el cumplimiento de las normas.</p>
+
+<p>Se recordó que la inmobiliaria puede solicitar la restitución de la vivienda en caso de que no haya una solución y se demuestre la falta de sana convivencia. Sin embargo, se reconoció que este proceso puede ser largo y engorroso.</p>
+
+<p>Durante la discusión, los arrendatarios se defendieron argumentando que otros vecinos también incurren en comportamientos inapropiados, como un señor que toma licor y escucha música a alto volumen en una casa cercana a la entrada del conjunto. También mencionaron que a un residente le robaron el logo de su carro dentro del conjunto y que la administración no dio respuesta a su reclamo.</p>
+
+<p>Germán Portilla permitió a la administración ingresar a su casa para tomar pruebas de las infracciones, pero se mostró reacio a participar activamente en la recolección de evidencia, argumentando que no quiere ganarse enemigos ni abusar de la privacidad de las personas. Insistió en que ya existen suficientes pruebas de las infracciones cometidas por los arrendatarios de la casa 13 y que es hora de tomar medidas.</p>
+
+<p>Sandra, residente del conjunto, negó las acusaciones de que en su casa se hace mucha bulla y exigió pruebas de lo contrario. Solicitó a la inmobiliaria incluir cláusulas en los contratos de arrendamiento que establezcan condiciones claras sobre el ruido, el manejo de mascotas y el comportamiento en las áreas comunes.</p>
+
+<p>Clara, miembro del comité de convivencia, invitó a reflexionar sobre el caso y buscar una solución que permita llegar a un acuerdo con los arrendatarios. Sugirió que se les dé la oportunidad de adaptarse a la vida en un condominio y que se les proporcione información clara sobre las normas de convivencia.</p>
+
+<p>En resumen, durante este punto del orden del día, se realizó un llamado a corregir las acciones que afectan la convivencia en el conjunto residencial Cencerro y se exploraron posibles sanciones. Se solicitó a los residentes aportar pruebas de las infracciones y se discutieron las opciones legales disponibles para resolver el problema.</p><h2>5. Respuesta de la inmobiliaria y planteamiento de soluciones</h2>
+
+<p>En este punto de la reunión, Andrés Marroquín y Elise Garzón, en representación de la inmobiliaria, expresaron su pesar por las situaciones de convivencia reportadas en la casa 13. Andrés Marroquín mencionó las dificultades que han tenido para comunicarse con los arrendatarios, describiéndolos como poco receptivos a los llamados de atención.</p>
+
+<h3>Dificultad de comunicación con los arrendatarios</h3>
+<p>Andrés Marroquín relató que, en un intento de mediar, la inmobiliaria contactó a los arrendatarios el sábado anterior a la reunión, pero estos respondieron de manera descortés, incluso llegando a interrumpir la comunicación telefónica en dos ocasiones. A pesar de esto, la inmobiliaria transmitió las justificaciones y posturas de los arrendatarios respecto a las quejas presentadas.</p>
+
+<h3>Justificaciones de los arrendatarios</h3>
+<p>La inmobiliaria expuso los argumentos de los arrendatarios en relación con las quejas recibidas. En cuanto al ruido de las motos, los arrendatarios argumentaron que sus motocicletas son de alto cilindraje y cuestionaron si existía alguna norma en el manual de convivencia que prohibiera este tipo de vehículos. Sobre los perros, indicaron que los ladridos eran una reacción a la presencia de gatos en el área, justificando así el comportamiento de sus mascotas. También se comprometieron a no parquear más las motos en zonas verdes y explicaron que la acumulación de basuras se debía a sus frecuentes viajes, llegando a ausentarse hasta por un mes.</p>
+
+<h3>Solicitud de pruebas</h3>
+<p>Andrés Marroquín solicitó a los presentes que proporcionaran pruebas de las conductas inapropiadas de los arrendatarios, como fotografías o videos, para poder tomar medidas correctivas. Mencionó que desconocían la situación de la persona que salía sin camisa, y que este tipo de evidencia sería útil para sustentar las quejas y proceder con las sanciones correspondientes. Hizo referencia a un caso anterior en otro edificio donde una prueba visual fue determinante para resolver un problema de convivencia.</p>
+
+<p>Sergio preguntó a la inmobiliaria sobre las acciones que podrían tomar si las multas no fueran suficientes para corregir el comportamiento de los arrendatarios. Andrés Marroquín respondió que, en caso de persistir la falta de sana convivencia, la inmobiliaria podría solicitar la restitución de la vivienda, incluso por vía judicial. Aclaró que, aunque los arrendatarios han cumplido puntualmente con los pagos, la inmobiliaria tiene la facultad de exigir el cumplimiento de las normas de convivencia.</p>
+
+<p>Andrés Marroquín también mencionó que los arrendatarios se defendieron de las acusaciones argumentando que otros vecinos también incurrían en comportamientos inapropiados, como un señor que escuchaba música a alto volumen y consumía licor en la entrada del conjunto, y una vecina que colindaba con un barrio donde se realizaban fiestas. Ante esto, reiteró la importancia de presentar pruebas para poder abordar cada situación de manera justa y objetiva.</p>
+
+<p>Marta Elena indicó que poseía fotos de las motos estacionadas en el jardín y de la incorrecta disposición de las basuras, las cuales había compartido con la inmobiliaria. Andrés Marroquín respondió que, aunque ya habían conversado con los arrendatarios sobre estos temas, volverían a hacerlo y solicitaron que se les enviaran nuevas pruebas para reforzar el reclamo.</p>
+
+<p>Germán Portilla manifestó su desacuerdo con la necesidad de aportar pruebas, argumentando que ya existían suficientes reportes y testimonios sobre el comportamiento de los arrendatarios. Sin embargo, Andrés Marroquín reiteró la importancia de contar con evidencia concreta para poder actuar de manera efectiva y evitar posibles controversias legales.</p>
+
+<p>Alejandro Vargas sugirió que la inmobiliaria estandarizara los mecanismos de comunicación con los arrendatarios y que se apoyara en los reportes de la empresa de seguridad como pruebas de los llamados de atención realizados. Andrés Marroquín estuvo de acuerdo con esta propuesta y se comprometió a enviar un correo formal a los arrendatarios, dejando constancia de las quejas y las posibles sanciones.</p>
+
+<p>Luis Enrique señaló que, además de las acciones de la inmobiliaria, el condominio debía aplicar las sanciones económicas estipuladas en el reglamento de propiedad horizontal. Elisa Garzón respondió que era necesario seguir un debido proceso y que no se podía multar a los arrendatarios sin antes darles la oportunidad de corregir su comportamiento. Andrés Marroquín añadió que la aseguradora exigía un tiempo prudencial entre cada llamado de atención para evaluar la evolución de la situación.</p>
+
+<p>Ante la insistencia de algunos miembros del consejo de aplicar una multa de inmediato, Andrés Marroquín solicitó que se le diera la oportunidad de hablar nuevamente con los arrendatarios y presentarles las quejas y las posibles consecuencias de sus actos. Propuso que, si después de esta gestión no se lograba un cambio de actitud, se procediera con la sanción económica. Sin embargo, ante la postura del consejo de seguir adelante con el proceso sancionatorio, la inmobiliaria decidió retirarse de la reunión.</p><h2>6. Medidas a tomar y proceso de restitución de vivienda</h2>
+
+<p>Durante la reunión, se abordó el tema de las medidas a tomar y el proceso de restitución de la vivienda en cuestión, considerando las quejas presentadas y la falta de cumplimiento del reglamento de convivencia.</p>
+
+<h3>Gestión con correos y pruebas de falta de sana convivencia</h3>
+
+<p>Se mencionó la importancia de documentar las faltas a la sana convivencia a través de correos electrónicos y otros medios de prueba. La inmobiliaria se comprometió a enviar correos formales a los arrendatarios, dejando constancia de las quejas y los requerimientos de cumplimiento. Se destacó la necesidad de adjuntar pruebas concretas, como fotografías o videos, para respaldar las reclamaciones y facilitar la gestión ante los arrendatarios y, en caso necesario, ante las autoridades competentes.</p>
+
+<h3>Proceso de restitución ante un juez</h3>
+
+<p>Se explicó que, en caso de que los arrendatarios no corrijan su comportamiento y persistan las faltas a la sana convivencia, se iniciará un proceso de restitución de la vivienda ante un juez. Se indicó que este proceso puede ser largo y complejo, pero es el camino legal para lograr la desocupación del inmueble en caso de incumplimiento del contrato y del reglamento de convivencia. Se señaló que la inmobiliaria cuenta con el respaldo de una aseguradora para llevar adelante este proceso.</p>
+
+<h3>Manejo de quejas sobre otros vecinos</h3>
+
+<p>Se hizo referencia a las quejas presentadas por los arrendatarios sobre el comportamiento de otros vecinos. Se aclaró que cada caso debe ser analizado individualmente y que no es válido justificar las propias faltas con las acciones de terceros. Se instó a los arrendatarios a presentar pruebas concretas de sus অভিযোগ para que la administración pueda tomar las medidas correspondientes.</p><h2>7. Aclaraciones sobre acusaciones a otros vecinos y condiciones de arriendo</h2>
+
+<p>Durante la reunión, se abordaron las acusaciones realizadas por los arrendatarios de la casa 13, quienes mencionaron a un vecino de la entrada y a otro residente de origen costeño como fuentes de perturbación. Estas acusaciones fueron presentadas como parte de su defensa ante las quejas recibidas.</p>
+
+<p>Andrés Marroquín, en representación de la inmobiliaria, expuso que los arrendatarios se defendieron indicando que "hay un señor de una casa en la entrada que siempre está tomando y que siempre hay música y que no le dicen nada" y que "en la casa De él, la 13, la señora Tatiana colinda con un barrio y chuntame y que hay una persona atrás que todo el tiempo está haciendo fiesta y que a él lo culpan de que es él quien hace esas reuniones".</p>
+
+<p>Ante estas declaraciones, Sandra, residente del conjunto, manifestó su inconformidad y exigió pruebas de la acusación que la señalaba como fuente de ruidos molestos. "La primera casa a mano izquierda es la mía que hace mucha bulla. Eso es una gran mentira y me tienen que comprobar que eso es verdad, porque eso es mentira. Yo nunca casi hago reuniones", afirmó Sandra, solicitando una aclaración inmediata.</p>
+
+<p>Andrés Marroquín aclaró que la información provenía de los inquilinos de la casa 13 y no de la inmobiliaria. "Ellos dijeron que ahí vio un señor tomando que ha venido la policía a sacarlo y que se han agarrado. Bueno, no sé, no sé qué tan cierto sea. Eso es lo que dice", explicó Marroquín, reiterando la necesidad de pruebas para verificar las acusaciones.</p>
+
+<p>Sandra insistió en la falsedad de las acusaciones y advirtió sobre posibles acciones legales si no se presentaban pruebas. "Necesito que por favor me mande pruebas de eso, porque si no yo sí demando porque para que de verdad se tomen las cosas serias y no sea así, porque eso no es ir hablando de las personas", declaró Sandra.</p>
+
+<p>Germán Portilla intervino para aclarar que los reclamos por ruidos no provenían de la casa de Sandra, sino de la casa 14, donde reside Alejandro Vargas, miembro del Consejo del Conjunto y cuya esposa también forma parte del comité de Convivencia. "Esa casa está en un sanduchito, porque es que está de vecino estoy yo y de vecino está la 14 que también hace parte del Consejo del Conjunto y la esposa de él también hace parte del comité de Convivencia, que es Alejandro Vargas, y él es el que también ha puesto bastante reclamo con el tema de ruidos, no soy yo solamente", explicó Portilla.</p>
+
+<p>La discusión también abordó la importancia de establecer condiciones claras en los contratos de arrendamiento para asegurar la convivencia pacífica en el conjunto residencial. Sandra sugirió que se incluyeran cláusulas específicas sobre el comportamiento de los arrendatarios, el manejo de mascotas y el respeto por las normas de convivencia. "Yo sí pido que por favor cuando ustedes, los señores de la inmobiliaria que arrienden pongan condiciones, que tengan las condiciones y que vean que los perros no se pueden sacar sueltos porque es que uno va por el jardín, por los alrededores y los perros sueltos se recoge nadie", propuso Sandra.</p>
+
+<p>Elise Garzón, también de la inmobiliaria, respondió a las inquietudes sobre las condiciones de arriendo, señalando que se realiza una debida diligencia de 35 filtros de seguridad a los arrendatarios. Sin embargo, reconoció que la conducta humana es impredecible y que es necesario buscar soluciones conjuntas para garantizar la convivencia. "Desafortunadamente la conducta humana solamente la conoce Dios, hasta los mejores médicos les ha arrendado y encuentran a la mujer con un amante y empiezan a tomar, a llegar tarde, a romper las cosas, a pegar la mujer, en fin, esas cosas suceden", comentó Garzón.</p>
+
+<p>En relación con la acusación sobre un residente de origen costeño, Germán Portilla expresó su molestia ante los estereotipos y prejuicios. "Claramente cuando uno es costeño le tienen el dejémonos de vainas en la cabeza, los cachacos traumados, en que el costeño es bullicioso y demás. Yo soy de los costeños que no hago ruido, toco mi acordeón y lo voy a tocar cuantas veces se me dé la gana", afirmó Portilla, defendiendo su derecho a disfrutar de su música sin perturbar la tranquilidad de los demás.</p><h2>8. Reflexiones sobre el caso y búsqueda de soluciones</h2>
+
+<p>Durante la reunión, se dedicó un espacio a reflexionar sobre el caso en cuestión y a explorar posibles soluciones. Se buscó analizar las causas subyacentes de los problemas de convivencia y a proponer medidas que pudieran mejorar la situación.</p>
+
+<h3>Normas de convivencia</h3>
+
+<p>Se hizo hincapié en la importancia de que todos los residentes conozcan y respeten las normas de convivencia establecidas en el reglamento del conjunto residencial. Se sugirió reforzar la difusión de estas normas y promover una cultura de respeto y tolerancia entre los vecinos.</p>
+
+<h3>Importancia de las pruebas</h3>
+
+<p>Se resaltó la necesidad de contar con pruebas sólidas y verificables para respaldar las quejas y acusaciones. Se mencionó que las pruebas objetivas, como fotografías, videos o registros de incidentes, son fundamentales para tomar decisiones informadas y justas.</p>
+
+<h3>Contacto directo con la inmobiliaria</h3>
+
+<p>Se propuso establecer un canal de comunicación directo y eficiente entre los residentes y la inmobiliaria encargada de la administración de la propiedad. Se consideró que este contacto facilitaría la resolución de problemas y la coordinación de acciones para mejorar la convivencia.</p><h2>9. Compromisos de la inmobiliaria y plan de acción</h2>
+
+<p>En relación con las problemáticas de convivencia presentadas en el conjunto residencial Cencerro, la inmobiliaria se compromete a establecer una comunicación formal y efectiva con los arrendatarios de la casa 13. Este compromiso surge tras las dificultades expresadas en la reunión para abordar directamente a los arrendatarios y la necesidad de mediar en los conflictos reportados.</p>
+
+<h3>Comunicación con los arrendatarios</h3>
+
+<p>La inmobiliaria reconoce la importancia de mantener un canal de comunicación abierto y respetuoso con los arrendatarios. Se compromete a realizar una nueva conversación con ellos, haciendo énfasis en las quejas recibidas y buscando soluciones que permitan una convivencia armónica. Andrés Marroquín, en representación de la inmobiliaria, se compromete a llevar a cabo esta gestión.</p>
+
+<h3>Envío de correo formal</h3>
+
+<p>Como parte del plan de acción, la inmobiliaria se compromete a enviar un correo electrónico formal a los arrendatarios, detallando las normas de convivencia del conjunto residencial y las consecuencias de su incumplimiento. Este correo servirá como un llamado de atención por escrito y dejará constancia de las advertencias realizadas. Se espera que este correo contribuya a sensibilizar a los arrendatarios sobre la importancia de respetar las normas y a fomentar un comportamiento más cívico.</p>
+
+<h3>Debido proceso y marco jurídico</h3>
+
+<p>La inmobiliaria manifiesta su compromiso de seguir el debido proceso y respetar el marco jurídico vigente en caso de que los arrendatarios persistan en su comportamiento inapropiado. Se explica que, en caso de no lograr una solución a través del diálogo y la mediación, se iniciará un proceso de restitución de la vivienda ante un juez. La inmobiliaria se compromete a recopilar las pruebas necesarias para respaldar este proceso, incluyendo los llamados de atención escritos, las bitácoras de vigilancia y cualquier otra evidencia que demuestre el incumplimiento de las normas de convivencia.</p>
+
+<p>Elisa Garzón, también de la inmobiliaria, subraya la importancia de contar con pruebas fehacientes para poder actuar legalmente y evitar posibles demandas por parte de los arrendatarios. Se solicita a los miembros del consejo y a los vecinos afectados que colaboren aportando pruebas de las infracciones cometidas, como fotografías, videos o testimonios.</p>
+
+<p>Se reitera que el objetivo principal es lograr una convivencia pacífica y respetuosa en el conjunto residencial Cencerro, y que la inmobiliaria está dispuesta a utilizar todos los medios a su alcance para alcanzar este objetivo.</p><h2>10. Proceso interno del condominio y sanciones económicas</h2>
+
+<p>Durante la reunión, se abordó el proceso interno del condominio en relación con las sanciones económicas aplicables a los residentes que incumplan el reglamento de propiedad horizontal. Se discutieron los llamados de atención y las sanciones que se pueden imponer según el reglamento, así como la comunicación con la aseguradora en caso de ser necesario.</p>
+
+<h3>Llamados de atención y sanciones según el reglamento</h3>
+
+<p>Se mencionó que el reglamento de propiedad horizontal del conjunto establece el proceso a seguir para los llamados de atención y las sanciones económicas. Se indicó que, en el caso de la casa 13, ya se habían realizado varios llamados de atención, tanto verbales como por escrito, debido a las quejas recibidas por parte de otros residentes. La administradora, Marta Elena, confirmó haber enviado un llamado de atención escrito a la inmobiliaria, aunque esta manifestó no haberlo recibido.</p>
+
+<p>Luis Enrique sugirió que, dado que ya se habían realizado los llamados de atención correspondientes, se debía proceder con la imposición de una sanción económica, tal como lo estipula el reglamento. Mencionó que la sanción podría estar entre el 20% y el 50% del valor del canon de arrendamiento.</p>
+
+<p>Elisa Garzón, de la inmobiliaria, expresó su desacuerdo con la imposición inmediata de una multa, argumentando que todas las personas merecen un debido proceso y que es necesario sujetarse a la ley. Señaló que la aseguradora exige un tiempo prudencial entre cada llamado de atención, con un lapso de al menos un mes, para dar a los residentes la oportunidad de corregir su comportamiento.</p>
+
+<p>Andrés Marroquín, también de la inmobiliaria, solicitó que se les diera la oportunidad de hablar con los arrendatarios y comunicarles las quejas recibidas, antes de imponer una multa. Propuso que, después de esta conversación, si no había una mejora en el comportamiento de los arrendatarios, se procediera con la sanción económica.</p>
+
+<p>Sandra expresó su opinión de que algunas de las faltas cometidas por los arrendatarios, como salir semidesnudos en áreas comunes, eran graves y ameritaban una sanción inmediata. Consideró que, al tocar el bolsillo de los infractores, se lograría un cambio en su comportamiento o, en su defecto, su salida del conjunto.</p>
+
+<p>Ante la discusión sobre si se debía o no imponer una multa de inmediato, Clara y Camilo intervinieron para aclarar que la citación a la inmobiliaria tenía como objetivo recibir sus descargos y continuar con el proceso de sanción, de acuerdo con el manual de convivencia del conjunto. Señalaron que la decisión final sobre la imposición de la multa sería tomada por el consejo de administración, en una reunión posterior.</p>
+
+<p>Finalmente, Andrés Marroquín y Elisa Garzón manifestaron su desacuerdo con la decisión de multar a los arrendatarios y anunciaron su retiro de la reunión. Expresaron su intención de hablar con los arrendatarios y buscar una solución al problema, pero consideraron que la imposición de una multa no era la mejor estrategia.</p>
+
+<h3>Comunicación con la aseguradora</h3>
+
+<p>Se mencionó la importancia de mantener una comunicación fluida con la aseguradora en relación con el proceso de restitución de la vivienda. Se indicó que la aseguradora exige pruebas de los llamados de atención realizados a los arrendatarios, así como un tiempo prudencial entre cada llamado, para poder iniciar el proceso de restitución.</p>
+
+<p>Andrés Marroquín señaló que la aseguradora considera como pruebas válidas los llamados de atención escritos realizados por la administración, así como las bitácoras de vigilancia. En este sentido, solicitó a la administración que le proporcionara copias de los llamados de atención escritos enviados a la casa 13.</p>
+
+<h3>Justificación de acciones con actos de otros propietarios</h3>
+
+<p>Durante la discusión, se mencionó que los arrendatarios de la casa 13 habían justificado algunas de sus acciones, como el ruido de las motos, argumentando que otros propietarios también incurrían en comportamientos similares. En particular, se refirieron a un propietario que residía en la entrada del conjunto y que, según ellos, solía consumir licor y escuchar música a alto volumen.</p>
+
+<p>Luis Enrique rechazó esta justificación, argumentando que cada caso debía ser tratado de forma individual y que no era válido justificar las propias acciones con los actos mal hechos de otros propietarios. Señaló que, si el ruido de las motos era tan grave, los arrendatarios debían buscar la manera de salir adelante sin molestar a los demás residentes.</p>
+<h2>11. Oportunidad para conciliar y cierre de la reunión</h2>
+
+<p>Durante este punto de la reunión, se brindó un espacio para la conciliación y se procedió al cierre de la misma. Se abordaron la voluntad de la inmobiliaria para mejorar la situación, la decisión del consejo sobre la multa y los agradecimientos finales.</p>
+
+<h3>Voluntad de la inmobiliaria para mejorar la situación</h3>
+
+<p>La inmobiliaria reiteró su compromiso de mediar con los arrendatarios para lograr una mejora en la convivencia. Andrés Marroquín expresó que, a pesar de las dificultades iniciales en la comunicación, la inmobiliaria se compromete a hablar nuevamente con los arrendatarios, buscando una solución que beneficie a todas las partes. Se mencionó la importancia de presentar pruebas concretas de las infracciones para poder actuar de manera efectiva.</p>
+
+<h3>Decisión del consejo sobre la multa</h3>
+
+<p>Se generó un debate en torno a la imposición de una multa a los arrendatarios de la casa 13. Algunos miembros del consejo consideraron que, dado el historial de quejas y la falta de cumplimiento del reglamento, era necesario aplicar una sanción económica. Otros, en cambio, sugirieron dar una última oportunidad a los arrendatarios para corregir su comportamiento, antes de proceder con la multa. La señora Sandra expresó su desacuerdo con esta postura, argumentando que las faltas cometidas eran graves y merecían una sanción inmediata.</p>
+
+<p>Finalmente, se acordó que el consejo tomaría una decisión sobre la multa en una reunión posterior, tras evaluar los resultados de la nueva comunicación que la inmobiliaria se comprometió a realizar con los arrendatarios. Se tuvo en cuenta la opinión de la señora Clara, quien sugirió que el consejo tomara una decisión informada sobre la multa, considerando los descargos presentados por la inmobiliaria y el comité de convivencia.</p>
+
+<h3>Agradecimientos y cierre</h3>
+
+<p>La señora Marta Elena, administradora delegada, agradeció a todos los presentes por su participación y aportes durante la reunión. Se reconoció la importancia de la colaboración entre la administración, el consejo, el comité de convivencia y la inmobiliaria para resolver los problemas de convivencia en el conjunto residencial. Se dio por concluida la reunión, reiterando el compromiso de seguir trabajando en conjunto para mantener la tranquilidad y la sana convivencia en la comunidad.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>La inmobiliaria se compromete a comunicarse nuevamente con los arrendatarios para abordar las quejas y buscar soluciones – <strong>Responsable:</strong> Andrés Marroquín y Elise Garzón (Inmobiliaria)</li>
+ <li>Se recopilarán pruebas (fotos, videos, bitácoras) de las infracciones para respaldar las quejas y posibles sanciones – <strong>Responsable:</strong> Miembros del Consejo, Comité de Convivencia y Administración</li>
+ <li>La administración del conjunto (Marta) revisará los llamados de atención escritos existentes para evaluar la aplicación de sanciones económicas según el reglamento de propiedad horizontal – <strong>Responsable:</strong> Marta (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+
+**Narrativa del Cierre:**
+
+La reunión concluyó con el compromiso de la inmobiliaria de retomar la comunicación con los arrendatarios, buscando una solución a las problemáticas de convivencia planteadas. Se enfatizó la necesidad de recopilar pruebas concretas de las infracciones, involucrando a los residentes y a la administración. Marta, la administradora, se encargará de revisar los llamados de atención escritos para evaluar la aplicación de sanciones económicas, siguiendo el reglamento de propiedad horizontal. A pesar de las diferencias de opinión expresadas durante la reunión, se acordó seguir adelante con el proceso establecido, priorizando la búsqueda de una solución que garantice la sana convivencia en el conjunto residencial.
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/grod849errwZrFW
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/grod849errwZrFW
+Generando URL pública para Transcripcion.txt (EXISTENTE): comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/aqJbXrCAbaRX2xC
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/aqJbXrCAbaRX2xC
+Verificando si existe transcripción: 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt en carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com
+[2025-08-13T15:35:28.978Z] Verificando existencia del archivo 20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt en Nextcloud carpeta 20250812-20.16_-____audio1400106597____gerencia_admonph.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
+[2025-08-13T15:35:29.030Z] Error en verificarArchivoExistenteNextcloud: fetch failed.
+Iniciando transcripción con AssemblyAI para: 20250812-20.16_-____audio1400106597____gerencia_admonph.com.m4a
+=======
 [2025-08-13T15:48:46.830Z] Verificando existencia del archivo comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt en Nextcloud carpeta comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording.
 [VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording/comite_convivencia_-_casa_13_cencerro_-_2025_08_12_09_22_gmt-05_00_-_recording_Transcripcion.txt
 [VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
@@ -3009,3 +3570,61 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 20250812-20.16_-____a
 Compartiendo archivo existente para obtener URL pública: /Actas/20250812-20.16_-____audio1400106597____gerencia_admonph.com/20250812-20.16_-____audio1400106597____gerencia_admonph.com_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/g4g8g2jdBecycMG
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/g4g8g2jdBecycMG
+>>>>>>> acfd36a4a9b38042a1ccb7b8339c1f8f9600f883
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-15T00:56:56.373Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[2025-08-15T00:56:56.428Z] Error en verificarArchivoExistenteNextcloud: fetch failed.
+Iniciando transcripción con AssemblyAI para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3
+Guardando transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Transcripción guardada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-15T00:57:04.211Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-15T00:57:04.990Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt. Cargando.
+[2025-08-15T00:57:05.753Z] Contenido del archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-15T00:57:05.754Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-15T00:57:06.497Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/9wwRdSiAFatFfGd
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/9wwRdSiAFatFfGd
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/DW9Zqwjdm3jXLq4
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/DW9Zqwjdm3jXLq4
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-15T00:58:36.554Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-15T00:58:37.753Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Transcripción existente encontrada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com. Obteniendo contenido.
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-15T00:58:38.862Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-15T00:58:39.625Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt. Cargando.
+[2025-08-15T00:58:40.383Z] Contenido del archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-15T00:58:40.385Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-15T00:58:41.148Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/THW2e5yqbm8FYwR
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/THW2e5yqbm8FYwR
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/LaMNgqwZnCrfPES
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/LaMNgqwZnCrfPES
