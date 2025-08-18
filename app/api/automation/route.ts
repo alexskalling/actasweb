@@ -263,6 +263,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           transcription: processResult.transcripcion as string,
           draft: processResult.acta as string,
           fileId: nombreNormalizado,
+          duracion_acta: formattedDuration
         },
       },
       { status: 200 }
