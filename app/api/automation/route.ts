@@ -3,6 +3,7 @@ import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions
 import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
 import { parseBuffer } from "music-metadata";
 import { processAction } from "@/app/(generador)/services/processAction";
+import { BuscarExistenteProceso } from "@/app/(generador)/services/buscarExistente.proceso";
 
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {
@@ -191,6 +192,17 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         { status: 500 }
       );
     }
+    try {
+      await BuscarExistenteProceso(nombreNormalizado, email);
+    } catch (error) {
+      if (error instanceof Error && error.message === "DUPLICATE_ACTA") {
+        return NextResponse.json(
+          { status: "error", message: "Ya existe un acta con ese nombre." },
+          { status: 409 } // Conflict
+        );
+      }
+      throw error; 
+    }
 
     const uploadRes = await fetch("https://api.assemblyai.com/v2/upload", {
       method: "POST",
@@ -228,7 +240,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         "",
         "",
         99,
-        email || "automation@actas.com"
+        email || "automation@skalling.com"
       );
     } catch (error) {
       console.warn("Error al guardar proceso, continuando con el procesamiento:", error);
@@ -240,7 +252,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       nombreCarpeta,
       nombreArchivo,
       uploadUrl,
-      email || "automation@actas.com",
+      email || "automation@skalling.com",
       name || "Usuario automatizado",
       true
     );
