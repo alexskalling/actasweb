@@ -46,7 +46,7 @@ export const authOptions: NextAuthOptions = {
             .set({ ultimoAcceso: now })
             .where(eq(usuarios.email, mail));
         } else {
-          await newUser({ name, mail, last_login: now });
+          await newUser({ name, mail, last_login: now, rol: 4});
         }
 
         return true;
