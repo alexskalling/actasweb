@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
-import { GuardarNuevoProceso } from "@/app/(generador)/services/guardarNuevoProceso";
+import { normalizarNombreArchivo } from "@/app/(generador)/services/generacion_contenido_services/utilsActions";
+import { GuardarNuevoProceso } from "@/app/(generador)/services/actas_querys_services/guardarNuevoProceso";
 import { parseBuffer } from "music-metadata";
-import { processAction } from "@/app/(generador)/services/processAction";
-import { BuscarExistenteProceso } from "@/app/(generador)/services/buscarExistente.proceso";
+import { processAction } from "@/app/(generador)/services/generacion_contenido_services/processAction";
+import { BuscarExistenteProceso } from "@/app/(generador)/services/actas_querys_services/buscarExistente.proceso";
 
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {

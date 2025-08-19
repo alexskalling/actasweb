@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { normalizarNombreArchivo } from "@/app/(generador)/services/utilsActions";
+import { normalizarNombreArchivo } from "@/app/(generador)/services/generacion_contenido_services/utilsActions";
 
 
 

@@ -2,7 +2,7 @@
 
 
 import { useEffect, useState } from 'react';
-import { getActasByUser } from '../services/getActasByUser';
+import { getActasByUser } from '../services/actas_querys_services/getActasByUser';
 
 interface Acta {
   id: string;
