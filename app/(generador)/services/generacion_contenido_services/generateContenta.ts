@@ -520,7 +520,7 @@ Regla CRÍTICA: Prohibido copiar texto literal de la transcripción. Reescribe s
         Hora: Extrae la hora de inicio y cierre.
         Lugar: Extrae la ubicación.
         Moderador: Identifica al moderador.
-        Asistentes: Lista los nombres y cargos.
+        Asistentes: Lista los nombres y cargos  escucha atentantemente todo el contentido de la reunion y lista lso asitentes que se diga expliciatamente  con su apartemento o similar.
 
    El orden del dia debe ser tomado del orden que se pase como dato y respetarse a raja tabal no cambia nombre sni nada ni orden no deebes poner nada que no se pase como orden del dia
 
@@ -782,7 +782,7 @@ INSTRUCCIONES ESTRICTAS:
     * **Fecha, Hora y Lugar:** Extrae esta información directamente de la transcripción . Si la hora de inicio y cierre no son explícitas, deja la hora de cierre como "[HORA DE CIERRE]". Si el lugar no es explícito, usa "[UBICACIÓN NO ESPECIFICADA]".
     * **Moderador:** Identifica a la persona que dirigió la sesión en la transcripción . Si no se identifica claramente, usa "[NO ESPECIFICADO]".
     * **Asistentes:** Lista los nombres y cargos de los participantes mencionados en la transcripción . Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
-
+se bien meticulos escuchando y lsitando los nombres de lso asitentes no dehjes ninguano pro fuera y se bien extricto con esto.
 2.  **GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):**
     * **LA BASE INALTERABLE ES ${ordendeldia}.** Debes usar *exclusivamente* el contenido de la transcripcion para la numeración y los títulos de los puntos del Orden del Día en el acta final.
     * **EXCLUSIONES OBLIGATORIAS:** NO INCLUYAS el *primer* elemento (correspondiente a "cabecera") ni el *último* elemento (correspondiente a "cierre") de la variable ${ordendeldia} en el "Orden del Día" final.
@@ -851,6 +851,8 @@ al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa
     Garantiza que cada nueva pieza de información añada valor y no duplique lo ya consignado. Si un dato ya ha sido mencionado, no lo repitas. La única excepción es si una referencia breve es esencial para la coherencia del punto actual, pero nunca debe implicar la repetición de párrafos o detalles ya documentados.
     CRÍTICO Y OBLIGATORIO: Si se detectan textos EXACTAMENTE IGUALES o segmentos de información idénticos en la transcripción que podrían generar duplicidad con el ${contenidoActa} ya generado o con la información que se está a punto de añadir, se debe priorizar DEJARLO EN UN SOLO LADO. Ese lado ÚNICO debe ser el lugar donde cronológicamente se abordó ese tema o segmento de texto por primera vez en la transcripción. Se debe ELIMINAR CUALQUIER OTRA APARICIÓN de dicho contenido duplicado en otras secciones del acta para asegurar una coherencia y no redundancia absolutas.
     Verificar que la información relevante sea precisa y no contradiga lo ya escrito en otros apartados del acta.
+
+    dejar eplcito los tema de votaciones o elecciones par que quede calro loq ue se voto proque se voto y lso resultadode las votaciones
 
 🔹 Estilo de redacción
 NO debes copiar y pegar la transcripción. Citas solo si aportan valor, breves, con atribución y sin exceder 20 palabras.

@@ -4188,3 +4188,984 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 04_felisacondominium_
 Compartiendo archivo existente para obtener URL pública: /Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Bo3T8f4QmLR9jz7
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Bo3T8f4QmLR9jz7
+Verificando si existe transcripción: 04_felisacondominium_audio_Transcripcion.txt en carpeta 04_felisacondominium_audio
+[2025-08-19T22:23:25.960Z] Verificando existencia del archivo 04_felisacondominium_audio_Transcripcion.txt en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:23:28.817Z] Archivo "04_felisacondominium_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_felisacondominium_audio".
+Transcripción existente encontrada: 04_felisacondominium_audio. Obteniendo contenido.
+Verificando contenido existente: 04_felisacondominium_audio_Contenido.txt
+[2025-08-19T22:23:31.627Z] Verificando existencia del archivo 04_felisacondominium_audio_Contenido.txt en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:23:32.977Z] Archivo "04_felisacondominium_audio_Contenido.txt" EXISTE en Nextcloud en la carpeta "04_felisacondominium_audio".
+Contenido existente: 04_felisacondominium_audio_Contenido.txt. Cargando.
+[2025-08-19T22:23:35.030Z] Contenido del archivo "04_felisacondominium_audio_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 04_felisacondominium_audio.mp3 en carpeta: 04_felisacondominium_audio
+Verificando Borrador .docx existente: 04_felisacondominium_audio_Borrador.docx
+[2025-08-19T22:23:35.032Z] Verificando existencia del archivo 04_felisacondominium_audio_Borrador.docx en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:23:36.385Z] Archivo "04_felisacondominium_audio_Borrador.docx" EXISTE en Nextcloud en la carpeta "04_felisacondominium_audio".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 04_felisacondominium_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/04_felisacondominium_audio/04_felisacondominium_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/pfsSQEZWZSo8gaX
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/pfsSQEZWZSo8gaX
+Generando URL pública para Transcripcion.txt (EXISTENTE): 04_felisacondominium_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/QRQqtAkkef3zeqw
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/QRQqtAkkef3zeqw
+Verificando si existe transcripción: 04_felisacondominium_audio_Transcripcion.txt en carpeta 04_felisacondominium_audio
+[2025-08-19T22:28:40.006Z] Verificando existencia del archivo 04_felisacondominium_audio_Transcripcion.txt en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:28:42.864Z] Archivo "04_felisacondominium_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_felisacondominium_audio".
+Transcripción existente encontrada: 04_felisacondominium_audio. Obteniendo contenido.
+Verificando contenido existente: 04_felisacondominium_audio_Contenido.txt
+[2025-08-19T22:28:45.683Z] Verificando existencia del archivo 04_felisacondominium_audio_Contenido.txt en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-19T22:28:47.050Z] Archivo "04_felisacondominium_audio_Contenido.txt" NO encontrado en Nextcloud en la carpeta "04_felisacondominium_audio".
+Generando contenido para: 04_felisacondominium_audio.mp3
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: 04_felisacondominium_audio_Transcripcion.txt
+[2025-08-19T22:28:47.051Z] Verificando existencia del archivo 04_felisacondominium_audio_Transcripcion.txt en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:28:48.403Z] Archivo "04_felisacondominium_audio_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "04_felisacondominium_audio".
+Transcripción encontrada: 04_felisacondominium_audio_Transcripcion.txt. Obteniendo contenido.
+[2025-08-19T22:28:51.900Z] Contenido del archivo "04_felisacondominium_audio_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: 04_felisacondominium_audio.mp3
+Guardando contenido en Nextcloud: 04_felisacondominium_audio_Contenido.txt
+Contenido guardado: 04_felisacondominium_audio_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: 04_felisacondominium_audio.mp3 en carpeta: 04_felisacondominium_audio
+Verificando Borrador .docx existente: 04_felisacondominium_audio_Borrador.docx
+[2025-08-19T22:31:00.803Z] Verificando existencia del archivo 04_felisacondominium_audio_Borrador.docx en Nextcloud carpeta 04_felisacondominium_audio.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/04_felisacondominium_audio/04_felisacondominium_audio_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-19T22:31:02.201Z] Archivo "04_felisacondominium_audio_Borrador.docx" NO encontrado en Nextcloud en la carpeta "04_felisacondominium_audio".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: 04_felisacondominium_audio_Borrador.docx
+Preparando guardado .docx en Nextcloud: 04_felisacondominium_audio_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum e inicio de la asamblea</li>
+ <li>Lectura del orden del día</li>
+ <li>Elección del presidente y secretario de la asamblea</li>
+ <li>Elección de la comisión verificadora del acta</li>
+ <li>Elección de los integrantes del consejo de administración faltantes</li>
+ <li>Renuncia y elección de la revisoría fiscal</li>
+ <li>Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas</li>
+ <li>Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH</li>
+ <li>Aprobación del Presupuesto, dotación de lobby de la torre número 3</li>
+ <li>Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto</li>
+ <li>Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio</li>
+ <li>Conformación de comités</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum e inicio de la asamblea</h2>
+
+<p>Durante la asamblea, se constató que al inicio, coincidiendo con la hora de la citación, se contaba con un quórum del 15.11%, representado por 33 asistentes, incluyendo aquellos presentes y quienes habían delegado su representación mediante poderes. Se especificó que este quórum fue verificado a las seis en punto, hora de inicio programada. Se indicó que, de acuerdo con la citación, la asamblea daría inicio formal una hora después del horario de la primera convocatoria.</p>
+
+<p>Posteriormente, al inicio formal de la asamblea, se verificó un quórum del 63.52%, equivalente a 166 asistentes que representaban un total de 134 inmuebles. Se aclaró que la diferencia entre el número de asistentes y el número de inmuebles representados se debía a que algunos asistentes actuaban como apoderados, representando a más de un inmueble.</p>
+
+<p>El representante legal de la copropiedad, Hernando González, expresó la intención de avanzar con los temas del orden del día de manera eficiente, pero reconoció la necesidad de dedicar más tiempo a aquellos puntos que los asistentes consideraran que requerían un análisis más detallado. Enfatizó la importancia de mantener una buena disposición y respeto mutuo entre los vecinos, especialmente durante discusiones que pudieran generar controversia. Subrayó que los temas a tratar debían ser aquellos que afectaran a la comunidad en su conjunto, excluyendo problemas de índole personal o particular, y que la asamblea se ceñiría estrictamente al orden del día previamente establecido en la convocatoria.</p>
+
+<p>Hernando González también solicitó a los asistentes que, en caso de tener alguna inquietud o duda, levantaran la mano y esperaran a que el presidente de la asamblea les concediera la palabra. Recordó que los temas a tratar serían: verificación del quórum, lectura del orden del día, elección del presidente y secretario de la asamblea, elección de la comisión verificadora del acta, elección de los integrantes del consejo de administración faltantes, elección de la revisoría fiscal, proyecto de fachadas y cubiertas torre 1 y torre 2 (informe de avances técnico financiero y aprobación del número de cuotas), propuesta de nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH, aprobación del presupuesto y dotación de lobby de la torre número 3, aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto, informe del Consejo de Administración y la Administración CIMA Inmobiliaria, propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio, y votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia.</p>
+
+<p>Se dejó constancia de que la asamblea extraordinaria inició a las 7:33 minutos, con el quórum ya mencionado. Se indicó que la lectura del orden del día ya había sido realizada.</p>
+<h2>2. Lectura del orden del día</h2>
+
+<p>Durante la asamblea, se procedió a la lectura del orden del día por parte de Hernando González, representante legal de la copropiedad. Se destacó la importancia de que los temas a tratar fueran aportes y decisiones que afectaran a la comunidad, excluyendo problemas de tipo personal o particular. Se enfatizó que no se podrían tratar temas diferentes a los citados en la convocatoria.</p>
+
+<p>El orden del día leído incluyó los siguientes puntos:</p>
+
+<ol>
+ <li>Verificación del quórum.</li>
+ <li>Lectura del orden del día.</li>
+ <li>Elección del presidente y secretario de la asamblea.</li>
+ <li>Elección de la comisión verificadora del acta.</li>
+ <li>Elección de los integrantes del consejo de administración faltantes.</li>
+ <li>Elección de la revisoría fiscal.</li>
+ <li>Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas.</li>
+ <li>Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH.</li>
+ <li>Aprobación del Presupuesto, dotación de lobby de la torre número 3.</li>
+ <li>Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto.</li>
+ <li>Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio.</li>
+ <li>Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia.</li>
+ <li>Conformación de comités.</li>
+</ol>
+
+<p>Se recordó a los asistentes que, al ser una asamblea extraordinaria, no se sometería a aprobación el manual de convivencia. Se reiteró la importancia de levantar la mano para cualquier acotación y esperar a que el presidente otorgara la palabra.</p>
+
+<p>Posterior a la lectura, se indicó que los puntos sobre la elección del presidente y secretario de la asamblea debían resolverse en la misma sesión. Se explicó que las personas postuladas para estos cargos podían ser propietarios, inquilinos o personas con poder de representación. Se describieron las funciones del presidente como la dirección de la asamblea, la concesión de la palabra y la moción de orden, sugiriendo que fuera una persona neutral, tranquila y con liderazgo. El secretario, por su parte, sería el encargado de tomar nota de la asamblea, con el apoyo de Código Verde para la transcripción, y firmar el acta para validar su contenido.</p>
+<h2>3. Elección del presidente y secretario de la asamblea</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea, indicando que estas figuras pueden recaer en propietarios, inquilinos o personas con poder de representación. Se explicó que el presidente dirige la asamblea, mientras que el secretario toma nota de lo tratado para su posterior inclusión en el acta.</p>
+
+<p>Se abrió la postulación para el cargo de presidente, destacando la importancia de que esta persona sea neutral, tranquila y con liderazgo. Ante la falta de postulaciones, se sugirió que la persona de administración presidiera la asamblea, como en ocasiones anteriores. Se consultó a los asistentes, tanto presenciales como virtuales, si estaban de acuerdo con esta propuesta. Al no haber objeciones, se definió a Hernando González como presidente de la asamblea.</p>
+
+<p>Posteriormente, se procedió a la elección del secretario, quien recibiría la información de Código Verde para estructurarla y validarla. Se consultó a los asistentes, tanto presenciales como virtuales, si alguien deseaba postularse. Ante la falta de postulaciones virtuales y presenciales, Luz Marleny Tangarife, del apartamento 709 Torre 3, se postuló para el cargo. Se consultó a los asistentes si estaban de acuerdo con esta postulación. Al no haber objeciones, se definió a Luz Marleny Tangarife como secretaria de la asamblea.</p>
+
+<p>En consecuencia, se designó a Hernando González como presidente y a Luz Marleny Tangarife como secretaria de la asamblea.</p><h2>4. Elección de la comisión verificadora del acta</h2>
+
+<p>Se procedió a la elección de la comisión verificadora del acta, destacando la importancia de su rol en la revisión detallada del documento. Se recordó que en la asamblea de febrero surgieron diversas inquietudes respecto a los tiempos de entrega del acta, lo que subraya la necesidad de contar con una comisión que asegure la precisión y validez de la información consignada.</p>
+
+<p>Giovanni Flores, del equipo logístico de la asamblea, recordó a los asistentes virtuales que podían manifestar su interés en participar en la comisión a través del botón "participar" en la parte superior de sus pantallas.</p>
+
+<p>Ante la falta de postulaciones iniciales, Nelson Arciniegas manifestó su disposición a participar, indicando su apartamento, el 408. Se hizo un llamado a los asistentes para que se sumaran a la tarea de revisar el acta con detalle.</p>
+
+<p>Posteriormente, se recibieron las siguientes postulaciones:</p>
+
+<ul>
+ <li>Luis Mariano Calderón, apartamento 1905, Torre 2.</li>
+ <li>Mauricio Londoño, apartamento 1708.</li>
+ <li>Caterine Rolón.</li>
+</ul>
+
+<p>Se consultó a la asamblea si estaban de acuerdo con que Nelson Arciniegas, Luis Mariano Calderón, Mauricio Londoño y Caterine Rolón conformaran la comisión verificadora del acta de la asamblea. Se preguntó específicamente si alguien se oponía a esta designación, tanto en la modalidad virtual como presencial.</p>
+
+<p>Se identificó una mano levantada virtualmente, correspondiente a KR, identificada como Karen Rolón. Sin embargo, se aclaró que Katherine Rolón ya estaba en la lista y que estaba de acuerdo con su propia postulación. Se confirmó que no había manos levantadas en señal de oposición.</p>
+
+<p>En relación con la votación para la conformación de la comisión verificadora del acta, se registraron los siguientes votos:</p>
+
+<ul>
+ <li><strong>Nelson Arciniegas:</strong> A favor.</li>
+ <li><strong>Luis Mariano Calderón:</strong> A favor.</li>
+ <li><strong>Mauricio Londoño:</strong> A favor.</li>
+ <li><strong>Caterine Rolón:</strong> A favor.</li>
+</ul>
+
+<p>Se resumió que la asamblea, tanto virtual como presencial, aprobó por unanimidad la conformación de la comisión verificadora del acta con los nombres de Nelson Arciniegas, Luis Mariano Calderón, Mauricio Londoño y Caterine Rolón.</p><h2>5. Elección de los integrantes del consejo de administración faltantes</h2>
+
+<p>Se abordó la necesidad de reforzar el equipo del consejo de administración, destacando la importancia de contar con un número adecuado de miembros para asegurar el seguimiento y la veeduría de los procesos de la copropiedad. Se hizo hincapié en que la falta de quórum en las reuniones del consejo dificulta la toma de decisiones y la gestión eficiente de la copropiedad.</p>
+
+<p>Se invitó a los asistentes, tanto presenciales como virtuales, a postularse para integrar el consejo, resaltando que no se requiere ser experto en temas específicos, sino tener buena voluntad para colaborar y contribuir al mejoramiento de la copropiedad. Se mencionó que el consejo es la entidad que aconseja a la administración y ayuda a valorizar el patrimonio de los copropietarios.</p>
+
+<p>Dari Villa, del apartamento 1713, Torre 3, se postuló para integrar el consejo. Ante la pregunta sobre la dedicación que esto implicaría, se respondió que dependerá de cada persona, pero que incluso una o dos horas al mes serían de gran ayuda, especialmente para comunicar las acciones del consejo a la comunidad.</p>
+
+<p>Caterine Rolón, del apartamento 1306, y Mauricio Suárez, del apartamento 803, también se postularon para integrar el consejo.</p>
+
+<p>Felipe Aristizábal, consejero del apartamento 109 Torre 3, propuso que Juan David y Mauricio Suárez pasaran a ser suplentes, y Caterine Rolón y Mauricio Suárez pasaran a ser principales. Ana María Botero, del apartamento 603, opinó que los recién llegados deberían decidir si quieren ser consejeros principales o suplentes.</p>
+
+<p>Se mencionó que en muchas copropiedades se establece un número de principales y suplentes para incentivar la participación, y se sugirió que las decisiones se tomen por mayoría, considerando el voto tanto del principal como del suplente.</p>
+
+<p>Ivonne Mesa cedió su puesto en el consejo a Marta Bonilla, quien había manifestado su interés en participar. Sin embargo, posteriormente, Marta Bonilla prefirió que Ivonne Mesa se quedara en el consejo debido a su perfil como ingeniera, considerando que sus capacidades serían valiosas para los proyectos que se avecinan en la copropiedad.</p>
+
+<p>Luz Marlene Tangarife solicitó ser cambiada por Katherine Rolong.</p>
+
+<p>Ángela María Londoño, del apartamento 804, sugirió que se preguntara a Fabián Sánchez, de la torre 1, si quería ser consejero principal, ya que no estaba en la lista de consejeros principales.</p>
+
+<p>Fabián Sánchez manifestó su desacuerdo con que Mauricio, Juan David y Nelson tomaran las decisiones de manera recurrente, y propuso que uno de ellos fuera suplente.</p>
+
+<p>Marta Bonilla sugirió que si son cinco principales, deben asistir los cinco, y si no, avisar con tiempo al suplente. Se propuso definir de una vez quién es el suplente para que reemplace al principal en caso de ausencia.</p>
+
+<p>Ivonne Mesa aclaró que estaba en la plantilla como apoderada del apartamento 1605, y solicitó el cambio porque ya no le correspondía ese apartamento.</p>
+
+<p>Se propuso que Juan David pasara a ser suplente y Mauricio Suárez pasara a ser principal. Se aclaró que Ivonne Mesa es dueña de un parqueadero, lo que la habilita para ser consejera.</p>
+
+<p>Se procedió a preguntar a la asamblea si estaban de acuerdo con el equipo de consejo propuesto.</p>
+
+<p>Felipe Aristizábal mencionó que a su esposa no le habían dado el ingreso a la asamblea a pesar de ser dueña de un parqueadero.</p>
+
+<p>Se sometió a votación la siguiente conformación del consejo de administración:</p>
+
+<ul>
+ <li><strong>Dari Villa</strong> (1713, Torre 3): Aprobación</li>
+ <li><strong>Caterine Rolón</strong> (1306): Aprobación</li>
+ <li><strong>Mauricio Suárez</strong> (803): Aprobación</li>
+ <li><strong>Ivonne Mesa</strong>: Aprobación</li>
+ <li><strong>Luz Marlene Tangarife</strong> (709, Torre 3): Aprobación</li>
+</ul>
+
+<p>Se preguntó a la asamblea si alguien no estaba de acuerdo con la postulación de estas personas al nuevo consejo de administración. Se indicó que presencialmente todos estaban de acuerdo y virtualmente nadie se opuso a la aprobación.</p>
+
+<p>José Ricardo Betancourt manifestó que su esposa, también copropietaria, tenía problemas para conectarse y no sabía si tenía intención de pertenecer al consejo. Felipe respondió que la intención no era ingresar al consejo.</p>
+
+<p>Se concluyó que el nuevo consejo de administración estaría en funciones a partir del 14 de agosto de 2025 hasta la próxima asamblea de copropietarios.</p>
+
+<p><strong>Resultado de la votación:</strong> La conformación del consejo de administración propuesta fue aprobada por unanimidad presencial y sin oposición virtual.</p>
+<h2>6. Renuncia y elección de la revisoría fiscal</h2>
+
+<p>En este punto del orden del día, el señor Hugo León Incapié presenta su carta de renuncia al cargo de Revisor Fiscal, el cual ha desempeñado desde el 28 de marzo de 2023. Expresa su agradecimiento por la confianza depositada en él durante su gestión, destacando su compromiso con la responsabilidad, transparencia y cumplimiento normativo. Sin embargo, manifiesta que su decisión se basa en una reflexión personal, citando: "Si todo lo que ofreciste no fue suficiente, ofrece tu ausencia. A veces retirarse es el mayor acto de respeto y dignidad hacia uno mismo y hacia los demás".</p>
+
+<p>Tras la lectura de la carta, se abre un espacio para preguntas por parte de los asistentes. Magda Quijano solicita una explicación más detallada sobre los motivos de su renuncia. Otros asistentes, como Luz Marleny, Marta Arboleda y Adriana Cifuentes, también expresan su inquietud y desean conocer más sobre los manejos internos y la situación de la copropiedad, especialmente en relación con la rotación de contadores y las decisiones tomadas por un grupo reducido de personas.</p>
+
+<p>Hugo León Incapié explica que su decisión se debe a varios factores. En primer lugar, señala que en las asambleas se ha tendido a señalar más al revisor fiscal que a los errores cometidos por la administración anterior. Además, menciona un desinterés generalizado en la copropiedad, evidenciado por la falta de participación en las reuniones del consejo, donde solo tres personas tomaban las decisiones. También hace referencia a un detonante relacionado con unos gastos que, en su opinión, no fueron aclarados con la suficiente diligencia por la contadora. En resumen, indica que su renuncia se debe a la percepción de que sus esfuerzos son insuficientes y que no está aportando valor a la copropiedad.</p>
+
+<p>Ante la renuncia del revisor fiscal, se procede a la presentación de los candidatos a ocupar el cargo. Se postulan Sandra Milena Escobar, Hugo Sierra, Everlides Sotelo y Jesús Orlando Ramírez. Cada uno de los candidatos tiene 5 minutos para presentar su propuesta y responder a la pregunta: ¿Qué hace que esta comunidad virtual y presencial te elija?</p>
+
+<p>Hugo Sierra, especialista en alta gerencia y contador público, destaca su experiencia en propiedad horizontal desde 2008, siendo revisor fiscal en varios conjuntos residenciales. Su objetivo es cumplir con las obligaciones de la revisoría fiscal, emitir una opinión independiente sobre los estados financieros y contribuir a la eficiencia de la administración. Marcela Pineda complementa su presentación, mencionando que es director administrativo y financiero del Aeropuerto Olaya Herrera y conocido del revisor fiscal saliente.</p>
+
+<p>Everlides Sotelo, contadora pública con especialización en Gestión Financiera Empresarial, ofrece como valor agregado una auditoría general y evaluación de riesgos de la copropiedad, realizada con el apoyo de profesionales en el tema. Su enfoque se centra en la auditoría financiera, de gestión, de control interno y de cumplimiento.</p>
+
+<p>Sandra Milena Escobar, contadora pública especializada en propiedad horizontal, destaca su experiencia como administradora, lo que le da una visión amplia de la propiedad horizontal. Su objetivo es asesorar al consejo de administración para que se tomen decisiones razonables y velar por el patrimonio de los copropietarios.</p>
+
+<p>Jesús Orlando Ramírez, contador público con especialización en Finanzas, ofrece un servicio de apoyo a las decisiones empresariales en las áreas contables, administrativas, operativas y de gestión de calidad. Su servicio conlleva acompañamiento permanente a la gestión empresarial, evaluación y recomendaciones de control, fortalecimiento de la información financiera y la óptima utilización de los recursos disponibles.</p>
+
+<p>Tras las presentaciones, se procede a la votación para elegir al nuevo revisor fiscal. Samuel, de Código Verde, explica el sistema de votación a los asistentes, tanto presenciales como virtuales.</p>
+
+<p>Una vez finalizada la votación, Código Verde presenta los resultados: Hugo Sierra obtiene el 61.61% de los votos, Sandra Escobar el 28.24%, Everlides Sotelo el 5.8% y Jesús Orlando el 5.7%.</p>
+
+<p>En consecuencia, <strong>se declara a Hugo Sierra como el nuevo Revisor Fiscal de Feliz Condominio PH</strong>.</p>
+<h2>7. Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas</h2>
+
+<p>Se da inicio al tema con una contextualización sobre la historia del conjunto residencial, que abarca 7 años. Se indica que, al comenzar la gestión actual en julio, se identificaron áreas que requerían orden y estructuración. Se menciona que en enero del presente año no se contaba con un documento formal que estructurara las fechas de ingreso de la torre 3 ni los coeficientes de las torres.</p>
+
+<p>Se destaca que los pagos en la administración anterior se realizaban directamente sin una segunda validación, lo cual implicó la necesidad de implementar controles adicionales con Ave Villas. Además, se señala la ausencia de un líder de mantenimiento, situación que se está abordando en colaboración con CIMA para estructurar procesos formales. Se enfatiza la importancia de administrar adecuadamente una empresa con ingresos anuales de 1.377 millones de pesos, requiriendo un equipo de profesionales capacitados.</p>
+
+<p>Se indica que la contabilidad implementaba mejoras de forma irregular, situación que se busca corregir. Se menciona que desde febrero se exige a los proveedores el soporte de los servicios prestados y se destaca la falta de hojas de vida de los equipos a los que NESCO realiza mantenimiento. Se señala que no se aplicaban adecuadamente los protocolos de seguridad, mencionando ejemplos como carros lavados en los parqueaderos y llaves entregadas en la portería sin control. Asimismo, se indica que el servicio de aseo no tenía control de calidad, situación que se está corrigiendo mediante la toma de fotografías antes y después de la limpieza.</p>
+
+<p>Se comenta sobre el estado del lounge, describiéndolo como deteriorado, y se menciona la corta duración de la talanquera, resaltando la necesidad de trabajar como una empresa y la importancia de contar con manos que ayuden en este proceso.</p>
+
+<p>Ante la pregunta de una propietaria sobre la responsabilidad del consejo y la falta de soluciones por parte de la administración, se responde que se están implementando soluciones. Se menciona que los vecinos de la torre 3 pagaron una cuota de 50 millones de pesos, pero no incluía el lobby ni las cámaras. Se aclara que el chulito en la lista indica que el proyecto está completamente ejecutado, remitiendo al acta del 11 de julio de 2024 para más detalles.</p>
+
+<p>Se indica que, al ordenar la información, se encontraron inconsistencias, como el hecho de que Coninsa no entregaba la información solicitada. Se menciona que la torre 3 pagó 68 millones de pesos adicionales, pero la administración del momento no realizó el cobro correctamente, lo que resultó en 34 millones de pesos cobrados en 2025 sin destinación específica. Además, se encontró una deuda de Coninsa por 28 millones de pesos, que ya fue saldada. Se concluye que hay 34 millones de pesos sin destinación específica, pertenecientes a las torres 1 y 2.</p>
+
+<p>Se presenta el proyecto de fachadas, recordando que en febrero se aprobó un presupuesto de 909 millones de pesos. Sin embargo, se recibieron comentarios de varios propietarios indicando que no tenían el capital para realizar el pago, y se cuestionó la tecnología propuesta para las cubiertas. Se indica que no se contaban con los 551 millones de pesos necesarios, sino con 357 millones, y que era necesario recaudar el resto en 13 cuotas.</p>
+
+<p>Se menciona que el revisor fiscal, don Hugo, recomendó partir el proyecto para hacerlo viable y no arriesgar a la comunidad firmando un contrato sin contar con el dinero. Se presenta el comportamiento de la cartera, indicando que a principios de julio se encontraba en 48 millones de pesos. Se informa que se inició un nuevo proyecto, replanteando el anterior para tener más información y tranquilidad con respecto a los números.</p>
+
+<p>Se destaca que se realizó una invitación pública a todos los proveedores interesados en participar en el proyecto. Se menciona que se tuvo en cuenta la sugerencia de utilizar PVC para las cubiertas, a pesar de ser más costoso, por ser una tecnología menos contaminante. Se comparan los valores de las torres en fachadas entre febrero y agosto, indicando que se excluyeron los parqueaderos por no requerir alpinistas y estar en buen estado. Se incluyen los techos y fachadas de porterías y piscinas, que no estaban en el primer proyecto. Se indica que se incluyó un presupuesto para arreglar los apartamentos afectados internamente, lo cual no estaba en el presupuesto de febrero.</p>
+
+<p>Se señala que Decorhábitat no es experto en cubiertas, lo cual generó una problemática. Se indica que no sirve de nada financiar si no se tiene el dinero y no se sabe si la cartera se va a recaudar. Se menciona que la interventora anterior, Ana María, indicó que no se podía partir el proyecto en partes y que era necesario recaudar el dinero, lo cual generó un conflicto.</p>
+
+<p>Se indica que se buscó una nueva interventora con experiencia, quien ayudó con los pliegos. Se menciona que el consejo buscó a la interventora y que Juan David es ingeniero sanitario. Se indica que se hizo una invitación pública a todos los interesados en participar. Se menciona que se le hizo caso a la persona que sugirió utilizar PVC, a pesar de ser más costoso.</p>
+
+<p>Se indica que se hizo todo el ejercicio y no se quedaron con un solo proveedor. Se comparan los valores de las torres en fachadas entre febrero y agosto, indicando que se excluyeron los parqueaderos por no requerir alpinistas y estar en buen estado. Se incluyen los techos y fachadas de porterías y piscinas, que no estaban en el primer proyecto. Se indica que se incluyó un presupuesto para arreglar los apartamentos afectados internamente, lo cual no estaba en el presupuesto de febrero.</p>
+
+<p>Se señala que Decorhábitat no es experto en cubiertas, lo cual generó una problemática. Se indica que no sirve de nada financiar si no se tiene el dinero y no se sabe si la cartera se va a recaudar. Se menciona que la interventora anterior, Ana María, indicó que no se podía partir el proyecto en partes y que era necesario recaudar el dinero, lo cual generó un conflicto.</p>
+
+<p>Se indica que se buscó una nueva interventora con experiencia, quien ayudó con los pliegos. Se menciona que el consejo buscó a la interventora y que Juan David es ingeniero sanitario. Se indica que se hizo una invitación pública a todos los interesados en participar. Se menciona que se le hizo caso a la persona que sugirió utilizar PVC, a pesar de ser más costoso.</p>
+
+<p>Se presenta el revisor fiscal de junio indicando cuánto capital hay recogido. Se indica que la primera propuesta es tomar los 34 millones que son de la torre 1 y 2 para asignárselo al proyecto y reducir la cantidad de cuotas. Se muestra un ejemplo de las cuotas de un proyecto de 909 millones de pesos. Se indica que, al encontrar 34 millones que son de la 1 y 2, se podría pasar de 13 cuotas a 11 cuotas. Se indica que si se aprueba que los 34 millones se destinen a fachadas y cubiertas, el presupuesto se mejora y se podrían hacer el proyecto solamente con 11 cuotas. Se indica que si la cartera de 48 millones mejorara, se estaría eliminando también la cuota de enero y se estaría haciendo un proyecto de 10 cuotas.</p>
+
+<p>Se indica que se trabajó en esto con errores, inconvenientes, problemas de comunicación y de no aceptación de muchas cosas. Se indica que la comunidad exigió reducir los valores porque no tienen capacidad de pago.</p>
+
+<p>Ángela Londoño pregunta si en el alcance hicieron nivelación de los morteros que ya estaban desgastados y no daban caída a los desagües, si está incluida dentro de esta propuesta de la membrana de PVC hacer esas nivelaciones. Sandra Márquez, la interventora, responde que en la opción de la impermeabilización con asfalto, obviamente había que retirar la impermeabilización existente, hacer nivelación de morteros y hacer todo el procedimiento nuevo, cierto. Con el manto PVC no es necesario hacer esto, con el manto PVC simplemente colocamos el manto encima de la impermeabilización hoy colocar el manto encima de la impermeabilización antes hace un doble propósito, queda mucho mejor, de hecho se sellan las juntas que son las que están como afectando los apartamentos de los últimos niveles y se coloca la impermeabilización en PVC que no necesita exactamente que se retire la impermeabilización existente, no.</p>
+
+<p>Ángela Londoño pregunta si se garantiza que todas las pendientes quedan a las boquillas pues a los desagües. Sandra Márquez responde que no es el procedimiento que ella conoce, pero si lo garantizan. Ángela Londoño pregunta cuánto tiempo, porque a todos nos toca pagarle los cielos a los pisos 19, entonces si después vamos a volver a lo mismo y que entonces que fue la caída. Sandra Márquez responde que la garantía de ese procedimiento son de 10 años.</p>
+
+<p>Fabián Sánchez indica que cuando uno maneja membranas PVC en sistemas de impermeabilización, la garantía de la membrana son 10 años. Indica que el emposamiento hay que empezar a hacer un mapeo donde hay emposamiento. Indica que el sistema granillado o el de manto, digámoslo aquí pues como para el lenguaje de todos, asfalto, eso no es un asfalto, es un manto asfáltico de emulsión, pues ese sistema sirve de sufridor, lo llamamos nosotros en construcción. Entonces en las reparaciones que se están haciendo hoy en día en las unidades, el sistema PVC encima del manto granillado funciona muy bien porque sirve como capa o manto sufridor antes de la capa PVC. Indica que el tema de revisarlo en posamiento si debe estar. Uno llega y hace un mapeo, quiten no más esa parte y se nivela bien.</p>
+
+<p>Ángela Londoño pregunta si ese mapeo si está, si deben coger y retirarlo, no decir que es que así, que no lo necesita. Sandra Márquez responde que no conoce ni le entregaron el proyecto inicial, entonces empezó a hacer un proyecto nuevo con cantidades nuevas, se sacaron las cantidades nuevas con todos los planos y ella está responsable de todas las cantidades que sacó de todos los planos.</p>
+
+<p>Ángela Londoño pregunta si se responsabiliza de cantidades. Sandra Márquez responde que sí, se responsabiliza de cantidades y la copropiedad no va a tener el imprevisto o el asombro de que resultó que no, es que vea, no estaba contemplado y resultó que había muchos ladrillitos malos, entonces esto se sal de las manos, listo, es todo eso si está responsable, estamos hablando de una interventoría.</p>
+
+<p>Ángela Londoño pregunta si en el anterior proyecto estaba contemplado que se arreglaban todos los balcones, que fue un asunto discutido de si se incluían o no y se estaban pintando los cielos y se le hacía el tratamiento de las fachadas igual a todos los muros de los balcones, si aquí está incluido. Sandra Márquez responde que sí señora. Ángela Londoño pregunta si todos los muros son por lado y lado y las zonas comunes habían, digamos que habían un montón de muros que se revisaron en la unidad que estaban muy malos, o sea, hablo de todas esas zonas como en el barbecue que el muro está soplado y a punto de caerse, el de la terraza donde está, muchos pasamanos malos que también estaban contemplados arreglarse. Sandra Márquez responde que sí, todo eso está contemplado.</p>
+
+<p>Ángela Londoño pregunta sobre la programación, indicando que es muy importante que no veo que aquí nos estén exponiendo eso. Pregunta en qué fecha se pretende iniciar, si les va a coger diciembre, el polvo que implica una fachada, es de una vez expresarle a la comunidad, yo no tengo niños, pero entonces yo puedo renunciar muy fácil a no hacer nada en Navidad de decoración y aguantarme el polvo, pero los que tienen niños sí sé que es muy importante hacerles el árbol de Navidad y lo que sea, yo siempre pienso en los niños. Pregunta sobre las pólizas que habíamos pedido y la responsabilidad del constructor con respecto a la seguridad. Pregunta si cualquier daño ocurrido en un apartamento va a ser arreglado por el contratista. Sandra Márquez responde que sí, todo está incluido.</p>
+
+<p>Fabián Sánchez indica que hay que hacer un levantamiento para poder hacer la impermeabilización. Sandra Márquez responde que sí, eso también está ahí metido, está incluido, está contemplado.</p>
+
+<p>Ángela Londoño pregunta si ella va a supervisar que se hagan las nivelaciones, la pregunta es el costo. Sandra Márquez responde que sí, señora, todo está incluido.</p>
+
+<p>Se procede a dar la palabra a los asistentes virtuales. Carlos Gallego indica que hay una cuota o un saldo de 68 millones, que fue un pago que hicieron Torre 1 y Torre 2 porque entregaron Torre 3 o nos pusieron a pagar cuentas de Torre 3 en su momento, pero Torre 3 no estaba cancelando administración. Indica que es un saldo a favor que se tenía en torre 1 y torre 2. Indica que no cabe ahí entrar en discusión de que esto vaya, por ejemplo para la dotación o el tema del Lobby de Torre 3. Indica que es un tema que en su momento con la administración anterior se había dejado ahí como para las fachadas, que era el proyecto que ya estaban dando. Indica que le preocupa que en su momento había un interventor muy capacitado que era el señor Elkin, que con él se había hecho todo el tema de entrega de torre 3. Indica que él ya había hecho toda la valoración de torre 1 y torre 2. Pregunta qué pasó con él. Indica que no le ve mucho sentido a que después de que aquí se desgasten 80 o 100 personas aprobando algo, después se acerquen unas y digan pare un proyecto y entonces se retrase todo, porque es que este proyecto debe haber empezado hace año y medio y todavía seguimos escogiendo el proveedor y todavía seguimos discutiendo los términos, entonces de hecho ya se va a juntar otro tema adicional, los mantenimientos de las fachadas se deben hacer, si no estoy mal, cada dos años, o sea que ya ahorita en enero se debe hacer el mantenimiento de la fachada de torre 3, entonces es otro dinero adicional que le van a pedir a Torre 3 para que haga o lo van a juntar con este proyecto de fachadas, pero entonces mire que ahí ya vamos disparejos en los temas que debimos haber hecho hace año y medio.</p>
+
+<p>Se responde que las fachadas en una ciudad como Medellín son más o menos 7 a 8 años el promedio el mantenimiento. Se indica que cuando hicieron la búsqueda, uno de los primeros opcionados era don Elkin, hicieron el cuadro comparativo, hicieron la revisión. Se indica que tenía un costo, cuando quieran ver el cuadro comparativo era mucho más costoso, más o menos unos 7 millones por cada torre. Se indica que ya hacer un presupuesto adicional, porque aquí se pagó por los pliegos, porque aquí está elaboración de pliegos para este proceso y elaboración de pliegos para este proceso, no nos parecía pagar 14 millones más o menos que era lo que nos daba para el siguiente, eso fue la razón por la cual no continuamos con don Elkin.</p>
+
+<p>Alejandro Palacio indica que quedó muy frustrado, muy aburrido con esta presentación. Indica que esto en vez de aclarar, oscurece más. Indica que quizás le han puesto mucho empeño a esto, pero esto ya no es de retórica ni de papel, esto es de ejecución. Indica que como lo han dicho los vecinos, han pasado seis meses desde que aprobamos en una asamblea esto y ahora seis meses vuelve y nos presenta una cosa y yo escuchando a Felipe y Angela quedó más preocupado. Pregunta por qué se demoran más de dos meses en cambiar un vidrio con riesgo de un accidente tanto interno como externo en el gimnasio. Pregunta por qué no han comprado las sombrillas que hace rato, que hace rato está pidiendo la gente. Indica que esto sí conecta con el tema de las fachadas. Indica que imagínense para cambiar un vidrio que es urgente unas sombrillas que lo más fácil de comprar nos demoramos tanto. Indica que cómo será el tema de ejecución de este proyecto. Indica que otra vez dilataron seis meses. Indica que hay mucha más duda de la que había en febrero. Pregunta cómo así que la gente no paga la administración. Indica que entonces los bobos pagamos cumplido. Indica que es que si a la segunda cuota no pagó, entonces la señora administración tiene que mandarle un comunicado al apartamento diciendo, haciéndole, recordando que de pagar y con tres cuotas entonces cobro jurídico. Indica que cómo así que no pagan. Indica que cómo así que una asamblea aprueba en febrero, en febrero un proyecto y se acerca una gente que eso ya no va. Indica que eso es ilegal. Indica que qué pena, yo no soy abogado, pero aquí si hay abogados. Indica que ya estaba aprobado. Indica que entonces en seis meses nos van a volver a decir que encontraron otra cosa más barata o que eso no iba. Indica que con las preguntas que hace la ingeniera, no sé si será ingeniera, me disculpará. Indica que quedó horrorizado, quedó más preocupado que un berraco con eso, con lo que manifiesta Felipe, porque lo sacaron. Sugiere que saquen el proyecto y la pedir un favor inmenso y que dejemos los egos aparte y un montón de cosas a Felipe y Angela que por favor, ellos que tienen la experticia, las personas que tengan la experiencia acá, que revisen esos pliegos con lupa, por favor. Indica que si él supiera eso, créanme que lo haría por no entiendo un forro de eso. Indica que a él le hablan de manto y un montón de cosas y no entiendo eso. Indica que este proyecto, aprobarlo en esta asamblea es una irresponsabilidad.</p>
+
+<p>Se responde que el tema del tiempo de demora en la consecución de un vidrio, pues ya lo dije, se demoró por el tema de la revisión y los procesos que estamos haciendo para ponerlos más controlados. Se indica que el tema de sombrillas de lo que tengo entendido. Se indica que resulta que fumigación. Se indica que si hacemos un cuadro comparativo en donde las tres opciones no son comparables, es un proceso que le estamos pidiendo a Sima que mejore y optimice, pero es un tema urgente, pues era un vidrio, era una urgencia, entonces ahí que priorizar también que es urgente que es, en una emergencia que es. Se indica que es más costoso lo que hubiera causado esa caída que esperar 23 meses en una en un proceso que ni siquiera tenemos claro. Se indica que entonces dónde está. Se indica que si en eso nos encartamos cómo era cuando este proyecto de fachada que es de tanta envergadura, pues salga algún imprevisto, llega el mantenimiento de la torre 3 y no han hecho el de la 1 y la 2.</p>
+
+<p>Carolina Durán indica que aquí ni siquiera tenemos una caja menor para que la administración pueda hacer unas decisiones más rápidas. Indica que está bien que sí hayan tres cotizaciones siempre comparables. Indica que es verdad, yo soy auditora contadora también, pero no hay una caja menor. Indica que incluso cuando estuve un manual, pero nunca fue escuchado ni leído. Indica que quedé con Nelson varias veces los viernes de reunirnos y jamás nos reunimos, que porque no tiene tiempo todavía desde que fue nombrado. Indica que incluso Mauricio conocía que yo tenía eso presentado. Indica que no se pudo nunca. Indica que es imposible que una administración no tenga ni mínimo 500 mil pesos para un poder de decisión de imprevistos que se tienen que solucionar, que cuando ella tenga que comprar papelería, incluso tiene que pedir la misma cotización y que le ha tocado a ella misma pedir, porque me ha dicho comprar papeles para darle hasta los porteros de la plata de ella, del bolsillo.</p>
+
+<p>Marta Marín indica que está de acuerdo con el otro propietario que habló antes de la compañera, y con todo el respeto que merecen todos como profesionales, el tiempo que han metido en todo esto, todos somos propietarios, a todos nos duele la unidad. Indica que ya nos metieron gato por liebre con un gimnasio hace unos años y yo no creo que este proyecto lo podamos aprobar hoy. Indica que no me siento en capacidad de aprobarlo hoy porque siento mucha inseguridad con todo. Indica que esto es y lo han dicho en el chat porque dije que oyéramos a la gente virtual, porque hay una inconformidad gigante que hemos ido prologando. Indica que tenemos que evaluar esto de una manera más correcta, porque yo creo que todos los que estamos acá y todavía nos quedamos acá, venimos dando una cuota extra muy grande, muy grande y no veo nada para mejorar. Indica que sé que hay dos personas profesionales en esto muy importantes, y yo creo que es de voz de todos que es muy importante que ellos sepan a ciencia cierta punto por punto que se va a hacer y yo estoy de acuerdo con lo que ellos digan para mí.</p>
+
+<p>Laura Rodríguez indica que en el tiempo en que Felipe subo pasaban mucho, hacían muchas reuniones, sobre todo, pues al menos para nosotros nos cruzaba mucho con los entrenamientos de nuestra hija, con la salida de la guardería, entonces pues demandaba tiempo esto, pero en lo que uno sí notaba mucho compromiso en reuniones por parte del Consejo, incluso los sábados muy temprano. Indica que definitivamente a lo que le falta el consejo es ejecución, como tanto se ha dicho, porque ellos se han dedicado, sacan tiempo, tienen ideas, pero no ejecutan. Indica que ella ha sido una y fui pues de las sombrillas que como es posible que en Feliz hacemos con dos sombrillas para 208 apartamentos, una diga feliz A y la otra diga FIT, pues eso no tiene carta de presentación, eso es un beneficio para todos. Indica que se les agradece mucho a lo que ha hecho Nelson, a lo que ha hecho Mauricio, que tienen conocimiento que son más antiguos en la unidad, pero definitivamente les falta ejecución. Indica que lo que generó la desconfianza, primero el miembro, porque Felipe también entró nuevo, el primero fue partícipe de fachadas, se le hizo la invitación de si quería estar en el consejo, lo aceptó, pero también llegó otra persona que en un principio tuvo muchas dudas sobre el proyecto que se estaba que se estaba presentando, entonces él hizo como comentarios fuertes, como que no, que este proyecto se aprobó con trampitas, bueno, fueron como varios, hubieron varios roces. Indica que cuando se hizo la presentación, la socialización del proyecto, que lo hizo Angela y Felipe, perdón, Angela no, Ana María, la interventora en su momento, y Felipe, yo, pues yo siento que ellos los cogieron de comodines para aclarar las dudas. Indica que Ana María fue una persona que, mejor dicho, a todos nos dio la certeza, incluso cosas que uno porque yo también yo trabajo con Felipe, nosotros trabajamos juntos, entonces tenemos la misma experiencia, y nos aclaró muchas dudas que no teníamos a ciencia cierta de la necesidad, nos dio un panorama, nos dio tranquilidad de que el proyecto que se estaba aprobando si era necesario, que si valía eso. Indica que fue muy feo lo que hicieron con ellos, porque lo sacaron primero a Ana María, le pidieron que no, que ese proyecto no podía ser, incluso después de haber cobrado la primera cuota, ni siquiera había pasado un mes y ya estaban descartando el proyecto. Pregunta por qué. Indica que cuáles eran los comentarios de Nelson y el equipo. Indica que es que no hay plata para pagar, es que ya vino Pepito, que es muy querido en la unidad, entonces no tiene plata para pagar, Entonces ahí sí les empezó a doler a todos el bolsillo, pero los otros si, yo no soy tan querida en la unidad, si tal persona no es tan querida para la unidad, eso no importa. Indica que en estos momentos, pues yo puedo decir muchas cosas más, y lo que dicen es que se estaba pretendiendo bajar un poco un proyecto que fue aprobado con la más alta calidad por otro. Indica que en estos momentos desconocemos, Santo Felipe, como yo en lo que pude escuchar, porque muchas de las reuniones que tuvieron yo las escuché, por qué bajar. Indica que incluso iban a bajar la calidad 7 años. Indica que eso no es coherente, porque no es justo que las personas ahora estén sacando. Indica que ella está en Torre 3, mi cuota es mínima, pero una persona que está casi que doblando la cuota de la administración, en siete años tenga que volver a sacar una cuota más alta. Indica que eso no es justo, porque simplemente no hay que bajar, hay que bajar el proyecto y la única forma de bajarlo es como bajando las calidades y bajando los materiales. Indica que eso fue lo que Nelson no le gustó, que tanto la señora Ana María Echeverri, la interventora, no se prestó para eso. Indica que después llegó donde el interventor que recibió torre 3, lo puso, él dijo yo puedo hacer esto, pero como hago la inspección desde los balcones. Indica que Felipe le decía, usted no puede hacer eso. Indica que así es que no es la misma visual que usted tiene al frente Ana María, que hizo con drones. Indica que nosotros queremos, o al menos yo lo que quiero es que den claridad, porque todo lo que Ángela pregunta, la señora, la interventora dice que sí, pero no nos ha dado como una respuesta coherente. Indica que en estos momentos están descartando los parqueaderos, pero los parqueaderos como tanto, no sé si Felipe aún tiene la prueba visual de lo que nos compartió Ana María de la necesidad de los parqueaderos. Indica que esto para mí no es algo que uno diga no trae un total beneficio, es que está más completa, es que es mejor. Indica que hasta el momento a mí no ha logrado convencerme.</p>
+
+<p>Se indica que lo que es una apreciación de algo más, no una pregunta. Se indica que si hay una pregunta y por favor, por favor, no como la que habló la esposa, Don Felipe, no sé si usted va a un dar algo sobre lo que Doña Laura porque yo no entendí bien. Se indica que si es una pregunta, lo entendí como una apreciación de ella frente al proyecto como tal.</p>
+
+<p>Felipe Aristizábal indica que él está dispuesto a traer con doña Ángela y el Consejo y mirar bien esas propuestas para antes de tomar de una decisión. Indica que hagamos un conversatorio como se hizo con la interventora anterior, nos explique material sobre el material. Indica que es el proceso, como lo están usando, las cantidades, cuánto es todo, todo para desenglobar, porque acá pasaron una página agujita, hojita, pusieron un alpinista para revisar cómo está todo. Indica que él ve que hay muchas fallas. Indica que vi que está pintaplast se invitó y Pinta Plaza está casi con una misma propuesta muy similar a la que tenían. Indica que si ellos están y tenían tantas ganas de quedarse ahí, porque no lo abrocharon. Indica que venga qué descuento ahí yo no veo ningún descuento por adjudicarles el contrato. Indica que acá todo esto uno no puede dar las cosas así como de muy querido. Indica que como en algún momento quería el consejo cuando estaban con el interventor antes de que llegara la señora. Indica que venga don Elkin, coja usted este proceso. Indica que yo que les dije. Indica que sea que don Elkin sea muy querido. Muy amigo, pero hagan una convocatoria para que lleguen 10 o 20 o 30. Indica que lo que me parece muy grave es que invitaron a Pinta Plaz y no fueron capaces de invitar a Decor Habita, que era lo que se había ganado y de pronto hubieran podido conseguir un beneficio mejor en plazos X o Y. Indica que ya no Angela, no nos han explicado que hidrófugo van a utilizar, con qué calidad, con cuántos años, que pintura, si es pintura coraza, ¿Cuál es la garantía? Indica que es uno pasando así hoja a hoja. Indica que yo creo que esto sí merece un conversatorio para que todo el mundo resuelva dudas y tomar una decisión en votación más adelante.</p>
+
+<p>Se indica que vamos a votar, ¿Les parece? Se indica que ah, OK, hay un. Se indica que si quieres devuélvete por. Se indica que pero acá, acá, muy importante y hago un llamado a doña Ángela, Felipe y don Fabián y los demás y las demás personas que sepan de todo este tema de mantenimiento de ingeniería, pues para nosotros es muy importante que no perdamos el impulso y que así como hoy estamos acá y quizás no se aproba todo el proyecto, al menos y comenzar con una base y es que sean ustedes mismos los que nos colaboren a nosotros y yo creo que así se retorna la confianza en todos.</p>
+
+<p>Se indica que entonces doña Ángela, qué pena, si me gustaría que usted y Felipe replanteen y nos acompañen en ese equipo de trabajo. Se indica que es mejor para que los ambientalmente la escuchen. Se indica que hay una cosa que es muy importante y hacemos en los grupos de proyectos y no tiene que ser un civil, o sea, no tiene que ser, si hay otro civil muy rico, pero también sería muy bueno, a veces las mejores ideas salen de propietarios que no son civiles. Se indica que de propietarios no, vean, los grupos de gerencia de proyectos son multidisciplinarios, a veces un contador puede resultar que con una idea que se ha comprobado, un financiero. Se indica que entonces no tenemos que ser los civiles los que nos quieran acompañar para sacar este proyecto de cubiertas, sería muy bueno porque verdad es una urgencia.</p>
+
+<p>Se indica que redondeando entonces sería para este comité sería doña Ángela Londoño. Se indica que no, pero don Felipe, Don Felipe, para que sea el momento, no Felipe, que sea ese momento de pronto que caminemos juntos, arriesgue se, ¿Por qué no? Inténtelo. Se indica que si usted ve que el primer momento no le da. Se indica que don Felipe, perdón, una moción de orden, perdón, una moción de orden. Se indica que vengan señores, Señores. Se indica que don Felipe.</p>
+
+<p>Se indica que mientras sigue conversando allá, entonces, doña Ángela, para los que están acá y virtualmente, porque los que están hablando ya no los escuchan virtualmente. Se indica que entonces, doña Londoño, vamos firmes con usted, si, don Felipe Sánchez, vamos firmes con usted. Se indica que perdón, don Fabián, Firmes, sí. Se indica que listo, don Felipe. Se indica que don Felipe, contamos con usted. Se indica que listo, excelente, muchas gracias. Se indica que alguien más. Se indica que el esposo de la señora ya hoy. Se indica que cómo se llama su esposo. Se indica que no importa. Se indica que Mauricio Madrigal, del apartamento 1108. Se indica que Adriana Cifuentes, 1108, por favor. Se indica que Mauricio Madrigal. Se indica que gracias, gracias. Se indica que Mariano Calderón, 1905. Se indica que alguien más se quiere postular para este comité. Se indica que obviamente en trabajo conjunto con el Consejo de Administración, ¿Cierto? Se indica que OK, por acá. Se indica que Alejandro Londoño, del 1811, virtualmente. Se indica que excelente. Se indica que un segundo por alguien más. Se indica que doy la palabra señora y después Fabián. Se indica que listo, buenas noches. Se indica que yo le pido a los propietarios que están allí en virtual también que nos colaboren, es que necesitamos gente que se comprometa con ese conversatorio, no únicamente los que estamos aquí presenciales. Se indica que muchas gracias. Se indica que de hecho, don Alejandro del 1811 se acabó de postular también, don Fabián, pero sí quisiera que nos. Se indica que que la asamblea en su sabio conocimiento nos deje claro el alcance, porque nos ha pasado que me pasó pues en la de mi mamá lo mismo, una dificultad con el gamo. Se indica que nada más venga aquí y díganos si es mejor dicho, díganos hasta dónde va a ser el alcance para también nosotros tener claro nuestra responsabilidad. Se indica que yo no sé si de pronto el consejo.</p>
+
+<p>Se indica que entonces en ningún momento la idea era incrementar la cuota, ¿Cierto? Se indica que entonces, entonces eso es buen punto, porque lo que va a hacer el equipo auditor, lo que va a hacer el equipo auditor es validar, validar todo el ejercicio, ¿Cierto? Se indica que hacer todo el estudio, la auditoría, ¿Cierto? Se indica que van a revisar, van a auditar y van a emitir concepto, ¿Cierto? Se indica que van a auditar y emitir concepto sobre alcance, calidad y costo. Se indica que vale? Se indica que en ese.</p>
+
+<p>Se indica que don Elsa, yo quisiera como redondear algo. Se indica que yo pensaría que los los que están acá, yo me imagino que son propietarios, ¿Cierto? Se indica que yo diría que esa parte de auditoría sí, pero la decisión para generar tranquilidad, la decisión es compartida, tanto de consejo como ese comité, porque. Se indica que porque si queremos generar esa tranquilidad, yo creo que la votación tiene que ser entre todos los temas en el comité. Se indica que me estoy imaginando algo así. Se indica que por favor, me ponen cuidado. Se indica que me estoy imaginando. Se indica que nos sentamos con el equipo auditor, se mira toda la documentación y se toman el tiempo de revisarla. Se indica que listo? Se indica que y de esa revisión en equipo, emitimos, emitir, emitimos comunicado a la comunidad. Se indica que están de acuerdo con este señor. Se indica que don Nelson? Se indica que pero con eso va a llegar el próximo año. Se indica que y yo estoy de acuerdo con lo que dice la señora Ángel. Se indica que prioricemos un tema, prioricemos algo y que quede definido acá que se va a intervenir. Se indica que eso. Se indica que sí. Se indica que peso 19. Se indica que entonces vuelvo a redactar la votación. Se indica que vuelvo a redactar la votación. Se indica que en este momento la prioridad descubiertas, prioridades cubiertas. Se indica que el equipo no hemos podido contarles los avances, pero para que tengan presente, como nunca nos quedábamos con un proveedor, sino con dos, entonces van a poder ver documentos de contratación no firmados, porque no quisimos llegar aquí con nada firmado, no queríamos hacerlo. Se indica que listo? Se indica que entonces van a llegar a ver contratos, van a tener el contrato enfrente de todo lo que. Se indica que y todas las condiciones, fechas y disponibilidad para poder ejecutar pronto. Se indica que entonces van a poder tener un material completo de las propuestas. Se indica que listo.</p>
+
+<p>Se indica que correcto. Se indica que en ese contexto, vienen, miran toda la documentación con interventora, nos sentamos, yo estoy ahí todo el tiempo, nos sentamos, yo me hago un lado, ustedes emiten concepto y ese concepto lo redactamos y se lo entregamos a la comunidad. Se indica que están de acuerdo? Se indica que esa sería la votación. Se indica que no, no, no, no. Se indica que porque tú es quien tomaría. Se indica que quién tomaría la decisión. Se indica que presidente, tengo la mano levantada hace rato. Se indica que qué pena. Se indica que Juan Sebastián González 508. Se indica que aquí hay varias cosas que como se va a formular la pregunta, a mí no me dan claridad. Se indica que la primera, si lo que van a hacer es emitir un concepto, nos vamos a ver en la posición de tener que volver a citar una asamblea porque no le estamos dando la potestad al comité auditor y al consejo de tomar una decisión en nombre de la asamblea. Se indica que entonces va a pasar lo mismo, en un mes va a llegar eso y vamos a estar en un punto donde no se les está dando la potestad de tomar una decisión. Se indica que eso una parte. Se indica que la segunda, La segunda parte va de cara y esto es de pronto aguar un poquito lo que ya se está decidiendo. Se indica que pero nosotros estamos pagando una cuota extra por el proyecto completo, cierto? Se indica que entonces está bien tener un programa por etapas, pero lo que se tiene que aprobar es el proyecto completo. Se indica que si no se aprueba el proyecto completo, no tiene sentido seguir pagando la cuota extra, porque si se va a empezar por arriba, yo creo que la plata para esa parte ya está. Se indica que entonces pues siento que esas dos cosas no están claras en la formulación de la pregunta que se va a hacer.</p>
+
+<p>Se indica que así es, veamos. Se indica que hay que ser muy prácticos respecto a lo que dice don Juan Sebastián, El comité cuando se planteó ahoritica y creo que la dio la niña, es que ese<h2>8. Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH</h2>
+
+El tema de la propuesta de una nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH fue abordado durante la asamblea.
+
+Se mencionó que se había enviado una máquina multifuncional al gimnasio para su evaluación. Sin embargo, Lina Marcela del apartamento 813, usuaria frecuente del gimnasio, expresó que, tras consultar con expertos, se determinó que la máquina no era adecuada para el uso intensivo de un gimnasio comunitario, sino más bien para uso doméstico. Indicó que una máquina adecuada para el gimnasio tendría un costo mayor, aproximadamente 22 millones de pesos.
+
+Mauricio Londoño del apartamento 1708 sugirió realizar un sondeo para determinar cuántos residentes utilizan el gimnasio, argumentando que no todos los habitantes del condominio lo usan y que podría ser más apropiado invertir en un gimnasio "smart" si la demanda lo justifica.
+
+Mauricio Suárez del apartamento 803 coincidió en que la máquina multifuncional debía ser de buena calidad y apta para el uso constante, recordando que una máquina similar había requerido reparaciones frecuentes en el pasado.
+
+Ante estas opiniones, se propuso no comprar la máquina multifuncional en ese momento y, en cambio, elaborar un presupuesto detallado para la asamblea ordinaria de 2026, con la participación de los interesados.
+
+Se preguntó a la asamblea si estaban de acuerdo con esta propuesta.
+
+No se realizó una votación formal sobre este tema en este punto de la reunión.
+<h2>9. Aprobación del Presupuesto, dotación de lobby de la torre número 3</h2>
+
+<p>Durante la asamblea, se abordó el tema de la aprobación del presupuesto para la dotación del lobby de la torre número 3. Se recordó que los copropietarios de la torre 3 habían realizado una contribución económica destinada a este fin.</p>
+
+<p>Se mencionó que, al revisar los registros financieros, se identificó que la administración no había cobrado correctamente un rubro específico. Este rubro correspondía a un acuerdo previo en el que las torres 1 y 2 debían compensar a la torre 3 por un tema presupuestario. Se determinó que la administración había facturado este rubro de manera incorrecta, cobrando algunas cuotas en 2025 en lugar de 2024. Como resultado, se identificaron 34 millones de pesos sin una destinación específica en el presupuesto actual.</p>
+
+<p>Felipe Aristizábal del 109 Torre 3, recordó que al inicio de su gestión en el consejo, se le había encomendado, junto con Nelson, la tarea de gestionar la dotación del lobby de la torre 3. Sin embargo, a la fecha, no se había presentado un presupuesto formal para este proyecto.</p>
+
+<p>Ante esta situación, se propuso destinar los 34 millones de pesos identificados al proyecto de fachadas y cubiertas, con el objetivo de reducir el número de cuotas necesarias para financiarlo. Esta propuesta buscaba dar un uso específico a los fondos y optimizar la gestión de los recursos disponibles.</p>
+
+<p>Posteriormente, se discutió la propuesta de dotar el gimnasio del conjunto con una nueva máquina multifuncional. Se mencionó que existía una carta firmada por más de 30 personas solicitando la compra de este equipo. Sin embargo, se presentaron diferentes opiniones sobre el tipo de máquina a adquirir y el presupuesto necesario.</p>
+
+<p>Lina Marcela del 813, expresó su preocupación sobre la idoneidad de la máquina propuesta, argumentando que no era adecuada para el uso intensivo en una unidad residencial. Sugirió esperar a la asamblea ordinaria de 2026 para elaborar un presupuesto más detallado y adquirir una máquina de mayor calidad.</p>
+
+<p>Mauricio Londoño del 1708, manifestó su desacuerdo con la propuesta de Lina Marcela, argumentando que una máquina multifuncional de 8 millones de pesos era una buena opción. Propuso realizar un sondeo para determinar cuántas personas utilizaban el gimnasio y justificar así la inversión en un equipo de mayor costo.</p>
+
+<p>Mauricio Suárez del 803, coincidió con Lina Marcela en que era preferible adquirir una máquina de tráfico medio que resistiera el uso constante en el gimnasio.</p>
+
+<p>Ante las diferentes opiniones, se propuso reservar 8 millones de pesos del presupuesto sin asignación específica para la compra de una nueva máquina multifuncional en la asamblea ordinaria de 2026. Esta propuesta buscaba conciliar las diferentes posturas y garantizar la disponibilidad de fondos para este proyecto en el futuro.</p>
+
+<p>Finalmente, se abordó el tema de la dotación del lobby de la torre 3. Se informó que el costo de los muebles, incluyendo IVA, ascendía a 12.830.580 pesos. Se especificó que se trataba de los mismos muebles que ya se habían instalado en los lobbies de las torres 1 y 2, incluyendo materas, un sofá y una mesa con marco metálico y circo de cristal.</p>
+
+<p>Lina Marcela del 813, ofreció donar un aplique que tenía en su sala para complementar la dotación del lobby.</p>
+
+<p><strong>Votación para aprobar la destinación de 12.830.580 pesos para la dotación del lobby de la torre 3:</strong></p>
+<ul>
+ <li><strong>A favor:</strong> No se registraron votos individuales en contra o abstenciones.</li>
+</ul>
+<p>La propuesta fue aprobada con una mayoría de votos a favor.</p>
+
+<p><strong>Resultado final de la votación:</strong> La asamblea aprobó destinar 12.830.580 pesos del presupuesto sin asignación específica para la dotación del lobby de la torre 3.</p>
+<h2>10. Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto</h2>
+
+<p>Durante la asamblea, se abordó la necesidad de aprobar un presupuesto para un proyecto de Seguridad Integral y la conformación de un Comité de Seguridad para dicho proyecto.</p>
+
+<p>Tras la discusión sobre la necesidad de expertos en diversos temas, se propuso la creación de un comité de seguridad. Los miembros propuestos fueron:</p>
+
+<ul>
+ <li>Gloria Marín (802)</li>
+ <li>París Lasprilla (1707)</li>
+ <li>Ana Milena Chica Salazar (412, Torre 3)</li>
+ <li>Mauricio Suárez (803)</li>
+ <li>Nelson Arciniegas (408)</li>
+</ul>
+
+<p>Se procedió a preguntar a la asamblea si había objeciones a la conformación de este comité. Al no haber objeciones, se consideró aprobado.</p>
+
+<p>Posteriormente, se discutieron las opciones de presupuesto para el proyecto de seguridad, indicando que un proyecto de seguridad integral no se limita a la instalación de cámaras, sino que debe incluir cultura de seguridad, alarmas y controles perimetrales. Se mencionó que la empresa de seguridad suele instalar cámaras que no son de la mejor calidad, lo cual motivó la necesidad de un diseño integral.</p>
+
+<p>Se presentaron estimaciones de costos para diferentes alcances del proyecto:</p>
+
+<ul>
+ <li>Cámaras para ascensores de la Torre 3, coworking, salón de proyecciones, lounge y accesos: Sin costo adicional.</li>
+</ul>
+
+<p>Se indicó que la administración encontró deudas de Coninsa del período de 2024, lo que generó un excedente de 28 millones. Se propuso destinar 6.7 millones (más IVA, resultando en 8.072 millones) de este excedente para dotar el gimnasio del conjunto.</p>
+
+<p>Ante la falta de un presupuesto detallado y la necesidad de una evaluación más exhaustiva, se propuso que en la asamblea ordinaria de 2026 se elaborara un presupuesto para la adquisición de una máquina multifuncional para el gimnasio. Se preguntó a la asamblea si aprobaban reservar 8 millones del presupuesto sin asignación específica para este fin.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: 98.42%</li>
+ <li><strong>En contra</strong>: 1.58%</li>
+</ul>
+
+<p>Se aprueba realizar un presupuesto específico para la nueva máquina multifuncional para dotación del gimnasio para la Asamblea Ordinaria 2026, reservando 8 millones del presupuesto sin asignación específica para dicha decisión.</p>
+
+<p>Se propuso utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3, adquiriendo los mismos muebles que se utilizaron en las torres 1 y 2 (materas, sofá y mesa con circo de cristal). Se sometió a votación esta propuesta.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: 90.86%</li>
+ <li><strong>En contra</strong>: 9.14%</li>
+</ul>
+
+<p>Se aprueba utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3.</p>
+
+<p>Se retomó la discusión sobre el proyecto de seguridad, mencionando que se cuenta con 34 cámaras y que es necesario un diseño integral que incluya cultura de seguridad, alarmas y controles perimetrales. Se propuso la creación de un comité de seguridad para este proyecto.</p>
+
+<p>Se preguntó a la asamblea si aprobaban el comité de seguridad propuesto, conformado por:</p>
+
+<ul>
+ <li>Gloria Marín (802)</li>
+ <li>París Lasprilla (1707)</li>
+ <li>Ana Milena Chica Salazar (412, Torre 3)</li>
+ <li>Mauricio Suárez (803)</li>
+ <li>Nelson Arciniegas (408)</li>
+</ul>
+
+<p>Al no haber objeciones, se consideró aprobado el comité.</p>
+
+<p>Se presentaron estimaciones de costos para diferentes alcances del proyecto de seguridad:</p>
+
+<ul>
+ <li>Cámaras para ascensores de la Torre 3, coworking, salón de proyecciones, lounge y accesos: Sin costo adicional.</li>
+</ul>
+
+<p>Se propuso asignar 17.772.683 pesos procedentes de la empresa de seguridad y de asignaciones no específicas para el proyecto de seguridad. Se sometió a votación esta propuesta.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: Unanimidad</li>
+</ul>
+
+<p>Se aprueba designar 17.772.683 pesos procedentes de la empresa de seguridad y las asignaciones no especificadas para el proyecto de seguridad.</p><h2>11. Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio</h2>
+
+El tema de la propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio fue abordado durante la asamblea.
+
+Durante la discusión, se mencionó que Carlos Gallego y Juan Ricardo han liderado este tema durante más de un año y medio, participando en reuniones con la alcaldía, representantes de otras unidades, abogados y otros propietarios. Se identificó una problemática relacionada con el incremento en el avalúo catastral de los apartamentos.
+
+Carlos Gallego ilustró la situación con su caso particular, donde el avalúo catastral de su apartamento de 114 metros cuadrados, incluyendo parqueaderos y cuarto útil, pasó de 375 millones en 2023 a 826 millones en 2024. Esto resultó en un aumento del impuesto predial de 4.5 millones a 8.5 millones. El incremento en el costo del predial fue del 88.2%, mientras que el incremento de la base catastral fue del 120.1%.
+
+Se identificaron varias actuaciones indebidas, incluyendo presuntas violaciones a las normas de conservación catastral, la falta de notificación de la actualización de la base catastral, la actualización catastral basada en zonas geoeconómicas y la modificación de la matriz tarifaria.
+
+Se mencionó que la fórmula utilizada para la actualización catastral se basó en el precio del último apartamento vendido en la sala de ventas, aplicando ese precio a todos los apartamentos, sin considerar la antigüedad y el registro catastral.
+
+Se señaló que la circular emitida por el Consejo de Envigado en diciembre de 2023 indicaba que los avalúos quedarían al 85% del avalúo comercial, pero posteriormente se modificó para establecer que quedarían al 60%.
+
+Se mencionó la participación de Iván Darío, experto en temas catastrales, quien ha asesorado al municipio de Medellín y al municipio de Envigado. Se pretende realizar una reclamación administrativa ante la autoridad catastral, utilizando casos tipo de cinco o seis apartamentos para abarcar las diferentes situaciones de las torres.
+
+Se indicó que es necesario realizar avalúos comerciales y elaborar derechos de petición para recopilar información y presentar una reclamación formal ante el municipio.
+
+Se mencionó que la propuesta de Iván Darío tiene un costo de aproximadamente 51 millones de pesos. Se aclaró que esta reclamación es necesaria para recopilar información y agotar la vía administrativa antes de considerar una reclamación judicial.
+
+Se estimó que el beneficio potencial de esta reclamación, si es efectiva, podría ser de alrededor de 4 o 5 millones de pesos por año por apartamento, con una inversión inicial de alrededor de 200 mil pesos por apartamento en promedio.
+
+Se hizo referencia a la dificultad de realizar reclamaciones individuales y se destacó la importancia de abordar el problema de manera colectiva.
+
+Durante la discusión, Mauricio Londoño expresó su inquietud sobre el alcance de la reclamación y la posibilidad de que el municipio niegue la reclamación.
+
+Darí Villa preguntó si los 10 millones que habían quedado de administraciones previas se descontarían de los 51 millones. Se confirmó que, de ser así, la cuota adicional sería de 41 millones.
+
+Carolina Durán preguntó si los 41 millones restantes serían para Torre 1, Torre 2 y Torre 3, o solo para Torre 1 y Torre 2. Se aclaró que son para las tres torres y que se harán casos tipo para cada una.
+
+Juan Esteban Sánchez preguntó sobre la recomendación de los asesores frente al pago del segundo semestre del predial. Se indicó que lo ideal es pagar e ir a reclamar la devolución, para evitar el cobro de intereses de mora.
+
+Se mencionó que algunos propietarios han realizado acuerdos de pago con cero intereses.
+
+Se indicó que en los casos de apartamentos con leasing, la reclamación debe ser realizada por la entidad financiera.
+
+Se mencionó que la reclamación se haría de manera general, por lo que los apartamentos con leasing no se cogerían como un apartamento tipo para el estudio.
+
+Finalmente, se propuso la creación de una comisión para el manejo específico de esta gestión.
+
+Debido a la hora y a la necesidad de avanzar con los demás puntos del orden del día, se pospuso la votación de este tema.<h2>12. Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia</h2>
+
+Dado que no se encontraron menciones o detalles relacionados con el tema "Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia" dentro de la transcripción proporcionada, se deja constancia de que, si bien el tema estaba incluido en el orden del día, no fue abordado durante el desarrollo de la reunión.
+<h2>13. Conformación de comités</h2>
+
+<p>Durante la asamblea, se abordó la necesidad de conformar diversos comités para apoyar la gestión de la administración y el consejo. Se hizo un llamado a los asistentes, tanto presenciales como virtuales, para que manifestaran su interés en participar en estos comités, destacando la importancia de contar con la colaboración de la comunidad para llevar a cabo las diferentes tareas y proyectos.</p>
+
+<p>Se mencionó que los comités son fundamentales para dar seguimiento y veeduría a los procesos que se realizan en la copropiedad, así como para ayudar a valorizar el patrimonio de los copropietarios. Se hizo hincapié en que no es necesario ser un experto en muchos temas, sino simplemente tener la voluntad de colaborar y contribuir al mejoramiento de la comunidad.</p>
+
+<p>Se resaltó la necesidad de contar con personas que ayuden en temas de gestión del cambio y que sepan cómo manejar temas culturales, especialmente en lo relacionado con el manual de convivencia. También se mencionó la importancia de mantener el gimnasio al día con sus mantenimientos y de seguir trabajando en la valorización de la copropiedad.</p>
+
+<p>En relación con la conformación del comité de seguridad, se indicó que este es fundamental para el proyecto de seguridad integral. Se mencionó que un proyecto de seguridad no se limita a la instalación de cámaras, sino que debe ser integral y abarcar aspectos como la cultura de seguridad, las alarmas, los perímetros y la respuesta a emergencias.</p>
+
+<p>Se hizo un llamado a los asistentes para que se postularan como miembros del comité de seguridad, destacando la importancia de contar con personas que tengan conocimientos y experiencia en el tema, así como con usuarios finales que puedan aportar su perspectiva y necesidades.</p>
+
+<p>Finalmente, se propuso la creación de un comité para el manejo específico de la gestión relacionada con el tema del predial, debido a la complejidad y especificidad de este asunto. Se mencionó la importancia de contar con personas que tengan conocimientos en el tema y que puedan ayudar a llevar a cabo las reclamaciones y trámites necesarios.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 01:35</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se aprueba la creación de un comité auditor del proyecto de fachadas y cubiertas, facultándolo para emitir conceptos y tomar decisiones sobre el proyecto, incluyendo al Consejo de Administración. Las decisiones del comité serán vinculantes para el Consejo de Administración y autónomas. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba tomar los 34.425.954 sin asignación específica para el proyecto de fachadas. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba realizar un presupuesto específico para la nueva máquina multifuncional para dotación del gimnasio para la Asamblea Ordinaria 2026, reservando 8 millones del presupuesto sin asignación específica para dicha decisión. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba designar 17.772.683 procedentes de la empresa de seguridad y las asignaciones no especificadas para el proyecto de seguridad. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se autoriza el cobro de una cuota extra por valor de hasta 41.140.250 para la reclamación por vía administrativa del reajuste del cobro del impuesto predial, pagaderas en los meses de septiembre y octubre. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN]</p>
+ <p><strong>Moderador:</strong> [NOMBRE]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ <li>[NOMBRE] - [CARGO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum e inicio de la asamblea</li>
+ <li>Lectura del orden del día</li>
+ <li>Elección del presidente y secretario de la asamblea</li>
+ <li>Elección de la comisión verificadora del acta</li>
+ <li>Elección de los integrantes del consejo de administración faltantes</li>
+ <li>Renuncia y elección de la revisoría fiscal</li>
+ <li>Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas</li>
+ <li>Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH</li>
+ <li>Aprobación del Presupuesto, dotación de lobby de la torre número 3</li>
+ <li>Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto</li>
+ <li>Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio</li>
+ <li>Conformación de comités</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum e inicio de la asamblea</h2>
+
+<p>Durante la asamblea, se constató que al inicio, coincidiendo con la hora de la citación, se contaba con un quórum del 15.11%, representado por 33 asistentes, incluyendo aquellos presentes y quienes habían delegado su representación mediante poderes. Se especificó que este quórum fue verificado a las seis en punto, hora de inicio programada. Se indicó que, de acuerdo con la citación, la asamblea daría inicio formal una hora después del horario de la primera convocatoria.</p>
+
+<p>Posteriormente, al inicio formal de la asamblea, se verificó un quórum del 63.52%, equivalente a 166 asistentes que representaban un total de 134 inmuebles. Se aclaró que la diferencia entre el número de asistentes y el número de inmuebles representados se debía a que algunos asistentes actuaban como apoderados, representando a más de un inmueble.</p>
+
+<p>El representante legal de la copropiedad, Hernando González, expresó la intención de avanzar con los temas del orden del día de manera eficiente, pero reconoció la necesidad de dedicar más tiempo a aquellos puntos que los asistentes consideraran que requerían un análisis más detallado. Enfatizó la importancia de mantener una buena disposición y respeto mutuo entre los vecinos, especialmente durante discusiones que pudieran generar controversia. Subrayó que los temas a tratar debían ser aquellos que afectaran a la comunidad en su conjunto, excluyendo problemas de índole personal o particular, y que la asamblea se ceñiría estrictamente al orden del día previamente establecido en la convocatoria.</p>
+
+<p>Hernando González también solicitó a los asistentes que, en caso de tener alguna inquietud o duda, levantaran la mano y esperaran a que el presidente de la asamblea les concediera la palabra. Recordó que los temas a tratar serían: verificación del quórum, lectura del orden del día, elección del presidente y secretario de la asamblea, elección de la comisión verificadora del acta, elección de los integrantes del consejo de administración faltantes, elección de la revisoría fiscal, proyecto de fachadas y cubiertas torre 1 y torre 2 (informe de avances técnico financiero y aprobación del número de cuotas), propuesta de nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH, aprobación del presupuesto y dotación de lobby de la torre número 3, aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto, informe del Consejo de Administración y la Administración CIMA Inmobiliaria, propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio, y votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia.</p>
+
+<p>Se dejó constancia de que la asamblea extraordinaria inició a las 7:33 minutos, con el quórum ya mencionado. Se indicó que la lectura del orden del día ya había sido realizada.</p>
+<h2>2. Lectura del orden del día</h2>
+
+<p>Durante la asamblea, se procedió a la lectura del orden del día por parte de Hernando González, representante legal de la copropiedad. Se destacó la importancia de que los temas a tratar fueran aportes y decisiones que afectaran a la comunidad, excluyendo problemas de tipo personal o particular. Se enfatizó que no se podrían tratar temas diferentes a los citados en la convocatoria.</p>
+
+<p>El orden del día leído incluyó los siguientes puntos:</p>
+
+<ol>
+ <li>Verificación del quórum.</li>
+ <li>Lectura del orden del día.</li>
+ <li>Elección del presidente y secretario de la asamblea.</li>
+ <li>Elección de la comisión verificadora del acta.</li>
+ <li>Elección de los integrantes del consejo de administración faltantes.</li>
+ <li>Elección de la revisoría fiscal.</li>
+ <li>Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas.</li>
+ <li>Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH.</li>
+ <li>Aprobación del Presupuesto, dotación de lobby de la torre número 3.</li>
+ <li>Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto.</li>
+ <li>Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio.</li>
+ <li>Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia.</li>
+ <li>Conformación de comités.</li>
+</ol>
+
+<p>Se recordó a los asistentes que, al ser una asamblea extraordinaria, no se sometería a aprobación el manual de convivencia. Se reiteró la importancia de levantar la mano para cualquier acotación y esperar a que el presidente otorgara la palabra.</p>
+
+<p>Posterior a la lectura, se indicó que los puntos sobre la elección del presidente y secretario de la asamblea debían resolverse en la misma sesión. Se explicó que las personas postuladas para estos cargos podían ser propietarios, inquilinos o personas con poder de representación. Se describieron las funciones del presidente como la dirección de la asamblea, la concesión de la palabra y la moción de orden, sugiriendo que fuera una persona neutral, tranquila y con liderazgo. El secretario, por su parte, sería el encargado de tomar nota de la asamblea, con el apoyo de Código Verde para la transcripción, y firmar el acta para validar su contenido.</p>
+<h2>3. Elección del presidente y secretario de la asamblea</h2>
+
+<p>Se procedió a la elección del presidente y secretario de la asamblea, indicando que estas figuras pueden recaer en propietarios, inquilinos o personas con poder de representación. Se explicó que el presidente dirige la asamblea, mientras que el secretario toma nota de lo tratado para su posterior inclusión en el acta.</p>
+
+<p>Se abrió la postulación para el cargo de presidente, destacando la importancia de que esta persona sea neutral, tranquila y con liderazgo. Ante la falta de postulaciones, se sugirió que la persona de administración presidiera la asamblea, como en ocasiones anteriores. Se consultó a los asistentes, tanto presenciales como virtuales, si estaban de acuerdo con esta propuesta. Al no haber objeciones, se definió a Hernando González como presidente de la asamblea.</p>
+
+<p>Posteriormente, se procedió a la elección del secretario, quien recibiría la información de Código Verde para estructurarla y validarla. Se consultó a los asistentes, tanto presenciales como virtuales, si alguien deseaba postularse. Ante la falta de postulaciones virtuales y presenciales, Luz Marleny Tangarife, del apartamento 709 Torre 3, se postuló para el cargo. Se consultó a los asistentes si estaban de acuerdo con esta postulación. Al no haber objeciones, se definió a Luz Marleny Tangarife como secretaria de la asamblea.</p>
+
+<p>En consecuencia, se designó a Hernando González como presidente y a Luz Marleny Tangarife como secretaria de la asamblea.</p><h2>4. Elección de la comisión verificadora del acta</h2>
+
+<p>Se procedió a la elección de la comisión verificadora del acta, destacando la importancia de su rol en la revisión detallada del documento. Se recordó que en la asamblea de febrero surgieron diversas inquietudes respecto a los tiempos de entrega del acta, lo que subraya la necesidad de contar con una comisión que asegure la precisión y validez de la información consignada.</p>
+
+<p>Giovanni Flores, del equipo logístico de la asamblea, recordó a los asistentes virtuales que podían manifestar su interés en participar en la comisión a través del botón "participar" en la parte superior de sus pantallas.</p>
+
+<p>Ante la falta de postulaciones iniciales, Nelson Arciniegas manifestó su disposición a participar, indicando su apartamento, el 408. Se hizo un llamado a los asistentes para que se sumaran a la tarea de revisar el acta con detalle.</p>
+
+<p>Posteriormente, se recibieron las siguientes postulaciones:</p>
+
+<ul>
+ <li>Luis Mariano Calderón, apartamento 1905, Torre 2.</li>
+ <li>Mauricio Londoño, apartamento 1708.</li>
+ <li>Caterine Rolón.</li>
+</ul>
+
+<p>Se consultó a la asamblea si estaban de acuerdo con que Nelson Arciniegas, Luis Mariano Calderón, Mauricio Londoño y Caterine Rolón conformaran la comisión verificadora del acta de la asamblea. Se preguntó específicamente si alguien se oponía a esta designación, tanto en la modalidad virtual como presencial.</p>
+
+<p>Se identificó una mano levantada virtualmente, correspondiente a KR, identificada como Karen Rolón. Sin embargo, se aclaró que Katherine Rolón ya estaba en la lista y que estaba de acuerdo con su propia postulación. Se confirmó que no había manos levantadas en señal de oposición.</p>
+
+<p>En relación con la votación para la conformación de la comisión verificadora del acta, se registraron los siguientes votos:</p>
+
+<ul>
+ <li><strong>Nelson Arciniegas:</strong> A favor.</li>
+ <li><strong>Luis Mariano Calderón:</strong> A favor.</li>
+ <li><strong>Mauricio Londoño:</strong> A favor.</li>
+ <li><strong>Caterine Rolón:</strong> A favor.</li>
+</ul>
+
+<p>Se resumió que la asamblea, tanto virtual como presencial, aprobó por unanimidad la conformación de la comisión verificadora del acta con los nombres de Nelson Arciniegas, Luis Mariano Calderón, Mauricio Londoño y Caterine Rolón.</p><h2>5. Elección de los integrantes del consejo de administración faltantes</h2>
+
+<p>Se abordó la necesidad de reforzar el equipo del consejo de administración, destacando la importancia de contar con un número adecuado de miembros para asegurar el seguimiento y la veeduría de los procesos de la copropiedad. Se hizo hincapié en que la falta de quórum en las reuniones del consejo dificulta la toma de decisiones y la gestión eficiente de la copropiedad.</p>
+
+<p>Se invitó a los asistentes, tanto presenciales como virtuales, a postularse para integrar el consejo, resaltando que no se requiere ser experto en temas específicos, sino tener buena voluntad para colaborar y contribuir al mejoramiento de la copropiedad. Se mencionó que el consejo es la entidad que aconseja a la administración y ayuda a valorizar el patrimonio de los copropietarios.</p>
+
+<p>Dari Villa, del apartamento 1713, Torre 3, se postuló para integrar el consejo. Ante la pregunta sobre la dedicación que esto implicaría, se respondió que dependerá de cada persona, pero que incluso una o dos horas al mes serían de gran ayuda, especialmente para comunicar las acciones del consejo a la comunidad.</p>
+
+<p>Caterine Rolón, del apartamento 1306, y Mauricio Suárez, del apartamento 803, también se postularon para integrar el consejo.</p>
+
+<p>Felipe Aristizábal, consejero del apartamento 109 Torre 3, propuso que Juan David y Mauricio Suárez pasaran a ser suplentes, y Caterine Rolón y Mauricio Suárez pasaran a ser principales. Ana María Botero, del apartamento 603, opinó que los recién llegados deberían decidir si quieren ser consejeros principales o suplentes.</p>
+
+<p>Se mencionó que en muchas copropiedades se establece un número de principales y suplentes para incentivar la participación, y se sugirió que las decisiones se tomen por mayoría, considerando el voto tanto del principal como del suplente.</p>
+
+<p>Ivonne Mesa cedió su puesto en el consejo a Marta Bonilla, quien había manifestado su interés en participar. Sin embargo, posteriormente, Marta Bonilla prefirió que Ivonne Mesa se quedara en el consejo debido a su perfil como ingeniera, considerando que sus capacidades serían valiosas para los proyectos que se avecinan en la copropiedad.</p>
+
+<p>Luz Marlene Tangarife solicitó ser cambiada por Katherine Rolong.</p>
+
+<p>Ángela María Londoño, del apartamento 804, sugirió que se preguntara a Fabián Sánchez, de la torre 1, si quería ser consejero principal, ya que no estaba en la lista de consejeros principales.</p>
+
+<p>Fabián Sánchez manifestó su desacuerdo con que Mauricio, Juan David y Nelson tomaran las decisiones de manera recurrente, y propuso que uno de ellos fuera suplente.</p>
+
+<p>Marta Bonilla sugirió que si son cinco principales, deben asistir los cinco, y si no, avisar con tiempo al suplente. Se propuso definir de una vez quién es el suplente para que reemplace al principal en caso de ausencia.</p>
+
+<p>Ivonne Mesa aclaró que estaba en la plantilla como apoderada del apartamento 1605, y solicitó el cambio porque ya no le correspondía ese apartamento.</p>
+
+<p>Se propuso que Juan David pasara a ser suplente y Mauricio Suárez pasara a ser principal. Se aclaró que Ivonne Mesa es dueña de un parqueadero, lo que la habilita para ser consejera.</p>
+
+<p>Se procedió a preguntar a la asamblea si estaban de acuerdo con el equipo de consejo propuesto.</p>
+
+<p>Felipe Aristizábal mencionó que a su esposa no le habían dado el ingreso a la asamblea a pesar de ser dueña de un parqueadero.</p>
+
+<p>Se sometió a votación la siguiente conformación del consejo de administración:</p>
+
+<ul>
+ <li><strong>Dari Villa</strong> (1713, Torre 3): Aprobación</li>
+ <li><strong>Caterine Rolón</strong> (1306): Aprobación</li>
+ <li><strong>Mauricio Suárez</strong> (803): Aprobación</li>
+ <li><strong>Ivonne Mesa</strong>: Aprobación</li>
+ <li><strong>Luz Marlene Tangarife</strong> (709, Torre 3): Aprobación</li>
+</ul>
+
+<p>Se preguntó a la asamblea si alguien no estaba de acuerdo con la postulación de estas personas al nuevo consejo de administración. Se indicó que presencialmente todos estaban de acuerdo y virtualmente nadie se opuso a la aprobación.</p>
+
+<p>José Ricardo Betancourt manifestó que su esposa, también copropietaria, tenía problemas para conectarse y no sabía si tenía intención de pertenecer al consejo. Felipe respondió que la intención no era ingresar al consejo.</p>
+
+<p>Se concluyó que el nuevo consejo de administración estaría en funciones a partir del 14 de agosto de 2025 hasta la próxima asamblea de copropietarios.</p>
+
+<p><strong>Resultado de la votación:</strong> La conformación del consejo de administración propuesta fue aprobada por unanimidad presencial y sin oposición virtual.</p>
+<h2>6. Renuncia y elección de la revisoría fiscal</h2>
+
+<p>En este punto del orden del día, el señor Hugo León Incapié presenta su carta de renuncia al cargo de Revisor Fiscal, el cual ha desempeñado desde el 28 de marzo de 2023. Expresa su agradecimiento por la confianza depositada en él durante su gestión, destacando su compromiso con la responsabilidad, transparencia y cumplimiento normativo. Sin embargo, manifiesta que su decisión se basa en una reflexión personal, citando: "Si todo lo que ofreciste no fue suficiente, ofrece tu ausencia. A veces retirarse es el mayor acto de respeto y dignidad hacia uno mismo y hacia los demás".</p>
+
+<p>Tras la lectura de la carta, se abre un espacio para preguntas por parte de los asistentes. Magda Quijano solicita una explicación más detallada sobre los motivos de su renuncia. Otros asistentes, como Luz Marleny, Marta Arboleda y Adriana Cifuentes, también expresan su inquietud y desean conocer más sobre los manejos internos y la situación de la copropiedad, especialmente en relación con la rotación de contadores y las decisiones tomadas por un grupo reducido de personas.</p>
+
+<p>Hugo León Incapié explica que su decisión se debe a varios factores. En primer lugar, señala que en las asambleas se ha tendido a señalar más al revisor fiscal que a los errores cometidos por la administración anterior. Además, menciona un desinterés generalizado en la copropiedad, evidenciado por la falta de participación en las reuniones del consejo, donde solo tres personas tomaban las decisiones. También hace referencia a un detonante relacionado con unos gastos que, en su opinión, no fueron aclarados con la suficiente diligencia por la contadora. En resumen, indica que su renuncia se debe a la percepción de que sus esfuerzos son insuficientes y que no está aportando valor a la copropiedad.</p>
+
+<p>Ante la renuncia del revisor fiscal, se procede a la presentación de los candidatos a ocupar el cargo. Se postulan Sandra Milena Escobar, Hugo Sierra, Everlides Sotelo y Jesús Orlando Ramírez. Cada uno de los candidatos tiene 5 minutos para presentar su propuesta y responder a la pregunta: ¿Qué hace que esta comunidad virtual y presencial te elija?</p>
+
+<p>Hugo Sierra, especialista en alta gerencia y contador público, destaca su experiencia en propiedad horizontal desde 2008, siendo revisor fiscal en varios conjuntos residenciales. Su objetivo es cumplir con las obligaciones de la revisoría fiscal, emitir una opinión independiente sobre los estados financieros y contribuir a la eficiencia de la administración. Marcela Pineda complementa su presentación, mencionando que es director administrativo y financiero del Aeropuerto Olaya Herrera y conocido del revisor fiscal saliente.</p>
+
+<p>Everlides Sotelo, contadora pública con especialización en Gestión Financiera Empresarial, ofrece como valor agregado una auditoría general y evaluación de riesgos de la copropiedad, realizada con el apoyo de profesionales en el tema. Su enfoque se centra en la auditoría financiera, de gestión, de control interno y de cumplimiento.</p>
+
+<p>Sandra Milena Escobar, contadora pública especializada en propiedad horizontal, destaca su experiencia como administradora, lo que le da una visión amplia de la propiedad horizontal. Su objetivo es asesorar al consejo de administración para que se tomen decisiones razonables y velar por el patrimonio de los copropietarios.</p>
+
+<p>Jesús Orlando Ramírez, contador público con especialización en Finanzas, ofrece un servicio de apoyo a las decisiones empresariales en las áreas contables, administrativas, operativas y de gestión de calidad. Su servicio conlleva acompañamiento permanente a la gestión empresarial, evaluación y recomendaciones de control, fortalecimiento de la información financiera y la óptima utilización de los recursos disponibles.</p>
+
+<p>Tras las presentaciones, se procede a la votación para elegir al nuevo revisor fiscal. Samuel, de Código Verde, explica el sistema de votación a los asistentes, tanto presenciales como virtuales.</p>
+
+<p>Una vez finalizada la votación, Código Verde presenta los resultados: Hugo Sierra obtiene el 61.61% de los votos, Sandra Escobar el 28.24%, Everlides Sotelo el 5.8% y Jesús Orlando el 5.7%.</p>
+
+<p>En consecuencia, <strong>se declara a Hugo Sierra como el nuevo Revisor Fiscal de Feliz Condominio PH</strong>.</p>
+<h2>7. Proyecto de fachadas y cubiertas torre 1 y torre 2: Informe de avances técnico financiero y aprobación del número de cuotas</h2>
+
+<p>Se da inicio al tema con una contextualización sobre la historia del conjunto residencial, que abarca 7 años. Se indica que, al comenzar la gestión actual en julio, se identificaron áreas que requerían orden y estructuración. Se menciona que en enero del presente año no se contaba con un documento formal que estructurara las fechas de ingreso de la torre 3 ni los coeficientes de las torres.</p>
+
+<p>Se destaca que los pagos en la administración anterior se realizaban directamente sin una segunda validación, lo cual implicó la necesidad de implementar controles adicionales con Ave Villas. Además, se señala la ausencia de un líder de mantenimiento, situación que se está abordando en colaboración con CIMA para estructurar procesos formales. Se enfatiza la importancia de administrar adecuadamente una empresa con ingresos anuales de 1.377 millones de pesos, requiriendo un equipo de profesionales capacitados.</p>
+
+<p>Se indica que la contabilidad implementaba mejoras de forma irregular, situación que se busca corregir. Se menciona que desde febrero se exige a los proveedores el soporte de los servicios prestados y se destaca la falta de hojas de vida de los equipos a los que NESCO realiza mantenimiento. Se señala que no se aplicaban adecuadamente los protocolos de seguridad, mencionando ejemplos como carros lavados en los parqueaderos y llaves entregadas en la portería sin control. Asimismo, se indica que el servicio de aseo no tenía control de calidad, situación que se está corrigiendo mediante la toma de fotografías antes y después de la limpieza.</p>
+
+<p>Se comenta sobre el estado del lounge, describiéndolo como deteriorado, y se menciona la corta duración de la talanquera, resaltando la necesidad de trabajar como una empresa y la importancia de contar con manos que ayuden en este proceso.</p>
+
+<p>Ante la pregunta de una propietaria sobre la responsabilidad del consejo y la falta de soluciones por parte de la administración, se responde que se están implementando soluciones. Se menciona que los vecinos de la torre 3 pagaron una cuota de 50 millones de pesos, pero no incluía el lobby ni las cámaras. Se aclara que el chulito en la lista indica que el proyecto está completamente ejecutado, remitiendo al acta del 11 de julio de 2024 para más detalles.</p>
+
+<p>Se indica que, al ordenar la información, se encontraron inconsistencias, como el hecho de que Coninsa no entregaba la información solicitada. Se menciona que la torre 3 pagó 68 millones de pesos adicionales, pero la administración del momento no realizó el cobro correctamente, lo que resultó en 34 millones de pesos cobrados en 2025 sin destinación específica. Además, se encontró una deuda de Coninsa por 28 millones de pesos, que ya fue saldada. Se concluye que hay 34 millones de pesos sin destinación específica, pertenecientes a las torres 1 y 2.</p>
+
+<p>Se presenta el proyecto de fachadas, recordando que en febrero se aprobó un presupuesto de 909 millones de pesos. Sin embargo, se recibieron comentarios de varios propietarios indicando que no tenían el capital para realizar el pago, y se cuestionó la tecnología propuesta para las cubiertas. Se indica que no se contaban con los 551 millones de pesos necesarios, sino con 357 millones, y que era necesario recaudar el resto en 13 cuotas.</p>
+
+<p>Se menciona que el revisor fiscal, don Hugo, recomendó partir el proyecto para hacerlo viable y no arriesgar a la comunidad firmando un contrato sin contar con el dinero. Se presenta el comportamiento de la cartera, indicando que a principios de julio se encontraba en 48 millones de pesos. Se informa que se inició un nuevo proyecto, replanteando el anterior para tener más información y tranquilidad con respecto a los números.</p>
+
+<p>Se destaca que se realizó una invitación pública a todos los proveedores interesados en participar en el proyecto. Se menciona que se tuvo en cuenta la sugerencia de utilizar PVC para las cubiertas, a pesar de ser más costoso, por ser una tecnología menos contaminante. Se comparan los valores de las torres en fachadas entre febrero y agosto, indicando que se excluyeron los parqueaderos por no requerir alpinistas y estar en buen estado. Se incluyen los techos y fachadas de porterías y piscinas, que no estaban en el primer proyecto. Se indica que se incluyó un presupuesto para arreglar los apartamentos afectados internamente, lo cual no estaba en el presupuesto de febrero.</p>
+
+<p>Se señala que Decorhábitat no es experto en cubiertas, lo cual generó una problemática. Se indica que no sirve de nada financiar si no se tiene el dinero y no se sabe si la cartera se va a recaudar. Se menciona que la interventora anterior, Ana María, indicó que no se podía partir el proyecto en partes y que era necesario recaudar el dinero, lo cual generó un conflicto.</p>
+
+<p>Se indica que se buscó una nueva interventora con experiencia, quien ayudó con los pliegos. Se menciona que el consejo buscó a la interventora y que Juan David es ingeniero sanitario. Se indica que se hizo una invitación pública a todos los interesados en participar. Se menciona que se le hizo caso a la persona que sugirió utilizar PVC, a pesar de ser más costoso.</p>
+
+<p>Se indica que se hizo todo el ejercicio y no se quedaron con un solo proveedor. Se comparan los valores de las torres en fachadas entre febrero y agosto, indicando que se excluyeron los parqueaderos por no requerir alpinistas y estar en buen estado. Se incluyen los techos y fachadas de porterías y piscinas, que no estaban en el primer proyecto. Se indica que se incluyó un presupuesto para arreglar los apartamentos afectados internamente, lo cual no estaba en el presupuesto de febrero.</p>
+
+<p>Se señala que Decorhábitat no es experto en cubiertas, lo cual generó una problemática. Se indica que no sirve de nada financiar si no se tiene el dinero y no se sabe si la cartera se va a recaudar. Se menciona que la interventora anterior, Ana María, indicó que no se podía partir el proyecto en partes y que era necesario recaudar el dinero, lo cual generó un conflicto.</p>
+
+<p>Se indica que se buscó una nueva interventora con experiencia, quien ayudó con los pliegos. Se menciona que el consejo buscó a la interventora y que Juan David es ingeniero sanitario. Se indica que se hizo una invitación pública a todos los interesados en participar. Se menciona que se le hizo caso a la persona que sugirió utilizar PVC, a pesar de ser más costoso.</p>
+
+<p>Se presenta el revisor fiscal de junio indicando cuánto capital hay recogido. Se indica que la primera propuesta es tomar los 34 millones que son de la torre 1 y 2 para asignárselo al proyecto y reducir la cantidad de cuotas. Se muestra un ejemplo de las cuotas de un proyecto de 909 millones de pesos. Se indica que, al encontrar 34 millones que son de la 1 y 2, se podría pasar de 13 cuotas a 11 cuotas. Se indica que si se aprueba que los 34 millones se destinen a fachadas y cubiertas, el presupuesto se mejora y se podrían hacer el proyecto solamente con 11 cuotas. Se indica que si la cartera de 48 millones mejorara, se estaría eliminando también la cuota de enero y se estaría haciendo un proyecto de 10 cuotas.</p>
+
+<p>Se indica que se trabajó en esto con errores, inconvenientes, problemas de comunicación y de no aceptación de muchas cosas. Se indica que la comunidad exigió reducir los valores porque no tienen capacidad de pago.</p>
+
+<p>Ángela Londoño pregunta si en el alcance hicieron nivelación de los morteros que ya estaban desgastados y no daban caída a los desagües, si está incluida dentro de esta propuesta de la membrana de PVC hacer esas nivelaciones. Sandra Márquez, la interventora, responde que en la opción de la impermeabilización con asfalto, obviamente había que retirar la impermeabilización existente, hacer nivelación de morteros y hacer todo el procedimiento nuevo, cierto. Con el manto PVC no es necesario hacer esto, con el manto PVC simplemente colocamos el manto encima de la impermeabilización hoy colocar el manto encima de la impermeabilización antes hace un doble propósito, queda mucho mejor, de hecho se sellan las juntas que son las que están como afectando los apartamentos de los últimos niveles y se coloca la impermeabilización en PVC que no necesita exactamente que se retire la impermeabilización existente, no.</p>
+
+<p>Ángela Londoño pregunta si se garantiza que todas las pendientes quedan a las boquillas pues a los desagües. Sandra Márquez responde que no es el procedimiento que ella conoce, pero si lo garantizan. Ángela Londoño pregunta cuánto tiempo, porque a todos nos toca pagarle los cielos a los pisos 19, entonces si después vamos a volver a lo mismo y que entonces que fue la caída. Sandra Márquez responde que la garantía de ese procedimiento son de 10 años.</p>
+
+<p>Fabián Sánchez indica que cuando uno maneja membranas PVC en sistemas de impermeabilización, la garantía de la membrana son 10 años. Indica que el emposamiento hay que empezar a hacer un mapeo donde hay emposamiento. Indica que el sistema granillado o el de manto, digámoslo aquí pues como para el lenguaje de todos, asfalto, eso no es un asfalto, es un manto asfáltico de emulsión, pues ese sistema sirve de sufridor, lo llamamos nosotros en construcción. Entonces en las reparaciones que se están haciendo hoy en día en las unidades, el sistema PVC encima del manto granillado funciona muy bien porque sirve como capa o manto sufridor antes de la capa PVC. Indica que el tema de revisarlo en posamiento si debe estar. Uno llega y hace un mapeo, quiten no más esa parte y se nivela bien.</p>
+
+<p>Ángela Londoño pregunta si ese mapeo si está, si deben coger y retirarlo, no decir que es que así, que no lo necesita. Sandra Márquez responde que no conoce ni le entregaron el proyecto inicial, entonces empezó a hacer un proyecto nuevo con cantidades nuevas, se sacaron las cantidades nuevas con todos los planos y ella está responsable de todas las cantidades que sacó de todos los planos.</p>
+
+<p>Ángela Londoño pregunta si se responsabiliza de cantidades. Sandra Márquez responde que sí, se responsabiliza de cantidades y la copropiedad no va a tener el imprevisto o el asombro de que resultó que no, es que vea, no estaba contemplado y resultó que había muchos ladrillitos malos, entonces esto se sal de las manos, listo, es todo eso si está responsable, estamos hablando de una interventoría.</p>
+
+<p>Ángela Londoño pregunta si en el anterior proyecto estaba contemplado que se arreglaban todos los balcones, que fue un asunto discutido de si se incluían o no y se estaban pintando los cielos y se le hacía el tratamiento de las fachadas igual a todos los muros de los balcones, si aquí está incluido. Sandra Márquez responde que sí señora. Ángela Londoño pregunta si todos los muros son por lado y lado y las zonas comunes habían, digamos que habían un montón de muros que se revisaron en la unidad que estaban muy malos, o sea, hablo de todas esas zonas como en el barbecue que el muro está soplado y a punto de caerse, el de la terraza donde está, muchos pasamanos malos que también estaban contemplados arreglarse. Sandra Márquez responde que sí, todo eso está contemplado.</p>
+
+<p>Ángela Londoño pregunta sobre la programación, indicando que es muy importante que no veo que aquí nos estén exponiendo eso. Pregunta en qué fecha se pretende iniciar, si les va a coger diciembre, el polvo que implica una fachada, es de una vez expresarle a la comunidad, yo no tengo niños, pero entonces yo puedo renunciar muy fácil a no hacer nada en Navidad de decoración y aguantarme el polvo, pero los que tienen niños sí sé que es muy importante hacerles el árbol de Navidad y lo que sea, yo siempre pienso en los niños. Pregunta sobre las pólizas que habíamos pedido y la responsabilidad del constructor con respecto a la seguridad. Pregunta si cualquier daño ocurrido en un apartamento va a ser arreglado por el contratista. Sandra Márquez responde que sí, todo está incluido.</p>
+
+<p>Fabián Sánchez indica que hay que hacer un levantamiento para poder hacer la impermeabilización. Sandra Márquez responde que sí, eso también está ahí metido, está incluido, está contemplado.</p>
+
+<p>Ángela Londoño pregunta si ella va a supervisar que se hagan las nivelaciones, la pregunta es el costo. Sandra Márquez responde que sí, señora, todo está incluido.</p>
+
+<p>Se procede a dar la palabra a los asistentes virtuales. Carlos Gallego indica que hay una cuota o un saldo de 68 millones, que fue un pago que hicieron Torre 1 y Torre 2 porque entregaron Torre 3 o nos pusieron a pagar cuentas de Torre 3 en su momento, pero Torre 3 no estaba cancelando administración. Indica que es un saldo a favor que se tenía en torre 1 y torre 2. Indica que no cabe ahí entrar en discusión de que esto vaya, por ejemplo para la dotación o el tema del Lobby de Torre 3. Indica que es un tema que en su momento con la administración anterior se había dejado ahí como para las fachadas, que era el proyecto que ya estaban dando. Indica que le preocupa que en su momento había un interventor muy capacitado que era el señor Elkin, que con él se había hecho todo el tema de entrega de torre 3. Indica que él ya había hecho toda la valoración de torre 1 y torre 2. Pregunta qué pasó con él. Indica que no le ve mucho sentido a que después de que aquí se desgasten 80 o 100 personas aprobando algo, después se acerquen unas y digan pare un proyecto y entonces se retrase todo, porque es que este proyecto debe haber empezado hace año y medio y todavía seguimos escogiendo el proveedor y todavía seguimos discutiendo los términos, entonces de hecho ya se va a juntar otro tema adicional, los mantenimientos de las fachadas se deben hacer, si no estoy mal, cada dos años, o sea que ya ahorita en enero se debe hacer el mantenimiento de la fachada de torre 3, entonces es otro dinero adicional que le van a pedir a Torre 3 para que haga o lo van a juntar con este proyecto de fachadas, pero entonces mire que ahí ya vamos disparejos en los temas que debimos haber hecho hace año y medio.</p>
+
+<p>Se responde que las fachadas en una ciudad como Medellín son más o menos 7 a 8 años el promedio el mantenimiento. Se indica que cuando hicieron la búsqueda, uno de los primeros opcionados era don Elkin, hicieron el cuadro comparativo, hicieron la revisión. Se indica que tenía un costo, cuando quieran ver el cuadro comparativo era mucho más costoso, más o menos unos 7 millones por cada torre. Se indica que ya hacer un presupuesto adicional, porque aquí se pagó por los pliegos, porque aquí está elaboración de pliegos para este proceso y elaboración de pliegos para este proceso, no nos parecía pagar 14 millones más o menos que era lo que nos daba para el siguiente, eso fue la razón por la cual no continuamos con don Elkin.</p>
+
+<p>Alejandro Palacio indica que quedó muy frustrado, muy aburrido con esta presentación. Indica que esto en vez de aclarar, oscurece más. Indica que quizás le han puesto mucho empeño a esto, pero esto ya no es de retórica ni de papel, esto es de ejecución. Indica que como lo han dicho los vecinos, han pasado seis meses desde que aprobamos en una asamblea esto y ahora seis meses vuelve y nos presenta una cosa y yo escuchando a Felipe y Angela quedó más preocupado. Pregunta por qué se demoran más de dos meses en cambiar un vidrio con riesgo de un accidente tanto interno como externo en el gimnasio. Pregunta por qué no han comprado las sombrillas que hace rato, que hace rato está pidiendo la gente. Indica que esto sí conecta con el tema de las fachadas. Indica que imagínense para cambiar un vidrio que es urgente unas sombrillas que lo más fácil de comprar nos demoramos tanto. Indica que cómo será el tema de ejecución de este proyecto. Indica que otra vez dilataron seis meses. Indica que hay mucha más duda de la que había en febrero. Pregunta cómo así que la gente no paga la administración. Indica que entonces los bobos pagamos cumplido. Indica que es que si a la segunda cuota no pagó, entonces la señora administración tiene que mandarle un comunicado al apartamento diciendo, haciéndole, recordando que de pagar y con tres cuotas entonces cobro jurídico. Indica que cómo así que no pagan. Indica que cómo así que una asamblea aprueba en febrero, en febrero un proyecto y se acerca una gente que eso ya no va. Indica que eso es ilegal. Indica que qué pena, yo no soy abogado, pero aquí si hay abogados. Indica que ya estaba aprobado. Indica que entonces en seis meses nos van a volver a decir que encontraron otra cosa más barata o que eso no iba. Indica que con las preguntas que hace la ingeniera, no sé si será ingeniera, me disculpará. Indica que quedó horrorizado, quedó más preocupado que un berraco con eso, con lo que manifiesta Felipe, porque lo sacaron. Sugiere que saquen el proyecto y la pedir un favor inmenso y que dejemos los egos aparte y un montón de cosas a Felipe y Angela que por favor, ellos que tienen la experticia, las personas que tengan la experiencia acá, que revisen esos pliegos con lupa, por favor. Indica que si él supiera eso, créanme que lo haría por no entiendo un forro de eso. Indica que a él le hablan de manto y un montón de cosas y no entiendo eso. Indica que este proyecto, aprobarlo en esta asamblea es una irresponsabilidad.</p>
+
+<p>Se responde que el tema del tiempo de demora en la consecución de un vidrio, pues ya lo dije, se demoró por el tema de la revisión y los procesos que estamos haciendo para ponerlos más controlados. Se indica que el tema de sombrillas de lo que tengo entendido. Se indica que resulta que fumigación. Se indica que si hacemos un cuadro comparativo en donde las tres opciones no son comparables, es un proceso que le estamos pidiendo a Sima que mejore y optimice, pero es un tema urgente, pues era un vidrio, era una urgencia, entonces ahí que priorizar también que es urgente que es, en una emergencia que es. Se indica que es más costoso lo que hubiera causado esa caída que esperar 23 meses en una en un proceso que ni siquiera tenemos claro. Se indica que entonces dónde está. Se indica que si en eso nos encartamos cómo era cuando este proyecto de fachada que es de tanta envergadura, pues salga algún imprevisto, llega el mantenimiento de la torre 3 y no han hecho el de la 1 y la 2.</p>
+
+<p>Carolina Durán indica que aquí ni siquiera tenemos una caja menor para que la administración pueda hacer unas decisiones más rápidas. Indica que está bien que sí hayan tres cotizaciones siempre comparables. Indica que es verdad, yo soy auditora contadora también, pero no hay una caja menor. Indica que incluso cuando estuve un manual, pero nunca fue escuchado ni leído. Indica que quedé con Nelson varias veces los viernes de reunirnos y jamás nos reunimos, que porque no tiene tiempo todavía desde que fue nombrado. Indica que incluso Mauricio conocía que yo tenía eso presentado. Indica que no se pudo nunca. Indica que es imposible que una administración no tenga ni mínimo 500 mil pesos para un poder de decisión de imprevistos que se tienen que solucionar, que cuando ella tenga que comprar papelería, incluso tiene que pedir la misma cotización y que le ha tocado a ella misma pedir, porque me ha dicho comprar papeles para darle hasta los porteros de la plata de ella, del bolsillo.</p>
+
+<p>Marta Marín indica que está de acuerdo con el otro propietario que habló antes de la compañera, y con todo el respeto que merecen todos como profesionales, el tiempo que han metido en todo esto, todos somos propietarios, a todos nos duele la unidad. Indica que ya nos metieron gato por liebre con un gimnasio hace unos años y yo no creo que este proyecto lo podamos aprobar hoy. Indica que no me siento en capacidad de aprobarlo hoy porque siento mucha inseguridad con todo. Indica que esto es y lo han dicho en el chat porque dije que oyéramos a la gente virtual, porque hay una inconformidad gigante que hemos ido prologando. Indica que tenemos que evaluar esto de una manera más correcta, porque yo creo que todos los que estamos acá y todavía nos quedamos acá, venimos dando una cuota extra muy grande, muy grande y no veo nada para mejorar. Indica que sé que hay dos personas profesionales en esto muy importantes, y yo creo que es de voz de todos que es muy importante que ellos sepan a ciencia cierta punto por punto que se va a hacer y yo estoy de acuerdo con lo que ellos digan para mí.</p>
+
+<p>Laura Rodríguez indica que en el tiempo en que Felipe subo pasaban mucho, hacían muchas reuniones, sobre todo, pues al menos para nosotros nos cruzaba mucho con los entrenamientos de nuestra hija, con la salida de la guardería, entonces pues demandaba tiempo esto, pero en lo que uno sí notaba mucho compromiso en reuniones por parte del Consejo, incluso los sábados muy temprano. Indica que definitivamente a lo que le falta el consejo es ejecución, como tanto se ha dicho, porque ellos se han dedicado, sacan tiempo, tienen ideas, pero no ejecutan. Indica que ella ha sido una y fui pues de las sombrillas que como es posible que en Feliz hacemos con dos sombrillas para 208 apartamentos, una diga feliz A y la otra diga FIT, pues eso no tiene carta de presentación, eso es un beneficio para todos. Indica que se les agradece mucho a lo que ha hecho Nelson, a lo que ha hecho Mauricio, que tienen conocimiento que son más antiguos en la unidad, pero definitivamente les falta ejecución. Indica que lo que generó la desconfianza, primero el miembro, porque Felipe también entró nuevo, el primero fue partícipe de fachadas, se le hizo la invitación de si quería estar en el consejo, lo aceptó, pero también llegó otra persona que en un principio tuvo muchas dudas sobre el proyecto que se estaba que se estaba presentando, entonces él hizo como comentarios fuertes, como que no, que este proyecto se aprobó con trampitas, bueno, fueron como varios, hubieron varios roces. Indica que cuando se hizo la presentación, la socialización del proyecto, que lo hizo Angela y Felipe, perdón, Angela no, Ana María, la interventora en su momento, y Felipe, yo, pues yo siento que ellos los cogieron de comodines para aclarar las dudas. Indica que Ana María fue una persona que, mejor dicho, a todos nos dio la certeza, incluso cosas que uno porque yo también yo trabajo con Felipe, nosotros trabajamos juntos, entonces tenemos la misma experiencia, y nos aclaró muchas dudas que no teníamos a ciencia cierta de la necesidad, nos dio un panorama, nos dio tranquilidad de que el proyecto que se estaba aprobando si era necesario, que si valía eso. Indica que fue muy feo lo que hicieron con ellos, porque lo sacaron primero a Ana María, le pidieron que no, que ese proyecto no podía ser, incluso después de haber cobrado la primera cuota, ni siquiera había pasado un mes y ya estaban descartando el proyecto. Pregunta por qué. Indica que cuáles eran los comentarios de Nelson y el equipo. Indica que es que no hay plata para pagar, es que ya vino Pepito, que es muy querido en la unidad, entonces no tiene plata para pagar, Entonces ahí sí les empezó a doler a todos el bolsillo, pero los otros si, yo no soy tan querida en la unidad, si tal persona no es tan querida para la unidad, eso no importa. Indica que en estos momentos, pues yo puedo decir muchas cosas más, y lo que dicen es que se estaba pretendiendo bajar un poco un proyecto que fue aprobado con la más alta calidad por otro. Indica que en estos momentos desconocemos, Santo Felipe, como yo en lo que pude escuchar, porque muchas de las reuniones que tuvieron yo las escuché, por qué bajar. Indica que incluso iban a bajar la calidad 7 años. Indica que eso no es coherente, porque no es justo que las personas ahora estén sacando. Indica que ella está en Torre 3, mi cuota es mínima, pero una persona que está casi que doblando la cuota de la administración, en siete años tenga que volver a sacar una cuota más alta. Indica que eso no es justo, porque simplemente no hay que bajar, hay que bajar el proyecto y la única forma de bajarlo es como bajando las calidades y bajando los materiales. Indica que eso fue lo que Nelson no le gustó, que tanto la señora Ana María Echeverri, la interventora, no se prestó para eso. Indica que después llegó donde el interventor que recibió torre 3, lo puso, él dijo yo puedo hacer esto, pero como hago la inspección desde los balcones. Indica que Felipe le decía, usted no puede hacer eso. Indica que así es que no es la misma visual que usted tiene al frente Ana María, que hizo con drones. Indica que nosotros queremos, o al menos yo lo que quiero es que den claridad, porque todo lo que Ángela pregunta, la señora, la interventora dice que sí, pero no nos ha dado como una respuesta coherente. Indica que en estos momentos están descartando los parqueaderos, pero los parqueaderos como tanto, no sé si Felipe aún tiene la prueba visual de lo que nos compartió Ana María de la necesidad de los parqueaderos. Indica que esto para mí no es algo que uno diga no trae un total beneficio, es que está más completa, es que es mejor. Indica que hasta el momento a mí no ha logrado convencerme.</p>
+
+<p>Se indica que lo que es una apreciación de algo más, no una pregunta. Se indica que si hay una pregunta y por favor, por favor, no como la que habló la esposa, Don Felipe, no sé si usted va a un dar algo sobre lo que Doña Laura porque yo no entendí bien. Se indica que si es una pregunta, lo entendí como una apreciación de ella frente al proyecto como tal.</p>
+
+<p>Felipe Aristizábal indica que él está dispuesto a traer con doña Ángela y el Consejo y mirar bien esas propuestas para antes de tomar de una decisión. Indica que hagamos un conversatorio como se hizo con la interventora anterior, nos explique material sobre el material. Indica que es el proceso, como lo están usando, las cantidades, cuánto es todo, todo para desenglobar, porque acá pasaron una página agujita, hojita, pusieron un alpinista para revisar cómo está todo. Indica que él ve que hay muchas fallas. Indica que vi que está pintaplast se invitó y Pinta Plaza está casi con una misma propuesta muy similar a la que tenían. Indica que si ellos están y tenían tantas ganas de quedarse ahí, porque no lo abrocharon. Indica que venga qué descuento ahí yo no veo ningún descuento por adjudicarles el contrato. Indica que acá todo esto uno no puede dar las cosas así como de muy querido. Indica que como en algún momento quería el consejo cuando estaban con el interventor antes de que llegara la señora. Indica que venga don Elkin, coja usted este proceso. Indica que yo que les dije. Indica que sea que don Elkin sea muy querido. Muy amigo, pero hagan una convocatoria para que lleguen 10 o 20 o 30. Indica que lo que me parece muy grave es que invitaron a Pinta Plaz y no fueron capaces de invitar a Decor Habita, que era lo que se había ganado y de pronto hubieran podido conseguir un beneficio mejor en plazos X o Y. Indica que ya no Angela, no nos han explicado que hidrófugo van a utilizar, con qué calidad, con cuántos años, que pintura, si es pintura coraza, ¿Cuál es la garantía? Indica que es uno pasando así hoja a hoja. Indica que yo creo que esto sí merece un conversatorio para que todo el mundo resuelva dudas y tomar una decisión en votación más adelante.</p>
+
+<p>Se indica que vamos a votar, ¿Les parece? Se indica que ah, OK, hay un. Se indica que si quieres devuélvete por. Se indica que pero acá, acá, muy importante y hago un llamado a doña Ángela, Felipe y don Fabián y los demás y las demás personas que sepan de todo este tema de mantenimiento de ingeniería, pues para nosotros es muy importante que no perdamos el impulso y que así como hoy estamos acá y quizás no se aproba todo el proyecto, al menos y comenzar con una base y es que sean ustedes mismos los que nos colaboren a nosotros y yo creo que así se retorna la confianza en todos.</p>
+
+<p>Se indica que entonces doña Ángela, qué pena, si me gustaría que usted y Felipe replanteen y nos acompañen en ese equipo de trabajo. Se indica que es mejor para que los ambientalmente la escuchen. Se indica que hay una cosa que es muy importante y hacemos en los grupos de proyectos y no tiene que ser un civil, o sea, no tiene que ser, si hay otro civil muy rico, pero también sería muy bueno, a veces las mejores ideas salen de propietarios que no son civiles. Se indica que de propietarios no, vean, los grupos de gerencia de proyectos son multidisciplinarios, a veces un contador puede resultar que con una idea que se ha comprobado, un financiero. Se indica que entonces no tenemos que ser los civiles los que nos quieran acompañar para sacar este proyecto de cubiertas, sería muy bueno porque verdad es una urgencia.</p>
+
+<p>Se indica que redondeando entonces sería para este comité sería doña Ángela Londoño. Se indica que no, pero don Felipe, Don Felipe, para que sea el momento, no Felipe, que sea ese momento de pronto que caminemos juntos, arriesgue se, ¿Por qué no? Inténtelo. Se indica que si usted ve que el primer momento no le da. Se indica que don Felipe, perdón, una moción de orden, perdón, una moción de orden. Se indica que vengan señores, Señores. Se indica que don Felipe.</p>
+
+<p>Se indica que mientras sigue conversando allá, entonces, doña Ángela, para los que están acá y virtualmente, porque los que están hablando ya no los escuchan virtualmente. Se indica que entonces, doña Londoño, vamos firmes con usted, si, don Felipe Sánchez, vamos firmes con usted. Se indica que perdón, don Fabián, Firmes, sí. Se indica que listo, don Felipe. Se indica que don Felipe, contamos con usted. Se indica que listo, excelente, muchas gracias. Se indica que alguien más. Se indica que el esposo de la señora ya hoy. Se indica que cómo se llama su esposo. Se indica que no importa. Se indica que Mauricio Madrigal, del apartamento 1108. Se indica que Adriana Cifuentes, 1108, por favor. Se indica que Mauricio Madrigal. Se indica que gracias, gracias. Se indica que Mariano Calderón, 1905. Se indica que alguien más se quiere postular para este comité. Se indica que obviamente en trabajo conjunto con el Consejo de Administración, ¿Cierto? Se indica que OK, por acá. Se indica que Alejandro Londoño, del 1811, virtualmente. Se indica que excelente. Se indica que un segundo por alguien más. Se indica que doy la palabra señora y después Fabián. Se indica que listo, buenas noches. Se indica que yo le pido a los propietarios que están allí en virtual también que nos colaboren, es que necesitamos gente que se comprometa con ese conversatorio, no únicamente los que estamos aquí presenciales. Se indica que muchas gracias. Se indica que de hecho, don Alejandro del 1811 se acabó de postular también, don Fabián, pero sí quisiera que nos. Se indica que que la asamblea en su sabio conocimiento nos deje claro el alcance, porque nos ha pasado que me pasó pues en la de mi mamá lo mismo, una dificultad con el gamo. Se indica que nada más venga aquí y díganos si es mejor dicho, díganos hasta dónde va a ser el alcance para también nosotros tener claro nuestra responsabilidad. Se indica que yo no sé si de pronto el consejo.</p>
+
+<p>Se indica que entonces en ningún momento la idea era incrementar la cuota, ¿Cierto? Se indica que entonces, entonces eso es buen punto, porque lo que va a hacer el equipo auditor, lo que va a hacer el equipo auditor es validar, validar todo el ejercicio, ¿Cierto? Se indica que hacer todo el estudio, la auditoría, ¿Cierto? Se indica que van a revisar, van a auditar y van a emitir concepto, ¿Cierto? Se indica que van a auditar y emitir concepto sobre alcance, calidad y costo. Se indica que vale? Se indica que en ese.</p>
+
+<p>Se indica que don Elsa, yo quisiera como redondear algo. Se indica que yo pensaría que los los que están acá, yo me imagino que son propietarios, ¿Cierto? Se indica que yo diría que esa parte de auditoría sí, pero la decisión para generar tranquilidad, la decisión es compartida, tanto de consejo como ese comité, porque. Se indica que porque si queremos generar esa tranquilidad, yo creo que la votación tiene que ser entre todos los temas en el comité. Se indica que me estoy imaginando algo así. Se indica que por favor, me ponen cuidado. Se indica que me estoy imaginando. Se indica que nos sentamos con el equipo auditor, se mira toda la documentación y se toman el tiempo de revisarla. Se indica que listo? Se indica que y de esa revisión en equipo, emitimos, emitir, emitimos comunicado a la comunidad. Se indica que están de acuerdo con este señor. Se indica que don Nelson? Se indica que pero con eso va a llegar el próximo año. Se indica que y yo estoy de acuerdo con lo que dice la señora Ángel. Se indica que prioricemos un tema, prioricemos algo y que quede definido acá que se va a intervenir. Se indica que eso. Se indica que sí. Se indica que peso 19. Se indica que entonces vuelvo a redactar la votación. Se indica que vuelvo a redactar la votación. Se indica que en este momento la prioridad descubiertas, prioridades cubiertas. Se indica que el equipo no hemos podido contarles los avances, pero para que tengan presente, como nunca nos quedábamos con un proveedor, sino con dos, entonces van a poder ver documentos de contratación no firmados, porque no quisimos llegar aquí con nada firmado, no queríamos hacerlo. Se indica que listo? Se indica que entonces van a llegar a ver contratos, van a tener el contrato enfrente de todo lo que. Se indica que y todas las condiciones, fechas y disponibilidad para poder ejecutar pronto. Se indica que entonces van a poder tener un material completo de las propuestas. Se indica que listo.</p>
+
+<p>Se indica que correcto. Se indica que en ese contexto, vienen, miran toda la documentación con interventora, nos sentamos, yo estoy ahí todo el tiempo, nos sentamos, yo me hago un lado, ustedes emiten concepto y ese concepto lo redactamos y se lo entregamos a la comunidad. Se indica que están de acuerdo? Se indica que esa sería la votación. Se indica que no, no, no, no. Se indica que porque tú es quien tomaría. Se indica que quién tomaría la decisión. Se indica que presidente, tengo la mano levantada hace rato. Se indica que qué pena. Se indica que Juan Sebastián González 508. Se indica que aquí hay varias cosas que como se va a formular la pregunta, a mí no me dan claridad. Se indica que la primera, si lo que van a hacer es emitir un concepto, nos vamos a ver en la posición de tener que volver a citar una asamblea porque no le estamos dando la potestad al comité auditor y al consejo de tomar una decisión en nombre de la asamblea. Se indica que entonces va a pasar lo mismo, en un mes va a llegar eso y vamos a estar en un punto donde no se les está dando la potestad de tomar una decisión. Se indica que eso una parte. Se indica que la segunda, La segunda parte va de cara y esto es de pronto aguar un poquito lo que ya se está decidiendo. Se indica que pero nosotros estamos pagando una cuota extra por el proyecto completo, cierto? Se indica que entonces está bien tener un programa por etapas, pero lo que se tiene que aprobar es el proyecto completo. Se indica que si no se aprueba el proyecto completo, no tiene sentido seguir pagando la cuota extra, porque si se va a empezar por arriba, yo creo que la plata para esa parte ya está. Se indica que entonces pues siento que esas dos cosas no están claras en la formulación de la pregunta que se va a hacer.</p>
+
+<p>Se indica que así es, veamos. Se indica que hay que ser muy prácticos respecto a lo que dice don Juan Sebastián, El comité cuando se planteó ahoritica y creo que la dio la niña, es que ese<h2>8. Propuesta de Nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH</h2>
+
+El tema de la propuesta de una nueva multifuncional en el gimnasio del Conjunto Feliz Condominio PH fue abordado durante la asamblea.
+
+Se mencionó que se había enviado una máquina multifuncional al gimnasio para su evaluación. Sin embargo, Lina Marcela del apartamento 813, usuaria frecuente del gimnasio, expresó que, tras consultar con expertos, se determinó que la máquina no era adecuada para el uso intensivo de un gimnasio comunitario, sino más bien para uso doméstico. Indicó que una máquina adecuada para el gimnasio tendría un costo mayor, aproximadamente 22 millones de pesos.
+
+Mauricio Londoño del apartamento 1708 sugirió realizar un sondeo para determinar cuántos residentes utilizan el gimnasio, argumentando que no todos los habitantes del condominio lo usan y que podría ser más apropiado invertir en un gimnasio "smart" si la demanda lo justifica.
+
+Mauricio Suárez del apartamento 803 coincidió en que la máquina multifuncional debía ser de buena calidad y apta para el uso constante, recordando que una máquina similar había requerido reparaciones frecuentes en el pasado.
+
+Ante estas opiniones, se propuso no comprar la máquina multifuncional en ese momento y, en cambio, elaborar un presupuesto detallado para la asamblea ordinaria de 2026, con la participación de los interesados.
+
+Se preguntó a la asamblea si estaban de acuerdo con esta propuesta.
+
+No se realizó una votación formal sobre este tema en este punto de la reunión.
+<h2>9. Aprobación del Presupuesto, dotación de lobby de la torre número 3</h2>
+
+<p>Durante la asamblea, se abordó el tema de la aprobación del presupuesto para la dotación del lobby de la torre número 3. Se recordó que los copropietarios de la torre 3 habían realizado una contribución económica destinada a este fin.</p>
+
+<p>Se mencionó que, al revisar los registros financieros, se identificó que la administración no había cobrado correctamente un rubro específico. Este rubro correspondía a un acuerdo previo en el que las torres 1 y 2 debían compensar a la torre 3 por un tema presupuestario. Se determinó que la administración había facturado este rubro de manera incorrecta, cobrando algunas cuotas en 2025 en lugar de 2024. Como resultado, se identificaron 34 millones de pesos sin una destinación específica en el presupuesto actual.</p>
+
+<p>Felipe Aristizábal del 109 Torre 3, recordó que al inicio de su gestión en el consejo, se le había encomendado, junto con Nelson, la tarea de gestionar la dotación del lobby de la torre 3. Sin embargo, a la fecha, no se había presentado un presupuesto formal para este proyecto.</p>
+
+<p>Ante esta situación, se propuso destinar los 34 millones de pesos identificados al proyecto de fachadas y cubiertas, con el objetivo de reducir el número de cuotas necesarias para financiarlo. Esta propuesta buscaba dar un uso específico a los fondos y optimizar la gestión de los recursos disponibles.</p>
+
+<p>Posteriormente, se discutió la propuesta de dotar el gimnasio del conjunto con una nueva máquina multifuncional. Se mencionó que existía una carta firmada por más de 30 personas solicitando la compra de este equipo. Sin embargo, se presentaron diferentes opiniones sobre el tipo de máquina a adquirir y el presupuesto necesario.</p>
+
+<p>Lina Marcela del 813, expresó su preocupación sobre la idoneidad de la máquina propuesta, argumentando que no era adecuada para el uso intensivo en una unidad residencial. Sugirió esperar a la asamblea ordinaria de 2026 para elaborar un presupuesto más detallado y adquirir una máquina de mayor calidad.</p>
+
+<p>Mauricio Londoño del 1708, manifestó su desacuerdo con la propuesta de Lina Marcela, argumentando que una máquina multifuncional de 8 millones de pesos era una buena opción. Propuso realizar un sondeo para determinar cuántas personas utilizaban el gimnasio y justificar así la inversión en un equipo de mayor costo.</p>
+
+<p>Mauricio Suárez del 803, coincidió con Lina Marcela en que era preferible adquirir una máquina de tráfico medio que resistiera el uso constante en el gimnasio.</p>
+
+<p>Ante las diferentes opiniones, se propuso reservar 8 millones de pesos del presupuesto sin asignación específica para la compra de una nueva máquina multifuncional en la asamblea ordinaria de 2026. Esta propuesta buscaba conciliar las diferentes posturas y garantizar la disponibilidad de fondos para este proyecto en el futuro.</p>
+
+<p>Finalmente, se abordó el tema de la dotación del lobby de la torre 3. Se informó que el costo de los muebles, incluyendo IVA, ascendía a 12.830.580 pesos. Se especificó que se trataba de los mismos muebles que ya se habían instalado en los lobbies de las torres 1 y 2, incluyendo materas, un sofá y una mesa con marco metálico y circo de cristal.</p>
+
+<p>Lina Marcela del 813, ofreció donar un aplique que tenía en su sala para complementar la dotación del lobby.</p>
+
+<p><strong>Votación para aprobar la destinación de 12.830.580 pesos para la dotación del lobby de la torre 3:</strong></p>
+<ul>
+ <li><strong>A favor:</strong> No se registraron votos individuales en contra o abstenciones.</li>
+</ul>
+<p>La propuesta fue aprobada con una mayoría de votos a favor.</p>
+
+<p><strong>Resultado final de la votación:</strong> La asamblea aprobó destinar 12.830.580 pesos del presupuesto sin asignación específica para la dotación del lobby de la torre 3.</p>
+<h2>10. Aprobación del presupuesto para proyecto de Seguridad Integral y conformación de Comité de Seguridad para el proyecto</h2>
+
+<p>Durante la asamblea, se abordó la necesidad de aprobar un presupuesto para un proyecto de Seguridad Integral y la conformación de un Comité de Seguridad para dicho proyecto.</p>
+
+<p>Tras la discusión sobre la necesidad de expertos en diversos temas, se propuso la creación de un comité de seguridad. Los miembros propuestos fueron:</p>
+
+<ul>
+ <li>Gloria Marín (802)</li>
+ <li>París Lasprilla (1707)</li>
+ <li>Ana Milena Chica Salazar (412, Torre 3)</li>
+ <li>Mauricio Suárez (803)</li>
+ <li>Nelson Arciniegas (408)</li>
+</ul>
+
+<p>Se procedió a preguntar a la asamblea si había objeciones a la conformación de este comité. Al no haber objeciones, se consideró aprobado.</p>
+
+<p>Posteriormente, se discutieron las opciones de presupuesto para el proyecto de seguridad, indicando que un proyecto de seguridad integral no se limita a la instalación de cámaras, sino que debe incluir cultura de seguridad, alarmas y controles perimetrales. Se mencionó que la empresa de seguridad suele instalar cámaras que no son de la mejor calidad, lo cual motivó la necesidad de un diseño integral.</p>
+
+<p>Se presentaron estimaciones de costos para diferentes alcances del proyecto:</p>
+
+<ul>
+ <li>Cámaras para ascensores de la Torre 3, coworking, salón de proyecciones, lounge y accesos: Sin costo adicional.</li>
+</ul>
+
+<p>Se indicó que la administración encontró deudas de Coninsa del período de 2024, lo que generó un excedente de 28 millones. Se propuso destinar 6.7 millones (más IVA, resultando en 8.072 millones) de este excedente para dotar el gimnasio del conjunto.</p>
+
+<p>Ante la falta de un presupuesto detallado y la necesidad de una evaluación más exhaustiva, se propuso que en la asamblea ordinaria de 2026 se elaborara un presupuesto para la adquisición de una máquina multifuncional para el gimnasio. Se preguntó a la asamblea si aprobaban reservar 8 millones del presupuesto sin asignación específica para este fin.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: 98.42%</li>
+ <li><strong>En contra</strong>: 1.58%</li>
+</ul>
+
+<p>Se aprueba realizar un presupuesto específico para la nueva máquina multifuncional para dotación del gimnasio para la Asamblea Ordinaria 2026, reservando 8 millones del presupuesto sin asignación específica para dicha decisión.</p>
+
+<p>Se propuso utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3, adquiriendo los mismos muebles que se utilizaron en las torres 1 y 2 (materas, sofá y mesa con circo de cristal). Se sometió a votación esta propuesta.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: 90.86%</li>
+ <li><strong>En contra</strong>: 9.14%</li>
+</ul>
+
+<p>Se aprueba utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3.</p>
+
+<p>Se retomó la discusión sobre el proyecto de seguridad, mencionando que se cuenta con 34 cámaras y que es necesario un diseño integral que incluya cultura de seguridad, alarmas y controles perimetrales. Se propuso la creación de un comité de seguridad para este proyecto.</p>
+
+<p>Se preguntó a la asamblea si aprobaban el comité de seguridad propuesto, conformado por:</p>
+
+<ul>
+ <li>Gloria Marín (802)</li>
+ <li>París Lasprilla (1707)</li>
+ <li>Ana Milena Chica Salazar (412, Torre 3)</li>
+ <li>Mauricio Suárez (803)</li>
+ <li>Nelson Arciniegas (408)</li>
+</ul>
+
+<p>Al no haber objeciones, se consideró aprobado el comité.</p>
+
+<p>Se presentaron estimaciones de costos para diferentes alcances del proyecto de seguridad:</p>
+
+<ul>
+ <li>Cámaras para ascensores de la Torre 3, coworking, salón de proyecciones, lounge y accesos: Sin costo adicional.</li>
+</ul>
+
+<p>Se propuso asignar 17.772.683 pesos procedentes de la empresa de seguridad y de asignaciones no específicas para el proyecto de seguridad. Se sometió a votación esta propuesta.</p>
+
+<p>A continuación, se presenta el resultado de la votación:</p>
+
+<ul>
+ <li><strong>A favor</strong>: Unanimidad</li>
+</ul>
+
+<p>Se aprueba designar 17.772.683 pesos procedentes de la empresa de seguridad y las asignaciones no especificadas para el proyecto de seguridad.</p><h2>11. Propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio</h2>
+
+El tema de la propuesta para consolidar la información de cinco apartamentos para sustentar la reclamación del predial ante el municipio fue abordado durante la asamblea.
+
+Durante la discusión, se mencionó que Carlos Gallego y Juan Ricardo han liderado este tema durante más de un año y medio, participando en reuniones con la alcaldía, representantes de otras unidades, abogados y otros propietarios. Se identificó una problemática relacionada con el incremento en el avalúo catastral de los apartamentos.
+
+Carlos Gallego ilustró la situación con su caso particular, donde el avalúo catastral de su apartamento de 114 metros cuadrados, incluyendo parqueaderos y cuarto útil, pasó de 375 millones en 2023 a 826 millones en 2024. Esto resultó en un aumento del impuesto predial de 4.5 millones a 8.5 millones. El incremento en el costo del predial fue del 88.2%, mientras que el incremento de la base catastral fue del 120.1%.
+
+Se identificaron varias actuaciones indebidas, incluyendo presuntas violaciones a las normas de conservación catastral, la falta de notificación de la actualización de la base catastral, la actualización catastral basada en zonas geoeconómicas y la modificación de la matriz tarifaria.
+
+Se mencionó que la fórmula utilizada para la actualización catastral se basó en el precio del último apartamento vendido en la sala de ventas, aplicando ese precio a todos los apartamentos, sin considerar la antigüedad y el registro catastral.
+
+Se señaló que la circular emitida por el Consejo de Envigado en diciembre de 2023 indicaba que los avalúos quedarían al 85% del avalúo comercial, pero posteriormente se modificó para establecer que quedarían al 60%.
+
+Se mencionó la participación de Iván Darío, experto en temas catastrales, quien ha asesorado al municipio de Medellín y al municipio de Envigado. Se pretende realizar una reclamación administrativa ante la autoridad catastral, utilizando casos tipo de cinco o seis apartamentos para abarcar las diferentes situaciones de las torres.
+
+Se indicó que es necesario realizar avalúos comerciales y elaborar derechos de petición para recopilar información y presentar una reclamación formal ante el municipio.
+
+Se mencionó que la propuesta de Iván Darío tiene un costo de aproximadamente 51 millones de pesos. Se aclaró que esta reclamación es necesaria para recopilar información y agotar la vía administrativa antes de considerar una reclamación judicial.
+
+Se estimó que el beneficio potencial de esta reclamación, si es efectiva, podría ser de alrededor de 4 o 5 millones de pesos por año por apartamento, con una inversión inicial de alrededor de 200 mil pesos por apartamento en promedio.
+
+Se hizo referencia a la dificultad de realizar reclamaciones individuales y se destacó la importancia de abordar el problema de manera colectiva.
+
+Durante la discusión, Mauricio Londoño expresó su inquietud sobre el alcance de la reclamación y la posibilidad de que el municipio niegue la reclamación.
+
+Darí Villa preguntó si los 10 millones que habían quedado de administraciones previas se descontarían de los 51 millones. Se confirmó que, de ser así, la cuota adicional sería de 41 millones.
+
+Carolina Durán preguntó si los 41 millones restantes serían para Torre 1, Torre 2 y Torre 3, o solo para Torre 1 y Torre 2. Se aclaró que son para las tres torres y que se harán casos tipo para cada una.
+
+Juan Esteban Sánchez preguntó sobre la recomendación de los asesores frente al pago del segundo semestre del predial. Se indicó que lo ideal es pagar e ir a reclamar la devolución, para evitar el cobro de intereses de mora.
+
+Se mencionó que algunos propietarios han realizado acuerdos de pago con cero intereses.
+
+Se indicó que en los casos de apartamentos con leasing, la reclamación debe ser realizada por la entidad financiera.
+
+Se mencionó que la reclamación se haría de manera general, por lo que los apartamentos con leasing no se cogerían como un apartamento tipo para el estudio.
+
+Finalmente, se propuso la creación de una comisión para el manejo específico de esta gestión.
+
+Debido a la hora y a la necesidad de avanzar con los demás puntos del orden del día, se pospuso la votación de este tema.<h2>12. Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia</h2>
+
+Dado que no se encontraron menciones o detalles relacionados con el tema "Votación de la Asamblea con el objeto de realizar modificaciones al manual de convivencia" dentro de la transcripción proporcionada, se deja constancia de que, si bien el tema estaba incluido en el orden del día, no fue abordado durante el desarrollo de la reunión.
+<h2>13. Conformación de comités</h2>
+
+<p>Durante la asamblea, se abordó la necesidad de conformar diversos comités para apoyar la gestión de la administración y el consejo. Se hizo un llamado a los asistentes, tanto presenciales como virtuales, para que manifestaran su interés en participar en estos comités, destacando la importancia de contar con la colaboración de la comunidad para llevar a cabo las diferentes tareas y proyectos.</p>
+
+<p>Se mencionó que los comités son fundamentales para dar seguimiento y veeduría a los procesos que se realizan en la copropiedad, así como para ayudar a valorizar el patrimonio de los copropietarios. Se hizo hincapié en que no es necesario ser un experto en muchos temas, sino simplemente tener la voluntad de colaborar y contribuir al mejoramiento de la comunidad.</p>
+
+<p>Se resaltó la necesidad de contar con personas que ayuden en temas de gestión del cambio y que sepan cómo manejar temas culturales, especialmente en lo relacionado con el manual de convivencia. También se mencionó la importancia de mantener el gimnasio al día con sus mantenimientos y de seguir trabajando en la valorización de la copropiedad.</p>
+
+<p>En relación con la conformación del comité de seguridad, se indicó que este es fundamental para el proyecto de seguridad integral. Se mencionó que un proyecto de seguridad no se limita a la instalación de cámaras, sino que debe ser integral y abarcar aspectos como la cultura de seguridad, las alarmas, los perímetros y la respuesta a emergencias.</p>
+
+<p>Se hizo un llamado a los asistentes para que se postularan como miembros del comité de seguridad, destacando la importancia de contar con personas que tengan conocimientos y experiencia en el tema, así como con usuarios finales que puedan aportar su perspectiva y necesidades.</p>
+
+<p>Finalmente, se propuso la creación de un comité para el manejo específico de la gestión relacionada con el tema del predial, debido a la complejidad y especificidad de este asunto. Se mencionó la importancia de contar con personas que tengan conocimientos en el tema y que puedan ayudar a llevar a cabo las reclamaciones y trámites necesarios.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 01:35</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se aprueba la creación de un comité auditor del proyecto de fachadas y cubiertas, facultándolo para emitir conceptos y tomar decisiones sobre el proyecto, incluyendo al Consejo de Administración. Las decisiones del comité serán vinculantes para el Consejo de Administración y autónomas. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba tomar los 34.425.954 sin asignación específica para el proyecto de fachadas. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba realizar un presupuesto específico para la nueva máquina multifuncional para dotación del gimnasio para la Asamblea Ordinaria 2026, reservando 8 millones del presupuesto sin asignación específica para dicha decisión. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba utilizar 12.830.580 del presupuesto sin asignación específica para la dotación del Lobby de Torre 3. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba designar 17.772.683 procedentes de la empresa de seguridad y las asignaciones no especificadas para el proyecto de seguridad. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se autoriza el cobro de una cuota extra por valor de hasta 41.140.250 para la reclamación por vía administrativa del reajuste del cobro del impuesto predial, pagaderas en los meses de septiembre y octubre. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): 04_felisacondominium_audio_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/04_felisacondominium_audio/04_felisacondominium_audio_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/KHb5K4at4fBpEno
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/KHb5K4at4fBpEno
+Generando URL pública para Transcripcion.txt (EXISTENTE): 04_felisacondominium_audio_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/04_felisacondominium_audio/04_felisacondominium_audio_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/oJPMAeRTtmT7nrQ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/oJPMAeRTtmT7nrQ
