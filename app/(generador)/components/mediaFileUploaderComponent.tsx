@@ -429,6 +429,8 @@ export default function MediaFileUploaderComponent({
 
         setCalculando(false);
         setUploadProgress(100);
+        setProcesando(false);
+        setAnimacionTerminada(true);
 
         // Track successful upload event
         track('file_upload_success', {
@@ -440,6 +442,8 @@ export default function MediaFileUploaderComponent({
         setUploadStatus(result.error || "Error al subir el archivo");
         setCalculando(false);
         setUploadProgress(0);
+        setProcesando(false);
+        setAnimacionTerminada(true);
 
         // Track upload error event
         track('file_upload_error', {
@@ -452,6 +456,8 @@ export default function MediaFileUploaderComponent({
       console.error("Error al subir:", error);
       setCalculando(false);
       setUploadProgress(0);
+      setProcesando(false);
+      setAnimacionTerminada(true);
 
       // Track upload error event
       track('file_upload_error', {
@@ -580,7 +586,7 @@ export default function MediaFileUploaderComponent({
       const onAnimEnd = () => {
         console.log("Animación del botón procesando terminada");
         setAnimacionTerminada(true);
-        setProcesando(false); 
+        setProcesando(false);
       };
       animEl.addEventListener("endEvent", onAnimEnd);
       return () => {
