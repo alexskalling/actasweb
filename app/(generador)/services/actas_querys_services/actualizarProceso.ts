@@ -70,7 +70,7 @@ export async function ActualizarProceso(
         )
       );
 
-    console.log("✅ Acta actualizada desde cliente");
+    console.log("Acta actualizada");
     return { status: 'success', message: 'Acta actualizada correctamente.' };
   } catch (error) {
     console.error("❌ Error al actualizar el acta desde cliente:", error);

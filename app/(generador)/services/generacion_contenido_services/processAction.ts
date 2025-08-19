@@ -52,7 +52,7 @@ export async function processAction(
       contenido.content
     );
     if (formato?.status !== "success") {
-      console.log("Error formateando el acta");
+      console.error("Error formateando el acta");
       return {
         status: "error",
         message: "Error formateando el acta",
@@ -75,7 +75,6 @@ export async function processAction(
         formato.acta,
         automation
       );
-      console.log("✅ Actualización realizada");
     } catch (err) {
       console.error("❌ Error al actualizar:", err);
     }

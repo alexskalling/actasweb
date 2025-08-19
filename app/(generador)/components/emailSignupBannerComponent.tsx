@@ -10,7 +10,7 @@ export default function EmailSignupBannerComponent() {
     const listener = async (event: MessageEvent) => {
       if (event.data?.type === "auth-completed" && event.data?.source === "banner") {
         const session = await getSession();
-        console.log("✅ Sesión actualizada desde BANNER:", session);
+        console.log(" Sesión actualizada desde BANNER:", session);
         // Aquí puedes actualizar estado global si lo necesitas
       }
     };

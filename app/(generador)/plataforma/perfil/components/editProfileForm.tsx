@@ -20,7 +20,7 @@ export default function EditProfileForm({ onClose }: { onClose: () => void }) {
     try {
       await updateProfile(formData);
 
-      // ✅ Mostrar modal
+
       setModalMessage("Gracias por actualizar tus datos.");
       setShowModal(true);
     } catch (err) {
