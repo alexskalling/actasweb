@@ -9,8 +9,7 @@ import {
   jsonb,
 } from "drizzle-orm/pg-core";
 import {
-  relations,
-  sql
+  relations
 } from "drizzle-orm";
 
 export type DetalleError = {

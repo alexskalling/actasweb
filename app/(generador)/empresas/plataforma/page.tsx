@@ -14,7 +14,7 @@ import Image from 'next/image'
 
 import { useSession, signOut } from 'next-auth/react'
 import { track } from '../../utils/analytics'
-import GuardarNuevaEmpresaComponent from './components/guardarNuevaEmpresaComponent'
+// import GuardarNuevaEmpresaComponent from './components/guardarNuevaEmpresaComponent'
 export default function EmpresaPage() {
   const { data: session } = useSession()
   const [showForm, setShowForm] = useState(false)
