@@ -4048,3 +4048,59 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_r
 Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/qGAX64zqpPaEZAz
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/qGAX64zqpPaEZAz
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-19T22:04:05.412Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:04:06.669Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Transcripción existente encontrada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com. Obteniendo contenido.
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-19T22:04:07.746Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:04:08.505Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt. Cargando.
+[2025-08-19T22:04:09.250Z] Contenido del archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-19T22:04:09.252Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:04:10.030Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/pJoAyp4Ea6inQsg
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/pJoAyp4Ea6inQsg
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/gAqaFDGqXmoDB3H
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/gAqaFDGqXmoDB3H
+Verificando si existe transcripción: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+[2025-08-19T22:07:15.346Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:07:16.544Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Transcripción existente encontrada: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com. Obteniendo contenido.
+Verificando contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[2025-08-19T22:07:17.664Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:07:18.407Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Contenido existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt. Cargando.
+[2025-08-19T22:07:19.166Z] Contenido del archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.mp3 en carpeta: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com
+Verificando Borrador .docx existente: 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[2025-08-19T22:07:19.168Z] Verificando existencia del archivo 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx en Nextcloud carpeta 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-19T22:07:19.935Z] Archivo "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx" EXISTE en Nextcloud en la carpeta "20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/kG4Hpq6sCeFzDEk
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/kG4Hpq6sCeFzDEk
+Generando URL pública para Transcripcion.txt (EXISTENTE): 20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com/20250811-13.52-__04_riomistico_audio__memories-sebas123_hotmail.com_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/3D4LBGDKWFxNH7G
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/3D4LBGDKWFxNH7G
