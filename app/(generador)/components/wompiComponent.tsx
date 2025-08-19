@@ -1,8 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
-import { ActualizarProceso } from "../services/actualizarProceso";
-import { guardarFalloPagoService } from "../services/guardarFalloPagoService";
+import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
+import { guardarFalloPagoService } from "../services/fallos_querys_services/guardarFalloPagoService";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
   

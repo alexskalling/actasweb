@@ -3,7 +3,7 @@
 
 import { useEffect, useState } from "react";
 import { Select } from "../../../components/ui/select";
-import { getIndustrias } from "@/app/(generador)/services/getIndustriaAction";
+import { getIndustrias } from "@/app/(generador)/services/industria_querys_services/getIndustriaAction";
 
 interface Industria {
   id: number;

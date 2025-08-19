@@ -9,7 +9,8 @@ import {
   jsonb,
 } from "drizzle-orm/pg-core";
 import {
-  relations
+  relations,
+  sql
 } from "drizzle-orm";
 
 export type DetalleError = {
@@ -47,6 +48,7 @@ export const usuarios = pgTable("usuarios", {
   email: text("email_usuario"),
   telefono: text("telefono_usuario"),
   ultimoAcceso: timestamp("ultimo_acceso"),
+  rol: integer("rol").notNull(),
 });
 
 export const usuariosRelations = relations(usuarios, ({ many }) => ({
@@ -100,6 +102,27 @@ export const fallosActaRelations = relations(fallosActa, ({ one }) => ({
     references: [actas.id],
   }),
 }));
+// Tabla empresas
+export const empresas = pgTable("empresas", {
+  idEmpresa: uuid("id_empresa").primaryKey().notNull().defaultRandom(),
+  nombreEmpresa: text("nombre_empresa").notNull(),
+  adminEmpresa: uuid("admin_empresa")
+    .notNull()
+    .references(() => usuarios.id, { onDelete: "cascade" }),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+// Tabla agentes_empresa
+export const agentesEmpresa = pgTable(
+  "agentes_empresa",
+  {
+    empresaId: uuid("empresa_id").primaryKey().notNull()
+      .notNull()
+      .references(() => empresas.idEmpresa, { onDelete: "cascade" }),
+    agenteId: uuid("agente_id").primaryKey().notNull()
+      .notNull()
+      .references(() => usuarios.id, { onDelete: "cascade" }),
+  });
 
 export const actasRelations = relations(actas, ({ one }) => ({
   estadoProceso: one(estadosProceso, {

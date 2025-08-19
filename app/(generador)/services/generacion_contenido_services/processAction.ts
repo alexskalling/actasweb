@@ -2,25 +2,30 @@
 import { formatContent } from "./formatContent";
 import { generateContenta } from "./generateContenta";
 import { transcripAction } from "./transcriptAction";
-import { ActualizarProceso } from "./actualizarProceso";
+import { ActualizarProceso } from "../actas_querys_services/actualizarProceso";
+import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
 
-export async function processAutomaticAction(
+export async function processAction(
   folder: string ,
   file: string,
   urlAssembly: string,
   email: string,
+  name: string,
   automation?: boolean
 ) {
   
   try {
+    console.log("Inicio de proceso de acción");
+    console.log("Proceso de  trasncripcion" + urlAssembly);
     const transcribe = await transcripAction(folder, file, urlAssembly);
     if (transcribe?.status !== "success") {
-      console.error("Error en la generación de trasncripcion");
+      console.log("Error en la generación de trasncripcion");
       return {
         status: "error",
         message: "Error en la generación de trasncripcion",
       };
     }
+    console.log("Transcripcion  lista");
 
     const contenido = await generateContenta(
       folder,
@@ -36,6 +41,7 @@ export async function processAutomaticAction(
         message: "Error en la generación de contenidos",
       };
     }
+    console.log("Contenido listo");
 
     // Formateo de contenido
     const formato = await formatContent(
@@ -46,13 +52,16 @@ export async function processAutomaticAction(
       contenido.content
     );
     if (formato?.status !== "success") {
-      console.error("Error formateando el acta");
+      console.log("Error formateando el acta");
       return {
         status: "error",
         message: "Error formateando el acta",
       };
     }
-
+    console.log("Acta lista");
+    console.log("Fin de proceso de acción");
+    console.log("transcipcion: ", formato.transcripcion);
+    console.log("acta: ", formato.acta);
     try {
       await ActualizarProceso(
         file,
@@ -66,10 +75,13 @@ export async function processAutomaticAction(
         formato.acta,
         automation
       );
+      console.log("✅ Actualización realizada");
     } catch (err) {
-      console.error("Error al actualizar:", err);
+      console.error("❌ Error al actualizar:", err);
     }
-    if (email) {      
+    if (email) {
+
+      await sendActaEmail(email, name, formato.acta as string, formato.transcripcion as string, file as string);
       await ActualizarProceso(
         file,
         7,
