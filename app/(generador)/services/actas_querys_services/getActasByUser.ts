@@ -36,7 +36,7 @@ export async function getActasByUser() {
     .where(eq(actas.idUsuario, user_id))
     .orderBy(desc(actas.fechaProcesamiento));
 
-    console.log("✅ Actas obtenidas para el usuario:", user_id);
+    console.log("Actas obtenidas para el usuario:", user_id);
     return { 
       status: 'success', 
       data: userActas 

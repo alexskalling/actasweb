@@ -23,9 +23,9 @@ export async function newUser({
       ultimoAcceso: last_login,
       rol: rol
     });
-    console.log(`✅ Usuario registrado: ${mail}`);
+    console.log(`Usuario registrado: ${mail}`);
   } catch (error) {
-    console.error("❌ Error al registrar usuario:", error);
+    console.error("Error al registrar usuario:", error);
     throw error;
   }
 }

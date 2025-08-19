@@ -68,7 +68,7 @@ export async function GuardarNuevoProceso(
           )
         );
 
-      console.log("✅ Acta actualizada");
+      console.log("Acta actualizada");
       return { status: 'success', message: 'Acta actualizada correctamente.' };
     }
 
@@ -94,7 +94,7 @@ export async function GuardarNuevoProceso(
     // 📄 si no existe ninguna → crear
     await db.insert(actas).values(data);
 
-    console.log("✅ Acta creada");
+    console.log("Acta guardada");
     return { status: 'success', message: 'Acta creada correctamente.' };
 
   } catch (error: unknown) {
