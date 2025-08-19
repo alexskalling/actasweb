@@ -23,7 +23,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Protege todas las rutas excepto la raíz, login y API de auth
-    "/((?!_next/static|_next/image|favicon.ico|login|api/auth|$|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|login|api/auth|api/descarga|$|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };
