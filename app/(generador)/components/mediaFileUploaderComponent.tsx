@@ -1376,7 +1376,7 @@ export default function MediaFileUploaderComponent({
                     Procesando acta...
                   </>
                 </Button>
-              ):acta != null && transcripcion != null &&  animacionTerminada && (
+              ):acta != null && transcripcion != null && (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
