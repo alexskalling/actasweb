@@ -1,11 +1,13 @@
 "use server";
 
 import { db } from "@/lib/db/db";
-import { empresas, agentesEmpresa } from "@/lib/db/schema";
+import { empresas } from "@/lib/db/schema";
+import { NuevoAministradorEmpresaService } from "./nuevoAdministadorEmpresaService";
 
 // Crear una nueva empresa
-export async function guardarNuevaEmpresaService(nombreEmpresa: string, adminEmpresa: string) {
+export async function guardarNuevaEmpresaService(nombreEmpresa: string, correoAdminEmpresa: string) {
   try {
+    const adminEmpresa = await NuevoAministradorEmpresaService(correoAdminEmpresa);
     const [newEmpresa] = await db
       .insert(empresas)
       .values({

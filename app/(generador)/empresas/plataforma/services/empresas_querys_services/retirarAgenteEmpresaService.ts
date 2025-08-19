@@ -1,7 +1,7 @@
 "use server";
 
 import { db } from "@/lib/db/db";
-import { empresas, agentesEmpresa } from "@/lib/db/schema";
+import { agentesEmpresa } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
 // Eliminar un agente de una empresa
