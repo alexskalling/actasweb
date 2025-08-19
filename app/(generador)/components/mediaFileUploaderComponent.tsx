@@ -35,7 +35,7 @@ interface MediaSelectorProps {
   onFileSelect?: (file: File) => void;
   accept?: string;
   maxSize?: number;
-  onCheckActa: () => void;
+  onCheckActa?: () => void;
 }
 /*function getRealAudioDuration(filePath: string) {
   return new Promise((resolve, reject) => {
@@ -52,7 +52,7 @@ interface MediaSelectorProps {
 export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
-  onCheckActa,
+  onCheckActa = () => {}, 
 }: MediaSelectorProps,) {
   const isIOS = useIsIOSDevice();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
@@ -285,7 +285,7 @@ export default function MediaFileUploaderComponent({
     if (result.status == "success") {
       setActa(result.acta);
       setTranscripcion(result.transcripcion);
-      onCheckActa();
+      onCheckActa?.();
       setUploadStatus(
         "Todo listo, tu borrador de acta está listo para ser descargado."
       );
@@ -1059,7 +1059,7 @@ export default function MediaFileUploaderComponent({
                     )}
                   </Button>
                 )}
-              {procesando && (
+              {acta == null && transcripcion == null && animacionTerminada && procesando  ? (
                 <Button
                   id="procesando" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
@@ -1070,6 +1070,7 @@ export default function MediaFileUploaderComponent({
                     handleUploadFile();
                   }}
                   disabled={procesando}
+                  
                 >
                   <>
                     {" "}
@@ -1375,9 +1376,7 @@ export default function MediaFileUploaderComponent({
                     Procesando acta...
                   </>
                 </Button>
-              )}
-
-              {acta != null && transcripcion != null && file && animacionTerminada && (
+              ):acta != null && transcripcion != null &&  animacionTerminada && (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
