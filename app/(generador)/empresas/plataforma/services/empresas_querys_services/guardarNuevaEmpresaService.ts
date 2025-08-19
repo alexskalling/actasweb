@@ -4,6 +4,7 @@ import { db } from "@/lib/db/db";
 import { empresas } from "@/lib/db/schema";
 import { NuevoAministradorEmpresaService } from "./nuevoAdministadorEmpresaService";
 
+
 // Crear una nueva empresa
 export async function guardarNuevaEmpresaService(nombreEmpresa: string, correoAdminEmpresa: string) {
   try {

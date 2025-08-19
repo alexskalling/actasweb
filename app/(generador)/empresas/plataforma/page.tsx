@@ -2,8 +2,10 @@
 import { getServerSession } from "next-auth";
 import GuardarNuevaEmpresaComponent from "./components/guardarNuevaEmpresaComponent";
 
+
 export default async function EmpresasPage() {
   const session = await getServerSession();
+
 
   if (!session?.user?.email) {
     return <div>No has iniciado sesión</div>;
