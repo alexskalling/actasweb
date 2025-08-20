@@ -6,7 +6,7 @@ import { db } from "@/lib/db/db";
 import { actas } from "@/lib/db/schema";
 import { eq, and, lt, gte } from "drizzle-orm";
 
-export async function GuardarNuevoProceso(
+export async function GuardarNuevoDesdeSoporteProceso(
   nombreActa: string,
   idEstadoProceso: number,
   duracion: number | string,
@@ -87,8 +87,15 @@ export async function GuardarNuevoProceso(
       .limit(1);
 
     if (actaCerrada.length > 0) {
-      console.log("Ya existe un acta con estado >=5 para este nombre y usuario.");
-      throw new Error("DUPLICATE_ACTA");
+        await db
+        .update(actas)
+        .set(data)
+        .where(
+          and(
+            eq(actas.nombre, nombreActa),
+            eq(actas.idUsuario, user_id),
+          )
+        );
     }
 
     // 📄 si no existe ninguna → crear

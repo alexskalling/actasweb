@@ -10,9 +10,7 @@ export default function GeneradorContainerContainer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="w-full rounded-sm">
           <div className="flex h-full">
-            <MediaFileUploaderComponent onCheckActa={function (): void {
-              throw new Error("Function not implemented.");
-            }} />
+            <MediaFileUploaderComponent onCheckActa={function (): void {}} />
           </div>
         </div>
         <div className="w-full ">

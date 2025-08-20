@@ -29,6 +29,7 @@ import { allowedExtensions } from "../utils/allowedExtensions";
 import { useIsIOSDevice } from "../hooks/useIOS";
 import UploadDropzoneComponent from "./uploadDropzoneComponent";
 import ProgressBarComponent from "./progressBarComponent";
+import { GuardarNuevoDesdeSoporteProceso } from "../services/actas_querys_services/guardarNuevoDesdeSoporteProceso";
 
 
 interface MediaSelectorProps {
@@ -52,7 +53,7 @@ interface MediaSelectorProps {
 export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
-  onCheckActa = () => {}, 
+  onCheckActa = () => { },
 }: MediaSelectorProps,) {
   const isIOS = useIsIOSDevice();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
@@ -106,25 +107,26 @@ export default function MediaFileUploaderComponent({
     setUploadProgress(0);
 
     try {
-      if (file) {
-        const isDuplicated = await BuscarAbiertoProceso(file.name);
+      if (process.env.NEXT_PUBLIC_PAGO != "soporte") {
+        if (file) {
+          const isDuplicated = await BuscarAbiertoProceso(file.name);
 
-        if (isDuplicated) {
-          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
-          setShowModal(true);
-          clearSelection();
-          return;
+          if (isDuplicated) {
 
-        } else {
-          setDuplicado(false);
+            setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+            setShowModal(true);
+            clearSelection();
+            return;
+
+          } else {
+            setDuplicado(false);
+          }
         }
       }
 
     } catch (error: unknown) {
       console.error(" Error al ejecutar BuscarAbiertoProceso:", error);
     }
-
-
 
 
     // Track inicio selección archivo
@@ -399,8 +401,12 @@ export default function MediaFileUploaderComponent({
                 setIndustriaId(99);
               }
               const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ? "soporte" : "acta";
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
-
+              if (process.env.NEXT_PUBLIC_PAGO != "soporte") {
+                await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
+              }else{
+                GuardarNuevoDesdeSoporteProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
+              }
+              
             }
           } catch (error: unknown) {
             console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
@@ -1059,7 +1065,7 @@ export default function MediaFileUploaderComponent({
                     )}
                   </Button>
                 )}
-              {acta == null && transcripcion == null && animacionTerminada && procesando  ? (
+              {acta == null && transcripcion == null && animacionTerminada && procesando ? (
                 <Button
                   id="procesando" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
@@ -1070,7 +1076,7 @@ export default function MediaFileUploaderComponent({
                     handleUploadFile();
                   }}
                   disabled={procesando}
-                  
+
                 >
                   <>
                     {" "}
@@ -1376,7 +1382,7 @@ export default function MediaFileUploaderComponent({
                     Procesando acta...
                   </>
                 </Button>
-              ):acta != null && transcripcion != null && (
+              ) : acta != null && transcripcion != null && (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
@@ -1447,3 +1453,4 @@ export default function MediaFileUploaderComponent({
     </>
   );
 }
+
