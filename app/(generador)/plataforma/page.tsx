@@ -18,11 +18,15 @@ import HistorialActasComponent from '../components/historialActasComponent'
 import { useSession, signOut } from 'next-auth/react'
 import EditProfileForm from './perfil/components/editProfileForm'
 import { track } from '../utils/analytics'
+import GuardarNuevaEmpresaComponent from '@/app/modules/empresas/components/guardarNuevaEmpresaComponent'
+import { buscarEmpresaByAdmin } from '@/app/modules/empresas/services/buscarEmpresaByAdminService'
 
 export default function PlataformaPage() {
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   const [reloadTrigger, setReloadTrigger] = useState(false);
-  const [showEditForm, setShowEditForm] = useState(false)
+  const [showEditForm, setShowEditForm] = useState(false);
+  const [tieneEmpresa, setTieneEmpresa] = useState<boolean>(false);
+  
 
   // Track acceso a plataforma
   useEffect(() => {
@@ -34,7 +38,18 @@ export default function PlataformaPage() {
         'user_email': session.user?.email
       });
     }
+    const checkEmpresa = async () => {
+      if (session?.user?.email) {
+        const res = await buscarEmpresaByAdmin(session.user.email);
+        if (res.success) {
+          setTieneEmpresa(true);
+        }
+      }
+    };
+    checkEmpresa();
+    
   }, [session]);
+  console.log(tieneEmpresa);
 
   return (
     <>
@@ -143,6 +158,10 @@ export default function PlataformaPage() {
                   <EditProfileForm onClose={() => setShowEditForm(false)} />
                 </div>
               )}
+              {!tieneEmpresa && (
+                <GuardarNuevaEmpresaComponent/>
+              )}
+              
             </div>
           </div>
         </header>

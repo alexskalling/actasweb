@@ -9,7 +9,6 @@ declare global {
   }
 }
 import { X } from "lucide-react";
-//import { exec } from "child_process";
 import { Button } from "@/components/ui/button";
 import { normalizarNombreArchivo } from "../services/generacion_contenido_services/utilsActions";
 import WompiComponent from "./wompiComponent";
@@ -38,17 +37,7 @@ interface MediaSelectorProps {
   maxSize?: number;
   onCheckActa?: () => void;
 }
-/*function getRealAudioDuration(filePath: string) {
-  return new Promise((resolve, reject) => {
-    exec(`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`,
-      (error, stdout) => {
-        if (error) return reject(error);
-        const duration = parseFloat(stdout.trim());
-        resolve(duration);
-      }
-    );
-  });
-}*/
+
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
