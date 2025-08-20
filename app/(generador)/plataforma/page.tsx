@@ -20,6 +20,7 @@ import EditProfileForm from './perfil/components/editProfileForm'
 import { track } from '../utils/analytics'
 import GuardarNuevaEmpresaComponent from '@/app/modules/empresas/components/guardarNuevaEmpresaComponent'
 import { buscarEmpresaByAdmin } from '@/app/modules/empresas/services/buscarEmpresaByAdminService'
+import AdministradorEmpresaCardComponent from '@/app/modules/empresas/components/administradorEmpresaCardComponent'
 
 export default function PlataformaPage() {
   const { data: session } = useSession();
@@ -85,6 +86,9 @@ export default function PlataformaPage() {
                     </div>
                   </h1>
                 </div>
+                {tieneEmpresa && session?.user?.email && (
+                <AdministradorEmpresaCardComponent adminMail={session?.user?.email} />
+              )}
 
                 <div className="flex items-center gap-x-4 sm:gap-x-6">
                   <button
@@ -161,6 +165,7 @@ export default function PlataformaPage() {
               {!tieneEmpresa && (
                 <GuardarNuevaEmpresaComponent/>
               )}
+              
               
             </div>
           </div>

@@ -1,7 +1,7 @@
 'use server';
 
-import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
+import { getUserEmailFromSession } from "@/app/modules/session/getEmailSession";
+import { getUserIdByEmail } from "@/app/modules/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
 import { actas } from "@/lib/db/schema";
 import { eq, and, lt, gte } from "drizzle-orm";

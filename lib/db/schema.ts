@@ -7,6 +7,9 @@ import {
   serial,
   integer,
   jsonb,
+  varchar,
+  boolean,
+  primaryKey,
 } from "drizzle-orm/pg-core";
 import {
   relations
@@ -115,13 +118,27 @@ export const empresas = pgTable("empresas", {
 export const agentesEmpresa = pgTable(
   "agentes_empresa",
   {
-    empresaId: uuid("empresa_id").primaryKey().notNull()
+    empresaId: uuid("empresa_id")
       .notNull()
       .references(() => empresas.idEmpresa, { onDelete: "cascade" }),
-    agenteId: uuid("agente_id").primaryKey().notNull()
+    agenteId: uuid("agente_id")
       .notNull()
       .references(() => usuarios.id, { onDelete: "cascade" }),
-  });
+  },
+  (t) => ({
+    pk: primaryKey({ columns: [t.empresaId, t.agenteId] }),
+  })
+);
+
+export const invitaciones = pgTable("invitaciones", {
+  token: text("token").primaryKey(), // Token único de la invitación
+  empresaId: uuid("empresa_id")
+    .notNull()
+    .references(() => empresas.idEmpresa, { onDelete: "cascade" }),
+  email: varchar("email", { length: 255 }).notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
+  accepted: boolean("accepted").default(false),
+});
 
 export const actasRelations = relations(actas, ({ one }) => ({
   estadoProceso: one(estadosProceso, {

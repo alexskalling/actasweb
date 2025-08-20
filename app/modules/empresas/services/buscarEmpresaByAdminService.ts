@@ -1,6 +1,6 @@
 "use server";
 
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
+import { getUserIdByEmail } from "@/app/modules/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
 import { empresas } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
@@ -18,18 +18,19 @@ export async function buscarEmpresaByAdmin(adminMail: string) {
       return { success: false, error: "No se encontró usuario con este correo" };
     }
 
-    const empresa: Empresa | undefined = await db
+    const empresa: Empresa | null = await db
       .select()
       .from(empresas)
       .where(eq(empresas.adminEmpresa, adminId))
       .limit(1)
-      .then((res) => res[0]);
+      .then((res) => res[0] ?? null);
 
     if (!empresa) {
-      return { success: false, error: "No se encontró empresa para este administrador" };
+      return { success: false, error: "No se encontró empresa para este administrador", empresa: null };
     }
 
     return { success: true, empresa };
+
   } catch (error) {
     console.error("Error buscando empresa:", error);
     return { success: false, error: "No se pudo buscar la empresa" };
