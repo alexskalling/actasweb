@@ -2,41 +2,42 @@
 
 import { db } from "@/lib/db/db";
 import { invitaciones, agentesEmpresa, usuarios } from "@/lib/db/schema";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 
 // Aceptar invitación
 export async function validarInvitacion(userId: string, email: string, token: string) {
   try {
-    // 1. Buscar la invitación por token
     const invitacion = await db
       .select()
       .from(invitaciones)
       .where(eq(invitaciones.token, token))
       .then(res => res[0]);
 
-    if (!invitacion) {
-      return { success: false, error: "Invitación no encontrada o inválida" };
+    if (!invitacion) return { success: false, error: "Invitación no encontrada o inválida" };
+    if (invitacion.email !== email) return { success: false, error: "El correo no coincide" };
+
+    // Verificar si ya existe la asociación
+    const existingAssociation = await db
+      .select()
+      .from(agentesEmpresa)
+      .where(
+        and(
+          eq(agentesEmpresa.empresaId, invitacion.empresaId),
+          eq(agentesEmpresa.agenteId, userId)))
+      .then(res => res[0]);
+
+    if (!existingAssociation) {
+      await db.insert(agentesEmpresa).values({
+        empresaId: invitacion.empresaId,
+        agenteId: userId,
+      });
     }
 
-    // 2. Validar que el correo coincida
-    if (invitacion.email !== email) {
-      return { success: false, error: "El correo no coincide con la invitación" };
-    }
-
-    // 3. Asociar el agente a la empresa
-    await db.insert(agentesEmpresa).values({
-      empresaId: invitacion.empresaId,
-      agenteId: userId,
-    });
-
-    // 4. Marcar invitación como aceptada
-    await db
-      .update(invitaciones)
+    await db.update(invitaciones)
       .set({ accepted: true })
-      .where(eq(invitaciones.token, invitacion.token));
+      .where(eq(invitaciones.token, token));
 
-      await db
-      .update(usuarios)
+    await db.update(usuarios)
       .set({ rol: 2 })
       .where(eq(usuarios.id, userId));
 

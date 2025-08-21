@@ -1,5 +1,6 @@
 import { type NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import AzureADProvider from "next-auth/providers/azure-ad";
 import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
@@ -15,6 +16,11 @@ declare module "next-auth" {
 }
 export const authOptions: NextAuthOptions = {
   providers: [
+    AzureADProvider({
+      clientId: process.env.AZURE_AD_CLIENT_ID!,
+      clientSecret: process.env.AZURE_AD_CLIENT_SECRET!,
+      tenantId: "common",
+    }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
@@ -22,6 +28,7 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async signIn({ user, account }) {
+      
       // 1. Buscar usuario existente
       let existingUser = await db
         .select()
@@ -41,6 +48,9 @@ export const authOptions: NextAuthOptions = {
       if (account?.callbackUrl) {
         const url = new URL(String(account.callbackUrl), process.env.NEXTAUTH_URL);
         const token = url.searchParams.get("token");
+        console.log("token: "+ token);
+
+        console.log("existingUser: "+ existingUser);
 
         if (token && existingUser.email) {
           await validarInvitacion(existingUser.id, existingUser.email, token);
@@ -58,3 +68,5 @@ export const authOptions: NextAuthOptions = {
     },
   },
 };
+
+

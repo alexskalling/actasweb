@@ -2,17 +2,23 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { crearInvitacionService } from "../services/crearInvitacionService";
 
-export function InvitarAgenteModal({ 
-  open, 
-  onOpenChange, 
+export function InvitarAgenteModal({
+  open,
+  onOpenChange,
   empresaId,
-  onSubmit 
-}: { 
-  open: boolean; 
+  onSubmit,
+}: {
+  open: boolean;
   onOpenChange: (open: boolean) => void;
   empresaId: string;
   onSubmit: (email: string, link: string) => void;
@@ -27,7 +33,6 @@ export function InvitarAgenteModal({
     try {
       const res = await crearInvitacionService({ empresaId, email });
       if (res.success && res.token) {
-        // genera el link final (ajústalo a tu dominio real)
         const link = `${window.location.origin}/invitacion/${res.token}`;
         setInviteLink(link);
       }
@@ -52,7 +57,10 @@ export function InvitarAgenteModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent>
+      {/* 👇 este overlay evita que lo de atrás sea clickeable */}
+      
+
+      <DialogContent className="fixed left-1/2 top-1/2 z-50 w-full max-w-md -translate-x-1/2 -translate-y-1/2 rounded-lg bg-white p-6 shadow-lg">
         <DialogHeader>
           <DialogTitle>Invitar agente</DialogTitle>
         </DialogHeader>
