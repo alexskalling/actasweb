@@ -1,64 +1,66 @@
 "use client";
-
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 import { buscarEmpresaByAdmin } from "../services/buscarEmpresaByAdminService";
-import { InvitarAgenteModal } from "../../invitaciones/components/modalInvitacion";
+import { buscarEmpresaByAgente } from "../../agentes_empresa/services/buscarEmpresaByAgente";
 
+interface Empresa {
+  idEmpresa: string;
+  nombreEmpresa: string;
+  adminEmpresa: string;
+  createdAt: Date;
+}
 
-export default function AdministradorEmpresaCardComponent({ adminMail }: { adminMail: string }) {
-  const [empresa, setEmpresa] = useState<string | null>(null);
-  const [empresaId, setEmpresaId] = useState<string | null>(null);
+export default function AdministradorEmpresaCardComponent() {
+  const { data: session } = useSession();
+  const [empresa, setEmpresa] = useState<Empresa | null>(null);
+  const [role, setRole] = useState<"admin" | "agente" | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    async function fetchEmpresa() {
+    const checkEmpresa = async () => {
+      if (!session?.user?.email) {
+        setLoading(false);
+        return;
+      }
+
       try {
-        const res = await buscarEmpresaByAdmin(adminMail);
-        if (res.success && res.empresa) {
-          setEmpresa(res.empresa.nombreEmpresa);
-          setEmpresaId(res.empresa.idEmpresa);
-        } else {
-          setError(res.error || "No se pudo cargar la empresa");
+        // primero buscar como admin
+        const resAdmin = await buscarEmpresaByAdmin(session.user.email);
+        if (resAdmin.success && resAdmin.empresas && resAdmin.empresas.length > 0) {
+          setEmpresa(resAdmin.empresas[0]);
+          setRole("admin");
+          return;
         }
-      } catch (err) {
-        setError("Error al obtener la empresa: " + err);
+
+        // si no es admin, buscar como agente
+        const resAgente = await buscarEmpresaByAgente(session.user.email);
+        if (resAgente.success && resAgente.empresas && resAgente.empresas.length > 0) {
+          setEmpresa(resAgente.empresas[0]);
+          setRole("agente");
+        }
       } finally {
         setLoading(false);
       }
-    }
+    };
 
-    fetchEmpresa();
-  }, [adminMail]);
+    checkEmpresa();
+  }, [session]);
 
-
-
-  if (loading) {
-    return <p className="text-gray-500">Cargando empresa...</p>;
-  }
-
-  if (error) {
-    return <p className="text-red-500">{error}</p>;
-  }
+  if (loading) return <p>Cargando...</p>;
+  if (!empresa) return null; // no muestra nada
 
   return (
-    <div className="p-6 max-w-md mx-auto rounded-2xl dark:bg-gray-900">
-      <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
-        {empresa}
-      </h2>
-      <Button variant="outline" onClick={() => setModalOpen(true)}>
-        Invitar agentes
-      </Button>
-      {empresaId && empresa &&(
-        <InvitarAgenteModal
-          open={modalOpen}
-          onOpenChange={setModalOpen}
-          empresaId={empresaId}
-          empresaNombre={empresa} />
+    <div className="p-4 border rounded-lg shadow-sm">
+      <h2 className="text-xl font-bold">{empresa.nombreEmpresa}</h2>
+      {role === "admin" && (
+        <button className="mt-2 px-4 py-2 bg-blue-600 text-white rounded">
+          Invitar usuarios
+        </button>
       )}
-
+      {role === "agente" && (
+        <p className="text-sm text-gray-600">Eres agente de esta empresa</p>
+      )}
     </div>
   );
 }

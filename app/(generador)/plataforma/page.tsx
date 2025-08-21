@@ -21,6 +21,7 @@ import { track } from '../utils/analytics'
 import GuardarNuevaEmpresaComponent from '@/app/modules/empresas/components/guardarNuevaEmpresaComponent'
 import { buscarEmpresaByAdmin } from '@/app/modules/empresas/services/buscarEmpresaByAdminService'
 import AdministradorEmpresaCardComponent from '@/app/modules/empresas/components/administradorEmpresaCardComponent'
+import { buscarEmpresaByAgente } from '@/app/modules/agentes_empresa/services/buscarEmpresaByAgente'
 
 export default function PlataformaPage() {
   const { data: session } = useSession();
@@ -40,17 +41,30 @@ export default function PlataformaPage() {
       });
     }
     const checkEmpresa = async () => {
-      if (session?.user?.email) {
-        const res = await buscarEmpresaByAdmin(session.user.email);
-        if (res.success) {
-          setTieneEmpresa(true);
-        }
+    if (session?.user?.email) {
+      // 1. Buscar como admin
+      const resAdmin = await buscarEmpresaByAdmin(session.user.email);
+
+      if (resAdmin.success) {
+        setTieneEmpresa(true);
+        return; // ✅ ya encontró empresa como admin
       }
-    };
+
+      // 2. Si no es admin, buscar como agente
+      const resAgente = await buscarEmpresaByAgente(session.user.email);
+
+      if (resAgente.success) {
+        setTieneEmpresa(true);
+        return; // ✅ encontró al menos una empresa como agente
+      }
+
+      // 3. Si no es admin ni agente
+      setTieneEmpresa(false);
+    }
+  };
     checkEmpresa();
     
   }, [session]);
-  console.log(tieneEmpresa);
 
   return (
     <>
@@ -87,7 +101,7 @@ export default function PlataformaPage() {
                   </h1>
                 </div>
                 {tieneEmpresa && session?.user?.email && (
-                <AdministradorEmpresaCardComponent adminMail={session?.user?.email} />
+                <AdministradorEmpresaCardComponent />
               )}
 
                 <div className="flex items-center gap-x-4 sm:gap-x-6">

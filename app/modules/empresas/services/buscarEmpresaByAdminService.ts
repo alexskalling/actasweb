@@ -1,38 +1,32 @@
+// buscarEmpresaByAdmin.ts
 "use server";
 
-import { getUserIdByEmail } from "@/app/modules/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
 import { empresas } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
-import { InferSelectModel } from "drizzle-orm";
+import { getUserIdByEmail } from "@/app/modules/session/getIdOfEmail";
 
-// Tipo de una fila de la tabla empresas
-type Empresa = InferSelectModel<typeof empresas>;
-
-export async function buscarEmpresaByAdmin(adminMail: string) {
+export async function buscarEmpresaByAdmin(email: string) {
   try {
-    const adminId = await getUserIdByEmail(adminMail);
+    const userId = await getUserIdByEmail(email);
 
-    // Si no existe usuario, devolvemos error antes de hacer la query
-    if (!adminId) {
-      return { success: false, error: "No se encontró usuario con este correo" };
+    if (!userId) {
+      return { success: false, error: "Usuario no encontrado" };
     }
 
-    const empresa: Empresa | null = await db
+    const result = await db
       .select()
       .from(empresas)
-      .where(eq(empresas.adminEmpresa, adminId))
-      .limit(1)
-      .then((res) => res[0] ?? null);
+      .where(eq(empresas.adminEmpresa, userId))
+      .limit(1);
 
-    if (!empresa) {
-      return { success: false, error: "No se encontró empresa para este administrador", empresa: null };
+    if (result.length === 0) {
+      return { success: false, error: "No es admin de ninguna empresa" };
     }
 
-    return { success: true, empresa };
-
-  } catch (error) {
-    console.error("Error buscando empresa:", error);
-    return { success: false, error: "No se pudo buscar la empresa" };
+    return { success: true, empresas: result, role: "admin" }; // 👈 devolvemos role
+  } catch (err) {
+    console.error(err);
+    return { success: false, error: "No se encontraron empresas", empresas: [] };
   }
 }
