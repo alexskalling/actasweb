@@ -3,7 +3,7 @@ import { formatContent } from "./formatContent";
 import { generateContenta } from "./generateContenta";
 import { transcripAction } from "./transcriptAction";
 import { ActualizarProceso } from "../actas_querys_services/actualizarProceso";
-import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
+import { sendActaEmailService } from "@/app/Emails/services/sendActaEmailService";
 
 export async function processAction(
   folder: string ,
@@ -80,7 +80,7 @@ export async function processAction(
     }
     if (email) {
 
-      await sendActaEmail(email, name, formato.acta as string, formato.transcripcion as string, file as string);
+      await sendActaEmailService(email, name, formato.acta as string, formato.transcripcion as string, file as string);
       await ActualizarProceso(
         file,
         7,

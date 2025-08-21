@@ -58,8 +58,8 @@ export async function aceptarInvitacionServer(token: string) {
       .from(agentesEmpresa)
       .where(
         and(eq(agentesEmpresa.empresaId, invitacion.empresaId),
-      eq(agentesEmpresa.agenteId, user.id)))
-        
+          eq(agentesEmpresa.agenteId, user.id)))
+
       .then((res) => res[0]);
 
     if (!existingAssociation) {
@@ -80,6 +80,10 @@ export async function aceptarInvitacionServer(token: string) {
       .update(usuarios)
       .set({ rol: 2 })
       .where(eq(usuarios.id, user.id));
+
+    await db
+      .delete(invitaciones)
+      .where(eq(invitaciones.token, token));
 
     return { status: "aceptada" };
   } catch (err) {

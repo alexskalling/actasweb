@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { buscarEmpresaByAdmin } from "../services/buscarEmpresaByAdminService";
-import { crearInvitacionService } from "../../invitaciones/services/crearInvitacionService";
 import { InvitarAgenteModal } from "../../invitaciones/components/modalInvitacion";
 
 
@@ -34,14 +33,7 @@ export default function AdministradorEmpresaCardComponent({ adminMail }: { admin
     fetchEmpresa();
   }, [adminMail]);
 
-  const handleInvitarAgente = async (email: string) => {
-    if (!empresaId) return;
-    const res = await crearInvitacionService({ empresaId, email });
 
-    if (!res.success) {
-      console.error(res.error);
-    }
-  };
 
   if (loading) {
     return <p className="text-gray-500">Cargando empresa...</p>;
@@ -59,11 +51,12 @@ export default function AdministradorEmpresaCardComponent({ adminMail }: { admin
       <Button variant="outline" onClick={() => setModalOpen(true)}>
         Invitar agentes
       </Button>
-      {empresaId && (
+      {empresaId && empresa &&(
         <InvitarAgenteModal
           open={modalOpen}
           onOpenChange={setModalOpen}
-          onSubmit={handleInvitarAgente} empresaId={empresaId} />
+          empresaId={empresaId}
+          empresaNombre={empresa} />
       )}
 
     </div>

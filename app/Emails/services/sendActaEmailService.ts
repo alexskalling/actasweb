@@ -4,7 +4,7 @@ import { resend } from "@/lib/resend/resend";
 import React from "react";
 import ActaEmail from "../mailStruct/actaEmail";
 
-export async function sendActaEmail(
+export async function sendActaEmailService(
   email: string,
   name: string,
   borrador: string,
