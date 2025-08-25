@@ -516,11 +516,11 @@ Regla CRÍTICA: Prohibido copiar texto literal de la transcripción. Reescribe s
 
     Procesa la transcripción para extraer la siguiente información y estructurarla en la cabecera del acta:
         Título: Utiliza el nombre de la reunión mencionado. Si no hay un nombre explícito, deduce un título descriptivo del tema principal.
-        Fecha: Extrae la fecha.
-        Hora: Extrae la hora de inicio y cierre.
-        Lugar: Extrae la ubicación.
-        Moderador: Identifica al moderador.
-        Asistentes: Lista los nombres y cargos  escucha atentantemente todo el contentido de la reunion y lista lso asitentes que se diga expliciatamente  con su apartemento o similar.
+        Fecha: Extrae la fecha con EXTREMA PRECISIÓN. Busca TODAS las menciones de fechas en la transcripción (día, mes, año, fechas completas, fechas abreviadas). Si hay múltiples fechas, usa la fecha principal de la reunión. NO omitas ninguna fecha mencionada literalmente.
+        Hora: Extrae la hora de inicio y cierre con MÁXIMA EXACTITUD. Busca TODAS las menciones de horarios (formato 12h, 24h, AM/PM, etc.). Si no hay hora de cierre explícita, busca indicaciones como "terminamos", "finalizamos", "se cierra la reunión".
+        Lugar: Extrae la ubicación con PRECISIÓN TOTAL. Busca TODAS las menciones de lugares, salas, direcciones, edificios, etc.
+        Moderador: Identifica al moderador con EXTREMA ATENCIÓN. Busca TODAS las menciones de quien dirige, preside, modera, coordina la reunión.
+        Asistentes: Lista los nombres y cargos con MÁXIMA METICULOSIDAD. Escucha ATENTAMENTE TODO el contenido de la reunión y lista TODOS los asistentes que se mencionen EXPLÍCITAMENTE con su apartamento, cargo, función o similar. NO omitas a NADIE que sea mencionado. Busca menciones como "presente", "asiste", "participa", "está aquí", nombres mencionados en contexto, etc.
 
    El orden del dia debe ser tomado del orden que se pase como dato y respetarse a raja tabal no cambia nombre sni nada ni orden no deebes poner nada que no se pase como orden del dia
 
@@ -553,17 +553,19 @@ Restricciones Adicionales:
     La respuesta DEBE SER SOLAMENTE el código HTML procesado.
     Todo el contenido debe estar dentro de las etiquetas HTML especificadas.
     El orden del día final debe reflejar el orden cronológico de los temas tratados, integrando cualquier tema importante no incluido en un orden del día explícito inicial.
-    No se debe agregar información inventada.`;
+    No se debe agregar información inventada.
+    EXTRACCIÓN OBLIGATORIA: Debes buscar y extraer TODA la información mencionada literalmente en la transcripción, especialmente fechas, horarios, nombres y cargos de asistentes.`;
       return systemPromt;
 
     case "Contenido":
       systemPromt = `En el rol de Secretario Ejecutivo, se requiere la redacción detallada del acta de cada tema tratado durante la reunión. La redacción debe ser clara, formal y estructurada, manteniendo la fidelidad al contenido discutido, sin incurrir en transcripciones literales ni en resúmenes superficiales. SIEMPRE DEBE ESTAR REDACTADO EN TERCERA PERSONA Y EN ESPAÑOL.
+
 Reglas CRÍTICAS: Está PROHIBIDO copiar texto literal de la transcripción; reescribe con redacción propia en tono de acta. Solo usa citas cuando aporten valor, deben ser breves (<= 20 palabras), entre comillas y con atribución.
 
 Estilo y narrativa profesional:
 - Redacción institucional, precisa y neutral; evita coloquialismos.
-- Cohesión con conectores: "En primer lugar", "Posteriormente", "Por su parte", "En consecuencia", "Finalmente".
-- Varía la sintaxis y evita muletillas; no inicies todos los párrafos con la misma palabra.
+- Cohesión con conectores variados: "En primer lugar", "Posteriormente", "Por su parte", "En consecuencia", "Finalmente", "A continuación", "Seguidamente", "Por otro lado", "Además", "Asimismo", "De igual manera", "En este sentido", "Cabe destacar", "Es importante mencionar".
+- Varía la sintaxis y evita muletillas; PROHIBIDO iniciar múltiples párrafos consecutivos con "Se", "Se dice", "Se indica", "Se menciona". Usa estructuras variadas.
 - Estructura por tema: Contexto breve → Desarrollo (posiciones, datos, análisis) → Decisiones/Acuerdos (con responsables y plazos explícitos) → Próximos pasos.
 - Prioriza claridad jurídica y trazabilidad de decisiones. Prohíbe notas meta del tipo "se observa la transcripción" u otras explicaciones del proceso.
 Directrices Específicas:
@@ -587,15 +589,16 @@ Se pondrá especial atención a las cifras, resultados de votación y participac
 Gestión de Votaciones (CRÍTICO):
 
 Se exige la MÁXIMA y OBLIGATORIA METICULOSIDAD en la descripción de las votaciones y sus resultados. Deberá identificar claramente qué se ha votado y el acuerdo alcanzado.
+
 Es ABSOLUTAMENTE IMPERATIVO describir la votación individual de CADA PERSONA NOMBRADA en la lista de asistentes o identificada como participante en la votación (si su presencia es confirmada y su voto es relevante en ese momento). Se debe indicar explícitamente su postura, utilizando negritas (<strong>) y formato de lista (<ul>) para cada voto individual.
 
 Para cada participante, se DEBE buscar, interpretar y consignar activamente cualquier indicación de voto en la transcripción. Se considerará:
 
-    Aprobación: Cualquier indicación afirmativa ('sí', 'apruebo', 'a favor', 'estoy de acuerdo', 'afirmativo', etc.).
+    Aprobación: Cualquier indicación afirmativa ('sí', 'apruebo', 'a favor', 'estoy de acuerdo', 'afirmativo', 'voto a favor', 'apoyo', 'estoy de acuerdo', etc.).
 
-    En contra: Cualquier indicación negativa ('no', 'en desacuerdo', 'niego', etc.).
+    En contra: Cualquier indicación negativa ('no', 'en desacuerdo', 'niego', 'voto en contra', 'me opongo', 'no estoy de acuerdo', etc.).
 
-    Abstención: Si se indica una abstención explícita.
+    Abstención: Si se indica una abstención explícita ('me abstengo', 'abstención', 'no voto', etc.).
 
     Ausente: Si la transcripción indica explícitamente su ausencia durante el segmento de votación.
 
@@ -604,10 +607,23 @@ BAJO NINGUNA CIRCUNSTANCIA se debe utilizar la frase 'No se registra su voto'. S
 CRÍTICO: Se debe asegurar que el número total de votos consignados individualmente en la lista (<ul>) coincida EXACTAMENTE con el conteo final de la votación reportado en el resumen. Cada voto contabilizado en el resumen debe tener una correspondencia con un voto individual detallado en la lista, y viceversa. La lista individual de votantes debe reflejar FIELMENTE y en su TOTALIDAD los resultados globales.
 
 Tras la lista detallada de votos individuales, se debe incluir un resumen claro del resultado final de la votación (ej. "La propuesta fue aprobada con X votos a favor, Y en contra y Z abstenciones").
+
+FORMATO OBLIGATORIO PARA VOTACIONES:
+- Usar <h3>Votación</h3> para introducir la sección de votación
+- Listar cada voto individual con <ul><li><strong>[Nombre]:</strong> [Voto]</li></ul>
+- Incluir resumen final con el conteo total
+- Destacar en negritas las decisiones tomadas
 Fluidez Narrativa y Coherencia:
-dejar dicho temas jutridicos y temas de pagos y detalles relevantes que exigen mayor analisis
 
 Se evitará una estructura excesivamente rígida con un uso abundante de subtítulos o listas, excepto para la descripción de resultados de votaciones, donde el uso de listas de tipo bullet (<ul>) es obligatorio para cada voto individual. La redacción debe mantener una narrativa fluida y coherente, evitando la fragmentación innecesaria de la información. Los subtítulos (<h3>) se utilizarán únicamente cuando sean estrictamente necesarios para organizar la información dentro de un mismo tema sin interrumpir el flujo del texto.
+
+ESTRUCTURA NARRATIVA MEJORADA:
+- Iniciar con contexto del tema (qué se discute y por qué)
+- Desarrollar las posiciones y argumentos de los participantes
+- Detallar las cifras, datos y evidencias presentadas
+- Describir las decisiones tomadas y acuerdos alcanzados
+- Especificar responsables, plazos y próximos pasos
+- Para temas jurídicos y de pagos, enfatizar detalles técnicos y legales
 
 CRÍTICO: Cada intervención de un participante, sin importar quién sea o cuántas veces hable durante la reunión, debe ser asignada ÚNICAMENTE y de forma EXCLUSIVA al tema del Orden del Día que se está discutiendo EN ESE PRECISO MOMENTO cronológico de la reunión.
 
@@ -630,17 +646,25 @@ Ejemplo de desarrollo de un tema en HTML:
 
 <h2>1. Plan de Mejoras en Seguridad del Edificio</h2>
 
-<p>En respuesta a la creciente preocupación de los residentes por recientes incidentes de seguridad, se abordó en la reunión la necesidad de reforzar los protocolos actuales y evaluar soluciones viables. Se presentaron informes detallados sobre la situación actual, incluyendo estadísticas de incidentes y análisis de vulnerabilidades, y se discutieron diversas estrategias de mejora con un enfoque en la prevención y la respuesta efectiva.</p>
+<p>La reunión abordó la necesidad de reforzar los protocolos de seguridad actuales ante recientes incidentes reportados por los residentes. El administrador presentó un informe exhaustivo con registros de los últimos seis meses, identificando fallas específicas en el sistema de cámaras, casos de accesos no autorizados y deficiencias en la iluminación de áreas comunes.</p>
 
-<p>El administrador expuso un informe exhaustivo con registros de los últimos seis meses, donde se identificaron fallas específicas en el sistema de cámaras (detallando modelos y ubicaciones problemáticas), casos de accesos no autorizados (con fechas y descripciones) y deficiencias en la iluminación de ciertas áreas comunes (especificando ubicaciones y niveles de iluminación actuales). A partir de este diagnóstico detallado, se abrieron las intervenciones para evaluar posibles soluciones concretas.</p>
+<p>Los asistentes coincidieron unánimemente en que la actualización integral del sistema de cámaras constituye la prioridad principal. Se sugirió la instalación de equipos de mayor resolución con capacidad de visión nocturna y una ampliación significativa del almacenamiento de grabaciones. Además, se propuso implementar un sistema de control de acceso avanzado mediante tarjetas electrónicas o códigos QR.</p>
 
-<p>Los asistentes coincidieron unánimemente en que la actualización integral del sistema de cámaras es prioritaria. Se sugirió la instalación de equipos de mayor resolución (con especificaciones técnicas como megapíxeles y capacidad de visión nocturna) y una ampliación significativa del almacenamiento de grabaciones (indicando el tiempo de retención deseado). Además, se propuso implementar un sistema de control de acceso avanzado mediante tarjetas electrónicas o códigos QR, detallando los beneficios en términos de seguridad y trazabilidad de ingresos y salidas.</p>
+<p>Otro punto clave en la discusión fue la mejora sustancial de la iluminación en zonas vulnerables como pasillos y estacionamientos, considerando sensores de movimiento para eficiencia energética. Se planteó la instalación de luces LED de mayor intensidad, priorizando las áreas con mayor incidencia de reportes.</p>
 
-<p>Otro punto clave en la discusión fue la mejora sustancial de la iluminación de zonas vulnerables, como pasillos (especificando los niveles de lux recomendados) y estacionamientos (considerando sensores de movimiento para eficiencia energética y seguridad). Se planteó la instalación de luces LED de mayor intensidad (indicando lúmenes y temperatura de color), priorizando las áreas con mayor incidencia de reportes y aquellas identificadas como puntos ciegos.</p>
+<p>Algunos asistentes manifestaron inquietudes sobre los costos de implementación. Se acordó solicitar al menos tres cotizaciones detalladas de diferentes proveedores antes de la siguiente reunión para evaluar la viabilidad económica de cada medida.</p>
 
-<p>Si bien las propuestas fueron bien recibidas por la mayoría, algunos asistentes manifestaron inquietudes específicas sobre los costos detallados de implementación de cada medida. Se acordó solicitar al menos tres cotizaciones detalladas de diferentes proveedores antes de la siguiente reunión para evaluar la viabilidad económica de cada medida con datos concretos y poder tomar decisiones informadas.</p>
+<h3>Votación</h3>
+<p>Se sometió a votación la propuesta de actualización del sistema de seguridad:</p>
+<ul>
+<li><strong>Juan Pérez:</strong> A favor</li>
+<li><strong>María Rodríguez:</strong> A favor</li>
+<li><strong>Carlos López:</strong> A favor</li>
+<li><strong>Ana García:</strong> Se abstiene</li>
+</ul>
+<p><strong>Resultado:</strong> La propuesta fue aprobada con 3 votos a favor y 1 abstención.</p>
 
-<p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar la información necesaria (especificaciones técnicas de equipos, planos de instalación y requisitos de software), contactar a proveedores calificados y presentar un informe detallado en la próxima sesión, con opciones concretas de proveedores, cronogramas estimados de implementación y costos detallados para cada solución propuesta.</p>`;
+<p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar especificaciones técnicas, contactar proveedores calificados y presentar un informe detallado en la próxima sesión con opciones concretas, cronogramas estimados y costos detallados.</p>`;
       return systemPromt;
     case "Cierre":
       systemPromt = `Eres un experto analista de reuniones con amplia experiencia en la documentación y generación de actas. Tu tarea es redactar el cierre de una reunión en formato HTML, asegurando que la estructura sea clara y bien organizada. Debes incluir los siguientes elementos:
@@ -702,12 +726,14 @@ Transcripción:
 
 ${content}
 Instrucciones Específicas:
+revisa a fondo lo que se dice como ordne del dia y no lo mezcles con otros temas que no sean del orden del dia se muy ordenado y claro con lso nomrbes eviata solapamientos
 
 Procesamiento del Contenido:
 Procesa el contenido de la variable ${content} como la transcripción de la reunión.
 
 Si la transcripción menciona explícitamente un "orden del día":
 Utilízalo como base.
+SE muy meticulos con el nombre del orden del dia y revisa que no se solape con otros temas que no sean del orden del dia 
 Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
 
 **1. Manejo Prioritario de "Lectura del acta anterior":**
@@ -745,6 +771,7 @@ asegurate de agrupar cada temadentro de cada granconversacion es decir no me sep
 Estructura los temas (incluyendo los posibles temas combinados) en un orden del día en formato JSON, respetando el orden cronológico en el que fueron discutidos.
 Asegúrate de incluir todos los temas principales identificados (o combinados).
 Verifica que no haya duplicados en la lista. Si un tema ya está en la lista (o ha sido combinado), no lo repitas.
+antes de responde rvalida que no se dupliquen temas o que exitan solapamientos se muir ordenado y meticuloso y escucha todo antes de amr el orden del dia
 
 Formato de Respuesta:
 
@@ -773,49 +800,63 @@ Orden Cronológico: Mantén el orden cronológico original de los temas, incluso
     case "Cabecera":
       userPromt = `
       
-      
-      
+
 GENERA UNA CABECERA DE ACTA EN FORMATO HTML
 INSTRUCCIONES ESTRICTAS:
-1.  **EXTRACCIÓN DE INFORMACIÓN PARA LA CABECERA y esta el fuente del contenido ${content} (EXCEPTO ORDEN DEL DÍA):**
-    * **Título:** Busca el tipo de reunión o tema principal en la transcripción . Si no se encuentra o no se puede deducir, usa "Acta de Reunión".
-    * **Fecha, Hora y Lugar:** Extrae esta información directamente de la transcripción . Si la hora de inicio y cierre no son explícitas, deja la hora de cierre como "[HORA DE CIERRE]". Si el lugar no es explícito, usa "[UBICACIÓN NO ESPECIFICADA]".
-    * **Moderador:** Identifica a la persona que dirigió la sesión en la transcripción . Si no se identifica claramente, usa "[NO ESPECIFICADO]".
-    * **Asistentes:** Lista los nombres y cargos de los participantes mencionados en la transcripción . Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
-se bien meticulos escuchando y lsitando los nombres de lso asitentes no dehjes ninguano pro fuera y se bien extricto con esto.
-2.  **GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):**
-    * **LA BASE INALTERABLE ES ${ordendeldia}.** Debes usar *exclusivamente* el contenido de la transcripcion para la numeración y los títulos de los puntos del Orden del Día en el acta final.
-    * **EXCLUSIONES OBLIGATORIAS:** NO INCLUYAS el *primer* elemento (correspondiente a "cabecera") ni el *último* elemento (correspondiente a "cierre") de la variable ${ordendeldia} en el "Orden del Día" final.
-    * **VERIFICACIÓN CON LA TRANSCRIPCIÓN:** Para cada punto del Orden del Día extraído de ${ordendeldia} (excluyendo cabecera y cierre), verifica si el tema fue discutido en la transcripción (${content}).
-       
-    * **NO INVENTAR NI MODIFICAR TEMAS:** Bajo ninguna circunstancia debes inventar nuevos temas para el Orden del Día ni alterar los nombres de los temas proporcionados en ${ordendeldia}.
-    * **NO INCLUIR SUBTEMAS:** El "Orden del Día" debe listar solo los "grandes temas" de ${ordendeldia}, sin desgloses adicionales.
 
-3.  **FORMATO DE SALIDA:**
-    * La salida debe ser **HTML puro**. No incluyas ningún texto o formato que no sea HTML.
-    * Usa el siguiente esqueleto HTML. Rellena los corchetes [] con la información extraída y sigue las instrucciones para el Orden del Día pero por lo Bajo ninguan circuantacia resuma cambie o moifique el contenido de de ${ordendeldia} solo pnlo en html.
+    EXTRACCIÓN DE INFORMACIÓN PARA LA CABECERA (EXCEPTO ORDEN DEL DÍA):
 
+        Título: Busca el tipo de reunión o tema principal en la transcripción (${content}). Si no se encuentra o no se puede deducir, usa "Acta de Reunión".
+
+        Fecha: Revisa MINUCIOSAMENTE la transcripción (${content}) para extraer TODAS las menciones de fechas. Busca fechas completas, abreviadas, días, meses, años, fechas en diferentes formatos. Si hay múltiples fechas, identifica la fecha principal de la reunión. NO omitas ninguna fecha mencionada literalmente. Si no encuentras fecha, usa "[FECHA NO ESPECIFICADA]".
+
+        Hora: Revisa MINUCIOSAMENTE la transcripción (${content}) para extraer TODAS las menciones de horarios. Busca horas de inicio, cierre, formato 12h, 24h, AM/PM, indicaciones como "empezamos", "terminamos", "finalizamos", "se cierra la reunión". Si la hora de inicio y cierre no son explícitas, busca indicaciones temporales. Si no hay hora de cierre explícita, usa "[HORA DE CIERRE]". Si no hay hora de inicio, usa "[HORA DE INICIO]".
+
+        Lugar: Revisa MINUCIOSAMENTE la transcripción (${content}) para extraer TODAS las menciones de ubicaciones. Busca salas, edificios, direcciones, lugares específicos, etc. Si el lugar no es explícito, usa "[UBICACIÓN NO ESPECIFICADA]".
+
+        Moderador: Identifica con EXTREMA ATENCIÓN a la persona que dirigió la sesión en la transcripción (${content}). Busca menciones de quien preside, modera, coordina, dirige la reunión. Si no se identifica claramente, usa "[NO ESPECIFICADO]".
+
+        Asistentes: Lista con EXTREMA PRECISIÓN y sin dejar a NADIE fuera los nombres y cargos de TODOS los participantes mencionados en la transcripción (${content}). Busca TODAS las menciones de personas: nombres mencionados directamente, "presente", "asiste", "participa", "está aquí", nombres en contexto de participación, etc. Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
+
+    GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):
+
+        LA BASE INALTERABLE ES ${ordendeldia}. Debes usar exclusivamente el contenido de la transcripcion para la numeración y los títulos de los puntos del Orden del Día en el acta final.
+
+        EXCLUSIONES OBLIGATORIAS: NO INCLUYAS el primer elemento (correspondiente a "cabecera") ni el último elemento (correspondiente a "cierre") de la variable ${ordendeldia} en el "Orden del Día" final.
+
+        VERIFICACIÓN CON LA TRANSCRIPCIÓN: Para cada punto del Orden del Día extraído de ordendeldia(excluyendocabeceraycierre),verificasieltemafuediscutidoenlatranscripcioˊn({content}).
+
+        NO INVENTAR NI MODIFICAR TEMAS: Bajo ninguna circunstancia debes inventar nuevos temas para el Orden del Día ni alterar los nombres de los temas proporcionados en ${ordendeldia}.
+
+        NO INCLUIR SUBTEMAS: El "Orden del Día" debe listar solo los "grandes temas" de ${ordendeldia}, sin desgloses adicionales.
+
+    FORMATO DE SALIDA:
+
+        La salida debe ser HTML puro. No incluyas ningún texto o formato que no sea HTML.
+
+        Usa el siguiente esqueleto HTML. Rellena los corchetes [] con la información extraída y sigue las instrucciones para el Orden del Día pero por lo Bajo ninguan circuantacia resuma cambie o moifique el contenido de de ${ordendeldia} solo pnlo en html.
 
 <header>
-  <h1 style="text-align: center;">Acta de la Reunión</h1>
-  <p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
-  <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
-  <p><strong>Lugar:</strong> [UBICACIÓN]</p>
-  <p><strong>Moderador:</strong> [NOMBRE]</p>
-  <p><strong>Asistentes:</strong></p>
-  <ul>
-    <li>[NOMBRE] - [CARGO]</li>
-    <li>[NOMBRE] - [CARGO]</li>
-    <li>[NOMBRE] - [CARGO]</li>
-  </ul>
-  <h2>Orden del Día</h2>
-  <ol>
-    <li>[GRAN TEMA 1]</li>
-    <li>[GRAN TEMA 2]</li>
-    <li>[GRAN TEMA 3]</li>
-    <li>[GRAN TEMA 4]</li>
-  </ol>
-</header> `;
+<h1 style="text-align: center;">Acta de la Reunión</h1>
+<p><strong>Fecha:</strong> [DÍA] de [MES] de [AÑO]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN]</p>
+<p><strong>Moderador:</strong> [NOMBRE]</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>[NOMBRE] - [CARGO]</li>
+<li>[NOMBRE] - [CARGO]</li>
+<li>[NOMBRE] - [CARGO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>[GRAN TEMA 1]</li>
+<li>[GRAN TEMA 2]</li>
+<li>[GRAN TEMA 3]</li>
+<li>[GRAN TEMA 4]</li>
+</ol>
+</header>
+`;
 
       return userPromt;
     case "Contenido":
@@ -843,7 +884,7 @@ Generar un acta de reunión profesional y detallada basada en la transcripción 
     El desarrollo del tema debe estar encabezado por la numeración ${numeracion} y el nombre del tema ${tema}.
     No hacer saltos de línea innecesarios y deja el contenido ordenado y claro para que se pueda leer fácilmente.
     NO es una copiar y pegar el contenido de la transcripción. Está PROHIBIDO copiar texto literal: reescribe siempre en tercera persona y tono formal. Solo usa citas cuando aporten valor, deben ser breves (<= 20 palabras), entre comillas, con atribución explícita y exclusivamente si fortalecen la comprensión del punto.
-
+    Antes de decir que no se trato un tema revisa todo el contenido del acta y se muy claro respentando el orden del dia
 🔹 Evitar redundancias y contenido duplicado
 al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa}). de manera estricta y si ya se hablo del tema que stoy por redactar lo omito no quiero reduncandcia de temas o de contenidos repetidos 
 
@@ -858,6 +899,7 @@ al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa
 NO debes copiar y pegar la transcripción. Citas solo si aportan valor, breves, con atribución y sin exceder 20 palabras.
 
     ✅ Narración formal y en tercera persona: La redacción debe ser formal y estrictamente en tercera persona, sin lenguaje coloquial ni menciones en primera persona.
+    ✅ VARIEDAD SINTÁCTICA OBLIGATORIA: Prohibido usar repetidamente "Se dice", "Se indica", "Se menciona", "Se expone". Usa estructuras variadas como "El administrador presentó", "Los asistentes discutieron", "La reunión abordó", "Se analizó", "Se consideró", "Se evaluó", "Se propuso", "Se acordó".
     ✅ Manejo especial "Lectura del acta anterior": Este es el ÚNICO tema que se puede y debe resumir. Para cualquier otro tema, no se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores o a puntos ya consignados en la presente acta.
     ✅ Evitar redundancias: No se debe repetir información que ya se haya dado en otro tema del acta, ni dentro del mismo tema, ni se debe adelantar información de temas posteriores. Se debe tener especial cuidado en no mencionar repetidamente cambios en el orden del día, a menos que sea estrictamente necesario para la comprensión del tema actual y no se haya consignado previamente.
 
@@ -899,15 +941,25 @@ NO debes copiar y pegar la transcripción. Citas solo si aportan valor, breves, 
     Asegurar la coherencia en la estructura y evitar la redundancia con otros puntos del acta.
     Si el tema actual es "Lectura del acta anterior", se debe generar un resumen conciso de su discusión, indicando si fue aprobada, modificada o aplazada. Este es el ÚNICO tema donde se permite el resumen.
     Si cualquier otro tema no fue abordado en la reunión, mencionar explícitamente que se incluyó en el orden del día pero no se trató finalmente.
-    Se exige la MÁXIMA y OBLIGATORIA METICULOSIDAD en la descripción de las votaciones y sus resultados. Deberá identificar claramente qué se ha votado y el acuerdo alcanzado. Es ABSOLUTAMENTE IMPERATIVO describir la votación individual de CADA PERSONA NOMBRADA en la lista de asistentes o identificada como participante en la votación (si su presencia es confirmada y su voto es relevante en ese momento). Se debe indicar explícitamente su postura, utilizando negritas y formato de lista (<ul>) para cada voto individual. evita resúmenes de las votaciones y asumas votaciones que no se den y menos asumir que los participantes de la reunión son los que votan a menos de que se dé de manera explícita y no asumas cosas, los datos mandan y NO repitas votaciones ni otros temas.
+    Se exige la MÁXIMA y OBLIGATORIA METICULOSIDAD en la descripción de las votaciones y sus resultados. Deberá identificar claramente qué se ha votado y el acuerdo alcanzado. Es ABSOLUTAMENTE IMPERATIVO describir la votación individual de CADA PERSONA NOMBRADA en la lista de asistentes o identificada como participante en la votación (si su presencia es confirmada y su voto es relevante en ese momento). Se debe indicar explícitamente su postura, utilizando negritas y formato de lista (<ul>) para cada voto individual. Evita resúmenes de las votaciones y no asumas votaciones que no se den explícitamente en la transcripción.
+
     Para cada participante, se DEBE buscar, interpretar y consignar activamente cualquier indicación de voto en la transcripción. Se considerará:
-        * Aprobación: Cualquier indicación afirmativa ('sí', 'apruebo', 'a favor', 'estoy de acuerdo', 'afirmativo', etc.).
-        * En contra: Cualquier indicación negativa ('no', 'en desacuerdo', 'niego', etc.).
-        * Abstención: Si se indica una abstención explícita.
+        * Aprobación: Cualquier indicación afirmativa ('sí', 'apruebo', 'a favor', 'estoy de acuerdo', 'afirmativo', 'voto a favor', 'apoyo', etc.).
+        * En contra: Cualquier indicación negativa ('no', 'en desacuerdo', 'niego', 'voto en contra', 'me opongo', 'no estoy de acuerdo', etc.).
+        * Abstención: Si se indica una abstención explícita ('me abstengo', 'abstención', 'no voto', etc.).
         * Ausente: Si la transcripción indica explícitamente su ausencia durante el segmento de votación.
+
     BAJO NINGUNA CIRCUNSTANCIA se debe utilizar la frase 'No se registra su voto'. Si, tras una búsqueda exhaustiva, no se encuentra NINGUNA indicación de voto ni de ausencia para un participante que DEBERÍA HABER VOTADO y que su voto contribuye al conteo final, se debe buscar la mención del voto colectivo o individual en la transcripción que permita atribuirlo a una persona, o, si la transcripción es ambigua, se omitirá su mención individual en la lista para evitar falsedades. La prioridad es siempre DETECTAR Y MOSTRAR el voto individual.
-    CRÍTICO: Se debe asegurar que el número total de votos consignados individualmente en la lista (<ul>) coincida EXACТАМЕНТЕ con el conteo final de la votación reportado en el resumen. Cada voto contabilizado en el resumen debe tener una correspondencia con un voto individual detallado en la lista, y viceversa. La lista individual de votantes debe reflejar FIELMENTE y en su TOTALIDAD los resultados globales.
+
+    CRÍTICO: Se debe asegurar que el número total de votos consignados individualmente en la lista (<ul>) coincida EXACTAMENTE con el conteo final de la votación reportado en el resumen. Cada voto contabilizado en el resumen debe tener una correspondencia con un voto individual detallado en la lista, y viceversa. La lista individual de votantes debe reflejar FIELMENTE y en su TOTALIDAD los resultados globales.
+
     Tras la lista detallada de votos individuales, se debe incluir un resumen claro del resultado final de la votación (ej. "La propuesta fue aprobada con X votos a favor, Y en contra y Z abstenciones").
+
+    FORMATO OBLIGATORIO PARA VOTACIONES:
+    - Usar <h3>Votación</h3> para introducir la sección de votación
+    - Listar cada voto individual con <ul><li><strong>[Nombre]:</strong> [Voto]</li></ul>
+    - Incluir resumen final con el conteo total
+    - Destacar en negritas las decisiones tomadas
     No hacer saltos de línea innecesarios y deja el contenido ordenado y claro para que se pueda leer fácilmente.
 
 5️⃣ Estructuración y formato en HTML
@@ -932,7 +984,9 @@ NO debes copiar y pegar la transcripción. Citas solo si aportan valor, breves, 
     ✅ AÑADE UNA INSTRUCCIÓN CRÍTICA para asegurar que la suma de los votos individuales en la lista COINCIDA EXACTAMENTE con el conteo total reportado en el resumen, exigiendo la correspondencia y fidelidad total.
     ✅ CRÍTICO: Refuerza la estricta adherencia a la cronología de la transcripción y la asignación ÚNICA de cada segmento de diálogo al tema del orden del día que le corresponde en ese preciso momento, incluso si el mismo orador habla sobre distintos temas en diferentes puntos de la reunión.
     ✅ NUEVO: Incluye una directriz explícita para el uso estratégico de formatos como viñetas, negritas y espaciado para mejorar la legibilidad y la comprensión del acta.
-    ✅ Facilita el proceso de generación de actas con estructura clara y profesional.`;
+    ✅ Facilita el proceso de generación de actas con estructura clara y profesional.
+    ✅ MEJORA CRÍTICA: Elimina el estilo robótico prohibiendo frases repetitivas como "Se dice", "Se indica", "Se menciona" y promoviendo variedad sintáctica.
+    ✅ MEJORA CRÍTICA: Estructura clara para votaciones con formato HTML específico y detalle individual obligatorio.`;
 
       return userPromt;
 
