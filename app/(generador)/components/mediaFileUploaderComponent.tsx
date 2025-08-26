@@ -1371,7 +1371,7 @@ export default function MediaFileUploaderComponent({
                     Procesando acta...
                   </>
                 </Button>
-              ) : acta != null && transcripcion != null && (
+              ):acta && transcripcion ? (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
@@ -1399,7 +1399,15 @@ export default function MediaFileUploaderComponent({
                     Descargar
                   </Button>
                 </div>
-              )}
+              ) : transcripcion && !acta ? (
+                <div className="text-sm text-purple-700 text-center">
+                  Transcripción lista, esperando acta...
+                </div>
+              ) : acta && !transcripcion ? (
+                <div className="text-sm text-purple-700 text-center">
+                  Acta lista, esperando transcripción...
+                </div>
+              ) : null}
             </div>
             {/* Barra de Progreso - Colocada aquí, antes de los botones */}
             {calculando && selectedFile != null && (
