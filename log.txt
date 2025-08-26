@@ -1985,3 +1985,697 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_administracio
 Compartiendo archivo existente para obtener URL pública: /Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/tsAmG8s7LPGFCeT
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/tsAmG8s7LPGFCeT
+Verificando si existe transcripción: consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt en carpeta consejo_administracion_vsp_-_2025_07_15
+[2025-08-25T21:25:33.509Z] Verificando existencia del archivo consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt en Nextcloud carpeta consejo_administracion_vsp_-_2025_07_15.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-25T21:25:34.896Z] Archivo "consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo_administracion_vsp_-_2025_07_15".
+Transcripción existente encontrada: consejo_administracion_vsp_-_2025_07_15. Obteniendo contenido.
+Verificando contenido existente: consejo_administracion_vsp_-_2025_07_15_Contenido.txt
+[2025-08-25T21:25:36.216Z] Verificando existencia del archivo consejo_administracion_vsp_-_2025_07_15_Contenido.txt en Nextcloud carpeta consejo_administracion_vsp_-_2025_07_15.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-25T21:25:37.034Z] Archivo "consejo_administracion_vsp_-_2025_07_15_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo_administracion_vsp_-_2025_07_15".
+Contenido existente: consejo_administracion_vsp_-_2025_07_15_Contenido.txt. Cargando.
+[2025-08-25T21:25:38.094Z] Contenido del archivo "consejo_administracion_vsp_-_2025_07_15_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo_administracion_vsp_-_2025_07_15.mp4 en carpeta: consejo_administracion_vsp_-_2025_07_15
+Verificando Borrador .docx existente: consejo_administracion_vsp_-_2025_07_15_Borrador.docx
+[2025-08-25T21:25:38.095Z] Verificando existencia del archivo consejo_administracion_vsp_-_2025_07_15_Borrador.docx en Nextcloud carpeta consejo_administracion_vsp_-_2025_07_15.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-25T21:25:38.912Z] Archivo "consejo_administracion_vsp_-_2025_07_15_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo_administracion_vsp_-_2025_07_15".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_administracion_vsp_-_2025_07_15_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/eqeF39mwowExgbm
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/eqeF39mwowExgbm
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo_administracion_vsp_-_2025_07_15/consejo_administracion_vsp_-_2025_07_15_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/ccZHnNHjYBSpTX4
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/ccZHnNHjYBSpTX4
+Verificando si existe transcripción: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+[2025-08-26T13:57:13.475Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T13:57:14.975Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción existente encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion. Obteniendo contenido.
+Verificando contenido existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[2025-08-26T13:57:16.397Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T13:57:17.241Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Contenido existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt. Cargando.
+[2025-08-26T13:57:18.335Z] Contenido del archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4 en carpeta: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+Verificando Borrador .docx existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[2025-08-26T13:57:18.336Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T13:57:19.163Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/WYA3Zq2d5R8Fd6Y
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/WYA3Zq2d5R8Fd6Y
+Generando URL pública para Transcripcion.txt (EXISTENTE): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/eGFsrqLxxXzQYPc
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/eGFsrqLxxXzQYPc
+Verificando si existe transcripción: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+[2025-08-26T13:57:41.356Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T13:57:42.851Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción existente encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion. Obteniendo contenido.
+Verificando contenido existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[2025-08-26T13:57:44.389Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-26T13:57:45.217Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt" NO encontrado en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Generando contenido para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[2025-08-26T13:57:45.218Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T13:57:46.041Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt. Obteniendo contenido.
+[2025-08-26T13:57:47.204Z] Contenido del archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Guardando contenido en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+Contenido guardado: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4 en carpeta: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+Verificando Borrador .docx existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[2025-08-26T13:58:32.147Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-26T13:58:33.030Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx" NO encontrado en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Preparando guardado .docx en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+<h1 style="text-align: center;">Acta de la Reunión</h1>
+<p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+<p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Contextualización y propósito de la reunión extraordinaria</li>
+<li>Aprobación del acta anterior (aplazada)</li>
+<li>Presentación y discusión de inquietudes sobre talleres presenciales</li>
+<li>Propuesta de reunión con Ministerios de Educación y Trabajo</li>
+</ol>
+</header>
+
+<h2>1. Contextualización y propósito de la reunión extraordinaria</h2>
+
+<p>La reunión se convocó con el propósito de abordar las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa en relación con el desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos y aportes para la fase B de la construcción de las cualificaciones.</p>
+
+<p>Se recordó que en la reunión del 19 de marzo, el PNUD y el Consejo Ejecutivo de Mesa acordaron la participación de la Mesa en la construcción de los catálogos de cualificaciones. Se subrayó la importancia de este proceso, dado que el decreto del Ministerio de Educación establece que las instituciones de educación para el trabajo y desarrollo humano deben estructurar sus programas tomando como referencia los catálogos sectoriales de cualificaciones.</p>
+
+<p>Se buscaba, por tanto, dar respuesta a las preocupaciones de los representantes de instituciones y del sector productivo de diferentes ciudades del país, quienes expresaron insatisfacción con la manera en que se desarrolló el taller en Cali. Se esperaba que, tras escuchar las inquietudes y las aclaraciones correspondientes, se pudieran tomar correctivos o medidas aclaratorias.</p>
+
+<h2>2. Aprobación del acta anterior (aplazada)</h2>
+
+<p>En el orden del día figuraba la aprobación del acta anterior, sin embargo, se propuso aplazar este punto para la próxima reunión del Consejo Ejecutivo de Mesa, con el fin de centrar la atención en el tema principal de la reunión actual. La propuesta fue aceptada, posponiendo así la aprobación del acta anterior.</p>
+<h2>3. Presentación y discusión de inquietudes sobre talleres presenciales</h2>
+
+<p>La reunión abordó las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa con respecto al desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos para la fase B de la construcción de las cualificaciones.</p>
+
+<h3>Inconformidades sobre el taller en Cali</h3>
+
+<p>Carlos Ruiz, de Cali, expresó su sentir de que el proceso en dicha ciudad fue un mero trámite, describiéndolo como "el típico procedimiento agotado". Manifestó que, en su opinión, no se socializó adecuadamente la información y que las personas a cargo demostraron desconocimiento del sistema anterior y del tema de competencias. Consideró que el taller se realizó solo para cumplir con un requisito, sin una verdadera comprensión del proceso.</p>
+
+<p>Ruiz detalló que las personas que atendieron el taller no pudieron responder a sus preguntas sobre el futuro de las competencias y si el trabajo realizado serviría como insumo. Además, criticó que los formularios tipo encuesta eran de un nivel técnico elevado y que las respuestas eran subjetivas debido a la falta de claridad en el propósito de las preguntas.</p>
+
+<p>Alberto Mendieta señaló que en Medellín, por ejemplo, se habían manifestado aspectos muy positivos sobre el taller. Preguntó si alguien más tenía comentarios sobre los talleres realizados en otras ciudades como Barranquilla, Pasto, Villavicencio y Pereira.</p>
+
+<p>Ante la solicitud de mayor detalle sobre las inquietudes, Ruiz explicó que al preguntar sobre el destino y utilidad de la información recopilada, las respuestas fueron evasivas. Añadió que las encuestas tenían un nivel técnico que generó confusión entre los participantes, cuyas respuestas resultaron subjetivas por la falta de un propósito claro.</p>
+
+<h3>Aclaraciones sobre el Marco Nacional de Cualificaciones y la CUOC</h3>
+
+<p>El Dr. Marín aclaró que el taller en Cali se realizó en el marco del desarrollo de un catálogo de cualificación dentro del Marco Nacional de Cualificaciones (MNC). Explicó que este ejercicio forma parte de la etapa B, que busca determinar las brechas de capital humano para el sector de los servicios personales y a la comunidad. Subrayó que se trata de un ejercicio técnico riguroso para recoger información de fuente primaria que alimente dicha etapa.</p>
+
+<p>Libardo complementó que desde enero se han mantenido conversaciones con la Mesa para que el proceso sea participativo y que los actores fundamentales del sector puedan contribuir en cada etapa. Afirmó que el compromiso del equipo técnico es que el catálogo resultante sea útil y contribuya a cerrar las brechas existentes en el sector.</p>
+
+<p>Libardo añadió que el evento en Cali fue un taller de validación de tendencias sectoriales y territoriales, ligado al sector en concreto. Explicó que se identificaron tendencias a través de fuentes primarias y secundarias, y que el objetivo era recibir retroalimentación para enriquecer el resultado.</p>
+
+<p>Carlos Ruiz solicitó que se estandarizara un criterio sobre el Marco Nacional de Cualificaciones, ya que se le había dado a entender que este anularía la CUOC (Clasificación Única de Ocupaciones para Colombia). Marta aclaró que el MNC es un instrumento creado por los Ministerios de Educación y Trabajo para organizar la oferta educativa del país, y que no pertenece exclusivamente a ninguno de los dos ministerios.</p>
+
+<p>Marta enfatizó que la CUOC no será anulada, sino que es un sistema de clasificación de ocupaciones que sirve como referente para determinar perfiles ocupacionales. Explicó que el MNC estructura referentes que cada vía educativa puede tomar para su oferta de formación, facilitando la movilidad educativa.</p>
+
+<p>Para mayor claridad, Marta compartió una presentación sobre la ruta metodológica del MNC, que consta de cuatro etapas: contextualización del sector, brechas de capital humano, análisis ocupacional y estructuración de cualificaciones. Señaló que la visita a Cali se enmarcaba en la etapa B.</p>
+
+<p>Marta explicó que en Colombia existen tres vías de cualificación: la educación formal (Ministerio de Educación), la educación para el trabajo (SENA y Ministerio de Trabajo) y el reconocimiento de aprendizajes previos. El MNC proporciona referentes para que cada una de estas vías pueda hacer su oferta de formación con bases comunes.</p>
+
+<p>Marta reiteró que la CUOC es la clasificación unificada de ocupaciones y que se utiliza como referente dentro del MNC para determinar perfiles ocupacionales. Insistió en que no se busca destruir ni eliminar nada, sino construir un sistema educativo que facilite la movilidad de las personas.</p>
+
+<p>Carlos Ruiz confirmó que ahora tiene claro que ambas clasificaciones coexistirán y operarán en conjunto. Sin embargo, reiteró que en la reunión en Cali no se transmitió esa certeza, lo que generó la sensación de que habría que cambiar toda la estructura al renovar los programas.</p>
+
+<p>Marta respondió que el trabajo de normalización que adelanta el SENA sigue vigente y se enriquecerá con los procesos de las mesas sectoriales y el MNC. Aclaró que al elaborar perfiles ocupacionales, se consulta la normalización del SENA y, si es necesario, se recurre a la normatividad internacional o al análisis funcional.</p>
+
+<p>Juan Sebastián Rodríguez, experto en temas de mercado laboral del PNUD, agradeció el espacio para aclarar dudas y reiteró que el MNC es un trabajo de co-construcción en el que se consulta a expertos y se trabaja con el SENA y los ministerios de Trabajo y Educación. Invitó a consultar la página de Colombia Aprende MNC para conocer los estudios y catálogos desarrollados.</p>
+
+<p>Gilberto Salcedo, Presidente de las Aldeas, sugirió que en los talleres se aclare que el trabajo del PNUD es la ruta metodológica para construir cualificaciones, y que los asistentes usarán los catálogos como recurso para diseñar estructuras curriculares. Juan Sebastián coincidió y añadió que el MNC genera cualificaciones que pueden ser incorporadas en los programas de formación.</p>
+
+<h3>Rol del SENA y la normalización</h3>
+
+<p>Carlos Ruiz preguntó si las cualificaciones del MNC se usarán en el subsistema de los siete niveles y si las secretarías de educación continuarán con el modelo anterior. Juan Sebastián respondió que el MNC tiene diferentes niveles de formación y que es un insumo que los centros de formación pueden utilizar, pero no es obligatorio.</p>
+
+<p>Marta añadió que los Ministerios de Educación y Trabajo han unificado metodologías y que las cualificaciones son un referente único para cualquier vía educativa. Explicó que aunque existen diferencias en la duración y otros detalles, se comparte la misma ruta metodológica.</p>
+
+<h3>Diferencias entre niveles de la CUOC y el Marco Nacional de Cualificaciones</h3>
+
+<p>Gilberto Salcedo preguntó sobre la diferencia entre los cuatro niveles de la CUOC y los siete u ocho niveles del MNC. Marta explicó que los niveles de la CUOC son niveles de competencia, mientras que los del MNC son niveles educativos. Añadió que la CUOC asigna un nivel de competencia a cada ocupación, mientras que el MNC establece niveles de formación correlacionados con los niveles de competencia.</p>
+
+<h3>Preocupaciones sobre perfiles ocupacionales y reglamentación en salud</h3>
+
+<p>Alberto Mendieta expresó su preocupación por una norma que establece que los programas de educación deben estructurarse bajo los catálogos sectoriales de cualificaciones y que las denominaciones deben corresponder a la CUOC, pero las cualificaciones a los niveles del 1 al 4 del MNC. Mencionó un perfil ocupacional de "asistentes médicos" que aparece en Okupacol con un código CUOC, lo que genera dudas sobre su validez y su relación con la reglamentación en salud.</p>
+
+<p>Mendieta cuestionó si se están construyendo perfiles que no están supeditados a la reglamentación vigente y cómo se concilian las diferencias entre los niveles de la CUOC y el MNC. Señaló que el técnico laboral no existe en otros países y que el subsistema de formación para el trabajo exige una certificación de calidad que dificulta la participación de las instituciones de educación para el trabajo.</p>
+
+<p>Carlos Ruiz solicitó que se revise el discurso que se está planteando sobre la conciliación de los ministerios, ya que considera que no es clara y puede inducir a error a las secretarías de educación. Afirmó que el sector belleza no cumple el índice sistémico y que las resoluciones del Ministerio de Trabajo se caerán por este motivo.</p>
+
+<p>Juan Sebastián propuso invitar al Ministerio de Educación para despejar dudas y al Ministerio de Trabajo para mostrar que se está trabajando en conjunto. Alberto Mendieta consideró fundamental esta reunión para aclarar las diferencias entre la CUOC y el MNC y para corregir posibles errores.</p>
+
+<p>Gilberto Salcedo sugirió que a la reunión asistan el Director Nacional de Educación y Formación y la Directora de Formación y Movilidad del Ministerio de Trabajo, para que den claridad sobre las inquietudes normativas. Mendieta añadió que también es importante tocar el tema de los desempeños en salud y la validez de los perfiles ocupacionales.</p>
+
+<p>Alberto Mendieta propuso dar prioridad a esta reunión y establecer contactos con los funcionarios mencionados. El Dr. Herrera estuvo de acuerdo, pero señaló la dificultad de coordinar las agendas de los funcionarios.</p>
+
+<p>Marta ofreció hablar con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con los ministerios de Trabajo y Educación. Gilberto Salcedo se ofreció a colaborar en la identificación de los funcionarios relevantes.</p>
+
+<p>Carlos Ruiz insistió en que se revise el discurso que se está planteando y que se soporten las afirmaciones con normas escritas. Mendieta concluyó que la reunión puede dar luces a nivel país y que es necesario estructurar una agenda clara para abordar las inquietudes y sus implicaciones.</p><h2>4. Propuesta de reunión con Ministerios de Educación y Trabajo</h2>
+
+<p>Durante la reunión, se discutió la propuesta de llevar a cabo una reunión con representantes de los Ministerios de Educación y Trabajo. Esta iniciativa surgió de la necesidad de abordar y aclarar diversas inquietudes y dudas relacionadas con la implementación del Marco Nacional de Cualificaciones y su impacto en las instituciones de formación para el trabajo y el desarrollo humano.</p>
+
+<p>Se destacó la importancia de contar con la participación de funcionarios clave de ambos ministerios para discutir temas normativos y operativos que están generando incertidumbre en el sector educativo. Se mencionó la conveniencia de invitar al Director Nacional de Educación y Formación, al Director de Educación para el Trabajo de Desarrollo Humano del Ministerio de Educación, y a la Directora de Formación y Movilidad del Ministerio de Trabajo, con el fin de obtener claridad sobre las inquietudes planteadas.</p>
+
+<p>Se propuso que el PNUD, a través del Dr. Marín y su equipo, gestione los contactos iniciales con los funcionarios de los ministerios para coordinar la reunión. Se sugirió que el Dr. Gilberto Salcedo, presidente de ASENOF, colabore en la identificación de los funcionarios clave y en la elaboración de una agenda detallada para la reunión, que incluya los temas de mayor preocupación para el sector educativo.</p>
+
+<p>Se acordó que la reunión debería abordar temas como la relación entre la CUOC y el Marco Nacional de Cualificaciones, la validez de las normas del SENA, y la reglamentación de ocupaciones específicas en el sector de servicios personales. Se enfatizó la necesidad de discutir el impacto de las políticas gubernamentales en la estabilidad de las instituciones de educación para el trabajo y el desarrollo humano.</p>
+
+<p>El Dr. Marín manifestó la disposición del PNUD para facilitar la coordinación de la reunión y se comprometió a contactar al equipo del Marco Nacional de Cualificaciones para gestionar los contactos con los ministerios. Se acordó que, una vez confirmada la fecha de la reunión, se estructuraría una agenda detallada para abordar los temas de interés para el sector educativo.</p>
+
+<p>Se concluyó que esta reunión es de alta prioridad y que su objetivo principal es aclarar las dudas e inconsistencias que están generando incertidumbre en el sector educativo, con el fin de garantizar la estabilidad y el desarrollo de las instituciones de formación para el trabajo y el desarrollo humano.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>El PNUD gestionará una reunión con representantes del Ministerio de Educación y del Ministerio de Trabajo para abordar las inquietudes planteadas sobre el Marco Nacional de Cualificaciones y la CUOC – <strong>Responsable:</strong> Dr. Marín (PNUD)</li>
+ <li>Se priorizará la reunión con los Ministerios sobre la reunión extraordinaria para definir la posición de la mesa sectorial frente a la ocupación de tatuadores – <strong>Responsable:</strong> No especificado</li>
+ <li>El PNUD revisará el discurso que se está planteando en las socializaciones del Marco Nacional de Cualificaciones para evitar confusiones con las Secretarías de Educación – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Acta de la Reunión</h1>
+<p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+<p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>[NOMBRE] - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Contextualización y propósito de la reunión extraordinaria</li>
+<li>Aprobación del acta anterior (aplazada)</li>
+<li>Presentación y discusión de inquietudes sobre talleres presenciales</li>
+<li>Propuesta de reunión con Ministerios de Educación y Trabajo</li>
+</ol>
+</header>
+
+<h2>1. Contextualización y propósito de la reunión extraordinaria</h2>
+
+<p>La reunión se convocó con el propósito de abordar las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa en relación con el desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos y aportes para la fase B de la construcción de las cualificaciones.</p>
+
+<p>Se recordó que en la reunión del 19 de marzo, el PNUD y el Consejo Ejecutivo de Mesa acordaron la participación de la Mesa en la construcción de los catálogos de cualificaciones. Se subrayó la importancia de este proceso, dado que el decreto del Ministerio de Educación establece que las instituciones de educación para el trabajo y desarrollo humano deben estructurar sus programas tomando como referencia los catálogos sectoriales de cualificaciones.</p>
+
+<p>Se buscaba, por tanto, dar respuesta a las preocupaciones de los representantes de instituciones y del sector productivo de diferentes ciudades del país, quienes expresaron insatisfacción con la manera en que se desarrolló el taller en Cali. Se esperaba que, tras escuchar las inquietudes y las aclaraciones correspondientes, se pudieran tomar correctivos o medidas aclaratorias.</p>
+
+<h2>2. Aprobación del acta anterior (aplazada)</h2>
+
+<p>En el orden del día figuraba la aprobación del acta anterior, sin embargo, se propuso aplazar este punto para la próxima reunión del Consejo Ejecutivo de Mesa, con el fin de centrar la atención en el tema principal de la reunión actual. La propuesta fue aceptada, posponiendo así la aprobación del acta anterior.</p>
+<h2>3. Presentación y discusión de inquietudes sobre talleres presenciales</h2>
+
+<p>La reunión abordó las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa con respecto al desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos para la fase B de la construcción de las cualificaciones.</p>
+
+<h3>Inconformidades sobre el taller en Cali</h3>
+
+<p>Carlos Ruiz, de Cali, expresó su sentir de que el proceso en dicha ciudad fue un mero trámite, describiéndolo como "el típico procedimiento agotado". Manifestó que, en su opinión, no se socializó adecuadamente la información y que las personas a cargo demostraron desconocimiento del sistema anterior y del tema de competencias. Consideró que el taller se realizó solo para cumplir con un requisito, sin una verdadera comprensión del proceso.</p>
+
+<p>Ruiz detalló que las personas que atendieron el taller no pudieron responder a sus preguntas sobre el futuro de las competencias y si el trabajo realizado serviría como insumo. Además, criticó que los formularios tipo encuesta eran de un nivel técnico elevado y que las respuestas eran subjetivas debido a la falta de claridad en el propósito de las preguntas.</p>
+
+<p>Alberto Mendieta señaló que en Medellín, por ejemplo, se habían manifestado aspectos muy positivos sobre el taller. Preguntó si alguien más tenía comentarios sobre los talleres realizados en otras ciudades como Barranquilla, Pasto, Villavicencio y Pereira.</p>
+
+<p>Ante la solicitud de mayor detalle sobre las inquietudes, Ruiz explicó que al preguntar sobre el destino y utilidad de la información recopilada, las respuestas fueron evasivas. Añadió que las encuestas tenían un nivel técnico que generó confusión entre los participantes, cuyas respuestas resultaron subjetivas por la falta de un propósito claro.</p>
+
+<h3>Aclaraciones sobre el Marco Nacional de Cualificaciones y la CUOC</h3>
+
+<p>El Dr. Marín aclaró que el taller en Cali se realizó en el marco del desarrollo de un catálogo de cualificación dentro del Marco Nacional de Cualificaciones (MNC). Explicó que este ejercicio forma parte de la etapa B, que busca determinar las brechas de capital humano para el sector de los servicios personales y a la comunidad. Subrayó que se trata de un ejercicio técnico riguroso para recoger información de fuente primaria que alimente dicha etapa.</p>
+
+<p>Libardo complementó que desde enero se han mantenido conversaciones con la Mesa para que el proceso sea participativo y que los actores fundamentales del sector puedan contribuir en cada etapa. Afirmó que el compromiso del equipo técnico es que el catálogo resultante sea útil y contribuya a cerrar las brechas existentes en el sector.</p>
+
+<p>Libardo añadió que el evento en Cali fue un taller de validación de tendencias sectoriales y territoriales, ligado al sector en concreto. Explicó que se identificaron tendencias a través de fuentes primarias y secundarias, y que el objetivo era recibir retroalimentación para enriquecer el resultado.</p>
+
+<p>Carlos Ruiz solicitó que se estandarizara un criterio sobre el Marco Nacional de Cualificaciones, ya que se le había dado a entender que este anularía la CUOC (Clasificación Única de Ocupaciones para Colombia). Marta aclaró que el MNC es un instrumento creado por los Ministerios de Educación y Trabajo para organizar la oferta educativa del país, y que no pertenece exclusivamente a ninguno de los dos ministerios.</p>
+
+<p>Marta enfatizó que la CUOC no será anulada, sino que es un sistema de clasificación de ocupaciones que sirve como referente para determinar perfiles ocupacionales. Explicó que el MNC estructura referentes que cada vía educativa puede tomar para su oferta de formación, facilitando la movilidad educativa.</p>
+
+<p>Para mayor claridad, Marta compartió una presentación sobre la ruta metodológica del MNC, que consta de cuatro etapas: contextualización del sector, brechas de capital humano, análisis ocupacional y estructuración de cualificaciones. Señaló que la visita a Cali se enmarcaba en la etapa B.</p>
+
+<p>Marta explicó que en Colombia existen tres vías de cualificación: la educación formal (Ministerio de Educación), la educación para el trabajo (SENA y Ministerio de Trabajo) y el reconocimiento de aprendizajes previos. El MNC proporciona referentes para que cada una de estas vías pueda hacer su oferta de formación con bases comunes.</p>
+
+<p>Marta reiteró que la CUOC es la clasificación unificada de ocupaciones y que se utiliza como referente dentro del MNC para determinar perfiles ocupacionales. Insistió en que no se busca destruir ni eliminar nada, sino construir un sistema educativo que facilite la movilidad de las personas.</p>
+
+<p>Carlos Ruiz confirmó que ahora tiene claro que ambas clasificaciones coexistirán y operarán en conjunto. Sin embargo, reiteró que en la reunión en Cali no se transmitió esa certeza, lo que generó la sensación de que habría que cambiar toda la estructura al renovar los programas.</p>
+
+<p>Marta respondió que el trabajo de normalización que adelanta el SENA sigue vigente y se enriquecerá con los procesos de las mesas sectoriales y el MNC. Aclaró que al elaborar perfiles ocupacionales, se consulta la normalización del SENA y, si es necesario, se recurre a la normatividad internacional o al análisis funcional.</p>
+
+<p>Juan Sebastián Rodríguez, experto en temas de mercado laboral del PNUD, agradeció el espacio para aclarar dudas y reiteró que el MNC es un trabajo de co-construcción en el que se consulta a expertos y se trabaja con el SENA y los ministerios de Trabajo y Educación. Invitó a consultar la página de Colombia Aprende MNC para conocer los estudios y catálogos desarrollados.</p>
+
+<p>Gilberto Salcedo, Presidente de las Aldeas, sugirió que en los talleres se aclare que el trabajo del PNUD es la ruta metodológica para construir cualificaciones, y que los asistentes usarán los catálogos como recurso para diseñar estructuras curriculares. Juan Sebastián coincidió y añadió que el MNC genera cualificaciones que pueden ser incorporadas en los programas de formación.</p>
+
+<h3>Rol del SENA y la normalización</h3>
+
+<p>Carlos Ruiz preguntó si las cualificaciones del MNC se usarán en el subsistema de los siete niveles y si las secretarías de educación continuarán con el modelo anterior. Juan Sebastián respondió que el MNC tiene diferentes niveles de formación y que es un insumo que los centros de formación pueden utilizar, pero no es obligatorio.</p>
+
+<p>Marta añadió que los Ministerios de Educación y Trabajo han unificado metodologías y que las cualificaciones son un referente único para cualquier vía educativa. Explicó que aunque existen diferencias en la duración y otros detalles, se comparte la misma ruta metodológica.</p>
+
+<h3>Diferencias entre niveles de la CUOC y el Marco Nacional de Cualificaciones</h3>
+
+<p>Gilberto Salcedo preguntó sobre la diferencia entre los cuatro niveles de la CUOC y los siete u ocho niveles del MNC. Marta explicó que los niveles de la CUOC son niveles de competencia, mientras que los del MNC son niveles educativos. Añadió que la CUOC asigna un nivel de competencia a cada ocupación, mientras que el MNC establece niveles de formación correlacionados con los niveles de competencia.</p>
+
+<h3>Preocupaciones sobre perfiles ocupacionales y reglamentación en salud</h3>
+
+<p>Alberto Mendieta expresó su preocupación por una norma que establece que los programas de educación deben estructurarse bajo los catálogos sectoriales de cualificaciones y que las denominaciones deben corresponder a la CUOC, pero las cualificaciones a los niveles del 1 al 4 del MNC. Mencionó un perfil ocupacional de "asistentes médicos" que aparece en Okupacol con un código CUOC, lo que genera dudas sobre su validez y su relación con la reglamentación en salud.</p>
+
+<p>Mendieta cuestionó si se están construyendo perfiles que no están supeditados a la reglamentación vigente y cómo se concilian las diferencias entre los niveles de la CUOC y el MNC. Señaló que el técnico laboral no existe en otros países y que el subsistema de formación para el trabajo exige una certificación de calidad que dificulta la participación de las instituciones de educación para el trabajo.</p>
+
+<p>Carlos Ruiz solicitó que se revise el discurso que se está planteando sobre la conciliación de los ministerios, ya que considera que no es clara y puede inducir a error a las secretarías de educación. Afirmó que el sector belleza no cumple el índice sistémico y que las resoluciones del Ministerio de Trabajo se caerán por este motivo.</p>
+
+<p>Juan Sebastián propuso invitar al Ministerio de Educación para despejar dudas y al Ministerio de Trabajo para mostrar que se está trabajando en conjunto. Alberto Mendieta consideró fundamental esta reunión para aclarar las diferencias entre la CUOC y el MNC y para corregir posibles errores.</p>
+
+<p>Gilberto Salcedo sugirió que a la reunión asistan el Director Nacional de Educación y Formación y la Directora de Formación y Movilidad del Ministerio de Trabajo, para que den claridad sobre las inquietudes normativas. Mendieta añadió que también es importante tocar el tema de los desempeños en salud y la validez de los perfiles ocupacionales.</p>
+
+<p>Alberto Mendieta propuso dar prioridad a esta reunión y establecer contactos con los funcionarios mencionados. El Dr. Herrera estuvo de acuerdo, pero señaló la dificultad de coordinar las agendas de los funcionarios.</p>
+
+<p>Marta ofreció hablar con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con los ministerios de Trabajo y Educación. Gilberto Salcedo se ofreció a colaborar en la identificación de los funcionarios relevantes.</p>
+
+<p>Carlos Ruiz insistió en que se revise el discurso que se está planteando y que se soporten las afirmaciones con normas escritas. Mendieta concluyó que la reunión puede dar luces a nivel país y que es necesario estructurar una agenda clara para abordar las inquietudes y sus implicaciones.</p><h2>4. Propuesta de reunión con Ministerios de Educación y Trabajo</h2>
+
+<p>Durante la reunión, se discutió la propuesta de llevar a cabo una reunión con representantes de los Ministerios de Educación y Trabajo. Esta iniciativa surgió de la necesidad de abordar y aclarar diversas inquietudes y dudas relacionadas con la implementación del Marco Nacional de Cualificaciones y su impacto en las instituciones de formación para el trabajo y el desarrollo humano.</p>
+
+<p>Se destacó la importancia de contar con la participación de funcionarios clave de ambos ministerios para discutir temas normativos y operativos que están generando incertidumbre en el sector educativo. Se mencionó la conveniencia de invitar al Director Nacional de Educación y Formación, al Director de Educación para el Trabajo de Desarrollo Humano del Ministerio de Educación, y a la Directora de Formación y Movilidad del Ministerio de Trabajo, con el fin de obtener claridad sobre las inquietudes planteadas.</p>
+
+<p>Se propuso que el PNUD, a través del Dr. Marín y su equipo, gestione los contactos iniciales con los funcionarios de los ministerios para coordinar la reunión. Se sugirió que el Dr. Gilberto Salcedo, presidente de ASENOF, colabore en la identificación de los funcionarios clave y en la elaboración de una agenda detallada para la reunión, que incluya los temas de mayor preocupación para el sector educativo.</p>
+
+<p>Se acordó que la reunión debería abordar temas como la relación entre la CUOC y el Marco Nacional de Cualificaciones, la validez de las normas del SENA, y la reglamentación de ocupaciones específicas en el sector de servicios personales. Se enfatizó la necesidad de discutir el impacto de las políticas gubernamentales en la estabilidad de las instituciones de educación para el trabajo y el desarrollo humano.</p>
+
+<p>El Dr. Marín manifestó la disposición del PNUD para facilitar la coordinación de la reunión y se comprometió a contactar al equipo del Marco Nacional de Cualificaciones para gestionar los contactos con los ministerios. Se acordó que, una vez confirmada la fecha de la reunión, se estructuraría una agenda detallada para abordar los temas de interés para el sector educativo.</p>
+
+<p>Se concluyó que esta reunión es de alta prioridad y que su objetivo principal es aclarar las dudas e inconsistencias que están generando incertidumbre en el sector educativo, con el fin de garantizar la estabilidad y el desarrollo de las instituciones de formación para el trabajo y el desarrollo humano.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>El PNUD gestionará una reunión con representantes del Ministerio de Educación y del Ministerio de Trabajo para abordar las inquietudes planteadas sobre el Marco Nacional de Cualificaciones y la CUOC – <strong>Responsable:</strong> Dr. Marín (PNUD)</li>
+ <li>Se priorizará la reunión con los Ministerios sobre la reunión extraordinaria para definir la posición de la mesa sectorial frente a la ocupación de tatuadores – <strong>Responsable:</strong> No especificado</li>
+ <li>El PNUD revisará el discurso que se está planteando en las socializaciones del Marco Nacional de Cualificaciones para evitar confusiones con las Secretarías de Educación – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/wX5kLzsZKF8mZH3
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/wX5kLzsZKF8mZH3
+Generando URL pública para Transcripcion.txt (EXISTENTE): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/kPD5aTGwL4jE498
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/kPD5aTGwL4jE498
+Verificando si existe transcripción: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+[2025-08-26T14:03:21.050Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T14:03:22.602Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción existente encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion. Obteniendo contenido.
+Verificando contenido existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[2025-08-26T14:03:23.960Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-26T14:03:24.869Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt" NO encontrado en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Generando contenido para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[2025-08-26T14:03:24.869Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T14:03:25.791Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt. Obteniendo contenido.
+[2025-08-26T14:03:26.922Z] Contenido del archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Verificando si existe transcripción: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+[2025-08-26T14:07:58.301Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T14:07:59.679Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción existente encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion. Obteniendo contenido.
+Verificando contenido existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[2025-08-26T14:08:01.170Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-26T14:08:02.005Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt" NO encontrado en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Generando contenido para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Transcripción no proporcionada como parámetro. Verificando transcripción existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[2025-08-26T14:08:02.007Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-08-26T14:08:02.999Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Transcripción encontrada: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt. Obteniendo contenido.
+[2025-08-26T14:08:04.075Z] Contenido del archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt" obtenido de Nextcloud.
+Generando Orden del Día con Gemini para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4
+Guardando contenido en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+Contenido guardado: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.mp4 en carpeta: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion
+Verificando Borrador .docx existente: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[2025-08-26T14:08:54.626Z] Verificando existencia del archivo aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx en Nextcloud carpeta aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-08-26T14:08:55.482Z] Archivo "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx" NO encontrado en Nextcloud en la carpeta "aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Preparando guardado .docx en Nextcloud: aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión Extraordinaria de la Mesa de Servicios Personales</h1>
+<p><strong>Fecha:</strong> 19 de marzo de [AÑO]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+<p><strong>Moderador:</strong> Dr. Herrera</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Dr. Marín - [CARGO NO ESPECIFICADO]</li>
+<li>Marta - [CARGO NO ESPECIFICADO]</li>
+<li>Carlos Ruiz - [CARGO NO ESPECIFICADO]</li>
+<li>Alberto Mendieta - [CARGO NO ESPECIFICADO]</li>
+<li>Auralila - [CARGO NO ESPECIFICADO]</li>
+<li>Libardo - [CARGO NO ESPECIFICADO]</li>
+<li>Juan Sebastián Rodríguez - Experto en temas de mercado laboral</li>
+<li>Dina - [CARGO NO ESPECIFICADO]</li>
+<li>Clara - [CARGO NO ESPECIFICADO]</li>
+<li>Gilberto Salcedo - Presidente de las Aldeas</li>
+<li>Héctor Suárez - [CARGO NO ESPECIFICADO]</li>
+<li>Santiago Luna - [CARGO NO ESPECIFICADO]</li>
+<li>Jennifer - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Contextualización y propósito de la reunión extraordinaria</li>
+<li>Aprobación del acta anterior (aplazada)</li>
+<li>Presentación y discusión de inquietudes sobre talleres presenciales</li>
+<li>Propuesta de reunión con Ministerios de Educación y Trabajo</li>
+</ol>
+</header>
+
+<h2>1. Contextualización y propósito de la reunión extraordinaria</h2>
+
+<p>La reunión se convocó con el propósito de abordar las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa en relación con el desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos y aportes para la fase B de la construcción de las cualificaciones.</p>
+
+<p>Se recordó que en la reunión del 19 de marzo, el PNUD y el Consejo Ejecutivo de Mesa acordaron la participación de la Mesa en la construcción de los catálogos de cualificaciones. Se subrayó la importancia de este proceso, dado que el decreto del Ministerio de Educación establece que las instituciones de educación para el trabajo y desarrollo humano deben estructurar sus programas tomando como referencia los catálogos sectoriales de cualificaciones.</p>
+
+<p>Se buscaba, por tanto, dar respuesta a las preocupaciones de los representantes de instituciones y del sector productivo de diferentes ciudades del país, quienes expresaron insatisfacción con la manera en que se desarrolló el taller en Cali. Se esperaba que, tras escuchar las inquietudes y las aclaraciones correspondientes, se pudieran tomar correctivos o medidas aclaratorias.</p>
+
+<h2>2. Aprobación del acta anterior (aplazada)</h2>
+
+<p>En el orden del día figuraba la aprobación del acta anterior, sin embargo, se propuso aplazar este punto para la próxima reunión del Consejo Ejecutivo de Mesa, con el fin de centrar la atención en el tema principal de la reunión actual. La propuesta fue aceptada, posponiendo así la aprobación del acta anterior.</p>
+<h2>3. Presentación y discusión de inquietudes sobre talleres presenciales</h2>
+
+<p>La reunión abordó las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa con respecto al desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos para la fase B de la construcción de las cualificaciones.</p>
+
+<h3>Inconformidades sobre el taller en Cali</h3>
+
+<p>Carlos Ruiz, de Cali, expresó su sentir de que el proceso en dicha ciudad fue un mero trámite, describiéndolo como "el típico procedimiento agotado". Manifestó que, en su opinión, no se socializó adecuadamente la información y que las personas a cargo demostraron desconocimiento del sistema anterior y del tema de competencias. Consideró que el taller se realizó solo para cumplir con un requisito, sin una verdadera comprensión del proceso.</p>
+
+<p>Ruiz detalló que las personas que atendieron el taller no pudieron responder a sus preguntas sobre el futuro de las competencias y si el trabajo realizado serviría como insumo. Además, criticó que los formularios tipo encuesta eran de un nivel técnico elevado y que las respuestas eran subjetivas debido a la falta de claridad en el propósito de las preguntas.</p>
+
+<p>Alberto Mendieta señaló que en Medellín, por ejemplo, se habían manifestado aspectos muy positivos sobre el taller. Preguntó si alguien más tenía comentarios sobre los talleres realizados en otras ciudades como Barranquilla, Pasto, Villavicencio y Pereira.</p>
+
+<p>Ante la solicitud de mayor detalle sobre las inquietudes, Ruiz explicó que al preguntar sobre el destino y utilidad de la información recopilada, las respuestas fueron evasivas. Añadió que las encuestas tenían un nivel técnico que generó confusión entre los participantes, cuyas respuestas resultaron subjetivas por la falta de un propósito claro.</p>
+
+<h3>Aclaraciones sobre el Marco Nacional de Cualificaciones y la CUOC</h3>
+
+<p>El Dr. Marín aclaró que el taller en Cali se realizó en el marco del desarrollo de un catálogo de cualificación dentro del Marco Nacional de Cualificaciones (MNC). Explicó que este ejercicio forma parte de la etapa B, que busca determinar las brechas de capital humano para el sector de los servicios personales y a la comunidad. Subrayó que se trata de un ejercicio técnico riguroso para recoger información de fuente primaria que alimente dicha etapa.</p>
+
+<p>Libardo complementó que desde enero se han mantenido conversaciones con la Mesa para que el proceso sea participativo y que los actores fundamentales del sector puedan contribuir en cada etapa. Afirmó que el compromiso del equipo técnico es que el catálogo resultante sea útil y contribuya a cerrar las brechas existentes en el sector.</p>
+
+<p>Libardo añadió que el evento en Cali fue un taller de validación de tendencias sectoriales y territoriales, ligado al sector en concreto. Explicó que se identificaron tendencias a través de fuentes primarias y secundarias, y que el objetivo era recibir retroalimentación para enriquecer el resultado.</p>
+
+<p>Carlos Ruiz solicitó que se estandarizara un criterio sobre el Marco Nacional de Cualificaciones, ya que se le había dado a entender que este anularía la CUOC (Clasificación Única de Ocupaciones para Colombia). Marta aclaró que el MNC es un instrumento creado por los Ministerios de Educación y Trabajo para organizar la oferta educativa del país, y que no pertenece exclusivamente a ninguno de los dos ministerios.</p>
+
+<p>Marta enfatizó que la CUOC no será anulada, sino que es un sistema de clasificación de ocupaciones que sirve como referente para determinar perfiles ocupacionales. Explicó que el MNC estructura referentes que cada vía educativa puede tomar para su oferta de formación, facilitando la movilidad educativa.</p>
+
+<p>Para mayor claridad, Marta compartió una presentación sobre la ruta metodológica del MNC, que consta de cuatro etapas: contextualización del sector, brechas de capital humano, análisis ocupacional y estructuración de cualificaciones. Señaló que la visita a Cali se enmarcaba en la etapa B.</p>
+
+<p>Marta explicó que en Colombia existen tres vías de cualificación: la educación formal (Ministerio de Educación), la educación para el trabajo (SENA y Ministerio de Trabajo) y el reconocimiento de aprendizajes previos. El MNC proporciona referentes para que cada una de estas vías pueda hacer su oferta de formación con bases comunes.</p>
+
+<p>Marta reiteró que la CUOC es la clasificación unificada de ocupaciones y que se utiliza como referente dentro del MNC para determinar perfiles ocupacionales. Insistió en que no se busca destruir ni eliminar nada, sino construir un sistema educativo que facilite la movilidad de las personas.</p>
+
+<p>Carlos Ruiz confirmó que ahora tiene claro que ambas clasificaciones coexistirán y operarán en conjunto. Sin embargo, reiteró que en la reunión en Cali no se transmitió esa certeza, lo que generó la sensación de que habría que cambiar toda la estructura al renovar los programas.</p>
+
+<p>Marta respondió que el trabajo de normalización que adelanta el SENA sigue vigente y se enriquecerá con los procesos de las mesas sectoriales y el MNC. Aclaró que al elaborar perfiles ocupacionales, se consulta la normalización del SENA y, si es necesario, se recurre a la normatividad internacional o al análisis funcional.</p>
+
+<p>Juan Sebastián Rodríguez, experto en temas de mercado laboral del PNUD, agradeció el espacio para aclarar dudas y reiteró que el MNC es un trabajo de co-construcción en el que se consulta a expertos y se trabaja con el SENA y los ministerios de Trabajo y Educación. Invitó a consultar la página de Colombia Aprende MNC para conocer los estudios y catálogos desarrollados.</p>
+
+<p>Gilberto Salcedo, Presidente de las Aldeas, sugirió que en los talleres se aclare que el trabajo del PNUD es la ruta metodológica para construir cualificaciones, y que los asistentes usarán los catálogos como recurso para diseñar estructuras curriculares. Juan Sebastián coincidió y añadió que el MNC genera cualificaciones que pueden ser incorporadas en los programas de formación.</p>
+
+<h3>Rol del SENA y la normalización</h3>
+
+<p>Carlos Ruiz preguntó si las cualificaciones del MNC se usarán en el subsistema de los siete niveles y si las secretarías de educación continuarán con el modelo anterior. Juan Sebastián respondió que el MNC tiene diferentes niveles de formación y que es un insumo que los centros de formación pueden utilizar, pero no es obligatorio.</p>
+
+<p>Marta añadió que los Ministerios de Educación y Trabajo han unificado metodologías y que las cualificaciones son un referente único para cualquier vía educativa. Explicó que aunque existen diferencias en la duración y otros detalles, se comparte la misma ruta metodológica.</p>
+
+<h3>Diferencias entre niveles de la CUOC y el Marco Nacional de Cualificaciones</h3>
+
+<p>Gilberto Salcedo preguntó sobre la diferencia entre los cuatro niveles de la CUOC y los siete u ocho niveles del MNC. Marta explicó que los niveles de la CUOC son niveles de competencia, mientras que los del MNC son niveles educativos. Añadió que la CUOC asigna un nivel de competencia a cada ocupación, mientras que el MNC establece niveles de formación correlacionados con los niveles de competencia.</p>
+
+<h3>Preocupaciones sobre perfiles ocupacionales y reglamentación en salud</h3>
+
+<p>Alberto Mendieta expresó su preocupación por una norma que establece que los programas de educación deben estructurarse bajo los catálogos sectoriales de cualificaciones y que las denominaciones deben corresponder a la CUOC, pero las cualificaciones a los niveles del 1 al 4 del MNC. Mencionó un perfil ocupacional de "asistentes médicos" que aparece en Okupacol con un código CUOC, lo que genera dudas sobre su validez y su relación con la reglamentación en salud.</p>
+
+<p>Mendieta cuestionó si se están construyendo perfiles que no están supeditados a la reglamentación vigente y cómo se concilian las diferencias entre los niveles de la CUOC y el MNC. Señaló que el técnico laboral no existe en otros países y que el subsistema de formación para el trabajo exige una certificación de calidad que dificulta la participación de las instituciones de educación para el trabajo.</p>
+
+<p>Carlos Ruiz solicitó que se revise el discurso que se está planteando sobre la conciliación de los ministerios, ya que considera que no es clara y puede inducir a error a las secretarías de educación. Afirmó que el sector belleza no cumple el índice sistémico y que las resoluciones del Ministerio de Trabajo se caerán por este motivo.</p>
+
+<p>Juan Sebastián propuso invitar al Ministerio de Educación para despejar dudas y al Ministerio de Trabajo para mostrar que se está trabajando en conjunto. Alberto Mendieta consideró fundamental esta reunión para aclarar las diferencias entre la CUOC y el MNC y para corregir posibles errores.</p>
+
+<p>Gilberto Salcedo sugirió que a la reunión asistan el Director Nacional de Educación y Formación y la Directora de Formación y Movilidad del Ministerio de Trabajo, para que den claridad sobre las inquietudes normativas. Mendieta añadió que también es importante tocar el tema de los desempeños en salud y la validez de los perfiles ocupacionales.</p>
+
+<p>Alberto Mendieta propuso dar prioridad a esta reunión y establecer contactos con los funcionarios mencionados. El Dr. Herrera estuvo de acuerdo, pero señaló la dificultad de coordinar las agendas de los funcionarios.</p>
+
+<p>Marta ofreció hablar con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con los ministerios de Trabajo y Educación. Gilberto Salcedo se ofreció a colaborar en la identificación de los funcionarios relevantes.</p>
+
+<p>Carlos Ruiz insistió en que se revise el discurso que se está planteando y que se soporten las afirmaciones con normas escritas. Mendieta concluyó que la reunión puede dar luces a nivel país y que es necesario estructurar una agenda clara para abordar las inquietudes y sus implicaciones.</p><h2>4. Propuesta de reunión con Ministerios de Educación y Trabajo</h2>
+
+La discusión sobre la propuesta de reunión con los Ministerios de Educación y Trabajo se centró en la necesidad de aclarar y resolver las inquietudes planteadas durante la reunión, especialmente las relacionadas con la coexistencia y aplicación del Marco Nacional de Cualificaciones (MNC) y la Clasificación Única de Ocupaciones para Colombia (CUOC).
+
+Se destacó la importancia de que la mesa sectorial defina su posición frente a la ocupación de tatuadores y otras profesiones, y se sugirió aprovechar la oportunidad para abordar las preocupaciones normativas y operativas con los ministerios competentes.
+
+Alberto Mendieta propuso dar prioridad a esta reunión, sugiriendo que se establezcan contactos con los funcionarios pertinentes para llevarla a cabo. El Dr. Herrera estuvo de acuerdo con la importancia de la reunión, pero señaló la dificultad de coordinar las agendas de los funcionarios del Ministerio de Educación y del Ministerio del Trabajo.
+
+Gilberto Salcedo sugirió invitar al Director Nacional de Educación y Formación, al Director de Educación para el Trabajo de Desarrollo Humano del Ministerio de Educación, y a la Directora de Formación y Movilidad del Ministerio de Trabajo, para que proporcionen claridad sobre las inquietudes planteadas.
+
+El Dr. Marín ofreció la disposición del PNUD para facilitar la coordinación de la reunión con los ministerios, sugiriendo hablar directamente con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con el Ministerio de Trabajo y con las personas mencionadas por el Dr. Gilberto del Ministerio de Educación.
+
+Se acordó que el PNUD, en colaboración con Gilberto Salcedo, establecería los contactos necesarios para coordinar la reunión con los funcionarios de los ministerios. Se enfatizó la necesidad de estructurar una agenda clara y puntual para abordar los temas con los soportes correspondientes.
+
+Carlos Ruiz solicitó que se revise el discurso que se está planteando, mientras las cosas no se definan y se conozcan en norma cómo está la conciliación o el manejo de los dos ministerios.
+
+Finalmente, se reiteró la importancia de que la mesa sectorial siga contando con el apoyo del PNUD en la construcción de los catálogos de cualificaciones, y se agradeció la disposición de los funcionarios del PNUD para colaborar en la organización de la reunión con los ministerios.
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>El PNUD gestionará una reunión con representantes del Ministerio de Educación y del Ministerio de Trabajo para abordar las inquietudes planteadas sobre el Marco Nacional de Cualificaciones y la CUOC – <strong>Responsable:</strong> PNUD</li>
+ <li>Se priorizará la reunión con los Ministerios sobre la reunión extraordinaria para definir la posición de la mesa sectorial frente a la ocupación de tatuadores – <strong>Responsable:</strong> No especificado</li>
+ <li>El PNUD comunicará las fechas de las próximas actividades y talleres presenciales para las fases restantes del diseño del catálogo de cualificaciones de servicios personales – <strong>Responsable:</strong> PNUD</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.2.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión Extraordinaria de la Mesa de Servicios Personales</h1>
+<p><strong>Fecha:</strong> 19 de marzo de [AÑO]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+<p><strong>Moderador:</strong> Dr. Herrera</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Dr. Marín - [CARGO NO ESPECIFICADO]</li>
+<li>Marta - [CARGO NO ESPECIFICADO]</li>
+<li>Carlos Ruiz - [CARGO NO ESPECIFICADO]</li>
+<li>Alberto Mendieta - [CARGO NO ESPECIFICADO]</li>
+<li>Auralila - [CARGO NO ESPECIFICADO]</li>
+<li>Libardo - [CARGO NO ESPECIFICADO]</li>
+<li>Juan Sebastián Rodríguez - Experto en temas de mercado laboral</li>
+<li>Dina - [CARGO NO ESPECIFICADO]</li>
+<li>Clara - [CARGO NO ESPECIFICADO]</li>
+<li>Gilberto Salcedo - Presidente de las Aldeas</li>
+<li>Héctor Suárez - [CARGO NO ESPECIFICADO]</li>
+<li>Santiago Luna - [CARGO NO ESPECIFICADO]</li>
+<li>Jennifer - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Contextualización y propósito de la reunión extraordinaria</li>
+<li>Aprobación del acta anterior (aplazada)</li>
+<li>Presentación y discusión de inquietudes sobre talleres presenciales</li>
+<li>Propuesta de reunión con Ministerios de Educación y Trabajo</li>
+</ol>
+</header>
+
+<h2>1. Contextualización y propósito de la reunión extraordinaria</h2>
+
+<p>La reunión se convocó con el propósito de abordar las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa en relación con el desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos y aportes para la fase B de la construcción de las cualificaciones.</p>
+
+<p>Se recordó que en la reunión del 19 de marzo, el PNUD y el Consejo Ejecutivo de Mesa acordaron la participación de la Mesa en la construcción de los catálogos de cualificaciones. Se subrayó la importancia de este proceso, dado que el decreto del Ministerio de Educación establece que las instituciones de educación para el trabajo y desarrollo humano deben estructurar sus programas tomando como referencia los catálogos sectoriales de cualificaciones.</p>
+
+<p>Se buscaba, por tanto, dar respuesta a las preocupaciones de los representantes de instituciones y del sector productivo de diferentes ciudades del país, quienes expresaron insatisfacción con la manera en que se desarrolló el taller en Cali. Se esperaba que, tras escuchar las inquietudes y las aclaraciones correspondientes, se pudieran tomar correctivos o medidas aclaratorias.</p>
+
+<h2>2. Aprobación del acta anterior (aplazada)</h2>
+
+<p>En el orden del día figuraba la aprobación del acta anterior, sin embargo, se propuso aplazar este punto para la próxima reunión del Consejo Ejecutivo de Mesa, con el fin de centrar la atención en el tema principal de la reunión actual. La propuesta fue aceptada, posponiendo así la aprobación del acta anterior.</p>
+<h2>3. Presentación y discusión de inquietudes sobre talleres presenciales</h2>
+
+<p>La reunión abordó las inquietudes manifestadas por algunos miembros del Consejo Ejecutivo de Mesa con respecto al desarrollo de los talleres presenciales, específicamente el realizado en Cali el 6 de mayo. Estos talleres tenían como objetivo recopilar insumos para la fase B de la construcción de las cualificaciones.</p>
+
+<h3>Inconformidades sobre el taller en Cali</h3>
+
+<p>Carlos Ruiz, de Cali, expresó su sentir de que el proceso en dicha ciudad fue un mero trámite, describiéndolo como "el típico procedimiento agotado". Manifestó que, en su opinión, no se socializó adecuadamente la información y que las personas a cargo demostraron desconocimiento del sistema anterior y del tema de competencias. Consideró que el taller se realizó solo para cumplir con un requisito, sin una verdadera comprensión del proceso.</p>
+
+<p>Ruiz detalló que las personas que atendieron el taller no pudieron responder a sus preguntas sobre el futuro de las competencias y si el trabajo realizado serviría como insumo. Además, criticó que los formularios tipo encuesta eran de un nivel técnico elevado y que las respuestas eran subjetivas debido a la falta de claridad en el propósito de las preguntas.</p>
+
+<p>Alberto Mendieta señaló que en Medellín, por ejemplo, se habían manifestado aspectos muy positivos sobre el taller. Preguntó si alguien más tenía comentarios sobre los talleres realizados en otras ciudades como Barranquilla, Pasto, Villavicencio y Pereira.</p>
+
+<p>Ante la solicitud de mayor detalle sobre las inquietudes, Ruiz explicó que al preguntar sobre el destino y utilidad de la información recopilada, las respuestas fueron evasivas. Añadió que las encuestas tenían un nivel técnico que generó confusión entre los participantes, cuyas respuestas resultaron subjetivas por la falta de un propósito claro.</p>
+
+<h3>Aclaraciones sobre el Marco Nacional de Cualificaciones y la CUOC</h3>
+
+<p>El Dr. Marín aclaró que el taller en Cali se realizó en el marco del desarrollo de un catálogo de cualificación dentro del Marco Nacional de Cualificaciones (MNC). Explicó que este ejercicio forma parte de la etapa B, que busca determinar las brechas de capital humano para el sector de los servicios personales y a la comunidad. Subrayó que se trata de un ejercicio técnico riguroso para recoger información de fuente primaria que alimente dicha etapa.</p>
+
+<p>Libardo complementó que desde enero se han mantenido conversaciones con la Mesa para que el proceso sea participativo y que los actores fundamentales del sector puedan contribuir en cada etapa. Afirmó que el compromiso del equipo técnico es que el catálogo resultante sea útil y contribuya a cerrar las brechas existentes en el sector.</p>
+
+<p>Libardo añadió que el evento en Cali fue un taller de validación de tendencias sectoriales y territoriales, ligado al sector en concreto. Explicó que se identificaron tendencias a través de fuentes primarias y secundarias, y que el objetivo era recibir retroalimentación para enriquecer el resultado.</p>
+
+<p>Carlos Ruiz solicitó que se estandarizara un criterio sobre el Marco Nacional de Cualificaciones, ya que se le había dado a entender que este anularía la CUOC (Clasificación Única de Ocupaciones para Colombia). Marta aclaró que el MNC es un instrumento creado por los Ministerios de Educación y Trabajo para organizar la oferta educativa del país, y que no pertenece exclusivamente a ninguno de los dos ministerios.</p>
+
+<p>Marta enfatizó que la CUOC no será anulada, sino que es un sistema de clasificación de ocupaciones que sirve como referente para determinar perfiles ocupacionales. Explicó que el MNC estructura referentes que cada vía educativa puede tomar para su oferta de formación, facilitando la movilidad educativa.</p>
+
+<p>Para mayor claridad, Marta compartió una presentación sobre la ruta metodológica del MNC, que consta de cuatro etapas: contextualización del sector, brechas de capital humano, análisis ocupacional y estructuración de cualificaciones. Señaló que la visita a Cali se enmarcaba en la etapa B.</p>
+
+<p>Marta explicó que en Colombia existen tres vías de cualificación: la educación formal (Ministerio de Educación), la educación para el trabajo (SENA y Ministerio de Trabajo) y el reconocimiento de aprendizajes previos. El MNC proporciona referentes para que cada una de estas vías pueda hacer su oferta de formación con bases comunes.</p>
+
+<p>Marta reiteró que la CUOC es la clasificación unificada de ocupaciones y que se utiliza como referente dentro del MNC para determinar perfiles ocupacionales. Insistió en que no se busca destruir ni eliminar nada, sino construir un sistema educativo que facilite la movilidad de las personas.</p>
+
+<p>Carlos Ruiz confirmó que ahora tiene claro que ambas clasificaciones coexistirán y operarán en conjunto. Sin embargo, reiteró que en la reunión en Cali no se transmitió esa certeza, lo que generó la sensación de que habría que cambiar toda la estructura al renovar los programas.</p>
+
+<p>Marta respondió que el trabajo de normalización que adelanta el SENA sigue vigente y se enriquecerá con los procesos de las mesas sectoriales y el MNC. Aclaró que al elaborar perfiles ocupacionales, se consulta la normalización del SENA y, si es necesario, se recurre a la normatividad internacional o al análisis funcional.</p>
+
+<p>Juan Sebastián Rodríguez, experto en temas de mercado laboral del PNUD, agradeció el espacio para aclarar dudas y reiteró que el MNC es un trabajo de co-construcción en el que se consulta a expertos y se trabaja con el SENA y los ministerios de Trabajo y Educación. Invitó a consultar la página de Colombia Aprende MNC para conocer los estudios y catálogos desarrollados.</p>
+
+<p>Gilberto Salcedo, Presidente de las Aldeas, sugirió que en los talleres se aclare que el trabajo del PNUD es la ruta metodológica para construir cualificaciones, y que los asistentes usarán los catálogos como recurso para diseñar estructuras curriculares. Juan Sebastián coincidió y añadió que el MNC genera cualificaciones que pueden ser incorporadas en los programas de formación.</p>
+
+<h3>Rol del SENA y la normalización</h3>
+
+<p>Carlos Ruiz preguntó si las cualificaciones del MNC se usarán en el subsistema de los siete niveles y si las secretarías de educación continuarán con el modelo anterior. Juan Sebastián respondió que el MNC tiene diferentes niveles de formación y que es un insumo que los centros de formación pueden utilizar, pero no es obligatorio.</p>
+
+<p>Marta añadió que los Ministerios de Educación y Trabajo han unificado metodologías y que las cualificaciones son un referente único para cualquier vía educativa. Explicó que aunque existen diferencias en la duración y otros detalles, se comparte la misma ruta metodológica.</p>
+
+<h3>Diferencias entre niveles de la CUOC y el Marco Nacional de Cualificaciones</h3>
+
+<p>Gilberto Salcedo preguntó sobre la diferencia entre los cuatro niveles de la CUOC y los siete u ocho niveles del MNC. Marta explicó que los niveles de la CUOC son niveles de competencia, mientras que los del MNC son niveles educativos. Añadió que la CUOC asigna un nivel de competencia a cada ocupación, mientras que el MNC establece niveles de formación correlacionados con los niveles de competencia.</p>
+
+<h3>Preocupaciones sobre perfiles ocupacionales y reglamentación en salud</h3>
+
+<p>Alberto Mendieta expresó su preocupación por una norma que establece que los programas de educación deben estructurarse bajo los catálogos sectoriales de cualificaciones y que las denominaciones deben corresponder a la CUOC, pero las cualificaciones a los niveles del 1 al 4 del MNC. Mencionó un perfil ocupacional de "asistentes médicos" que aparece en Okupacol con un código CUOC, lo que genera dudas sobre su validez y su relación con la reglamentación en salud.</p>
+
+<p>Mendieta cuestionó si se están construyendo perfiles que no están supeditados a la reglamentación vigente y cómo se concilian las diferencias entre los niveles de la CUOC y el MNC. Señaló que el técnico laboral no existe en otros países y que el subsistema de formación para el trabajo exige una certificación de calidad que dificulta la participación de las instituciones de educación para el trabajo.</p>
+
+<p>Carlos Ruiz solicitó que se revise el discurso que se está planteando sobre la conciliación de los ministerios, ya que considera que no es clara y puede inducir a error a las secretarías de educación. Afirmó que el sector belleza no cumple el índice sistémico y que las resoluciones del Ministerio de Trabajo se caerán por este motivo.</p>
+
+<p>Juan Sebastián propuso invitar al Ministerio de Educación para despejar dudas y al Ministerio de Trabajo para mostrar que se está trabajando en conjunto. Alberto Mendieta consideró fundamental esta reunión para aclarar las diferencias entre la CUOC y el MNC y para corregir posibles errores.</p>
+
+<p>Gilberto Salcedo sugirió que a la reunión asistan el Director Nacional de Educación y Formación y la Directora de Formación y Movilidad del Ministerio de Trabajo, para que den claridad sobre las inquietudes normativas. Mendieta añadió que también es importante tocar el tema de los desempeños en salud y la validez de los perfiles ocupacionales.</p>
+
+<p>Alberto Mendieta propuso dar prioridad a esta reunión y establecer contactos con los funcionarios mencionados. El Dr. Herrera estuvo de acuerdo, pero señaló la dificultad de coordinar las agendas de los funcionarios.</p>
+
+<p>Marta ofreció hablar con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con los ministerios de Trabajo y Educación. Gilberto Salcedo se ofreció a colaborar en la identificación de los funcionarios relevantes.</p>
+
+<p>Carlos Ruiz insistió en que se revise el discurso que se está planteando y que se soporten las afirmaciones con normas escritas. Mendieta concluyó que la reunión puede dar luces a nivel país y que es necesario estructurar una agenda clara para abordar las inquietudes y sus implicaciones.</p><h2>4. Propuesta de reunión con Ministerios de Educación y Trabajo</h2>
+
+La discusión sobre la propuesta de reunión con los Ministerios de Educación y Trabajo se centró en la necesidad de aclarar y resolver las inquietudes planteadas durante la reunión, especialmente las relacionadas con la coexistencia y aplicación del Marco Nacional de Cualificaciones (MNC) y la Clasificación Única de Ocupaciones para Colombia (CUOC).
+
+Se destacó la importancia de que la mesa sectorial defina su posición frente a la ocupación de tatuadores y otras profesiones, y se sugirió aprovechar la oportunidad para abordar las preocupaciones normativas y operativas con los ministerios competentes.
+
+Alberto Mendieta propuso dar prioridad a esta reunión, sugiriendo que se establezcan contactos con los funcionarios pertinentes para llevarla a cabo. El Dr. Herrera estuvo de acuerdo con la importancia de la reunión, pero señaló la dificultad de coordinar las agendas de los funcionarios del Ministerio de Educación y del Ministerio del Trabajo.
+
+Gilberto Salcedo sugirió invitar al Director Nacional de Educación y Formación, al Director de Educación para el Trabajo de Desarrollo Humano del Ministerio de Educación, y a la Directora de Formación y Movilidad del Ministerio de Trabajo, para que proporcionen claridad sobre las inquietudes planteadas.
+
+El Dr. Marín ofreció la disposición del PNUD para facilitar la coordinación de la reunión con los ministerios, sugiriendo hablar directamente con las personas del Marco Nacional de Cualificaciones para coordinar la reunión con el Ministerio de Trabajo y con las personas mencionadas por el Dr. Gilberto del Ministerio de Educación.
+
+Se acordó que el PNUD, en colaboración con Gilberto Salcedo, establecería los contactos necesarios para coordinar la reunión con los funcionarios de los ministerios. Se enfatizó la necesidad de estructurar una agenda clara y puntual para abordar los temas con los soportes correspondientes.
+
+Carlos Ruiz solicitó que se revise el discurso que se está planteando, mientras las cosas no se definan y se conozcan en norma cómo está la conciliación o el manejo de los dos ministerios.
+
+Finalmente, se reiteró la importancia de que la mesa sectorial siga contando con el apoyo del PNUD en la construcción de los catálogos de cualificaciones, y se agradeció la disposición de los funcionarios del PNUD para colaborar en la organización de la reunión con los ministerios.
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>El PNUD gestionará una reunión con representantes del Ministerio de Educación y del Ministerio de Trabajo para abordar las inquietudes planteadas sobre el Marco Nacional de Cualificaciones y la CUOC – <strong>Responsable:</strong> PNUD</li>
+ <li>Se priorizará la reunión con los Ministerios sobre la reunión extraordinaria para definir la posición de la mesa sectorial frente a la ocupación de tatuadores – <strong>Responsable:</strong> No especificado</li>
+ <li>El PNUD comunicará las fechas de las próximas actividades y talleres presenciales para las fases restantes del diseño del catálogo de cualificaciones de servicios personales – <strong>Responsable:</strong> PNUD</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/HTSBqoyCAtcpn5P
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/HTSBqoyCAtcpn5P
+Generando URL pública para Transcripcion.txt (EXISTENTE): aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion/aclaracion_de_inquietudes_sobre_el_desarrollo_del_taller_ii___catalogo_de_cualificaciones-20250703_141315-grabacion_de_la_reunion_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/wd3n74we7K37sPW
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/wd3n74we7K37sPW

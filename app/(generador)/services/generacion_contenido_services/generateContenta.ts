@@ -288,8 +288,15 @@ async function procesarOrdenDelDia(
     };
 
     // Fuente para el tema: si se indicó que no fue discutido, pasa vacío; de lo contrario, usa la transcripción completa (cacheada externamente por el proveedor si aplica)
-    // EXCEPCIÓN: El cierre siempre necesita la transcripción completa para extraer hora y acuerdos
-    const contenidoTemaFuente = (tema )?.discutido === false && nombreTemaNormalizado !== "cierre" ? "" : contenidoTranscripcion;
+    // EXCEPCIONES: El cierre y la cabecera siempre necesitan la transcripción completa
+    const contenidoTemaFuente = (tema )?.discutido === false && nombreTemaNormalizado !== "cierre" && nombreTemaNormalizado !== "cabecera" ? "" : contenidoTranscripcion;
+
+    // Debug log para cabecera
+    if (promptType === "Cabecera") {
+      console.log("🔍 GENERANDO CABECERA - Tema:", tema.nombre);
+      console.log("🔍 CONTENIDO TRANSCRIPCIÓN (primeros 500 chars):", contenidoTemaFuente.substring(0, 500));
+      console.log("🔍 LONGITUD TOTAL TRANSCRIPCIÓN:", contenidoTemaFuente.length);
+    }
 
     while (retryCount < maxRetries) {
       try {
@@ -316,6 +323,12 @@ async function procesarOrdenDelDia(
         if (tema.nombre === "Cierre") {
           console.log("✅ CIERRE PROCESADO - Longitud del contenido:", contenido.length);
           console.log("📄 Últimas 200 caracteres del contenido:", contenido.slice(-200));
+        }
+        
+        // Log específico para la cabecera
+        if (tema.nombre === "Cabecera") {
+          console.log("✅ CABECERA PROCESADA - Respuesta completa:");
+          console.log(responseTema.text);
         }
         
         break;
@@ -507,24 +520,39 @@ Ejemplo de Orden del Día (Solo Referencia):
     case "Cabecera":
       systemPromt = `Rol: Eres un Secretario Ejecutivo profesional, experto en la redacción de actas formales.
 
- Tarea: Convertir transcripciones de reuniones en un documento HTML estructurado, asegurando que la información sea clara, precisa y fiel a lo discutido.
+Tarea: Convertir transcripciones de reuniones en un documento HTML estructurado, asegurando que la información sea clara, precisa y fiel a lo discutido.
 
- Instrucciones Específicas:
- Respeta de manera estricta la cronología de los temas y ordénalos tal como ocurrieron. No alteres el orden salvo que sea estrictamente necesario para la claridad.
+Instrucciones Específicas:
+Respeta de manera estricta la cronología de los temas y ordénalos tal como ocurrieron. No alteres el orden salvo que sea estrictamente necesario para la claridad.
 
 Regla CRÍTICA: Prohibido copiar texto literal de la transcripción. Reescribe siempre en tercera persona y tono de acta. Citas solo si aportan valor, breves (<= 20 palabras) y con atribución.
 
-    Procesa la transcripción para extraer la siguiente información y estructurarla en la cabecera del acta:
-        Título: Utiliza el nombre de la reunión mencionado. Si no hay un nombre explícito, deduce un título descriptivo del tema principal.
-        Fecha: Extrae la fecha con EXTREMA PRECISIÓN. Busca TODAS las menciones de fechas en la transcripción (día, mes, año, fechas completas, fechas abreviadas). Si hay múltiples fechas, usa la fecha principal de la reunión. NO omitas ninguna fecha mencionada literalmente.
-        Hora: Extrae la hora de inicio y cierre con MÁXIMA EXACTITUD. Busca TODAS las menciones de horarios (formato 12h, 24h, AM/PM, etc.). Si no hay hora de cierre explícita, busca indicaciones como "terminamos", "finalizamos", "se cierra la reunión".
-        Lugar: Extrae la ubicación con PRECISIÓN TOTAL. Busca TODAS las menciones de lugares, salas, direcciones, edificios, etc.
-        Moderador: Identifica al moderador con EXTREMA ATENCIÓN. Busca TODAS las menciones de quien dirige, preside, modera, coordina la reunión.
-        Asistentes: Lista los nombres y cargos con MÁXIMA METICULOSIDAD. Escucha ATENTAMENTE TODO el contenido de la reunión y lista TODOS los asistentes que se mencionen EXPLÍCITAMENTE con su apartamento, cargo, función o similar. NO omitas a NADIE que sea mencionado. Busca menciones como "presente", "asiste", "participa", "está aquí", nombres mencionados en contexto, etc.
+Procesa la transcripción para extraer la siguiente información y estructurarla en la cabecera del acta:
 
-   El orden del dia debe ser tomado del orden que se pase como dato y respetarse a raja tabal no cambia nombre sni nada ni orden no deebes poner nada que no se pase como orden del dia
+Título: Utiliza el nombre de la reunión mencionado. Si no hay un nombre explícito, deduce un título descriptivo del tema principal.
 
-    Formato de Salida EXCLUSIVO: Devuelve ÚNICAMENTE el siguiente código HTML que representa el acta procesada de la transcripción. No incluyas ninguna otra información, explicación, comentario, descripción de tu proceso de pensamiento, ni frases introductorias o de conclusión.
+Fecha: Extrae la fecha con EXTREMA PRECISIÓN. Busca TODAS las menciones de fechas en la transcripción (día, mes, año, fechas completas, fechas abreviadas). Si hay múltiples fechas, usa la fecha principal de la reunión. NO omitas ninguna fecha mencionada literalmente.
+
+Hora: Extrae la hora de inicio y cierre con MÁXIMA EXACTITUD. Busca TODAS las menciones de horarios (formato 12h, 24h, AM/PM, etc.). Si no hay hora de cierre explícita, busca indicaciones como "terminamos", "finalizamos", "se cierra la reunión".
+
+Lugar: Extrae la ubicación con PRECISIÓN TOTAL. Busca TODAS las menciones de lugares, salas, direcciones, edificios, etc.
+
+Moderador: Identifica al moderador con EXTREMA ATENCIÓN. Busca TODAS las menciones de quien dirige, preside, modera, coordina la reunión.
+
+Asistentes: OBLIGATORIO - REVISA LÍNEA POR LÍNEA TODA LA TRANSCRIPCIÓN COMPLETA para identificar participantes. NO te limites al inicio. Busca TODOS los nombres de personas mencionados en cualquier momento de la reunión. Busca específicamente:
+- Nombres propios mencionados en cualquier contexto
+- Personas que hablan o intervienen
+- Cargos mencionados: "el administrador", "el presidente", "el secretario", "el revisor fiscal"
+- Apartamentos o identificaciones: "apartamento 101", "propietario del 3B", "residente del 5A"
+- Funciones específicas: "el contador", "el abogado", "el ingeniero"
+- Indicaciones de presencia: "presente", "asiste", "participa", "está aquí"
+- Nombres en contexto de participación o discusión
+
+IMPORTANTE: Si encuentras nombres en el contenido pero no los listas en asistentes, estás cometiendo un error grave. DEBES incluir TODOS los nombres que aparezcan en la transcripción.
+
+El orden del día debe ser tomado del orden que se pase como dato y respetarse a rajatabla. No cambies nombre ni orden ni agregues temas que no estén en el orden del día proporcionado.
+
+Formato de Salida EXCLUSIVO: Devuelve ÚNICAMENTE el siguiente código HTML que representa el acta procesada de la transcripción. No incluyas ninguna otra información, explicación, comentario, descripción de tu proceso de pensamiento, ni frases introductorias o de conclusión.
 
 Formato Esperado:
 HTML
@@ -537,24 +565,23 @@ HTML
   <p><strong>Moderador:</strong> [NOMBRE DEL MODERADOR]</p>
   <p><strong>Asistentes:</strong></p>
   <ul>
-    <li>[NOMBRE DEL ASISTENTE 1] - [CARGO DEL ASISTENTE 1]</li>
-    <li>[NOMBRE DEL ASISTENTE 2] - [CARGO DEL ASISTENTE 2]</li>
-    </ul>
+    <li>[NOMBRE DEL ASISTENTE 1] - [CARGO/APARTAMENTO/IDENTIFICACIÓN]</li>
+    <li>[NOMBRE DEL ASISTENTE 2] - [CARGO/APARTAMENTO/IDENTIFICACIÓN]</li>
+  </ul>
   <h2>Orden del Día</h2>
   <ol>
     <li>[GRAN TEMA 1]</li>
     <li>[GRAN TEMA 2]</li>
     <li>[GRAN TEMA 3]</li>
-    </ol>
+  </ol>
 </header>
 
 Restricciones Adicionales:
-
-    La respuesta DEBE SER SOLAMENTE el código HTML procesado.
-    Todo el contenido debe estar dentro de las etiquetas HTML especificadas.
-    El orden del día final debe reflejar el orden cronológico de los temas tratados, integrando cualquier tema importante no incluido en un orden del día explícito inicial.
-    No se debe agregar información inventada.
-    EXTRACCIÓN OBLIGATORIA: Debes buscar y extraer TODA la información mencionada literalmente en la transcripción, especialmente fechas, horarios, nombres y cargos de asistentes.`;
+La respuesta DEBE SER SOLAMENTE el código HTML procesado.
+Todo el contenido debe estar dentro de las etiquetas HTML especificadas.
+El orden del día final debe reflejar el orden cronológico de los temas tratados, integrando cualquier tema importante no incluido en un orden del día explícito inicial.
+No se debe agregar información inventada.
+EXTRACCIÓN OBLIGATORIA: Debes buscar y extraer TODA la información mencionada literalmente en la transcripción, especialmente fechas, horarios, nombres y cargos de asistentes.`;
       return systemPromt;
 
     case "Contenido":
@@ -816,7 +843,15 @@ INSTRUCCIONES ESTRICTAS:
 
         Moderador: Identifica con EXTREMA ATENCIÓN a la persona que dirigió la sesión en la transcripción (${content}). Busca menciones de quien preside, modera, coordina, dirige la reunión. Si no se identifica claramente, usa "[NO ESPECIFICADO]".
 
-        Asistentes: Lista con EXTREMA PRECISIÓN y sin dejar a NADIE fuera los nombres y cargos de TODOS los participantes mencionados en la transcripción (${content}). Busca TODAS las menciones de personas: nombres mencionados directamente, "presente", "asiste", "participa", "está aquí", nombres en contexto de participación, etc. Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
+        Asistentes: Lista con EXTREMA PRECISIÓN y sin dejar a NADIE fuera los nombres y cargos de TODOS los participantes mencionados en la transcripción (${content}). REVISA TODO EL CONTENIDO COMPLETO de la transcripción, no solo el inicio. Busca TODAS las menciones de personas:
+        - Nombres mencionados directamente
+        - "presente", "asiste", "participa", "está aquí"
+        - Nombres en contexto de participación durante la reunión
+        - Personas que hablan, intervienen o son referenciadas
+        - Cargos mencionados: "el administrador", "el presidente", "el secretario"
+        - Apartamentos o identificaciones: "apartamento 101", "propietario del 3B"
+        - Funciones específicas mencionadas durante la reunión
+        Si no hay asistentes mencionados o los cargos no se especifican, usa "[NOMBRE] - [CARGO NO ESPECIFICADO]" o simplemente "[NOMBRE]" según la información disponible. Si no hay asistentes, omite la lista <ul>.
 
     GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):
 
