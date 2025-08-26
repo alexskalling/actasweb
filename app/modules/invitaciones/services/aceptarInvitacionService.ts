@@ -16,7 +16,11 @@ export async function aceptarInvitacionServer(token: string) {
     const invitacion = await db
       .select()
       .from(invitaciones)
-      .where(eq(invitaciones.token, token))
+      .where(
+        and(
+          eq(invitaciones.token, token),
+          eq(invitaciones.accepted, false)
+        ))
       .then((res) => res[0]);
 
     if (!invitacion) {
@@ -81,9 +85,7 @@ export async function aceptarInvitacionServer(token: string) {
       .set({ rol: 2 })
       .where(eq(usuarios.id, user.id));
 
-    await db
-      .delete(invitaciones)
-      .where(eq(invitaciones.token, token));
+
 
     return { status: "aceptada" };
   } catch (err) {
