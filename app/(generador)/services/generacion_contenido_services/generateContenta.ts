@@ -625,6 +625,8 @@ Cada tema del acta deberá llevar un título numerado que corresponda EXACTAMENT
 Calidad y Profundidad del Contenido:
 Redacta el contenido en lenguaje formal propio de un acta ejecutiva. Si es necesario citar algo de la reunión, hazlo de manera natural y formal, indicando quién lo dijo. Por ejemplo, si un asistente expresa una opinión, redáctalo como "El señor [nombre] manifestó que..." o "El administrador indicó que...", evitando transcripciones literales.
 
+Para temas críticos como acusaciones, sanciones, aprobaciones o elecciones, se debe dar un contexto imparcial y en casos críticos incluir citas específicas de quién dijo qué, sin que se vuelva una copia de la transcripción. Por ejemplo: "El señor Carlos acusó de robo a la señora Andrea" o "Bajo esa figura se estableció que...".
+
 La redacción de los párrafos debe ser fluida y variada, evitando categóricamente iniciar todos los párrafos con la palabra "Se" o cualquier otra repetición gramatical que pueda hacer la narrativa monótona o robótica. Cada párrafo debe tener un inicio diferente y natural, como si fuera escrito por un experto en actas.
 
 Desarrollo del contenido:
@@ -656,11 +658,23 @@ Se espera un nivel de detalle exhaustivo para cada tema. Los temas no deben ser 
 
 No se debe omitir información importante ni simplificarla en exceso. La redacción debe reflejar fielmente lo discutido, con la extensión necesaria para cada punto. Se prestará especial atención a la distinción precisa entre conceptos relacionados pero distintos, como la diferencia entre gastos e inversiones, o entre tiempos de respuesta y plazos comprometidos, asegurando que la redacción capture estas sutilezas con claridad y exactitud.
 
+Para temas críticos como acusaciones, sanciones, aprobaciones o elecciones, se debe dar un contexto imparcial y en casos críticos incluir citas específicas de quién dijo qué, sin que se vuelva una copia de la transcripción. Por ejemplo: "El señor Carlos acusó de robo a la señora Andrea" o "Bajo esa figura se estableció que...".
+
 Cada sección dedicada a un tema debe ser autocontenida, presentando la información de manera completa y sin interrupciones abruptas. El lector debe poder comprender el desarrollo del tema sin necesidad de recurrir a información adicional.
 
 En caso de que un tema del orden del día no se aborde durante la reunión, se debe dejar constancia explícita indicando que el tema estaba previsto pero no se trató finalmente.
 
 Se pondrá especial atención a las cifras, resultados de votación y participaciones individuales. Es imperativo revisar la ausencia de redundancias en los temas y ser extremadamente cuidadoso con que el contenido se adhiera a la temporalidad en la que se dijo y bajo el ítem que corresponda, leyendo con atención la transcripción. Además, se deben utilizar elementos gramaticales y de orden para mejorar la legibilidad y coherencia del contenido generado.
+
+CAPTURA DE PARTICIPACIONES IMPORTANTES: Se debe documentar las intervenciones significativas de los asistentes, especialmente cuando:
+- Hacen denuncias o acusaciones
+- Presentan argumentos críticos
+- Expresan posiciones contrarias
+- Proponen soluciones o alternativas
+- Cuestionan procedimientos o decisiones
+- Proporcionan información relevante
+
+Estas participaciones deben ser redactadas de manera clara y ordenada, indicando quién intervino, cuál fue su posición o argumento principal, y cómo contribuyó al desarrollo del tema.
 Gestión de Votaciones (CRÍTICO):
 
 Gestión de votaciones:
@@ -904,11 +918,11 @@ INSTRUCCIONES ESTRICTAS:
 
     GENERACIÓN DEL "ORDEN DEL DÍA" (CRÍTICO):
 
-        LA BASE INALTERABLE ES ${ordendeldia}. Debes usar exclusivamente el contenido de la transcripcion para la numeración y los títulos de los puntos del Orden del Día en el acta final.
+        LA BASE INALTERABLE ES ${ordendeldia}. Debes usar EXACTAMENTE el orden del día proporcionado en ${ordendeldia}.
 
         EXCLUSIONES OBLIGATORIAS: NO INCLUYAS el primer elemento (correspondiente a "cabecera") ni el último elemento (correspondiente a "cierre") de la variable ${ordendeldia} en el "Orden del Día" final.
 
-        VERIFICACIÓN CON LA TRANSCRIPCIÓN: Para cada punto del Orden del Día extraído de ordendeldia(excluyendocabeceraycierre),verificasieltemafuediscutidoenlatranscripcioˊn({content}).
+        USO OBLIGATORIO: Incluye TODOS los temas del orden del día proporcionado en ${ordendeldia}, excluyendo solo "cabecera" y "cierre".
 
         NO INVENTAR NI MODIFICAR TEMAS: Bajo ninguna circunstancia debes inventar nuevos temas para el Orden del Día ni alterar los nombres de los temas proporcionados en ${ordendeldia}.
 
@@ -918,7 +932,7 @@ INSTRUCCIONES ESTRICTAS:
 
         La salida debe ser HTML puro. No incluyas ningún texto o formato que no sea HTML.
 
-        Usa el siguiente esqueleto HTML. Rellena los corchetes [] con la información extraída y sigue las instrucciones para el Orden del Día pero por lo Bajo ninguan circuantacia resuma cambie o moifique el contenido de de ${ordendeldia} solo pnlo en html.
+        Usa el siguiente esqueleto HTML. Rellena los corchetes [] con la información extraída y usa EXACTAMENTE el orden del día proporcionado en ${ordendeldia}, excluyendo solo "cabecera" y "cierre".
 
 <header>
 <h1 style="text-align: center;">Acta de la Reunión</h1>
@@ -939,6 +953,8 @@ INSTRUCCIONES ESTRICTAS:
 <li>[GRAN TEMA 3]</li>
 <li>[GRAN TEMA 4]</li>
 </ol>
+
+IMPORTANTE: El "Orden del Día" es OBLIGATORIO. Debes incluir TODOS los temas de ${ordendeldia} excluyendo solo "cabecera" y "cierre". Si no incluyes el orden del día, la cabecera está incompleta.
 </header>
 `;
 
@@ -1012,7 +1028,9 @@ Variedad sintáctica: EVITA iniciar párrafos consecutivos con "Se". Usa estruct
 - "En cuanto a los plazos, se estableció que..."
 - "Sobre el tema de responsabilidades, se definió que..."
 
-Manejo especial "Lectura del acta anterior": Este es el único tema que se puede y debe resumir. Para cualquier otro tema, no se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores o a puntos ya consignados en la presente acta.
+Para temas críticos como acusaciones, sanciones, aprobaciones o elecciones, se debe dar un contexto imparcial y en casos críticos incluir citas específicas de quién dijo qué, sin que se vuelva una copia de la transcripción.
+
+Manejo especial "Lectura del acta anterior": Este es el ÚNICO tema que se puede y debe resumir. Para cualquier otro tema, no se permiten resúmenes: Se debe capturar toda la información relevante sin omitir detalles. Solo se permite concisión al referirse explícitamente a actas anteriores o a puntos ya consignados en la presente acta.
 
 Evitar redundancias: No se debe repetir información que ya se haya dado en otro tema del acta, ni dentro del mismo tema, ni se debe adelantar información de temas posteriores. Se debe tener especial cuidado en no mencionar repetidamente cambios en el orden del día, a menos que sea estrictamente necesario para la comprensión del tema actual y no se haya consignado previamente.
 
@@ -1020,6 +1038,8 @@ Evitar redundancias: No se debe repetir información que ya se haya dado en otro
 
     Se debe evitar la redundancia mencionando la relación con otros puntos del orden del día sin repetir la información detallada.
     La narrativa debe ser fluida y natural, evitando una estructura fragmentada o un uso excesivo de listas, y respetando siempre la cronología estricta de la discusión tal como aparece en la reunión. Cada párrafo debe fluir naturalmente hacia el siguiente, sin parecer una lista de puntos.
+    
+    EVITA estructuras tipo lista de supermercado. En lugar de usar viñetas o listas numeradas, desarrolla el contenido de manera narrativa y fluida, conectando las ideas con transiciones naturales. Solo usa listas cuando sea absolutamente necesario para votaciones o enumeraciones específicas.
 
 Formato profesional y legibilidad:
 
@@ -1080,7 +1100,18 @@ Omitir cualquier información irrelevante o que pertenezca a otro punto del día
     Redactar en tercera persona con un tono formal y profesional.
     Incluir detalles específicos como fechas, montos, acuerdos y nombres relevantes cuando sean mencionados en la reunión.
     Asegurar la coherencia en la estructura y evitar la redundancia con otros puntos del acta.
-    Si el tema actual es "Lectura del acta anterior", se debe generar un resumen conciso de su discusión, indicando si fue aprobada, modificada o aplazada. Este es el ÚNICO tema donde se permite el resumen.
+    Para temas críticos como acusaciones, sanciones, aprobaciones o elecciones, se debe dar un contexto imparcial y en casos críticos incluir citas específicas de quién dijo qué, sin que se vuelva una copia de la transcripción.
+
+    CAPTURA DE PARTICIPACIONES IMPORTANTES: Se debe documentar las intervenciones significativas de los asistentes, especialmente cuando:
+    - Hacen denuncias o acusaciones
+    - Presentan argumentos críticos
+    - Expresan posiciones contrarias
+    - Proponen soluciones o alternativas
+    - Cuestionan procedimientos o decisiones
+    - Proporcionan información relevante
+
+    Estas participaciones deben ser redactadas de manera clara y ordenada, indicando quién intervino, cuál fue su posición o argumento principal, y cómo contribuyó al desarrollo del tema.
+    Si el tema actual es "Lectura del acta anterior", se debe generar un resumen conciso de su discusión, indicando si fue aprobada, modificada (especificando los cambios de ser mencionados) o aplazada. Este es el ÚNICO tema donde se permite el resumen.
     Si cualquier otro tema no fue abordado en la reunión, mencionar explícitamente que se incluyó en el orden del día pero no se trató finalmente.
     Se exige la MÁXIMA y OBLIGATORIA METICULOSIDAD en la descripción de las votaciones y sus resultados. Deberá identificar claramente qué se ha votado y el acuerdo alcanzado. Es ABSOLUTAMENTE IMPERATIVO describir la votación individual de CADA PERSONA NOMBRADA en la lista de asistentes o identificada como participante en la votación (si su presencia es confirmada y su voto es relevante en ese momento). Se debe indicar explícitamente su postura, utilizando negritas y formato de lista (<ul>) para cada voto individual.     Evita resúmenes de las votaciones y no asumas votaciones que no se den explícitamente en la reunión.
 
@@ -1110,7 +1141,8 @@ Omitir cualquier información irrelevante o que pertenezca a otro punto del día
     Narrativa: contexto breve → desarrollo (posiciones, evidencias, cifras) → decisiones/acuerdos (con responsables/plazos) → próximos pasos.
     Usa conectores lógicos ("En primer lugar", "Posteriormente", "Por su parte", "En consecuencia", "Finalmente") para dar fluidez.
     Utiliza subtítulos (<h3>) solo cuando aporten claridad.
-    Usa negritas (<strong>) para resaltar cifras y decisiones clave, y listas (<ul>) para las votaciones.
+    Usa negritas (<strong>) para resaltar cifras y decisiones clave, y listas (<ul>) SOLO para las votaciones.
+    EVITA estructuras tipo lista de supermercado. Desarrolla el contenido de manera narrativa y fluida.
     Antes de responder, se debe validar rigurosamente que NO haya contenido repetido o redundante, ni dentro del tema actual ni con el ${contenidoActa} previamente generado, y que la información esté estrictamente contenida en su tema correspondiente sin mezclas con "Proposiciones y Varios" u otros puntos.
 
 Validación final:
