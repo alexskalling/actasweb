@@ -1,7 +1,7 @@
 "use client";
 
-
 import { useEffect, useState } from 'react';
+import { trackGTMEvent } from '@/utils/trackGTM';
 import { getActasByUser } from '../services/actas_querys_services/getActasByUser';
 
 interface Acta {
@@ -61,15 +61,15 @@ export default function HistorialActasComponent({ reloadTrigger }: HistorialActa
       }
 
       // Track inicio descarga desde historial
-      if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
-        window.gtag('event', 'inicio_descarga_documento', {
-          event_category: 'descarga',
-          event_label: 'descarga_desde_historial',
+      if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+        trackGTMEvent({
+          event: 'inicio_descarga_documento',
+          categoria: 'descarga',
+          etiqueta: 'descarga_desde_historial',
           tipo_documento: 'acta_y_transcripcion',
           nombre_archivo: acta.nombre
         });
       }
-      
 
       // Descargar borrador primero
       downloadFile(acta.urlBorrador);
@@ -81,12 +81,13 @@ export default function HistorialActasComponent({ reloadTrigger }: HistorialActa
           downloadFile(acta.urlTranscripcion);
 
           // Track descarga completada desde historial
-          if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
-            window.gtag('event', 'descarga_documento_completada', {
-              'event_category': 'descarga',
-              'event_label': 'descarga_exitosa_historial',
-              'tipo_documento': 'acta_y_transcripcion',
-              'nombre_archivo': acta.nombre
+          if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+            trackGTMEvent({
+              event: 'descarga_documento_completada',
+              categoria: 'descarga',
+              etiqueta: 'descarga_exitosa_historial',
+              tipo_documento: 'acta_y_transcripcion',
+              nombre_archivo: acta.nombre
             });
           }
         } else {

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import logo from "@/app/(generador)/assets/logo-actas-ai-blanco.svg";
+import { trackGTMEvent } from "@/utils/trackGTM";
 
 export default function LoginPopup({ callbackUrl = "/plataforma" }: { callbackUrl?: string }) {
   const { data: session } = useSession();
@@ -28,10 +29,11 @@ export default function LoginPopup({ callbackUrl = "/plataforma" }: { callbackUr
 
   const handleSignIn = (provider: string) => {
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      window.gtag?.("event", "inicio_login", {
-        event_category: "autenticacion",
-        event_label: `login_${provider}`,
-        metodo_login: provider,
+      trackGTMEvent({
+        event: "login_intent",
+        categoria: "autenticacion",
+        accion: "click_inicio_sesion",
+        etiqueta: provider,
       });
     }
 

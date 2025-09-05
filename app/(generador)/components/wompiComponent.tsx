@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
+import { trackGTMEvent } from "@/utils/trackGTM";
 import { guardarFalloPagoService } from "../services/fallos_querys_services/guardarFalloPagoService";
 //@ts-expect-error revisar despues
 const generateIntegrityHash = async (concatenatedString) => {
@@ -108,15 +109,15 @@ const WompiComponent = (props) => {
     setIsLoading(true);
 
     // Track Wompi payment button click with more details
-    if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
-  
-      window.gtag('event', 'wompi_payment_button_click', {
-        'event_category': 'engagement',
-        'event_label': 'wompi_payment_started',
-        'value': props.costo,
-        'file_name': props.file,
-        'duration': props.duration,
-        'folder': props.folder
+    if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+      trackGTMEvent({
+        event: 'wompi_payment_button_click',
+        categoria: 'engagement',
+        etiqueta: 'wompi_payment_started',
+        value: props.costo,
+        file_name: props.file,
+        duration: props.duration,
+        folder: props.folder
       });
     }
 
@@ -143,15 +144,15 @@ const WompiComponent = (props) => {
         props.handlePayment();
 
         // Track successful payment with transaction details
-        if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
-      
-          window.gtag('event', 'wompi_payment_success', {
-            'event_category': 'engagement',
-            'event_label': 'wompi_payment_completed',
-            'value': transaction.amountInCents / 100,
-            'transaction_id': transaction.id,
-            'file_name': props.file,
-            'duration': props.duration
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          trackGTMEvent({
+            event: 'wompi_payment_success',
+            categoria: 'engagement',
+            etiqueta: 'wompi_payment_completed',
+            value: transaction.amountInCents / 100,
+            transaction_id: transaction.id,
+            file_name: props.file,
+            duration: props.duration
           });
         }
       } else {
@@ -183,15 +184,15 @@ const WompiComponent = (props) => {
 
         console.log("Pago fallido: ", JSON.stringify(errorPago));
         // Track Wompi payment rejection with more details
-        if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
-      
-          window.gtag('event', 'wompi_payment_rejected', {
-            'event_category': 'error',
-            'event_label': transaction.status || 'Unknown status',
-            'transaction_id': transaction.id,
-            'file_name': props.file,
-            'duration': props.duration,
-            'error_message': transaction.error_message || 'No error message'
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
+          trackGTMEvent({
+            event: 'wompi_payment_rejected',
+            categoria: 'error',
+            etiqueta: transaction.status || 'Unknown status',
+            transaction_id: transaction.id,
+            file_name: props.file,
+            duration: props.duration,
+            error_message: transaction.error_message || 'No error message'
           });
         }
       }

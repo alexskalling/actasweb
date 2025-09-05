@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { getSession } from "next-auth/react";
+import { trackGTMEvent } from "@/utils/trackGTM";
 
 export default function EmailSignupBannerComponent() {
   useEffect(() => {
@@ -21,9 +22,10 @@ export default function EmailSignupBannerComponent() {
 
   const handleRegister = () => {
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte") {
-      window.gtag?.("event", "inicio_registro", {
-        event_category: "autenticacion",
-        event_label: "registro_desde_banner",
+      trackGTMEvent({
+        event: "inicio_registro",
+        categoria: "autenticacion",
+        etiqueta: "registro_desde_banner",
         ubicacion_pagina: "banner_email",
       });
     }

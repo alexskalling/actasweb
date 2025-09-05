@@ -1,4 +1,4 @@
-import LoginPopup from "@/app/login/components/loginPopup";
+import LoginPopup from "@/app/login/components/loginComponent";
 
 export default function LoginPage() {
   return (
