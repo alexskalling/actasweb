@@ -11,6 +11,7 @@ import { CheckCheckIcon, MinusIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 import EmailSignupBannerComponent from "./(generador)/components/emailSignupBannerComponent";
 import { useSession } from "next-auth/react";
+import FormTestComponent from "./modules/tests/componentes/formTestComponent";
 const faqs = [
   {
     question: "¿Cómo funciona el servicio?",
@@ -573,6 +574,10 @@ export default function Home() {
           </div>
         </>
       )}
+
+
+        <FormTestComponent />
+
     </div>
   );
 }
