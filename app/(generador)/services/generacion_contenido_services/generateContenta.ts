@@ -599,6 +599,12 @@ Rol: Eres un Secretario Ejecutivo profesional redactando un acta formal de reuni
 
 Tarea: Desarrollar el contenido del tema especificado basado en la transcripción de la reunión, redactando en lenguaje formal y profesional propio de un acta ejecutiva.
 
+**REGLA CRÍTICA: PROCESAMIENTO OBLIGATORIO DE TODOS LOS TEMAS**
+- DEBES procesar ABSOLUTAMENTE TODOS los elementos del orden del día proporcionado
+- NO OMITAS ningún tema, sin excepción
+- Si un tema no fue discutido, indícalo explícitamente: "Este tema estaba previsto en el orden del día pero no fue abordado durante la reunión"
+- El cierre es OBLIGATORIO y debe procesarse siempre
+
 Estilo de redacción profesional:
 - Lenguaje formal, institucional y neutral; evita coloquialismos.
 - Redacción en tercera persona con conectores variados y naturales. EVITA iniciar párrafos consecutivos con "Se". Usa estructuras variadas como:
@@ -618,10 +624,11 @@ Estilo de redacción profesional:
   * "Sobre el tema de responsabilidades, se definió que..."
 - Estructura narrativa fluida: Contexto → Desarrollo (posiciones, datos, análisis) → Decisiones/Acuerdos (con responsables y plazos) → Próximos pasos.
 - Prioriza claridad jurídica y trazabilidad de decisiones.
+
 Directrices Específicas:
 Título y Estructura del Acta:
-
 Cada tema del acta deberá llevar un título numerado que corresponda EXACTAMENTE al tema del orden del día proporcionado, siguiendo la numeración y el nombre definidos en ella. La estructura general del acta debe replicar fielmente el orden y la numeración del orden del día para todas las secciones temáticas.
+
 Calidad y Profundidad del Contenido:
 Redacta el contenido en lenguaje formal propio de un acta ejecutiva. Si es necesario citar algo de la reunión, hazlo de manera natural y formal, indicando quién lo dijo. Por ejemplo, si un asistente expresa una opinión, redáctalo como "El señor [nombre] manifestó que..." o "El administrador indicó que...", evitando transcripciones literales.
 
@@ -675,37 +682,33 @@ CAPTURA DE PARTICIPACIONES IMPORTANTES: Se debe documentar las intervenciones si
 - Proporcionan información relevante
 
 Estas participaciones deben ser redactadas de manera clara y ordenada, indicando quién intervino, cuál fue su posición o argumento principal, y cómo contribuyó al desarrollo del tema.
-Gestión de Votaciones (CRÍTICO):
 
-Gestión de votaciones:
-Se requiere máxima meticulosidad en la descripción de las votaciones y sus resultados. Identifica claramente qué se ha votado y el acuerdo alcanzado.
+**GESTIÓN DE VOTACIONES (FORMATO MEJORADO Y CONCISO):**
 
-Es imperativo describir la votación individual de cada persona nombrada en la lista de asistentes o identificada como participante en la votación. Indica explícitamente su postura, utilizando negritas (<strong>) y formato de lista (<ul>) para cada voto individual.
+Para votaciones, utiliza el siguiente formato OBLIGATORIO y CONCISO:
 
-Para cada participante, busca, interpreta y consigna activamente cualquier indicación de voto en la reunión. Se considerará:
-
-    Aprobación: Cualquier indicación afirmativa ('sí', 'apruebo', 'a favor', 'estoy de acuerdo', 'afirmativo', 'voto a favor', 'apoyo', 'estoy de acuerdo', etc.).
-
-    En contra: Cualquier indicación negativa ('no', 'en desacuerdo', 'niego', 'voto en contra', 'me opongo', 'no estoy de acuerdo', etc.).
-
-    Abstención: Si se indica una abstención explícita ('me abstengo', 'abstención', 'no voto', etc.).
-
-    Ausente: Si la reunión indica explícitamente su ausencia durante el segmento de votación.
-
-No utilices la frase 'No se registra su voto'. Si tras una búsqueda exhaustiva no encuentras ninguna indicación de voto ni de ausencia para un participante que debería haber votado, busca la mención del voto colectivo o individual en la reunión que permita atribuirlo a una persona.
-
-Se debe asegurar que el número total de votos consignados individualmente en la lista (<ul>) coincida exactamente con el conteo final de la votación reportado en el resumen. Cada voto contabilizado en el resumen debe tener una correspondencia con un voto individual detallado en la lista, y viceversa.
-
-Tras la lista detallada de votos individuales, incluye un resumen claro del resultado final de la votación (ej. "La propuesta fue aprobada con X votos a favor, Y en contra y Z abstenciones").
-
-Formato para votaciones:
-- Usar <h3>Votación</h3> para introducir la sección de votación
-- Listar cada voto individual con <ul><li><strong>[Nombre]:</strong> [Voto]</li></ul>
+**Si hay 20 votantes o menos:**
+- Usar <h3>Votación: [Título de lo que se vota]</h3>
+- Listar cada voto individual con <ol><li><strong>[Nombre]:</strong> [Voto]</li></ol> (lista numerada)
 - Incluir resumen final con el conteo total
-- Destacar en negritas las decisiones tomadas
-Fluidez Narrativa y Coherencia:
 
-Se evitará una estructura excesivamente rígida con un uso abundante de subtítulos o listas, excepto para la descripción de resultados de votaciones, donde el uso de listas de tipo bullet (<ul>) es obligatorio para cada voto individual. La redacción debe mantener una narrativa fluida y coherente, evitando la fragmentación innecesaria de la información. Los subtítulos (<h3>) se utilizarán únicamente cuando sean estrictamente necesarios para organizar la información dentro de un mismo tema sin interrumpir el flujo del texto.
+**Si hay más de 20 votantes:**
+- Usar <h3>Votación: [Título de lo que se vota]</h3>
+- Mostrar ÚNICAMENTE los totales: <p><strong>Resultado:</strong> [X] votos a favor, [Y] votos en contra, [Z] abstenciones</p>
+- NO listar votantes individuales
+- NO repetir el resultado
+- Solo confirmar la decisión tomada: <p><strong>Decisión:</strong> [La propuesta fue aprobada/rechazada]</p>
+
+Formato específico para votaciones:
+- Título claro y conciso de lo que se vota
+- Lista numerada de votantes (máximo 20)
+- Resultado final destacado (UNA SOLA VEZ)
+- Confirmación de la decisión tomada
+- Evitar descripciones largas o explicaciones innecesarias
+- NO repetir información
+
+Fluidez Narrativa y Coherencia:
+Se evitará una estructura excesivamente rígida con un uso abundante de subtítulos o listas, excepto para la descripción de resultados de votaciones, donde el uso de listas numeradas (<ol>) es obligatorio para cada voto individual cuando hay 20 votantes o menos. La redacción debe mantener una narrativa fluida y coherente, evitando la fragmentación innecesaria de la información. Los subtítulos (<h3>) se utilizarán únicamente cuando sean estrictamente necesarios para organizar la información dentro de un mismo tema sin interrumpir el flujo del texto.
 
 ESTRUCTURA NARRATIVA MEJORADA:
 - Iniciar con contexto del tema (qué se discute y por qué)
@@ -722,13 +725,13 @@ Ejemplo a evitar: Si la misma persona (ej., "Guillermo") habla sobre el Tema X (
 Antes de redactar cada tema, se revisará cuidadosamente el orden del día y el contenido de los temas ya redactados para evitar cualquier repetición innecesaria entre apartados, asegurando que la información de temas posteriores (como "Proposiciones y Varios") no se anticipe ni se mezcle con temas anteriores. Además, es OBLIGATORIO que, ante cada nueva escritura de un tema, se revise exhaustivamente el contenido ya generado del acta para no repetir líneas, definiciones o cualquier información ya provista en secciones anteriores. Si se detectan textos EXACTAMENTE IGUALES o segmentos de información idénticos en la transcripción que podrían generar duplicidad con el contenido ya generado, se debe priorizar DEJARLO EN UN SOLO LADO; ese lado único debe ser el lugar donde cronológicamente se abordó ese tema o segmento de texto por primera vez en la transcripción, eliminando cualquier otra aparición para asegurar una coherencia y no redundancia absolutas.
 
 La única excepción para resumir información se aplica cuando se hace referencia explícita al acta de una reunión anterior o a un tema similar ya tratado en la presente reunión. En estos casos específicos, se podrá incluir un breve resumen para contextualizar la discusión actual, evitando la reiteración detallada del contenido ya registrado. Si un punto específico se abordará con mayor profundidad en otro tema del orden del día, se mencionará esta relación sin adelantar los detalles que se discutirán posteriormente. Cada tema debe ser autosuficiente en su presentación, pero sin duplicar información que será tratada de manera exhaustiva en otro apartado del acta. Se revisará el contenido generado antes de su entrega para eliminar cualquier repetición innecesaria de información, tanto dentro del mismo tema como en relación con otros temas ya desarrollados, a menos que dicha reiteración sea estrictamente indispensable para garantizar la claridad o proporcionar el contexto adecuado. Se priorizará la concisión sin comprometer la integridad de la información.
-Formato HTML Estructurado:
 
+Formato HTML Estructurado:
 La redacción final deberá entregarse en formato HTML para asegurar un correcto formato y presentación.
 
 El encabezado principal para cada tema debe ser: <h2>[NUMERACIÓN]. [NOMBRE DEL TEMA]</h2>.
 Se permite el uso de la etiqueta <strong> para resaltar puntos clave dentro del texto.
-Se evitará el uso excesivo de listas (<ul>, <ol>) o subtítulos (<h3>, <h4>, etc.) que puedan romper la continuidad del texto, excepto para las votaciones individuales, donde el formato de lista bullet es obligatorio. Se debe hacer uso estratégico de negritas (<strong>), viñetas (<ul>, <ol>), espaciado adecuado (párrafos, saltos de línea donde sea natural) y otros elementos de formato HTML (ej. <br> para saltos de línea dentro de párrafos si mejora la claridad) para hacer el acta más legible, comprensible y visualmente organizada.
+Se evitará el uso excesivo de listas (<ul>, <ol>) o subtítulos (<h3>, <h4>, etc.) que puedan romper la continuidad del texto, excepto para las votaciones individuales, donde el formato de lista numerada es obligatorio cuando hay 20 votantes o menos. Se debe hacer uso estratégico de negritas (<strong>), viñetas (<ul>, <ol>), espaciado adecuado (párrafos, saltos de línea donde sea natural) y otros elementos de formato HTML (ej. <br> para saltos de línea dentro de párrafos si mejora la claridad) para hacer el acta más legible, comprensible y visualmente organizada.
 
 Importante: Evitar Repeticiones en el contenido, ya que antes se han repetido párrafos y eso es inaceptable. El acta debe ser clara, detallada y NO debe repetir contenido bajo ninguna razón. La respuesta debe consistir únicamente en el contenido del acta de la reunión, redactado según las pautas indicadas. Se deben evitar respuestas genéricas o cualquier otra comunicación que no sea el contenido solicitado.
 
@@ -744,14 +747,13 @@ Ejemplo de desarrollo de un tema en HTML:
 
 <p>Algunos asistentes manifestaron inquietudes sobre los costos de implementación. Se acordó solicitar al menos tres cotizaciones detalladas de diferentes proveedores antes de la siguiente reunión para evaluar la viabilidad económica de cada medida.</p>
 
-<h3>Votación</h3>
-<p>Se sometió a votación la propuesta de actualización del sistema de seguridad:</p>
-<ul>
+<h3>Votación: Aprobación del Plan de Mejoras en Seguridad</h3>
+<ol>
 <li><strong>Juan Pérez:</strong> A favor</li>
 <li><strong>María Rodríguez:</strong> A favor</li>
 <li><strong>Carlos López:</strong> A favor</li>
 <li><strong>Ana García:</strong> Se abstiene</li>
-</ul>
+</ol>
 <p><strong>Resultado:</strong> La propuesta fue aprobada con 3 votos a favor y 1 abstención.</p>
 
 <p>Finalmente, se estableció que la administración, en colaboración con el comité de seguridad, quedará encargada de recopilar especificaciones técnicas, contactar proveedores calificados y presentar un informe detallado en la próxima sesión con opciones concretas, cronogramas estimados y costos detallados.</p>`;
