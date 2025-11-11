@@ -63,10 +63,10 @@ export default function Home() {
               <div className="flex h-full">
                 <div className="m-auto">
                   <CardContent className=" items-center justify-center ">
-                    <h1 className="text-5xl  mt-5 font-bold text-purple-900 text-center mb-8">
+                    <h1 className="text-3xl md:text-5xl mt-5 font-bold text-purple-900 text-center mb-8">
                       Genera tu acta de reunión en minutos
                     </h1>
-                    <h2 className="text-3xl   mt-5 font-bold text-center mb-8">
+                    <h2 className="text-2xl md:text-3xl mt-5 font-bold text-center mb-8">
                       Transforma tu audio en un acta formal de manera rápida y
                       segura
                     </h2>
@@ -108,7 +108,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-center md:justify-end w-full md:w-auto px-20">
+              <div className="flex justify-center md:justify-end w-full md:w-auto">
                 <Link
                   href="/plataforma"
                   className="bg-white hover:bg-purple-500 text-gray-900 px-6 py-2 rounded-md transition-colors"
@@ -138,7 +138,7 @@ export default function Home() {
                       y Google Meet.
                     </p>
                   </div>
-                  <dl className="mt-5 grid grid-cols-1 gap-0.5 overflow-hidden rounded-md  sm:grid-cols-2 lg:grid-cols-4">
+                  <dl className="mt-5 grid grid-cols-1 gap-0.5 overflow-hidden rounded-md sm:grid-cols-2 lg:grid-cols-4">
                     <div className="flex flex-col bg-[#5A2D8E] p-8">
                       <dt className="text-sm  text-gray-300">
                         <span className="font-bold text-md text-white">
