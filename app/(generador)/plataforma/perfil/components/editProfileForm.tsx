@@ -2,7 +2,9 @@
 
 import { useSession } from "next-auth/react";
 import { updateProfile } from "../actions/update";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getUserData } from "../actions/getUserData";
+import { getDepartamentos, getMunicipiosPorDepartamento } from "@/lib/services/getColombiaData";
 
 export default function EditProfileForm({ onClose }: { onClose: () => void }) {
   const { data: session } = useSession();
@@ -10,6 +12,30 @@ export default function EditProfileForm({ onClose }: { onClose: () => void }) {
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
+  const [userData, setUserData] = useState<any>(null);
+  const [departamentos, setDepartamentos] = useState<string[]>([]);
+  const [municipios, setMunicipios] = useState<string[]>([]);
+
+  useEffect(() => {
+    const loadUserData = async () => {
+      const data = await getUserData();
+      setUserData(data);
+      if (data?.departamento) {
+        setMunicipios(getMunicipiosPorDepartamento(data.departamento));
+      }
+    };
+    loadUserData();
+    setDepartamentos(getDepartamentos());
+  }, []);
+
+  const handleDepartamentoChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const dept = e.target.value;
+    setMunicipios(getMunicipiosPorDepartamento(dept));
+    // Resetear municipio cuando cambia el departamento
+    if (userData) {
+      setUserData({ ...userData, departamento: dept, municipio: "" });
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -49,9 +75,9 @@ export default function EditProfileForm({ onClose }: { onClose: () => void }) {
         </button>
 
         <div className="flex flex-col items-center space-y-2">
-          <h1 className="text-2xl font-bold text-gray-800">Informacion de contacto</h1>
+          <h1 className="text-2xl font-bold text-gray-800">Información de contacto y facturación</h1>
           <p className="text-sm text-gray-600">
-            Actualiza tu información de contacto
+            Actualiza tu información de contacto y facturación
           </p>
         </div>
 
@@ -62,14 +88,122 @@ export default function EditProfileForm({ onClose }: { onClose: () => void }) {
             </label>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Nombre
+              </label>
+              <input
+                name="nombre"
+                type="text"
+                defaultValue={userData?.nombre || ""}
+                className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Apellido
+              </label>
+              <input
+                name="apellido"
+                type="text"
+                defaultValue={userData?.apellido || ""}
+                className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Teléfono
+              </label>
+              <input
+                name="phone"
+                type="text"
+                placeholder="Ej: 3001234567"
+                defaultValue={userData?.telefono || ""}
+                className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Correo Electrónico
+              </label>
+              <input
+                name="email"
+                type="email"
+                defaultValue={userData?.email || session?.user?.email || ""}
+                className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
+              />
+            </div>
+          </div>
+
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Teléfono
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              País
             </label>
             <input
-              name="phone"
               type="text"
-              placeholder="Ej: 3001234567"
+              value="Colombia"
+              disabled
+              className="w-full p-2 border border-gray-300 rounded-lg bg-gray-100 text-gray-600"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Departamento
+              </label>
+              <select
+                name="departamento"
+                defaultValue={userData?.departamento || ""}
+                onChange={handleDepartamentoChange}
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300"
+              >
+                <option value="">Seleccione un departamento</option>
+                {departamentos.map((dept) => (
+                  <option key={dept} value={dept}>
+                    {dept}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Municipio
+              </label>
+              <select
+                name="municipio"
+                defaultValue={userData?.municipio || ""}
+                disabled={!userData?.departamento && municipios.length === 0}
+                className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-300 disabled:bg-gray-100"
+              >
+                <option value="">
+                  {userData?.departamento ? "Seleccione un municipio" : "Primero seleccione un departamento"}
+                </option>
+                {municipios.map((mun) => (
+                  <option key={mun} value={mun}>
+                    {mun}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              Dirección
+            </label>
+            <input
+              name="direccion"
+              type="text"
+              placeholder="Calle, número, barrio, etc."
+              defaultValue={userData?.direccion || ""}
               className="mt-1 p-2 w-full bg-white text-gray-900 border border-gray-300 rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-300"
             />
           </div>

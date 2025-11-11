@@ -9,7 +9,9 @@ import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias
 import ProgressBarComponent from "./progressBarComponent";
 import SimplePaymentModalComponent from "./simplePaymentModalComponent";
 import UploadDropzoneComponent from "./uploadDropzoneComponent";
-import WompiComponent from "./wompiComponent";
+import ePaycoOnPageComponent from "./epaycoOnPageComponent";
+import BillingDataForm from "./billingDataForm";
+import { checkBillingData } from "../services/billing/checkBillingData";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
 import { BuscarAbiertoProceso } from "../services/actas_querys_services/buscarAbiertoProceso";
 import { GuardarNuevoProceso } from "../services/actas_querys_services/guardarNuevoProceso";
@@ -54,7 +56,9 @@ export default function MediaFileUploaderComponent({
   const [folder, setFolder] = React.useState<string | null>(null);
   const [file, setFile] = React.useState<string | null>(null);
   const [acta, setActa] = React.useState<string | null>(null);
-  const [idtx, setIdtx] = React.useState<string | null>(null);
+  const [hasBillingData, setHasBillingData] = React.useState<boolean>(false);
+  const [checkingBillingData, setCheckingBillingData] = React.useState<boolean>(true);
+  const [showBillingForm, setShowBillingForm] = React.useState<boolean>(false);
   const [transcripcion, setTranscripcion] = React.useState<string | null>(null);
   const [start, setStar] = React.useState<boolean>(false);
   const [showModal, setShowModal] = React.useState(false);
@@ -563,18 +567,34 @@ export default function MediaFileUploaderComponent({
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       const searchParams = new URLSearchParams(window.location.search);
-      const id = searchParams.get("id");
       const file = searchParams.get("file");
       const folder = searchParams.get("folder");
       const fileid = searchParams.get("fileid");
       const duration = searchParams.get("duration");
-      setDuration(Number(duration));
-      setIdtx(id);
+      if (duration) setDuration(Number(duration));
       setFile(file ?? null);
       setUrlAssembly(fileid ?? null);
       setFolder(folder ?? null);
     }
   }, []);
+
+  // Verificar datos de facturación cuando el componente se monta o cuando hay sesión
+  React.useEffect(() => {
+    const verifyBillingData = async () => {
+      setCheckingBillingData(true);
+      try {
+        const check = await checkBillingData();
+        setHasBillingData(check.hasCompleteData);
+      } catch (error) {
+        console.error("Error al verificar datos de facturación:", error);
+        setHasBillingData(false);
+      } finally {
+        setCheckingBillingData(false);
+      }
+    };
+
+    verifyBillingData();
+  }, [session]);
 
   React.useEffect(() => {
     const animEl = lastAnimRef.current;
@@ -590,45 +610,7 @@ export default function MediaFileUploaderComponent({
     }
   }, []);
 
-  React.useEffect(() => {
-    const fetchTransaction = async () => {
-      if (idtx && idtx !== "") {
-        setUploadStatus("Revisando tu pago, espera un momento por favor");
-
-        setProcesando(true);
-        try {
-          const response = await fetch(
-            process.env.NEXT_PUBLIC_WOMPI_TX + "/v1/transactions/" + idtx
-          );
-
-          const tx = await response.json();
-
-
-          if (tx.data.status === "APPROVED") {
-            await ActualizarProceso(
-              file || '',
-              5,
-              undefined,
-              undefined,
-              tx.data.id,
-              undefined,
-              undefined,
-              null,
-              null,
-              null
-            );
-
-            handlePayment();
-          }
-        } catch (error) {
-          console.error("Error al buscar la transacción:", error);
-        }
-      }
-      setStar(true);
-    };
-
-    fetchTransaction();
-  }, [idtx]);
+  // Eliminado: lógica de fetchTransaction de Wompi ya no es necesaria con OnPage Checkout
 
 
   return (
@@ -744,20 +726,63 @@ export default function MediaFileUploaderComponent({
                 acta === null &&
                 transcripcion === null &&
                 urlAssembly !== null &&
-                !procesando && duplicado === false && (
-                  <WompiComponent
-                    costo={calculatePrice(duration)}
-                    file={file}
-                    folder={folder}
-                    fileid={urlAssembly}
-                    duration={duration}
-                    handlePayment={handlePayment}
-                    showModalFirst={true}
-                    onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
-                      setShowPaymentModal(true);
-                      window.confirmPayment = handleOpenWidget;
-                    }}
-                  />
+                !procesando && duplicado === false && 
+                !checkingBillingData && (
+                  <>
+                    {!hasBillingData ? (
+                      <>
+                        {session ? (
+                          <div className="w-full p-4 bg-yellow-50 border border-yellow-200 rounded-lg mb-4">
+                            <p className="text-sm text-yellow-800 mb-2">
+                              <strong>Datos de facturación requeridos</strong>
+                            </p>
+                            <p className="text-sm text-yellow-700 mb-3">
+                              Para procesar el pago, necesitas completar tus datos de facturación en tu perfil.
+                            </p>
+                            <Button
+                              className="w-full bg-yellow-600 hover:bg-yellow-700 text-white"
+                              onClick={() => {
+                                window.location.href = "/plataforma/perfil";
+                              }}
+                            >
+                              Ir a mi perfil
+                            </Button>
+                          </div>
+                        ) : (
+                          <BillingDataForm
+                            isOpen={showBillingForm}
+                            onClose={() => setShowBillingForm(false)}
+                            onSuccess={async () => {
+                              const check = await checkBillingData();
+                              setHasBillingData(check.hasCompleteData);
+                              setShowBillingForm(false);
+                            }}
+                          />
+                        )}
+                        {!session && (
+                          <Button
+                            className="w-full rounded-sm bg-green-700 hover:bg-green-800"
+                            onClick={() => setShowBillingForm(true)}
+                          >
+                            Completar datos de facturación
+                          </Button>
+                        )}
+                      </>
+                    ) : (
+                      <ePaycoOnPageComponent
+                        costo={calculatePrice(duration)}
+                        file={file || ''}
+                        folder={folder || ''}
+                        fileid={urlAssembly || ''}
+                        duration={duration.toString()}
+                        handlePayment={handlePayment}
+                        onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
+                          setShowPaymentModal(true);
+                          window.confirmPayment = handleOpenWidget;
+                        }}
+                      />
+                    )}
+                  </>
                 )}
               {uploadProgress !== 100 &&
                 acta === null &&

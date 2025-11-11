@@ -48,6 +48,13 @@ export const usuarios = pgTable("usuarios", {
   telefono: text("telefono_usuario"),
   ultimoAcceso: timestamp("ultimo_acceso"),
   rol: integer("rol").notNull(),
+  // Campos de facturación
+  apellido: text("apellido_usuario"),
+  direccion: text("direccion_usuario"),
+  departamento: text("departamento_usuario"),
+  municipio: text("municipio_usuario"),
+  pais: text("pais_usuario").default("Colombia"),
+  tieneDatosFacturacion: integer("tiene_datos_facturacion_usuario").default(0),
 });
 
 export const usuariosRelations = relations(usuarios, ({ many }) => ({

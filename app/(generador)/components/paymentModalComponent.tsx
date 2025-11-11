@@ -41,20 +41,21 @@ export default function PaymentModalComponent({
         
         <div className="space-y-3 text-sm text-gray-700">
           <p>
-            Serás redirigido a la plataforma de pagos de Wompi.
+            Se abrirá un modal de pago seguro de ePayco.
           </p>
           
           <p>
-            <strong>Después del pago:</strong>
+            <strong>Proceso de pago:</strong>
           </p>
           
           <ul className="list-disc list-inside space-y-1 ml-2">
-            <li>Algunos métodos regresan automáticamente</li>
-            <li>Otros muestran un botón <strong>&quot;Volver al comercio&quot;</strong></li>
+            <li>Completa el pago directamente en el modal</li>
+            <li>El modal se cerrará automáticamente al finalizar</li>
+            <li>No necesitarás salir de esta página</li>
           </ul>
           
-          <p className="text-orange-600 font-medium">
-            Si ves el botón &quot;Volver al comercio&quot;, haz clic en él para continuar.
+          <p className="text-green-600 font-medium">
+            El proceso es rápido y seguro, todo queda en esta página.
           </p>
         </div>
         

@@ -16,10 +16,8 @@ export default function SimplePaymentModalComponent({ open, onConfirm }: SimpleP
         <div className="text-center">
           <h2 className="text-xl font-bold text-gray-800 mb-4">💳 Recuerda</h2>
           <p className="text-gray-600 mb-6">
-            Serás enviado a la pasarela de pago de Wompi. Recuerda al finalizar el pago dar clic en
-            <span className="font-bold text-purple-600"> &quot;Finalizar Proceso&quot; </span> o
-            <span className="font-bold text-purple-600"> &quot;Redirigir al Comercio&quot; </span>
-            para generar tu acta. Si es que no se da de manera automática.
+            Se abrirá un modal de pago seguro de ePayco. Completa el pago directamente en el modal
+            y este se cerrará automáticamente al finalizar. No necesitarás salir de esta página.
           </p>
           <div className="flex gap-3 justify-center">
             <button

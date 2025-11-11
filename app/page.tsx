@@ -167,7 +167,7 @@ export default function Home() {
                         <span className="font-bold text-md text-white">
                           Paga tu pre-acta de forma sencilla{" "}
                         </span>
-                        Utiliza la pasarela de pagos Wompi para transacciones
+                        Utiliza la pasarela de pagos ePayco para transacciones
                         seguras con tarjetas, transferencias bancarias o pagos
                         en efectivo
                       </dt>
@@ -425,8 +425,8 @@ export default function Home() {
                             />
                           </dt>{" "}
                           <dd className="inline">
-                            Seguridad garantizada: Utilizamos plataformas como
-                            Wompi y Bancolombia
+                            Seguridad garantizada: Utilizamos plataformas como
+                            ePayco y Bancolombia
                           </dd>
                         </div>
                       </dl>
