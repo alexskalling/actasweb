@@ -47,7 +47,7 @@ export default function EmailSignupBannerComponent() {
           </div>
         </div>
 
-        <div className="flex justify-center md:justify-end w-full md:w-auto px-20">
+        <div className="flex justify-center md:justify-end w-full md:w-auto">
           <Button
             onClick={handleRegister}
             className="bg-white hover:bg-purple-500 text-gray-900 px-6 py-2 rounded-md transition-colors"

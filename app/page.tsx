@@ -57,33 +57,28 @@ export default function Home() {
       {process.env.NEXT_PUBLIC_PAGO !== "soporte" && (
         <>
           <NavComponent />
-          <div className=" mx-auto max-w-7xl">
-            {" "}
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="w-full rounded-sm bg-white">
               <div className="flex h-full">
-                <div className="m-auto">
-                  <CardContent className=" items-center justify-center ">
-                    <h1 className="text-5xl  mt-5 font-bold text-purple-900 text-center mb-8">
+                <div className="m-auto w-full">
+                  <CardContent className="items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-purple-900 text-center mb-4 sm:mb-6 leading-tight">
                       Genera tu acta de reunión en minutos
                     </h1>
-                    <h2 className="text-3xl   mt-5 font-bold text-center mb-8">
-                      Transforma tu audio en un acta formal de manera rápida y
-                      segura
+                    <h2 className="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-bold text-center mb-6 sm:mb-8 text-gray-800 leading-tight">
+                      Transforma tu audio en un acta formal de manera rápida y segura
                     </h2>
-                    <p className="text-lg  text-gray-600">
-                      ¿Eres administrador de propiedad horizontal y pierdes
-                      tiempo redactando actas? Con nuestro{" "}
-                      <span className=" font-bold">generador de actas</span>,{" "}
-                      <span className=" font-bold">
-                        simplifica la gestión de reuniones
-                      </span>{" "}
-                      y obtén un documento profesional en minutos. Nuestra
-                      herramienta{" "}
-                      <span className=" font-bold">
-                        te ayuda a crear actas de reunión
-                      </span>{" "}
-                      de forma segura y precisa.
-                    </p>
+                    <div className="space-y-4 sm:space-y-5 max-w-3xl mx-auto">
+                      <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+                        ¿Eres administrador de propiedad horizontal y pierdes tiempo redactando actas?
+                      </p>
+                      <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+                        Con nuestro <span className="font-bold text-purple-900">generador de actas</span>, <span className="font-bold text-purple-900">simplifica la gestión de reuniones</span> y obtén un documento profesional en minutos.
+                      </p>
+                      <p className="text-base sm:text-lg text-gray-700 text-center leading-relaxed">
+                        Nuestra herramienta <span className="font-bold text-purple-900">te ayuda a crear actas de reunión</span> de forma segura y precisa.
+                      </p>
+                    </div>
                   </CardContent>
                 </div>
               </div>
@@ -92,26 +87,26 @@ export default function Home() {
         </>
       )}
 
-      <div id="generador" className=" mx-auto max-w-5xl rounded-sm">
-
-        {!session ? (<>
-          <EmailSignupBannerComponent />
-        </>) : (
-          <div className="bg-purple-600 max-w-2xl mx-auto  text-white p-6 rounded-lg shadow-lg mb-6 relative">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      <div id="generador" className="mx-auto max-w-5xl rounded-sm px-4 sm:px-6 lg:px-8">
+        {!session ? (
+          <>
+            <EmailSignupBannerComponent />
+          </>
+        ) : (
+          <div className="bg-purple-600 max-w-2xl mx-auto text-white p-4 sm:p-6 rounded-lg shadow-lg mb-4 sm:mb-6 relative">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 text-center md:text-left">
               <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
                 <div>
-                  <h3 className="font-bold text-xl">
+                  <h3 className="font-bold text-lg sm:text-xl">
                     Ingresar a mi plataforma de actas
                   </h3>
-
                 </div>
               </div>
 
-              <div className="flex justify-center md:justify-end w-full md:w-auto px-20">
+              <div className="flex justify-center md:justify-end w-full md:w-auto">
                 <Link
                   href="/plataforma"
-                  className="bg-white hover:bg-purple-500 text-gray-900 px-6 py-2 rounded-md transition-colors"
+                  className="bg-white hover:bg-purple-500 text-gray-900 px-4 sm:px-6 py-2 rounded-md transition-colors text-sm sm:text-base font-semibold"
                 >
                   Ingresar
                 </Link>
@@ -124,36 +119,36 @@ export default function Home() {
 
       {process.env.NEXT_PUBLIC_PAGO !== "soporte" && (
         <>
-          <div className=" mx-auto p-4 max-w-7xl">
+          <div className="mx-auto p-4 sm:p-6 lg:p-8 max-w-7xl">
             <div className="w-full rounded-sm bg-white">
-              <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:max-w-none">
                   <div className="text-center">
-                    <h3 className="text-3xl  mt-14 font-bold text-center mb-8">
+                    <h3 className="text-2xl sm:text-3xl mt-8 sm:mt-12 lg:mt-14 font-bold text-center mb-4 sm:mb-6 lg:mb-8">
                       Cómo funciona tu reunión con IA
                     </h3>
-                    <p className="mt-4 text-lg/8 text-gray-600">
+                    <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600 px-2 sm:px-0">
                       Con tan solo 4 pasos, tendrás lista tu acta formal, ideal
                       para reuniones realizadas por plataformas como Teams, Zoom
                       y Google Meet.
                     </p>
                   </div>
-                  <dl className="mt-5 grid grid-cols-1 gap-0.5 overflow-hidden rounded-md  sm:grid-cols-2 lg:grid-cols-4">
-                    <div className="flex flex-col bg-[#5A2D8E] p-8">
-                      <dt className="text-sm  text-gray-300">
-                        <span className="font-bold text-md text-white">
+                  <dl className="mt-4 sm:mt-5 grid grid-cols-1 gap-0.5 overflow-hidden rounded-md sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="flex flex-col bg-[#5A2D8E] p-4 sm:p-6 lg:p-8">
+                      <dt className="text-xs sm:text-sm text-gray-300 text-left">
+                        <span className="font-bold text-sm sm:text-base text-white block mb-1 sm:mb-2 text-center">
                           Sube tu archivo de audio{" "}
                         </span>
                         Carga fácilmente grabaciones en formatos compatibles
                         como MP3, M4A, MP4, MOV, entre otros
                       </dt>
-                      <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                      <dd className="order-first text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-2 sm:mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width={60}
-                          height={60}
+                          width={50}
+                          height={50}
                           viewBox="0 0 24 24"
-                          className="mx-auto"
+                          className="mx-auto sm:w-[60px] sm:h-[60px]"
                         >
                           <path
                             fill="currentColor"
@@ -162,22 +157,22 @@ export default function Home() {
                         </svg>
                       </dd>
                     </div>
-                    <div className="flex flex-col bg-[#5A2D8E] p-8">
-                      <dt className="text-sm  text-gray-300">
-                        <span className="font-bold text-md text-white">
+                    <div className="flex flex-col bg-[#5A2D8E] p-4 sm:p-6 lg:p-8">
+                      <dt className="text-xs sm:text-sm text-gray-300 text-left">
+                        <span className="font-bold text-sm sm:text-base text-white block mb-1 sm:mb-2 text-center">
                           Paga tu pre-acta de forma sencilla{" "}
                         </span>
                         Utiliza la pasarela de pagos Wompi para transacciones
                         seguras con tarjetas, transferencias bancarias o pagos
                         en efectivo
                       </dt>
-                      <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                      <dd className="order-first text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-2 sm:mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width={60}
-                          height={60}
+                          width={50}
+                          height={50}
                           viewBox="0 0 24 24"
-                          className="mx-auto"
+                          className="mx-auto sm:w-[60px] sm:h-[60px]"
                         >
                           <path
                             fill="currentColor"
@@ -186,9 +181,9 @@ export default function Home() {
                         </svg>
                       </dd>
                     </div>
-                    <div className="flex flex-col bg-[#5A2D8E] p-8">
-                      <dt className="text-sm  text-gray-300">
-                        <span className="font-bold text-md text-white">
+                    <div className="flex flex-col bg-[#5A2D8E] p-4 sm:p-6 lg:p-8">
+                      <dt className="text-xs sm:text-sm text-gray-300 text-left">
+                        <span className="font-bold text-sm sm:text-base text-white block mb-1 sm:mb-2 text-center">
                           Nuestro sistema procesa la transcripción{" "}
                         </span>
                         Gracias a la avanzada inteligencia artificial,
@@ -196,13 +191,13 @@ export default function Home() {
                         y en una pre-acta editable que incluye los puntos clave
                         y los elementos de acción más importantes.
                       </dt>
-                      <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                      <dd className="order-first text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-2 sm:mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width={60}
-                          height={60}
+                          width={50}
+                          height={50}
                           viewBox="0 0 24 24"
-                          className="mx-auto"
+                          className="mx-auto sm:w-[60px] sm:h-[60px]"
                         >
                           <path
                             fill="currentColor"
@@ -211,9 +206,9 @@ export default function Home() {
                         </svg>
                       </dd>
                     </div>
-                    <div className="flex flex-col bg-[#5A2D8E] p-8">
-                      <dt className="text-sm  text-gray-300">
-                        <span className="font-bold text-md text-white">
+                    <div className="flex flex-col bg-[#5A2D8E] p-4 sm:p-6 lg:p-8">
+                      <dt className="text-xs sm:text-sm text-gray-300 text-left">
+                        <span className="font-bold text-sm sm:text-base text-white block mb-1 sm:mb-2 text-center">
                           Descarga tu transcripción y tu pre-acta editable{" "}
                         </span>
                         Obtendrás todo el audio pasado a texto en la
@@ -221,13 +216,13 @@ export default function Home() {
                         que te permitirá ajustar los detalles necesarios y
                         cumplir con la normativa legal de Colombia.
                       </dt>
-                      <dd className="order-first text-3xl font-semibold tracking-tight text-white">
+                      <dd className="order-first text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-2 sm:mb-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width={60}
-                          height={60}
+                          width={50}
+                          height={50}
                           viewBox="0 0 24 24"
-                          className="mx-auto"
+                          className="mx-auto sm:w-[60px] sm:h-[60px]"
                         >
                           <path
                             fill="currentColor"
@@ -240,29 +235,17 @@ export default function Home() {
                 </div>
               </div>
             </div>{" "}
-            <section className="isolate overflow-hidden bg-white px-6 lg:px-8">
-              <div className="relative mx-auto max-w-2xl py-24 sm:py-32 lg:max-w-4xl">
-                <figure className="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
-                  <div className="relative col-span-2 lg:col-start-1 lg:row-start-2">
-                    <figcaption className="text-base lg:col-start-1 lg:row-start-3">
-                      <h3 className="font-semibold text-3xl text-gray-900">
-                        Tiempo estimado de entrega
-                      </h3>
-                    </figcaption>
-                    <blockquote className="text-xl/8 mt-5  text-gray-600 ">
-                      <p>
-                        El proceso puede tardar entre 3 y 10 minutos,
-                        dependiendo de la duración y la calidad del audio
-                      </p>
-                    </blockquote>
-                  </div>
-                  <div className="col-end-1 w-16 lg:row-span-4 lg:w-72">
+            <section className="isolate overflow-hidden bg-white px-4 sm:px-6 lg:px-8">
+              <div className="relative mx-auto max-w-4xl py-12 sm:py-20 lg:py-24 xl:py-32">
+                <div className="flex flex-col items-center text-center">
+                  {/* Icono centrado */}
+                  <div className="mb-6 sm:mb-8">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={250}
-                      height={250}
+                      width={150}
+                      height={150}
                       viewBox="0 0 24 24"
-                      className="mx-auto text-purple-900"
+                      className="mx-auto text-purple-900 sm:w-[200px] sm:h-[200px] lg:w-[250px] lg:h-[250px]"
                     >
                       <g fill="none" fillRule="evenodd">
                         <path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"></path>
@@ -273,21 +256,32 @@ export default function Home() {
                       </g>
                     </svg>
                   </div>
-                </figure>
+                  
+                  {/* Título y texto */}
+                  <div className="max-w-2xl">
+                    <h3 className="font-semibold text-2xl sm:text-3xl text-gray-900 mb-4 sm:mb-6">
+                      Tiempo estimado de entrega
+                    </h3>
+                    <p className="text-base sm:text-lg lg:text-xl text-gray-600">
+                      El proceso puede tardar entre 3 y 10 minutos,
+                      dependiendo de la duración y la calidad del audio
+                    </p>
+                  </div>
+                </div>
               </div>
             </section>
-            <div className="overflow-hidden bg-white ">
-              <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                  <div className="lg:pr-8 lg:pt-4">
+            <div className="overflow-hidden bg-white">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-12 lg:gap-y-16 xl:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                  <div className="lg:pr-8 lg:pt-4 order-2 lg:order-1">
                     <div className="lg:max-w-lg">
-                      <h3 className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 ">
+                      <h3 className="mt-2 text-pretty text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center lg:text-left">
                         Recomendaciones para una mejor experiencia
                       </h3>
-                      <p className="mt-6 text-lg/8 text-gray-600">
+                      <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 text-center lg:text-left">
                         Tips para facilitar el proceso
                       </p>
-                      <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                      <dl className="mt-6 sm:mt-10 max-w-xl space-y-6 sm:space-y-8 text-sm sm:text-base text-gray-600 lg:max-w-none">
                         <div className="relative pl-9">
                           <dt className="inline font-semibold text-gray-900">
                             <CheckCheckIcon
@@ -330,13 +324,13 @@ export default function Home() {
                       </dl>
                     </div>
                   </div>
-                  <div className=" bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 ">
+                  <div className="bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 order-1 lg:order-2 flex items-center justify-center py-8 sm:py-12 lg:py-16">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={250}
-                      height={250}
+                      width={200}
+                      height={200}
                       viewBox="0 0 24 24"
-                      className="mx-auto text-white mt-16"
+                      className="mx-auto text-white sm:w-[250px] sm:h-[250px]"
                     >
                       <path
                         fill="currentColor"
@@ -352,16 +346,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="overflow-hidden bg-white mt-20">
-              <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                  <div className=" bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 ">
+            <div className="overflow-hidden bg-white mt-12 sm:mt-16 lg:mt-20">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-12 lg:gap-y-16 xl:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                  <div className="bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 flex items-center justify-center py-8 sm:py-12 lg:py-16 order-1 lg:order-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={250}
-                      height={250}
+                      width={200}
+                      height={200}
                       viewBox="0 0 24 24"
-                      className="mx-auto text-white mt-8"
+                      className="mx-auto text-white sm:w-[250px] sm:h-[250px]"
                     >
                       <defs>
                         <path
@@ -394,15 +388,15 @@ export default function Home() {
                       ></use>
                     </svg>
                   </div>
-                  <div className="lg:pr-8 lg:pt-4">
+                  <div className="lg:pr-8 lg:pt-4 order-2 lg:order-2">
                     <div className="lg:max-w-lg">
-                      <h3 className=" text-pretty text-3xl font-semibold tracking-tight text-gray-900 ">
+                      <h3 className="text-pretty text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center lg:text-left">
                         Opciones de pago seguras y flexibles
                       </h3>
-                      <p className="mt-6 text-lg/8 text-gray-600">
+                      <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 text-center lg:text-left">
                         Paga como prefieras y de forma confiable
                       </p>
-                      <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                      <dl className="mt-6 sm:mt-10 max-w-xl space-y-6 sm:space-y-8 text-sm sm:text-base text-gray-600 lg:max-w-none">
                         <div className="relative pl-9">
                           <dt className="inline font-semibold text-gray-900">
                             <CheckCheckIcon
@@ -435,18 +429,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="overflow-hidden bg-white mt-20">
-              <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                  <div className="lg:pr-8 lg:pt-4">
+            <div className="overflow-hidden bg-white mt-12 sm:mt-16 lg:mt-20">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-12 lg:gap-y-16 xl:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                  <div className="lg:pr-8 lg:pt-4 order-2 lg:order-1">
                     <div className="lg:max-w-lg">
-                      <h3 className="mt-2 text-pretty text-3xl font-semibold tracking-tight text-gray-900 ">
+                      <h3 className="mt-2 text-pretty text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 text-center lg:text-left">
                         Seguridad y privacidad
                       </h3>
-                      <p className="mt-6 text-lg/8 text-gray-600">
+                      <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-600 text-center lg:text-left">
                         Tu información está protegida
                       </p>
-                      <dl className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
+                      <dl className="mt-6 sm:mt-10 max-w-xl space-y-6 sm:space-y-8 text-sm sm:text-base text-gray-600 lg:max-w-none">
                         <div className="relative pl-9">
                           <dt className="inline font-semibold text-gray-900">
                             <CheckCheckIcon
@@ -475,13 +469,13 @@ export default function Home() {
                       </dl>
                     </div>
                   </div>
-                  <div className=" bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 ">
+                  <div className="bg-purple-950/90 max-w-none rounded-sm ring-gray-400/10 flex items-center justify-center py-8 sm:py-12 lg:py-16 order-1 lg:order-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width={250}
-                      height={250}
+                      width={200}
+                      height={200}
                       viewBox="0 0 24 24"
-                      className="mx-auto text-white mt-3"
+                      className="mx-auto text-white sm:w-[250px] sm:h-[250px]"
                     >
                       <g fill="none" fillRule="evenodd">
                         <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path>
@@ -497,12 +491,12 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white">
-            <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 ">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20 lg:py-24 xl:py-32 lg:px-8">
               <div className="mx-auto max-w-4xl">
-                <h3 className="text-3xl  mt-14 font-bold text-center mb-8">
+                <h3 className="text-2xl sm:text-3xl mt-8 sm:mt-12 lg:mt-14 font-bold text-center mb-6 sm:mb-8">
                   Preguntas Frecuentes
                 </h3>
-                <dl className="mt-16 divide-y divide-gray-900/10">
+                <dl className="mt-8 sm:mt-12 lg:mt-16 divide-y divide-gray-900/10">
                   {faqs.map((faq) => (
                     <Disclosure
                       key={faq.question}
@@ -534,12 +528,11 @@ export default function Home() {
                     </Disclosure>
                   ))}
                 </dl>
-                <div className=" w-full flex">
-                  {" "}
+                <div className="w-full flex">
                   <Link
                     href="https://actasdereuniones.ai/contacto/"
                     target="_blank"
-                    className="text-xl mx-auto text-purple-800  mt-14 font-bold text-center mb-8"
+                    className="text-lg sm:text-xl mx-auto text-purple-800 mt-8 sm:mt-12 lg:mt-14 font-bold text-center mb-6 sm:mb-8 hover:text-purple-900 transition-colors"
                   >
                     Resuelve más dudas aquí
                   </Link>
@@ -548,21 +541,21 @@ export default function Home() {
             </div>
           </div>
           <div className="relative isolate overflow-hidden bg-purple-950">
-            <div className="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div className="px-4 sm:px-6 py-16 sm:py-20 lg:py-24 xl:py-32 lg:px-8">
               <div className="mx-auto max-w-3xl text-center">
-                <h2 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                <h2 className="text-balance text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-semibold tracking-tight text-white px-2 sm:px-0">
                   ¡Crea tu acta fácilmente y olvídate de tomar notas!
                 </h2>
-                <p className="mx-auto mt-6 max-w-7xl text-pretty text-lg/8 text-gray-300">
+                <p className="mx-auto mt-4 sm:mt-6 max-w-7xl text-pretty text-base sm:text-lg text-gray-300 px-2 sm:px-0">
                   Optimiza tu tiempo y olvida las notas de reunión. Gracias a
-                  la inteligencia artificial, obtén actas rápidas, seguras y
+                  la inteligencia artificial, obtén actas rápidas, seguras y
                   editables, listas para ser el soporte perfecto de tus
                   decisiones.
                 </p>
-                <div className="mt-10 flex items-center justify-center gap-x-6">
+                <div className="mt-6 sm:mt-8 lg:mt-10 flex items-center justify-center gap-x-6">
                   <a
                     href="#generador"
-                    className="rounded-sm bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    className="rounded-sm bg-white px-4 sm:px-3.5 py-2 sm:py-2.5 text-sm sm:text-base font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"
                   >
                     Genera tu acta ahora
                   </a>
