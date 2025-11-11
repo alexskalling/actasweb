@@ -46,8 +46,8 @@ export default function PlataformaPage() {
 
           <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
             <div className="mx-auto flex max-w-2xl flex-col gap-4 lg:mx-0 lg:max-w-none">
-              {/* Info Usuario */}
-              <div className="flex items-center justify-between gap-x-8">
+              {/* Info Usuario - Contenedor principal ahora flexible y adaptable */}
+              <div className="flex flex-col md:flex-row items-center justify-between gap-x-8 gap-y-4">
                 <div className="flex items-center gap-x-6">
                   {session?.user?.image ? (
                     <Image
@@ -71,7 +71,7 @@ export default function PlataformaPage() {
                   </h1>
                 </div>
 
-                <div className="flex items-center gap-x-4 sm:gap-x-6">
+                <div className="flex flex-col sm:flex-row items-center gap-x-4 sm:gap-x-6 gap-y-4">
                   <button
                     onClick={() => {
                       // Track edición perfil
@@ -105,7 +105,7 @@ export default function PlataformaPage() {
                     Salir
                   </button>
 
-                  <Menu as="div" className="relative sm:hidden">
+                  <Menu as="div" className="relative md:hidden">
                     <MenuButton className="relative block">
                       <span className="absolute -inset-3" />
                       <span className="sr-only">More</span>
@@ -167,7 +167,7 @@ export default function PlataformaPage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> 
 
             {/* Historial Component */}
             <div className="sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2">
