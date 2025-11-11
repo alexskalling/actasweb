@@ -645,7 +645,7 @@ export default function MediaFileUploaderComponent({
           setShowPaymentModal(false);
         }}
       />
-      <div className="p-6 w-full max-w-md mx-auto bg-transparent rounded-md">
+      <div className="p-4 sm:p-6 w-full max-w-lg mx-auto bg-transparent rounded-md">
         {start && (
           <div className="space-y-4">
             {!selectedFile && !file && (
@@ -789,13 +789,12 @@ export default function MediaFileUploaderComponent({
                 transcripcion === null &&
                 !procesando && (
                   <Button
-                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2"
                     onClick={handleContinue}
                     disabled={calculando}
                   >
                     {calculando ? (
                       <>
-                        {" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={50}
