@@ -15,7 +15,7 @@ export default function UploadDropzoneComponent({ accept, isIOS, onChange }: Upl
     <div className="flex items-center justify-center w-full">
       <label
         htmlFor="media-upload"
-        className="flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-md cursor-pointer transition-colors"
+        className="flex flex-col items-center justify-center w-full h-64 sm:h-72 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer transition-colors hover:border-purple-400 hover:bg-purple-50/50"
         onClick={() => {
           track('upload_button_click', {
             event_category: 'engagement',

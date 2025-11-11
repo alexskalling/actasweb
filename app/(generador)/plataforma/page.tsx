@@ -39,39 +39,37 @@ export default function PlataformaPage() {
   return (
     <>
       <main>
-        <header className="relative isolate">
-          <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute inset-x-0 bottom-0 h-px bg-gray-900/5" />
-          </div>
+        <header className="relative border-b border-gray-200 bg-white">
+          <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6 py-4 sm:py-5">
+            <div className="flex flex-row items-start justify-between gap-3 sm:gap-4">
+              {/* Info Usuario */}
+              <div className="flex items-center gap-3 sm:gap-4">
+                {session?.user?.image ? (
+                  <Image
+                    src={session?.user?.image ?? ""}
+                    alt={`Foto de perfil de ${session?.user?.name}`}
+                    width={64}
+                    height={64}
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg flex-shrink-0"
+                  />
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg text-purple-900 flex-shrink-0" width={24} height={24} viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19 2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h4l3 3l3-3h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m-7 3c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3M7.177 16c.558-1.723 2.496-3 4.823-3s4.266 1.277 4.823 3z" />
+                  </svg>
+                )}
 
-          <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-            <div className="mx-auto flex max-w-2xl flex-col gap-4 lg:mx-0 lg:max-w-none">
-              {/* Info Usuario - Contenedor principal ahora flexible y adaptable */}
-              <div className="flex flex-col md:flex-row items-center justify-between gap-x-8 gap-y-4">
-                <div className="flex items-center gap-x-6">
-                  {session?.user?.image ? (
-                    <Image
-                      src={session?.user?.image ?? ""}
-                      alt={`Foto de perfil de ${session?.user?.name}`}
-                      width={80}
-                      height={80}
-                      className="w-20 h-20 rounded-lg"
-                    />
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-20 h-20 rounded-lg text-purple-900" width={24} height={24} viewBox="0 0 24 24"><path fill="currentColor" d="M19 2H5a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h4l3 3l3-3h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2m-7 3c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3M7.177 16c.558-1.723 2.496-3 4.823-3s4.266 1.277 4.823 3z"></path></svg>
-                  )}
-
-                  <h1>
-                    <div className="text-sm/6 text-gray-500">
-                      Bienvenido
-                    </div>
-                    <div className="mt-1 text-base font-semibold text-gray-900">
-                      {session?.user?.name}
-                    </div>
-                  </h1>
+                <div>
+                  <div className="text-xs sm:text-sm text-gray-500">
+                    Bienvenido
+                  </div>
+                  <div className="text-sm sm:text-base font-semibold text-gray-900">
+                    {session?.user?.name}
+                  </div>
                 </div>
+              </div>
 
-                <div className="flex flex-col sm:flex-row items-center gap-x-4 sm:gap-x-6 gap-y-4">
+              {/* Botones de acción */}
+              <div className="flex flex-col sm:flex-row items-end sm:items-center gap-2">
                   <button
                     onClick={() => {
                       // Track edición perfil
@@ -81,9 +79,30 @@ export default function PlataformaPage() {
                       });
                       setShowEditForm(!showEditForm);
                     }}
-                    className="text-sm/6 font-semibold text-gray-900"
+                    className="group relative flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                    title="Actualizar información de contacto"
                   >
-                    Actualizar información de contacto
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5 text-gray-600"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <span className="hidden sm:inline">Actualizar</span>
+                    {/* Tooltip */}
+                    <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                      Actualizar información
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                    </span>
                   </button>
 
                   <button
@@ -100,97 +119,100 @@ export default function PlataformaPage() {
 
                       signOut({ callbackUrl });
                     }}
-                    className="rounded-md bg-purple-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-purple-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600"
+                    className="group relative flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-500 transition-colors"
+                    title="Cerrar sesión"
                   >
-                    Salir
-                  </button>
-
-                  <Menu as="div" className="relative md:hidden">
-                    <MenuButton className="relative block">
-                      <span className="absolute -inset-3" />
-                      <span className="sr-only">More</span>
-                      <EllipsisVerticalIcon aria-hidden="true" className="size-5 text-gray-500" />
-                    </MenuButton>
-
-                    <MenuItems
-                      transition
-                      className="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5"
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="size-5"
+                      width={24}
+                      height={24}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <MenuItem>
-                        <button
-                          type="button"
-                          className="block w-full px-3 py-1 text-left text-sm/6 text-gray-900 data-focus:bg-gray-50"
-                        >
-                          Copy URL
-                        </button>
-                      </MenuItem>
-                      <MenuItem>
-                        <a
-                          href="#"
-                          className="block px-3 py-1 text-sm/6 text-gray-900 data-focus:bg-gray-50"
-                        >
-                          Edit
-                        </a>
-                      </MenuItem>
-                    </MenuItems>
-                  </Menu>
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                      <polyline points="16 17 21 12 16 7" />
+                      <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                    <span className="hidden sm:inline">Salir</span>
+                    {/* Tooltip */}
+                    <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                      Cerrar sesión
+                      <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                    </span>
+                  </button>
                 </div>
               </div>
 
               {/* 👉 Formulario Editar Perfil */}
               {showEditForm && (
-                <div className="mt-4 flex justify-center">
+                <div className="mt-3 sm:mt-4 flex justify-center">
                   <EditProfileForm onClose={() => setShowEditForm(false)} />
                 </div>
               )}
             </div>
-          </div>
         </header>
 
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {/* Uploader Component */}
-            <div className="lg:col-start-3 lg:row-end-1">
-              <MediaFileUploaderComponent  onCheckActa={() => setReloadTrigger(prev => !prev)} />
-            </div>
+        <div className="mx-auto max-w-7xl px-1 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
+          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {/* Generador - Primero en mobile, sidebar derecha en desktop */}
+            <div className="order-1 lg:order-2 lg:col-start-3 space-y-4 sm:space-y-6">
+              {/* Generador */}
+              <div>
+                <MediaFileUploaderComponent onCheckActa={() => setReloadTrigger(prev => !prev)} />
+              </div>
 
-            <div className="bg-purple-500 text-white p-6 rounded-lg shadow-lg">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-                <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
+              {/* Alerta Recuerda - Abajo del generador */}
+              <div className="bg-purple-500 text-white p-3 sm:p-4 rounded-lg shadow-sm">
+                <div className="flex items-start gap-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="size-6 flex-shrink-0 mt-0.5"
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+                  </svg>
                   <div>
-                    <h3 className="font-bold text-xl">
-                      ⚠️ Recuerda
+                    <h3 className="font-bold text-lg sm:text-xl mb-1">
+                      Recuerda
                     </h3>
-                    <p className="text-white mt-2 text-sm">
+                    <p className="text-white text-sm sm:text-base">
                       En el proceso de pago recuerda dar click en &quot;Volver al comercio&quot; o &quot;Finalizar proceso&quot; en caso de que no se haga de manera automática
                     </p>
                   </div>
                 </div>
               </div>
-            </div> 
+            </div>
 
-            {/* Historial Component */}
-            <div className="sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2">
+            {/* Historial Component - Segundo en mobile, lado izquierdo en desktop */}
+            <div className="order-2 lg:order-1 lg:col-span-2">
               <HistorialActasComponent reloadTrigger={reloadTrigger} />
             </div>
           </div>
 
           {/* Sección de Soporte */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
             <div className="text-center md:text-left">
-              <h3 className="font-bold text-xl text-purple-600 mb-4">
+              <h3 className="font-bold text-lg sm:text-xl text-purple-600 mb-3 sm:mb-4">
                 📞 Soporte
               </h3>
-              <div className="items-center justify-between gap-6 text-center md:text-left">
-                <p className="text-gray-700 mb-2">
+              <div className="space-y-2 text-sm sm:text-base text-gray-700">
+                <p>
                   Nuestro horario de atención es de lunes a viernes de 8:00 AM a 6:00 PM
                 </p>
-                <p className="text-gray-700 mb-3">
+                <p>
                   En caso de que necesites soporte, puedes contactarte por WhatsApp con:
                 </p>
               </div>
 
-              <div className="space-y-1">
+              <div className="mt-3 space-y-1 text-sm sm:text-base">
                 <p className="text-gray-900">
                   • <strong className="text-purple-600">Leonardo:</strong> +57 301 242 2098
                 </p>
