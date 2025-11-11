@@ -6,62 +6,48 @@ import { ActualizarProceso } from "../actas_querys_services/actualizarProceso";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
 
 export async function processAction(
-  folder: string ,
+  folder: string,
   file: string,
   urlAssembly: string,
   email: string,
   name: string,
   automation?: boolean
 ) {
-  
   try {
-    console.log("Inicio de proceso de acción");
-    console.log("Proceso de  trasncripcion" + urlAssembly);
+    console.log("Inicio de generación de acta");
     const transcribe = await transcripAction(folder, file, urlAssembly);
     if (transcribe?.status !== "success") {
-      console.log("Error en la generación de trasncripcion");
       return {
         status: "error",
         message: "Error en la generación de trasncripcion",
       };
     }
-    console.log("Transcripcion  lista");
 
     const contenido = await generateContenta(
       folder,
       file,
       urlAssembly,
-      //@ts-expect-error revisar despues
-      transcribe.content
+      transcribe.content as string
     );
     if (contenido?.status !== "success") {
-      console.log("Error en la generación de contenidos");
       return {
         status: "error",
         message: "Error en la generación de contenidos",
       };
     }
-    console.log("Contenido listo");
 
-    // Formateo de contenido
     const formato = await formatContent(
       folder,
       file,
-      //@ts-expect-error revisar despues
-
-      contenido.content
+      contenido.content as string
     );
     if (formato?.status !== "success") {
-      console.error("Error formateando el acta");
       return {
         status: "error",
         message: "Error formateando el acta",
       };
     }
-    console.log("Acta lista");
-    console.log("Fin de proceso de acción");
-    console.log("transcipcion: ", formato.transcripcion);
-    console.log("acta: ", formato.acta);
+    console.log("Generación de acta finalizada");
     try {
       await ActualizarProceso(
         file,

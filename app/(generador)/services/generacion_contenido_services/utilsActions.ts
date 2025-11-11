@@ -55,7 +55,6 @@ export async function obtenerContenidoArchivoDrive(drive, fileId) {
 }
 
 export async function normalizarNombreArchivo(nombreArchivo: string) {
-  console.log("Normalizando nombre: " + nombreArchivo);
   if (!nombreArchivo) {
     const errorMsg = "El nombre del archivo es indefinido";
     writeLog(`[${new Date().toISOString()}] Error: ${errorMsg}.`);
@@ -68,14 +67,11 @@ export async function normalizarNombreArchivo(nombreArchivo: string) {
     .replace(/[^a-zA-Z0-9._-]/g, "_")
     .replace(/\s+/g, "_")
     .toLowerCase();
-  console.log("Nombre normalizado: " + name);
 
   return name;
 }
 
 export async function autenticarGoogleDrive() {
-  console.log(`[${new Date().toISOString()}] Autenticando en Google Drive.`);
-
   const credentials = {
     type: "service_account",
     project_id: "actas-442811",
@@ -99,9 +95,7 @@ export async function autenticarGoogleDrive() {
   });
 
   try {
-    // Retorna la instancia autenticada de Google Drive
     const drive = google.drive({ version: "v3", auth });
-    console.log("Autenticación exitosa");
     return drive;
   } catch (error) {
     console.error("Error al autenticar con Google Drive:", error);
@@ -298,8 +292,6 @@ export async function guardarArchivo(
   nombreArchivo: string,
   transcripcion: string
 ) {
-  //actasfiles.157.180.22.72.sslip.io/public.php/dav/files/AiKFjGBGNT8nXpn/
-  http: console.log(`Guardando transcripción como ${nombreArchivo}.txt`);
   const urlNextcloud = process.env.NEXTCLOUD_URL;
   const usuario = process.env.NEXTCLOUD_USER;
   const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -343,8 +335,6 @@ export async function guardarArchivo(
             success: false,
             error: `Error al crear la carpeta: ${respuestaCreacion.status} ${respuestaCreacion.statusText}`,
           };
-        } else {
-          console.log(`Carpeta ${nombreCarpeta} creada con éxito.`);
         }
       } else {
         console.error(
@@ -401,8 +391,7 @@ export async function guardarArchivo(
       };
     }
 
-    const ocsVersionData = await ocsVersionResponse.text(); // o .json() si esperas JSON
-    console.log("Respuesta API OCS endpoint de versión:", ocsVersionData);
+    const ocsVersionData = await ocsVersionResponse.text();
 
     return { success: true, publicUrl: "URL_DE_PRUEBA_OCS_VERSION" }; //  URL de prueba para evitar error por falta de publicUrl en return
   } catch (error) {
@@ -443,16 +432,10 @@ export async function obtenerContenidoArchivo(
     };
 
     try {
-      console.log(
-        `[OBTENER CONTENIDO ARCHIVO NEXTCLOUD] Ruta: ${rutaCompletaArchivo}`
-      );
       const respuestaContenidoArchivo = await fetch(rutaCompletaArchivo, {
         method: "GET",
         headers: cabecerasAutenticacion,
       });
-      console.log(
-        `[OBTENER CONTENIDO ARCHIVO NEXTCLOUD] Respuesta status: ${respuestaContenidoArchivo.status}, ok: ${respuestaContenidoArchivo.ok}`
-      );
 
       if (respuestaContenidoArchivo.ok) {
         contenidoArchivo = await respuestaContenidoArchivo.text();

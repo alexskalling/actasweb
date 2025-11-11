@@ -83,7 +83,6 @@ export default function ActaEmail({ name, url, transcription, file }: ActaEmailP
             </a>
           </div>
 
-    
           <div
             style={{
               background: "#f3e8ff",

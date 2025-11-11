@@ -60,7 +60,6 @@ interface AutomationResponse {
   };
 }
 
-// Validar API key
 function validateApiKey(request: NextRequest): boolean {
   const apiKey = request.headers.get("x-api-key");
   const expectedApiKey = process.env.N8N_API_KEY;
@@ -75,7 +74,6 @@ function validateApiKey(request: NextRequest): boolean {
 
 export async function POST(request: NextRequest): Promise<NextResponse<AutomationResponse>> {
   try {
-    // 1. Validar API key
     if (!validateApiKey(request)) {
       return NextResponse.json(
         {
@@ -103,7 +101,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    // 3. Obtener enlace temporal desde Dropbox API
     const dropboxToken = await getDropboxAccessToken();
     if (!dropboxToken) {
       return NextResponse.json(

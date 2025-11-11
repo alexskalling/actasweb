@@ -10,20 +10,6 @@ import {
   verificarArchivoExistente,
   obtenerContenidoArchivo,
 } from "./utilsActions";
-import io from "socket.io-client";
-
-// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
-const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
-
-socketBackendReal.on("connect_error", (error) => {
-  console.error("Error de conexión Socket.IO desde backend real:", error);
-});
-socketBackendReal.on("connect_timeout", (timeout) => {
-  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
-});
-socketBackendReal.on("disconnect", (reason) => {
-  console.log("Desconexión de Socket.IO desde backend real:", reason);
-});
 
 export async function generateContenta(
   folder: string,
@@ -50,13 +36,6 @@ export async function generateContenta(
     }
 
     writeLog(`Generando contenido para: ${file}`);
-    socketBackendReal.emit("upload-status", {
-      roomName: folder,
-      statusData: {
-        message: `[Contenido] Leyendo, entendiendo y analisando el contenido de: ${file} `,
-      },
-    });
-
     let contenidoTranscripcion = transcipcion;
 
     if (!contenidoTranscripcion) {
@@ -73,11 +52,10 @@ export async function generateContenta(
       writeLog(
         `Transcripción encontrada: ${nombreTranscripcion}. Obteniendo contenido.`
       );
-      //@ts-expect-error revisar despues - This comment can be removed if types are properly checked.
       contenidoTranscripcion = await obtenerContenidoArchivo(
         folder,
         nombreTranscripcion
-      );
+      ) as string;
       if (!contenidoTranscripcion) {
         return {
           status: "error",
@@ -90,12 +68,6 @@ export async function generateContenta(
     }
 
     writeLog(`Generando Orden del Día con Gemini para: ${file}`);
-    socketBackendReal.emit("upload-status", {
-      roomName: folder,
-      statusData: {
-        message: `[Contenido] Generando el orden del dia de la reunion `,
-      },
-    });
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 3;
@@ -128,8 +100,7 @@ export async function generateContenta(
         );
         retryCountOrdenDelDia++;
         if (retryCountOrdenDelDia > 1) {
-          modelNameOrdenDelDia = "gemini-2.5-flash"; // Mantener el mismo modelo o cambiar si lo prefieres
-          console.log("Cambio de modelo (Orden del Día) a gemini-2.5-flash");
+          modelNameOrdenDelDia = "gemini-2.5-flash";
         }
         if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
           console.error(
@@ -145,7 +116,12 @@ export async function generateContenta(
       }
     }
 
-    //@ts-expect-error revisar despues - This comment can be removed if types are properly checked.
+    if (!responseGeminiOrdenDelDia) {
+      return {
+        status: "error",
+        message: "Error al generar el Orden del Día: respuesta vacía.",
+      };
+    }
 
     const jsonCleaned = responseGeminiOrdenDelDia.text
       .trim()
@@ -161,7 +137,6 @@ export async function generateContenta(
       );
       
       if (!tieneCierre) {
-        console.log('Orden del día no incluye cierre, agregando...');
         ordenDelDiaJSON.push({
           id: ordenDelDiaJSON.length,
           nombre: "Cierre",
@@ -169,14 +144,6 @@ export async function generateContenta(
           discutido: true
         });
       }
-      
-      socketBackendReal.emit("upload-status", {
-        roomName: folder,
-        statusData: {
-          message: `[Contenido] Orden del dia listo `,
-        },
-      });
-      console.log('este es el orden del dia'+JSON.stringify(ordenDelDiaJSON));
 
       // Crear caché de transcripción en Gemini para reducir tokens por llamada
       const cachedContentId = await crearCacheGeminiTranscripcion(contenidoTranscripcion);
@@ -184,16 +151,10 @@ export async function generateContenta(
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
-        socketBackendReal,
         contenidoTranscripcion,
         cachedContentId
       );
 
-      // Log para verificar que el contenido incluye el cierre
-      console.log("🔍 CONTENIDO COMPLETO - Longitud:", contenido.length);
-      console.log("🔍 CONTENIDO COMPLETO - Incluye 'Cierre':", contenido.includes("Cierre"));
-      console.log("🔍 CONTENIDO COMPLETO - Últimas 500 caracteres:", contenido.slice(-500));
-      
       const contenidoFormato = contenido
         .replace(/```html/g, "")
         .replace(/HTML/g, "")
@@ -226,15 +187,9 @@ export async function generateContenta(
 }
 
 async function procesarOrdenDelDia(
-  //@ts-expect-error revisar después
-  ordenDelDiaJSON,
-  //@ts-expect-error revisar después
-  folder,
-  //@ts-expect-error revisar después
-  socketBackendReal,
-  //@ts-expect-error revisar después
-  contenidoTranscripcion,
-   // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  ordenDelDiaJSON: any,
+  folder: string,
+  contenidoTranscripcion: string,
   cachedContentId?: string
 ) {
  
@@ -246,27 +201,6 @@ async function procesarOrdenDelDia(
   let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
-    console.log(tema);
-    
-    // Log específico para el cierre
-    if (tema.nombre === "Cierre") {
-      console.log("🔍 PROCESANDO CIERRE - tema:", tema);
-      socketBackendReal.emit("upload-status", {
-        roomName: folder,
-        statusData: {
-          message: `[Contenido] Procesando Cierre de la Reunión`,
-        },
-      });
-    } else if (tema.nombre != "Cabecera") {
-      socketBackendReal.emit("upload-status", {
-        roomName: folder,
-        statusData: {
-          message: `[Contenido] ${index}/${ordenDelDiaJSON.length - 2}   ${tema.nombre
-            }   `,
-        },
-      });
-    }
-    console.log(index);
     const nombreTemaNormalizado = String((tema as { nombre: string })?.nombre ?? "")
       .trim()
       .toLowerCase();
@@ -291,13 +225,6 @@ async function procesarOrdenDelDia(
     // EXCEPCIONES: El cierre y la cabecera siempre necesitan la transcripción completa
     const contenidoTemaFuente = (tema )?.discutido === false && nombreTemaNormalizado !== "cierre" && nombreTemaNormalizado !== "cabecera" ? "" : contenidoTranscripcion;
 
-    // Debug log para cabecera
-    if (promptType === "Cabecera") {
-      console.log("🔍 GENERANDO CABECERA - Tema:", tema.nombre);
-      console.log("🔍 CONTENIDO TRANSCRIPCIÓN (primeros 500 chars):", contenidoTemaFuente.substring(0, 500));
-      console.log("🔍 LONGITUD TOTAL TRANSCRIPCIÓN:", contenidoTemaFuente.length);
-    }
-
     while (retryCount < maxRetries) {
       try {
         responseTema = await generateText({
@@ -316,21 +243,7 @@ async function procesarOrdenDelDia(
             ""
           ),
         });
-        // Evitamos logs largos; solo acumulamos
         contenido += responseTema.text.trim();
-        
-        // Log específico para el cierre
-        if (tema.nombre === "Cierre") {
-          console.log("✅ CIERRE PROCESADO - Longitud del contenido:", contenido.length);
-          console.log("📄 Últimas 200 caracteres del contenido:", contenido.slice(-200));
-        }
-        
-        // Log específico para la cabecera
-        if (tema.nombre === "Cabecera") {
-          console.log("✅ CABECERA PROCESADA - Respuesta completa:");
-          console.log(responseTema.text);
-        }
-        
         break;
       } catch (error) {
         console.error(
@@ -341,7 +254,6 @@ async function procesarOrdenDelDia(
         retryCount++;
         if (retryCount > 1) {
           modelName = "gemini-2.5-flash";
-          console.log("Cambio de modelo a gemini-2.5-flash");
         }
 
         if (retryCount >= maxRetries) {

@@ -22613,3 +22613,931 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): asamblea_extraordinar
 Compartiendo archivo existente para obtener URL pública: /Actas/asamblea_extraordinaria_torremolinos_20_sep/asamblea_extraordinaria_torremolinos_20_sep_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/iXMDWAZB29b4m6X
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/iXMDWAZB29b4m6X
+Verificando si existe transcripción: reunion_consejo_2025_10_08_Transcripcion.txt en carpeta reunion_consejo_2025_10_08
+[2025-11-11T13:37:30.039Z] Verificando existencia del archivo reunion_consejo_2025_10_08_Transcripcion.txt en Nextcloud carpeta reunion_consejo_2025_10_08.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_08/reunion_consejo_2025_10_08_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T13:37:31.475Z] Archivo "reunion_consejo_2025_10_08_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_08".
+Iniciando transcripción con AssemblyAI para: reunion_consejo_2025_10_08.mp4
+Guardando transcripción: reunion_consejo_2025_10_08_Transcripcion.txt en carpeta reunion_consejo_2025_10_08
+Transcripción guardada: reunion_consejo_2025_10_08_Transcripcion.txt
+Verificando contenido existente: reunion_consejo_2025_10_08_Contenido.txt
+[2025-11-11T13:38:36.180Z] Verificando existencia del archivo reunion_consejo_2025_10_08_Contenido.txt en Nextcloud carpeta reunion_consejo_2025_10_08.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_08/reunion_consejo_2025_10_08_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T13:38:36.996Z] Archivo "reunion_consejo_2025_10_08_Contenido.txt" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_08".
+Generando contenido para: reunion_consejo_2025_10_08.mp4
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: reunion_consejo_2025_10_08.mp4
+Guardando contenido en Nextcloud: reunion_consejo_2025_10_08_Contenido.txt
+Contenido guardado: reunion_consejo_2025_10_08_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: reunion_consejo_2025_10_08.mp4 en carpeta: reunion_consejo_2025_10_08
+Verificando Borrador .docx existente: reunion_consejo_2025_10_08_Borrador.docx
+[2025-11-11T13:39:37.479Z] Verificando existencia del archivo reunion_consejo_2025_10_08_Borrador.docx en Nextcloud carpeta reunion_consejo_2025_10_08.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_08/reunion_consejo_2025_10_08_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T13:39:38.278Z] Archivo "reunion_consejo_2025_10_08_Borrador.docx" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_08".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: reunion_consejo_2025_10_08_Borrador.docx
+Preparando guardado .docx en Nextcloud: reunion_consejo_2025_10_08_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión de Consejo de Administración del edificio cargado Propiedad Horizontal</h1>
+<p><strong>Fecha:</strong> 8 de octubre de 2025</p>
+<p><strong>Hora:</strong> Inicio: 6:49 - Cierre: 8:01</p>
+<p><strong>Lugar:</strong> Reunión virtual</p>
+<p><strong>Moderador:</strong> Andrés Felipe Guzmán</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Jaime Llano - Miembro del Consejo de Administración</li>
+<li>Claudia Bermúdez - Miembro del Consejo de Administración</li>
+<li>Ivette Game - Miembro del Consejo de Administración</li>
+<li>Ferney Pérez - Miembro del Consejo de Administración</li>
+<li>Andrés Felipe Guzmán - Representante legal del edificio</li>
+<li>Soledad Castro - Contadora</li>
+<li>Luz Adriana Gómez - Directora del proyecto</li>
+<li>Juan Cardo Chamorro - Revisor fiscal</li>
+<li>Natalie - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Llamada a lista y verificación de quórum</li>
+<li>Informe de revisor fiscal</li>
+<li>Informe de administración</li>
+<li>Proposiciones y varios</li>
+</ol>
+</header>
+<h2>1. Llamada a lista y verificación de quórum</h2>
+
+<p>La reunión del Consejo de Administración del edificio cargado Propiedad Horizontal dio inicio a las 6:49 p.m. del 8 de octubre de 2025. Se verificó la presencia de los miembros del Consejo de Administración: Jaime Llano, Claudia Bermúdez, Ivette Game y Ferney Pérez. Por parte de la administración, estuvieron presentes Andrés Felipe Guzmán, representante legal del edificio, Soledad Castro, contadora, Luz Adriana Gómez, directora del proyecto, y Juan Cardo Chamorro, revisor fiscal de la Propiedad Horizontal.</p>
+
+<p>En consecuencia, se dio por verificado el quórum y se procedió a desarrollar el orden del día propuesto, que incluía el informe del revisor fiscal, el informe de administración y el tema de proposiciones y varios.</p><h2>2. Informe de revisor fiscal</h2>
+
+<p>El informe del revisor fiscal se centró en tres puntos principales: el tema financiero, los pendientes operativos y de mantenimiento, y los pendientes administrativos y documentales. El revisor fiscal, Juan Carlos Chamorro, solicitó conocer los planes de acción de la administración para abordar estos temas.</p>
+
+<h3>Tema financiero: déficit en el capital de trabajo</h3>
+
+<p>El revisor fiscal señaló que, según los estados financieros, el déficit en el capital de trabajo había aumentado a 84 millones de pesos en agosto. Solicitó información sobre los planes de acción para contrarrestar esta situación, así como un flujo de caja proyectado para evaluar los ingresos estimados y las necesidades del edificio, y determinar si los recursos serían suficientes para cubrir las obligaciones.</p>
+
+<p>En respuesta, la administración informó sobre una negociación con la empresa de vigilancia IMPROCAM, que consistía en extender el contrato por dos periodos más, hasta el 6 de marzo de 2028. A cambio, se obtendría una bolsa de reinversión de 176.193.473 pesos, de los cuales se podrían utilizar hasta 100 millones de pesos en lo que restaba del año 2025 y el resto en 2026. Se indicó que esta medida ayudaría a solucionar el déficit.</p>
+
+<p>Adicionalmente, se mencionó una acción de tutela radicada para requerir la devolución, total o parcial, de una factura de Codenza por 75 millones de pesos, que la administración consideraba improcedente hasta que se resolviera un recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se esperaba que, en lugar de una devolución, se acreditara este monto a la cuenta del edificio, similar a lo ocurrido con una reclamación a la empresa de acueducto.</p>
+
+<p>La administración presentó un flujo de caja proyectado, aclarando que los cálculos se basaban en los recursos necesarios para solventar lo que restaba del año 2025. Se reconoció que para el presupuesto de 2026 sería necesario realizar ajustes mayores, incluyendo el mantenimiento de las puertas de vidrio y otros equipos.</p>
+
+<p>Dentro de los gastos incluidos en el flujo de caja proyectado, se destacaron el mantenimiento de zonas comunes, el mantenimiento de equipos (turco, planta eléctrica, pozos eyectores) y el sistema hidráulico, que comprende la red contra incendios, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego. Se informó que el contrato con IHM para el mantenimiento del sistema hidráulico se terminaría a partir del 15 de octubre, y se contrataría a JCC, un contratista con mayor experiencia.</p>
+
+<p>Se mencionó que el valor de reinversión ofrecido por Improcam para este año, inicialmente de 46 millones de pesos, ya se estaba utilizando para financiar actividades como la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos. La administración solicitaba que Improcam facturara directamente a los contratistas y gestionaba cartas de subrogación de la garantía a favor del edificio.</p>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de las puertas de vidrio de los puntos fijos del primer al piso 20 estaba cubierto por la garantía de la constructora, por lo que no sería necesario invertir en ese rubro. Andrés Felipe Guzmán aclaró que la puerta del barbecue sí requería una revisión urgente debido a un evento próximo, aunque también estaba en garantía, y que él había autorizado esa revisión de forma extraordinaria.</p>
+
+<p>Se planteó la posibilidad de que la empresa de vigilancia generara una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Juan Carlos Chamorro recomendó revisar cuidadosamente la contabilización de esta nota crédito, sugiriendo que no afectara el rubro de vigilancia y que se utilizara otra forma de registrarla. Andrés Felipe Guzmán propuso que Improcam pagara directamente a algunos proveedores, como el servicio de casa limpia, para evitar inconvenientes contables.</p>
+
+<p>Juan Carlos Chamorro solicitó que se incluyera en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, que ascendía a 25 millones de pesos. Soledad Castro explicó que, por ley, el conjunto debía ahorrar el 1% del presupuesto en una cuenta aparte, pero que en el banco solo había 11 millones de pesos, mientras que contablemente figuraban 30 y pico millones de pesos. Se acordó que se debía monetizar este año lo que quedaba presupuestado.</p>
+
+<h3>Pendientes operativos y de mantenimiento</h3>
+
+<p>Este punto se revisó durante la discusión del flujo de caja proyectado, donde se detallaron los mantenimientos necesarios y las acciones que se estaban llevando a cabo.</p>
+
+<h3>Pendientes administrativos y documentales</h3>
+
+<p>El revisor fiscal solicitó que se le formalizara por escrito el plan de trabajo para entregar documentos como el manual de contratación y el manual de políticas contables. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó que el procedimiento de contratación de mantenimientos de largo aliento consistía en solicitar tres cotizaciones, revisarlas con el apoyo de Claudia Bermúdez y contar con el aval de una interventoría y auditoría. Todos los contratos eran revisados por el representante legal y se verificaba la documentación de los contratistas.</p>
+
+<p>Juan Carlos Chamorro sugirió que se plasmaran por escrito las políticas contables, incluyendo los montos hasta los cuales la administración podía contratar directamente y los tipos de contrataciones que requerían pólizas. También propuso un manual de cómo se hacían los pagos y las políticas de cartera y tesorería.</p>
+
+<p>Andrés Felipe Guzmán aseguró que todos los procedimientos se estaban llevando a cabo de esa manera, pero que faltaba plasmarlos por escrito. Señaló que no hacía prejurídicos, ya que la administración enviaba los correos y requerimientos, y que en casos de deudas elevadas se procedía directamente al cobro por vía ejecutiva.</p>
+
+<p>Claudia Bermúdez preguntó sobre los asuntos contables pendientes por aclarar, como el tema de AXA y un anticipo de 9 millones de pesos. Soledad Castro explicó que había dos partidas pendientes de una reclamación a la póliza que no se había hecho, y que se llevarían al estado de resultados previa aprobación del Consejo. También mencionó que el dinero de la constructora se llevaría a aprovechamientos. Se acordó cerrar esos tres puntos para el próximo informe de revisoría fiscal.</p>
+
+<p>Juan Carlos Chamorro solicitó que se le enviaran copias de los comunicados enviados a la aseguradora para verificar la gestión realizada. Ofreció hacer las políticas contables para el cierre, ya que no se había presupuestado un valor para ese pago, y socializarlas con el Consejo y el revisor fiscal. Propuso provisionar un porcentaje de los intereses para cubrir posibles pérdidas en temas de honorarios de abogados.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no eran una expensa común y que los intereses hacían parte de los recursos patrimoniales de la copropiedad. Señaló que había que tener cuidado con el tema de servicios públicos, ya que no eran una empresa de servicios públicos.</p><h2>3. Informe de administración</h2>
+
+<p>El informe de administración abordó varios temas clave para la operación y el estado financiero del edificio. Se discutieron estrategias para mitigar el déficit en el capital de trabajo, la negociación con IMPROCAM para obtener recursos adicionales, el estado de la acción de tutela contra Codenza, y la proyección del flujo de caja para los últimos meses del año. Además, se trataron temas relacionados con el mantenimiento de zonas comunes y equipos, el sistema hidráulico, la revisión de puertas en garantía, la factura de vigilancia y la deuda interna relacionada con el fondo de imprevistos.</p>
+
+<h3>Negociación con IMPROCAM</h3>
+
+<p>La administración informó sobre la consolidación de una negociación con la empresa de vigilancia IMPROCAM. Se extendió el contrato por dos periodos más, hasta el 6 de marzo de 2028, lo que permitirá acceder a una bolsa total de reinversión de 176.193.473 pesos. Para el año 2025, se podrá disponer de hasta 100 millones de pesos, fraccionados en un máximo de 40 millones por mes (octubre y noviembre) y 20 millones en diciembre. El restante se utilizará en el año 2026. Se proporcionó una copia de la propuesta a Juan Carlos Chamorro y se formalizará a través de correo electrónico.</p>
+
+<h3>Acción de tutela por cobro de Codenza</h3>
+
+<p>Se informó que se radicó una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de 75 millones de pesos emitida por Codenza. La administración considera que el cobro no procedía hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se espera la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, que abocó conocimiento de la acción. Se remitió copia del auto a Juan Carlos Chamorro. En caso de no obtener la devolución del dinero, se buscará la acreditación de esta suma en la cuenta.</p>
+
+<h3>Flujo de caja proyectado</h3>
+
+<p>La administración presentó un flujo de caja proyectado para los últimos meses del año, enfocado en los recursos necesarios para solventar las necesidades inmediatas. Se aclaró que para el presupuesto de 2026 se deberán realizar ajustes mayores, incluyendo el mantenimiento de las puertas de vidrio y otros equipos. El flujo de caja proyectado incluye gastos adicionales no presupuestados, como el mantenimiento del turco, la planta eléctrica, los pozos eyectores y el sistema hidráulico. Se destacó que el sistema hidráulico, conformado por la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego, tendrá un costo inicial de 4.300.000 pesos para incluir todos los equipos, seguido de una mensualidad de 1.700.000 pesos. Adicionalmente, se prevé un costo adicional de 4.250.000 pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<p>Se mencionó que el valor de reinversión ofrecido por Improcam para este año, de 46 millones de pesos, ya se está utilizando para autorizar la ejecución de varias actividades. Se autorizó la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos, por un valor de 11.400.000 pesos, facturados directamente a Improcam. Se gestionará una carta de subrogación de la garantía de Improcam en favor del edificio.</p>
+
+<p>Juan Carlos Chamorro solicitó inmovilizar las filas en la hoja de cálculo para visualizar mejor los datos proyectados. Se explicó que el saldo inicial en septiembre es de 128 millones de pesos en bancos, resultado de un ingreso de 101 millones. Soledad Castro aclaró que de enero a agosto ya se tiene el flujo real, y se está cuadrando contra el saldo de bancos. Se proyectan los meses de octubre, noviembre y diciembre.</p>
+
+<p>Se discutieron los gastos extra, incluyendo el mantenimiento de puertas (12.500.000 pesos), el mantenimiento del jacuzzi (contrato con Karagani), la fumigación, el mantenimiento de motobombas y equipos hidráulicos, el lavado del tanque de agua potable (1.850.000 pesos), el mantenimiento del sistema de ventilación mecánica y aire acondicionado, el mantenimiento del teatrino, el sistema de gestión de seguridad y salud en el trabajo, el reemplazo del software contable Daytona por Properix, el mantenimiento del sistema de citofonía Fermax y la certificación de ascensores. También se incluyó la compra del tanque hidroacumulador del sistema de presión y los gastos bancarios.</p>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de puertas podría estar cubierto por la garantía de la constructora, ya que se evidenciaron fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Se acordó verificar si esta partida puede entrar en garantía.</p>
+
+<p>Jaime Llano preguntó cuáles de estos gastos serán cubiertos por la empresa de vigilancia. Se respondió que se gestionará para que Improcam acredite una factura de vigilancia pendiente, y se explorará la posibilidad de que Improcam pague directamente a algunos proveedores, como el servicio de casa limpia. Juan Carlos Chamorro recomendó revisar bien el tema de cómo contabilizar estos pagos, sugiriendo no afectar el rubro de vigilancia y utilizar otra forma de registrar la nota crédito.</p>
+
+<p>Se mencionó la importancia de robustecer el sistema de seguridad. Se discutió la posibilidad de que Vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas. Se acordó analizar cómo contabilizar esto para evitar problemas con la Superintendencia y asegurar que no afecte el gasto de vigilancia presupuestado.</p>
+
+<p>Juan Carlos Chamorro solicitó que se incluyera en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, estimado en 25 millones de pesos. Se aclaró que, por ley, el conjunto debe ahorrar el 1% del presupuesto en una cuenta aparte, pero actualmente solo hay 11 millones de pesos en el banco, mientras que contablemente hay alrededor de 30 millones de pesos. Se acordó monetizar este año lo que quedó presupuestado y asegurar que toda la plata esté disponible en el banco como un recurso restringido.</p>
+
+<h3>Mantenimiento de zonas comunes</h3>
+
+<p>Se identificó la necesidad de realizar mantenimiento en diversas zonas comunes del edificio. Se discutieron los costos asociados y la importancia de priorizar estas tareas para garantizar el buen estado y funcionamiento de las instalaciones.</p>
+
+<h3>Mantenimiento de equipos</h3>
+
+<p>Se abordó el tema del mantenimiento de los equipos del edificio, incluyendo el turco, la planta eléctrica y los pozos eyectores. Se destacó la importancia de contar con un programa de mantenimiento preventivo para evitar fallas y prolongar la vida útil de los equipos.</p>
+
+<h3>Sistema hidráulico</h3>
+
+<p>Se discutió el estado del sistema hidráulico, que incluye la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego. Se mencionó que el contrato con IHM se termina a partir del 15 de octubre y entra un nuevo contratista llamado JCC, que ofrece un mayor alcance en el mantenimiento de estos equipos. Se informó sobre un costo adicional de 4.250.000 pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<h3>Revisión de puertas en garantía</h3>
+
+<p>Se mencionó que se está gestionando la revisión de las puertas en garantía con la constructora, debido a fallas de instalación. Claudia Bermúdez indicó que ya se realizó la prueba en seis puertas y que la constructora se encargará de reinstalarlas. Se acordó tener en cuenta esta situación para no invertir en mantenimiento de puertas que puedan estar cubiertas por la garantía.</p>
+
+<h3>Factura de vigilancia</h3>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Se explorará la opción de que Improcam pague directamente a algunos proveedores para evitar problemas contables.</p>
+
+<h3>Deuda interna: fondo imprevistos</h3>
+
+<p>Se acordó incluir en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, estimado en 25 millones de pesos. Se buscará monetizar este año lo que quedó presupuestado y asegurar que toda la plata esté disponible en el banco como un recurso restringido.</p><h2>4. Proposiciones y varios</h2>
+
+<p>Durante el espacio de proposiciones y varios, se abordaron temas relacionados con el incremento de la cuota de administración, el descuento por pronto pago, asuntos contables pendientes, políticas contables y procesos de cobro.</p>
+
+<h3>Incremento de la cuota de administración</h3>
+
+<p>Jaime Llano expresó la necesidad de no descuidar el tema del incremento de la cuota de administración, a pesar del "salvavidas" financiero que representa el acuerdo con la empresa de vigilancia. Enfatizó que, al llegar a la asamblea ordinaria, se debe ser claro en la urgencia de actualizar el presupuesto en materia de valor, ya que el "salvavidas" no durará mucho si no se aborda el tema de la cuota de administración. Andrés Felipe Guzmán se mostró totalmente de acuerdo con esta postura, recordando que Jaime Llano había hecho un buen ejercicio en asambleas pasadas al exponer el porcentaje ideal de incremento que se requería para la operación del edificio, aunque su sugerencia no fue tenida en cuenta en ese momento.</p>
+
+<h3>Descuento por pronto pago</h3>
+
+<p>Claudia Bermúdez preguntó sobre la posibilidad de quitar el descuento por pronto pago como una forma de favorecer el presupuesto, dado que ya se tienen los 17 equipos en mantenimiento. Manifestó su preocupación de que todos los equipos queden cubiertos y preguntó si quitar el descuento representaría una diferencia significativa en las cifras. Andrés Felipe Guzmán respondió que el descuento por pronto pago es una manera de incentivar el recaudo dentro de unos plazos y márgenes para poder tener la disponibilidad de pagar las obligaciones como se debe. Consideró que quitarlo podría afectar la percepción de los propietarios y sugirió jugar con los porcentajes en lugar de retirarlo por completo.</p>
+
+<p>Claudia Bermúdez argumentó que, en comparación con la cartera que está disparada, son pocos los apartamentos que no pagan, por lo que no está segura de que el descuento sea tan representativo. Andrés Felipe Guzmán explicó que, legalmente, los deudores tienen todo el mes para pagar, por lo que el incentivo del pronto pago ayuda a tener disponibilidad de recursos para el pago de las obligaciones. Sugirió pensar en varios escenarios en relación con el porcentaje del descuento.</p>
+
+<p>Juan Carlos Chamorro manifestó estar totalmente de acuerdo con Andrés Felipe Guzmán. Expuso que, en el lugar donde vive, quitaron el descuento por pronto pago y ahora paga al final del mes, ya que le resulta más conveniente tener el dinero disponible. Ivette Game coincidió en que, si se va a subir la cuota de administración, no se debería quitar el descuento por pronto pago. Claudia Bermúdez aclaró que su pregunta era para saber si compensaba no subir tanto la cuota de administración y quitar el descuento, pero entendió que financieramente es mejor recibir el dinero en los primeros días del mes.</p>
+
+<h3>Asuntos contables pendientes</h3>
+
+<p>Claudia Bermúdez preguntó a Juan Carlos Chamorro sobre los asuntos contables pendientes que menciona en sus informes, como el tema de AXA y un anticipo de 9 millones. Expresó su preocupación de llegar a una asamblea con las mismas partidas pendientes que vienen desde hace mucho tiempo y sin resolver. Juan Carlos Chamorro respondió que hay dos partidas que dependen de la póliza y que no cree que la póliza responda por siniestros de hace tres años. Soledad Castro añadió que están pendientes de una reclamación que se debió hacer a la póliza y que no se hizo. Propuso llevar esos valores al estado de resultados, previa aprobación del Consejo, con el sustento de la respuesta de la póliza. En cuanto al tema de la constructora, sugirió llevarlo a aprovechamientos. Soledad Castro propuso que quede en un acta de aprobación de esos registros para tener un sustento y sanear esos valores.</p>
+
+<p>Andrés Felipe Guzmán se comprometió a que esos temas queden resueltos. Juan Carlos Chamorro solicitó que le envíen copia de los comunicados que se hayan enviado a la aseguradora para tener evidencia de que se ha hecho la gestión. Soledad Castro propuso hacer las políticas contables para el cierre, ya que no hay un valor presupuestado para ese pago. Ofreció hacerlas y socializarlas en una reunión de consejo con el revisor fiscal, incluyendo una provisión para el tema de los honorarios de abogados.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no son una expensa común y que los intereses hacen parte de los recursos patrimoniales de la copropiedad. Advirtió sobre el cuidado que se debe tener con el tema de los servicios públicos, ya que no son una empresa de servicios públicos. Juan Carlos Chamorro solicitó que le contesten por escrito los puntos pendientes.</p>
+
+<h3>Políticas contables</h3>
+
+<p>Este tema se encuentra entrelazado con el subtema anterior de "Asuntos contables pendientes", donde se discutió la necesidad de formalizar las políticas contables por escrito. Se mencionó que Juan Carlos Chamorro había solicitado que se le formalizara por escrito el plan de trabajo para entregar, por ejemplo, el manual de contratación y el manual de políticas contables. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó el procedimiento de contratación, que incluye solicitar tres cotizaciones, revisar con el apoyo de Claudia Bermúdez y contar con el aval de una interventoría y auditoría. Todos los contratos son revisados por el representante legal y asesor jurídico.</p>
+
+<p>Se acordó que se plasmarán las políticas contables por escrito, incluyendo hasta qué montos la administración tiene la posibilidad de contratar directamente y qué tipo de contrataciones requieren pólizas. Juan Carlos Chamorro sugirió que se formalicen las políticas de cartera y tesorería, incluyendo el procedimiento de cobro. Andrés Felipe Guzmán aseguró que todos los procedimientos se están haciendo de esa manera, pero que falta plasmarlos por escrito.</p>
+
+<h3>Procesos de cobro</h3>
+
+<p>Este tema se encuentra relacionado con el subtema anterior de "Políticas contables", donde se mencionó la necesidad de formalizar las políticas de cartera y tesorería, incluyendo el procedimiento de cobro. Andrés Felipe Guzmán mencionó que no hace prejurídicos, ya que la administración envía los correos, requerimientos y cuentas de cobro. En casos álgidos, se va directamente al cobro por vía ejecutiva. Se mencionó la importancia de revisar el tema de cartera y no manejar todos los casos con la misma medida. Se destacó la necesidad de ser cuidadosos con el tema de los servicios públicos, ya que no son una empresa de servicios públicos.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 20:01</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Extender el contrato con la empresa de vigilancia IMPROCAM por dos periodos más hasta el 6 de marzo de 2028. – <strong>Responsable:</strong> Consejo de Administración</li>
+ <li>La administración responderá por escrito al revisor fiscal sobre los pendientes administrativos y documentales, indicando planes de trabajo o justificación de no realización. – <strong>Responsable:</strong> Andrés Felipe Guzmán (Administración)</li>
+ <li>Incluir la deuda interna del fondo de imprevistos (aproximadamente 25 millones de pesos) en el flujo de caja. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se enviará copia de los comunicados enviados a la aseguradora al revisor fiscal. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se elaborarán las políticas contables para el cierre, socializándolas con el Consejo y el revisor fiscal. – <strong>Responsable:</strong> Soledad Castro (Contadora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión de Consejo de Administración del edificio cargado Propiedad Horizontal</h1>
+<p><strong>Fecha:</strong> 8 de octubre de 2025</p>
+<p><strong>Hora:</strong> Inicio: 6:49 - Cierre: 8:01</p>
+<p><strong>Lugar:</strong> Reunión virtual</p>
+<p><strong>Moderador:</strong> Andrés Felipe Guzmán</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Jaime Llano - Miembro del Consejo de Administración</li>
+<li>Claudia Bermúdez - Miembro del Consejo de Administración</li>
+<li>Ivette Game - Miembro del Consejo de Administración</li>
+<li>Ferney Pérez - Miembro del Consejo de Administración</li>
+<li>Andrés Felipe Guzmán - Representante legal del edificio</li>
+<li>Soledad Castro - Contadora</li>
+<li>Luz Adriana Gómez - Directora del proyecto</li>
+<li>Juan Cardo Chamorro - Revisor fiscal</li>
+<li>Natalie - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Llamada a lista y verificación de quórum</li>
+<li>Informe de revisor fiscal</li>
+<li>Informe de administración</li>
+<li>Proposiciones y varios</li>
+</ol>
+</header>
+<h2>1. Llamada a lista y verificación de quórum</h2>
+
+<p>La reunión del Consejo de Administración del edificio cargado Propiedad Horizontal dio inicio a las 6:49 p.m. del 8 de octubre de 2025. Se verificó la presencia de los miembros del Consejo de Administración: Jaime Llano, Claudia Bermúdez, Ivette Game y Ferney Pérez. Por parte de la administración, estuvieron presentes Andrés Felipe Guzmán, representante legal del edificio, Soledad Castro, contadora, Luz Adriana Gómez, directora del proyecto, y Juan Cardo Chamorro, revisor fiscal de la Propiedad Horizontal.</p>
+
+<p>En consecuencia, se dio por verificado el quórum y se procedió a desarrollar el orden del día propuesto, que incluía el informe del revisor fiscal, el informe de administración y el tema de proposiciones y varios.</p><h2>2. Informe de revisor fiscal</h2>
+
+<p>El informe del revisor fiscal se centró en tres puntos principales: el tema financiero, los pendientes operativos y de mantenimiento, y los pendientes administrativos y documentales. El revisor fiscal, Juan Carlos Chamorro, solicitó conocer los planes de acción de la administración para abordar estos temas.</p>
+
+<h3>Tema financiero: déficit en el capital de trabajo</h3>
+
+<p>El revisor fiscal señaló que, según los estados financieros, el déficit en el capital de trabajo había aumentado a 84 millones de pesos en agosto. Solicitó información sobre los planes de acción para contrarrestar esta situación, así como un flujo de caja proyectado para evaluar los ingresos estimados y las necesidades del edificio, y determinar si los recursos serían suficientes para cubrir las obligaciones.</p>
+
+<p>En respuesta, la administración informó sobre una negociación con la empresa de vigilancia IMPROCAM, que consistía en extender el contrato por dos periodos más, hasta el 6 de marzo de 2028. A cambio, se obtendría una bolsa de reinversión de 176.193.473 pesos, de los cuales se podrían utilizar hasta 100 millones de pesos en lo que restaba del año 2025 y el resto en 2026. Se indicó que esta medida ayudaría a solucionar el déficit.</p>
+
+<p>Adicionalmente, se mencionó una acción de tutela radicada para requerir la devolución, total o parcial, de una factura de Codenza por 75 millones de pesos, que la administración consideraba improcedente hasta que se resolviera un recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se esperaba que, en lugar de una devolución, se acreditara este monto a la cuenta del edificio, similar a lo ocurrido con una reclamación a la empresa de acueducto.</p>
+
+<p>La administración presentó un flujo de caja proyectado, aclarando que los cálculos se basaban en los recursos necesarios para solventar lo que restaba del año 2025. Se reconoció que para el presupuesto de 2026 sería necesario realizar ajustes mayores, incluyendo el mantenimiento de las puertas de vidrio y otros equipos.</p>
+
+<p>Dentro de los gastos incluidos en el flujo de caja proyectado, se destacaron el mantenimiento de zonas comunes, el mantenimiento de equipos (turco, planta eléctrica, pozos eyectores) y el sistema hidráulico, que comprende la red contra incendios, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego. Se informó que el contrato con IHM para el mantenimiento del sistema hidráulico se terminaría a partir del 15 de octubre, y se contrataría a JCC, un contratista con mayor experiencia.</p>
+
+<p>Se mencionó que el valor de reinversión ofrecido por Improcam para este año, inicialmente de 46 millones de pesos, ya se estaba utilizando para financiar actividades como la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos. La administración solicitaba que Improcam facturara directamente a los contratistas y gestionaba cartas de subrogación de la garantía a favor del edificio.</p>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de las puertas de vidrio de los puntos fijos del primer al piso 20 estaba cubierto por la garantía de la constructora, por lo que no sería necesario invertir en ese rubro. Andrés Felipe Guzmán aclaró que la puerta del barbecue sí requería una revisión urgente debido a un evento próximo, aunque también estaba en garantía, y que él había autorizado esa revisión de forma extraordinaria.</p>
+
+<p>Se planteó la posibilidad de que la empresa de vigilancia generara una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Juan Carlos Chamorro recomendó revisar cuidadosamente la contabilización de esta nota crédito, sugiriendo que no afectara el rubro de vigilancia y que se utilizara otra forma de registrarla. Andrés Felipe Guzmán propuso que Improcam pagara directamente a algunos proveedores, como el servicio de casa limpia, para evitar inconvenientes contables.</p>
+
+<p>Juan Carlos Chamorro solicitó que se incluyera en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, que ascendía a 25 millones de pesos. Soledad Castro explicó que, por ley, el conjunto debía ahorrar el 1% del presupuesto en una cuenta aparte, pero que en el banco solo había 11 millones de pesos, mientras que contablemente figuraban 30 y pico millones de pesos. Se acordó que se debía monetizar este año lo que quedaba presupuestado.</p>
+
+<h3>Pendientes operativos y de mantenimiento</h3>
+
+<p>Este punto se revisó durante la discusión del flujo de caja proyectado, donde se detallaron los mantenimientos necesarios y las acciones que se estaban llevando a cabo.</p>
+
+<h3>Pendientes administrativos y documentales</h3>
+
+<p>El revisor fiscal solicitó que se le formalizara por escrito el plan de trabajo para entregar documentos como el manual de contratación y el manual de políticas contables. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó que el procedimiento de contratación de mantenimientos de largo aliento consistía en solicitar tres cotizaciones, revisarlas con el apoyo de Claudia Bermúdez y contar con el aval de una interventoría y auditoría. Todos los contratos eran revisados por el representante legal y se verificaba la documentación de los contratistas.</p>
+
+<p>Juan Carlos Chamorro sugirió que se plasmaran por escrito las políticas contables, incluyendo los montos hasta los cuales la administración podía contratar directamente y los tipos de contrataciones que requerían pólizas. También propuso un manual de cómo se hacían los pagos y las políticas de cartera y tesorería.</p>
+
+<p>Andrés Felipe Guzmán aseguró que todos los procedimientos se estaban llevando a cabo de esa manera, pero que faltaba plasmarlos por escrito. Señaló que no hacía prejurídicos, ya que la administración enviaba los correos y requerimientos, y que en casos de deudas elevadas se procedía directamente al cobro por vía ejecutiva.</p>
+
+<p>Claudia Bermúdez preguntó sobre los asuntos contables pendientes por aclarar, como el tema de AXA y un anticipo de 9 millones de pesos. Soledad Castro explicó que había dos partidas pendientes de una reclamación a la póliza que no se había hecho, y que se llevarían al estado de resultados previa aprobación del Consejo. También mencionó que el dinero de la constructora se llevaría a aprovechamientos. Se acordó cerrar esos tres puntos para el próximo informe de revisoría fiscal.</p>
+
+<p>Juan Carlos Chamorro solicitó que se le enviaran copias de los comunicados enviados a la aseguradora para verificar la gestión realizada. Ofreció hacer las políticas contables para el cierre, ya que no se había presupuestado un valor para ese pago, y socializarlas con el Consejo y el revisor fiscal. Propuso provisionar un porcentaje de los intereses para cubrir posibles pérdidas en temas de honorarios de abogados.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no eran una expensa común y que los intereses hacían parte de los recursos patrimoniales de la copropiedad. Señaló que había que tener cuidado con el tema de servicios públicos, ya que no eran una empresa de servicios públicos.</p><h2>3. Informe de administración</h2>
+
+<p>El informe de administración abordó varios temas clave para la operación y el estado financiero del edificio. Se discutieron estrategias para mitigar el déficit en el capital de trabajo, la negociación con IMPROCAM para obtener recursos adicionales, el estado de la acción de tutela contra Codenza, y la proyección del flujo de caja para los últimos meses del año. Además, se trataron temas relacionados con el mantenimiento de zonas comunes y equipos, el sistema hidráulico, la revisión de puertas en garantía, la factura de vigilancia y la deuda interna relacionada con el fondo de imprevistos.</p>
+
+<h3>Negociación con IMPROCAM</h3>
+
+<p>La administración informó sobre la consolidación de una negociación con la empresa de vigilancia IMPROCAM. Se extendió el contrato por dos periodos más, hasta el 6 de marzo de 2028, lo que permitirá acceder a una bolsa total de reinversión de 176.193.473 pesos. Para el año 2025, se podrá disponer de hasta 100 millones de pesos, fraccionados en un máximo de 40 millones por mes (octubre y noviembre) y 20 millones en diciembre. El restante se utilizará en el año 2026. Se proporcionó una copia de la propuesta a Juan Carlos Chamorro y se formalizará a través de correo electrónico.</p>
+
+<h3>Acción de tutela por cobro de Codenza</h3>
+
+<p>Se informó que se radicó una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de 75 millones de pesos emitida por Codenza. La administración considera que el cobro no procedía hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se espera la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, que abocó conocimiento de la acción. Se remitió copia del auto a Juan Carlos Chamorro. En caso de no obtener la devolución del dinero, se buscará la acreditación de esta suma en la cuenta.</p>
+
+<h3>Flujo de caja proyectado</h3>
+
+<p>La administración presentó un flujo de caja proyectado para los últimos meses del año, enfocado en los recursos necesarios para solventar las necesidades inmediatas. Se aclaró que para el presupuesto de 2026 se deberán realizar ajustes mayores, incluyendo el mantenimiento de las puertas de vidrio y otros equipos. El flujo de caja proyectado incluye gastos adicionales no presupuestados, como el mantenimiento del turco, la planta eléctrica, los pozos eyectores y el sistema hidráulico. Se destacó que el sistema hidráulico, conformado por la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego, tendrá un costo inicial de 4.300.000 pesos para incluir todos los equipos, seguido de una mensualidad de 1.700.000 pesos. Adicionalmente, se prevé un costo adicional de 4.250.000 pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<p>Se mencionó que el valor de reinversión ofrecido por Improcam para este año, de 46 millones de pesos, ya se está utilizando para autorizar la ejecución de varias actividades. Se autorizó la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos, por un valor de 11.400.000 pesos, facturados directamente a Improcam. Se gestionará una carta de subrogación de la garantía de Improcam en favor del edificio.</p>
+
+<p>Juan Carlos Chamorro solicitó inmovilizar las filas en la hoja de cálculo para visualizar mejor los datos proyectados. Se explicó que el saldo inicial en septiembre es de 128 millones de pesos en bancos, resultado de un ingreso de 101 millones. Soledad Castro aclaró que de enero a agosto ya se tiene el flujo real, y se está cuadrando contra el saldo de bancos. Se proyectan los meses de octubre, noviembre y diciembre.</p>
+
+<p>Se discutieron los gastos extra, incluyendo el mantenimiento de puertas (12.500.000 pesos), el mantenimiento del jacuzzi (contrato con Karagani), la fumigación, el mantenimiento de motobombas y equipos hidráulicos, el lavado del tanque de agua potable (1.850.000 pesos), el mantenimiento del sistema de ventilación mecánica y aire acondicionado, el mantenimiento del teatrino, el sistema de gestión de seguridad y salud en el trabajo, el reemplazo del software contable Daytona por Properix, el mantenimiento del sistema de citofonía Fermax y la certificación de ascensores. También se incluyó la compra del tanque hidroacumulador del sistema de presión y los gastos bancarios.</p>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de puertas podría estar cubierto por la garantía de la constructora, ya que se evidenciaron fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Se acordó verificar si esta partida puede entrar en garantía.</p>
+
+<p>Jaime Llano preguntó cuáles de estos gastos serán cubiertos por la empresa de vigilancia. Se respondió que se gestionará para que Improcam acredite una factura de vigilancia pendiente, y se explorará la posibilidad de que Improcam pague directamente a algunos proveedores, como el servicio de casa limpia. Juan Carlos Chamorro recomendó revisar bien el tema de cómo contabilizar estos pagos, sugiriendo no afectar el rubro de vigilancia y utilizar otra forma de registrar la nota crédito.</p>
+
+<p>Se mencionó la importancia de robustecer el sistema de seguridad. Se discutió la posibilidad de que Vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas. Se acordó analizar cómo contabilizar esto para evitar problemas con la Superintendencia y asegurar que no afecte el gasto de vigilancia presupuestado.</p>
+
+<p>Juan Carlos Chamorro solicitó que se incluyera en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, estimado en 25 millones de pesos. Se aclaró que, por ley, el conjunto debe ahorrar el 1% del presupuesto en una cuenta aparte, pero actualmente solo hay 11 millones de pesos en el banco, mientras que contablemente hay alrededor de 30 millones de pesos. Se acordó monetizar este año lo que quedó presupuestado y asegurar que toda la plata esté disponible en el banco como un recurso restringido.</p>
+
+<h3>Mantenimiento de zonas comunes</h3>
+
+<p>Se identificó la necesidad de realizar mantenimiento en diversas zonas comunes del edificio. Se discutieron los costos asociados y la importancia de priorizar estas tareas para garantizar el buen estado y funcionamiento de las instalaciones.</p>
+
+<h3>Mantenimiento de equipos</h3>
+
+<p>Se abordó el tema del mantenimiento de los equipos del edificio, incluyendo el turco, la planta eléctrica y los pozos eyectores. Se destacó la importancia de contar con un programa de mantenimiento preventivo para evitar fallas y prolongar la vida útil de los equipos.</p>
+
+<h3>Sistema hidráulico</h3>
+
+<p>Se discutió el estado del sistema hidráulico, que incluye la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego. Se mencionó que el contrato con IHM se termina a partir del 15 de octubre y entra un nuevo contratista llamado JCC, que ofrece un mayor alcance en el mantenimiento de estos equipos. Se informó sobre un costo adicional de 4.250.000 pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<h3>Revisión de puertas en garantía</h3>
+
+<p>Se mencionó que se está gestionando la revisión de las puertas en garantía con la constructora, debido a fallas de instalación. Claudia Bermúdez indicó que ya se realizó la prueba en seis puertas y que la constructora se encargará de reinstalarlas. Se acordó tener en cuenta esta situación para no invertir en mantenimiento de puertas que puedan estar cubiertas por la garantía.</p>
+
+<h3>Factura de vigilancia</h3>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Se explorará la opción de que Improcam pague directamente a algunos proveedores para evitar problemas contables.</p>
+
+<h3>Deuda interna: fondo imprevistos</h3>
+
+<p>Se acordó incluir en el flujo de caja una deuda interna correspondiente al fondo de imprevistos, estimado en 25 millones de pesos. Se buscará monetizar este año lo que quedó presupuestado y asegurar que toda la plata esté disponible en el banco como un recurso restringido.</p><h2>4. Proposiciones y varios</h2>
+
+<p>Durante el espacio de proposiciones y varios, se abordaron temas relacionados con el incremento de la cuota de administración, el descuento por pronto pago, asuntos contables pendientes, políticas contables y procesos de cobro.</p>
+
+<h3>Incremento de la cuota de administración</h3>
+
+<p>Jaime Llano expresó la necesidad de no descuidar el tema del incremento de la cuota de administración, a pesar del "salvavidas" financiero que representa el acuerdo con la empresa de vigilancia. Enfatizó que, al llegar a la asamblea ordinaria, se debe ser claro en la urgencia de actualizar el presupuesto en materia de valor, ya que el "salvavidas" no durará mucho si no se aborda el tema de la cuota de administración. Andrés Felipe Guzmán se mostró totalmente de acuerdo con esta postura, recordando que Jaime Llano había hecho un buen ejercicio en asambleas pasadas al exponer el porcentaje ideal de incremento que se requería para la operación del edificio, aunque su sugerencia no fue tenida en cuenta en ese momento.</p>
+
+<h3>Descuento por pronto pago</h3>
+
+<p>Claudia Bermúdez preguntó sobre la posibilidad de quitar el descuento por pronto pago como una forma de favorecer el presupuesto, dado que ya se tienen los 17 equipos en mantenimiento. Manifestó su preocupación de que todos los equipos queden cubiertos y preguntó si quitar el descuento representaría una diferencia significativa en las cifras. Andrés Felipe Guzmán respondió que el descuento por pronto pago es una manera de incentivar el recaudo dentro de unos plazos y márgenes para poder tener la disponibilidad de pagar las obligaciones como se debe. Consideró que quitarlo podría afectar la percepción de los propietarios y sugirió jugar con los porcentajes en lugar de retirarlo por completo.</p>
+
+<p>Claudia Bermúdez argumentó que, en comparación con la cartera que está disparada, son pocos los apartamentos que no pagan, por lo que no está segura de que el descuento sea tan representativo. Andrés Felipe Guzmán explicó que, legalmente, los deudores tienen todo el mes para pagar, por lo que el incentivo del pronto pago ayuda a tener disponibilidad de recursos para el pago de las obligaciones. Sugirió pensar en varios escenarios en relación con el porcentaje del descuento.</p>
+
+<p>Juan Carlos Chamorro manifestó estar totalmente de acuerdo con Andrés Felipe Guzmán. Expuso que, en el lugar donde vive, quitaron el descuento por pronto pago y ahora paga al final del mes, ya que le resulta más conveniente tener el dinero disponible. Ivette Game coincidió en que, si se va a subir la cuota de administración, no se debería quitar el descuento por pronto pago. Claudia Bermúdez aclaró que su pregunta era para saber si compensaba no subir tanto la cuota de administración y quitar el descuento, pero entendió que financieramente es mejor recibir el dinero en los primeros días del mes.</p>
+
+<h3>Asuntos contables pendientes</h3>
+
+<p>Claudia Bermúdez preguntó a Juan Carlos Chamorro sobre los asuntos contables pendientes que menciona en sus informes, como el tema de AXA y un anticipo de 9 millones. Expresó su preocupación de llegar a una asamblea con las mismas partidas pendientes que vienen desde hace mucho tiempo y sin resolver. Juan Carlos Chamorro respondió que hay dos partidas que dependen de la póliza y que no cree que la póliza responda por siniestros de hace tres años. Soledad Castro añadió que están pendientes de una reclamación que se debió hacer a la póliza y que no se hizo. Propuso llevar esos valores al estado de resultados, previa aprobación del Consejo, con el sustento de la respuesta de la póliza. En cuanto al tema de la constructora, sugirió llevarlo a aprovechamientos. Soledad Castro propuso que quede en un acta de aprobación de esos registros para tener un sustento y sanear esos valores.</p>
+
+<p>Andrés Felipe Guzmán se comprometió a que esos temas queden resueltos. Juan Carlos Chamorro solicitó que le envíen copia de los comunicados que se hayan enviado a la aseguradora para tener evidencia de que se ha hecho la gestión. Soledad Castro propuso hacer las políticas contables para el cierre, ya que no hay un valor presupuestado para ese pago. Ofreció hacerlas y socializarlas en una reunión de consejo con el revisor fiscal, incluyendo una provisión para el tema de los honorarios de abogados.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no son una expensa común y que los intereses hacen parte de los recursos patrimoniales de la copropiedad. Advirtió sobre el cuidado que se debe tener con el tema de los servicios públicos, ya que no son una empresa de servicios públicos. Juan Carlos Chamorro solicitó que le contesten por escrito los puntos pendientes.</p>
+
+<h3>Políticas contables</h3>
+
+<p>Este tema se encuentra entrelazado con el subtema anterior de "Asuntos contables pendientes", donde se discutió la necesidad de formalizar las políticas contables por escrito. Se mencionó que Juan Carlos Chamorro había solicitado que se le formalizara por escrito el plan de trabajo para entregar, por ejemplo, el manual de contratación y el manual de políticas contables. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó el procedimiento de contratación, que incluye solicitar tres cotizaciones, revisar con el apoyo de Claudia Bermúdez y contar con el aval de una interventoría y auditoría. Todos los contratos son revisados por el representante legal y asesor jurídico.</p>
+
+<p>Se acordó que se plasmarán las políticas contables por escrito, incluyendo hasta qué montos la administración tiene la posibilidad de contratar directamente y qué tipo de contrataciones requieren pólizas. Juan Carlos Chamorro sugirió que se formalicen las políticas de cartera y tesorería, incluyendo el procedimiento de cobro. Andrés Felipe Guzmán aseguró que todos los procedimientos se están haciendo de esa manera, pero que falta plasmarlos por escrito.</p>
+
+<h3>Procesos de cobro</h3>
+
+<p>Este tema se encuentra relacionado con el subtema anterior de "Políticas contables", donde se mencionó la necesidad de formalizar las políticas de cartera y tesorería, incluyendo el procedimiento de cobro. Andrés Felipe Guzmán mencionó que no hace prejurídicos, ya que la administración envía los correos, requerimientos y cuentas de cobro. En casos álgidos, se va directamente al cobro por vía ejecutiva. Se mencionó la importancia de revisar el tema de cartera y no manejar todos los casos con la misma medida. Se destacó la necesidad de ser cuidadosos con el tema de los servicios públicos, ya que no son una empresa de servicios públicos.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 20:01</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Extender el contrato con la empresa de vigilancia IMPROCAM por dos periodos más hasta el 6 de marzo de 2028. – <strong>Responsable:</strong> Consejo de Administración</li>
+ <li>La administración responderá por escrito al revisor fiscal sobre los pendientes administrativos y documentales, indicando planes de trabajo o justificación de no realización. – <strong>Responsable:</strong> Andrés Felipe Guzmán (Administración)</li>
+ <li>Incluir la deuda interna del fondo de imprevistos (aproximadamente 25 millones de pesos) en el flujo de caja. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se enviará copia de los comunicados enviados a la aseguradora al revisor fiscal. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se elaborarán las políticas contables para el cierre, socializándolas con el Consejo y el revisor fiscal. – <strong>Responsable:</strong> Soledad Castro (Contadora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): reunion_consejo_2025_10_08_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_consejo_2025_10_08/reunion_consejo_2025_10_08_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/aLbfgtSpZSASEHZ
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/aLbfgtSpZSASEHZ
+Generando URL pública para Transcripcion.txt (EXISTENTE): reunion_consejo_2025_10_08_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_consejo_2025_10_08/reunion_consejo_2025_10_08_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/3xCcCnx5j9gs7eZ
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/3xCcCnx5j9gs7eZ
+Verificando si existe transcripción: reunion_consejo_2025_10_09_Transcripcion.txt en carpeta reunion_consejo_2025_10_09
+[2025-11-11T13:58:47.902Z] Verificando existencia del archivo reunion_consejo_2025_10_09_Transcripcion.txt en Nextcloud carpeta reunion_consejo_2025_10_09.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_09/reunion_consejo_2025_10_09_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T13:58:49.337Z] Archivo "reunion_consejo_2025_10_09_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_09".
+Iniciando transcripción con AssemblyAI para: reunion_consejo_2025_10_09.mp4
+Guardando transcripción: reunion_consejo_2025_10_09_Transcripcion.txt en carpeta reunion_consejo_2025_10_09
+Transcripción guardada: reunion_consejo_2025_10_09_Transcripcion.txt
+Verificando contenido existente: reunion_consejo_2025_10_09_Contenido.txt
+[2025-11-11T14:00:23.829Z] Verificando existencia del archivo reunion_consejo_2025_10_09_Contenido.txt en Nextcloud carpeta reunion_consejo_2025_10_09.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_09/reunion_consejo_2025_10_09_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T14:00:24.647Z] Archivo "reunion_consejo_2025_10_09_Contenido.txt" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_09".
+Generando contenido para: reunion_consejo_2025_10_09.mp4
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: reunion_consejo_2025_10_09.mp4
+Guardando contenido en Nextcloud: reunion_consejo_2025_10_09_Contenido.txt
+Contenido guardado: reunion_consejo_2025_10_09_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: reunion_consejo_2025_10_09.mp4 en carpeta: reunion_consejo_2025_10_09
+Verificando Borrador .docx existente: reunion_consejo_2025_10_09_Borrador.docx
+[2025-11-11T14:01:54.150Z] Verificando existencia del archivo reunion_consejo_2025_10_09_Borrador.docx en Nextcloud carpeta reunion_consejo_2025_10_09.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_consejo_2025_10_09/reunion_consejo_2025_10_09_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-11T14:01:54.956Z] Archivo "reunion_consejo_2025_10_09_Borrador.docx" NO encontrado en Nextcloud en la carpeta "reunion_consejo_2025_10_09".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: reunion_consejo_2025_10_09_Borrador.docx
+Preparando guardado .docx en Nextcloud: reunion_consejo_2025_10_09_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión de Consejo de Administración</h1>
+ <p><strong>Fecha:</strong> 8 de octubre de 2025</p>
+ <p><strong>Hora:</strong> Inicio: 6:49 minutos - Cierre: 8 y 1 minutos</p>
+ <p><strong>Lugar:</strong> Edificio cargado Propiedad Horizontal - Reunión virtual</p>
+ <p><strong>Moderador:</strong> Andrés Felipe Guzmán</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Jaime Llano - Miembro del Consejo de Administración</li>
+ <li>Claudia Bermúdez - Miembro del Consejo de Administración</li>
+ <li>Ivette Game - Miembro del Consejo de Administración</li>
+ <li>Ferney Pérez - Miembro del Consejo de Administración</li>
+ <li>Andrés Felipe Guzmán - Representante legal del edificio</li>
+ <li>Soledad Castro - Contadora</li>
+ <li>Luz Adriana Gómez - Directora del proyecto</li>
+ <li>Juan Cardo Chamorro - Revisor fiscal</li>
+ <li>Natalie - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum</li>
+ <li>Orden del día: Informe revisor fiscal, administración, proposiciones y varios</li>
+ <li>Informe del revisor fiscal</li>
+ <li>Informe de administración</li>
+ <li>Propuesta sobre incremento cuota de administración y descuento pronto pago</li>
+ <li>Deuda interna: Fondo imprevistos</li>
+ <li>Pendientes administrativos y documentales</li>
+ <li>Asuntos contables pendientes: AXA y anticipo de 9 millones</li>
+ <li>Próxima reunión y seguimiento</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum</h2>
+
+<p>Se constató que, al inicio de la reunión, a las 6:49 p.m. del 8 de octubre de 2025, se encontraban conectados virtualmente los miembros del Consejo de Administración Jaime Llano, Claudia Bermúdez e Ivette Game. Posteriormente, se unió Ferney Pérez. Por parte de la administración, estuvieron presentes Andrés Felipe Guzmán, representante legal del edificio, Soledad Castro, contadora, Luz Adriana Gómez, directora del proyecto, y Juan Cardo Chamorro, revisor fiscal. En consecuencia, se dio por verificado el quórum y se procedió a desarrollar el orden del día.</p><h2>2. Orden del día: Informe revisor fiscal, administración, proposiciones y varios</h2>
+
+<p>Este tema del orden del día sirvió como marco para la presentación del informe del revisor fiscal y la administración, así como para abordar proposiciones y varios asuntos relevantes para la gestión del edificio.</p>
+
+<p>Inicialmente, se establece el orden de la reunión, dando prioridad al informe del revisor fiscal, Juan Carlos Chamorro, debido a unas recomendaciones previas sobre el enfoque de la reunión. Se indica que los informes ya habían sido enviados a los miembros del consejo.</p>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, solicitó que se trataran tres puntos específicos: el tema financiero, los pendientes operativos y de mantenimiento, y los pendientes administrativos y documentales. En cuanto al tema financiero, expresó su preocupación por el aumento del déficit en el capital de trabajo, que en agosto ascendía a 84 millones de pesos. Solicitó información sobre los planes de acción para contrarrestar esta situación, así como un flujo de caja proyectado para evaluar los ingresos estimados y las necesidades del edificio, con el fin de determinar si los recursos serían suficientes para cubrir las obligaciones mensuales. Hizo mención de que este tema venía desde el año pasado con los temas del acueducto y la energía, que no se ha podido hacer la recuperación.</p>
+
+<p>En relación con los pendientes operativos y de mantenimiento, el revisor fiscal preguntó qué acciones se requerían por parte del Consejo de Administración que pudieran afectar significativamente el flujo de caja. Señaló que la nueva administración había identificado varios eventos y mantenimientos pendientes que podrían desbordar los recursos del edificio, y solicitó información sobre si los recursos serían suficientes o si se requerirían alternativas.</p>
+
+<p>Por último, en cuanto a los pendientes administrativos y documentales, el revisor fiscal indicó que había solicitado información sobre varios aspectos en memorandos anteriores, y que, aunque había recibido algunas respuestas, aún quedaban varios puntos por confirmar formalmente, como contratos, manuales y documentos. Solicitó que se le informara si estos existían o no, y, en caso de no existir, cuándo se planeaba elaborarlos, o si no se iban a elaborar.</p>
+
+<p>En respuesta a los planteamientos del revisor fiscal, el representante legal del edificio, Andrés Felipe Guzmán, abordó el tema de la ausencia de recursos para suplir las necesidades de la operación. Informó sobre una negociación consolidada con la empresa de vigilancia IMPROCAM, que permitiría extender el contrato por dos periodos más, hasta el 6 de marzo de 2028, y acceder a una bolsa total de reinversión de 176.193.473 pesos. Para el año 2025, se podría disponer de hasta 100 millones de pesos, fraccionando un máximo de 40 millones por mes (octubre, noviembre) y 20 millones en diciembre, y el restante se utilizaría en el año 2026. Con esto, se esperaba solucionar de manera significativa el déficit existente. Se comprometió a enviar la copia de la propuesta por WhatsApp y formalizarla por correo electrónico.</p>
+
+<p>En cuanto a la situación con Codenza, se informó que se había radicado una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de 75 millones de pesos, que se consideraba improcedente hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se esperaba la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, al cual se remitió copia del auto que aboca conocimiento. Se buscaría la acreditación de esta suma, similar a la reclamación con la empresa de acueducto.</p>
+
+<p>Andrés Felipe Guzmán compartió un flujo de caja proyectado, previamente socializado con el Consejo de Administración, que se centraba en los recursos necesarios para solventar lo que restaba del año. Aclaró que para el presupuesto de 2026 se requerirían ajustes mayores, incluyendo el tema de las puertas de vidrio. Se revisaron los gastos adicionales y los gastos que se estaban incluyendo, como el mantenimiento de zonas comunes, equipos (turco, planta eléctrica, pozos eyectores) y el sistema hidráulico (red contra incendio, sistema de presión, sistema eyectador, planta de tratamiento de aguas residuales y sistema de riego). Se mencionó que el contrato anterior solo incluía dos de los equipos, mientras que el costo inicial para incluir todos los equipos sería de 4 millones 300 mil pesos, con una mensualidad de 1 millón 700 mil pesos. Debido a una revisión reciente, se añadió un costo adicional de 4 millones 250 mil pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales. Para mitigar esta situación, se buscaría equilibrar rubros y cubrir el déficit con los 176 millones ofrecidos por Improcam.</p>
+
+<p>Se explicó que la ejecución de varias actividades ya había sido autorizada, y que se solicitaba a los contratistas que facturaran directamente a Improcam. Se mencionaron dos actividades por valor de 11 millones 400 mil pesos: certificación e instalación de anclajes certificados, y lavado y desinfección de los vidrios de los puntos fijos. Para garantizar la garantía en estas actividades, se solicitaría una carta de subrogación de la garantía de Improcam a favor del edificio.</p>
+
+<p>Claudia Bermúdez señaló que en el ítem de mantenimiento de puertas, existía un cumplimiento de garantía con la constructora por fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Indicó que la constructora revisaría y reinstalaría todas las puertas, por lo que no sería necesario invertir en mantenimiento de puertas en ese momento. Andrés Felipe Guzmán tomó nota de esta información.</p>
+
+<p>En relación con el tema de iluminación general, se aclaró que el rubro de mantenimiento incluía el mantenimiento general de zonas comunes y las instalaciones eléctricas adicionales para robustecer el esquema de seguridad, lo cual se manejaría con la reinversión de Improcam.</p>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia generara una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Se recomendó revisar bien el tema de cómo contabilizarlo, ya que este tipo de beneficios no están autorizados por la superintendencia. Se sugirió que no afectara el rubro de vigilancia y que se utilizara otra forma de registrar la nota crédito. Se planteó la posibilidad de que Improcam pagara directamente a algunos proveedores, como el servicio de casa limpia, para evitar inconvenientes en los registros contables.</p>
+
+<p>Juan Carlos Chamorro recomendó que se revisara bien el tema de cómo se contabilizaría la nota crédito de la empresa de vigilancia, sugiriendo que no afectara el rubro de vigilancia y que se utilizara otra forma de registrarla. Andrés Felipe Guzmán se comprometió a hablar con la empresa de vigilancia para explorar la posibilidad de que ellos efectuaran pagos a varios proveedores.</p>
+
+<p>Jaime Llano expresó su acuerdo con Andrés Felipe Guzmán y enfatizó la importancia de no descuidar el tema del incremento de la cuota de administración, a pesar del "salvavidas" de Improcam. Señaló que era urgente poner al día el presupuesto y que se debía llevar el valor justo a la próxima asamblea.</p>
+
+<p>Claudia Bermúdez preguntó si existía la posibilidad de quitar el descuento del pronto pago para favorecer el presupuesto, ya que la cartera estaba disparada y eran pocos los apartamentos que no pagaban. Andrés Felipe Guzmán respondió que el descuento por pronto pago era una manera de incentivar el recaudo dentro de unos plazos y márgenes para poder tener la disponibilidad de pagar las obligaciones. Sugirió ser francos sobre el incremento que se requería o jugar con los porcentajes del descuento.</p>
+
+<p>Juan Carlos Chamorro manifestó estar de acuerdo con Andrés Felipe Guzmán y señaló que, en su experiencia, quitar el descuento de pronto pago no era beneficioso, ya que las personas terminaban pagando más tarde. Otros asistentes también expresaron su opinión en contra de quitar el descuento.</p>
+
+<p>Se acordó incluir una deuda interna en el flujo de caja, correspondiente al fondo de imprevistos, que ascendía a unos 25 millones de pesos. Se mencionó que, por ley, el conjunto debía ir ahorrando el 1% del presupuesto en una cuenta aparte, pero que en el banco solo había 11 millones de pesos, mientras que contablemente había más de 30 millones. Se acordó que toda la plata debía estar disponible en el banco como un recurso restringido.</p>
+
+<p>En cuanto a los pendientes administrativos y documentales, Juan Carlos Chamorro solicitó que se le formalizara por escrito el plan de trabajo para entregar el manual de contratación, el manual de políticas contables y los contratos de mantenimiento, indicando si se iban a hacer, para qué fechas se estimaban realizarse, o si no se iban a hacer. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó el procedimiento de contratación, que incluía solicitar tres cotizaciones, revisar con el apoyo de Claudia Bermúdez, contar con el aval de una interventoría y auditoría, y revisar los contratos con el asesor jurídico. Señaló que todas las carpetas estaban archivadas y rotuladas en custodia de la administración.</p>
+
+<p>Juan Carlos Chamorro sugirió que se plasmaran por escrito las políticas contables y que se establecieran los montos hasta los cuales la administración podía contratar directamente, así como los tipos de contrataciones que requerían pólizas. Andrés Felipe Guzmán aseguró que todos los procedimientos se estaban haciendo de esa manera, pero que faltaba plasmarlos por escrito.</p>
+
+<p>Andrés Felipe Guzmán aclaró que no hacía prejurídicos, ya que la administración enviaba los correos, requerimientos y cuentas de cobro. En casos de cuantías elevadas, se procedía directamente al cobro por vía ejecutiva.</p>
+
+<p>Claudia Bermúdez preguntó sobre los asuntos contables pendientes, como el tema de AXA y el anticipo de 9 millones, y solicitó que se resolvieran antes de la asamblea. Soledad Castro explicó que había dos partidas que dependían de la póliza y que no creía que la póliza respondiera por siniestros de hace tres años. Propuso llevarlos al estado de resultados, previa aprobación del Consejo, y contar con el soporte de la respuesta de la póliza. En cuanto al anticipo de 9 millones, sugirió llevarlo a aprovechamientos y cruzarlo con los gastos del reglamento. Se acordó cerrar esos tres puntos y no arrastrarlos al próximo informe de revisoría fiscal.</p>
+
+<p>Soledad Castro propuso hacer las políticas contables para el cierre y socializarlas en una reunión de consejo con el revisor fiscal. Ofreció hacerlas gratis y que se incluyera un valor razonable en el presupuesto del año entrante para pagarlas. Sugirió socializar las dos políticas más importantes, que eran cartera y activos fijos, y decidir si se iba a hacer una provisión para los intereses y los honorarios de abogado.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no eran una expensa común y que los jueces no libraban mandamiento de pago por estos conceptos. Señaló que los intereses hacían parte de los recursos patrimoniales de la copropiedad y que había que ser cuidadosos con este manejo. Advirtió sobre los inconvenientes que podían surgir con los honorarios si el contratante era diferente al deudor.</p>
+
+<p>Finalmente, Juan Carlos Chamorro solicitó que se le contestaran por escrito los puntos pendientes y expresó su tranquilidad con la situación económica del edificio gracias al apoyo de la empresa de vigilancia.</p><h2>3. Informe del revisor fiscal</h2>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, presentó su informe, enfocándose en tres puntos principales que considera cruciales para la administración y el Consejo:</p>
+
+<ul>
+<li>Tema financiero: déficit en capital de trabajo</li>
+<li>Pendientes operativos y de mantenimiento</li>
+<li>Pendientes administrativos y documentales</li>
+</ul>
+
+<p>El revisor fiscal indicó que no leería el informe en detalle, asumiendo que ya había sido revisado por los miembros del Consejo. En cambio, se centraría en los puntos clave que requieren atención.</p>
+
+<h3>Tema financiero: déficit en capital de trabajo</h3>
+
+<p>El revisor fiscal señaló que, según los estados financieros, se evidencia un aumento en el déficit del capital de trabajo, alcanzando los 84 millones de pesos en agosto. Solicitó información sobre los planes de acción para contrarrestar esta situación, incluyendo un flujo de caja proyectado que muestre los ingresos estimados para el trimestre y las necesidades financieras del edificio. El objetivo es determinar si los recursos disponibles serán suficientes para cubrir las obligaciones mensuales y si se podrá superar la práctica de recaudar fondos para pagar las obligaciones del mes anterior. Mencionó que este problema se ha venido arrastrando desde el año anterior, relacionado con los costos del acueducto y la energía, cuya recuperación no se ha logrado.</p>
+
+<h3>Pendientes operativos y de mantenimiento</h3>
+
+<p>El revisor fiscal preguntó sobre los pendientes operativos y de mantenimiento que podrían afectar significativamente el flujo de caja. Reconoció que la nueva administración ha identificado varios eventos y mantenimientos pendientes que podrían desbordar los recursos del edificio. Buscó determinar si los recursos actuales serán suficientes o si se requerirán alternativas adicionales.</p>
+
+<h3>Pendientes administrativos y documentales</h3>
+
+<p>El revisor fiscal mencionó que ha solicitado información sobre varios aspectos en memorandos anteriores. Aunque ha recibido algunas respuestas, formalmente hay varios documentos pendientes por confirmar, como contratos y manuales. Solicitó confirmación sobre la existencia de estos documentos y, en caso de no existir, el cronograma previsto para su elaboración, o la justificación de su no elaboración. El revisor fiscal enfatizó la importancia de formalizar estas respuestas a través de los mismos canales utilizados para las solicitudes, con el fin de mantener una trazabilidad adecuada.</p>
+
+<p>En respuesta a los planteamientos del revisor fiscal, el representante legal de la administración proporcionó información sobre las acciones tomadas y los planes futuros, los cuales se detallan en el tema 4 "Informe de administración".</p><h2>4. Informe de administración</h2>
+
+<p>El informe de administración abordó varios temas clave relacionados con la gestión y el estado actual del edificio. Se trataron aspectos financieros, contractuales y de mantenimiento, con el objetivo de proporcionar una visión integral de la situación y las acciones implementadas por la administración.</p>
+
+<h3>Negociación con Improcam</h3>
+
+<p>La administración informó sobre la consolidación de una negociación con la empresa de vigilancia IMPROCAM. Esta negociación se basa en la extensión del contrato, lo que permitirá acceder a una retribución económica mayor. El Consejo de Administración determinó extender el contrato por dos periodos más, hasta el 6 de marzo de 2028, lo que generará una bolsa total de reinversión de $176.193.473.</p>
+
+<p>Se explicó que, de esta bolsa, se podrán utilizar hasta $100 millones para lo que resta del año 2025, fraccionados en un máximo de $40 millones por mes (octubre y noviembre) y $20 millones en diciembre. El restante se utilizará en el año 2026. Con esta medida, se espera solucionar de manera significativa el déficit actual.</p>
+
+<p>Se proporcionó una copia de la propuesta de IMPROCAM vía WhatsApp y se formalizará a través de correo electrónico.</p>
+
+<h3>Acción constitucional de tutela por Codenza</h3>
+
+<p>Se informó que se radicó una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de Codenza equivalente a $75 millones. La administración considera que esta factura no procedía hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios.</p>
+
+<p>Se espera la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, que conoce la acción. Se remitió copia del auto que aboca conocimiento al revisor fiscal.</p>
+
+<p>En caso de no obtener la devolución del dinero, se buscará la acreditación de esta suma en la cuenta, similar a lo realizado con la reclamación a la empresa de acueducto.</p>
+
+<h3>Flujo de caja proyectado</h3>
+
+<p>La administración presentó un flujo de caja proyectado, previamente socializado con el Consejo de Administración, que se enfoca en los recursos necesarios para solventar lo que resta del año. Se aclaró que para el presupuesto de la vigencia 2026 se deberán realizar ajustes mayores, incluyendo más equipos y elementos, como las puertas de vidrio.</p>
+
+<p>El flujo de caja proyectado incluye:</p>
+<ul>
+ <li>Promedio de costos de energía y acueducto.</li>
+ <li>Mantenimiento de zonas comunes y equipos (turco, planta eléctrica, pozos eyectores).</li>
+ <li>Sistema hidráulico (red contra incendio, sistema de presión, sistema eyectador, planta de tratamiento de aguas residuales y sistema de riego).</li>
+</ul>
+
+<p>Se mencionó que el contrato con IHM para el sistema hidráulico finaliza el 15 de octubre, y se contratará a JCC, un contratista con mayor experiencia. Además, se informó sobre un costo adicional de $4.250.000 sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<p>Se indicó que el valor de reinversión ofrecido por Improcam para este año ($46 millones) ya se está utilizando para autorizar actividades. Se solicitó a los contratistas que facturen directamente a Improcam. Dos actividades ya cubiertas son la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos, por un valor de $11.400.000.</p>
+
+<p>Para garantizar la garantía de estas actividades, se solicitará una carta de subrogación de la garantía de Improcam a favor del edificio.</p>
+
+<p>El flujo de caja proyectado también incluye:</p>
+<ul>
+ <li>Mantenimiento de puertas (cotización de $12.500.000).</li>
+ <li>Mantenimiento del jacuzzi (contrato con Karagani).</li>
+ <li>Fumigación.</li>
+ <li>Mantenimiento de motobombas y equipos hidráulicos.</li>
+ <li>Lavado del tanque de agua potable (proyectado en $1.850.000).</li>
+ <li>Mantenimiento periódico del sistema de ventilación mecánica y aire acondicionado (EID Andes).</li>
+ <li>Mantenimiento de teatrino (equipos de proyección y sillas).</li>
+ <li>Sistema de gestión de seguridad y salud en el trabajo.</li>
+ <li>Reemplazo del software contable Daytona por Properix.</li>
+ <li>Mantenimiento del sistema de citofonía Fermax.</li>
+ <li>Certificación de ascensores.</li>
+ <li>Compra del tanque hidroacumulador del sistema de presión.</li>
+ <li>Gastos bancarios.</li>
+</ul>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de puertas podría estar cubierto por la garantía de la constructora debido a fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Andrés Felipe Guzmán respondió que ya se hizo la prueba en seis puertas y que la constructora va a reinstalar las puertas.</p>
+
+<p>Jaime Llano preguntó si en el cuadro se reflejan todos los gastos previstos para poner al día los temas de mantenimiento del edificio. Andrés Felipe Guzmán confirmó que sí. Jaime Llano también preguntó por el tema de iluminación general, a lo que Andrés Felipe Guzmán respondió que está incluido en el rubro de mantenimiento general de zonas comunes e instalaciones eléctricas adicionales. Se aclaró que el robustecimiento del esquema de seguridad se manejará por cuenta de la reinversión, de acuerdo a las cotizaciones que se están gestionando.</p>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas. Juan Carlos Chamorro recomendó revisar bien el tema de cómo contabilizarlo, sugiriendo que no afecte el rubro de vigilancia y que se utilice otra forma de registrar la nota crédito. Andrés Felipe Guzmán indicó que hablará con la empresa de vigilancia para que efectúen pagos de varios proveedores, incluyendo el servicio de casa limpia.</p>
+
+<p>Juan Carlos Chamorro sugirió revisar el tema de las cuentas por pagar y poner al día todas las obligaciones. Andrés Felipe Guzmán respondió que de los $70 millones en cuentas por pagar, $40 millones corresponden a vigilancia.</p>
+
+<h3>Mantenimiento de zonas comunes</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento de diversas áreas comunes del edificio.</p>
+
+<h3>Mantenimiento de equipos</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento de diversos equipos del edificio, incluyendo el turco, la planta eléctrica y los pozos eyectores.</p>
+
+<h3>Sistema hidráulico</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento del sistema hidráulico, incluyendo la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego.</p>
+
+<h3>Revisión de puertas</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona la cotización para el mantenimiento de puertas de vidrio por un valor de $12.500.000. Claudia Bermúdez señaló que este mantenimiento podría estar cubierto por la garantía de la constructora debido a fallas de instalación.</p>
+
+<h3>Iluminación general</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona que el tema de iluminación general está incluido en el rubro de mantenimiento general de zonas comunes e instalaciones eléctricas adicionales. Se aclaró que el robustecimiento del esquema de seguridad se manejará por cuenta de la reinversión, de acuerdo a las cotizaciones que se están gestionando.</p>
+
+<h3>Cuentas por pagar</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona que se busca poner al día todas las obligaciones, incluyendo los $70 millones en cuentas por pagar, de los cuales $40 millones corresponden a vigilancia.</p><h2>5. Propuesta sobre incremento cuota de administración y descuento pronto pago</h2>
+
+<p>Durante la reunión, se abordó la posibilidad de incrementar la cuota de administración y la pertinencia de mantener el descuento por pronto pago. Jaime Llano manifestó que, a pesar de contar con el apoyo financiero de la empresa de vigilancia, es crucial no descuidar el incremento de la cuota de administración para asegurar la sostenibilidad del presupuesto a largo plazo. Señaló la necesidad de presentar un presupuesto actualizado en la próxima asamblea, enfatizando la urgencia de ajustar el valor de la cuota.</p>
+
+<p>En relación con el descuento por pronto pago, Ivette Game preguntó si sería viable eliminar este descuento para fortalecer el presupuesto. Andrés Felipe Guzmán respondió que el descuento por pronto pago incentiva el recaudo temprano, lo cual facilita la disponibilidad de recursos para cubrir las obligaciones. Añadió que retirar este incentivo podría afectar negativamente la cultura de pago puntual. No obstante, sugirió explorar la posibilidad de ajustar los porcentajes del descuento en lugar de eliminarlo por completo.</p>
+
+<p>Claudia Bermúdez compartió su experiencia en otro conjunto residencial donde la eliminación del descuento por pronto pago resultó en que los residentes pagaran más tarde, afectando el flujo de caja. Resaltó que mantener el descuento incentiva el pago anticipado, lo cual es beneficioso para la administración.</p>
+
+<p>Juan Carlos Chamorro expresó su acuerdo con Andrés Felipe Guzmán, argumentando que es preferible mantener el incentivo del pronto pago para asegurar un flujo de ingresos constante y temprano. Subrayó que la percepción de los residentes sobre el descuento es positiva y que eliminarlo podría generar descontento.</p>
+
+<p>En resumen, se consideró que el descuento por pronto pago es una herramienta útil para fomentar el pago puntual y mantener un flujo de caja adecuado. Se propuso analizar diferentes escenarios en relación con el porcentaje del descuento, pero se descartó la eliminación completa del mismo.</p><h2>6. Deuda interna: Fondo imprevistos</h2>
+
+<p>Durante la discusión sobre el flujo de caja proyectado, se mencionó la necesidad de incluir la deuda interna relacionada con el fondo de imprevistos, estimada en aproximadamente 25 millones de pesos. Se señaló que este fondo debería estar monetizado en lo posible para el año 2025.</p>
+
+<p>Se explicó que, según la ley, el conjunto debe ahorrar el 1% del presupuesto en una cuenta aparte. Contablemente, esto se ha estado registrando, pero no se refleja completamente en el banco, donde solo hay 11 millones de pesos disponibles, mientras que contablemente se registran alrededor de 30 y pico millones de pesos.</p>
+
+<p>En consecuencia, se enfatizó la importancia de asegurar que la totalidad del fondo esté disponible en el banco como un recurso restringido, para que el edificio pueda recurrir a él en caso de imprevistos.</p><h2>7. Pendientes administrativos y documentales</h2>
+
+<p>Durante la reunión, se abordó el tema de los pendientes administrativos y documentales, donde el revisor fiscal, Juan Carlos Chamorro, solicitó información formal sobre varios aspectos. Entre estos, se mencionaron contratos, manuales y documentos, preguntando si existen, si se tiene pensado elaborarlos y, en caso negativo, solicitando una respuesta formal a través de los canales de comunicación establecidos.</p>
+
+<h3>Manual de contratación</h3>
+
+<p>En respuesta a la solicitud del revisor fiscal, el representante legal, Andrés Felipe Guzmán, informó que el procedimiento de contratación se basa en solicitar tres cotizaciones para contratos de mantenimiento a largo plazo. Claudia Bermúdez apoya en la revisión, y se cuenta con el acompañamiento de una interventoría y auditoría. El representante legal revisa todos los contratos, verificando la documentación del contratista, incluyendo Cámara de Comercio y referencias. Se están adaptando los modelos de contrato a un formato estándar. Además, indicó que todas las carpetas de contratistas y equipos están archivadas y rotuladas en la administración.</p>
+
+<h3>Manual de políticas contables</h3>
+
+<p>El revisor fiscal también solicitó la formalización de las políticas contables por escrito. La contadora, Soledad Castro, propuso elaborar las políticas contables para el cierre del año, enfocándose en las políticas de cartera y activos fijos. Soledad Castro se ofreció a realizar estas políticas sin costo para la copropiedad este año, con la expectativa de que se incluya un valor razonable en el presupuesto del próximo año para su pago. Además, propuso socializar estas políticas con el Consejo y el revisor fiscal.</p>
+
+<h3>Contratos de mantenimiento</h3>
+
+<p>En cuanto a los contratos de mantenimiento, el revisor fiscal solicitó información sobre los planes para su elaboración, las fechas estimadas y, en caso de no realizarse, una justificación. Andrés Felipe Guzmán aseguró que todos los procedimientos se están llevando a cabo, aunque falta plasmarlos por escrito. Se aclaró que habrá casos no contemplados en las normas generales, pero se están siguiendo los procedimientos establecidos. Se mencionó la importancia de revisar los temas de cartera, ya que no todos los casos pueden manejarse de la misma manera. Andrés Felipe Guzmán enfatizó que no realiza prejurídicos, ya que la administración se encarga de enviar correos, requerimientos y cuentas de cobro. En casos de deudas elevadas, se procede directamente al cobro por vía ejecutiva.</p>
+
+<p>El revisor fiscal sugirió que se establezcan por escrito los montos hasta los cuales la administración puede contratar directamente y cuándo se requiere la aprobación del Consejo de Administración. También recomendó formalizar qué tipo de contrataciones requieren pólizas y qué tipo de pólizas, así como qué contrataciones requieren factura o contrato. Además, propuso un manual de cómo se realizan los pagos y las políticas de cartera y tesorería, incluyendo los procedimientos para el envío de cartas y el paso a presupuesto jurídico.</p>
+
+<p>Finalmente, se acordó que la administración contestará por escrito al revisor fiscal sobre estos puntos, formalizando los planes de trabajo para los pendientes administrativos y documentales.</p><h2>8. Asuntos contables pendientes: AXA y anticipo de 9 millones</h2>
+
+<p>Durante la discusión sobre el informe del revisor fiscal y el informe de administración, surgió la necesidad de abordar asuntos contables pendientes, específicamente el tema de AXA y un anticipo de 9 millones. La señora Claudia expresó su preocupación por no llegar a la asamblea con las mismas partidas pendientes que vienen desde hace mucho tiempo sin resolver.</p>
+
+<p>La contadora, Soledad Castro, explicó que existen dos partidas que dependen de la póliza, pero que, en su opinión, no se realizó la reclamación correspondiente en su momento. Ante esta situación, propuso llevar estos valores al estado de resultados, previa aprobación del Consejo, sustentando el registro contable con la respuesta de la póliza, que previsiblemente será negativa debido a la falta de reclamación oportuna. Con este soporte, se procedería a castigar esos valores.</p>
+
+<p>En cuanto al anticipo de 9 millones, la contadora sugirió llevarlo a aprovechamientos, dado que no se ha podido identificar su origen. Propuso cruzarlo con los gastos del reglamento, como los pagos a Niif de Funda. Para llevar a cabo estos ajustes, la contadora solicitó la aprobación del Consejo, asegurando que estos movimientos quedarán reflejados en un acta, en su informe y en sus revelaciones, con el fin de sanear esos valores y ajustar la realidad económica de la copropiedad.</p>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, solicitó que se le enviaran copias de los comunicados enviados a la aseguradora para verificar si se ha realizado alguna gestión al respecto.</p>
+
+<p>La contadora se comprometió a realizar las políticas contables para el cierre, enfocándose en las políticas de cartera y activos fijos. Propuso socializar estas políticas en una reunión de consejo con el revisor fiscal. En cuanto a la provisión de cartera, sugirió provisionar un porcentaje de los intereses, pero no las cuotas de administración, ya que el inmueble responde por estas. También mencionó la necesidad de considerar una provisión para cubrir posibles gastos de honorarios de abogados, dado que los jueces no siempre fallan a favor en este tema.</p>
+
+<p>El representante legal, Andrés Felipe Guzmán, intervino para aclarar que los honorarios de abogado no son una expensa común y que los intereses hacen parte de los recursos patrimoniales de la copropiedad. Enfatizó la importancia de ser cuidadosos con este manejo, especialmente en lo que respecta a los cobros de servicios públicos, dado que la copropiedad no es una empresa de servicios públicos.</p>
+
+<p>Finalmente, se acordó trabajar en estos asuntos contables pendientes y socializarlos para el cierre, con el fin de presentar un informe claro y ajustado a la realidad económica de la copropiedad.</p><h2>9. Próxima reunión y seguimiento</h2>
+
+<p>Durante la reunión, Ivette Game solicitó establecer la fecha de la próxima reunión para el cierre de septiembre, con el objetivo de realizar un seguimiento estricto de los temas expuestos y asegurar la continuidad en el avance de los objetivos planteados.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 20:01</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Extender el contrato con la empresa de vigilancia IMPROCAM por dos periodos más hasta el 6 de marzo de 2028 – <strong>Responsable:</strong> Consejo de Administración</li>
+ <li>Formalizar por escrito los pendientes administrativos y documentales (manual de contratación, manual de políticas contables, etc.) – <strong>Responsable:</strong> Andrés Felipe Guzmán (Administración)</li>
+ <li>Incluir la deuda interna del fondo de imprevistos en el flujo de caja – <strong>Responsable:</strong> No especificado</li>
+ <li>Enviar copia de los comunicados enviados a la aseguradora – <strong>Responsable:</strong> Administración</li>
+ <li>Elaborar políticas contables para cierre (cartera y activos fijos) – <strong>Responsable:</strong> Soledad Castro (Contadora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión de Consejo de Administración</h1>
+ <p><strong>Fecha:</strong> 8 de octubre de 2025</p>
+ <p><strong>Hora:</strong> Inicio: 6:49 minutos - Cierre: 8 y 1 minutos</p>
+ <p><strong>Lugar:</strong> Edificio cargado Propiedad Horizontal - Reunión virtual</p>
+ <p><strong>Moderador:</strong> Andrés Felipe Guzmán</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Jaime Llano - Miembro del Consejo de Administración</li>
+ <li>Claudia Bermúdez - Miembro del Consejo de Administración</li>
+ <li>Ivette Game - Miembro del Consejo de Administración</li>
+ <li>Ferney Pérez - Miembro del Consejo de Administración</li>
+ <li>Andrés Felipe Guzmán - Representante legal del edificio</li>
+ <li>Soledad Castro - Contadora</li>
+ <li>Luz Adriana Gómez - Directora del proyecto</li>
+ <li>Juan Cardo Chamorro - Revisor fiscal</li>
+ <li>Natalie - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum</li>
+ <li>Orden del día: Informe revisor fiscal, administración, proposiciones y varios</li>
+ <li>Informe del revisor fiscal</li>
+ <li>Informe de administración</li>
+ <li>Propuesta sobre incremento cuota de administración y descuento pronto pago</li>
+ <li>Deuda interna: Fondo imprevistos</li>
+ <li>Pendientes administrativos y documentales</li>
+ <li>Asuntos contables pendientes: AXA y anticipo de 9 millones</li>
+ <li>Próxima reunión y seguimiento</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum</h2>
+
+<p>Se constató que, al inicio de la reunión, a las 6:49 p.m. del 8 de octubre de 2025, se encontraban conectados virtualmente los miembros del Consejo de Administración Jaime Llano, Claudia Bermúdez e Ivette Game. Posteriormente, se unió Ferney Pérez. Por parte de la administración, estuvieron presentes Andrés Felipe Guzmán, representante legal del edificio, Soledad Castro, contadora, Luz Adriana Gómez, directora del proyecto, y Juan Cardo Chamorro, revisor fiscal. En consecuencia, se dio por verificado el quórum y se procedió a desarrollar el orden del día.</p><h2>2. Orden del día: Informe revisor fiscal, administración, proposiciones y varios</h2>
+
+<p>Este tema del orden del día sirvió como marco para la presentación del informe del revisor fiscal y la administración, así como para abordar proposiciones y varios asuntos relevantes para la gestión del edificio.</p>
+
+<p>Inicialmente, se establece el orden de la reunión, dando prioridad al informe del revisor fiscal, Juan Carlos Chamorro, debido a unas recomendaciones previas sobre el enfoque de la reunión. Se indica que los informes ya habían sido enviados a los miembros del consejo.</p>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, solicitó que se trataran tres puntos específicos: el tema financiero, los pendientes operativos y de mantenimiento, y los pendientes administrativos y documentales. En cuanto al tema financiero, expresó su preocupación por el aumento del déficit en el capital de trabajo, que en agosto ascendía a 84 millones de pesos. Solicitó información sobre los planes de acción para contrarrestar esta situación, así como un flujo de caja proyectado para evaluar los ingresos estimados y las necesidades del edificio, con el fin de determinar si los recursos serían suficientes para cubrir las obligaciones mensuales. Hizo mención de que este tema venía desde el año pasado con los temas del acueducto y la energía, que no se ha podido hacer la recuperación.</p>
+
+<p>En relación con los pendientes operativos y de mantenimiento, el revisor fiscal preguntó qué acciones se requerían por parte del Consejo de Administración que pudieran afectar significativamente el flujo de caja. Señaló que la nueva administración había identificado varios eventos y mantenimientos pendientes que podrían desbordar los recursos del edificio, y solicitó información sobre si los recursos serían suficientes o si se requerirían alternativas.</p>
+
+<p>Por último, en cuanto a los pendientes administrativos y documentales, el revisor fiscal indicó que había solicitado información sobre varios aspectos en memorandos anteriores, y que, aunque había recibido algunas respuestas, aún quedaban varios puntos por confirmar formalmente, como contratos, manuales y documentos. Solicitó que se le informara si estos existían o no, y, en caso de no existir, cuándo se planeaba elaborarlos, o si no se iban a elaborar.</p>
+
+<p>En respuesta a los planteamientos del revisor fiscal, el representante legal del edificio, Andrés Felipe Guzmán, abordó el tema de la ausencia de recursos para suplir las necesidades de la operación. Informó sobre una negociación consolidada con la empresa de vigilancia IMPROCAM, que permitiría extender el contrato por dos periodos más, hasta el 6 de marzo de 2028, y acceder a una bolsa total de reinversión de 176.193.473 pesos. Para el año 2025, se podría disponer de hasta 100 millones de pesos, fraccionando un máximo de 40 millones por mes (octubre, noviembre) y 20 millones en diciembre, y el restante se utilizaría en el año 2026. Con esto, se esperaba solucionar de manera significativa el déficit existente. Se comprometió a enviar la copia de la propuesta por WhatsApp y formalizarla por correo electrónico.</p>
+
+<p>En cuanto a la situación con Codenza, se informó que se había radicado una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de 75 millones de pesos, que se consideraba improcedente hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios. Se esperaba la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, al cual se remitió copia del auto que aboca conocimiento. Se buscaría la acreditación de esta suma, similar a la reclamación con la empresa de acueducto.</p>
+
+<p>Andrés Felipe Guzmán compartió un flujo de caja proyectado, previamente socializado con el Consejo de Administración, que se centraba en los recursos necesarios para solventar lo que restaba del año. Aclaró que para el presupuesto de 2026 se requerirían ajustes mayores, incluyendo el tema de las puertas de vidrio. Se revisaron los gastos adicionales y los gastos que se estaban incluyendo, como el mantenimiento de zonas comunes, equipos (turco, planta eléctrica, pozos eyectores) y el sistema hidráulico (red contra incendio, sistema de presión, sistema eyectador, planta de tratamiento de aguas residuales y sistema de riego). Se mencionó que el contrato anterior solo incluía dos de los equipos, mientras que el costo inicial para incluir todos los equipos sería de 4 millones 300 mil pesos, con una mensualidad de 1 millón 700 mil pesos. Debido a una revisión reciente, se añadió un costo adicional de 4 millones 250 mil pesos sin IVA para el arranque de la planta de tratamiento de aguas residuales. Para mitigar esta situación, se buscaría equilibrar rubros y cubrir el déficit con los 176 millones ofrecidos por Improcam.</p>
+
+<p>Se explicó que la ejecución de varias actividades ya había sido autorizada, y que se solicitaba a los contratistas que facturaran directamente a Improcam. Se mencionaron dos actividades por valor de 11 millones 400 mil pesos: certificación e instalación de anclajes certificados, y lavado y desinfección de los vidrios de los puntos fijos. Para garantizar la garantía en estas actividades, se solicitaría una carta de subrogación de la garantía de Improcam a favor del edificio.</p>
+
+<p>Claudia Bermúdez señaló que en el ítem de mantenimiento de puertas, existía un cumplimiento de garantía con la constructora por fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Indicó que la constructora revisaría y reinstalaría todas las puertas, por lo que no sería necesario invertir en mantenimiento de puertas en ese momento. Andrés Felipe Guzmán tomó nota de esta información.</p>
+
+<p>En relación con el tema de iluminación general, se aclaró que el rubro de mantenimiento incluía el mantenimiento general de zonas comunes y las instalaciones eléctricas adicionales para robustecer el esquema de seguridad, lo cual se manejaría con la reinversión de Improcam.</p>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia generara una nota crédito por una mensualidad para ponerse al día con las facturas pendientes. Se recomendó revisar bien el tema de cómo contabilizarlo, ya que este tipo de beneficios no están autorizados por la superintendencia. Se sugirió que no afectara el rubro de vigilancia y que se utilizara otra forma de registrar la nota crédito. Se planteó la posibilidad de que Improcam pagara directamente a algunos proveedores, como el servicio de casa limpia, para evitar inconvenientes en los registros contables.</p>
+
+<p>Juan Carlos Chamorro recomendó que se revisara bien el tema de cómo se contabilizaría la nota crédito de la empresa de vigilancia, sugiriendo que no afectara el rubro de vigilancia y que se utilizara otra forma de registrarla. Andrés Felipe Guzmán se comprometió a hablar con la empresa de vigilancia para explorar la posibilidad de que ellos efectuaran pagos a varios proveedores.</p>
+
+<p>Jaime Llano expresó su acuerdo con Andrés Felipe Guzmán y enfatizó la importancia de no descuidar el tema del incremento de la cuota de administración, a pesar del "salvavidas" de Improcam. Señaló que era urgente poner al día el presupuesto y que se debía llevar el valor justo a la próxima asamblea.</p>
+
+<p>Claudia Bermúdez preguntó si existía la posibilidad de quitar el descuento del pronto pago para favorecer el presupuesto, ya que la cartera estaba disparada y eran pocos los apartamentos que no pagaban. Andrés Felipe Guzmán respondió que el descuento por pronto pago era una manera de incentivar el recaudo dentro de unos plazos y márgenes para poder tener la disponibilidad de pagar las obligaciones. Sugirió ser francos sobre el incremento que se requería o jugar con los porcentajes del descuento.</p>
+
+<p>Juan Carlos Chamorro manifestó estar de acuerdo con Andrés Felipe Guzmán y señaló que, en su experiencia, quitar el descuento de pronto pago no era beneficioso, ya que las personas terminaban pagando más tarde. Otros asistentes también expresaron su opinión en contra de quitar el descuento.</p>
+
+<p>Se acordó incluir una deuda interna en el flujo de caja, correspondiente al fondo de imprevistos, que ascendía a unos 25 millones de pesos. Se mencionó que, por ley, el conjunto debía ir ahorrando el 1% del presupuesto en una cuenta aparte, pero que en el banco solo había 11 millones de pesos, mientras que contablemente había más de 30 millones. Se acordó que toda la plata debía estar disponible en el banco como un recurso restringido.</p>
+
+<p>En cuanto a los pendientes administrativos y documentales, Juan Carlos Chamorro solicitó que se le formalizara por escrito el plan de trabajo para entregar el manual de contratación, el manual de políticas contables y los contratos de mantenimiento, indicando si se iban a hacer, para qué fechas se estimaban realizarse, o si no se iban a hacer. Andrés Felipe Guzmán se comprometió a responder por escrito y explicó el procedimiento de contratación, que incluía solicitar tres cotizaciones, revisar con el apoyo de Claudia Bermúdez, contar con el aval de una interventoría y auditoría, y revisar los contratos con el asesor jurídico. Señaló que todas las carpetas estaban archivadas y rotuladas en custodia de la administración.</p>
+
+<p>Juan Carlos Chamorro sugirió que se plasmaran por escrito las políticas contables y que se establecieran los montos hasta los cuales la administración podía contratar directamente, así como los tipos de contrataciones que requerían pólizas. Andrés Felipe Guzmán aseguró que todos los procedimientos se estaban haciendo de esa manera, pero que faltaba plasmarlos por escrito.</p>
+
+<p>Andrés Felipe Guzmán aclaró que no hacía prejurídicos, ya que la administración enviaba los correos, requerimientos y cuentas de cobro. En casos de cuantías elevadas, se procedía directamente al cobro por vía ejecutiva.</p>
+
+<p>Claudia Bermúdez preguntó sobre los asuntos contables pendientes, como el tema de AXA y el anticipo de 9 millones, y solicitó que se resolvieran antes de la asamblea. Soledad Castro explicó que había dos partidas que dependían de la póliza y que no creía que la póliza respondiera por siniestros de hace tres años. Propuso llevarlos al estado de resultados, previa aprobación del Consejo, y contar con el soporte de la respuesta de la póliza. En cuanto al anticipo de 9 millones, sugirió llevarlo a aprovechamientos y cruzarlo con los gastos del reglamento. Se acordó cerrar esos tres puntos y no arrastrarlos al próximo informe de revisoría fiscal.</p>
+
+<p>Soledad Castro propuso hacer las políticas contables para el cierre y socializarlas en una reunión de consejo con el revisor fiscal. Ofreció hacerlas gratis y que se incluyera un valor razonable en el presupuesto del año entrante para pagarlas. Sugirió socializar las dos políticas más importantes, que eran cartera y activos fijos, y decidir si se iba a hacer una provisión para los intereses y los honorarios de abogado.</p>
+
+<p>Andrés Felipe Guzmán aclaró que los honorarios de abogado no eran una expensa común y que los jueces no libraban mandamiento de pago por estos conceptos. Señaló que los intereses hacían parte de los recursos patrimoniales de la copropiedad y que había que ser cuidadosos con este manejo. Advirtió sobre los inconvenientes que podían surgir con los honorarios si el contratante era diferente al deudor.</p>
+
+<p>Finalmente, Juan Carlos Chamorro solicitó que se le contestaran por escrito los puntos pendientes y expresó su tranquilidad con la situación económica del edificio gracias al apoyo de la empresa de vigilancia.</p><h2>3. Informe del revisor fiscal</h2>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, presentó su informe, enfocándose en tres puntos principales que considera cruciales para la administración y el Consejo:</p>
+
+<ul>
+<li>Tema financiero: déficit en capital de trabajo</li>
+<li>Pendientes operativos y de mantenimiento</li>
+<li>Pendientes administrativos y documentales</li>
+</ul>
+
+<p>El revisor fiscal indicó que no leería el informe en detalle, asumiendo que ya había sido revisado por los miembros del Consejo. En cambio, se centraría en los puntos clave que requieren atención.</p>
+
+<h3>Tema financiero: déficit en capital de trabajo</h3>
+
+<p>El revisor fiscal señaló que, según los estados financieros, se evidencia un aumento en el déficit del capital de trabajo, alcanzando los 84 millones de pesos en agosto. Solicitó información sobre los planes de acción para contrarrestar esta situación, incluyendo un flujo de caja proyectado que muestre los ingresos estimados para el trimestre y las necesidades financieras del edificio. El objetivo es determinar si los recursos disponibles serán suficientes para cubrir las obligaciones mensuales y si se podrá superar la práctica de recaudar fondos para pagar las obligaciones del mes anterior. Mencionó que este problema se ha venido arrastrando desde el año anterior, relacionado con los costos del acueducto y la energía, cuya recuperación no se ha logrado.</p>
+
+<h3>Pendientes operativos y de mantenimiento</h3>
+
+<p>El revisor fiscal preguntó sobre los pendientes operativos y de mantenimiento que podrían afectar significativamente el flujo de caja. Reconoció que la nueva administración ha identificado varios eventos y mantenimientos pendientes que podrían desbordar los recursos del edificio. Buscó determinar si los recursos actuales serán suficientes o si se requerirán alternativas adicionales.</p>
+
+<h3>Pendientes administrativos y documentales</h3>
+
+<p>El revisor fiscal mencionó que ha solicitado información sobre varios aspectos en memorandos anteriores. Aunque ha recibido algunas respuestas, formalmente hay varios documentos pendientes por confirmar, como contratos y manuales. Solicitó confirmación sobre la existencia de estos documentos y, en caso de no existir, el cronograma previsto para su elaboración, o la justificación de su no elaboración. El revisor fiscal enfatizó la importancia de formalizar estas respuestas a través de los mismos canales utilizados para las solicitudes, con el fin de mantener una trazabilidad adecuada.</p>
+
+<p>En respuesta a los planteamientos del revisor fiscal, el representante legal de la administración proporcionó información sobre las acciones tomadas y los planes futuros, los cuales se detallan en el tema 4 "Informe de administración".</p><h2>4. Informe de administración</h2>
+
+<p>El informe de administración abordó varios temas clave relacionados con la gestión y el estado actual del edificio. Se trataron aspectos financieros, contractuales y de mantenimiento, con el objetivo de proporcionar una visión integral de la situación y las acciones implementadas por la administración.</p>
+
+<h3>Negociación con Improcam</h3>
+
+<p>La administración informó sobre la consolidación de una negociación con la empresa de vigilancia IMPROCAM. Esta negociación se basa en la extensión del contrato, lo que permitirá acceder a una retribución económica mayor. El Consejo de Administración determinó extender el contrato por dos periodos más, hasta el 6 de marzo de 2028, lo que generará una bolsa total de reinversión de $176.193.473.</p>
+
+<p>Se explicó que, de esta bolsa, se podrán utilizar hasta $100 millones para lo que resta del año 2025, fraccionados en un máximo de $40 millones por mes (octubre y noviembre) y $20 millones en diciembre. El restante se utilizará en el año 2026. Con esta medida, se espera solucionar de manera significativa el déficit actual.</p>
+
+<p>Se proporcionó una copia de la propuesta de IMPROCAM vía WhatsApp y se formalizará a través de correo electrónico.</p>
+
+<h3>Acción constitucional de tutela por Codenza</h3>
+
+<p>Se informó que se radicó una acción constitucional de tutela para requerir la devolución, total o parcial, de la factura de Codenza equivalente a $75 millones. La administración considera que esta factura no procedía hasta que se resolviera el recurso de apelación ante la Superintendencia de Servicios Públicos Domiciliarios.</p>
+
+<p>Se espera la resolución del Juzgado Segundo Penal del Circuito de Conocimiento de Bogotá, que conoce la acción. Se remitió copia del auto que aboca conocimiento al revisor fiscal.</p>
+
+<p>En caso de no obtener la devolución del dinero, se buscará la acreditación de esta suma en la cuenta, similar a lo realizado con la reclamación a la empresa de acueducto.</p>
+
+<h3>Flujo de caja proyectado</h3>
+
+<p>La administración presentó un flujo de caja proyectado, previamente socializado con el Consejo de Administración, que se enfoca en los recursos necesarios para solventar lo que resta del año. Se aclaró que para el presupuesto de la vigencia 2026 se deberán realizar ajustes mayores, incluyendo más equipos y elementos, como las puertas de vidrio.</p>
+
+<p>El flujo de caja proyectado incluye:</p>
+<ul>
+ <li>Promedio de costos de energía y acueducto.</li>
+ <li>Mantenimiento de zonas comunes y equipos (turco, planta eléctrica, pozos eyectores).</li>
+ <li>Sistema hidráulico (red contra incendio, sistema de presión, sistema eyectador, planta de tratamiento de aguas residuales y sistema de riego).</li>
+</ul>
+
+<p>Se mencionó que el contrato con IHM para el sistema hidráulico finaliza el 15 de octubre, y se contratará a JCC, un contratista con mayor experiencia. Además, se informó sobre un costo adicional de $4.250.000 sin IVA para el arranque de la planta de tratamiento de aguas residuales.</p>
+
+<p>Se indicó que el valor de reinversión ofrecido por Improcam para este año ($46 millones) ya se está utilizando para autorizar actividades. Se solicitó a los contratistas que facturen directamente a Improcam. Dos actividades ya cubiertas son la certificación e instalación de anclajes certificados y el lavado y desinfección de los vidrios de los puntos fijos, por un valor de $11.400.000.</p>
+
+<p>Para garantizar la garantía de estas actividades, se solicitará una carta de subrogación de la garantía de Improcam a favor del edificio.</p>
+
+<p>El flujo de caja proyectado también incluye:</p>
+<ul>
+ <li>Mantenimiento de puertas (cotización de $12.500.000).</li>
+ <li>Mantenimiento del jacuzzi (contrato con Karagani).</li>
+ <li>Fumigación.</li>
+ <li>Mantenimiento de motobombas y equipos hidráulicos.</li>
+ <li>Lavado del tanque de agua potable (proyectado en $1.850.000).</li>
+ <li>Mantenimiento periódico del sistema de ventilación mecánica y aire acondicionado (EID Andes).</li>
+ <li>Mantenimiento de teatrino (equipos de proyección y sillas).</li>
+ <li>Sistema de gestión de seguridad y salud en el trabajo.</li>
+ <li>Reemplazo del software contable Daytona por Properix.</li>
+ <li>Mantenimiento del sistema de citofonía Fermax.</li>
+ <li>Certificación de ascensores.</li>
+ <li>Compra del tanque hidroacumulador del sistema de presión.</li>
+ <li>Gastos bancarios.</li>
+</ul>
+
+<p>Claudia Bermúdez señaló que el mantenimiento de puertas podría estar cubierto por la garantía de la constructora debido a fallas de instalación en las puertas de los puntos fijos del primer al piso 20. Andrés Felipe Guzmán respondió que ya se hizo la prueba en seis puertas y que la constructora va a reinstalar las puertas.</p>
+
+<p>Jaime Llano preguntó si en el cuadro se reflejan todos los gastos previstos para poner al día los temas de mantenimiento del edificio. Andrés Felipe Guzmán confirmó que sí. Jaime Llano también preguntó por el tema de iluminación general, a lo que Andrés Felipe Guzmán respondió que está incluido en el rubro de mantenimiento general de zonas comunes e instalaciones eléctricas adicionales. Se aclaró que el robustecimiento del esquema de seguridad se manejará por cuenta de la reinversión, de acuerdo a las cotizaciones que se están gestionando.</p>
+
+<p>Se discutió la posibilidad de que la empresa de vigilancia genere una nota crédito por una mensualidad para ponerse al día con las facturas. Juan Carlos Chamorro recomendó revisar bien el tema de cómo contabilizarlo, sugiriendo que no afecte el rubro de vigilancia y que se utilice otra forma de registrar la nota crédito. Andrés Felipe Guzmán indicó que hablará con la empresa de vigilancia para que efectúen pagos de varios proveedores, incluyendo el servicio de casa limpia.</p>
+
+<p>Juan Carlos Chamorro sugirió revisar el tema de las cuentas por pagar y poner al día todas las obligaciones. Andrés Felipe Guzmán respondió que de los $70 millones en cuentas por pagar, $40 millones corresponden a vigilancia.</p>
+
+<h3>Mantenimiento de zonas comunes</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento de diversas áreas comunes del edificio.</p>
+
+<h3>Mantenimiento de equipos</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento de diversos equipos del edificio, incluyendo el turco, la planta eléctrica y los pozos eyectores.</p>
+
+<h3>Sistema hidráulico</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se mencionan los gastos asociados al mantenimiento del sistema hidráulico, incluyendo la red contra incendio, el sistema de presión, el sistema eyectador, la planta de tratamiento de aguas residuales y el sistema de riego.</p>
+
+<h3>Revisión de puertas</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona la cotización para el mantenimiento de puertas de vidrio por un valor de $12.500.000. Claudia Bermúdez señaló que este mantenimiento podría estar cubierto por la garantía de la constructora debido a fallas de instalación.</p>
+
+<h3>Iluminación general</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona que el tema de iluminación general está incluido en el rubro de mantenimiento general de zonas comunes e instalaciones eléctricas adicionales. Se aclaró que el robustecimiento del esquema de seguridad se manejará por cuenta de la reinversión, de acuerdo a las cotizaciones que se están gestionando.</p>
+
+<h3>Cuentas por pagar</h3>
+<p>Este subtema se encuentra detallado dentro del flujo de caja proyectado, donde se menciona que se busca poner al día todas las obligaciones, incluyendo los $70 millones en cuentas por pagar, de los cuales $40 millones corresponden a vigilancia.</p><h2>5. Propuesta sobre incremento cuota de administración y descuento pronto pago</h2>
+
+<p>Durante la reunión, se abordó la posibilidad de incrementar la cuota de administración y la pertinencia de mantener el descuento por pronto pago. Jaime Llano manifestó que, a pesar de contar con el apoyo financiero de la empresa de vigilancia, es crucial no descuidar el incremento de la cuota de administración para asegurar la sostenibilidad del presupuesto a largo plazo. Señaló la necesidad de presentar un presupuesto actualizado en la próxima asamblea, enfatizando la urgencia de ajustar el valor de la cuota.</p>
+
+<p>En relación con el descuento por pronto pago, Ivette Game preguntó si sería viable eliminar este descuento para fortalecer el presupuesto. Andrés Felipe Guzmán respondió que el descuento por pronto pago incentiva el recaudo temprano, lo cual facilita la disponibilidad de recursos para cubrir las obligaciones. Añadió que retirar este incentivo podría afectar negativamente la cultura de pago puntual. No obstante, sugirió explorar la posibilidad de ajustar los porcentajes del descuento en lugar de eliminarlo por completo.</p>
+
+<p>Claudia Bermúdez compartió su experiencia en otro conjunto residencial donde la eliminación del descuento por pronto pago resultó en que los residentes pagaran más tarde, afectando el flujo de caja. Resaltó que mantener el descuento incentiva el pago anticipado, lo cual es beneficioso para la administración.</p>
+
+<p>Juan Carlos Chamorro expresó su acuerdo con Andrés Felipe Guzmán, argumentando que es preferible mantener el incentivo del pronto pago para asegurar un flujo de ingresos constante y temprano. Subrayó que la percepción de los residentes sobre el descuento es positiva y que eliminarlo podría generar descontento.</p>
+
+<p>En resumen, se consideró que el descuento por pronto pago es una herramienta útil para fomentar el pago puntual y mantener un flujo de caja adecuado. Se propuso analizar diferentes escenarios en relación con el porcentaje del descuento, pero se descartó la eliminación completa del mismo.</p><h2>6. Deuda interna: Fondo imprevistos</h2>
+
+<p>Durante la discusión sobre el flujo de caja proyectado, se mencionó la necesidad de incluir la deuda interna relacionada con el fondo de imprevistos, estimada en aproximadamente 25 millones de pesos. Se señaló que este fondo debería estar monetizado en lo posible para el año 2025.</p>
+
+<p>Se explicó que, según la ley, el conjunto debe ahorrar el 1% del presupuesto en una cuenta aparte. Contablemente, esto se ha estado registrando, pero no se refleja completamente en el banco, donde solo hay 11 millones de pesos disponibles, mientras que contablemente se registran alrededor de 30 y pico millones de pesos.</p>
+
+<p>En consecuencia, se enfatizó la importancia de asegurar que la totalidad del fondo esté disponible en el banco como un recurso restringido, para que el edificio pueda recurrir a él en caso de imprevistos.</p><h2>7. Pendientes administrativos y documentales</h2>
+
+<p>Durante la reunión, se abordó el tema de los pendientes administrativos y documentales, donde el revisor fiscal, Juan Carlos Chamorro, solicitó información formal sobre varios aspectos. Entre estos, se mencionaron contratos, manuales y documentos, preguntando si existen, si se tiene pensado elaborarlos y, en caso negativo, solicitando una respuesta formal a través de los canales de comunicación establecidos.</p>
+
+<h3>Manual de contratación</h3>
+
+<p>En respuesta a la solicitud del revisor fiscal, el representante legal, Andrés Felipe Guzmán, informó que el procedimiento de contratación se basa en solicitar tres cotizaciones para contratos de mantenimiento a largo plazo. Claudia Bermúdez apoya en la revisión, y se cuenta con el acompañamiento de una interventoría y auditoría. El representante legal revisa todos los contratos, verificando la documentación del contratista, incluyendo Cámara de Comercio y referencias. Se están adaptando los modelos de contrato a un formato estándar. Además, indicó que todas las carpetas de contratistas y equipos están archivadas y rotuladas en la administración.</p>
+
+<h3>Manual de políticas contables</h3>
+
+<p>El revisor fiscal también solicitó la formalización de las políticas contables por escrito. La contadora, Soledad Castro, propuso elaborar las políticas contables para el cierre del año, enfocándose en las políticas de cartera y activos fijos. Soledad Castro se ofreció a realizar estas políticas sin costo para la copropiedad este año, con la expectativa de que se incluya un valor razonable en el presupuesto del próximo año para su pago. Además, propuso socializar estas políticas con el Consejo y el revisor fiscal.</p>
+
+<h3>Contratos de mantenimiento</h3>
+
+<p>En cuanto a los contratos de mantenimiento, el revisor fiscal solicitó información sobre los planes para su elaboración, las fechas estimadas y, en caso de no realizarse, una justificación. Andrés Felipe Guzmán aseguró que todos los procedimientos se están llevando a cabo, aunque falta plasmarlos por escrito. Se aclaró que habrá casos no contemplados en las normas generales, pero se están siguiendo los procedimientos establecidos. Se mencionó la importancia de revisar los temas de cartera, ya que no todos los casos pueden manejarse de la misma manera. Andrés Felipe Guzmán enfatizó que no realiza prejurídicos, ya que la administración se encarga de enviar correos, requerimientos y cuentas de cobro. En casos de deudas elevadas, se procede directamente al cobro por vía ejecutiva.</p>
+
+<p>El revisor fiscal sugirió que se establezcan por escrito los montos hasta los cuales la administración puede contratar directamente y cuándo se requiere la aprobación del Consejo de Administración. También recomendó formalizar qué tipo de contrataciones requieren pólizas y qué tipo de pólizas, así como qué contrataciones requieren factura o contrato. Además, propuso un manual de cómo se realizan los pagos y las políticas de cartera y tesorería, incluyendo los procedimientos para el envío de cartas y el paso a presupuesto jurídico.</p>
+
+<p>Finalmente, se acordó que la administración contestará por escrito al revisor fiscal sobre estos puntos, formalizando los planes de trabajo para los pendientes administrativos y documentales.</p><h2>8. Asuntos contables pendientes: AXA y anticipo de 9 millones</h2>
+
+<p>Durante la discusión sobre el informe del revisor fiscal y el informe de administración, surgió la necesidad de abordar asuntos contables pendientes, específicamente el tema de AXA y un anticipo de 9 millones. La señora Claudia expresó su preocupación por no llegar a la asamblea con las mismas partidas pendientes que vienen desde hace mucho tiempo sin resolver.</p>
+
+<p>La contadora, Soledad Castro, explicó que existen dos partidas que dependen de la póliza, pero que, en su opinión, no se realizó la reclamación correspondiente en su momento. Ante esta situación, propuso llevar estos valores al estado de resultados, previa aprobación del Consejo, sustentando el registro contable con la respuesta de la póliza, que previsiblemente será negativa debido a la falta de reclamación oportuna. Con este soporte, se procedería a castigar esos valores.</p>
+
+<p>En cuanto al anticipo de 9 millones, la contadora sugirió llevarlo a aprovechamientos, dado que no se ha podido identificar su origen. Propuso cruzarlo con los gastos del reglamento, como los pagos a Niif de Funda. Para llevar a cabo estos ajustes, la contadora solicitó la aprobación del Consejo, asegurando que estos movimientos quedarán reflejados en un acta, en su informe y en sus revelaciones, con el fin de sanear esos valores y ajustar la realidad económica de la copropiedad.</p>
+
+<p>El revisor fiscal, Juan Carlos Chamorro, solicitó que se le enviaran copias de los comunicados enviados a la aseguradora para verificar si se ha realizado alguna gestión al respecto.</p>
+
+<p>La contadora se comprometió a realizar las políticas contables para el cierre, enfocándose en las políticas de cartera y activos fijos. Propuso socializar estas políticas en una reunión de consejo con el revisor fiscal. En cuanto a la provisión de cartera, sugirió provisionar un porcentaje de los intereses, pero no las cuotas de administración, ya que el inmueble responde por estas. También mencionó la necesidad de considerar una provisión para cubrir posibles gastos de honorarios de abogados, dado que los jueces no siempre fallan a favor en este tema.</p>
+
+<p>El representante legal, Andrés Felipe Guzmán, intervino para aclarar que los honorarios de abogado no son una expensa común y que los intereses hacen parte de los recursos patrimoniales de la copropiedad. Enfatizó la importancia de ser cuidadosos con este manejo, especialmente en lo que respecta a los cobros de servicios públicos, dado que la copropiedad no es una empresa de servicios públicos.</p>
+
+<p>Finalmente, se acordó trabajar en estos asuntos contables pendientes y socializarlos para el cierre, con el fin de presentar un informe claro y ajustado a la realidad económica de la copropiedad.</p><h2>9. Próxima reunión y seguimiento</h2>
+
+<p>Durante la reunión, Ivette Game solicitó establecer la fecha de la próxima reunión para el cierre de septiembre, con el objetivo de realizar un seguimiento estricto de los temas expuestos y asegurar la continuidad en el avance de los objetivos planteados.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 20:01</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Extender el contrato con la empresa de vigilancia IMPROCAM por dos periodos más hasta el 6 de marzo de 2028 – <strong>Responsable:</strong> Consejo de Administración</li>
+ <li>Formalizar por escrito los pendientes administrativos y documentales (manual de contratación, manual de políticas contables, etc.) – <strong>Responsable:</strong> Andrés Felipe Guzmán (Administración)</li>
+ <li>Incluir la deuda interna del fondo de imprevistos en el flujo de caja – <strong>Responsable:</strong> No especificado</li>
+ <li>Enviar copia de los comunicados enviados a la aseguradora – <strong>Responsable:</strong> Administración</li>
+ <li>Elaborar políticas contables para cierre (cartera y activos fijos) – <strong>Responsable:</strong> Soledad Castro (Contadora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): reunion_consejo_2025_10_09_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_consejo_2025_10_09/reunion_consejo_2025_10_09_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/tRMF33yt3HHLGjP
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/tRMF33yt3HHLGjP
+Generando URL pública para Transcripcion.txt (EXISTENTE): reunion_consejo_2025_10_09_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_consejo_2025_10_09/reunion_consejo_2025_10_09_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/4ANYaByp5ot9z9H
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/4ANYaByp5ot9z9H

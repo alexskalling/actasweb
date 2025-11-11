@@ -9,20 +9,6 @@ import {
   obtenerContenidoArchivo,
 } from "./utilsActions";
 
-import io from "socket.io-client";
-
-const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
-
-socketBackendReal.on("connect_error", (error) => {
-  console.error("Error de conexión Socket.IO desde backend real:", error);
-});
-socketBackendReal.on("connect_timeout", (timeout) => {
-  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
-});
-socketBackendReal.on("disconnect", (reason) => {
-  console.log("Desconexión de Socket.IO desde backend real:", reason);
-});
-
 export async function formatContent(
   folder: string,
   file: string,
@@ -47,13 +33,6 @@ export async function formatContent(
       `Iniciando formatContent (VERSION FUSIONADA) para: ${nombreNormalizado} en carpeta: ${folder}`
     );
 
-    socketBackendReal.emit("upload-status", {
-      roomName: folder,
-      statusData: {
-        message: `[Formato] Organizando el contenido del acta en formato legible`,
-      },
-    });
-
     const urlNextcloud = process.env.NEXTCLOUD_URL;
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -63,8 +42,6 @@ export async function formatContent(
     }
     const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
     const rutaCarpetaActa = `${rutaBaseActas}/${folder}`;
-    console.log(rutaCarpetaActa);
-
     const rutaArchivoBorrador = `/Actas/${folder}/${nombreBorradorDocx}`;
     const rutaArchivoTranscripcion = `/Actas/${folder}/${nombreTranscripcionTxt}`;
 
@@ -144,11 +121,10 @@ export async function formatContent(
       let actaHTMLContent = contenidoActa;
       if (!actaHTMLContent) {
         writeLog(`Contenido del acta no proporcionado. Leyendo _Contenido.txt`);
-        //@ts-expect-error revisar despues
         actaHTMLContent = await obtenerContenidoArchivo(
           folder,
           nombreContenidoTxt
-        );
+        ) as string;
         if (!actaHTMLContent) {
           return {
             status: "error",
@@ -161,13 +137,6 @@ export async function formatContent(
       }
 
       writeLog(`Guardando Borrador .docx en Nextcloud: ${nombreBorradorDocx}`);
-      socketBackendReal.emit("upload-status", {
-        roomName: folder,
-        statusData: {
-          message: `[Formato] Guardando resultado de formato`,
-        },
-      });
-
       const archivoGuardado = await guardarArchivoNextcloudDocx(
         folder,
         nombreBorradorDocx,
@@ -232,12 +201,6 @@ export async function formatContent(
 
       const baseUrlDescargaDirectaBorrador = `${urlNextcloud}/s/${fileIdFromUrlBorrador}/download`;
       const baseUrlDescargaDirectaTranscripcion = `${urlNextcloud}/s/${fileIdFromUrlTranscripcion}/download`;
-      socketBackendReal.emit("upload-status", {
-        roomName: folder,
-        statusData: {
-          message: `Felicidades tu proceso ha terminado, ya puedes descargar tu acta`,
-        },
-      });
 
       return {
         status: "success",

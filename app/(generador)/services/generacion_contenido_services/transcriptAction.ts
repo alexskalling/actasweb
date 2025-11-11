@@ -9,21 +9,6 @@ import {
   obtenerContenidoArchivo,
 } from "./utilsActions";
 
-import io from "socket.io-client";
-
-// 🔑 Conexión Socket.IO (FUERA de la función uploadFile, se inicializa una sola vez)
-const socketBackendReal = io(process.env.NEXT_PUBLIC_SOCKET_URL);
-
-socketBackendReal.on("connect_error", (error) => {
-  console.error("Error de conexión Socket.IO desde backend real:", error);
-});
-socketBackendReal.on("connect_timeout", (timeout) => {
-  console.error("Timeout de conexión Socket.IO desde backend real:", timeout);
-});
-socketBackendReal.on("disconnect", (reason) => {
-  console.log("Desconexión de Socket.IO desde backend real:", reason);
-});
-
 interface TranscripcionResult {
   status: "success" | "error";
   content?: string;
@@ -46,13 +31,6 @@ export async function transcripAction(
     return { status: "error", message: errorMessage };
   }
 
-  socketBackendReal.emit("upload-status", {
-    roomName: folder,
-    statusData: {
-      message: `[Transcripción] Iniciando proceso esto puede tardar unos minutos dependiendo del tamanio del archivo`,
-    },
-  });
-
   try {
     if (await verificarTranscripcionExistente(nombreTranscripcion, folder)) {
       return await obtenerTranscripcionExistente(nombreTranscripcion, folder);
@@ -69,22 +47,9 @@ export async function transcripAction(
       textoTranscripcion
     );
 
-    socketBackendReal.emit("upload-status", {
-      roomName: folder,
-      statusData: {
-        message: `[Transcripción] Transcripción completada, generando archivo `,
-      },
-    });
-
     return { status: "success", content: textoTranscripcion };
   } catch (error) {
-    manejarError("transcripAction", error); // Log del error usando la función existente
-    socketBackendReal.emit("upload-status", {
-      roomName: folder,
-      statusData: {
-        message: `[Transcripción] Error al procesar. Error: ${error || error}`,
-      },
-    });
+    manejarError("transcripAction", error);
     return {
       status: "error",
       message: "Error en el proceso de transcripción.",
@@ -117,9 +82,8 @@ async function obtenerTranscripcionExistente(
     folder,
     nombreTranscripcion
   );
-  //@ts-expect-error revisar despues
 
-  return { status: "success", content: contenidoTranscripcion };
+  return { status: "success", content: contenidoTranscripcion as string };
 }
 
 async function realizarTranscripcionAssemblyAI(
@@ -128,13 +92,6 @@ async function realizarTranscripcionAssemblyAI(
   urlAssembly: string
 ): Promise<string> {
   writeLog(`Iniciando transcripción con AssemblyAI para: ${file}`);
-  socketBackendReal.emit("upload-status", {
-    roomName: undefined, // No folder context for this specific status, or determine if folder is relevant here
-    statusData: {
-      message: `[Transcripción] Convirtiendo audio a texto...`,
-    },
-  });
-
   const clienteTranscripcion = await obtenerClienteTranscripcion();
   const transcripcion = await clienteTranscripcion.transcripts.transcribe({
     audio_url: urlAssembly,
@@ -154,12 +111,6 @@ async function guardarTranscripcionEnNextcloud(
   nombreTranscripcion: string,
   textoTranscripcion: string
 ): Promise<void> {
-  socketBackendReal.emit("upload-status", {
-    roomName: folder,
-    statusData: {
-      message: `[Transcripción] Guardando transcripción...`,
-    },
-  });
   writeLog(
     `Guardando transcripción: ${nombreTranscripcion} en carpeta ${folder}`
   );

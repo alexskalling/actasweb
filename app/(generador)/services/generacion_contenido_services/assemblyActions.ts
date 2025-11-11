@@ -1,11 +1,140 @@
-// services/assemblyActions.ts
 "use client";
+
 interface UploadResult {
   success: boolean;
   message?: string;
   publicUrl?: string | null;
   error?: string;
   uploadUrl?: string | null;
+}
+
+const MAX_FILE_SIZE = 1.1 * 1024 * 1024 * 1024;
+const UPLOAD_TIMEOUT = 300000;
+const MAX_RETRIES = 3;
+const RETRY_DELAY = 2000;
+
+function uploadWithProgress(
+  file: File,
+  url: string,
+  apiKey: string,
+  onProgress?: (progress: number) => void,
+  signal?: AbortSignal
+): Promise<Response> {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.timeout = UPLOAD_TIMEOUT;
+
+    if (signal) {
+      signal.addEventListener("abort", () => {
+        xhr.abort();
+        reject(new Error("Upload cancelled"));
+      });
+    }
+
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable && onProgress) {
+        const progress = (event.loaded / event.total) * 100;
+        onProgress(progress);
+      }
+    };
+
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        try {
+          const result = JSON.parse(xhr.responseText);
+          const response = new Response(JSON.stringify(result), {
+            status: xhr.status,
+            statusText: xhr.statusText,
+          });
+          resolve(response);
+        } catch (e) {
+          reject(new Error("Error al parsear respuesta"));
+        }
+      } else {
+        const response = new Response(xhr.responseText, {
+          status: xhr.status,
+          statusText: xhr.statusText,
+        });
+        reject(response);
+      }
+    };
+
+    xhr.ontimeout = () => {
+      reject(new Error("Timeout"));
+    };
+
+    xhr.onerror = () => {
+      reject(new Error("Network error"));
+    };
+
+    xhr.onabort = () => {
+      reject(new Error("Upload cancelled"));
+    };
+
+    xhr.open("POST", url);
+    xhr.setRequestHeader("Authorization", apiKey);
+    xhr.send(file);
+  });
+}
+
+async function retryUpload(
+  file: File,
+  url: string,
+  apiKey: string,
+  onProgress?: (progress: number) => void,
+  retries = MAX_RETRIES
+): Promise<Response> {
+  let lastError: Error | Response | null = null;
+  const controller = new AbortController();
+
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      if (attempt > 0) {
+        const delay = RETRY_DELAY * Math.pow(2, attempt - 1);
+        await new Promise((resolve) => setTimeout(resolve, delay));
+
+        if (onProgress) {
+          onProgress(0);
+        }
+      }
+
+      const response = await uploadWithProgress(
+        file,
+        url,
+        apiKey,
+        onProgress,
+        controller.signal
+      );
+
+      if (onProgress) {
+        onProgress(100);
+      }
+
+      return response;
+    } catch (error) {
+      lastError = error instanceof Error ? error : (error as Response);
+
+      if (error instanceof Error && error.name === "AbortError") {
+        throw error;
+      }
+
+      if (error instanceof Response && error.status >= 400 && error.status < 500) {
+        throw error;
+      }
+
+      if (error instanceof Error && error.message === "Timeout") {
+        throw error;
+      }
+
+      if (error instanceof Error && error.message === "Upload cancelled") {
+        throw error;
+      }
+
+      console.warn(`Intento ${attempt + 1} fallido, reintentando...`, lastError instanceof Error ? lastError.message : `Status: ${(lastError as Response).status}`);
+    }
+  }
+
+  throw lastError || new Error("Error desconocido después de múltiples intentos");
 }
 
 export async function uploadFileToAssemblyAI(
@@ -20,80 +149,122 @@ export async function uploadFileToAssemblyAI(
     return {
       success: false,
       message: "API Key de AssemblyAI no configurada.",
-      error:
-        "API Key de AssemblyAI no configurada. Debes reemplazar 'TU_API_KEY_DE_ASSEMBLYAI' con tu clave real.",
+      error: "API Key de AssemblyAI no configurada.",
       publicUrl: null,
       uploadUrl: null,
     };
   }
 
-  return new Promise((resolve) => {
-    // Retornamos una Promesa para manejar la asincronía
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://api.assemblyai.com/v2/upload");
-    xhr.setRequestHeader("Authorization", ASSEMBLYAI_API_KEY);
-
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable && onUploadProgress) {
-        const progress = (event.loaded / event.total) * 100;
-        onUploadProgress(progress);
-      }
+  if (!archivo) {
+    return {
+      success: false,
+      message: "No se proporcionó ningún archivo.",
+      error: "Archivo no encontrado en FormData",
+      publicUrl: null,
+      uploadUrl: null,
     };
+  }
 
-    xhr.onload = async () => {
-      if (xhr.status >= 200 && xhr.status < 300) {
-        try {
-          const uploadResult = JSON.parse(xhr.responseText);
-          console.log("Audio subido exitosamente a AssemblyAI:", uploadResult);
-          resolve({
-            success: true,
-            message: "Audio subido exitosamente a AssemblyAI.",
-            publicUrl: null,
-            uploadUrl: uploadResult.upload_url,
-          });
-        } catch (e) {
-          console.error("Error al parsear la respuesta JSON:", e);
-          resolve({
-            success: false,
-            message: "Error al procesar la respuesta del servidor.",
-            error:
-              e instanceof Error
-                ? e.message
-                : "Error desconocido al parsear JSON",
-            publicUrl: null,
-            uploadUrl: null,
-          });
-        }
-      } else {
-        console.error(
-          `Error al subir el audio a AssemblyAI. Código de estado: ${xhr.status}`
-        );
-        const errorDetails = xhr.responseText;
-        console.error("Detalles del error:", errorDetails);
-        resolve({
-          success: false,
-          message: `Error al subir audio a AssemblyAI: ${xhr.status} - ${xhr.statusText}`,
-          error: `Código de estado: ${xhr.status}, Detalles: ${errorDetails}`,
-          publicUrl: null,
-          uploadUrl: null,
-        });
-      }
+  if (archivo.size > MAX_FILE_SIZE) {
+    const fileSizeMB = (archivo.size / 1024 / 1024).toFixed(2);
+    const maxSizeMB = (MAX_FILE_SIZE / 1024 / 1024).toFixed(0);
+
+    return {
+      success: false,
+      message: `El archivo es demasiado grande (${fileSizeMB} MB). Tamaño máximo permitido: ${maxSizeMB} MB`,
+      error: `Archivo demasiado grande: ${fileSizeMB} MB (máximo: ${maxSizeMB} MB)`,
+      publicUrl: null,
+      uploadUrl: null,
     };
+  }
 
-    xhr.onerror = () => {
-      console.error(
-        "Error general en la función uploadAudio (XMLHttpRequest error):",
-        xhr.statusText
-      );
-      resolve({
+  if (archivo.size === 0) {
+    return {
+      success: false,
+      message: "El archivo está vacío.",
+      error: "Archivo sin contenido",
+      publicUrl: null,
+      uploadUrl: null,
+    };
+  }
+
+  const uploadUrl = "https://api.assemblyai.com/v2/upload";
+
+  try {
+    console.log(`Iniciando subida de archivo: ${archivo.name} (${(archivo.size / 1024 / 1024).toFixed(2)} MB)`);
+
+    const response = await retryUpload(
+      archivo,
+      uploadUrl,
+      ASSEMBLYAI_API_KEY,
+      onUploadProgress
+    );
+
+    if (!response.ok) {
+      const errorDetails = await response.text().catch(() => "Sin detalles");
+      console.error(`Error al subir archivo: ${response.status}`, errorDetails);
+
+      return {
         success: false,
-        message: "Error general al subir el audio.",
-        error: `Error de red al subir el archivo. Código de estado: ${xhr.status}`,
+        message: `Error al subir archivo: ${response.status} ${response.statusText}`,
+        error: `Código: ${response.status}, Detalles: ${errorDetails}`,
         publicUrl: null,
         uploadUrl: null,
-      });
-    };
+      };
+    }
 
-    xhr.send(archivo); // Enviamos el archivo con XMLHttpRequest
-  });
+    const uploadResult = await response.json();
+
+    if (!uploadResult.upload_url) {
+      return {
+        success: false,
+        message: "La respuesta del servidor no contiene la URL de subida.",
+        error: "Respuesta inválida del servidor",
+        publicUrl: null,
+        uploadUrl: null,
+      };
+    }
+
+    console.log("✅ Archivo subido exitosamente a AssemblyAI:", uploadResult.upload_url);
+
+    return {
+      success: true,
+      message: "Archivo subido exitosamente a AssemblyAI.",
+      publicUrl: null,
+      uploadUrl: uploadResult.upload_url,
+    };
+  } catch (error) {
+    console.error("❌ Error al subir archivo:", error);
+
+    let errorMessage = "Error desconocido al subir el archivo.";
+    let errorDetails = "Error desconocido";
+
+    if (error instanceof Error) {
+      if (error.message === "Timeout") {
+        errorMessage = "La subida del archivo tomó demasiado tiempo. Por favor intenta con un archivo más pequeño o verifica tu conexión.";
+        errorDetails = "Timeout en la subida";
+      } else if (error.message.includes("Network error") || error.message.includes("Failed to fetch")) {
+        errorMessage = "Error de conexión. Verifica tu conexión a internet e intenta nuevamente.";
+        errorDetails = "Error de red";
+      } else if (error.message === "Upload cancelled") {
+        errorMessage = "La subida fue cancelada.";
+        errorDetails = "Subida cancelada";
+      } else {
+        errorMessage = error.message;
+        errorDetails = error.message;
+      }
+    } else if (error instanceof Response) {
+      const errorText = await error.text().catch(() => "Sin detalles");
+      errorMessage = `Error al subir archivo: ${error.status} ${error.statusText}`;
+      errorDetails = `Código: ${error.status}, Detalles: ${errorText}`;
+    }
+
+    return {
+      success: false,
+      message: errorMessage,
+      error: errorDetails,
+      publicUrl: null,
+      uploadUrl: null,
+    };
+  }
 }

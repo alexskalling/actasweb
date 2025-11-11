@@ -8,6 +8,9 @@ const nextConfig = {
   images: {
     domains: ['lh3.googleusercontent.com'],
   },
+  serverExternalPackages: ['@google/generative-ai'],
+  // Configuración para Turbopack
+  turbopack: {},
 };
 
 export default nextConfig;

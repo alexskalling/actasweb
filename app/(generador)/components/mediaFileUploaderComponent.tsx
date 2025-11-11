@@ -1,34 +1,31 @@
 "use client";
 
 import * as React from "react";
+import { X } from "lucide-react";
+import { useSession } from "next-auth/react";
+import { Button } from "@/components/ui/button";
+import AlertModalComponent from "./alertModalComponent";
+import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
+import ProgressBarComponent from "./progressBarComponent";
+import SimplePaymentModalComponent from "./simplePaymentModalComponent";
+import UploadDropzoneComponent from "./uploadDropzoneComponent";
+import WompiComponent from "./wompiComponent";
+import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
+import { BuscarAbiertoProceso } from "../services/actas_querys_services/buscarAbiertoProceso";
+import { GuardarNuevoProceso } from "../services/actas_querys_services/guardarNuevoProceso";
+import { normalizarNombreArchivo } from "../services/generacion_contenido_services/utilsActions";
+import { processAction } from "../services/generacion_contenido_services/processAction";
+import { uploadFileToAssemblyAI } from "../services/generacion_contenido_services/assemblyActions";
+import { allowedExtensions } from "../utils/allowedExtensions";
+import { formatCurrency, ensureDurationFormat } from "../utils/format";
+import { track } from "../utils/analytics";
+import { useIsIOSDevice } from "../hooks/useIOS";
 
-// Declaración global para la función de confirmación de pago
 declare global {
   interface Window {
     confirmPayment?: () => void;
   }
 }
-import { X } from "lucide-react";
-//import { exec } from "child_process";
-import { Button } from "@/components/ui/button";
-import { normalizarNombreArchivo } from "../services/generacion_contenido_services/utilsActions";
-import WompiComponent from "./wompiComponent";
-import { processAction } from "../services/generacion_contenido_services/processAction";
-import io, { Socket } from "socket.io-client";
-import { uploadFileToAssemblyAI } from "../services/generacion_contenido_services/assemblyActions";
-import { useSession } from "next-auth/react";
-import { GuardarNuevoProceso } from "../services/actas_querys_services/guardarNuevoProceso";
-import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
-import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
-import { BuscarAbiertoProceso } from "../services/actas_querys_services/buscarAbiertoProceso";
-import AlertModalComponent from "./alertModalComponent";
-import SimplePaymentModalComponent from "./simplePaymentModalComponent";
-import { track } from "../utils/analytics";
-import { formatCurrency, ensureDurationFormat } from "../utils/format";
-import { allowedExtensions } from "../utils/allowedExtensions";
-import { useIsIOSDevice } from "../hooks/useIOS";
-import UploadDropzoneComponent from "./uploadDropzoneComponent";
-import ProgressBarComponent from "./progressBarComponent";
 
 
 interface MediaSelectorProps {
@@ -37,17 +34,6 @@ interface MediaSelectorProps {
   maxSize?: number;
   onCheckActa?: () => void;
 }
-/*function getRealAudioDuration(filePath: string) {
-  return new Promise((resolve, reject) => {
-    exec(`ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "${filePath}"`,
-      (error, stdout) => {
-        if (error) return reject(error);
-        const duration = parseFloat(stdout.trim());
-        resolve(duration);
-      }
-    );
-  });
-}*/
 
 export default function MediaFileUploaderComponent({
   onFileSelect,
@@ -65,18 +51,19 @@ export default function MediaFileUploaderComponent({
   const [duplicado, setDuplicado] = React.useState<boolean>(true);
   const [uploadProgress, setUploadProgress] = React.useState<number>(0);
   const [urlAssembly, setUrlAssembly] = React.useState<string | null>(null);
-  const [folder, setFolder] = React.useState<string>();
-  const [file, setFile] = React.useState<string>();
-  //const [fileid, setFileid] = React.useState<string>();
-  const [acta, setActa] = React.useState<string>();
-  const [idtx, setIdtx] = React.useState(null);
-  const [transcripcion, setTranscripcion] = React.useState<string>();
-  const [socket, setSocket] = React.useState<Socket | null>(null); // Estado para manejar la conexión de Socket.IO
-  const [roomName, setRoomName] = React.useState<string | null>(null); // Estado para almacenar el nombre de la sala
+  const [folder, setFolder] = React.useState<string | null>(null);
+  const [file, setFile] = React.useState<string | null>(null);
+  const [acta, setActa] = React.useState<string | null>(null);
+  const [idtx, setIdtx] = React.useState<string | null>(null);
+  const [transcripcion, setTranscripcion] = React.useState<string | null>(null);
   const [start, setStar] = React.useState<boolean>(false);
   const [showModal, setShowModal] = React.useState(false);
   const [modalMessage, setModalMessage] = React.useState("");
   const [showPaymentModal, setShowPaymentModal] = React.useState(false);
+  const [isDuplicateModal, setIsDuplicateModal] = React.useState(false);
+  const [pendingFile, setPendingFile] = React.useState<File | null>(null);
+  const [pendingOriginalName, setPendingOriginalName] = React.useState<string>("");
+  const [originalFileName, setOriginalFileName] = React.useState<string | null>(null);
   const [industriaId, setIndustriaId] = React.useState<number | null>(null);
   const lastAnimRef = React.useRef<SVGAnimateElement | null>(null);
   const [animacionTerminada, setAnimacionTerminada] = React.useState(false);
@@ -105,75 +92,77 @@ export default function MediaFileUploaderComponent({
     setUploadStatus(null);
     setUploadProgress(0);
 
+    if (!file) return;
+
     try {
-      if (file) {
-        const isDuplicated = await BuscarAbiertoProceso(file.name);
-
-        if (isDuplicated) {
-          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
-          setShowModal(true);
-          clearSelection();
-          return;
-
-        } else {
-          setDuplicado(false);
-        }
+      const MAX_FILE_SIZE = 1.1 * 1024 * 1024 * 1024;
+      if (file.size > MAX_FILE_SIZE) {
+        const fileSizeMB = (file.size / 1024 / 1024).toFixed(2);
+        const maxSizeMB = (MAX_FILE_SIZE / 1024 / 1024).toFixed(0);
+        setError(`El archivo es demasiado grande (${fileSizeMB} MB). Tamaño máximo permitido: ${maxSizeMB} MB`);
+        clearSelection();
+        return;
       }
 
+      if (file.size === 0) {
+        setError("El archivo seleccionado está vacío. Por favor selecciona un archivo válido.");
+        clearSelection();
+        return;
+      }
+
+      if (!file.name || file.name.trim() === '') {
+        setError("El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo.");
+        clearSelection();
+        return;
+      }
     } catch (error: unknown) {
-      console.error(" Error al ejecutar BuscarAbiertoProceso:", error);
+      console.error("Error al validar archivo:", error);
     }
 
-
-
-
-    // Track inicio selección archivo
     track('inicio_seleccion_archivo', {
       event_category: 'proceso_acta',
       event_label: 'usuario_selecciona_archivo'
     });
 
-    // Manejo específico para dispositivos iOS
     if (isIOS && !file) {
       setError("Por favor selecciona un archivo válido. En iPhone, asegúrate de seleccionar desde 'Archivos' o usar la opción 'Grabar'.");
       return;
     }
 
-    // Validación adicional para iOS
-    if (isIOS && file) {
-      // Verificar que el archivo tenga un tamaño válido
-      if (file.size === 0) {
-        setError("El archivo seleccionado está vacío. Por favor selecciona un archivo válido.");
-        return;
-      }
-
-      // Verificar que el archivo tenga un nombre válido
-      if (!file.name || file.name.trim() === '') {
-        setError("El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo.");
-        return;
-      }
-    }
-
-    //@ts-expect-error revisar despues
-
     const nombreNormalizado = await normalizarNombreArchivo(file.name);
     const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
+
+    try {
+      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+
+      if (isDuplicated) {
+        setPendingFile(file);
+        setPendingOriginalName(nombreNormalizado);
+        setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+        setIsDuplicateModal(true);
+        setShowModal(true);
+        return;
+      } else {
+        setDuplicado(false);
+      }
+    } catch (error: unknown) {
+      console.error("Error al ejecutar BuscarAbiertoProceso:", error);
+      setModalMessage("Error al verificar el nombre del acta. Por favor intenta nuevamente.");
+      setIsDuplicateModal(false);
+      setShowModal(true);
+      clearSelection();
+      return;
+    }
+
+    setOriginalFileName(null);
     setFile(nombreNormalizado);
-    setRoomName(nombreCarpeta);
     setFolder(nombreCarpeta);
 
-    if (!file) return;
-
-    // Lista de extensiones de audio y video permitidas (extraído a utils)
-
-    // Obtener la extensión del archivo y convertirla a minúsculas
     const fileExtension = '.' + file.name.split('.').pop()?.toLowerCase();
 
-    // Verificar si es un archivo de audio/video por tipo MIME o extensión
     if (!file.type.match(/^(audio|video)/) && !allowedExtensions.includes(fileExtension)) {
       setError("Por favor selecciona un archivo de audio o video válido. Formatos permitidos: " + allowedExtensions.join(', '));
 
-      // Track error validación archivo
       track('error_validacion_archivo', {
         event_category: 'proceso_acta',
         event_label: 'archivo_invalido',
@@ -183,7 +172,6 @@ export default function MediaFileUploaderComponent({
       return;
     }
 
-    // Track validación archivo exitosa
     track('validacion_archivo_exitosa', {
       event_category: 'proceso_acta',
       event_label: 'archivo_valido',
@@ -201,11 +189,9 @@ export default function MediaFileUploaderComponent({
       : document.createElement("video");
     media.src = url;
     media.onloadedmetadata = () => {
-
       setDuration(media.duration);
     };
 
-    // Track file selection event
     track('file_selected', {
       event_category: 'engagement',
       event_label: file.type || fileExtension,
@@ -213,57 +199,80 @@ export default function MediaFileUploaderComponent({
     });
   };
 
-
-
-  React.useEffect(() => {
-    const newSocket = io(process.env.NEXT_PUBLIC_SOCKET_URL);
-    setSocket(newSocket);
-
-    return () => {
-      newSocket.disconnect(); // Desconecta el socket cuando el componente se desmonte
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (!socket) return;
-    //@ts-expect-error revisar despues
-    socket.on("upload-status", (data: Array) => {
-      setUploadStatus(data.message);
-    });
-
-    return () => {
-      socket.off("upload-status");
-    };
-  }, [socket, roomName]);
-
   const clearSelection = () => {
     setSelectedFile(null);
-    //@ts-expect-error revisar despues
-
     setFile(null);
     setDuration(0);
     setPreview(null);
     setError(null);
-    //@ts-expect-error revisar despues
     setActa(null);
-    //@ts-expect-error revisar despues
     setTranscripcion(null);
-    //@ts-expect-error revisar despues
-
-    setUploadStatus(false);
+    setUploadStatus(null);
     setCalculando(false);
-
     setUploadProgress(0);
     setIndustriaId(null);
     setDuplicado(true);
-    // Track clear selection event
+    setPendingFile(null);
+    setPendingOriginalName("");
+    setIsDuplicateModal(false);
+    setOriginalFileName(null);
     track('clear_selection', { event_category: 'engagement' });
+  };
+
+  const handleRenameFile = async (newFileName: string) => {
+    if (!pendingFile) return;
+
+    try {
+      const nombreNormalizado = await normalizarNombreArchivo(newFileName);
+      const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
+
+      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+
+      if (isDuplicated) {
+        setModalMessage("Este nombre también está ocupado. Por favor usa otro nombre.");
+        setIsDuplicateModal(true);
+        setPendingOriginalName(nombreNormalizado);
+        return;
+      }
+
+      setOriginalFileName(pendingOriginalName);
+      setFile(nombreNormalizado);
+      setFolder(nombreCarpeta);
+      setSelectedFile(pendingFile);
+      setDuplicado(false);
+      setIsDuplicateModal(false);
+      setShowModal(false);
+      setPendingFile(null);
+      setPendingOriginalName("");
+
+      const url = URL.createObjectURL(pendingFile);
+      setPreview(url);
+
+      const fileExtension = '.' + pendingFile.name.split('.').pop()?.toLowerCase();
+      const media = pendingFile.type.startsWith("audio/") || fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
+        ? new Audio(url)
+        : document.createElement("video");
+      media.src = url;
+      media.onloadedmetadata = () => {
+        setDuration(media.duration);
+      };
+
+      track('file_renamed', {
+        event_category: 'engagement',
+        event_label: 'usuario_renombro_archivo',
+        nombre_original: pendingOriginalName,
+        nombre_nuevo: nombreNormalizado
+      });
+    } catch (error: unknown) {
+      console.error("Error al renombrar archivo:", error);
+      setModalMessage("Error al procesar el nuevo nombre. Por favor intenta nuevamente.");
+      setIsDuplicateModal(false);
+    }
   };
 
   const handlePayment = async () => {
     setProcesando(true);
 
-    // Track inicio procesamiento acta
     track('inicio_procesamiento_acta', {
       event_category: 'proceso_acta',
       event_label: 'inicio_generacion_acta',
@@ -272,7 +281,6 @@ export default function MediaFileUploaderComponent({
       tipo_procesamiento: 'acta_completa'
     });
 
-    // Track payment initiation event
     track('payment_initiated', {
       event_category: 'engagement',
       event_label: 'payment_start',
@@ -280,18 +288,16 @@ export default function MediaFileUploaderComponent({
     });
 
     setUploadStatus("Iniciando generacion del acta");
-    //@ts-expect-error revisar despues
-    const result = await processAction(folder, file, urlAssembly, session?.user?.email, session?.user?.name);
-    if (result.status == "success") {
-      setActa(result.acta);
-      setTranscripcion(result.transcripcion);
+    const result = await processAction(folder || '', file || '', urlAssembly || '', session?.user?.email || '', session?.user?.name || '');
+    if (result.status === "success") {
+      setActa(result.acta ?? null);
+      setTranscripcion(result.transcripcion ?? null);
       onCheckActa?.();
       setUploadStatus(
         "Todo listo, tu borrador de acta está listo para ser descargado."
       );
       setProcesando(false);
 
-      // Track procesamiento acta completado
       track('procesamiento_acta_completado', {
         event_category: 'proceso_acta',
         event_label: 'acta_generada_exitosamente',
@@ -299,7 +305,6 @@ export default function MediaFileUploaderComponent({
         tiempo_procesamiento: Date.now()
       });
 
-      // Track successful payment event
       track('payment_success', {
         event_category: 'engagement',
         event_label: 'payment_completed',
@@ -309,7 +314,6 @@ export default function MediaFileUploaderComponent({
       setProcesando(false);
       alert("Error al procesar el archivo: " + result.message);
 
-      // Track payment error event
       track('payment_error', {
         event_category: 'error',
         event_label: result.message || 'Unknown error'
@@ -331,7 +335,6 @@ export default function MediaFileUploaderComponent({
   }, [preview]);
 
   const handleUploadFile = async () => {
-    // Track inicio subida archivo
     track('inicio_subida_archivo', {
       event_category: 'proceso_acta',
       event_label: 'usuario_inicia_subida',
@@ -352,19 +355,39 @@ export default function MediaFileUploaderComponent({
       return;
     }
 
-    const formData = new FormData();
-
-    const nombreNormalizado = await normalizarNombreArchivo(selectedFile.name);
-    const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
-    setFile(nombreNormalizado);
-    setRoomName(nombreCarpeta);
-
-    setFolder(nombreCarpeta);
-    if (socket) {
-      socket.emit("set-filename", nombreNormalizado);
-      socket.emit("join-room", nombreCarpeta);
+    if (!file) {
+      setError("Error: No se ha establecido el nombre del archivo.");
+      setCalculando(false);
+      return;
     }
 
+    const nombreNormalizado = file;
+    const nombreCarpeta = folder || nombreNormalizado.replace(/\.[^/.]+$/, "");
+
+    try {
+      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+
+      if (isDuplicated) {
+        setPendingFile(selectedFile);
+        setPendingOriginalName(nombreNormalizado);
+        setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+        setIsDuplicateModal(true);
+        setShowModal(true);
+        setCalculando(false);
+        return;
+      }
+    } catch (error: unknown) {
+      console.error("Error al verificar duplicado antes de subir:", error);
+      setModalMessage("Error al verificar el nombre del acta. Por favor intenta nuevamente.");
+      setIsDuplicateModal(false);
+      setShowModal(true);
+      setCalculando(false);
+      return;
+    }
+
+    setFolder(nombreCarpeta);
+
+    const formData = new FormData();
     formData.append("audioFile", selectedFile);
     formData.append("nombreCarpeta", nombreCarpeta);
     formData.append("nombreNormalizado", nombreNormalizado);
@@ -374,7 +397,6 @@ export default function MediaFileUploaderComponent({
         const progressRounded = Math.round(progress);
         setUploadProgress(progressRounded);
 
-        // Track progreso subida cada 25%
         if (progressRounded % 25 === 0 && progressRounded > 0) {
           track('progreso_subida_archivo', {
             event_category: 'proceso_acta',
@@ -387,18 +409,15 @@ export default function MediaFileUploaderComponent({
 
       if (result.success) {
         setUploadStatus("Archivo listo para ser procesado");
-
-        //@ts-expect-error revisar despues
-        setUrlAssembly(result.uploadUrl);
-
+        setUrlAssembly(result.uploadUrl || null);
 
         const ejecutarCrearActa = async () => {
           try {
             if (result.uploadUrl) {
-              if (industriaId == null || industriaId == undefined) {
+              if (industriaId === null || industriaId === undefined) {
                 setIndustriaId(99);
               }
-              const tipo = process.env.NEXT_PUBLIC_PAGO == "soporte" ? "soporte" : "acta";
+              const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
               await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
 
             }
@@ -413,13 +432,10 @@ export default function MediaFileUploaderComponent({
               msg.includes("23505") ||
               msg.includes("DUPLICATE_ACTA")
             ) {
-              console.warn("⚠️ Duplicado detectado");
               setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
               setShowModal(true);
               clearSelection();
-
             } else {
-              // otro error
               setModalMessage("Ocurrió un error al crear el acta. Intenta nuevamente.");
               setShowModal(true);
             }
@@ -432,7 +448,6 @@ export default function MediaFileUploaderComponent({
         setProcesando(false);
         setAnimacionTerminada(true);
 
-        // Track successful upload event
         track('file_upload_success', {
           event_category: 'engagement',
           event_label: selectedFile.type,
@@ -445,7 +460,6 @@ export default function MediaFileUploaderComponent({
         setProcesando(false);
         setAnimacionTerminada(true);
 
-        // Track upload error event
         track('file_upload_error', {
           event_category: 'error',
           event_label: result.error || 'Unknown error'
@@ -459,7 +473,6 @@ export default function MediaFileUploaderComponent({
       setProcesando(false);
       setAnimacionTerminada(true);
 
-      // Track upload error event
       track('file_upload_error', {
         event_category: 'error',
         event_label: error instanceof Error ? error.message : 'Unknown error'
@@ -471,13 +484,11 @@ export default function MediaFileUploaderComponent({
     setError(null);
     setUploadStatus("Enviado a soporte directo...");
 
-    // Track direct support event
     track('direct_support_initiated', {
       event_category: 'engagement',
       event_label: 'direct_support_start'
     });
 
-    // Introduce a very short delay to allow state updates to potentially process
     setTimeout(async () => {
       try {
         handlePayment();
@@ -487,7 +498,6 @@ export default function MediaFileUploaderComponent({
         setCalculando(false);
         setUploadProgress(0);
 
-        // Track direct support error event
         track('direct_support_error', {
           event_category: 'error',
           event_label: error instanceof Error ? error.message : 'Unknown error'
@@ -498,7 +508,6 @@ export default function MediaFileUploaderComponent({
   const downloadFile = (url: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
     window.open(proxyUrl, "_blank");
-
   };
 
   const handleDownload = async () => {
@@ -510,7 +519,6 @@ export default function MediaFileUploaderComponent({
         return;
       }
 
-      // Track inicio descarga documento
       track('inicio_descarga_documento', {
         event_category: 'descarga',
         event_label: 'inicio_descarga_acta_transcripcion',
@@ -525,7 +533,6 @@ export default function MediaFileUploaderComponent({
           if (acta) {
             downloadFile(transcripcion);
 
-            // Track descarga documento completada y conversión
             track('descarga_documento_completada', {
               event_category: 'descarga',
               event_label: 'descarga_exitosa_completa',
@@ -539,17 +546,12 @@ export default function MediaFileUploaderComponent({
               tipo_conversion: 'acta_completa',
               posicion_embudo: 'final'
             });
-          } else {
-            console.warn("No se proporcionó una URL para la transcripción.");
           }
         }, 4000);
-      } else {
-        console.warn("No se proporcionó una URL para el acta.");
       }
     } catch (error) {
       console.error("Error general:", (error as Error).message);
 
-      // Track download error event
       track('document_download_error', {
         event_category: 'error',
         event_label: error instanceof Error ? error.message : 'Unknown error'
@@ -567,16 +569,10 @@ export default function MediaFileUploaderComponent({
       const fileid = searchParams.get("fileid");
       const duration = searchParams.get("duration");
       setDuration(Number(duration));
-      //@ts-expect-error revisar despues
       setIdtx(id);
-      //@ts-expect-error revisar despues
-      setFile(file);
-      ////@ts-expect-error revisar despues
-      //setFileid(fileid);
-      setUrlAssembly(fileid);
-      //@ts-expect-error revisar despues
-      setFolder(folder);
-      setRoomName(folder);
+      setFile(file ?? null);
+      setUrlAssembly(fileid ?? null);
+      setFolder(folder ?? null);
     }
   }, []);
 
@@ -584,7 +580,6 @@ export default function MediaFileUploaderComponent({
     const animEl = lastAnimRef.current;
     if (animEl) {
       const onAnimEnd = () => {
-        console.log("Animación del botón procesando terminada");
         setAnimacionTerminada(true);
         setProcesando(false);
       };
@@ -611,15 +606,15 @@ export default function MediaFileUploaderComponent({
 
           if (tx.data.status === "APPROVED") {
             await ActualizarProceso(
-              file || '', // nombre
-              5, // idEstadoProceso (ejemplo: 4 = aprobado)
+              file || '',
+              5,
               undefined,
               undefined,
               tx.data.id,
               undefined,
               undefined,
-              null, // urlTranscripcion (ajusta según tu flujo)
-              null,  // urlborrador (ajusta según tu flujo)
+              null,
+              null,
               null
             );
 
@@ -633,13 +628,29 @@ export default function MediaFileUploaderComponent({
     };
 
     fetchTransaction();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [idtx]);
 
 
   return (
     <>
-      <AlertModalComponent open={showModal} message={modalMessage} onClose={() => setShowModal(false)} />
+      <AlertModalComponent 
+        open={showModal} 
+        message={modalMessage} 
+        onClose={() => {
+          if (isDuplicateModal) {
+            setPendingFile(null);
+            setPendingOriginalName("");
+            setIsDuplicateModal(false);
+            clearSelection();
+          } else {
+            clearSelection();
+          }
+          setShowModal(false);
+        }}
+        allowRename={isDuplicateModal}
+        onRename={handleRenameFile}
+        currentFileName={pendingOriginalName}
+      />
 
       <SimplePaymentModalComponent
         open={showPaymentModal}
@@ -665,8 +676,15 @@ export default function MediaFileUploaderComponent({
               <div className="space-y-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <div className="text-md font-medium text-purple-700 truncate">
-                      {selectedFile.name}
+                    <div className="flex-1 min-w-0">
+                      <div className="text-md font-medium text-purple-700 truncate">
+                        {originalFileName || selectedFile.name}
+                      </div>
+                      {originalFileName && file && (
+                        <div className="text-sm text-purple-500 mt-1">
+                          Renombrado a: <span className="font-semibold">{file}</span>
+                        </div>
+                      )}
                     </div>
                     <Button
                       variant="ghost"
@@ -698,15 +716,14 @@ export default function MediaFileUploaderComponent({
               </div>
             )}
             <div className="flex gap-4">
-              {session != null && (
+              {session !== null && (
                 <DropdownIndustrias value={industriaId} onSelect={setIndustriaId} />
               )}
-
             </div>
 
             <div className="flex gap-4" id="DivBotonesUpload">
 
-              {acta == null && transcripcion == null && (
+              {acta === null && transcripcion === null && (
                 <Button
                   className="w-full rounded-sm"
                   variant="outline"
@@ -722,12 +739,12 @@ export default function MediaFileUploaderComponent({
                 </Button>
               )}
 
-              {uploadProgress == 100 &&
-                selectedFile != null &&
-                acta == null &&
-                transcripcion == null &&
-                urlAssembly != null &&
-                !procesando && duplicado == false && (
+              {uploadProgress === 100 &&
+                selectedFile !== null &&
+                acta === null &&
+                transcripcion === null &&
+                urlAssembly !== null &&
+                !procesando && duplicado === false && (
                   <WompiComponent
                     costo={calculatePrice(duration)}
                     file={file}
@@ -738,14 +755,13 @@ export default function MediaFileUploaderComponent({
                     showModalFirst={true}
                     onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
                       setShowPaymentModal(true);
-                      // Guardar la función para ejecutarla cuando el usuario confirme
                       window.confirmPayment = handleOpenWidget;
                     }}
                   />
                 )}
-              {uploadProgress != 100 &&
-                acta == null &&
-                transcripcion == null &&
+              {uploadProgress !== 100 &&
+                acta === null &&
+                transcripcion === null &&
                 !procesando && (
                   <Button
                     className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
@@ -1059,9 +1075,10 @@ export default function MediaFileUploaderComponent({
                     )}
                   </Button>
                 )}
-              {acta == null && transcripcion == null && animacionTerminada && procesando  ? (
+              {acta === null && transcripcion === null && animacionTerminada && procesando ? (
                 <Button
-                  id="procesando" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                  id="procesando"
+                  className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                   onClick={() => {
                     track('processing_button_click', {
                       event_category: 'engagement',
@@ -1070,7 +1087,6 @@ export default function MediaFileUploaderComponent({
                     handleUploadFile();
                   }}
                   disabled={procesando}
-                  
                 >
                   <>
                     {" "}
@@ -1376,7 +1392,7 @@ export default function MediaFileUploaderComponent({
                     Procesando acta...
                   </>
                 </Button>
-              ):acta && transcripcion ? (
+              ) : acta && transcripcion ? (
                 <div className="flex gap-2 w-full">
                   <Button
                     className="w-full rounded-sm"
@@ -1392,7 +1408,8 @@ export default function MediaFileUploaderComponent({
                     Generar nueva
                   </Button>
                   <Button
-                    id="DownloadBtn" className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                    id="DownloadBtn"
+                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                     onClick={() => {
                       track('download_button_click', {
                         event_category: 'engagement',
@@ -1414,16 +1431,15 @@ export default function MediaFileUploaderComponent({
                 </div>
               ) : null}
             </div>
-            {/* Barra de Progreso - Colocada aquí, antes de los botones */}
-            {calculando && selectedFile != null && (
+            {calculando && selectedFile !== null && (
               <ProgressBarComponent progress={uploadProgress} />
             )}
 
             {uploadStatus &&
-              uploadProgress != 100 &&
+              uploadProgress !== 100 &&
               !procesando &&
               !calculando &&
-              selectedFile != null && (
+              selectedFile !== null && (
                 <div className="text-sm text-purple-700 text-center">
                   {uploadStatus}
                 </div>
@@ -1432,12 +1448,12 @@ export default function MediaFileUploaderComponent({
         )}
         <div>
           {uploadStatus && (
-            <div className="mt-2 text-sm  break-words text-center text-purple-700 ">
+            <div className="mt-2 text-sm break-words text-center text-purple-700">
               {uploadStatus}
             </div>
           )}
         </div>
-        {process.env.NEXT_PUBLIC_PAGO == "soporte" && selectedFile && (
+        {process.env.NEXT_PUBLIC_PAGO === "soporte" && selectedFile && (
           <Button
             className="w-full mt-3 rounded-sm bg-purple-600 hover:bg-purple-700"
             onClick={() => {

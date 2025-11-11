@@ -47,7 +47,6 @@ const faqs = [
     question: "¿Es posible usar el servicio desde cualquier dispositivo?",
     answer: "Sí, funciona perfectamente desde computadora, celular o tableta",
   },
-  // More questions...
 ];
 
 
@@ -55,7 +54,7 @@ export default function Home() {
   const { data: session } = useSession();
   return (
     <div className="relative isolate z-0 ">
-      {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
+      {process.env.NEXT_PUBLIC_PAGO !== "soporte" && (
         <>
           <NavComponent />
           <div className=" mx-auto max-w-7xl">
@@ -123,7 +122,7 @@ export default function Home() {
         <GeneradorContainerContainer />
       </div>
 
-      {process.env.NEXT_PUBLIC_PAGO != "soporte" && (
+      {process.env.NEXT_PUBLIC_PAGO !== "soporte" && (
         <>
           <div className=" mx-auto p-4 max-w-7xl">
             <div className="w-full rounded-sm bg-white">
