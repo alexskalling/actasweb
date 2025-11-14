@@ -7,6 +7,8 @@ import AzureADProvider from "next-auth/providers/azure-ad";
 import type { NextAuthOptions } from "next-auth";
 
 export const authOptions: NextAuthOptions = {
+  // Asegurar que NextAuth use la URL correcta
+  url: process.env.NEXTAUTH_URL,
   providers: [
     AzureADProvider({
       clientId: process.env.AZURE_AD_CLIENT_ID!,
@@ -32,8 +34,12 @@ export const authOptions: NextAuthOptions = {
       }
 
       try {
+        // Seleccionar solo campos básicos que siempre existen para evitar errores si la migración no se ha ejecutado
         const existing = await db
-          .select()
+          .select({
+            id: usuarios.id,
+            email: usuarios.email,
+          })
           .from(usuarios)
           .where(eq(usuarios.email, mail))
           .then((res) => res[0]);
@@ -41,6 +47,7 @@ export const authOptions: NextAuthOptions = {
         const now = new Date();
 
         if (existing) {
+          // Actualizar solo ultimoAcceso que siempre existe
           await db
             .update(usuarios)
             .set({ ultimoAcceso: now })
@@ -52,6 +59,8 @@ export const authOptions: NextAuthOptions = {
         return true;
       } catch (err) {
         console.error("❌ Error durante signIn:", err);
+        console.error("Detalles del error:", JSON.stringify(err, null, 2));
+        // Retornar false causa AccessDenied
         return false;
       }
     },

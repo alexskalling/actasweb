@@ -27,8 +27,18 @@ export async function checkBillingData(): Promise<BillingDataCheck> {
     };
   }
 
+  // Por ahora, no usar idIndustria para evitar errores
   const user = await db
-    .select()
+    .select({
+      id: usuarios.id,
+      nombre: usuarios.nombre,
+      apellido: usuarios.apellido,
+      telefono: usuarios.telefono,
+      email: usuarios.email,
+      departamento: usuarios.departamento,
+      municipio: usuarios.municipio,
+      direccion: usuarios.direccion,
+    })
     .from(usuarios)
     .where(eq(usuarios.email, email))
     .then((res) => res[0]);
@@ -49,6 +59,7 @@ export async function checkBillingData(): Promise<BillingDataCheck> {
   if (!user.departamento || user.departamento?.trim() === '') missingFields.push('departamento');
   if (!user.municipio || user.municipio?.trim() === '') missingFields.push('municipio');
   if (!user.direccion || user.direccion?.trim() === '') missingFields.push('dirección');
+  // No verificar industria por ahora
 
   return {
     hasCompleteData: missingFields.length === 0,

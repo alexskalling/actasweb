@@ -29,6 +29,7 @@ export async function getActasByUser() {
       duracion: actas.duracion,
       urlTranscripcion: actas.urlTranscripcion,
       urlBorrador: actas.urlBorrador,
+      urlAssembly: actas.urlAssembly,
       idEstadoProceso: actas.idEstadoProceso,
       fechaProcesamiento: actas.fechaProcesamiento
     })

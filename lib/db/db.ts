@@ -7,8 +7,10 @@ if (!process.env.DATABASE_URL) {
 
 const client = postgres(process.env.DATABASE_URL, {
   ssl: 'require',
-  connect_timeout: 30,
+  connect_timeout: 60,
   max: 10,
+  idle_timeout: 20,
+  max_lifetime: 60 * 30,
 });
 
 export const db = drizzle(client)

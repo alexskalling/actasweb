@@ -18,11 +18,54 @@ import HistorialActasComponent from '../components/historialActasComponent'
 import { useSession, signOut } from 'next-auth/react'
 import EditProfileForm from './perfil/components/editProfileForm'
 import { track } from '../utils/analytics'
+import { checkBillingData } from '../services/billing/checkBillingData'
 
 export default function PlataformaPage() {
   const { data: session } = useSession()
   const [reloadTrigger, setReloadTrigger] = useState(false);
+  const [silentReload, setSilentReload] = useState(false);
   const [showEditForm, setShowEditForm] = useState(false)
+  const [hasCheckedBilling, setHasCheckedBilling] = useState(false)
+
+  // Verificar datos de facturación y abrir formulario si faltan datos (solo una vez al cargar)
+  useEffect(() => {
+    const verifyBillingData = async () => {
+      if (session?.user?.email && !hasCheckedBilling) {
+        try {
+          const check = await checkBillingData();
+          console.log("Verificación de datos de facturación:", check);
+          // Si no tiene datos completos, abrir el formulario automáticamente
+          if (!check.hasCompleteData) {
+            console.log("Abriendo formulario automáticamente - faltan datos");
+            setShowEditForm(true);
+          } else {
+            console.log("Usuario tiene todos los datos de facturación");
+          }
+          setHasCheckedBilling(true);
+        } catch (error) {
+          console.error("Error al verificar datos de facturación:", error);
+          setHasCheckedBilling(true);
+        }
+      }
+    };
+
+    // Esperar un poco para que la sesión esté completamente cargada
+    const timer = setTimeout(() => {
+      verifyBillingData();
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [session, hasCheckedBilling]);
+
+  // Abrir formulario automáticamente si viene con query param
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('openProfile') === 'true') {
+      setShowEditForm(true);
+      // Limpiar el query param de la URL
+      window.history.replaceState({}, '', '/plataforma');
+    }
+  }, []);
 
   // Track acceso a plataforma
   useEffect(() => {
@@ -163,7 +206,12 @@ export default function PlataformaPage() {
             <div className="order-1 lg:order-2 lg:col-start-3 space-y-4 sm:space-y-6">
               {/* Generador */}
               <div>
-                <MediaFileUploaderComponent onCheckActa={() => setReloadTrigger(prev => !prev)} />
+                <MediaFileUploaderComponent onCheckActa={() => {
+                  setSilentReload(true);
+                  setReloadTrigger(prev => !prev);
+                  // Resetear silentReload después de un momento
+                  setTimeout(() => setSilentReload(false), 100);
+                }} />
               </div>
 
               {/* Alerta Recuerda - Abajo del generador */}
@@ -193,7 +241,7 @@ export default function PlataformaPage() {
 
             {/* Historial Component - Segundo en mobile, lado izquierdo en desktop */}
             <div className="order-2 lg:order-1 lg:col-span-2">
-              <HistorialActasComponent reloadTrigger={reloadTrigger} />
+              <HistorialActasComponent reloadTrigger={reloadTrigger} silentReload={silentReload} />
             </div>
           </div>
 
@@ -214,7 +262,7 @@ export default function PlataformaPage() {
 
               <div className="mt-3 space-y-1 text-sm sm:text-base">
                 <p className="text-gray-900">
-                  • <strong className="text-purple-600">Leonardo:</strong> +57 301 242 2098
+                  • <strong className="text-purple-600">Sebastian:</strong> +57 312 299 5191
                 </p>
                 <p className="text-gray-900">
                   • <strong className="text-purple-600">Guillermo:</strong> +56 9 4587 1929

@@ -3,18 +3,21 @@
 import * as React from "react";
 import { X } from "lucide-react";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import AlertModalComponent from "./alertModalComponent";
 import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
 import ProgressBarComponent from "./progressBarComponent";
-import SimplePaymentModalComponent from "./simplePaymentModalComponent";
 import UploadDropzoneComponent from "./uploadDropzoneComponent";
-import ePaycoOnPageComponent from "./epaycoOnPageComponent";
+import EPaycoOnPageComponent from "./epaycoOnPageComponent";
 import BillingDataForm from "./billingDataForm";
+import { getUserData } from "../plataforma/perfil/actions/getUserData";
 import { checkBillingData } from "../services/billing/checkBillingData";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
 import { BuscarAbiertoProceso } from "../services/actas_querys_services/buscarAbiertoProceso";
 import { GuardarNuevoProceso } from "../services/actas_querys_services/guardarNuevoProceso";
+import { validarCodigo } from "../services/codigos_atencion/validarCodigo";
+import { reservarMinutos } from "../services/codigos_atencion/reservarMinutos";
 import { normalizarNombreArchivo } from "../services/generacion_contenido_services/utilsActions";
 import { processAction } from "../services/generacion_contenido_services/processAction";
 import { uploadFileToAssemblyAI } from "../services/generacion_contenido_services/assemblyActions";
@@ -42,6 +45,7 @@ export default function MediaFileUploaderComponent({
   accept = "audio/*,video/*",
   onCheckActa = () => {}, 
 }: MediaSelectorProps,) {
+  const router = useRouter();
   const isIOS = useIsIOSDevice();
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
   const [preview, setPreview] = React.useState<string | null>(null);
@@ -57,13 +61,12 @@ export default function MediaFileUploaderComponent({
   const [file, setFile] = React.useState<string | null>(null);
   const [acta, setActa] = React.useState<string | null>(null);
   const [hasBillingData, setHasBillingData] = React.useState<boolean>(false);
-  const [checkingBillingData, setCheckingBillingData] = React.useState<boolean>(true);
+  const [checkingBillingData, setCheckingBillingData] = React.useState<boolean>(false);
   const [showBillingForm, setShowBillingForm] = React.useState<boolean>(false);
   const [transcripcion, setTranscripcion] = React.useState<string | null>(null);
-  const [start, setStar] = React.useState<boolean>(false);
+  const [start, setStar] = React.useState<boolean>(true);
   const [showModal, setShowModal] = React.useState(false);
   const [modalMessage, setModalMessage] = React.useState("");
-  const [showPaymentModal, setShowPaymentModal] = React.useState(false);
   const [isDuplicateModal, setIsDuplicateModal] = React.useState(false);
   const [pendingFile, setPendingFile] = React.useState<File | null>(null);
   const [pendingOriginalName, setPendingOriginalName] = React.useState<string>("");
@@ -72,12 +75,20 @@ export default function MediaFileUploaderComponent({
   const lastAnimRef = React.useRef<SVGAnimateElement | null>(null);
   const [animacionTerminada, setAnimacionTerminada] = React.useState(false);
   const { data: session } = useSession();
+  // Estados para código de atención
+  const [tieneCodigoAtencion, setTieneCodigoAtencion] = React.useState<boolean>(false);
+  const [codigoAtencion, setCodigoAtencion] = React.useState<string>("");
+  const [validandoCodigo, setValidandoCodigo] = React.useState<boolean>(false);
+  const [mensajeCodigo, setMensajeCodigo] = React.useState<string>("");
+  const [codigoValido, setCodigoValido] = React.useState<boolean>(false);
+  const [codigoValidado, setCodigoValidado] = React.useState<{ id: string; codigo: string } | null>(null);
 
   const handleContinue = () => {
+    // No pedir industria si ya está guardada en el perfil
+    // La industria se carga automáticamente desde el perfil del usuario
     if (session && !industriaId) {
-      setModalMessage("Por favor selecciona una industria afin a los temas de tu acta.");
-      setShowModal(true);
-      return;
+      // Si no hay industria, usar la por defecto (99)
+      setIndustriaId(99);
     }
 
     track('continue_button_click', {
@@ -220,7 +231,25 @@ export default function MediaFileUploaderComponent({
     setPendingOriginalName("");
     setIsDuplicateModal(false);
     setOriginalFileName(null);
+    // Limpiar estados de código de atención
+    setTieneCodigoAtencion(false);
+    setCodigoAtencion("");
+    setValidandoCodigo(false);
+    setMensajeCodigo("");
+    setCodigoValido(false);
+    setCodigoValidado(null);
     track('clear_selection', { event_category: 'engagement' });
+  };
+
+  const resetearParaNuevaGeneracion = () => {
+    clearSelection();
+    setUrlAssembly(null);
+    setFolder(null);
+    setProcesando(false);
+    setAnimacionTerminada(false);
+    setShowModal(false);
+    setModalMessage("");
+    track('resetear_para_nueva_generacion', { event_category: 'engagement' });
   };
 
   const handleRenameFile = async (newFileName: string) => {
@@ -274,25 +303,128 @@ export default function MediaFileUploaderComponent({
     }
   };
 
-  const handlePayment = async () => {
+  const handlePayment = async (codigoAtencionUsado?: string | null) => {
+    // Validar que no exista un acta con el mismo nombre ANTES de procesar
+    // Usar el nombre renombrado (file) que el usuario ingresó
+    if (!file) {
+      alert("Error: No se ha establecido el nombre del archivo.");
+      return;
+    }
+
+    const codigoFinal = codigoAtencionUsado || codigoValidado?.codigo || null;
+
+    // Si hay código de atención, VALIDAR NUEVAMENTE antes de procesar
+    // para asegurar que el saldo sigue siendo suficiente
+    if (codigoFinal && codigoValidado) {
+      try {
+        const resultadoValidacion = await validarCodigo(codigoFinal, duration);
+        if (!resultadoValidacion.valido) {
+          setProcesando(false);
+          alert(`Error: ${resultadoValidacion.mensaje || "Código inválido o saldo insuficiente"}`);
+          setCodigoValido(false);
+          setMensajeCodigo(resultadoValidacion.mensaje || "Código inválido");
+          setCodigoValidado(null);
+          return;
+        }
+        // Actualizar el código validado con la información más reciente
+        if (resultadoValidacion.codigo) {
+          setCodigoValidado({
+            id: resultadoValidacion.codigo.id,
+            codigo: resultadoValidacion.codigo.codigo,
+          });
+        }
+      } catch (error) {
+        console.error("Error al validar código antes de procesar:", error);
+        setProcesando(false);
+        alert("Error al validar el código. Por favor, intenta nuevamente.");
+        return;
+      }
+    }
+
+    // NO validar duplicados aquí porque:
+    // 1. Ya se validó al subir el archivo
+    // 2. Si el usuario renombró, ese es el nombre que debe usar
+    // 3. La validación en handleUploadFile ya previno duplicados
+    // Si llegamos aquí, el nombre ya fue validado y aprobado
+
     setProcesando(true);
+
+    // Si hay código de atención válido, reservar minutos antes de iniciar
+    if (codigoFinal && codigoValidado) {
+      try {
+        const reservaResult = await reservarMinutos(codigoValidado.id, duration);
+        if (!reservaResult.success) {
+          setProcesando(false);
+          alert("Error al reservar minutos: " + (reservaResult.message || "Error desconocido"));
+          return;
+        }
+      } catch (error) {
+        console.error("Error al reservar minutos:", error);
+        setProcesando(false);
+        alert("Error al reservar minutos. Por favor, intenta nuevamente.");
+        return;
+      }
+    }
 
     track('inicio_procesamiento_acta', {
       event_category: 'proceso_acta',
       event_label: 'inicio_generacion_acta',
       nombre_archivo: file,
       duracion_estimada: duration,
-      tipo_procesamiento: 'acta_completa'
+      tipo_procesamiento: codigoFinal ? 'acta_con_codigo' : 'acta_completa'
     });
 
-    track('payment_initiated', {
-      event_category: 'engagement',
-      event_label: 'payment_start',
-      value: calculatePrice(duration)
-    });
+    if (!codigoFinal) {
+      track('payment_initiated', {
+        event_category: 'engagement',
+        event_label: 'payment_start',
+        value: calculatePrice(duration)
+      });
+    }
+
+    const nombreParaProcesar = file || '';
+    const carpetaParaProcesar = folder || nombreParaProcesar.replace(/\.[^/.]+$/, "");
+    
+    if (!nombreParaProcesar) {
+      setProcesando(false);
+      alert("Error: No se ha establecido el nombre del archivo.");
+      return;
+    }
 
     setUploadStatus("Iniciando generacion del acta");
-    const result = await processAction(folder || '', file || '', urlAssembly || '', session?.user?.email || '', session?.user?.name || '');
+    
+    // Actualizar estado a 5 (en generación) antes de iniciar el proceso
+    // IMPORTANTE: Usar el nombre renombrado
+    try {
+      await ActualizarProceso(
+        nombreParaProcesar,
+        5, // Estado: En generación
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        false,
+        codigoAtencionUsado || undefined
+      );
+      // Actualizar la tabla después de cambiar a estado 5
+      onCheckActa?.();
+    } catch (updateError) {
+      console.error("Error al actualizar acta a estado 5:", updateError);
+      // Continuar con el proceso aunque falle la actualización
+    }
+    
+    const result = await processAction(
+      carpetaParaProcesar, 
+      nombreParaProcesar, 
+      urlAssembly || '', 
+      session?.user?.email || '', 
+      session?.user?.name || '',
+      false, // automation
+      codigoFinal || undefined
+    );
     if (result.status === "success") {
       setActa(result.acta ?? null);
       setTranscripcion(result.transcripcion ?? null);
@@ -309,11 +441,13 @@ export default function MediaFileUploaderComponent({
         tiempo_procesamiento: Date.now()
       });
 
-      track('payment_success', {
-        event_category: 'engagement',
-        event_label: 'payment_completed',
-        value: calculatePrice(duration)
-      });
+      if (!codigoFinal) {
+        track('payment_success', {
+          event_category: 'engagement',
+          event_label: 'payment_completed',
+          value: calculatePrice(duration)
+        });
+      }
     } else {
       setProcesando(false);
       alert("Error al procesar el archivo: " + result.message);
@@ -325,10 +459,83 @@ export default function MediaFileUploaderComponent({
     }
   };
 
+  const handleValidarCodigo = async () => {
+    if (!codigoAtencion.trim()) {
+      setMensajeCodigo("Por favor ingresa un código");
+      setCodigoValido(false);
+      return;
+    }
+
+    setValidandoCodigo(true);
+    setMensajeCodigo("");
+
+    try {
+      const resultado = await validarCodigo(codigoAtencion, duration);
+      
+      if (resultado.valido && resultado.codigo) {
+        setCodigoValido(true);
+        setMensajeCodigo("✓ Código válido");
+        setCodigoValidado({
+          id: resultado.codigo.id,
+          codigo: resultado.codigo.codigo,
+        });
+      } else {
+        setCodigoValido(false);
+        setMensajeCodigo(resultado.mensaje || "Código inválido");
+        setCodigoValidado(null);
+      }
+    } catch (error) {
+      console.error("Error al validar código:", error);
+      setCodigoValido(false);
+      setMensajeCodigo("Error al validar el código. Por favor, intenta nuevamente.");
+      setCodigoValidado(null);
+    } finally {
+      setValidandoCodigo(false);
+    }
+  };
+
+  const handleCodigoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = e.target.value;
+    setCodigoAtencion(valor);
+    // Resetear validación cuando el usuario cambia el código
+    if (codigoValido) {
+      setCodigoValido(false);
+      setMensajeCodigo("");
+      setCodigoValidado(null);
+    }
+  };
+
   const calculatePrice = (durationInSeconds: number): number => {
     const segments = Math.ceil(durationInSeconds / 60 / 15);
     return segments * 2500;
   };
+
+  // Monto mínimo para ePayco: 5000 COP
+  const MONTO_MINIMO_EPAYCO = 5000;
+  
+  // Función para abrir WhatsApp con mensaje de soporte
+  const handleContactarWhatsAppSoporte = () => {
+    const nombreUsuario = session?.user?.name || 'Usuario';
+    const emailUsuario = session?.user?.email || 'Sin email';
+    const nombreActa = file || 'Sin nombre';
+    const montoCalculado = calculatePrice(duration);
+    const monto = `$${montoCalculado.toLocaleString('es-CO')} COP`;
+    const duracionFormateada = ensureDurationFormat(duration) || 'N/A';
+
+    const mensaje = `Hola, soy ${nombreUsuario} (${emailUsuario}). Necesito ayuda para generar el pago de mi acta.
+
+Información del acta:
+• Nombre: ${nombreActa}
+• Monto: ${monto}
+• Duración: ${duracionFormateada}
+
+El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 COP. Por favor, ¿pueden ayudarme con el pago?`;
+
+    const numeroWhatsApp = '56945871929'; // +56 9 45871929 sin espacios ni signos
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    window.open(urlWhatsApp, '_blank');
+  };
+
 
   React.useEffect(() => {
     return () => {
@@ -421,12 +628,16 @@ export default function MediaFileUploaderComponent({
               if (industriaId === null || industriaId === undefined) {
                 setIndustriaId(99);
               }
+              const nombreParaGuardar = file || nombreNormalizado;
               const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
-              await GuardarNuevoProceso(nombreNormalizado, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
-
+              
+              await GuardarNuevoProceso(nombreParaGuardar, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
+              
+              // Actualizar la tabla después de guardar el nuevo proceso
+              onCheckActa?.();
             }
           } catch (error: unknown) {
-            console.error("❌ Error al ejecutar crearActaDesdeCliente:", error);
+            console.error("Error al ejecutar crearActaDesdeCliente:", error);
 
             const msg = error instanceof Error ? error.message : "";
 
@@ -578,7 +789,7 @@ export default function MediaFileUploaderComponent({
     }
   }, []);
 
-  // Verificar datos de facturación cuando el componente se monta o cuando hay sesión
+  // Verificar datos de facturación y cargar industria cuando el componente se monta o cuando hay sesión
   React.useEffect(() => {
     const verifyBillingData = async () => {
       setCheckingBillingData(true);
@@ -593,7 +804,21 @@ export default function MediaFileUploaderComponent({
       }
     };
 
+    const loadUserIndustria = async () => {
+      if (session) {
+        try {
+          const userData = await getUserData();
+          if (userData?.idIndustria) {
+            setIndustriaId(userData.idIndustria);
+          }
+        } catch (error) {
+          console.error("Error al cargar industria del usuario:", error);
+        }
+      }
+    };
+
     verifyBillingData();
+    loadUserIndustria();
   }, [session]);
 
   React.useEffect(() => {
@@ -634,17 +859,6 @@ export default function MediaFileUploaderComponent({
         currentFileName={pendingOriginalName}
       />
 
-      <SimplePaymentModalComponent
-        open={showPaymentModal}
-        onConfirm={() => {
-          if (window.confirmPayment) {
-            window.confirmPayment();
-            window.confirmPayment = undefined;
-          }
-          track('payment_confirmed', { event_category: 'engagement', event_label: 'payment_confirmed' });
-          setShowPaymentModal(false);
-        }}
-      />
       <div className="p-4 sm:p-6 w-full max-w-lg mx-auto bg-transparent rounded-md">
         {start && (
           <div className="space-y-4">
@@ -697,15 +911,77 @@ export default function MediaFileUploaderComponent({
                 </div>
               </div>
             )}
-            <div className="flex gap-4">
-              {session !== null && (
-                <DropdownIndustrias value={industriaId} onSelect={setIndustriaId} />
-              )}
-            </div>
+            {/* No mostrar dropdown de industria - se usa la del perfil o la por defecto */}
 
-            <div className="flex gap-4" id="DivBotonesUpload">
+            <div className="space-y-4" id="DivBotonesUpload">
+              {uploadProgress === 100 &&
+                selectedFile !== null &&
+                acta === null &&
+                transcripcion === null &&
+                urlAssembly !== null &&
+                !procesando && 
+                duplicado === false &&
+                hasBillingData && (
+                  <>
+                    {/* Checkbox para código de atención - Nueva fila arriba de los botones */}
+                    <div className="space-y-3">
+                      <label className="flex items-center space-x-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={tieneCodigoAtencion}
+                          onChange={(e) => {
+                            setTieneCodigoAtencion(e.target.checked);
+                            if (!e.target.checked) {
+                              setCodigoAtencion("");
+                              setCodigoValido(false);
+                              setMensajeCodigo("");
+                              setCodigoValidado(null);
+                            }
+                          }}
+                          className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                        />
+                        <span className="text-sm text-gray-700">¿Tienes código de atención?</span>
+                      </label>
 
-              {acta === null && transcripcion === null && (
+                      {tieneCodigoAtencion && (
+                        <div className="space-y-2 p-3 bg-gray-50 rounded-md border border-gray-200">
+                          <div className="flex gap-2">
+                            <input
+                              type="text"
+                              value={codigoAtencion}
+                              onChange={handleCodigoChange}
+                              onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                  e.preventDefault();
+                                  handleValidarCodigo();
+                                }
+                              }}
+                              placeholder="Ingresa tu código (ej: skln12)"
+                              className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                            />
+                            <Button
+                              onClick={handleValidarCodigo}
+                              disabled={validandoCodigo || !codigoAtencion.trim()}
+                              className="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                            >
+                              {validandoCodigo ? "Validando..." : "Validar"}
+                            </Button>
+                          </div>
+                          {mensajeCodigo && (
+                            <p className={`text-xs ${
+                              codigoValido ? "text-green-600" : "text-red-600"
+                            }`}>
+                              {mensajeCodigo}
+                            </p>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
+
+              <div className="flex gap-4">
+                {selectedFile !== null && acta === null && transcripcion === null && (
                 <Button
                   className="w-full rounded-sm"
                   variant="outline"
@@ -726,70 +1002,160 @@ export default function MediaFileUploaderComponent({
                 acta === null &&
                 transcripcion === null &&
                 urlAssembly !== null &&
-                !procesando && duplicado === false && 
-                !checkingBillingData && (
-                  <>
-                    {!hasBillingData ? (
-                      <>
-                        {session ? (
-                          <div className="w-full p-4 bg-yellow-50 border border-yellow-200 rounded-lg mb-4">
-                            <p className="text-sm text-yellow-800 mb-2">
-                              <strong>Datos de facturación requeridos</strong>
-                            </p>
-                            <p className="text-sm text-yellow-700 mb-3">
-                              Para procesar el pago, necesitas completar tus datos de facturación en tu perfil.
-                            </p>
-                            <Button
-                              className="w-full bg-yellow-600 hover:bg-yellow-700 text-white"
-                              onClick={() => {
-                                window.location.href = "/plataforma/perfil";
+                !procesando && duplicado === false && (
+                    <>
+                      {checkingBillingData ? (
+                        <Button
+                          className="w-full rounded-sm bg-gray-400 cursor-not-allowed"
+                          disabled
+                        >
+                          Verificando datos...
+                        </Button>
+                      ) : !hasBillingData ? (
+                        <>
+                          {session ? (
+                            <>
+                              <Button
+                                className="w-full bg-yellow-600 hover:bg-yellow-700 text-white"
+                                onClick={() => {
+                                  router.push("/plataforma?openProfile=true");
+                                }}
+                              >
+                                Ir a mi perfil
+                              </Button>
+                            </>
+                          ) : (
+                          <>
+                            <BillingDataForm
+                              isOpen={showBillingForm}
+                              onClose={() => setShowBillingForm(false)}
+                              onSuccess={async () => {
+                                try {
+                                  const check = await checkBillingData();
+                                  setHasBillingData(check.hasCompleteData);
+                                } catch (error) {
+                                  console.error("Error al verificar datos:", error);
+                                }
+                                setShowBillingForm(false);
                               }}
+                            />
+                            <Button
+                              className="w-full rounded-sm bg-green-700 hover:bg-green-800"
+                              onClick={() => setShowBillingForm(true)}
                             >
-                              Ir a mi perfil
+                              Completar datos de facturación
                             </Button>
-                          </div>
-                        ) : (
-                          <BillingDataForm
-                            isOpen={showBillingForm}
-                            onClose={() => setShowBillingForm(false)}
-                            onSuccess={async () => {
-                              const check = await checkBillingData();
-                              setHasBillingData(check.hasCompleteData);
-                              setShowBillingForm(false);
-                            }}
-                          />
-                        )}
-                        {!session && (
-                          <Button
-                            className="w-full rounded-sm bg-green-700 hover:bg-green-800"
-                            onClick={() => setShowBillingForm(true)}
-                          >
-                            Completar datos de facturación
-                          </Button>
+                          </>
                         )}
                       </>
                     ) : (
-                      <ePaycoOnPageComponent
-                        costo={calculatePrice(duration)}
-                        file={file || ''}
-                        folder={folder || ''}
-                        fileid={urlAssembly || ''}
-                        duration={duration.toString()}
-                        handlePayment={handlePayment}
-                        onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
-                          setShowPaymentModal(true);
-                          window.confirmPayment = handleOpenWidget;
-                        }}
-                      />
+                      <>
+                        {/* Verificar si el monto es menor al mínimo antes de mostrar opciones de pago */}
+                        {calculatePrice(duration) < MONTO_MINIMO_EPAYCO ? (
+                          <div className="w-full space-y-4">
+                            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                              <p className="text-sm text-yellow-800 mb-2">
+                                <strong>Monto menor al mínimo requerido</strong>
+                              </p>
+                              <p className="text-sm text-yellow-700 mb-3">
+                                El monto a pagar es <strong>${calculatePrice(duration).toLocaleString('es-CO')} COP</strong>, pero ePayco solo acepta pagos superiores a <strong>$5,000 COP</strong>.
+                              </p>
+                              <p className="text-sm text-yellow-700">
+                                Te ofrecemos soporte para este tipo de pagos. Contáctanos por WhatsApp y te ayudaremos a procesar tu pago.
+                              </p>
+                            </div>
+                            <Button
+                              className="w-full rounded-sm bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2"
+                              onClick={handleContactarWhatsAppSoporte}
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={20}
+                                height={20}
+                                viewBox="0 0 24 24"
+                                fill="currentColor"
+                              >
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                              </svg>
+                              Contactar soporte por WhatsApp
+                            </Button>
+                 
+                          </div>
+                        ) : (
+                          <>
+                            {/* Mostrar ePayco solo si no hay código válido */}
+                            {!tieneCodigoAtencion || !codigoValido ? (
+                              <EPaycoOnPageComponent
+                                costo={calculatePrice(duration)}
+                                file={file || ''}
+                                folder={folder || ''}
+                                fileid={urlAssembly || ''}
+                                duration={duration.toString()}
+                                handlePayment={() => handlePayment()}
+                                nombreUsuario={session?.user?.name || undefined}
+                                emailUsuario={session?.user?.email || undefined}
+                                onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
+                                  // Abrir ePayco directamente sin modal intermedio
+                                  if (handleOpenWidget) {
+                                    handleOpenWidget();
+                                  }
+                                  window.confirmPayment = handleOpenWidget;
+                                }}
+                              />
+                            ) : (
+                              // Botón para generar con código
+                              <Button
+                                className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
+                                onClick={() => handlePayment(codigoValidado?.codigo || null)}
+                                disabled={procesando}
+                              >
+                                {procesando ? "Generando acta..." : "Generar con código"}
+                              </Button>
+                            )}
+                          </>
+                        )}
+                      </>
                     )}
-                  </>
-                )}
-              {uploadProgress !== 100 &&
+                    </>
+                  )}
+              </div>
+              {uploadProgress === 100 &&
+                selectedFile !== null &&
                 acta === null &&
                 transcripcion === null &&
-                !procesando && (
+                urlAssembly !== null &&
+                !procesando && duplicado === false && 
+                !checkingBillingData &&
+                !hasBillingData &&
+                session && (
+                  <div className="w-full p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <p className="text-sm text-yellow-800 mb-2">
+                      <strong>Datos de facturación requeridos</strong>
+                    </p>
+                    <p className="text-sm text-yellow-700">
+                      Para procesar el pago, necesitas completar tus datos de facturación en tu perfil.
+                    </p>
+                  </div>
+                )}
+              {selectedFile !== null &&
+                uploadProgress !== 100 &&
+                acta === null &&
+                transcripcion === null &&
+                !procesando && 
+                !checkingBillingData && (
+                  <div className="flex gap-4">
+                    {!hasBillingData && session ? (
                   <Button
-                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2"
+                        className="w-full rounded-sm bg-yellow-600 hover:bg-yellow-700 text-white"
+                        onClick={() => {
+                          router.push("/plataforma?openProfile=true");
+                        }}
+                      >
+                        Ir a mi perfil
+                      </Button>
+                    ) : (
+                      <Button
+                        className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2"
                     onClick={handleContinue}
                     disabled={calculando}
                   >
@@ -1098,6 +1464,24 @@ export default function MediaFileUploaderComponent({
                       "Continuar"
                     )}
                   </Button>
+                    )}
+                  </div>
+                )}
+              {uploadProgress !== 100 &&
+                acta === null &&
+                transcripcion === null &&
+                !procesando && 
+                !checkingBillingData &&
+                !hasBillingData &&
+                session && (
+                  <div className="w-full p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <p className="text-sm text-yellow-800 mb-2">
+                      <strong>Datos de facturación requeridos</strong>
+                    </p>
+                    <p className="text-sm text-yellow-700">
+                      Para procesar el pago, necesitas completar tus datos de facturación en tu perfil.
+                    </p>
+                  </div>
                 )}
               {acta === null && transcripcion === null && animacionTerminada && procesando ? (
                 <Button
@@ -1426,7 +1810,7 @@ export default function MediaFileUploaderComponent({
                         event_category: 'engagement',
                         event_label: 'new_generation_button_clicked'
                       });
-                      window.location.href = "/";
+                      resetearParaNuevaGeneracion();
                     }}
                   >
                     Generar nueva
@@ -1491,6 +1875,7 @@ export default function MediaFileUploaderComponent({
             Generar con transcripcion existente
           </Button>
         )}
+        
       </div>
     </>
   );

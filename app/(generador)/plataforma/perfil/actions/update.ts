@@ -21,6 +21,10 @@ export async function updateProfile(formData: FormData) {
   const departamento = formData.get("departamento")?.toString();
   const municipio = formData.get("municipio")?.toString();
   const direccion = formData.get("direccion")?.toString();
+  const industria = formData.get("industria")?.toString();
+  const tipoUsuario = formData.get("tipoUsuario")?.toString() || "natural";
+  const tipoDocumento = formData.get("tipoDocumento")?.toString();
+  const numeroDocumento = formData.get("numeroDocumento")?.toString();
 
   // Validar teléfono si se proporciona
   if (phone) {
@@ -39,6 +43,14 @@ export async function updateProfile(formData: FormData) {
     }
   }
 
+  // Validar número de documento si se proporciona
+  if (numeroDocumento) {
+    const cleanNumeroDoc = numeroDocumento.replace(/\s/g, '');
+    if (cleanNumeroDoc.length < 8) {
+      throw new Error("El número de documento debe tener al menos 8 caracteres.");
+    }
+  }
+
   // Construir objeto de actualización
   const updateFields: any = {};
   if (phone) updateFields.telefono = phone.replace(/\s/g, '');
@@ -49,6 +61,9 @@ export async function updateProfile(formData: FormData) {
   if (municipio) updateFields.municipio = municipio;
   if (direccion) updateFields.direccion = direccion;
   updateFields.pais = "Colombia";
+  updateFields.tipoUsuario = tipoUsuario;
+  if (tipoDocumento) updateFields.tipoDocumento = tipoDocumento;
+  if (numeroDocumento) updateFields.numeroDocumento = numeroDocumento.replace(/\s/g, '');
 
   // Verificar si todos los campos de facturación están completos
   const hasAllBillingFields = nombre && apellido && phone && emailFacturacion && 
@@ -57,8 +72,26 @@ export async function updateProfile(formData: FormData) {
     updateFields.tieneDatosFacturacion = 1;
   }
 
+  // Intentar actualizar idIndustria si se proporciona
+  if (industria && industria.trim() !== '') {
+    updateFields.idIndustria = parseInt(industria);
+  }
+
+  try {
+    await db
+      .update(usuarios)
+      .set(updateFields)
+      .where(eq(usuarios.email, email));
+  } catch (error: any) {
+    // Si falla por columna inexistente, intentar sin idIndustria
+    if (error?.code === '42703' || error?.message?.includes('does not exist')) {
+      delete updateFields.idIndustria;
   await db
     .update(usuarios)
-    .set(updateFields)
+        .set(updateFields)
     .where(eq(usuarios.email, email));
+    } else {
+      throw error;
+    }
+  }
 }

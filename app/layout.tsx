@@ -6,6 +6,7 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { headers } from "next/headers";
 import Script from "next/script";
 import { Providers } from "@/components/providers/providers";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +58,7 @@ export default async function RootLayout({
         <Providers>
           {children}
         </Providers>
+        <Toaster position="top-center" richColors />
 
         {/* Cargar el script de Meta Pixel */}
         <Script

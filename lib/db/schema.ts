@@ -7,6 +7,7 @@ import {
   serial,
   integer,
   jsonb,
+  boolean,
 } from "drizzle-orm/pg-core";
 import {
   relations
@@ -54,12 +55,29 @@ export const usuarios = pgTable("usuarios", {
   departamento: text("departamento_usuario"),
   municipio: text("municipio_usuario"),
   pais: text("pais_usuario").default("Colombia"),
-  tieneDatosFacturacion: integer("tiene_datos_facturacion_usuario").default(0),
+  tieneDatosFacturacion: integer("tiene_datos_facturacion_usuario"),
+  idIndustria: integer("id_industria_usuario").references(() => industrias.id),
+  tipoUsuario: text("tipo_usuario").default("natural"), // 'natural' o 'juridica'
+  tipoDocumento: text("tipo_documento"), // CC, CE, NIT, TI, PP, NIP
+  numeroDocumento: text("numero_documento"),
 });
 
 export const usuariosRelations = relations(usuarios, ({ many }) => ({
   actas: many(actas), // relación 1:N hacia actas
 }));
+
+// Tabla: codigos_atencion
+export const codigosAtencion = pgTable("codigos_atencion", {
+  id: uuid("id").primaryKey().notNull().defaultRandom(),
+  codigo: text("codigo").notNull().unique(),
+  saldo: integer("saldo").notNull().default(0),
+  reserva: integer("reserva").notNull().default(0),
+  descripcion: text("descripcion"),
+  estado: boolean("estado").notNull().default(true),
+  fechaCreacion: timestamp("fecha_creacion", { withTimezone: true })
+    .notNull()
+    .defaultNow(),
+});
 
 // Tabla: actas
 export const actas = pgTable("actas", {
@@ -77,6 +95,7 @@ export const actas = pgTable("actas", {
   costo: text("costo_acta"),
   urlTranscripcion: text("url_transcripcion_acta"),
   urlBorrador: text("url_borrador_acta"),
+  codigoAtencion: text("codigo_atencion"),
   idEstadoProceso: bigint("id_estado_proceso_acta", { mode: "number" })
     .default(1)
     .references(() => estadosProceso.id),

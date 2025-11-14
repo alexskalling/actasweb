@@ -18,6 +18,7 @@ export async function GuardarNuevoProceso(
   urlborrador: string | null | undefined,
   Industria: number | null | undefined,
   automation_mail: string | null | undefined,
+  codigoAtencion?: string | null | undefined,
 ) {
   try {
     // 📨 obtener usuario
@@ -40,6 +41,7 @@ export async function GuardarNuevoProceso(
       urlTranscripcion,
       urlBorrador: urlborrador,
       idIndustria: Industria,
+      codigoAtencion: codigoAtencion || null,
     };
 
     // 🔎 buscar si ya existe con estado <6

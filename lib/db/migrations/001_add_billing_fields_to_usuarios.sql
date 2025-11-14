@@ -8,7 +8,8 @@ ADD COLUMN IF NOT EXISTS direccion_usuario text,
 ADD COLUMN IF NOT EXISTS departamento_usuario text,
 ADD COLUMN IF NOT EXISTS municipio_usuario text,
 ADD COLUMN IF NOT EXISTS pais_usuario text DEFAULT 'Colombia',
-ADD COLUMN IF NOT EXISTS tiene_datos_facturacion_usuario boolean DEFAULT false;
+ADD COLUMN IF NOT EXISTS tiene_datos_facturacion_usuario integer DEFAULT 0,
+ADD COLUMN IF NOT EXISTS id_industria_usuario integer REFERENCES public.industrias(id_industria);
 
 -- Comentarios para documentación
 COMMENT ON COLUMN public.usuarios.apellido_usuario IS 'Apellido del usuario para facturación';

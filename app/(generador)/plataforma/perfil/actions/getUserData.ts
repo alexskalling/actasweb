@@ -15,6 +15,10 @@ export interface UserData {
   departamento: string | null;
   municipio: string | null;
   pais: string | null;
+  idIndustria: number | null;
+  tipoUsuario: string | null;
+  tipoDocumento: string | null;
+  numeroDocumento: string | null;
 }
 
 /**
@@ -29,34 +33,122 @@ export async function getUserData(): Promise<UserData | null> {
     return null;
   }
 
-  const user = await db
-    .select({
-      nombre: usuarios.nombre,
-      apellido: usuarios.apellido,
-      telefono: usuarios.telefono,
-      email: usuarios.email,
-      direccion: usuarios.direccion,
-      departamento: usuarios.departamento,
-      municipio: usuarios.municipio,
-      pais: usuarios.pais,
-    })
-    .from(usuarios)
-    .where(eq(usuarios.email, email))
-    .then((res) => res[0]);
+  // Intentar obtener datos con todos los campos (incluyendo los nuevos)
+  try {
+    const user = await db
+      .select({
+        nombre: usuarios.nombre,
+        apellido: usuarios.apellido,
+        telefono: usuarios.telefono,
+        email: usuarios.email,
+        direccion: usuarios.direccion,
+        departamento: usuarios.departamento,
+        municipio: usuarios.municipio,
+        pais: usuarios.pais,
+        idIndustria: usuarios.idIndustria,
+        tipoUsuario: usuarios.tipoUsuario,
+        tipoDocumento: usuarios.tipoDocumento,
+        numeroDocumento: usuarios.numeroDocumento,
+      })
+      .from(usuarios)
+      .where(eq(usuarios.email, email))
+      .then((res) => res[0]);
 
-  if (!user) {
-    return null;
+    if (!user) {
+      return null;
+    }
+
+    return {
+      nombre: user.nombre,
+      apellido: user.apellido,
+      telefono: user.telefono,
+      email: user.email,
+      direccion: user.direccion,
+      departamento: user.departamento,
+      municipio: user.municipio,
+      pais: user.pais || "Colombia",
+      idIndustria: user.idIndustria || null,
+      tipoUsuario: user.tipoUsuario || "natural",
+      tipoDocumento: user.tipoDocumento || null,
+      numeroDocumento: user.numeroDocumento || null,
+    };
+  } catch (error: any) {
+    // Si falla por columna inexistente (las nuevas columnas no existen aún), intentar sin ellas
+    if (error?.code === '42703' || error?.message?.includes('does not exist') || error?.message?.includes('tipo_usuario')) {
+      try {
+        // Intentar con idIndustria pero sin los nuevos campos
+        const user = await db
+          .select({
+            nombre: usuarios.nombre,
+            apellido: usuarios.apellido,
+            telefono: usuarios.telefono,
+            email: usuarios.email,
+            direccion: usuarios.direccion,
+            departamento: usuarios.departamento,
+            municipio: usuarios.municipio,
+            pais: usuarios.pais,
+            idIndustria: usuarios.idIndustria,
+          })
+          .from(usuarios)
+          .where(eq(usuarios.email, email))
+          .then((res) => res[0]);
+
+        if (!user) {
+          return null;
+        }
+
+        return {
+          nombre: user.nombre,
+          apellido: user.apellido,
+          telefono: user.telefono,
+          email: user.email,
+          direccion: user.direccion,
+          departamento: user.departamento,
+          municipio: user.municipio,
+          pais: user.pais || "Colombia",
+          idIndustria: user.idIndustria || null,
+          tipoUsuario: "natural", // Valor por defecto
+          tipoDocumento: null,
+          numeroDocumento: null,
+        };
+      } catch (fallbackError: any) {
+        // Si aún falla, intentar sin idIndustria ni los nuevos campos
+        const user = await db
+          .select({
+            nombre: usuarios.nombre,
+            apellido: usuarios.apellido,
+            telefono: usuarios.telefono,
+            email: usuarios.email,
+            direccion: usuarios.direccion,
+            departamento: usuarios.departamento,
+            municipio: usuarios.municipio,
+            pais: usuarios.pais,
+          })
+          .from(usuarios)
+          .where(eq(usuarios.email, email))
+          .then((res) => res[0]);
+
+        if (!user) {
+          return null;
+        }
+
+        return {
+          nombre: user.nombre,
+          apellido: user.apellido,
+          telefono: user.telefono,
+          email: user.email,
+          direccion: user.direccion,
+          departamento: user.departamento,
+          municipio: user.municipio,
+          pais: user.pais || "Colombia",
+          idIndustria: null,
+          tipoUsuario: "natural",
+          tipoDocumento: null,
+          numeroDocumento: null,
+        };
+      }
+    }
+    throw error;
   }
-
-  return {
-    nombre: user.nombre,
-    apellido: user.apellido,
-    telefono: user.telefono,
-    email: user.email,
-    direccion: user.direccion,
-    departamento: user.departamento,
-    municipio: user.municipio,
-    pais: user.pais || "Colombia",
-  };
 }
 

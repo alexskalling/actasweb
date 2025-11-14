@@ -13,6 +13,7 @@ interface TranscripcionResult {
   status: "success" | "error";
   content?: string;
   message?: string;
+  yaExistia?: boolean; // Indica si la transcripción ya existía
 }
 
 export async function transcripAction(
@@ -33,7 +34,8 @@ export async function transcripAction(
 
   try {
     if (await verificarTranscripcionExistente(nombreTranscripcion, folder)) {
-      return await obtenerTranscripcionExistente(nombreTranscripcion, folder);
+      const resultado = await obtenerTranscripcionExistente(nombreTranscripcion, folder);
+      return { ...resultado, yaExistia: true };
     }
 
     const textoTranscripcion = await realizarTranscripcionAssemblyAI(
@@ -47,7 +49,7 @@ export async function transcripAction(
       textoTranscripcion
     );
 
-    return { status: "success", content: textoTranscripcion };
+    return { status: "success", content: textoTranscripcion, yaExistia: false };
   } catch (error) {
     manejarError("transcripAction", error);
     return {
