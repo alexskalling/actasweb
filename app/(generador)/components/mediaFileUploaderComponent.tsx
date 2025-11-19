@@ -19,6 +19,8 @@ import { GuardarNuevoProceso } from "../services/actas_querys_services/guardarNu
 import { validarCodigo } from "../services/codigos_atencion/validarCodigo";
 import { reservarMinutos } from "../services/codigos_atencion/reservarMinutos";
 import { normalizarNombreArchivo } from "../services/generacion_contenido_services/utilsActions";
+import { verificarPrimeraActa } from "../services/referidos/verificarPrimeraActa";
+import { validarCodigoReferido } from "../services/referidos/validarCodigoReferido";
 import { processAction } from "../services/generacion_contenido_services/processAction";
 import { uploadFileToAssemblyAI } from "../services/generacion_contenido_services/assemblyActions";
 import { allowedExtensions } from "../utils/allowedExtensions";
@@ -43,7 +45,7 @@ interface MediaSelectorProps {
 export default function MediaFileUploaderComponent({
   onFileSelect,
   accept = "audio/*,video/*",
-  onCheckActa = () => {}, 
+  onCheckActa = () => { },
 }: MediaSelectorProps,) {
   const router = useRouter();
   const isIOS = useIsIOSDevice();
@@ -82,6 +84,32 @@ export default function MediaFileUploaderComponent({
   const [mensajeCodigo, setMensajeCodigo] = React.useState<string>("");
   const [codigoValido, setCodigoValido] = React.useState<boolean>(false);
   const [codigoValidado, setCodigoValidado] = React.useState<{ id: string; codigo: string } | null>(null);
+
+  // Estados para relanzamiento de acta
+  const [actaParaRelanzar, setActaParaRelanzar] = React.useState<{
+    id: string;
+    nombre: string | null;
+    idEstadoProceso: number | null;
+    fechaProcesamiento: Date;
+    idUsuario: string;
+    urlAssembly: string | null;
+    duracion: string | null;
+  } | null>(null);
+  const [procesandoRelanzamiento, setProcesandoRelanzamiento] = React.useState(false);
+  const [tieneCodigoAtencionRelanzamiento, setTieneCodigoAtencionRelanzamiento] = React.useState<boolean>(false);
+  const [codigoAtencionRelanzamiento, setCodigoAtencionRelanzamiento] = React.useState<string>("");
+  const [validandoCodigoRelanzamiento, setValidandoCodigoRelanzamiento] = React.useState<boolean>(false);
+  const [mensajeCodigoRelanzamiento, setMensajeCodigoRelanzamiento] = React.useState<string>("");
+  const [codigoValidoRelanzamiento, setCodigoValidoRelanzamiento] = React.useState<boolean>(false);
+  const [codigoValidadoRelanzamiento, setCodigoValidadoRelanzamiento] = React.useState<{ id: string; codigo: string } | null>(null);
+
+  // Estados para código de referido
+  const [esPrimeraActa, setIsPrimeraActa] = React.useState<boolean>(false);
+  const [verificandoPrimeraActa, setVerificandoPrimeraActa] = React.useState<boolean>(false);
+  const [codigoReferido, setCodigoReferido] = React.useState<string>("");
+  const [validandoCodigoReferido, setValidandoCodigoReferido] = React.useState<boolean>(false);
+  const [codigoReferidoValido, setCodigoReferidoValido] = React.useState<boolean>(false);
+  const [mensajeCodigoReferido, setMensajeCodigoReferido] = React.useState<string>("");
 
   const handleContinue = () => {
     // No pedir industria si ya está guardada en el perfil
@@ -148,9 +176,64 @@ export default function MediaFileUploaderComponent({
     const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
 
     try {
-      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+      const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
 
-      if (isDuplicated) {
+      if (actaExistente) {
+        // BuscarAbiertoProceso ya filtra por usuario, así que si retorna un acta, es del mismo usuario
+        const estado = actaExistente.idEstadoProceso;
+
+        // Si el estado es mayor a 4, pedir renombrar
+        if (estado && estado > 4) {
+          setPendingFile(file);
+          setPendingOriginalName(nombreNormalizado);
+          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+          setIsDuplicateModal(true);
+          setShowModal(true);
+          return;
+        }
+
+        // Si el estado es 4, validar fecha
+        if (estado === 4) {
+          const fechaProcesamiento = new Date(actaExistente.fechaProcesamiento);
+          const ahora = new Date();
+          const diferenciaHoras = (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
+
+          // Si es menor a 20 horas, abrir modal de relanzamiento
+          if (diferenciaHoras < 20) {
+            // Verificar que tenga los datos necesarios para relanzar
+            if (actaExistente.urlAssembly && actaExistente.duracion) {
+              setActaParaRelanzar({
+                id: actaExistente.id,
+                nombre: actaExistente.nombre,
+                idEstadoProceso: actaExistente.idEstadoProceso,
+                fechaProcesamiento: fechaProcesamiento,
+                idUsuario: actaExistente.idUsuario,
+                urlAssembly: actaExistente.urlAssembly,
+                duracion: actaExistente.duracion,
+              });
+              // No continuar con la selección del archivo, el modal de relanzamiento se encargará
+              return;
+            } else {
+              // Si no tiene los datos necesarios, pedir renombrar
+              setPendingFile(file);
+              setPendingOriginalName(nombreNormalizado);
+              setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+              setIsDuplicateModal(true);
+              setShowModal(true);
+              return;
+            }
+          } else {
+            // Si es mayor o igual a 20 horas, pedir renombrar
+            setPendingFile(file);
+            setPendingOriginalName(nombreNormalizado);
+            setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+            setIsDuplicateModal(true);
+            setShowModal(true);
+            return;
+          }
+        }
+
+        // Si el estado es menor a 4, también pedir renombrar (por seguridad)
         setPendingFile(file);
         setPendingOriginalName(nombreNormalizado);
         setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
@@ -214,6 +297,27 @@ export default function MediaFileUploaderComponent({
     });
   };
 
+  // Verificar si es primera acta cuando el archivo se sube exitosamente
+  React.useEffect(() => {
+    const verificarPrimera = async () => {
+      if (uploadProgress === 100 && urlAssembly && session) {
+        setVerificandoPrimeraActa(true);
+        try {
+          const esPrimera = await verificarPrimeraActa();
+          setIsPrimeraActa(esPrimera);
+        } catch (error) {
+          console.error("Error al verificar primera acta:", error);
+          setIsPrimeraActa(false);
+        } finally {
+          setVerificandoPrimeraActa(false);
+        }
+      } else {
+        setIsPrimeraActa(false);
+      }
+    };
+    verificarPrimera();
+  }, [uploadProgress, urlAssembly, session]);
+
   const clearSelection = () => {
     setSelectedFile(null);
     setFile(null);
@@ -238,6 +342,11 @@ export default function MediaFileUploaderComponent({
     setMensajeCodigo("");
     setCodigoValido(false);
     setCodigoValidado(null);
+    // Limpiar estados de código de referido
+    setCodigoReferido("");
+    setCodigoReferidoValido(false);
+    setMensajeCodigoReferido("");
+    setIsPrimeraActa(false);
     track('clear_selection', { event_category: 'engagement' });
   };
 
@@ -259,9 +368,46 @@ export default function MediaFileUploaderComponent({
       const nombreNormalizado = await normalizarNombreArchivo(newFileName);
       const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
 
-      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+      const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
 
-      if (isDuplicated) {
+      if (actaExistente) {
+        const estado = actaExistente.idEstadoProceso;
+
+        // Si el estado es mayor a 4, pedir renombrar
+        if (estado && estado > 4) {
+          setModalMessage("Este nombre también está ocupado. Por favor usa otro nombre.");
+          setIsDuplicateModal(true);
+          setPendingOriginalName(nombreNormalizado);
+          return;
+        }
+
+        // Si el estado es 4, validar fecha
+        if (estado === 4) {
+          const fechaProcesamiento = new Date(actaExistente.fechaProcesamiento);
+          const ahora = new Date();
+          const diferenciaHoras = (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
+
+          // Si es menor a 20 horas, abrir modal de relanzamiento
+          if (diferenciaHoras < 20) {
+            if (actaExistente.urlAssembly && actaExistente.duracion) {
+              setActaParaRelanzar({
+                id: actaExistente.id,
+                nombre: actaExistente.nombre,
+                idEstadoProceso: actaExistente.idEstadoProceso,
+                fechaProcesamiento: fechaProcesamiento,
+                idUsuario: actaExistente.idUsuario,
+                urlAssembly: actaExistente.urlAssembly,
+                duracion: actaExistente.duracion,
+              });
+              // Cerrar modal de renombrar
+              setIsDuplicateModal(false);
+              setShowModal(false);
+              return;
+            }
+          }
+        }
+
+        // Si no cumple condiciones, pedir renombrar
         setModalMessage("Este nombre también está ocupado. Por favor usa otro nombre.");
         setIsDuplicateModal(true);
         setPendingOriginalName(nombreNormalizado);
@@ -384,7 +530,7 @@ export default function MediaFileUploaderComponent({
 
     const nombreParaProcesar = file || '';
     const carpetaParaProcesar = folder || nombreParaProcesar.replace(/\.[^/.]+$/, "");
-    
+
     if (!nombreParaProcesar) {
       setProcesando(false);
       alert("Error: No se ha establecido el nombre del archivo.");
@@ -392,9 +538,11 @@ export default function MediaFileUploaderComponent({
     }
 
     setUploadStatus("Iniciando generacion del acta");
-    
+
     // Actualizar estado a 5 (en generación) antes de iniciar el proceso
     // IMPORTANTE: Usar el nombre renombrado
+    // Guardar código de referido si es primera acta y está validado
+    const codigoReferidoFinal = esPrimeraActa && codigoReferidoValido ? codigoReferido : null;
     try {
       await ActualizarProceso(
         nombreParaProcesar,
@@ -407,7 +555,9 @@ export default function MediaFileUploaderComponent({
         undefined,
         undefined,
         false,
-        codigoAtencionUsado || undefined
+        codigoAtencionUsado || undefined,
+        undefined,
+        codigoReferidoFinal || undefined
       );
       // Actualizar la tabla después de cambiar a estado 5
       onCheckActa?.();
@@ -415,12 +565,12 @@ export default function MediaFileUploaderComponent({
       console.error("Error al actualizar acta a estado 5:", updateError);
       // Continuar con el proceso aunque falle la actualización
     }
-    
+
     const result = await processAction(
-      carpetaParaProcesar, 
-      nombreParaProcesar, 
-      urlAssembly || '', 
-      session?.user?.email || '', 
+      carpetaParaProcesar,
+      nombreParaProcesar,
+      urlAssembly || '',
+      session?.user?.email || '',
       session?.user?.name || '',
       false, // automation
       codigoFinal || undefined
@@ -471,7 +621,7 @@ export default function MediaFileUploaderComponent({
 
     try {
       const resultado = await validarCodigo(codigoAtencion, duration);
-      
+
       if (resultado.valido && resultado.codigo) {
         setCodigoValido(true);
         setMensajeCodigo("✓ Código válido");
@@ -510,9 +660,245 @@ export default function MediaFileUploaderComponent({
     return segments * 2500;
   };
 
+  // Función para convertir duración string a segundos
+  const duracionASegundos = (duracion: string | null): number => {
+    if (!duracion) return 0;
+
+    // Si es un número (segundos), retornarlo
+    const numero = parseFloat(duracion);
+    if (!isNaN(numero) && !duracion.includes(':')) {
+      return numero;
+    }
+
+    // Si tiene formato HH:MM:SS
+    if (duracion.includes(':')) {
+      const partes = duracion.split(':');
+      if (partes.length === 3) {
+        const horas = parseInt(partes[0], 10) || 0;
+        const minutos = parseInt(partes[1], 10) || 0;
+        const segundos = parseInt(partes[2], 10) || 0;
+        return horas * 3600 + minutos * 60 + segundos;
+      }
+    }
+
+    return 0;
+  };
+
+  // Validar código de atención para relanzamiento
+  const handleValidarCodigoRelanzamiento = async () => {
+    if (!actaParaRelanzar || !actaParaRelanzar.duracion) {
+      return;
+    }
+
+    if (!codigoAtencionRelanzamiento.trim()) {
+      setMensajeCodigoRelanzamiento("Por favor ingresa un código");
+      setCodigoValidoRelanzamiento(false);
+      return;
+    }
+
+    setValidandoCodigoRelanzamiento(true);
+    setMensajeCodigoRelanzamiento("");
+
+    try {
+      const duracionSegundos = duracionASegundos(actaParaRelanzar.duracion);
+      const resultado = await validarCodigo(codigoAtencionRelanzamiento.trim().toLowerCase(), duracionSegundos);
+
+      if (resultado.valido && resultado.codigo) {
+        setCodigoValidoRelanzamiento(true);
+        setMensajeCodigoRelanzamiento("✓ Código válido");
+        setCodigoValidadoRelanzamiento({
+          id: resultado.codigo.id,
+          codigo: resultado.codigo.codigo,
+        });
+      } else {
+        setCodigoValidoRelanzamiento(false);
+        setMensajeCodigoRelanzamiento(resultado.mensaje || "Código inválido");
+        setCodigoValidadoRelanzamiento(null);
+      }
+    } catch (error) {
+      console.error("Error al validar código:", error);
+      setCodigoValidoRelanzamiento(false);
+      setMensajeCodigoRelanzamiento("Error al validar el código. Por favor, intenta nuevamente.");
+      setCodigoValidadoRelanzamiento(null);
+    } finally {
+      setValidandoCodigoRelanzamiento(false);
+    }
+  };
+
+  const handleCodigoChangeRelanzamiento = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const valor = e.target.value;
+    setCodigoAtencionRelanzamiento(valor);
+    // Resetear validación cuando el usuario cambia el código
+    if (codigoValidoRelanzamiento) {
+      setCodigoValidoRelanzamiento(false);
+      setMensajeCodigoRelanzamiento("");
+      setCodigoValidadoRelanzamiento(null);
+    }
+  };
+
+  // Funciones para manejar código de referido
+  const handleValidarCodigoReferido = async () => {
+    if (!codigoReferido.trim()) {
+      setMensajeCodigoReferido("Por favor ingresa un código");
+      setCodigoReferidoValido(false);
+      return;
+    }
+
+    // Validar formato (7 caracteres alfanuméricos)
+    const codigoNormalizado = codigoReferido.trim().toUpperCase();
+    if (codigoNormalizado.length !== 7 || !/^[A-Z0-9]{7}$/.test(codigoNormalizado)) {
+      setMensajeCodigoReferido("El código debe tener 7 caracteres alfanuméricos");
+      setCodigoReferidoValido(false);
+      return;
+    }
+
+    setValidandoCodigoReferido(true);
+    setMensajeCodigoReferido("");
+
+    try {
+      const resultado = await validarCodigoReferido(codigoNormalizado);
+
+      if (resultado.valido) {
+        setCodigoReferidoValido(true);
+        setMensajeCodigoReferido("✓ Código válido");
+        setCodigoReferido(codigoNormalizado);
+      } else {
+        setCodigoReferidoValido(false);
+        setMensajeCodigoReferido(resultado.mensaje || "Código de referido no válido");
+      }
+    } catch (error) {
+      console.error("Error al validar código de referido:", error);
+      setCodigoReferidoValido(false);
+      setMensajeCodigoReferido("Error al validar el código. Por favor, intenta nuevamente.");
+    } finally {
+      setValidandoCodigoReferido(false);
+    }
+  };
+
+  const handleCodigoReferidoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Convertir a mayúsculas y limitar a 7 caracteres alfanuméricos
+    const valor = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 7);
+    setCodigoReferido(valor);
+    // Resetear validación cuando el usuario cambia el código
+    if (codigoReferidoValido) {
+      setCodigoReferidoValido(false);
+      setMensajeCodigoReferido("");
+    }
+  };
+
+  // Función para cerrar el modal de relanzamiento
+  const cerrarModalRelanzamiento = () => {
+    setActaParaRelanzar(null);
+    setTieneCodigoAtencionRelanzamiento(false);
+    setCodigoAtencionRelanzamiento('');
+    setCodigoValidoRelanzamiento(false);
+    setCodigoValidadoRelanzamiento(null);
+    setMensajeCodigoRelanzamiento('');
+    setProcesandoRelanzamiento(false);
+  };
+
+  // Manejar pago exitoso para relanzamiento
+  const handlePaymentRelanzamiento = async (codigoAtencionUsado?: string | null) => {
+    if (!actaParaRelanzar || !actaParaRelanzar.urlAssembly || !actaParaRelanzar.nombre || !actaParaRelanzar.duracion) {
+      alert("Error: Faltan datos necesarios para procesar el acta.");
+      cerrarModalRelanzamiento();
+      return;
+    }
+
+    const codigoFinal = codigoAtencionUsado || codigoValidadoRelanzamiento?.codigo || null;
+    const duracionSegundos = duracionASegundos(actaParaRelanzar.duracion);
+
+    // Si hay código de atención, VALIDAR NUEVAMENTE antes de procesar
+    if (codigoFinal && codigoValidadoRelanzamiento) {
+      try {
+        const resultadoValidacion = await validarCodigo(codigoFinal, duracionSegundos);
+        if (!resultadoValidacion.valido) {
+          alert(resultadoValidacion.mensaje || "Código inválido o saldo insuficiente");
+          setCodigoValidoRelanzamiento(false);
+          setMensajeCodigoRelanzamiento(resultadoValidacion.mensaje || "Código inválido");
+          setCodigoValidadoRelanzamiento(null);
+          return;
+        }
+      } catch (error) {
+        console.error("Error al validar código antes de procesar:", error);
+        alert("Error al validar el código. Por favor, intenta nuevamente.");
+        return;
+      }
+    }
+
+    setProcesandoRelanzamiento(true);
+
+    try {
+      const carpeta = actaParaRelanzar.nombre.replace(/\.[^/.]+$/, "");
+
+      // Si hay código de atención válido, reservar minutos antes de iniciar
+      if (codigoFinal && codigoValidadoRelanzamiento) {
+        try {
+          const reservaResult = await reservarMinutos(codigoValidadoRelanzamiento.id, duracionSegundos);
+          if (!reservaResult.success) {
+            setProcesandoRelanzamiento(false);
+            alert("Error al reservar minutos: " + (reservaResult.message || "Error desconocido"));
+            return;
+          }
+        } catch (error) {
+          console.error("Error al reservar minutos:", error);
+          setProcesandoRelanzamiento(false);
+          alert("Error al reservar minutos. Por favor, intenta nuevamente.");
+          return;
+        }
+      }
+
+      // Actualizar estado a 5 (en generación)
+      await ActualizarProceso(
+        actaParaRelanzar.nombre,
+        5, // Estado: En generación
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        false,
+        codigoFinal || undefined
+      );
+
+      // CERRAR EL MODAL INMEDIATAMENTE después de actualizar el estado
+      cerrarModalRelanzamiento();
+
+      // Recargar actas
+      onCheckActa?.();
+
+      // Continuar con el proceso usando la URL de Assembly existente (en segundo plano)
+      processAction(
+        carpeta,
+        actaParaRelanzar.nombre,
+        actaParaRelanzar.urlAssembly,
+        session?.user?.email || '',
+        session?.user?.name || '',
+        false, // automation
+        codigoFinal || undefined // codigoAtencion
+      ).then((result) => {
+        if (result.status === "success") {
+          // Recargar actas cuando termine
+          onCheckActa?.();
+        } else {
+          console.error("Error al procesar el acta:", result.message);
+        }
+      }).catch((error) => {
+        console.error("Error al procesar el acta:", error);
+      });
+
+    } catch (error) {
+      console.error("Error al relanzar acta:", error);
+      alert("Error al relanzar el acta. Por favor, intenta nuevamente.");
+      setProcesandoRelanzamiento(false);
+    }
+  };
+
   // Monto mínimo para ePayco: 5000 COP
   const MONTO_MINIMO_EPAYCO = 5000;
-  
+
   // Función para abrir WhatsApp con mensaje de soporte
   const handleContactarWhatsAppSoporte = () => {
     const nombreUsuario = session?.user?.name || 'Usuario';
@@ -576,9 +962,47 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     const nombreCarpeta = folder || nombreNormalizado.replace(/\.[^/.]+$/, "");
 
     try {
-      const isDuplicated = await BuscarAbiertoProceso(nombreNormalizado);
+      const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
 
-      if (isDuplicated) {
+      if (actaExistente) {
+        const estado = actaExistente.idEstadoProceso;
+
+        // Si el estado es mayor a 4, pedir renombrar
+        if (estado && estado > 4) {
+          setPendingFile(selectedFile);
+          setPendingOriginalName(nombreNormalizado);
+          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+          setIsDuplicateModal(true);
+          setShowModal(true);
+          setCalculando(false);
+          return;
+        }
+
+        // Si el estado es 4, validar fecha
+        if (estado === 4) {
+          const fechaProcesamiento = new Date(actaExistente.fechaProcesamiento);
+          const ahora = new Date();
+          const diferenciaHoras = (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
+
+          // Si es menor a 20 horas, abrir modal de relanzamiento
+          if (diferenciaHoras < 20) {
+            if (actaExistente.urlAssembly && actaExistente.duracion) {
+              setActaParaRelanzar({
+                id: actaExistente.id,
+                nombre: actaExistente.nombre,
+                idEstadoProceso: actaExistente.idEstadoProceso,
+                fechaProcesamiento: fechaProcesamiento,
+                idUsuario: actaExistente.idUsuario,
+                urlAssembly: actaExistente.urlAssembly,
+                duracion: actaExistente.duracion,
+              });
+              setCalculando(false);
+              return;
+            }
+          }
+        }
+
+        // Si no cumple condiciones, pedir renombrar
         setPendingFile(selectedFile);
         setPendingOriginalName(nombreNormalizado);
         setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
@@ -630,9 +1054,10 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
               }
               const nombreParaGuardar = file || nombreNormalizado;
               const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
-              
-              await GuardarNuevoProceso(nombreParaGuardar, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '');
-              
+
+              // No pasar código de referido aquí - se guardará cuando se pague (en handlePayment)
+              await GuardarNuevoProceso(nombreParaGuardar, 4, ensureDurationFormat(duration), calculatePrice(duration), tipo, result.uploadUrl, '', '', '', industriaId, '', null);
+
               // Actualizar la tabla después de guardar el nuevo proceso
               onCheckActa?.();
             }
@@ -720,58 +1145,51 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       }
     }, 0);
   };
-  const downloadFile = (url: string) => {
+  const downloadFile = (url: string, filename?: string) => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
-    window.open(proxyUrl, "_blank");
+    const link = document.createElement('a');
+    link.href = proxyUrl;
+    link.target = '_blank';
+    link.style.display = 'none';
+    if (filename) {
+      link.download = filename;
+    }
+    document.body.appendChild(link);
+    link.click();
+    // Esperar un momento antes de remover el link
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
   };
 
-  const handleDownload = async () => {
-    try {
-      if (!acta || !transcripcion) {
-        console.error(
-          "No se han proporcionado los datos necesarios para la descarga"
-        );
-        return;
-      }
-
-      track('inicio_descarga_documento', {
-        event_category: 'descarga',
-        event_label: 'inicio_descarga_acta_transcripcion',
-        tipo_documento: 'acta_y_transcripcion',
-        nombre_archivo: file
-      });
-
-      if (transcripcion) {
-        downloadFile(acta);
-
-        setTimeout(() => {
-          if (acta) {
-            downloadFile(transcripcion);
-
-            track('descarga_documento_completada', {
-              event_category: 'descarga',
-              event_label: 'descarga_exitosa_completa',
-              tipo_documento: 'acta_y_transcripcion',
-              nombre_archivo: file
-            });
-            track('conversion_completada', {
-              event_category: 'conversion',
-              event_label: 'usuario_completa_proceso',
-              valor_conversion: calculatePrice(duration),
-              tipo_conversion: 'acta_completa',
-              posicion_embudo: 'final'
-            });
-          }
-        }, 4000);
-      }
-    } catch (error) {
-      console.error("Error general:", (error as Error).message);
-
-      track('document_download_error', {
-        event_category: 'error',
-        event_label: error instanceof Error ? error.message : 'Unknown error'
-      });
+  const handleDownloadBorrador = () => {
+    if (!acta) {
+      console.error("No se ha proporcionado el borrador para descargar");
+      return;
     }
+
+    track('descarga_borrador', {
+      event_category: 'descarga',
+      event_label: 'descarga_borrador',
+      nombre_archivo: file
+    });
+
+    downloadFile(acta, 'Borrador.docx');
+  };
+
+  const handleDownloadTranscripcion = () => {
+    if (!transcripcion) {
+      console.error("No se ha proporcionado la transcripción para descargar");
+      return;
+    }
+
+    track('descarga_transcripcion', {
+      event_category: 'descarga',
+      event_label: 'descarga_transcripcion',
+      nombre_archivo: file
+    });
+
+    downloadFile(transcripcion, 'Transcripcion.txt');
   };
 
 
@@ -840,9 +1258,9 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
   return (
     <>
-      <AlertModalComponent 
-        open={showModal} 
-        message={modalMessage} 
+      <AlertModalComponent
+        open={showModal}
+        message={modalMessage}
         onClose={() => {
           if (isDuplicateModal) {
             setPendingFile(null);
@@ -859,7 +1277,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         currentFileName={pendingOriginalName}
       />
 
-      <div className="p-4 sm:p-6 w-full max-w-lg mx-auto bg-transparent rounded-md">
+      <div className="w-full bg-transparent rounded-md">
         {start && (
           <div className="space-y-4">
             {!selectedFile && !file && (
@@ -919,7 +1337,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 acta === null &&
                 transcripcion === null &&
                 urlAssembly !== null &&
-                !procesando && 
+                !procesando &&
                 duplicado === false &&
                 hasBillingData && (
                   <>
@@ -968,9 +1386,8 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                             </Button>
                           </div>
                           {mensajeCodigo && (
-                            <p className={`text-xs ${
-                              codigoValido ? "text-green-600" : "text-red-600"
-                            }`}>
+                            <p className={`text-xs ${codigoValido ? "text-green-600" : "text-red-600"
+                              }`}>
                               {mensajeCodigo}
                             </p>
                           )}
@@ -982,27 +1399,27 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
               <div className="flex gap-4">
                 {selectedFile !== null && acta === null && transcripcion === null && (
-                <Button
-                  className="w-full rounded-sm"
-                  variant="outline"
-                  onClick={() => {
-                    track('cancel_button_click', {
-                      event_category: 'engagement',
-                      event_label: 'cancel_button_clicked'
-                    });
-                    clearSelection();
-                  }}
-                >
-                  Cancelar
-                </Button>
-              )}
+                  <Button
+                    className="w-full rounded-sm"
+                    variant="outline"
+                    onClick={() => {
+                      track('cancel_button_click', {
+                        event_category: 'engagement',
+                        event_label: 'cancel_button_clicked'
+                      });
+                      clearSelection();
+                    }}
+                  >
+                    Cancelar
+                  </Button>
+                )}
 
-              {uploadProgress === 100 &&
-                selectedFile !== null &&
-                acta === null &&
-                transcripcion === null &&
-                urlAssembly !== null &&
-                !procesando && duplicado === false && (
+                {uploadProgress === 100 &&
+                  selectedFile !== null &&
+                  acta === null &&
+                  transcripcion === null &&
+                  urlAssembly !== null &&
+                  !procesando && duplicado === false && (
                     <>
                       {checkingBillingData ? (
                         <Button
@@ -1025,97 +1442,128 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                               </Button>
                             </>
                           ) : (
-                          <>
-                            <BillingDataForm
-                              isOpen={showBillingForm}
-                              onClose={() => setShowBillingForm(false)}
-                              onSuccess={async () => {
-                                try {
-                                  const check = await checkBillingData();
-                                  setHasBillingData(check.hasCompleteData);
-                                } catch (error) {
-                                  console.error("Error al verificar datos:", error);
-                                }
-                                setShowBillingForm(false);
-                              }}
-                            />
-                            <Button
-                              className="w-full rounded-sm bg-green-700 hover:bg-green-800"
-                              onClick={() => setShowBillingForm(true)}
-                            >
-                              Completar datos de facturación
-                            </Button>
-                          </>
-                        )}
-                      </>
-                    ) : (
-                      <>
-                        {/* Verificar si el monto es menor al mínimo antes de mostrar opciones de pago */}
-                        {calculatePrice(duration) < MONTO_MINIMO_EPAYCO ? (
-                          <div className="w-full space-y-4">
-                            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                              <p className="text-sm text-yellow-800 mb-2">
-                                <strong>Monto menor al mínimo requerido</strong>
-                              </p>
-                              <p className="text-sm text-yellow-700 mb-3">
-                                El monto a pagar es <strong>${calculatePrice(duration).toLocaleString('es-CO')} COP</strong>, pero ePayco solo acepta pagos superiores a <strong>$5,000 COP</strong>.
-                              </p>
-                              <p className="text-sm text-yellow-700">
-                                Te ofrecemos soporte para este tipo de pagos. Contáctanos por WhatsApp y te ayudaremos a procesar tu pago.
-                              </p>
-                            </div>
-                            <Button
-                              className="w-full rounded-sm bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2"
-                              onClick={handleContactarWhatsAppSoporte}
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width={20}
-                                height={20}
-                                viewBox="0 0 24 24"
-                                fill="currentColor"
-                              >
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                              </svg>
-                              Contactar soporte por WhatsApp
-                            </Button>
-                 
-                          </div>
-                        ) : (
-                          <>
-                            {/* Mostrar ePayco solo si no hay código válido */}
-                            {!tieneCodigoAtencion || !codigoValido ? (
-                              <EPaycoOnPageComponent
-                                costo={calculatePrice(duration)}
-                                file={file || ''}
-                                folder={folder || ''}
-                                fileid={urlAssembly || ''}
-                                duration={duration.toString()}
-                                handlePayment={() => handlePayment()}
-                                nombreUsuario={session?.user?.name || undefined}
-                                emailUsuario={session?.user?.email || undefined}
-                                onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
-                                  // Abrir ePayco directamente sin modal intermedio
-                                  if (handleOpenWidget) {
-                                    handleOpenWidget();
+                            <>
+                              <BillingDataForm
+                                isOpen={showBillingForm}
+                                onClose={() => setShowBillingForm(false)}
+                                onSuccess={async () => {
+                                  try {
+                                    const check = await checkBillingData();
+                                    setHasBillingData(check.hasCompleteData);
+                                  } catch (error) {
+                                    console.error("Error al verificar datos:", error);
                                   }
-                                  window.confirmPayment = handleOpenWidget;
+                                  setShowBillingForm(false);
                                 }}
                               />
-                            ) : (
-                              // Botón para generar con código
                               <Button
-                                className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
-                                onClick={() => handlePayment(codigoValidado?.codigo || null)}
-                                disabled={procesando}
+                                className="w-full rounded-sm bg-green-700 hover:bg-green-800"
+                                onClick={() => setShowBillingForm(true)}
                               >
-                                {procesando ? "Generando acta..." : "Generar con código"}
+                                Completar datos de facturación
                               </Button>
-                            )}
-                          </>
-                        )}
-                      </>
-                    )}
+                            </>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          {/* Verificar si el monto es menor al mínimo antes de mostrar opciones de pago */}
+                          {calculatePrice(duration) < MONTO_MINIMO_EPAYCO ? (
+                            <div className="w-full space-y-4">
+                              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                                <p className="text-sm text-yellow-800 mb-2">
+                                  <strong>Monto menor al mínimo requerido</strong>
+                                </p>
+                                <p className="text-sm text-yellow-700 mb-3">
+                                  El monto a pagar es <strong>${calculatePrice(duration).toLocaleString('es-CO')} COP</strong>, pero ePayco solo acepta pagos superiores a <strong>$5,000 COP</strong>.
+                                </p>
+                                <p className="text-sm text-yellow-700">
+                                  Te ofrecemos soporte para este tipo de pagos. Contáctanos por WhatsApp y te ayudaremos a procesar tu pago.
+                                </p>
+                              </div>
+                              <Button
+                                className="w-full rounded-sm bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2"
+                                onClick={handleContactarWhatsAppSoporte}
+                              >
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width={20}
+                                  height={20}
+                                  viewBox="0 0 24 24"
+                                  fill="currentColor"
+                                >
+                                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                                </svg>
+                                Contactar soporte por WhatsApp
+                              </Button>
+
+                            </div>
+                          ) : (
+                            <>
+                              {/* Input de código de referido - solo en primera acta */}
+                              {esPrimeraActa && (
+                                <div className="w-full mb-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">
+                                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                                    ¿Te refirió alguien? Ingresa su código de referido:
+                                  </label>
+                                  <div className="flex gap-2">
+                                    <input
+                                      type="text"
+                                      value={codigoReferido}
+                                      onChange={handleCodigoReferidoChange}
+                                      placeholder="CÓDIGO (7 caracteres)"
+                                      maxLength={7}
+                                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none uppercase font-mono tracking-wider"
+                                    />
+                                    <Button
+                                      onClick={handleValidarCodigoReferido}
+                                      disabled={validandoCodigoReferido || !codigoReferido || codigoReferido.length !== 7}
+                                      className="bg-purple-600 hover:bg-purple-700 text-white text-xs px-4"
+                                    >
+                                      {validandoCodigoReferido ? '...' : 'Validar'}
+                                    </Button>
+                                  </div>
+                                  {mensajeCodigoReferido && (
+                                    <p className={`mt-2 text-xs ${codigoReferidoValido ? 'text-green-600' : 'text-red-600'}`}>
+                                      {mensajeCodigoReferido}
+                                    </p>
+                                  )}
+                                </div>
+                              )}
+
+                              {/* Mostrar ePayco solo si no hay código válido */}
+                              {!tieneCodigoAtencion || !codigoValido ? (
+                                <EPaycoOnPageComponent
+                                  costo={calculatePrice(duration)}
+                                  file={file || ''}
+                                  folder={folder || ''}
+                                  fileid={urlAssembly || ''}
+                                  duration={duration.toString()}
+                                  handlePayment={() => handlePayment()}
+                                  nombreUsuario={session?.user?.name || undefined}
+                                  emailUsuario={session?.user?.email || undefined}
+                                  onPaymentClick={(handleOpenWidget: (() => void) | undefined) => {
+                                    // Abrir ePayco directamente sin modal intermedio
+                                    if (handleOpenWidget) {
+                                      handleOpenWidget();
+                                    }
+                                    window.confirmPayment = handleOpenWidget;
+                                  }}
+                                />
+                              ) : (
+                                // Botón para generar con código
+                                <Button
+                                  className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
+                                  onClick={() => handlePayment(codigoValidado?.codigo || null)}
+                                  disabled={procesando}
+                                >
+                                  {procesando ? "Generando acta..." : "Generar con código"}
+                                </Button>
+                              )}
+                            </>
+                          )}
+                        </>
+                      )}
                     </>
                   )}
               </div>
@@ -1124,7 +1572,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 acta === null &&
                 transcripcion === null &&
                 urlAssembly !== null &&
-                !procesando && duplicado === false && 
+                !procesando && duplicado === false &&
                 !checkingBillingData &&
                 !hasBillingData &&
                 session && (
@@ -1141,11 +1589,11 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 uploadProgress !== 100 &&
                 acta === null &&
                 transcripcion === null &&
-                !procesando && 
+                !procesando &&
                 !checkingBillingData && (
                   <div className="flex gap-4">
                     {!hasBillingData && session ? (
-                  <Button
+                      <Button
                         className="w-full rounded-sm bg-yellow-600 hover:bg-yellow-700 text-white"
                         onClick={() => {
                           router.push("/plataforma?openProfile=true");
@@ -1156,321 +1604,321 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                     ) : (
                       <Button
                         className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 flex items-center justify-center gap-2"
-                    onClick={handleContinue}
-                    disabled={calculando}
-                  >
-                    {calculando ? (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width={50}
-                          height={50}
-                          viewBox="0 0 24 24"
-                        >
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              id="svgSpinnersBlocksWave0"
-                              attributeName="x"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="0;svgSpinnersBlocksWave1.end+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.1s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={1}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={1}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="1;4;1"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.2s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={8.33}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={8.33}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="8.33;11.33;8.33"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.3s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                          <rect
-                            width={7.33}
-                            height={7.33}
-                            x={15.66}
-                            y={15.66}
-                            fill="currentColor"
-                          >
-                            <animate
-                              id="svgSpinnersBlocksWave1"
-                              attributeName="x"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="y"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="15.66;18.66;15.66"
-                            ></animate>
-                            <animate
-                              attributeName="width"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                            <animate
-                              attributeName="height"
-                              begin="svgSpinnersBlocksWave0.begin+0.4s"
-                              dur="0.6s"
-                              values="7.33;1.33;7.33"
-                            ></animate>
-                          </rect>
-                        </svg>
-                        Subiendo...
-                      </>
-                    ) : (
-                      "Continuar"
-                    )}
-                  </Button>
+                        onClick={handleContinue}
+                        disabled={calculando}
+                      >
+                        {calculando ? (
+                          <>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width={50}
+                              height={50}
+                              viewBox="0 0 24 24"
+                            >
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={1}
+                                y={1}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  id="svgSpinnersBlocksWave0"
+                                  attributeName="x"
+                                  begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="0;svgSpinnersBlocksWave1.end+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={8.33}
+                                y={1}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={1}
+                                y={8.33}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.1s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={15.66}
+                                y={1}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={8.33}
+                                y={8.33}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={1}
+                                y={15.66}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="1;4;1"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.2s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={15.66}
+                                y={8.33}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={8.33}
+                                y={15.66}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="8.33;11.33;8.33"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.3s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                              <rect
+                                width={7.33}
+                                height={7.33}
+                                x={15.66}
+                                y={15.66}
+                                fill="currentColor"
+                              >
+                                <animate
+                                  id="svgSpinnersBlocksWave1"
+                                  attributeName="x"
+                                  begin="svgSpinnersBlocksWave0.begin+0.4s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="y"
+                                  begin="svgSpinnersBlocksWave0.begin+0.4s"
+                                  dur="0.6s"
+                                  values="15.66;18.66;15.66"
+                                ></animate>
+                                <animate
+                                  attributeName="width"
+                                  begin="svgSpinnersBlocksWave0.begin+0.4s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                                <animate
+                                  attributeName="height"
+                                  begin="svgSpinnersBlocksWave0.begin+0.4s"
+                                  dur="0.6s"
+                                  values="7.33;1.33;7.33"
+                                ></animate>
+                              </rect>
+                            </svg>
+                            Subiendo...
+                          </>
+                        ) : (
+                          "Continuar"
+                        )}
+                      </Button>
                     )}
                   </div>
                 )}
               {uploadProgress !== 100 &&
                 acta === null &&
                 transcripcion === null &&
-                !procesando && 
+                !procesando &&
                 !checkingBillingData &&
                 !hasBillingData &&
                 session && (
@@ -1801,32 +2249,26 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                   </>
                 </Button>
               ) : acta && transcripcion ? (
-                <div className="flex gap-2 w-full">
+                <div className="w-full space-y-2">
                   <Button
-                    className="w-full rounded-sm"
-                    variant="outline"
-                    onClick={() => {
-                      track('new_generation_button_click', {
-                        event_category: 'engagement',
-                        event_label: 'new_generation_button_clicked'
-                      });
-                      resetearParaNuevaGeneracion();
-                    }}
-                  >
-                    Generar nueva
-                  </Button>
-                  <Button
-                    id="DownloadBtn"
+                    id="DownloadBorradorBtn"
                     className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
                     onClick={() => {
-                      track('download_button_click', {
-                        event_category: 'engagement',
-                        event_label: 'download_button_clicked'
-                      });
-                      handleDownload();
+                      handleDownloadBorrador();
                     }}
+                    disabled={!acta}
                   >
-                    Descargar
+                    Descargar Borrador
+                  </Button>
+                  <Button
+                    id="DownloadTranscripcionBtn"
+                    className="w-full rounded-sm bg-purple-600 hover:bg-purple-700"
+                    onClick={() => {
+                      handleDownloadTranscripcion();
+                    }}
+                    disabled={!transcripcion}
+                  >
+                    Descargar Transcripción
                   </Button>
                 </div>
               ) : transcripcion && !acta ? (
@@ -1875,8 +2317,106 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             Generar con transcripcion existente
           </Button>
         )}
-        
+
       </div>
+
+      {/* Modal de relanzamiento de acta */}
+      {actaParaRelanzar && actaParaRelanzar.urlAssembly && actaParaRelanzar.nombre && actaParaRelanzar.duracion && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <h3 className="text-lg font-semibold mb-4">Relanzar acta: {actaParaRelanzar.nombre}</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              Duración: {actaParaRelanzar.duracion} |
+              Costo: ${calculatePrice(duracionASegundos(actaParaRelanzar.duracion)).toLocaleString('es-CO')} COP
+            </p>
+
+            {/* Checkbox para código de atención */}
+            <div className="mb-4">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={tieneCodigoAtencionRelanzamiento}
+                  onChange={(e) => {
+                    setTieneCodigoAtencionRelanzamiento(e.target.checked);
+                    if (!e.target.checked) {
+                      setCodigoAtencionRelanzamiento('');
+                      setCodigoValidoRelanzamiento(false);
+                      setCodigoValidadoRelanzamiento(null);
+                      setMensajeCodigoRelanzamiento('');
+                    }
+                  }}
+                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                />
+                <span className="text-sm text-gray-700">¿Tienes código de atención?</span>
+              </label>
+            </div>
+
+            {/* Input y validación de código */}
+            {tieneCodigoAtencionRelanzamiento && (
+              <div className="mb-4 space-y-2">
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={codigoAtencionRelanzamiento}
+                    onChange={handleCodigoChangeRelanzamiento}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleValidarCodigoRelanzamiento();
+                      }
+                    }}
+                    placeholder="Ingresa el código"
+                    className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none text-sm"
+                  />
+                  <Button
+                    onClick={handleValidarCodigoRelanzamiento}
+                    disabled={validandoCodigoRelanzamiento || !codigoAtencionRelanzamiento.trim()}
+                    className="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  >
+                    {validandoCodigoRelanzamiento ? "Validando..." : "Validar"}
+                  </Button>
+                </div>
+                {mensajeCodigoRelanzamiento && (
+                  <p className={`text-sm ${codigoValidoRelanzamiento ? 'text-green-600' : 'text-red-600'}`}>
+                    {mensajeCodigoRelanzamiento}
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Mostrar ePayco solo si no hay código válido */}
+            {!tieneCodigoAtencionRelanzamiento || !codigoValidoRelanzamiento ? (
+              <EPaycoOnPageComponent
+                costo={calculatePrice(duracionASegundos(actaParaRelanzar.duracion))}
+                file={actaParaRelanzar.nombre}
+                folder={actaParaRelanzar.nombre.replace(/\.[^/.]+$/, "")}
+                fileid={actaParaRelanzar.urlAssembly}
+                duration={duracionASegundos(actaParaRelanzar.duracion).toString()}
+                handlePayment={() => handlePaymentRelanzamiento()}
+                nombreUsuario={session?.user?.name || undefined}
+                emailUsuario={session?.user?.email || undefined}
+              />
+            ) : (
+              // Botón para generar con código
+              <Button
+                className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
+                onClick={() => handlePaymentRelanzamiento(codigoValidadoRelanzamiento?.codigo || null)}
+                disabled={procesandoRelanzamiento}
+              >
+                {procesandoRelanzamiento ? "Generando acta..." : "Generar con código"}
+              </Button>
+            )}
+
+            <button
+              onClick={cerrarModalRelanzamiento}
+              disabled={procesandoRelanzamiento}
+              className="mt-4 w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

@@ -9,3 +9,6 @@ ADD COLUMN IF NOT EXISTS codigo_atencion text;
 COMMENT ON COLUMN public.actas.codigo_atencion IS 'Código de atención usado para generar el acta. Vacío si no se usó código.';
 
 
+
+
+

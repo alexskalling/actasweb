@@ -19,6 +19,7 @@ export async function ActualizarProceso(
   automation?: boolean | null,
   codigoAtencion?: string | null,
   automation_mail?: string | null,
+  codigoReferido?: string | null,
 ) {
   try {
     let user_id;
@@ -76,6 +77,7 @@ export async function ActualizarProceso(
     }
     
     if (codigoAtencion !== undefined) updateFields.codigoAtencion = codigoAtencion || null;
+    if (codigoReferido !== undefined) updateFields.codigoReferido = codigoReferido ? codigoReferido.trim().toUpperCase() : null;
 
     if (Object.keys(updateFields).length === 0) {
       return { status: 'error', message: 'No se proporcionaron campos para actualizar.' };

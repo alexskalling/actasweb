@@ -60,6 +60,7 @@ export const usuarios = pgTable("usuarios", {
   tipoUsuario: text("tipo_usuario").default("natural"), // 'natural' o 'juridica'
   tipoDocumento: text("tipo_documento"), // CC, CE, NIT, TI, PP, NIP
   numeroDocumento: text("numero_documento"),
+  codigoReferido: text("codigo_referido"),
 });
 
 export const usuariosRelations = relations(usuarios, ({ many }) => ({
@@ -103,6 +104,7 @@ export const actas = pgTable("actas", {
     .defaultRandom() // Puedes cambiar esto si usas auth.uid()
     .references(() => usuarios.id),
   idIndustria: integer('id_industria').references(() => industrias.id),
+  codigoReferido: text("codigo_referido"),
 });
 // Tabla: industrias
 export const industrias = pgTable('industrias', {

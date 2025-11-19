@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "next lint",
     "migrate": "tsx scripts/run-migration.ts",
-    "verify-migration": "tsx scripts/verify-migration.ts"
+    "verify-migration": "tsx scripts/verify-migration.ts",
+    "db:push": "drizzle-kit push",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
     "@ai-sdk/google": "^1.1.8",
@@ -64,6 +67,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.7",
     "eslint": "^9",
     "eslint-config-next": "^16.0.0",
     "postcss": "^8",

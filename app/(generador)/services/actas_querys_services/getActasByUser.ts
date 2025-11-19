@@ -3,7 +3,7 @@
 import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
 import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
-import { actas } from "@/lib/db/schema";
+import { actas, estadosProceso } from "@/lib/db/schema";
 import { eq, desc } from "drizzle-orm";
 
 export async function getActasByUser() {
@@ -20,7 +20,7 @@ export async function getActasByUser() {
       }
     }
 
-    // Obtener todas las actas del usuario ordenadas por fecha de procesamiento (más recientes primero)
+    // Obtener todas las actas del usuario con el nombre del estado desde la tabla estados_proceso
     const userActas = await db.select({
       id: actas.id,
       nombre: actas.nombre,
@@ -31,9 +31,11 @@ export async function getActasByUser() {
       urlBorrador: actas.urlBorrador,
       urlAssembly: actas.urlAssembly,
       idEstadoProceso: actas.idEstadoProceso,
-      fechaProcesamiento: actas.fechaProcesamiento
+      fechaProcesamiento: actas.fechaProcesamiento,
+      nombreEstado: estadosProceso.nombre
     })
     .from(actas)
+    .leftJoin(estadosProceso, eq(actas.idEstadoProceso, estadosProceso.id))
     .where(eq(actas.idUsuario, user_id))
     .orderBy(desc(actas.fechaProcesamiento));
 

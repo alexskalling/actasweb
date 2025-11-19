@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ActualizarProceso } from '@/app/(generador)/services/actas_querys_services/actualizarProceso';
+import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
+import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
+import { db } from "@/lib/db/db";
+import { actas } from "@/lib/db/schema";
+import { eq, and } from "drizzle-orm";
 import crypto from 'crypto';
 
 /**
@@ -99,6 +104,36 @@ export async function POST(request: NextRequest) {
     if (response === 'Aceptada' || response === '1') {
       // Pago aprobado por ePayco
       try {
+        // Obtener el código de referido existente del acta antes de actualizar
+        let codigoReferidoExistente: string | null = null;
+        try {
+          const mail = await getUserEmailFromSession();
+          const user_id = !mail
+            ? 'a817fffe-bc7e-4e29-83f7-b512b039e817'
+            : (await getUserIdByEmail(mail)) || 'a817fffe-bc7e-4e29-83f7-b512b039e817';
+
+          const actaExistente = await db
+            .select({
+              codigoReferido: actas.codigoReferido,
+            })
+            .from(actas)
+            .where(
+              and(
+                eq(actas.nombre, fileName),
+                eq(actas.idUsuario, user_id)
+              )
+            )
+            .limit(1);
+
+          if (actaExistente.length > 0 && actaExistente[0].codigoReferido) {
+            codigoReferidoExistente = actaExistente[0].codigoReferido;
+            console.log('Código de referido encontrado y preservado:', codigoReferidoExistente);
+          }
+        } catch (error) {
+          console.error('Error al obtener código de referido existente:', error);
+          // Continuar aunque falle, no es crítico
+        }
+
         await ActualizarProceso(
           fileName,
           5, // Estado: Aprobado
@@ -109,7 +144,10 @@ export async function POST(request: NextRequest) {
           invoice,
           undefined, // NO actualizar urlTranscripcion - puede que ya esté guardada
           undefined, // NO actualizar urlborrador - puede que ya esté guardada
-          null
+          null,
+          undefined, // codigoAtencion
+          undefined, // automation_mail
+          codigoReferidoExistente || undefined // Preservar código de referido si existe
         );
       } catch (updateError: any) {
         // Si falla la actualización, loguear pero NO rechazar el pago

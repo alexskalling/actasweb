@@ -35806,3 +35806,1183 @@ Generando URL pública para Transcripcion.txt (EXISTENTE): gabriel24_Transcripci
 Compartiendo archivo existente para obtener URL pública: /Actas/gabriel24/gabriel24_Transcripcion.txt
 URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/sd8zBbYZcMHALzd
 URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/sd8zBbYZcMHALzd
+Verificando si existe transcripción: testleo_Transcripcion.txt en carpeta testleo
+[2025-11-18T18:14:47.148Z] Verificando existencia del archivo testleo_Transcripcion.txt en Nextcloud carpeta testleo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testleo/testleo_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T18:14:48.591Z] Archivo "testleo_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "testleo".
+Iniciando transcripción con AssemblyAI para: testleo.aac
+Guardando transcripción: testleo_Transcripcion.txt en carpeta testleo
+Transcripción guardada: testleo_Transcripcion.txt
+Verificando contenido existente: testleo_Contenido.txt
+[2025-11-18T18:16:33.365Z] Verificando existencia del archivo testleo_Contenido.txt en Nextcloud carpeta testleo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testleo/testleo_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T18:16:34.216Z] Archivo "testleo_Contenido.txt" NO encontrado en Nextcloud en la carpeta "testleo".
+Generando contenido para: testleo.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: testleo.aac
+Guardando contenido en Nextcloud: testleo_Contenido.txt
+Contenido guardado: testleo_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: testleo.aac en carpeta: testleo
+Verificando Borrador .docx existente: testleo_Borrador.docx
+[2025-11-18T18:17:59.303Z] Verificando existencia del archivo testleo_Borrador.docx en Nextcloud carpeta testleo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testleo/testleo_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T18:18:00.137Z] Archivo "testleo_Borrador.docx" NO encontrado en Nextcloud en la carpeta "testleo".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: testleo_Borrador.docx
+Preparando guardado .docx en Nextcloud: testleo_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Paola Ruiz</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Javier Ortega - [CARGO NO ESPECIFICADO]</li>
+ <li>Nicolás Garzón - [CARGO NO ESPECIFICADO]</li>
+ <li>Henry Carvajal - [CARGO NO ESPECIFICADO]</li>
+ <li>Carlos Rincón - [CARGO NO ESPECIFICADO]</li>
+ <li>Maritza Flores - [CARGO NO ESPECIFICADO]</li>
+ <li>Jeannette Castiblanco - [CARGO NO ESPECIFICADO]</li>
+ <li>Fernando Villamil - [CARGO NO ESPECIFICADO]</li>
+ <li>John Bernal - [CARGO NO ESPECIFICADO]</li>
+ <li>Miriam Pachón - [CARGO NO ESPECIFICADO]</li>
+ <li>Marta - Administradora</li>
+ <li>Olga Mora - [CARGO NO ESPECIFICADO]</li>
+ <li>Luis - [CARGO NO ESPECIFICADO]</li>
+ <li>Leonardo - Arquitecto</li>
+ <li>Cristian Javier López Roa - Ingeniero</li>
+ <li>Daniela - Arquitecta</li>
+ <li>Jimmy - [CARGO NO ESPECIFICADO]</li>
+ <li>Edwin - [CARGO NO ESPECIFICADO]</li>
+ <li>Yasmín - [CARGO NO ESPECIFICADO]</li>
+ <li>Dayana - [CARGO NO ESPECIFICADO]</li>
+ <li>Rodolfo Cano - [CARGO NO ESPECIFICADO]</li>
+ <li>Arley - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Llamado a lista y verificación de quórum</li>
+ <li>Aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6</li>
+ <li>Revisión de la cotización de la interventoría por 30 días</li>
+ <li>Solicitar a la administración el drive actualizado de la convocatoria de seguridad</li>
+ <li>Cronograma y metodología para el traslado del gimnasio</li>
+ <li>Aprobación del contrato de CIWIS</li>
+ <li>Tema de la citofonía</li>
+ <li>Tema del informe del ascensor de la torre 8</li>
+ </ol>
+</header>
+
+<h2>1. Llamado a lista y verificación de quórum</h2>
+
+<p>Se dio inicio a la reunión con el llamado a lista y la verificación del quórum. Estuvieron presentes Javier Ortega, Nicolás Garzón, Henry Carvajal, Carlos Rincón, Maritza Flores, Jeannette Castiblanco, Fernando Villamil, John Bernal, Miriam Pachón, Paola Ruiz y Olga Mora. También asistió la administradora, Marta.</p>
+<h2>2. Aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6</h2>
+
+<p>En el punto número tres del orden del día, se abordó la aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6. Se destacó la importancia de este punto para avanzar en el proceso de aprobación de la interventoría.</p>
+
+<p>La señora Marta informó que el documento de la convocatoria se había compartido en el drive, pero que el arquitecto Leonardo aún no lo había revisado. Explicó que había contactado al arquitecto, quien le manifestó que haría la revisión y las modificaciones necesarias esa misma noche, compartiendo posteriormente el documento actualizado. La señora Marta señaló que los ajustes realizados hasta el momento por el Consejo parecían prudentes.</p>
+
+<p>Don Luis intervino para aclarar que la interventoría a contratar sería por un mes, mientras se define la interventoría oficial para el resto de la obra. Sin embargo, se le corrigió indicando que en ese momento se estaba discutiendo la interventoría general, no la de 30 días, que se abordaría más adelante en el orden del día.</p>
+
+<p>Paola sugirió dejar en firme los acuerdos alcanzados hasta el momento, para evitar una doble revisión. La señora Marta añadió que, una vez revisado por el arquitecto Leonardo, se enviaría el documento al grupo del consejo para su lectura y aprobación mediante una encuesta de "sí" o "no".</p>
+
+<p>Adicionalmente, Paola solicitó que se consultara al arquitecto Leonardo sobre la posibilidad de que alguien del Comité acompañe la visita de obra, en caso de que él no pueda asistir en el corto plazo.</p>
+
+<p>Se acordó que la señora Marta enviaría el documento final revisado por el arquitecto Leonardo al grupo del consejo para su aprobación mediante una encuesta. Se enfatizó que lo que ya había sido acordado por el consejo se mantendría, sumado a las modificaciones que el arquitecto Leonardo realizara.</p>
+
+<p>Finalmente, se determinó que no se tomaría una decisión definitiva sobre la interventoría de 30 días en este punto, ya que se trataría en un punto posterior del orden del día.</p><h2>3. Revisión de la cotización de la interventoría por 30 días</h2>
+
+<p>Se procedió a la revisión de la cotización de la interventoría por 30 días, la cual había sido previamente compartida con los miembros del consejo. La administradora, señora Marta, informó que también había compartido la cotización con el arquitecto Leonardo, quien realizó una sugerencia respecto a los entregables.</p>
+
+<p>Según la señora Marta, el arquitecto Leonardo sugirió incluir en la cotización los siguientes entregables: reporte semanal, reporte al terminar la actividad y registro fotográfico, además de aclarar si los 7 millones de pesos corresponden a un mes de trabajo. La administradora indicó que el ingeniero Javier ajustó la cotización incluyendo los tres entregables solicitados y confirmó que el valor de 7 millones de pesos es por un mes de servicio.</p>
+
+<p>Durante la discusión, el señor Javier Ortega solicitó confirmación de si el arquitecto Leonardo había realizado algún otro comentario o solicitud de corrección a la propuesta del ingeniero Cristian, resaltando la importancia del concepto técnico del Comité de Áreas Comunes para la toma de decisiones. La señora Marta aclaró que la única solicitud del arquitecto Leonardo fue la inclusión de los entregables mencionados.</p>
+
+<p>La señora Marta explicó que, tal como se acordó en la reunión anterior, el arquitecto se reunió con el ingeniero Javier, quien presentó el organigrama y el cronograma de CUCESAT. Se enfatizó la necesidad de que el ingeniero estuviera presente en la copropiedad durante la ejecución de los trabajos, especialmente debido a la liberación de la membrana, lo cual requería supervisión constante para evitar filtraciones. La arquitecta Daniela también confirmó la importancia de esta supervisión.</p>
+
+<p>La señora Marta informó que consultó al ingeniero Javier sobre la posibilidad de negociar el precio, a lo que él respondió que, si bien el valor era por un mes de trabajo y requería cubrir costos como seguridad social y retención en la fuente, se podría analizar la posibilidad de un descuento.</p>
+
+<p>La señora Paola Ruiz solicitó que se enviara un correo electrónico del Comité de Zonas Comunes validando la propuesta, con el fin de tener trazabilidad del proceso. La señora Marta respondió que la sugerencia del arquitecto Leonardo fue comunicada a través de un mensaje de WhatsApp, y que se solicitaría a los miembros del Comité de Zonas Comunes que confirmaran su acuerdo con la propuesta ajustada.</p>
+
+<p>El señor Carlos Rincón preguntó si el ingeniero Cristian era el mismo que había realizado la prueba de estanqueidad, lo cual fue confirmado.</p>
+
+<p>El señor Carlos Rincón sugirió que, dado que el precio parecía estar dentro de un rango razonable, se aprobara el pago sin solicitar descuentos adicionales, para asegurar un mejor servicio. La señora Paola Ruiz coincidió en que el precio era justo, considerando los costos adicionales que el ingeniero debía cubrir.</p>
+
+<p>La señora Paola Ruiz preguntó si se podía formular la pregunta para la aprobación, condicionada a la recepción de la trazabilidad del arquitecto Leonardo. La señora Marta sugirió esperar al informe del ingeniero Cristian, que se entregaría al día siguiente, para tomar una decisión informada.</p>
+
+<p>La señora Marta argumentó que era importante que el ingeniero pudiera comenzar a revisar la parte relacionada con el punto de energía, y que su presencia era necesaria para coordinar el movimiento del enlonado y la tierra. El señor Henry Carvajal expresó su acuerdo en que se tomara una decisión ese día, argumentando que cada día sin vigilancia representaba un riesgo para el conjunto, y que el precio era asequible. Añadió que el ingeniero debía pagar aproximadamente 790 mil pesos en seguridad social y retención en la fuente.</p>
+
+<p>Ante la discusión, se procedió a preguntar si alguien se oponía a tomar la decisión ese día. Al no haber objeciones, la señora Marta reformuló la pregunta: ¿Están de acuerdo en que el ingeniero Cristian Javier López Roa realice la interventoría del primer mes de Terrazas para la obra de Cusar?</p>
+
+<p>La señora Paola Ruiz manifestó que el precio le parecía justo y que se debía aprobar el pago de los 7 millones sin descuento. Se preguntó nuevamente si alguien se oponía, y al no haber objeciones, se aprobó la contratación del ingeniero, condicionada a la recepción de la trazabilidad del arquitecto Leonardo.</p>
+
+<p>El señor Javier Ortega solicitó que se utilizara el mismo contrato de prestación de servicios que se había suscrito anteriormente, con las adecuaciones necesarias para incluir las precisiones sugeridas por el arquitecto Leonardo. La señora Marta se comprometió a enviar el documento para su revisión.</p>
+
+<h3>Votación: Aprobación de la contratación del ingeniero Cristian Javier López Roa para la interventoría del primer mes de Terrazas</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p>Se acordó que la señora Marta enviaría el contrato de prestación de servicios con las adecuaciones necesarias para su revisión.</p><h2>4. Solicitar a la administración el drive actualizado de la convocatoria de seguridad</h2>
+
+<p>Durante la discusión de este punto, se recordó que este tema ya se había abordado previamente, indicando que se trataba de un recordatorio debido a retrasos en el proceso. Se solicitó a la administración, específicamente a la señora Marta, el envío de un drive actualizado, similar al utilizado para la convocatoria de la empresa de seguridad.</p>
+
+<p>Posteriormente, al abordar este punto en el orden del día, se mencionó que Jimmy, quien había estado trabajando en el tema de las asegurabilidades en el contrato de seguridad, no estaba presente. Se reiteró la solicitud a la señora Marta para que compartiera el drive, destacando que la manera en que se había trabajado anteriormente en el drive había sido muy buena y asertiva. Además, se solicitó que se compartiera el contrato con el doctor Javier para su revisión.</p>
+
+<p>La señora Marta informó que el documento ya estaba disponible en el drive desde ese día y que, atendiendo a la solicitud, estaría listo para todo el consejo al día siguiente. Indicó que, a partir de las 9 de la mañana del día siguiente, se podrían ingresar las modificaciones necesarias. Solicitó que las personas que ingresaran a hacer modificaciones dejaran constancia de quién realizaba cada modificación, ya que en el caso anterior solo se tenía claro que el señor Henry había realizado una de las modificaciones, pero no se conocían los nombres de quienes habían realizado las demás. Señaló que este documento quedaría como soporte del proceso.</p>
+
+<p>Además, la señora Marta mencionó que se sacaría la convocatoria a partir del primero del mes siguiente y que se tomarían unos días para perfeccionar el documento.</p>
+
+<p>En relación con este tema, se solicitó a la señora Marta que, además del reporte de la empresa de seguridad, se proporcionara el concepto de la administración para respaldar el análisis del proveedor. Se mencionó que se haría de la misma manera que se había hecho con FITCOM, enviando la calificación del proveedor.</p>
+
+<p>La señora Marta confirmó que el contrato ya había sido compartido, pero que lo compartiría nuevamente con la presidenta para que lo socializara con el doctor Javier y la doctora Marta, así como con cualquier otra persona que deseara revisarlo.</p>
+
+<p>El doctor Javier manifestó que, si bien tenía conocimientos en algunas áreas jurídicas, no era experto en todas, por lo que era importante que varias personas revisaran los documentos y realizaran sus aportes. Aclaró que no quería responsabilizarse como profesional en áreas en las que no tenía experticia y que sus aportes serían en la medida de su conocimiento. En caso de requerirse un concepto jurídico particular, se recurriría a los asesores de la copropiedad.</p>
+
+<p>Don Carlos indicó que todos colaboraban de la misma forma y que la administradora era la persona que debía sacar los pliegos y era la representante legal. Señaló que la colaboración no implicaba responsabilidad sobre los documentos y que únicamente se realizaban parámetros frente a lo que se colocaba en el drive, siendo la administradora quien decidía si se subía o no el documento.</p><h2>5. Cronograma y metodología para el traslado del gimnasio</h2>
+
+<p>Durante la reunión, se abordó el tema del cronograma y la metodología para el traslado del gimnasio, así como el estado actual de la obra. La administradora, Marta, proporcionó información detallada sobre las actividades coordinadas con FITCOM y los avances en la adecuación de la zona.</p>
+
+<p>Marta explicó que inicialmente se retiró el material vegetal y la tierra de las áreas adyacentes al gimnasio, con el apoyo de los jardineros encargados del mantenimiento de los jardines de la copropiedad. Posteriormente, se contrató a Rodolfo Cano para llevar a cabo el proyecto de adecuación de la zona. Se realizaron trabajos para dejar los desniveles necesarios para el correcto flujo del agua hacia los sifones, y se llevó a cabo una prueba de estanqueidad para verificar la efectividad de estos trabajos. Marta invitó a los interesados, incluyendo a Luis y a Maritza del comité de zonas comunes, así como al arquitecto Leonardo, a participar en una nueva prueba al día siguiente.</p>
+
+<p>En cuanto a las siguientes etapas, se mencionó la aplicación de una base asfáltica y una capa de Sika Top para prevenir filtraciones y grietas. La aplicación del Sika Top se realizaría al día siguiente, seguida de la aplicación de la emulsión asfáltica. Posteriormente, se procedería a la instalación del manto anti raíz de 4 milímetros, adquirido a Edilandina con un descuento de obra, a un precio de 383 mil pesos por rollo. Se esperaba que el manto fuera entregado el martes. Adicionalmente, se informó que se trabajaría en la impermeabilización de la ballena, la zona de las dos orejas de la ballena.</p>
+
+<p>Ante la pregunta sobre si el gimnasio se cerraría desde el lunes, Marta confirmó que sí, ya que se planeaba avanzar con la preparación de la superficie interna, incluyendo el levantamiento del piso y el contorno. Se priorizaría la impermeabilización de la zona más grande para poder trabajar en esa área. Se indicó que el cronograma para el traslado de las máquinas estaba previsto del 1 al 4 de septiembre. Se coordinó con FITCOM para que apoyaran con el desarme de una máquina, con disponibilidad de personal a partir del lunes.</p>
+
+<p>Edwin solicitó que se proporcionara el cronograma por escrito, así como el detalle de las actividades de impermeabilización, para incluirlos en el boletín informativo de gestión. Marta se comprometió a compartir esta información.</p>
+
+<p>Se detallaron las siguientes actividades planeadas:</p>
+<ul>
+<li>Verificación del inventario de máquinas del gimnasio, en conjunto con FITCOM, la administración y personal de Toros de Casa Láser.</li>
+<li>Definición del área temporal de almacenamiento: salón de estudio, sala de juntas y segundo piso de la cancha de squash. Se coordinaría con la empresa de mantenimiento para el movimiento de los equipos.</li>
+<li>Preparación del espacio, incluyendo señalización del gimnasio como área de mantenimiento y protección de pisos durante el traslado, considerando la sugerencia de Paola y Javier de utilizar el piso de caucho para proteger el salón de estudio.</li>
+<li>Solicitud de apoyo al comité de comunicaciones para informar a los residentes sobre la suspensión del servicio y la reubicación de los elementos.</li>
+<li>Traslado de máquinas, comenzando con los equipos pesados (caminadoras, bicicletas multifuerza) y luego los equipos livianos (pesas, colchonetas y accesorios).</li>
+<li>Ubicación en las áreas temporales asignadas.</li>
+<li>Cierre de la obra y reubicación tras finalizar el mantenimiento.</li>
+<li>Retorno de equipos al gimnasio y verificación de estado y funcionamiento antes de la reapertura.</li>
+</ul>
+
+<p>Javier complementó la información recordando la cotización para el arreglo de las colchonetas y el tapizado de algunos implementos, sugiriendo que se aprovechara el cierre del gimnasio para realizar este trabajo complementario. Marta informó que se había solicitado una cotización a Javier de Fitcom, quien también fabrica máquinas, para evaluar si podían realizar el tapizado y la pintura de algunas máquinas, aprovechando el traslado de los equipos.</p>
+
+<p>Janet sugirió que se realizara una limpieza profunda de todas las máquinas antes de volverlas a trasladar, aprovechando el tiempo de inactividad. Marta respondió que se coordinaría con la persona encargada del desmonte de la máquina el lunes para evaluar el manejo de este tema. Se consideraría la posibilidad de realizar el tapizado y la pintura de las máquinas, así como la limpieza y el mantenimiento general, incluyendo el engrase y la revisión de guayas. Se propuso realizar una lista de chequeo para asegurar que no quedara nada pendiente el día de la apertura.</p>
+
+<p>Olga preguntó si las máquinas quedarían en funcionamiento en los sitios estratégicos temporales. Marta aclaró que todo quedaría cerrado y guardado, y que se trataría de negociar un buen precio para arreglar lo que necesitara pintura o tapicería durante ese tiempo.</p>
+
+<p>Paola mencionó que se había hablado con Marta sobre la posibilidad de que FITCOM ofreciera diferentes actividades durante el mes de cierre del gimnasio, como clases de gimnasia en piscina o rumba, a cambio de la suspensión del pago del instructor. Marta se comprometió a solicitar a FITCOM el cronograma de estas actividades para que el comité de comunicaciones pudiera informar a la comunidad.</p>
+
+<p>Maritza preguntó sobre los acuerdos alcanzados en la reunión con FITCOM el sábado, mencionando que había quejas sobre el servicio y que se había reelegido al proveedor. Paola explicó que la reunión había sido estratégica para negociar beneficios adicionales, como una máquina para hip thrust, cursos de servicio al cliente para el personal y la implementación de un código QR para quejas y sugerencias. Se aclaró que la decisión sobre la reelección de FITCOM se tomaría el lunes.</p>
+
+<p>Javier añadió que FITCOM se había comprometido a suplir algunas clases durante el cierre del gimnasio y que todas las promesas se incluirían en un documento. Marta confirmó que se había advertido a FITCOM sobre la posible modificación del contrato y la inclusión de sanciones por incumplimiento.</p>
+
+<p>Carlos sugirió que se acotara la comunicación sobre los trabajos en el gimnasio para evitar expectativas exageradas sobre una reestructuración completa con máquinas nuevas. Janet complementó que era importante que la administración realizara un seguimiento a lo que promete el proveedor y aplicara sanciones en caso de incumplimiento. Se mencionó la necesidad de establecer protocolos claros y visibles para el manejo de las zonas comunes y de capacitar al personal de FITCOM. Paola añadió que se evaluaría la posibilidad de ampliar los horarios de las zonas húmedas mediante una encuesta de Google Forms, coordinada por Nicolás y Yasmin.</p>
+
+<p>Marta añadió que se había exigido a FITCOM una mayor presencia del coordinador para supervisar al personal y socializar la atención al cliente. Se mencionó la importancia de aclarar los protocolos del manual de convivencia y de culturizar a las personas sobre el uso adecuado de las áreas comunes. Miriam sugirió que se compensara la ausencia del instructor del gimnasio con personal en la piscina para evitar costos adicionales. Nicolás propuso ampliar el horario de la piscina como una forma de compensar el cierre del gimnasio. Dayana recomendó tener toda la documentación y trazabilidad de la elección del proveedor y asegurarse de que los acuerdos se incluyeran en la nueva oferta.</p>
+
+<p>Maritza preguntó si la ampliación del servicio de piscina también incluiría las zonas húmedas, como el sauna y el turco. Marta aclaró que las calderas solo funcionan para la piscina y el jacuzzi, mientras que el sauna y el turco funcionan con electricidad. Se tendría que hablar con FITCOM sobre la ampliación de horarios y el costo del personal adicional. Se delegó a Nicolás y Yasmin la tarea de elaborar una encuesta para conocer los horarios preferidos por los residentes.</p>
+<h2>6. Aprobación del contrato de CIWIS</h2>
+
+<p>La reunión abordó el tema de la aprobación del contrato de CIWIS, con el objetivo de asegurar la continuidad del servicio y evaluar opciones a largo plazo para el sistema de ingreso a los parqueaderos.</p>
+
+<p>La administradora, señora Marta, informó que se logró un acuerdo con CIWIS para extender el contrato hasta diciembre por un valor de 3 millones 522 mil 662 pesos. Esta cotización es inferior a los 5 millones iniciales. El objetivo es tener tiempo para evaluar e implementar un plan definitivo para el sistema de ingreso a los parqueaderos.</p>
+
+<p>La señora Marta explicó que CIWIS desconectó el sistema a partir del día anterior, por lo que la aprobación permitiría la reinstalación y la reanudación del servicio. El contrato incluye capacitaciones (a través de un enlace compartido), mantenimiento de cámaras y validadores de salida, y soporte técnico remoto y telefónico de lunes a viernes de 8 a 5 de la tarde.</p>
+
+<p>Nicolás sugirió preguntar a CIWIS sobre la inclusión del sistema de pre-registro en la cotización, ya que esto podría reducir los tiempos de espera en la portería vehicular. La señora Marta aclaró que CIWIS ofreció el empalme con otro programa para acelerar el registro en una cotización diferente de 53 millones de pesos, que incluye la adecuación de todo el sistema y un cajero.</p>
+
+<p>Nicolás invitó a los consejeros a decidir qué proceso se adoptará para el sistema de ingreso, para que la tecnología se adapte al proceso y no al revés. Destacó la importancia de la citofonía para este proceso.</p>
+
+<p>Ante la propuesta de ampliación del contrato, se procedió a la votación.</p>
+
+<h3>Votación: Aprobación de la ampliación del contrato de CIWIS hasta diciembre</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La ampliación del contrato de CIWIS hasta el mes de diciembre fue aprobada por unanimidad.</p>
+
+<p>Se acordó que la señora Marta puede proceder con la ampliación del contrato de CIWIS al día siguiente.</p>
+
+<h2>7. Tema de la citofonía</h2>
+
+<p>La reunión abordó el tema de la citofonía, con el objetivo de modernizar el sistema de comunicación del conjunto residencial. Nicolás Garzón presentó un análisis comparativo de tres cotizaciones recibidas, destacando las características y costos de cada propuesta.</p>
+
+<p><strong>Análisis de cotizaciones:</strong></p>
+<ul>
+<li><strong>Guillermo Gutiérrez Telecomunicaciones (Safety Home):</strong> Propuesta de 12 millones de pesos anuales para las dos porterías.</li>
+<li><strong>CitoIP:</strong> Propuesta de 3 millones de pesos anuales para el mismo servicio.</li>
+<li><strong>Tercera cotización:</strong> 9 millones de pesos para una sola portería.</li>
+</ul>
+
+<p>Nicolás Garzón resaltó la propuesta de CitoIP debido a su menor costo y a la inclusión de funcionalidades adicionales como la gestión de paquetería. Paola Ruiz complementó que CitoIP no solo se dirige a celulares, sino también a teléfonos fijos, atendiendo a las preferencias de todos los residentes.</p>
+
+<p><strong>Consideraciones adicionales:</strong></p>
+<ul>
+<li><strong>Maritza Flores:</strong> Expresó su preocupación por la seguridad de los datos personales, especialmente los números de teléfono de los residentes.</li>
+<li><strong>Henry Carvajal:</strong> Preguntó si se había realizado una evaluación física de los demos y sobre la estabilidad del internet para la plataforma en la nube.</li>
+<li><strong>Edwin:</strong> Mencionó otras empresas en el mercado como Logite y Citiplus, sugiriendo explorar sus propuestas.</li>
+</ul>
+
+<p>Paola Ruiz explicó que la diferencia de precio radica en que las otras propuestas ofrecen un software perpetuo, mientras que CitoIP ofrece un servicio anual. Consideró que la tecnología está en constante evolución, por lo que una inversión grande en un software podría quedar obsoleta rápidamente. Además, CitoIP ofrece 15 días de prueba.</p>
+
+<p>Javier Ortega reforzó la idea de probar CitoIP durante 15 días y explorar las empresas mencionadas por Edwin. Señaló que CitoIP codifica los datos personales, protegiendo la información de los residentes.</p>
+
+<p>Marta, la administradora, comentó que Citiplus ofrecía el servicio como contraprestación, pero luego comenzó a facturar 352 mil pesos mensuales. Sugirió que la empresa de seguridad que se elija también ofrezca este servicio en prueba.</p>
+
+<p><strong>Decisión:</strong></p>
+<p>Se decidió tomar los 15 días de prueba con la empresa CitoIP, con la posibilidad de evaluar otras opciones en el mercado. Se conformó un equipo liderado por Nicolás Garzón para evaluar las facilidades ofrecidas por el proveedor, junto con la administradora.</p>
+
+<h3>Votación: Aprobación de la prueba de 15 días con CitoIP</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+<li><strong>Edwin:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p><strong>Próximos pasos:</strong></p>
+<ul>
+<li>Nicolás Garzón liderará un equipo para evaluar las facilidades ofrecidas por CitoIP.</li>
+<li>Se solicitarán cotizaciones a las empresas Logite y Citiplus, mencionadas por Edwin.</li>
+<li>Se coordinará con CitoIP para iniciar la prueba de 15 días.</li>
+<li>Se informará a la comunidad sobre la prueba y los avances del proceso.</li>
+</ul>
+
+<p>Nicolás Garzón solicitó que se adelante la base de datos con los números de teléfono de los residentes que deseen utilizar el servicio. Olga Mora solicitó que se les informe antes de iniciar cualquier prueba con el proveedor.</p>
+<h2>8. Tema del informe del ascensor de la torre 8</h2>
+
+<p>En este punto del orden del día, la administradora, señora Marta, presenta un informe detallado sobre la situación de los ascensores, específicamente el de la torre 8. Inicialmente, contextualiza la certificación general de los ascensores del conjunto, indicando que de 16 ascensores, 13 fueron certificados de inmediato, quedando pendientes tres debido a la necesidad de rectificación en las poleas: uno en la torre 5, otro en la torre 3 y el tercero en la torre 8.</p>
+
+<p>La señora Marta explica que se gestionó con Altus, la empresa encargada, para que asumiera el costo de la rectificación de las poleas, dado que esto debió haber sido informado como parte del mantenimiento. A la fecha, los ascensores de las torres 5 y 3 ya han sido rectificados y están listos. Sin embargo, en la torre 8, el variador de velocidad de uno de los ascensores (no el que tenía el problema de la polea) presentó fallas, impidiendo la reparación de la polea del otro ascensor, ya que no se puede dejar la torre sin ambos ascensores operativos.</p>
+
+<p>Ante esta situación, se procedió a cotizar el reemplazo del variador de velocidad. La señora Marta indica que el variador actual tiene más de 10 años y solo se han cambiado dos en toda la copropiedad (uno en la torre 6 y otro con mantenimiento en la torre 2). La cotización inicial de Altus para el variador Yaskawa y otros componentes (tarjeta encoder y contactores de potencia) ascendía a 11.733.636 pesos.</p>
+
+<p>La administradora explica las dificultades encontradas para obtener cotizaciones de otros proveedores, ya que muchos solo venden estos equipos a sus clientes directos para salvaguardar la responsabilidad y garantía. Sin embargo, se logró obtener una cotización de Mundo Vital por 9.448.600 pesos, incluyendo el variador, la tarjeta y los contactores. La señora Marta aclara que, según información de Multimarcas, existen contactores de baja y alta calidad, siendo estos últimos los necesarios para los ascensores del conjunto.</p>
+
+<p>Tras presentar la cotización de Mundo Vital, la señora Marta indica que contactó a Altus, quienes realizaron una contraoferta por 10.560.274 pesos, representando un descuento de 1.173.364 pesos. Con esta información, se somete a consideración del consejo la aprobación de la compra del variador para el ascensor de la torre 8.</p>
+
+<p>Durante la discusión, don Henry expresa su preocupación por la situación de los ascensores en la torre 8, señalando que los residentes ya han experimentado inconvenientes y que la falla de las poleas podría generar una tragedia. Don Carlos pregunta si el valor de la oferta de Altus incluye la instalación, a lo que la señora Marta responde que únicamente es el suministro del repuesto.</p>
+
+<h3>Votación: Aprobación de la compra del variador para el ascensor de la torre 8</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+<li><strong>Edwin:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p>En consecuencia, se aprueba la compra del variador para el ascensor de la torre 8 a la empresa Altus, según la cotización presentada por la administradora. La señora Marta indica que revisará la posibilidad de reclamar el costo del equipo a la póliza del conjunto.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se aprueba que la señora Marta envíe el documento de la convocatoria de interventoría al grupo de consejo para su revisión y aprobación mediante encuesta – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba la contratación del ingeniero Cristian Javier López Roa para realizar la interventoría del primer mes de Terrazas para la obra de Cusar, con la condición de tener la trazabilidad del arquitecto Leonardo – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba solicitar a la administración el drive actualizado de la convocatoria de seguridad, para que el consejo pueda hacer las modificaciones necesarias – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba cerrar el gimnasio desde el lunes, según el cronograma establecido – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba la ampliación del contrato de CIWIS hasta el mes de diciembre – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba tomar los 15 días de prueba con la empresa CitoIP para el sistema de citofonía – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba la compra del variador para el ascensor de la torre 8 a la empresa Altus, según la cotización presentada – <strong>Responsable:</strong> Marta (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de la Reunión</h1>
+ <p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Paola Ruiz</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Javier Ortega - [CARGO NO ESPECIFICADO]</li>
+ <li>Nicolás Garzón - [CARGO NO ESPECIFICADO]</li>
+ <li>Henry Carvajal - [CARGO NO ESPECIFICADO]</li>
+ <li>Carlos Rincón - [CARGO NO ESPECIFICADO]</li>
+ <li>Maritza Flores - [CARGO NO ESPECIFICADO]</li>
+ <li>Jeannette Castiblanco - [CARGO NO ESPECIFICADO]</li>
+ <li>Fernando Villamil - [CARGO NO ESPECIFICADO]</li>
+ <li>John Bernal - [CARGO NO ESPECIFICADO]</li>
+ <li>Miriam Pachón - [CARGO NO ESPECIFICADO]</li>
+ <li>Marta - Administradora</li>
+ <li>Olga Mora - [CARGO NO ESPECIFICADO]</li>
+ <li>Luis - [CARGO NO ESPECIFICADO]</li>
+ <li>Leonardo - Arquitecto</li>
+ <li>Cristian Javier López Roa - Ingeniero</li>
+ <li>Daniela - Arquitecta</li>
+ <li>Jimmy - [CARGO NO ESPECIFICADO]</li>
+ <li>Edwin - [CARGO NO ESPECIFICADO]</li>
+ <li>Yasmín - [CARGO NO ESPECIFICADO]</li>
+ <li>Dayana - [CARGO NO ESPECIFICADO]</li>
+ <li>Rodolfo Cano - [CARGO NO ESPECIFICADO]</li>
+ <li>Arley - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Llamado a lista y verificación de quórum</li>
+ <li>Aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6</li>
+ <li>Revisión de la cotización de la interventoría por 30 días</li>
+ <li>Solicitar a la administración el drive actualizado de la convocatoria de seguridad</li>
+ <li>Cronograma y metodología para el traslado del gimnasio</li>
+ <li>Aprobación del contrato de CIWIS</li>
+ <li>Tema de la citofonía</li>
+ <li>Tema del informe del ascensor de la torre 8</li>
+ </ol>
+</header>
+
+<h2>1. Llamado a lista y verificación de quórum</h2>
+
+<p>Se dio inicio a la reunión con el llamado a lista y la verificación del quórum. Estuvieron presentes Javier Ortega, Nicolás Garzón, Henry Carvajal, Carlos Rincón, Maritza Flores, Jeannette Castiblanco, Fernando Villamil, John Bernal, Miriam Pachón, Paola Ruiz y Olga Mora. También asistió la administradora, Marta.</p>
+<h2>2. Aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6</h2>
+
+<p>En el punto número tres del orden del día, se abordó la aprobación de la convocatoria de interventoría para Terrazas Torres 3, 4, 5 y 6. Se destacó la importancia de este punto para avanzar en el proceso de aprobación de la interventoría.</p>
+
+<p>La señora Marta informó que el documento de la convocatoria se había compartido en el drive, pero que el arquitecto Leonardo aún no lo había revisado. Explicó que había contactado al arquitecto, quien le manifestó que haría la revisión y las modificaciones necesarias esa misma noche, compartiendo posteriormente el documento actualizado. La señora Marta señaló que los ajustes realizados hasta el momento por el Consejo parecían prudentes.</p>
+
+<p>Don Luis intervino para aclarar que la interventoría a contratar sería por un mes, mientras se define la interventoría oficial para el resto de la obra. Sin embargo, se le corrigió indicando que en ese momento se estaba discutiendo la interventoría general, no la de 30 días, que se abordaría más adelante en el orden del día.</p>
+
+<p>Paola sugirió dejar en firme los acuerdos alcanzados hasta el momento, para evitar una doble revisión. La señora Marta añadió que, una vez revisado por el arquitecto Leonardo, se enviaría el documento al grupo del consejo para su lectura y aprobación mediante una encuesta de "sí" o "no".</p>
+
+<p>Adicionalmente, Paola solicitó que se consultara al arquitecto Leonardo sobre la posibilidad de que alguien del Comité acompañe la visita de obra, en caso de que él no pueda asistir en el corto plazo.</p>
+
+<p>Se acordó que la señora Marta enviaría el documento final revisado por el arquitecto Leonardo al grupo del consejo para su aprobación mediante una encuesta. Se enfatizó que lo que ya había sido acordado por el consejo se mantendría, sumado a las modificaciones que el arquitecto Leonardo realizara.</p>
+
+<p>Finalmente, se determinó que no se tomaría una decisión definitiva sobre la interventoría de 30 días en este punto, ya que se trataría en un punto posterior del orden del día.</p><h2>3. Revisión de la cotización de la interventoría por 30 días</h2>
+
+<p>Se procedió a la revisión de la cotización de la interventoría por 30 días, la cual había sido previamente compartida con los miembros del consejo. La administradora, señora Marta, informó que también había compartido la cotización con el arquitecto Leonardo, quien realizó una sugerencia respecto a los entregables.</p>
+
+<p>Según la señora Marta, el arquitecto Leonardo sugirió incluir en la cotización los siguientes entregables: reporte semanal, reporte al terminar la actividad y registro fotográfico, además de aclarar si los 7 millones de pesos corresponden a un mes de trabajo. La administradora indicó que el ingeniero Javier ajustó la cotización incluyendo los tres entregables solicitados y confirmó que el valor de 7 millones de pesos es por un mes de servicio.</p>
+
+<p>Durante la discusión, el señor Javier Ortega solicitó confirmación de si el arquitecto Leonardo había realizado algún otro comentario o solicitud de corrección a la propuesta del ingeniero Cristian, resaltando la importancia del concepto técnico del Comité de Áreas Comunes para la toma de decisiones. La señora Marta aclaró que la única solicitud del arquitecto Leonardo fue la inclusión de los entregables mencionados.</p>
+
+<p>La señora Marta explicó que, tal como se acordó en la reunión anterior, el arquitecto se reunió con el ingeniero Javier, quien presentó el organigrama y el cronograma de CUCESAT. Se enfatizó la necesidad de que el ingeniero estuviera presente en la copropiedad durante la ejecución de los trabajos, especialmente debido a la liberación de la membrana, lo cual requería supervisión constante para evitar filtraciones. La arquitecta Daniela también confirmó la importancia de esta supervisión.</p>
+
+<p>La señora Marta informó que consultó al ingeniero Javier sobre la posibilidad de negociar el precio, a lo que él respondió que, si bien el valor era por un mes de trabajo y requería cubrir costos como seguridad social y retención en la fuente, se podría analizar la posibilidad de un descuento.</p>
+
+<p>La señora Paola Ruiz solicitó que se enviara un correo electrónico del Comité de Zonas Comunes validando la propuesta, con el fin de tener trazabilidad del proceso. La señora Marta respondió que la sugerencia del arquitecto Leonardo fue comunicada a través de un mensaje de WhatsApp, y que se solicitaría a los miembros del Comité de Zonas Comunes que confirmaran su acuerdo con la propuesta ajustada.</p>
+
+<p>El señor Carlos Rincón preguntó si el ingeniero Cristian era el mismo que había realizado la prueba de estanqueidad, lo cual fue confirmado.</p>
+
+<p>El señor Carlos Rincón sugirió que, dado que el precio parecía estar dentro de un rango razonable, se aprobara el pago sin solicitar descuentos adicionales, para asegurar un mejor servicio. La señora Paola Ruiz coincidió en que el precio era justo, considerando los costos adicionales que el ingeniero debía cubrir.</p>
+
+<p>La señora Paola Ruiz preguntó si se podía formular la pregunta para la aprobación, condicionada a la recepción de la trazabilidad del arquitecto Leonardo. La señora Marta sugirió esperar al informe del ingeniero Cristian, que se entregaría al día siguiente, para tomar una decisión informada.</p>
+
+<p>La señora Marta argumentó que era importante que el ingeniero pudiera comenzar a revisar la parte relacionada con el punto de energía, y que su presencia era necesaria para coordinar el movimiento del enlonado y la tierra. El señor Henry Carvajal expresó su acuerdo en que se tomara una decisión ese día, argumentando que cada día sin vigilancia representaba un riesgo para el conjunto, y que el precio era asequible. Añadió que el ingeniero debía pagar aproximadamente 790 mil pesos en seguridad social y retención en la fuente.</p>
+
+<p>Ante la discusión, se procedió a preguntar si alguien se oponía a tomar la decisión ese día. Al no haber objeciones, la señora Marta reformuló la pregunta: ¿Están de acuerdo en que el ingeniero Cristian Javier López Roa realice la interventoría del primer mes de Terrazas para la obra de Cusar?</p>
+
+<p>La señora Paola Ruiz manifestó que el precio le parecía justo y que se debía aprobar el pago de los 7 millones sin descuento. Se preguntó nuevamente si alguien se oponía, y al no haber objeciones, se aprobó la contratación del ingeniero, condicionada a la recepción de la trazabilidad del arquitecto Leonardo.</p>
+
+<p>El señor Javier Ortega solicitó que se utilizara el mismo contrato de prestación de servicios que se había suscrito anteriormente, con las adecuaciones necesarias para incluir las precisiones sugeridas por el arquitecto Leonardo. La señora Marta se comprometió a enviar el documento para su revisión.</p>
+
+<h3>Votación: Aprobación de la contratación del ingeniero Cristian Javier López Roa para la interventoría del primer mes de Terrazas</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p>Se acordó que la señora Marta enviaría el contrato de prestación de servicios con las adecuaciones necesarias para su revisión.</p><h2>4. Solicitar a la administración el drive actualizado de la convocatoria de seguridad</h2>
+
+<p>Durante la discusión de este punto, se recordó que este tema ya se había abordado previamente, indicando que se trataba de un recordatorio debido a retrasos en el proceso. Se solicitó a la administración, específicamente a la señora Marta, el envío de un drive actualizado, similar al utilizado para la convocatoria de la empresa de seguridad.</p>
+
+<p>Posteriormente, al abordar este punto en el orden del día, se mencionó que Jimmy, quien había estado trabajando en el tema de las asegurabilidades en el contrato de seguridad, no estaba presente. Se reiteró la solicitud a la señora Marta para que compartiera el drive, destacando que la manera en que se había trabajado anteriormente en el drive había sido muy buena y asertiva. Además, se solicitó que se compartiera el contrato con el doctor Javier para su revisión.</p>
+
+<p>La señora Marta informó que el documento ya estaba disponible en el drive desde ese día y que, atendiendo a la solicitud, estaría listo para todo el consejo al día siguiente. Indicó que, a partir de las 9 de la mañana del día siguiente, se podrían ingresar las modificaciones necesarias. Solicitó que las personas que ingresaran a hacer modificaciones dejaran constancia de quién realizaba cada modificación, ya que en el caso anterior solo se tenía claro que el señor Henry había realizado una de las modificaciones, pero no se conocían los nombres de quienes habían realizado las demás. Señaló que este documento quedaría como soporte del proceso.</p>
+
+<p>Además, la señora Marta mencionó que se sacaría la convocatoria a partir del primero del mes siguiente y que se tomarían unos días para perfeccionar el documento.</p>
+
+<p>En relación con este tema, se solicitó a la señora Marta que, además del reporte de la empresa de seguridad, se proporcionara el concepto de la administración para respaldar el análisis del proveedor. Se mencionó que se haría de la misma manera que se había hecho con FITCOM, enviando la calificación del proveedor.</p>
+
+<p>La señora Marta confirmó que el contrato ya había sido compartido, pero que lo compartiría nuevamente con la presidenta para que lo socializara con el doctor Javier y la doctora Marta, así como con cualquier otra persona que deseara revisarlo.</p>
+
+<p>El doctor Javier manifestó que, si bien tenía conocimientos en algunas áreas jurídicas, no era experto en todas, por lo que era importante que varias personas revisaran los documentos y realizaran sus aportes. Aclaró que no quería responsabilizarse como profesional en áreas en las que no tenía experticia y que sus aportes serían en la medida de su conocimiento. En caso de requerirse un concepto jurídico particular, se recurriría a los asesores de la copropiedad.</p>
+
+<p>Don Carlos indicó que todos colaboraban de la misma forma y que la administradora era la persona que debía sacar los pliegos y era la representante legal. Señaló que la colaboración no implicaba responsabilidad sobre los documentos y que únicamente se realizaban parámetros frente a lo que se colocaba en el drive, siendo la administradora quien decidía si se subía o no el documento.</p><h2>5. Cronograma y metodología para el traslado del gimnasio</h2>
+
+<p>Durante la reunión, se abordó el tema del cronograma y la metodología para el traslado del gimnasio, así como el estado actual de la obra. La administradora, Marta, proporcionó información detallada sobre las actividades coordinadas con FITCOM y los avances en la adecuación de la zona.</p>
+
+<p>Marta explicó que inicialmente se retiró el material vegetal y la tierra de las áreas adyacentes al gimnasio, con el apoyo de los jardineros encargados del mantenimiento de los jardines de la copropiedad. Posteriormente, se contrató a Rodolfo Cano para llevar a cabo el proyecto de adecuación de la zona. Se realizaron trabajos para dejar los desniveles necesarios para el correcto flujo del agua hacia los sifones, y se llevó a cabo una prueba de estanqueidad para verificar la efectividad de estos trabajos. Marta invitó a los interesados, incluyendo a Luis y a Maritza del comité de zonas comunes, así como al arquitecto Leonardo, a participar en una nueva prueba al día siguiente.</p>
+
+<p>En cuanto a las siguientes etapas, se mencionó la aplicación de una base asfáltica y una capa de Sika Top para prevenir filtraciones y grietas. La aplicación del Sika Top se realizaría al día siguiente, seguida de la aplicación de la emulsión asfáltica. Posteriormente, se procedería a la instalación del manto anti raíz de 4 milímetros, adquirido a Edilandina con un descuento de obra, a un precio de 383 mil pesos por rollo. Se esperaba que el manto fuera entregado el martes. Adicionalmente, se informó que se trabajaría en la impermeabilización de la ballena, la zona de las dos orejas de la ballena.</p>
+
+<p>Ante la pregunta sobre si el gimnasio se cerraría desde el lunes, Marta confirmó que sí, ya que se planeaba avanzar con la preparación de la superficie interna, incluyendo el levantamiento del piso y el contorno. Se priorizaría la impermeabilización de la zona más grande para poder trabajar en esa área. Se indicó que el cronograma para el traslado de las máquinas estaba previsto del 1 al 4 de septiembre. Se coordinó con FITCOM para que apoyaran con el desarme de una máquina, con disponibilidad de personal a partir del lunes.</p>
+
+<p>Edwin solicitó que se proporcionara el cronograma por escrito, así como el detalle de las actividades de impermeabilización, para incluirlos en el boletín informativo de gestión. Marta se comprometió a compartir esta información.</p>
+
+<p>Se detallaron las siguientes actividades planeadas:</p>
+<ul>
+<li>Verificación del inventario de máquinas del gimnasio, en conjunto con FITCOM, la administración y personal de Toros de Casa Láser.</li>
+<li>Definición del área temporal de almacenamiento: salón de estudio, sala de juntas y segundo piso de la cancha de squash. Se coordinaría con la empresa de mantenimiento para el movimiento de los equipos.</li>
+<li>Preparación del espacio, incluyendo señalización del gimnasio como área de mantenimiento y protección de pisos durante el traslado, considerando la sugerencia de Paola y Javier de utilizar el piso de caucho para proteger el salón de estudio.</li>
+<li>Solicitud de apoyo al comité de comunicaciones para informar a los residentes sobre la suspensión del servicio y la reubicación de los elementos.</li>
+<li>Traslado de máquinas, comenzando con los equipos pesados (caminadoras, bicicletas multifuerza) y luego los equipos livianos (pesas, colchonetas y accesorios).</li>
+<li>Ubicación en las áreas temporales asignadas.</li>
+<li>Cierre de la obra y reubicación tras finalizar el mantenimiento.</li>
+<li>Retorno de equipos al gimnasio y verificación de estado y funcionamiento antes de la reapertura.</li>
+</ul>
+
+<p>Javier complementó la información recordando la cotización para el arreglo de las colchonetas y el tapizado de algunos implementos, sugiriendo que se aprovechara el cierre del gimnasio para realizar este trabajo complementario. Marta informó que se había solicitado una cotización a Javier de Fitcom, quien también fabrica máquinas, para evaluar si podían realizar el tapizado y la pintura de algunas máquinas, aprovechando el traslado de los equipos.</p>
+
+<p>Janet sugirió que se realizara una limpieza profunda de todas las máquinas antes de volverlas a trasladar, aprovechando el tiempo de inactividad. Marta respondió que se coordinaría con la persona encargada del desmonte de la máquina el lunes para evaluar el manejo de este tema. Se consideraría la posibilidad de realizar el tapizado y la pintura de las máquinas, así como la limpieza y el mantenimiento general, incluyendo el engrase y la revisión de guayas. Se propuso realizar una lista de chequeo para asegurar que no quedara nada pendiente el día de la apertura.</p>
+
+<p>Olga preguntó si las máquinas quedarían en funcionamiento en los sitios estratégicos temporales. Marta aclaró que todo quedaría cerrado y guardado, y que se trataría de negociar un buen precio para arreglar lo que necesitara pintura o tapicería durante ese tiempo.</p>
+
+<p>Paola mencionó que se había hablado con Marta sobre la posibilidad de que FITCOM ofreciera diferentes actividades durante el mes de cierre del gimnasio, como clases de gimnasia en piscina o rumba, a cambio de la suspensión del pago del instructor. Marta se comprometió a solicitar a FITCOM el cronograma de estas actividades para que el comité de comunicaciones pudiera informar a la comunidad.</p>
+
+<p>Maritza preguntó sobre los acuerdos alcanzados en la reunión con FITCOM el sábado, mencionando que había quejas sobre el servicio y que se había reelegido al proveedor. Paola explicó que la reunión había sido estratégica para negociar beneficios adicionales, como una máquina para hip thrust, cursos de servicio al cliente para el personal y la implementación de un código QR para quejas y sugerencias. Se aclaró que la decisión sobre la reelección de FITCOM se tomaría el lunes.</p>
+
+<p>Javier añadió que FITCOM se había comprometido a suplir algunas clases durante el cierre del gimnasio y que todas las promesas se incluirían en un documento. Marta confirmó que se había advertido a FITCOM sobre la posible modificación del contrato y la inclusión de sanciones por incumplimiento.</p>
+
+<p>Carlos sugirió que se acotara la comunicación sobre los trabajos en el gimnasio para evitar expectativas exageradas sobre una reestructuración completa con máquinas nuevas. Janet complementó que era importante que la administración realizara un seguimiento a lo que promete el proveedor y aplicara sanciones en caso de incumplimiento. Se mencionó la necesidad de establecer protocolos claros y visibles para el manejo de las zonas comunes y de capacitar al personal de FITCOM. Paola añadió que se evaluaría la posibilidad de ampliar los horarios de las zonas húmedas mediante una encuesta de Google Forms, coordinada por Nicolás y Yasmin.</p>
+
+<p>Marta añadió que se había exigido a FITCOM una mayor presencia del coordinador para supervisar al personal y socializar la atención al cliente. Se mencionó la importancia de aclarar los protocolos del manual de convivencia y de culturizar a las personas sobre el uso adecuado de las áreas comunes. Miriam sugirió que se compensara la ausencia del instructor del gimnasio con personal en la piscina para evitar costos adicionales. Nicolás propuso ampliar el horario de la piscina como una forma de compensar el cierre del gimnasio. Dayana recomendó tener toda la documentación y trazabilidad de la elección del proveedor y asegurarse de que los acuerdos se incluyeran en la nueva oferta.</p>
+
+<p>Maritza preguntó si la ampliación del servicio de piscina también incluiría las zonas húmedas, como el sauna y el turco. Marta aclaró que las calderas solo funcionan para la piscina y el jacuzzi, mientras que el sauna y el turco funcionan con electricidad. Se tendría que hablar con FITCOM sobre la ampliación de horarios y el costo del personal adicional. Se delegó a Nicolás y Yasmin la tarea de elaborar una encuesta para conocer los horarios preferidos por los residentes.</p>
+<h2>6. Aprobación del contrato de CIWIS</h2>
+
+<p>La reunión abordó el tema de la aprobación del contrato de CIWIS, con el objetivo de asegurar la continuidad del servicio y evaluar opciones a largo plazo para el sistema de ingreso a los parqueaderos.</p>
+
+<p>La administradora, señora Marta, informó que se logró un acuerdo con CIWIS para extender el contrato hasta diciembre por un valor de 3 millones 522 mil 662 pesos. Esta cotización es inferior a los 5 millones iniciales. El objetivo es tener tiempo para evaluar e implementar un plan definitivo para el sistema de ingreso a los parqueaderos.</p>
+
+<p>La señora Marta explicó que CIWIS desconectó el sistema a partir del día anterior, por lo que la aprobación permitiría la reinstalación y la reanudación del servicio. El contrato incluye capacitaciones (a través de un enlace compartido), mantenimiento de cámaras y validadores de salida, y soporte técnico remoto y telefónico de lunes a viernes de 8 a 5 de la tarde.</p>
+
+<p>Nicolás sugirió preguntar a CIWIS sobre la inclusión del sistema de pre-registro en la cotización, ya que esto podría reducir los tiempos de espera en la portería vehicular. La señora Marta aclaró que CIWIS ofreció el empalme con otro programa para acelerar el registro en una cotización diferente de 53 millones de pesos, que incluye la adecuación de todo el sistema y un cajero.</p>
+
+<p>Nicolás invitó a los consejeros a decidir qué proceso se adoptará para el sistema de ingreso, para que la tecnología se adapte al proceso y no al revés. Destacó la importancia de la citofonía para este proceso.</p>
+
+<p>Ante la propuesta de ampliación del contrato, se procedió a la votación.</p>
+
+<h3>Votación: Aprobación de la ampliación del contrato de CIWIS hasta diciembre</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La ampliación del contrato de CIWIS hasta el mes de diciembre fue aprobada por unanimidad.</p>
+
+<p>Se acordó que la señora Marta puede proceder con la ampliación del contrato de CIWIS al día siguiente.</p>
+
+<h2>7. Tema de la citofonía</h2>
+
+<p>La reunión abordó el tema de la citofonía, con el objetivo de modernizar el sistema de comunicación del conjunto residencial. Nicolás Garzón presentó un análisis comparativo de tres cotizaciones recibidas, destacando las características y costos de cada propuesta.</p>
+
+<p><strong>Análisis de cotizaciones:</strong></p>
+<ul>
+<li><strong>Guillermo Gutiérrez Telecomunicaciones (Safety Home):</strong> Propuesta de 12 millones de pesos anuales para las dos porterías.</li>
+<li><strong>CitoIP:</strong> Propuesta de 3 millones de pesos anuales para el mismo servicio.</li>
+<li><strong>Tercera cotización:</strong> 9 millones de pesos para una sola portería.</li>
+</ul>
+
+<p>Nicolás Garzón resaltó la propuesta de CitoIP debido a su menor costo y a la inclusión de funcionalidades adicionales como la gestión de paquetería. Paola Ruiz complementó que CitoIP no solo se dirige a celulares, sino también a teléfonos fijos, atendiendo a las preferencias de todos los residentes.</p>
+
+<p><strong>Consideraciones adicionales:</strong></p>
+<ul>
+<li><strong>Maritza Flores:</strong> Expresó su preocupación por la seguridad de los datos personales, especialmente los números de teléfono de los residentes.</li>
+<li><strong>Henry Carvajal:</strong> Preguntó si se había realizado una evaluación física de los demos y sobre la estabilidad del internet para la plataforma en la nube.</li>
+<li><strong>Edwin:</strong> Mencionó otras empresas en el mercado como Logite y Citiplus, sugiriendo explorar sus propuestas.</li>
+</ul>
+
+<p>Paola Ruiz explicó que la diferencia de precio radica en que las otras propuestas ofrecen un software perpetuo, mientras que CitoIP ofrece un servicio anual. Consideró que la tecnología está en constante evolución, por lo que una inversión grande en un software podría quedar obsoleta rápidamente. Además, CitoIP ofrece 15 días de prueba.</p>
+
+<p>Javier Ortega reforzó la idea de probar CitoIP durante 15 días y explorar las empresas mencionadas por Edwin. Señaló que CitoIP codifica los datos personales, protegiendo la información de los residentes.</p>
+
+<p>Marta, la administradora, comentó que Citiplus ofrecía el servicio como contraprestación, pero luego comenzó a facturar 352 mil pesos mensuales. Sugirió que la empresa de seguridad que se elija también ofrezca este servicio en prueba.</p>
+
+<p><strong>Decisión:</strong></p>
+<p>Se decidió tomar los 15 días de prueba con la empresa CitoIP, con la posibilidad de evaluar otras opciones en el mercado. Se conformó un equipo liderado por Nicolás Garzón para evaluar las facilidades ofrecidas por el proveedor, junto con la administradora.</p>
+
+<h3>Votación: Aprobación de la prueba de 15 días con CitoIP</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+<li><strong>Edwin:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p><strong>Próximos pasos:</strong></p>
+<ul>
+<li>Nicolás Garzón liderará un equipo para evaluar las facilidades ofrecidas por CitoIP.</li>
+<li>Se solicitarán cotizaciones a las empresas Logite y Citiplus, mencionadas por Edwin.</li>
+<li>Se coordinará con CitoIP para iniciar la prueba de 15 días.</li>
+<li>Se informará a la comunidad sobre la prueba y los avances del proceso.</li>
+</ul>
+
+<p>Nicolás Garzón solicitó que se adelante la base de datos con los números de teléfono de los residentes que deseen utilizar el servicio. Olga Mora solicitó que se les informe antes de iniciar cualquier prueba con el proveedor.</p>
+<h2>8. Tema del informe del ascensor de la torre 8</h2>
+
+<p>En este punto del orden del día, la administradora, señora Marta, presenta un informe detallado sobre la situación de los ascensores, específicamente el de la torre 8. Inicialmente, contextualiza la certificación general de los ascensores del conjunto, indicando que de 16 ascensores, 13 fueron certificados de inmediato, quedando pendientes tres debido a la necesidad de rectificación en las poleas: uno en la torre 5, otro en la torre 3 y el tercero en la torre 8.</p>
+
+<p>La señora Marta explica que se gestionó con Altus, la empresa encargada, para que asumiera el costo de la rectificación de las poleas, dado que esto debió haber sido informado como parte del mantenimiento. A la fecha, los ascensores de las torres 5 y 3 ya han sido rectificados y están listos. Sin embargo, en la torre 8, el variador de velocidad de uno de los ascensores (no el que tenía el problema de la polea) presentó fallas, impidiendo la reparación de la polea del otro ascensor, ya que no se puede dejar la torre sin ambos ascensores operativos.</p>
+
+<p>Ante esta situación, se procedió a cotizar el reemplazo del variador de velocidad. La señora Marta indica que el variador actual tiene más de 10 años y solo se han cambiado dos en toda la copropiedad (uno en la torre 6 y otro con mantenimiento en la torre 2). La cotización inicial de Altus para el variador Yaskawa y otros componentes (tarjeta encoder y contactores de potencia) ascendía a 11.733.636 pesos.</p>
+
+<p>La administradora explica las dificultades encontradas para obtener cotizaciones de otros proveedores, ya que muchos solo venden estos equipos a sus clientes directos para salvaguardar la responsabilidad y garantía. Sin embargo, se logró obtener una cotización de Mundo Vital por 9.448.600 pesos, incluyendo el variador, la tarjeta y los contactores. La señora Marta aclara que, según información de Multimarcas, existen contactores de baja y alta calidad, siendo estos últimos los necesarios para los ascensores del conjunto.</p>
+
+<p>Tras presentar la cotización de Mundo Vital, la señora Marta indica que contactó a Altus, quienes realizaron una contraoferta por 10.560.274 pesos, representando un descuento de 1.173.364 pesos. Con esta información, se somete a consideración del consejo la aprobación de la compra del variador para el ascensor de la torre 8.</p>
+
+<p>Durante la discusión, don Henry expresa su preocupación por la situación de los ascensores en la torre 8, señalando que los residentes ya han experimentado inconvenientes y que la falla de las poleas podría generar una tragedia. Don Carlos pregunta si el valor de la oferta de Altus incluye la instalación, a lo que la señora Marta responde que únicamente es el suministro del repuesto.</p>
+
+<h3>Votación: Aprobación de la compra del variador para el ascensor de la torre 8</h3>
+<ol>
+<li><strong>Javier Ortega:</strong> A favor</li>
+<li><strong>Nicolás Garzón:</strong> A favor</li>
+<li><strong>Henry Carvajal:</strong> A favor</li>
+<li><strong>Carlos Rincón:</strong> A favor</li>
+<li><strong>Maritza Flores:</strong> A favor</li>
+<li><strong>Jeannette Castiblanco:</strong> A favor</li>
+<li><strong>Fernando Villamil:</strong> A favor</li>
+<li><strong>John Bernal:</strong> A favor</li>
+<li><strong>Miriam Pachón:</strong> A favor</li>
+<li><strong>Paola Ruiz:</strong> A favor</li>
+<li><strong>Olga Mora:</strong> A favor</li>
+<li><strong>Edwin:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad.</p>
+
+<p>En consecuencia, se aprueba la compra del variador para el ascensor de la torre 8 a la empresa Altus, según la cotización presentada por la administradora. La señora Marta indica que revisará la posibilidad de reclamar el costo del equipo a la póliza del conjunto.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se aprueba que la señora Marta envíe el documento de la convocatoria de interventoría al grupo de consejo para su revisión y aprobación mediante encuesta – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba la contratación del ingeniero Cristian Javier López Roa para realizar la interventoría del primer mes de Terrazas para la obra de Cusar, con la condición de tener la trazabilidad del arquitecto Leonardo – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba solicitar a la administración el drive actualizado de la convocatoria de seguridad, para que el consejo pueda hacer las modificaciones necesarias – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba cerrar el gimnasio desde el lunes, según el cronograma establecido – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba la ampliación del contrato de CIWIS hasta el mes de diciembre – <strong>Responsable:</strong> Marta (Administradora)</li>
+ <li>Se aprueba tomar los 15 días de prueba con la empresa CitoIP para el sistema de citofonía – <strong>Responsable:</strong> No especificado</li>
+ <li>Se aprueba la compra del variador para el ascensor de la torre 8 a la empresa Altus, según la cotización presentada – <strong>Responsable:</strong> Marta (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): testleo_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/testleo/testleo_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/dYDdEe3LQ5aS73q
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/dYDdEe3LQ5aS73q
+Generando URL pública para Transcripcion.txt (EXISTENTE): testleo_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/testleo/testleo_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/7wMfpNECc8GJj6A
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/7wMfpNECc8GJj6A
+Verificando si existe transcripción: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt en carpeta reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1
+[2025-11-18T18:25:10.509Z] Verificando existencia del archivo reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt en Nextcloud carpeta reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T18:25:12.010Z] Archivo "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1".
+Transcripción existente encontrada: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1. Obteniendo contenido.
+Verificando contenido existente: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt
+[2025-11-18T18:25:13.940Z] Verificando existencia del archivo reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt en Nextcloud carpeta reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T18:25:14.773Z] Archivo "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt" EXISTE en Nextcloud en la carpeta "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1".
+Contenido existente: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt. Cargando.
+[2025-11-18T18:25:15.843Z] Contenido del archivo "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1.mp4 en carpeta: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1
+Verificando Borrador .docx existente: reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx
+[2025-11-18T18:25:15.844Z] Verificando existencia del archivo reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx en Nextcloud carpeta reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T18:25:16.817Z] Archivo "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx" EXISTE en Nextcloud en la carpeta "reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/GoMWdR9Rk5DjM9Q
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/GoMWdR9Rk5DjM9Q
+Generando URL pública para Transcripcion.txt (EXISTENTE): reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1/reunion_de_consejo_de_administracion_-_28082025_730pm_-_virtual-20250828_193901-grabacion_de_la_reunion_1_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/6g95ZLeG7bAza57
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/6g95ZLeG7bAza57
+Verificando si existe transcripción: testsebs_Transcripcion.txt en carpeta testsebs
+[2025-11-18T19:52:16.114Z] Verificando existencia del archivo testsebs_Transcripcion.txt en Nextcloud carpeta testsebs.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testsebs/testsebs_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T19:52:17.826Z] Archivo "testsebs_Transcripcion.txt" NO encontrado en Nextcloud en la carpeta "testsebs".
+Iniciando transcripción con AssemblyAI para: testsebs.aac
+Guardando transcripción: testsebs_Transcripcion.txt en carpeta testsebs
+Transcripción guardada: testsebs_Transcripcion.txt
+Verificando contenido existente: testsebs_Contenido.txt
+[2025-11-18T19:54:04.467Z] Verificando existencia del archivo testsebs_Contenido.txt en Nextcloud carpeta testsebs.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testsebs/testsebs_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T19:54:05.336Z] Archivo "testsebs_Contenido.txt" NO encontrado en Nextcloud en la carpeta "testsebs".
+Generando contenido para: testsebs.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: testsebs.aac
+Guardando contenido en Nextcloud: testsebs_Contenido.txt
+Contenido guardado: testsebs_Contenido.txt
+Iniciando formatContent (VERSION FUSIONADA) para: testsebs.aac en carpeta: testsebs
+Verificando Borrador .docx existente: testsebs_Borrador.docx
+[2025-11-18T19:55:17.682Z] Verificando existencia del archivo testsebs_Borrador.docx en Nextcloud carpeta testsebs.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/testsebs/testsebs_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 404, ok: false
+[2025-11-18T19:55:18.538Z] Archivo "testsebs_Borrador.docx" NO encontrado en Nextcloud en la carpeta "testsebs".
+Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: testsebs_Borrador.docx
+Preparando guardado .docx en Nextcloud: testsebs_Borrador.docx
+Contenido de actaContent justo antes de htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión de Consejo</h1>
+<p><strong>Fecha:</strong> 30 de septiembre de 2025</p>
+<p><strong>Hora:</strong> Inicio: 7:34 - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> Edificio Round Squad</p>
+<p><strong>Moderador:</strong> Luz Marina</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Johanna Ramos - Consejera</li>
+<li>Carolina Zambrano - Consejera</li>
+<li>Mónica Hernández - Consejera</li>
+<li>Mauricio Mogollón - Consejero</li>
+<li>Clara Castañeda - Revisora Fiscal</li>
+<li>Angélica Caicedo - Contadora</li>
+<li>Luz Marina - Administradora</li>
+<li>Iván - Presentador de paneles solares</li>
+<li>Nicolás Vega - Ingeniero de 2050</li>
+<li>Camilo Vargas - 403</li>
+<li>Ximena Prieto - Apartamento 203</li>
+<li>Luisa - Consejera, Apartamento 210</li>
+<li>Jorge - Propietario</li>
+<li>William Portreto Jesús - Jardinería</li>
+<li>Sandra - Soluciones Integrales</li>
+<li>Rodrigo - Residente</li>
+<li>Ayala - Residente</li>
+<li>Edwin Alba - Ex portero</li>
+<li>Gamboa - Portero</li>
+<li>Cruz - Portero</li>
+<li>Barreto - Portero</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Llamado a lista y verificación de quórum</li>
+<li>Presentación de proyectos de paneles solares</li>
+<li>Lectura y aprobación del acta del consejo anterior</li>
+<li>Informe contable</li>
+<li>Informe de revisoría fiscal</li>
+<li>Informe de administración</li>
+<li>Proposiciones y varios</li>
+</ol>
+</header>
+<h2>1. Llamado a lista y verificación de quórum</h2>
+
+<p>Inicialmente, se procedió con el llamado a lista para verificar el quórum necesario para llevar a cabo la reunión. Se constató la presencia de los consejeros Johanna Ramos, Carolina Zambrano, Mónica Hernández y Mauricio Mogollón, totalizando cuatro consejeros, lo cual se consideró quórum amplio y suficiente para realizar la reunión. Adicionalmente, se contó con la presencia de la revisora fiscal Clara Castañeda, la contadora Angélica Caicedo y la administradora.</p><h2>2. Presentación de proyectos de paneles solares</h2>
+
+<p>Durante la reunión, se abordó la presentación de proyectos de paneles solares. Inicialmente, se dio la palabra a Iván, representante de una empresa con experiencia en energía, quien presentó una propuesta para la instalación de paneles solares en el edificio. Iván explicó que la empresa lleva alrededor de 40 años trabajando en energía y 10 años en el tema solar.</p>
+
+<p>Iván indicó que, según un estudio realizado, el edificio consume aproximadamente 1.400 kWh al mes, lo que representa una factura de energía de un millón cien. Propuso la instalación de 21 paneles solares, con una capacidad de 3.5 kW, que generarían 2.400 kWh al mes. Explicó que el sistema funcionaría mediante la inyección de energía a la red de ENEL durante el día y la recepción de energía de ENEL durante la noche, con un ahorro cercano al 100% en el recibo de energía, descontando una tarifa que cobra ENEL por el uso de su infraestructura.</p>
+
+<p>Iván destacó que su empresa ofrece proyectos llave en mano, encargándose de todos los trámites, diseños, instalación y puesta en marcha, hasta la colocación del contador bidireccional. Mencionó que el proyecto se ejecutaría en aproximadamente seis meses, con un período de construcción de uno a dos meses. Durante la construcción, la planta funcionaría en autoconsumo, suministrando energía directamente al edificio. Posteriormente, se realizaría la certificación de la planta ante ENEL para que el edificio se convierta en autogenerador de energía.</p>
+
+<p>Iván también presentó una opción de financiamiento a través de un contrato de compra de energía (PPA), donde un fondo de inversión se encargaría de la inversión inicial y vendería la energía al edificio a una tarifa menor que la de ENEL. Bajo este esquema, el edificio tendría un ahorro inicial del 20% en la tarifa de energía, con la ventaja de que la tarifa del PPA se indexaría al IPC anualmente, mientras que la tarifa de energía de ENEL podría subir más. Además, el fondo de inversión se encargaría de los mantenimientos preventivos y correctivos durante los 15 años del contrato. Al finalizar el contrato, el activo pasaría a ser propiedad de la copropiedad.</p>
+
+<p>Ante una pregunta sobre cómo ganaría el fondo de inversión, Iván explicó que su negocio se basa en la amortización de la planta a lo largo de los 15 años y en los beneficios tributarios asociados a las energías solares.</p>
+
+<p>En respuesta a una inquietud sobre el mantenimiento de la cubierta del edificio, Iván señaló que, en caso de ser necesario realizar trabajos de impermeabilización, se coordinaría el levantamiento temporal de los paneles solares, con un costo adicional que rondaría el millón de pesos anual.</p>
+
+<p>Iván aclaró que su empresa sería la encargada de la construcción de la planta, con un contrato con el fondo de inversión, pero también respondería directamente ante los clientes.</p>
+
+<p>Posteriormente, Luz Marina mencionó que se contactaría a otra persona para escuchar otra propuesta, aclarando que la decisión final sobre la implementación de los paneles solares deberá ser tomada en asamblea.</p>
+
+<p>Más adelante en la reunión, se dio la palabra a Camilo Vargas, quien presentó otra propuesta para la instalación de paneles solares. Camilo explicó que representa el Programa Nacional de Inversiones de Vida Renovable, una iniciativa que busca dinamizar las inversiones alineadas con los objetivos ambientales del país. Indicó que la organización 2050, liderando el programa, lanzó esta iniciativa para que la propiedad horizontal pueda tener energía solar con cero inversión.</p>
+
+<p>Camilo señaló que Round Square aplicó a una convocatoria y, tras la validación de la información técnica, se aprobaron los recursos para la instalación del proyecto solar. Mencionó que su equipo de ingeniería ya estimó la instalación del sistema solar y que la intención era que los asistentes conocieran el informe técnico y financiero.</p>
+
+<p>Camilo destacó algunos resultados de proyectos similares en otras organizaciones, como la Superintendencia Financiera de Colombia y la Alcaldía de Cota, donde se lograron ahorros significativos en la factura de energía.</p>
+
+<p>Explicó que el programa de energía solar con cero inversión ofrece beneficios como la no inversión inicial, el mantenimiento incluido, ahorros desde el primer mes, reducción de la contaminación y la obtención de indicadores de sostenibilidad.</p>
+
+<p>Camilo presentó las características técnicas del proyecto para Round Square, que consistiría en la instalación de 24 paneles solares con una potencia total de 615 vatios cada uno, ocupando un área de 72 metros cuadrados. Este sistema generaría 1580 kWh al mes, cubriendo el 100% del consumo de energía del edificio. Explicó que se trata de un sistema ONGRID o conectado a la red, que prioriza la energía solar pero permite tomar energía de la red cuando sea necesario y guardar los excedentes en la red para usarlos posteriormente. Este sistema no requiere baterías.</p>
+
+<p>Camilo indicó que el ahorro sin inversión se logra a través de un contrato de 10 años, tras el cual el proyecto solar pasa a ser propiedad del usuario. Bajo este esquema, la factura de energía tendría una tarifa fija de un millón trescientos noventa mil pesos, lo que representaría un ahorro mensual de 213 mil pesos. A lo largo de los 10 años, el ahorro acumulado superaría los 100 millones de pesos. Proyectó que, al cabo de 25 años, la rentabilidad total del proyecto sería de más de mil 390 millones de pesos.</p>
+
+<p>Camilo aclaró que la tarifa solar se indexaría al IPP (índice de precios al productor), que ha tenido un crecimiento promedio del 3% anual en los últimos 10 años.</p>
+
+<p>En cuanto al mantenimiento, Camilo señaló que su empresa se encargaría del mismo durante los 10 años del contrato. Posteriormente, el usuario podría contratar a su empresa o a cualquier otra para realizar el mantenimiento. El sistema solar estaría asegurado por STURA contra daños internos, vandalismo, robos, responsabilidad civil frente a terceros y desastres naturales.</p>
+
+<p>Camilo explicó que cada mes se enviaría una factura por la tarifa fija acordada y que, al final del año, se haría un corte para compensar cualquier diferencia entre la energía generada y la energía proyectada.</p>
+
+<p>Los compromisos del beneficiario serían velar por la seguridad del sistema solar, otorgar los permisos para el uso del espacio y para los mantenimientos, facilitar el uso de las instalaciones y tener un punto de Internet y un punto de agua cercano al sistema solar.</p>
+
+<p>Ante la pregunta de por qué se debe pagar si se aplicó y salió favorecido, Camilo aclaró que no se requiere inversión inicial, pero sí se debe pagar la tarifa fija por la energía suministrada, que es menor a la tarifa actual de energía. Señaló que el beneficio radica en que, al cabo de 10 años, el sistema solar pasa a ser propiedad del usuario y ya no se debe pagar más por la energía.</p>
+
+<p>En respuesta a una inquietud sobre el funcionamiento del sistema en días nublados, Camilo explicó que el sistema funciona por radiación y que, aunque esté nublado, siempre hay radiación. Además, el sistema está conectado a la red, por lo que siempre se tendrá energía disponible.</p>
+
+<p>Finalmente, Camilo indicó que los recursos para el proyecto ya fueron aprobados y que el siguiente paso sería la aceptación o denegación del proyecto por parte de los copropietarios.</p>
+
+<p>Tras la presentación de ambas propuestas, Luz Marina concluyó que se analizarán las opciones con el consejo y se tomará una decisión en asamblea.</p><h2>3. Lectura y aprobación del acta del consejo anterior</h2>
+
+<p>Durante la reunión, se abordó el tema de la lectura y aprobación del acta del consejo anterior. Sin embargo, no se proporcionaron detalles específicos sobre los temas tratados en dicha acta, ni se mencionó si fue aprobada, modificada o aplazada.</p>
+<h2>4. Informe contable</h2>
+
+<p>Durante la reunión, Angélica Caicedo presentó el informe contable correspondiente al 30 de septiembre. La presentación incluyó detalles sobre el estado de efectivo y equivalentes, inversiones, cartera, cuentas por pagar, ingresos y patrimonio.</p>
+
+<p>En cuanto al <strong>efectivo y equivalentes</strong>, se reportó un saldo de 500 mil pesos en caja menor. En el Banco de la Caja Social, el recaudo ascendió a 34 millones 887 mil 422 pesos con 18 centavos. El fondo de imprevistos contaba con 20 millones 346 mil 57 pesos con 41 centavos, resultando en un total de 55 millones 733 mil 479 pesos con 59 centavos. El recaudo del mes de septiembre fue de 22 millones 59 mil 805 pesos con 68 centavos. Los rendimientos financieros de las dos cuentas sumaron 1 millón 425 mil 84 pesos. Los gastos bancarios del mes ascendieron a 24 mil 157 pesos.</p>
+
+<p>Respecto a las <strong>inversiones</strong>, se mencionó la apertura de un CDT por 11 millones 870 mil 429 pesos, con un rendimiento del 10.10% efectivo anual a 180 días. El saldo de cartera se situó en 11 millones 345 mil pesos, reflejando un aumento de 2 millones 317 mil 500 pesos.</p>
+
+<p>En relación con las <strong>cuentas por pagar</strong>, se indicó un valor pendiente de retefuente de 367 mil 315 pesos con 40 centavos, que fue pagado en el mes de octubre. Otras cuentas por pagar incluyeron 14 millones a la empresa de seguridad, 1 millón 598 mil 766 pesos a la empresa de aseo, 1 millón a Innovan por el mantenimiento de los ascensores, y pagos a William Portreto Jesús por jardinería, a Sandra de Soluciones Integrales por una reparación locativa, a Luz Marina por su mensualidad de administración, a Clara por su servicio mensual de revisoría fiscal, y a Angélica Caicedo por su servicio contable. También se mencionó un reembolso pendiente a Luz Marina por 447 mil pesos.</p>
+
+<p>En cuanto a los <strong>anticipos</strong>, se registraron 300 pesos de anticipos de administración y 348 mil 602 pesos de cuotas de administración. Otros pasivos incluyeron un saldo pendiente de una cuota extraordinaria del año 2024 por 453 mil 315 pesos con 40 centavos.</p>
+
+<p>En el apartado de <strong>ingresos</strong>, se reclasificaron cuentas, incluyendo la reparación locativa que estaba pendiente por pagar. Se reportó un valor de 525 mil pesos correspondiente al alquiler del salón comunal o el barbecue, destinado a su mantenimiento.</p>
+
+<p>En el <strong>patrimonio</strong>, se registró un fondo de imprevistos por 266 mil pesos. El acumulado del mes de septiembre fue de 22 millones 733 mil 902 pesos, con 2 millones 394 mil pesos pendientes de monetización, correspondientes a enero-septiembre de este año.</p>
+
+<p>Se presentó un resumen de la <strong>disponibilidad de recursos</strong>, indicando 500 mil pesos en caja menor y 34 millones 887 mil 422 pesos con 18 centavos en el banco Caja Social, sumando un total de 35 millones 387 mil 422 pesos con 18 centavos. Las cuentas por pagar totalizaron 28 millones, la retención en la fuente 367 mil 315 pesos con 40 centavos, el anticipo de administración 348 mil 602 pesos, la cuota extraordinaria 453 mil, los ingresos por terceros 8 millones 790 mil 668 pesos, y los alquileres del salón por 525 mil pesos. Esto resultó en un total de 38 millones 516 mil 547 pesos, dejando un disponible cobrado de 3 millones 129 mil 125 pesos. Se mencionó que estaba pendiente la monetización de 2 millones 394 mil pesos, lo que resultaría en un disponible de menos 5 millones 523 mil 125 pesos.</p>
+
+<p>Mónica Hernández preguntó a Angélica Caicedo sobre la reclasificación del tapete y por qué seguía apareciendo un saldo alto en elementos de cafetería. Angélica respondió que sí se había hecho la reclasificación, incluyendo otras reclasificaciones pendientes. Mónica solicitó a Angélica que le proporcionara las notas con las que se hicieron esas reclasificaciones.</p>
+
+<p>Luz Marina comentó sobre la <strong>cartera</strong>, indicando que se enviaron cartas a cuatro apartamentos con deudas pendientes, dándoles plazo hasta el 31 de octubre para ponerse al día o hacer un acuerdo de pago. Se mencionó que a la señora Ximena Prieto del apartamento 203 se le envió una notificación de deuda pendiente al 30 de septiembre de 2025 por 118 mil 300 pesos, advirtiéndole sobre el inicio de un proceso de cobro jurídico en caso de no recibir el pago. Luz Marina aclaró que no se envió la carta al apartamento 303 porque ya había realizado un pago.</p>
+
+<p>Paola Zambrano sugirió que se debía cambiar el trato hacia la señora Prieto, ya que en reuniones anteriores se había ofrecido ayuda sin resultados. Luz Marina explicó que debía seguir ese proceso para poderla mandar al abogado. Mónica Hernández preguntó la fecha límite dada en las cartas, a lo que Luz Marina respondió que hasta el 31 de octubre.</p>
+
+<p>Joana Ramos preguntó sobre un informe anterior donde la energía aparecía con una pendiente por pagar a 60 días. Angélica explicó que el servicio de energía se descuenta directamente del Banco Caja Social, pero que hubo un problema este mes y el mes anterior donde no se descontó, y Mónica prestó el dinero para cubrirlo. Carolina Zambrano sugirió revisar el movimiento del banco para verificar si se evitan los servicios en las fechas estipuladas.</p>
+
+<h2>5. Informe de revisoría fiscal</h2>
+
+<p>La revisora fiscal, Clara Castañeda, presentó el informe correspondiente al mes de septiembre. Se inició con la revisión documental, que incluyó cuentas de cobro, recibos de caja y comprobantes de egreso, indicando que todos los documentos estaban completos y al día, sin hallazgos relevantes.</p>
+
+<p>En cuanto a los saldos de efectivo y equivalentes, se informó que el cierre de septiembre arrojó un saldo total de $55,733,479. No se identificaron partidas conciliatorias pendientes. La cartera cerró con un saldo de $11,345,000, detallando los apartamentos con pagos pendientes, siendo el 203 el de mayor deuda.</p>
+
+<p>Respecto a las cuentas por pagar, se indicó que correspondían al mes de septiembre y que los pagos ya se habían realizado en octubre. Se mencionó el caso del pago de energía a INEL, por valor de $1,000,894, resaltando la necesidad de estar pendientes de las fechas de pago para evitar incidentes similares.</p>
+
+<p>En cuanto a los impuestos, se confirmó que fueron presentados a tiempo. El fondo de imprevistos cerró con un valor de $22,733,902 en el mes de septiembre, con un saldo por monetizar de $2,387,844 en la cuenta de Caja Social.</p>
+
+<p>En relación con los resultados, se presentó un acumulado de enero a septiembre de $6,180,896. Se identificaron algunos rubros con sobre ejecución en el presupuesto anual, como mantenimiento de planta eléctrica, mantenimiento de pozo eyector, útiles, papelería, fotocopia y el sistema de gestión de seguridad y salud en el trabajo.</p>
+
+<p>Se presentó un resumen de los resultados, mostrando un excedente de $5,659,865 en septiembre y un acumulado de $6,000,180 hasta el 30 de septiembre. Se indicó que el gasto de energía se mantiene en un promedio de $1,500,000 a $1,600,000, mientras que el gasto de acueducto se mantiene en un promedio de $18,000 mensuales.</p>
+
+<p>Adicionalmente, la revisora fiscal mencionó la Ley 1715 de 2014, que promueve las energías renovables, señalando que cualquier obra relacionada con este tema debe contar con la aprobación de más del 70% de los copropietarios. En caso de cambios estructurales, se requiere unanimidad. También se deben solicitar permisos de construcción y de conexiones de red, y realizar modificaciones en el reglamento, lo cual genera gastos. Se aclaró que los beneficios de impuestos que ofrece el gobierno por la aplicación de estos sistemas renovables, como la exclusión del IVA y la reducción del 50% en renta por 5 años, no aplican para la propiedad horizontal.</p>
+
+<p>Finalmente, se recordó que se había quedado pendiente con Mónica revisar el tema de los obsequios de Navidad, verificando que hay una cuenta específica presupuestada de $700,000 para este fin, separada de los gastos de Navidad, que son solo $200,000.</p>
+
+<p>Joana comentó que no se debe pasar meses sin realizar pagos a los proveedores, a lo que Luz Marina respondió que los pagos se realizaron en los primeros días de octubre. Joana sugirió flexibilizar los procesos para adelantar los pagos, pero Mónica prefirió mantener los procesos actuales para evitar problemas con los impuestos. Se acordó tratar de evitar que vuelva a suceder.</p>
+<h2>6. Informe de administración</h2>
+
+<p>Durante la reunión, la administradora presentó un informe detallado sobre diversos aspectos relacionados con la gestión del edificio.</p>
+
+<h3>Sistema de citofonía</h3>
+
+<p>La administradora informó sobre los problemas existentes con el sistema de citofonía del edificio, mencionando que varios apartamentos experimentan dificultades para recibir llamadas a través de los citófonos. Ante esta situación, se planteó la posibilidad de implementar una solución similar a la utilizada en otro edificio administrado, donde se optó por un sistema que utiliza la red de Movistar. Este sistema, que tiene un costo de 29 mil pesos mensuales, incluye internet y llamadas ilimitadas a celulares, permitiendo contactar a los residentes directamente a sus teléfonos móviles. De esta manera, se evitarían los costos asociados a la reparación de los citófonos existentes, que según la administradora, podrían ascender a entre 600 y 700 mil pesos.</p>
+
+<p>Mauricio Mogollón sugirió que el servicio estuviera a nombre de Ron Squad, pero la administradora indicó que esto podría resultar más costoso al tratarse de una persona jurídica. Sin embargo, se comprometió a investigar esta opción. Carolina Zambrano propuso consultar con la empresa de vigilancia si podrían ofrecer un servicio similar utilizando un teléfono de la empresa, pero se señaló que esto implicaría que el número telefónico no pertenecería al edificio.</p>
+
+<p>Para avanzar con la propuesta, la administradora indicó que enviaría un formato de Habeas Data a cada apartamento para obtener la autorización de los residentes y recopilar sus números de teléfono. Se acordó que los vigilantes se encargarían de recoger los formatos firmados, asegurando la protección de los datos personales. La administradora también mencionó que abordaría el tema con el gerente de la empresa de vigilancia en un congreso de propiedad horizontal al que asistiría.</p>
+
+<p>Se espera tener este nuevo sistema de comunicación implementado a finales de octubre.</p>
+
+<h3>Grupo de WhatsApp informativo</h3>
+
+<p>En relación con el sistema de citofonía, se planteó la creación de un grupo de WhatsApp informativo para mejorar la comunicación con los residentes. La administradora señaló que para ello es necesario contar con la autorización de los propietarios y residentes, de acuerdo con la ley de Habeas Data. Mónica propuso que se enviara un correo electrónico informativo a todos los propietarios explicando el propósito del grupo y solicitando su consentimiento.</p>
+
+<p>Se acordó que el grupo de WhatsApp sería únicamente para difusión de información relevante por parte de la administración, evitando que los participantes envíen mensajes para prevenir la propagación de cadenas y otros contenidos no deseados. Este grupo incluiría tanto a inquilinos como a propietarios.</p>
+
+<h3>Mejoramiento de porteros</h3>
+
+<p>La administradora informó sobre las medidas tomadas para mejorar el desempeño de los porteros, debido a quejas recibidas por falta de atención oportuna a los residentes, incluyendo la omisión de anunciar visitas y la falta de colaboración en la apertura de puertas. Se mencionó que el vigilante Gamboa sería reemplazado por Cruz, quien regresaba de vacaciones. Se indicó que Edwin Alba había renunciado a la empresa de vigilancia y que ya se había asignado a su reemplazo.</p>
+
+<h3>PQR por habitantes de calle</h3>
+
+<p>Se informó sobre la presentación de una PQR (Petición, Queja, Reclamo) ante la alcaldía debido a la presencia de habitantes de calle debajo del puente cercano al edificio. La administradora explicó que, si bien se informó a la entidad correspondiente, la única acción que pueden tomar es invitarlos a ir a los albergues, sin poder obligarlos.</p>
+
+<h3>Apertura de cuenta de ahorros</h3>
+
+<p>La administradora comunicó que se realizó la apertura de una cuenta de ahorros en Cortifín para mejorar la rentabilidad de los recursos del edificio.</p>
+
+<h3>Actualización de datos en Caja Social</h3>
+
+<p>Se informó sobre la necesidad de actualizar los datos en Caja Social. La administradora explicó que, aunque intentó realizar el trámite por sí sola, le indicaron que era necesario que Mónica y ella asistieran juntas a la entidad. Debido a problemas de agenda y a una enfermedad de la administradora, no se ha podido concretar la actualización de datos. Se espera coordinar una fecha en las próximas semanas para realizar el trámite.</p>
+
+<h3>Arreglo de andén</h3>
+
+<p>La administradora reportó que se realizó el arreglo del andén que presentaba filtraciones hacia el depósito del señor Jorge, y que el trabajo fue ejecutado correctamente, sin que se hayan presentado nuevas filtraciones de agua.</p>
+
+<h3>Reclamo ante aseguradora por ascensor</h3>
+
+<p>Se informó que se inició el reclamo ante la aseguradora por la correa dañada en la puerta del ascensor vehicular, cuyo costo de reparación fue de un millón 750 mil pesos. La administradora explicó que solicitó a la empresa Ascensores ajustar la factura con el valor del salario mínimo para evitar una deducción significativa por parte de la aseguradora, lo que haría inviable el reclamo.</p>
+
+<h3>Sondeo de sifones</h3>
+
+<p>La administradora comunicó que se contrató una empresa especializada para sondear los sifones en el sótano e imprimir peso, con un costo de un millón de pesos. Se indicó que los sifones están completamente tapados y que se destaparán todos los sifones (12 o 14) y sus respectivos pasos. Este trabajo se realizaría al día siguiente de la reunión.</p>
+
+<h3>Inundaciones en parqueaderos y depósitos</h3>
+
+<p>Se informó sobre las inundaciones ocurridas en parqueaderos y depósitos, afectando los depósitos 302 y 507. Los residentes del 302 reportaron daños en elementos de trabajo relacionados con fotografía, valorados en 750 mil pesos. La administradora propuso compensarles con 350 mil pesos, teniendo en cuenta que los elementos ya estaban en uso. Además, sugirió solicitar a la empresa de ascensores que aumente el valor de la factura para cubrir esta compensación.</p>
+
+<p>Ante esta situación, se discutió la posibilidad de que se generen reclamos adicionales en el futuro. Sin embargo, se reconoció que la obstrucción de los sifones y la consecuente inundación generaron responsabilidad por parte de la administración. Se consideró que los 750 mil pesos solicitados por los residentes del 302 correspondían al precio de elementos nuevos, por lo que se acordó reconocer una parte proporcional al uso que ya tenían.</p>
+
+<h3>Impermeabilización de jardinera</h3>
+
+<p>La administradora informó sobre la urgencia de impermeabilizar la jardinera del segundo piso, ubicada al lado del apartamento 210, debido a las filtraciones que están afectando las piezas del ascensor vehicular. Indicó que se contactó a Soluciones Integrales, quienes cotizaron el trabajo en 6 millones de pesos, logrando una negociación para reducir el costo. La administradora enfatizó la necesidad de realizar este trabajo de manera prioritaria para evitar daños mayores al ascensor.</p>
+
+<p>Joana expresó su preocupación por la situación y la necesidad de actuar con prontitud. Mauricio Mogollón sugirió obtener otras cotizaciones para comparar precios, pero resaltó la importancia de contar con una buena garantía y un proveedor confiable. La administradora se comprometió a conseguir otras dos cotizaciones, tomando como base los ítems presentados por Soluciones Integrales, y a coordinar la decisión final a través del chat del consejo.</p><h2>7. Proposiciones y varios</h2>
+
+<p>Durante el segmento de "Proposiciones y Varios", la consejera Mónica Hernández inicialmente tenía una proposición relacionada con la creación de un grupo de WhatsApp informativo para el edificio. Sin embargo, este tema fue abordado y discutido en detalle durante el informe de administración, específicamente en relación con el sistema de citofonía y la comunicación con los residentes.</p>
+
+<p>Posteriormente, se abordó la situación con Innovance, la empresa encargada del mantenimiento de los ascensores. Se mencionó que el ascensor se había dañado recientemente, lo que generó molestias a algunos residentes. Se recordó que Innovance había recibido una última oportunidad después de haber realizado reparaciones en el ascensor y de que se hubiera enviado una circular sobre el cuidado de las puertas del ascensor. La administradora, Luz Marina, explicó que el daño reciente se debió a que se mojó la correa de la puerta vehicular. Además, indicó que ya había autorizado la colocación de una nueva correa para la puerta vehicular.</p>
+
+<p>En relación con este tema, se reiteró la importancia del grupo de WhatsApp para facilitar la comunicación y evitar molestias a los residentes. Se propuso crear un grupo de difusión en lugar de un grupo donde todos puedan escribir, para evitar la propagación de mensajes no relacionados con el edificio. Se acordó que este grupo incluiría tanto a inquilinos como a propietarios.</p>
+
+<p>Finalmente, se mencionó brevemente la presentación de Camilo Vargas sobre energía solar, pero se pospuso la discusión detallada para otro momento debido a la falta de tiempo y a la necesidad de analizar la propuesta en profundidad antes de presentarla a la asamblea.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se enviará una carta a los cuatro deudores de cartera más altos, dándoles plazo hasta el 31 de octubre para ponerse al día o hacer un acuerdo de pago – <strong>Responsable:</strong> Paola (Administración)</li>
+ <li>Se realizará una revisión del movimiento bancario alrededor del día 15 de cada mes para verificar que los servicios se estén debitando correctamente y evitar retrasos en los pagos – <strong>Responsable:</strong> Angélica Caicedo (Contadora)</li>
+ <li>Se solicitarán dos cotizaciones adicionales para la impermeabilización de la jardinera del segundo piso, tomando como base los ítems de la cotización de Soluciones Integrales – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se realizará un estudio profundo sobre las propuestas de instalación de paneles solares, analizando los contratos y costos específicos, para presentar la información a la asamblea – <strong>Responsable:</strong> No especificado</li>
+ <li>Se creará un grupo de difusión de WhatsApp para comunicar información relevante a los residentes, incluyendo inquilinos y propietarios – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se contactará a la empresa de vigilancia para discutir la posibilidad de utilizar un celular a nombre de la copropiedad para la comunicación interna – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se solicitará a los vigilantes que recojan los números de teléfono y las firmas del formato de Habeas Data, apartamento por apartamento – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se compensará a los residentes del depósito 302 con 350.000 pesos por los daños causados por la inundación – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  (Contraseña de Nextcloud definida: true)
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión de Consejo</h1>
+<p><strong>Fecha:</strong> 30 de septiembre de 2025</p>
+<p><strong>Hora:</strong> Inicio: 7:34 - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> Edificio Round Squad</p>
+<p><strong>Moderador:</strong> Luz Marina</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Johanna Ramos - Consejera</li>
+<li>Carolina Zambrano - Consejera</li>
+<li>Mónica Hernández - Consejera</li>
+<li>Mauricio Mogollón - Consejero</li>
+<li>Clara Castañeda - Revisora Fiscal</li>
+<li>Angélica Caicedo - Contadora</li>
+<li>Luz Marina - Administradora</li>
+<li>Iván - Presentador de paneles solares</li>
+<li>Nicolás Vega - Ingeniero de 2050</li>
+<li>Camilo Vargas - 403</li>
+<li>Ximena Prieto - Apartamento 203</li>
+<li>Luisa - Consejera, Apartamento 210</li>
+<li>Jorge - Propietario</li>
+<li>William Portreto Jesús - Jardinería</li>
+<li>Sandra - Soluciones Integrales</li>
+<li>Rodrigo - Residente</li>
+<li>Ayala - Residente</li>
+<li>Edwin Alba - Ex portero</li>
+<li>Gamboa - Portero</li>
+<li>Cruz - Portero</li>
+<li>Barreto - Portero</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Llamado a lista y verificación de quórum</li>
+<li>Presentación de proyectos de paneles solares</li>
+<li>Lectura y aprobación del acta del consejo anterior</li>
+<li>Informe contable</li>
+<li>Informe de revisoría fiscal</li>
+<li>Informe de administración</li>
+<li>Proposiciones y varios</li>
+</ol>
+</header>
+<h2>1. Llamado a lista y verificación de quórum</h2>
+
+<p>Inicialmente, se procedió con el llamado a lista para verificar el quórum necesario para llevar a cabo la reunión. Se constató la presencia de los consejeros Johanna Ramos, Carolina Zambrano, Mónica Hernández y Mauricio Mogollón, totalizando cuatro consejeros, lo cual se consideró quórum amplio y suficiente para realizar la reunión. Adicionalmente, se contó con la presencia de la revisora fiscal Clara Castañeda, la contadora Angélica Caicedo y la administradora.</p><h2>2. Presentación de proyectos de paneles solares</h2>
+
+<p>Durante la reunión, se abordó la presentación de proyectos de paneles solares. Inicialmente, se dio la palabra a Iván, representante de una empresa con experiencia en energía, quien presentó una propuesta para la instalación de paneles solares en el edificio. Iván explicó que la empresa lleva alrededor de 40 años trabajando en energía y 10 años en el tema solar.</p>
+
+<p>Iván indicó que, según un estudio realizado, el edificio consume aproximadamente 1.400 kWh al mes, lo que representa una factura de energía de un millón cien. Propuso la instalación de 21 paneles solares, con una capacidad de 3.5 kW, que generarían 2.400 kWh al mes. Explicó que el sistema funcionaría mediante la inyección de energía a la red de ENEL durante el día y la recepción de energía de ENEL durante la noche, con un ahorro cercano al 100% en el recibo de energía, descontando una tarifa que cobra ENEL por el uso de su infraestructura.</p>
+
+<p>Iván destacó que su empresa ofrece proyectos llave en mano, encargándose de todos los trámites, diseños, instalación y puesta en marcha, hasta la colocación del contador bidireccional. Mencionó que el proyecto se ejecutaría en aproximadamente seis meses, con un período de construcción de uno a dos meses. Durante la construcción, la planta funcionaría en autoconsumo, suministrando energía directamente al edificio. Posteriormente, se realizaría la certificación de la planta ante ENEL para que el edificio se convierta en autogenerador de energía.</p>
+
+<p>Iván también presentó una opción de financiamiento a través de un contrato de compra de energía (PPA), donde un fondo de inversión se encargaría de la inversión inicial y vendería la energía al edificio a una tarifa menor que la de ENEL. Bajo este esquema, el edificio tendría un ahorro inicial del 20% en la tarifa de energía, con la ventaja de que la tarifa del PPA se indexaría al IPC anualmente, mientras que la tarifa de energía de ENEL podría subir más. Además, el fondo de inversión se encargaría de los mantenimientos preventivos y correctivos durante los 15 años del contrato. Al finalizar el contrato, el activo pasaría a ser propiedad de la copropiedad.</p>
+
+<p>Ante una pregunta sobre cómo ganaría el fondo de inversión, Iván explicó que su negocio se basa en la amortización de la planta a lo largo de los 15 años y en los beneficios tributarios asociados a las energías solares.</p>
+
+<p>En respuesta a una inquietud sobre el mantenimiento de la cubierta del edificio, Iván señaló que, en caso de ser necesario realizar trabajos de impermeabilización, se coordinaría el levantamiento temporal de los paneles solares, con un costo adicional que rondaría el millón de pesos anual.</p>
+
+<p>Iván aclaró que su empresa sería la encargada de la construcción de la planta, con un contrato con el fondo de inversión, pero también respondería directamente ante los clientes.</p>
+
+<p>Posteriormente, Luz Marina mencionó que se contactaría a otra persona para escuchar otra propuesta, aclarando que la decisión final sobre la implementación de los paneles solares deberá ser tomada en asamblea.</p>
+
+<p>Más adelante en la reunión, se dio la palabra a Camilo Vargas, quien presentó otra propuesta para la instalación de paneles solares. Camilo explicó que representa el Programa Nacional de Inversiones de Vida Renovable, una iniciativa que busca dinamizar las inversiones alineadas con los objetivos ambientales del país. Indicó que la organización 2050, liderando el programa, lanzó esta iniciativa para que la propiedad horizontal pueda tener energía solar con cero inversión.</p>
+
+<p>Camilo señaló que Round Square aplicó a una convocatoria y, tras la validación de la información técnica, se aprobaron los recursos para la instalación del proyecto solar. Mencionó que su equipo de ingeniería ya estimó la instalación del sistema solar y que la intención era que los asistentes conocieran el informe técnico y financiero.</p>
+
+<p>Camilo destacó algunos resultados de proyectos similares en otras organizaciones, como la Superintendencia Financiera de Colombia y la Alcaldía de Cota, donde se lograron ahorros significativos en la factura de energía.</p>
+
+<p>Explicó que el programa de energía solar con cero inversión ofrece beneficios como la no inversión inicial, el mantenimiento incluido, ahorros desde el primer mes, reducción de la contaminación y la obtención de indicadores de sostenibilidad.</p>
+
+<p>Camilo presentó las características técnicas del proyecto para Round Square, que consistiría en la instalación de 24 paneles solares con una potencia total de 615 vatios cada uno, ocupando un área de 72 metros cuadrados. Este sistema generaría 1580 kWh al mes, cubriendo el 100% del consumo de energía del edificio. Explicó que se trata de un sistema ONGRID o conectado a la red, que prioriza la energía solar pero permite tomar energía de la red cuando sea necesario y guardar los excedentes en la red para usarlos posteriormente. Este sistema no requiere baterías.</p>
+
+<p>Camilo indicó que el ahorro sin inversión se logra a través de un contrato de 10 años, tras el cual el proyecto solar pasa a ser propiedad del usuario. Bajo este esquema, la factura de energía tendría una tarifa fija de un millón trescientos noventa mil pesos, lo que representaría un ahorro mensual de 213 mil pesos. A lo largo de los 10 años, el ahorro acumulado superaría los 100 millones de pesos. Proyectó que, al cabo de 25 años, la rentabilidad total del proyecto sería de más de mil 390 millones de pesos.</p>
+
+<p>Camilo aclaró que la tarifa solar se indexaría al IPP (índice de precios al productor), que ha tenido un crecimiento promedio del 3% anual en los últimos 10 años.</p>
+
+<p>En cuanto al mantenimiento, Camilo señaló que su empresa se encargaría del mismo durante los 10 años del contrato. Posteriormente, el usuario podría contratar a su empresa o a cualquier otra para realizar el mantenimiento. El sistema solar estaría asegurado por STURA contra daños internos, vandalismo, robos, responsabilidad civil frente a terceros y desastres naturales.</p>
+
+<p>Camilo explicó que cada mes se enviaría una factura por la tarifa fija acordada y que, al final del año, se haría un corte para compensar cualquier diferencia entre la energía generada y la energía proyectada.</p>
+
+<p>Los compromisos del beneficiario serían velar por la seguridad del sistema solar, otorgar los permisos para el uso del espacio y para los mantenimientos, facilitar el uso de las instalaciones y tener un punto de Internet y un punto de agua cercano al sistema solar.</p>
+
+<p>Ante la pregunta de por qué se debe pagar si se aplicó y salió favorecido, Camilo aclaró que no se requiere inversión inicial, pero sí se debe pagar la tarifa fija por la energía suministrada, que es menor a la tarifa actual de energía. Señaló que el beneficio radica en que, al cabo de 10 años, el sistema solar pasa a ser propiedad del usuario y ya no se debe pagar más por la energía.</p>
+
+<p>En respuesta a una inquietud sobre el funcionamiento del sistema en días nublados, Camilo explicó que el sistema funciona por radiación y que, aunque esté nublado, siempre hay radiación. Además, el sistema está conectado a la red, por lo que siempre se tendrá energía disponible.</p>
+
+<p>Finalmente, Camilo indicó que los recursos para el proyecto ya fueron aprobados y que el siguiente paso sería la aceptación o denegación del proyecto por parte de los copropietarios.</p>
+
+<p>Tras la presentación de ambas propuestas, Luz Marina concluyó que se analizarán las opciones con el consejo y se tomará una decisión en asamblea.</p><h2>3. Lectura y aprobación del acta del consejo anterior</h2>
+
+<p>Durante la reunión, se abordó el tema de la lectura y aprobación del acta del consejo anterior. Sin embargo, no se proporcionaron detalles específicos sobre los temas tratados en dicha acta, ni se mencionó si fue aprobada, modificada o aplazada.</p>
+<h2>4. Informe contable</h2>
+
+<p>Durante la reunión, Angélica Caicedo presentó el informe contable correspondiente al 30 de septiembre. La presentación incluyó detalles sobre el estado de efectivo y equivalentes, inversiones, cartera, cuentas por pagar, ingresos y patrimonio.</p>
+
+<p>En cuanto al <strong>efectivo y equivalentes</strong>, se reportó un saldo de 500 mil pesos en caja menor. En el Banco de la Caja Social, el recaudo ascendió a 34 millones 887 mil 422 pesos con 18 centavos. El fondo de imprevistos contaba con 20 millones 346 mil 57 pesos con 41 centavos, resultando en un total de 55 millones 733 mil 479 pesos con 59 centavos. El recaudo del mes de septiembre fue de 22 millones 59 mil 805 pesos con 68 centavos. Los rendimientos financieros de las dos cuentas sumaron 1 millón 425 mil 84 pesos. Los gastos bancarios del mes ascendieron a 24 mil 157 pesos.</p>
+
+<p>Respecto a las <strong>inversiones</strong>, se mencionó la apertura de un CDT por 11 millones 870 mil 429 pesos, con un rendimiento del 10.10% efectivo anual a 180 días. El saldo de cartera se situó en 11 millones 345 mil pesos, reflejando un aumento de 2 millones 317 mil 500 pesos.</p>
+
+<p>En relación con las <strong>cuentas por pagar</strong>, se indicó un valor pendiente de retefuente de 367 mil 315 pesos con 40 centavos, que fue pagado en el mes de octubre. Otras cuentas por pagar incluyeron 14 millones a la empresa de seguridad, 1 millón 598 mil 766 pesos a la empresa de aseo, 1 millón a Innovan por el mantenimiento de los ascensores, y pagos a William Portreto Jesús por jardinería, a Sandra de Soluciones Integrales por una reparación locativa, a Luz Marina por su mensualidad de administración, a Clara por su servicio mensual de revisoría fiscal, y a Angélica Caicedo por su servicio contable. También se mencionó un reembolso pendiente a Luz Marina por 447 mil pesos.</p>
+
+<p>En cuanto a los <strong>anticipos</strong>, se registraron 300 pesos de anticipos de administración y 348 mil 602 pesos de cuotas de administración. Otros pasivos incluyeron un saldo pendiente de una cuota extraordinaria del año 2024 por 453 mil 315 pesos con 40 centavos.</p>
+
+<p>En el apartado de <strong>ingresos</strong>, se reclasificaron cuentas, incluyendo la reparación locativa que estaba pendiente por pagar. Se reportó un valor de 525 mil pesos correspondiente al alquiler del salón comunal o el barbecue, destinado a su mantenimiento.</p>
+
+<p>En el <strong>patrimonio</strong>, se registró un fondo de imprevistos por 266 mil pesos. El acumulado del mes de septiembre fue de 22 millones 733 mil 902 pesos, con 2 millones 394 mil pesos pendientes de monetización, correspondientes a enero-septiembre de este año.</p>
+
+<p>Se presentó un resumen de la <strong>disponibilidad de recursos</strong>, indicando 500 mil pesos en caja menor y 34 millones 887 mil 422 pesos con 18 centavos en el banco Caja Social, sumando un total de 35 millones 387 mil 422 pesos con 18 centavos. Las cuentas por pagar totalizaron 28 millones, la retención en la fuente 367 mil 315 pesos con 40 centavos, el anticipo de administración 348 mil 602 pesos, la cuota extraordinaria 453 mil, los ingresos por terceros 8 millones 790 mil 668 pesos, y los alquileres del salón por 525 mil pesos. Esto resultó en un total de 38 millones 516 mil 547 pesos, dejando un disponible cobrado de 3 millones 129 mil 125 pesos. Se mencionó que estaba pendiente la monetización de 2 millones 394 mil pesos, lo que resultaría en un disponible de menos 5 millones 523 mil 125 pesos.</p>
+
+<p>Mónica Hernández preguntó a Angélica Caicedo sobre la reclasificación del tapete y por qué seguía apareciendo un saldo alto en elementos de cafetería. Angélica respondió que sí se había hecho la reclasificación, incluyendo otras reclasificaciones pendientes. Mónica solicitó a Angélica que le proporcionara las notas con las que se hicieron esas reclasificaciones.</p>
+
+<p>Luz Marina comentó sobre la <strong>cartera</strong>, indicando que se enviaron cartas a cuatro apartamentos con deudas pendientes, dándoles plazo hasta el 31 de octubre para ponerse al día o hacer un acuerdo de pago. Se mencionó que a la señora Ximena Prieto del apartamento 203 se le envió una notificación de deuda pendiente al 30 de septiembre de 2025 por 118 mil 300 pesos, advirtiéndole sobre el inicio de un proceso de cobro jurídico en caso de no recibir el pago. Luz Marina aclaró que no se envió la carta al apartamento 303 porque ya había realizado un pago.</p>
+
+<p>Paola Zambrano sugirió que se debía cambiar el trato hacia la señora Prieto, ya que en reuniones anteriores se había ofrecido ayuda sin resultados. Luz Marina explicó que debía seguir ese proceso para poderla mandar al abogado. Mónica Hernández preguntó la fecha límite dada en las cartas, a lo que Luz Marina respondió que hasta el 31 de octubre.</p>
+
+<p>Joana Ramos preguntó sobre un informe anterior donde la energía aparecía con una pendiente por pagar a 60 días. Angélica explicó que el servicio de energía se descuenta directamente del Banco Caja Social, pero que hubo un problema este mes y el mes anterior donde no se descontó, y Mónica prestó el dinero para cubrirlo. Carolina Zambrano sugirió revisar el movimiento del banco para verificar si se evitan los servicios en las fechas estipuladas.</p>
+
+<h2>5. Informe de revisoría fiscal</h2>
+
+<p>La revisora fiscal, Clara Castañeda, presentó el informe correspondiente al mes de septiembre. Se inició con la revisión documental, que incluyó cuentas de cobro, recibos de caja y comprobantes de egreso, indicando que todos los documentos estaban completos y al día, sin hallazgos relevantes.</p>
+
+<p>En cuanto a los saldos de efectivo y equivalentes, se informó que el cierre de septiembre arrojó un saldo total de $55,733,479. No se identificaron partidas conciliatorias pendientes. La cartera cerró con un saldo de $11,345,000, detallando los apartamentos con pagos pendientes, siendo el 203 el de mayor deuda.</p>
+
+<p>Respecto a las cuentas por pagar, se indicó que correspondían al mes de septiembre y que los pagos ya se habían realizado en octubre. Se mencionó el caso del pago de energía a INEL, por valor de $1,000,894, resaltando la necesidad de estar pendientes de las fechas de pago para evitar incidentes similares.</p>
+
+<p>En cuanto a los impuestos, se confirmó que fueron presentados a tiempo. El fondo de imprevistos cerró con un valor de $22,733,902 en el mes de septiembre, con un saldo por monetizar de $2,387,844 en la cuenta de Caja Social.</p>
+
+<p>En relación con los resultados, se presentó un acumulado de enero a septiembre de $6,180,896. Se identificaron algunos rubros con sobre ejecución en el presupuesto anual, como mantenimiento de planta eléctrica, mantenimiento de pozo eyector, útiles, papelería, fotocopia y el sistema de gestión de seguridad y salud en el trabajo.</p>
+
+<p>Se presentó un resumen de los resultados, mostrando un excedente de $5,659,865 en septiembre y un acumulado de $6,000,180 hasta el 30 de septiembre. Se indicó que el gasto de energía se mantiene en un promedio de $1,500,000 a $1,600,000, mientras que el gasto de acueducto se mantiene en un promedio de $18,000 mensuales.</p>
+
+<p>Adicionalmente, la revisora fiscal mencionó la Ley 1715 de 2014, que promueve las energías renovables, señalando que cualquier obra relacionada con este tema debe contar con la aprobación de más del 70% de los copropietarios. En caso de cambios estructurales, se requiere unanimidad. También se deben solicitar permisos de construcción y de conexiones de red, y realizar modificaciones en el reglamento, lo cual genera gastos. Se aclaró que los beneficios de impuestos que ofrece el gobierno por la aplicación de estos sistemas renovables, como la exclusión del IVA y la reducción del 50% en renta por 5 años, no aplican para la propiedad horizontal.</p>
+
+<p>Finalmente, se recordó que se había quedado pendiente con Mónica revisar el tema de los obsequios de Navidad, verificando que hay una cuenta específica presupuestada de $700,000 para este fin, separada de los gastos de Navidad, que son solo $200,000.</p>
+
+<p>Joana comentó que no se debe pasar meses sin realizar pagos a los proveedores, a lo que Luz Marina respondió que los pagos se realizaron en los primeros días de octubre. Joana sugirió flexibilizar los procesos para adelantar los pagos, pero Mónica prefirió mantener los procesos actuales para evitar problemas con los impuestos. Se acordó tratar de evitar que vuelva a suceder.</p>
+<h2>6. Informe de administración</h2>
+
+<p>Durante la reunión, la administradora presentó un informe detallado sobre diversos aspectos relacionados con la gestión del edificio.</p>
+
+<h3>Sistema de citofonía</h3>
+
+<p>La administradora informó sobre los problemas existentes con el sistema de citofonía del edificio, mencionando que varios apartamentos experimentan dificultades para recibir llamadas a través de los citófonos. Ante esta situación, se planteó la posibilidad de implementar una solución similar a la utilizada en otro edificio administrado, donde se optó por un sistema que utiliza la red de Movistar. Este sistema, que tiene un costo de 29 mil pesos mensuales, incluye internet y llamadas ilimitadas a celulares, permitiendo contactar a los residentes directamente a sus teléfonos móviles. De esta manera, se evitarían los costos asociados a la reparación de los citófonos existentes, que según la administradora, podrían ascender a entre 600 y 700 mil pesos.</p>
+
+<p>Mauricio Mogollón sugirió que el servicio estuviera a nombre de Ron Squad, pero la administradora indicó que esto podría resultar más costoso al tratarse de una persona jurídica. Sin embargo, se comprometió a investigar esta opción. Carolina Zambrano propuso consultar con la empresa de vigilancia si podrían ofrecer un servicio similar utilizando un teléfono de la empresa, pero se señaló que esto implicaría que el número telefónico no pertenecería al edificio.</p>
+
+<p>Para avanzar con la propuesta, la administradora indicó que enviaría un formato de Habeas Data a cada apartamento para obtener la autorización de los residentes y recopilar sus números de teléfono. Se acordó que los vigilantes se encargarían de recoger los formatos firmados, asegurando la protección de los datos personales. La administradora también mencionó que abordaría el tema con el gerente de la empresa de vigilancia en un congreso de propiedad horizontal al que asistiría.</p>
+
+<p>Se espera tener este nuevo sistema de comunicación implementado a finales de octubre.</p>
+
+<h3>Grupo de WhatsApp informativo</h3>
+
+<p>En relación con el sistema de citofonía, se planteó la creación de un grupo de WhatsApp informativo para mejorar la comunicación con los residentes. La administradora señaló que para ello es necesario contar con la autorización de los propietarios y residentes, de acuerdo con la ley de Habeas Data. Mónica propuso que se enviara un correo electrónico informativo a todos los propietarios explicando el propósito del grupo y solicitando su consentimiento.</p>
+
+<p>Se acordó que el grupo de WhatsApp sería únicamente para difusión de información relevante por parte de la administración, evitando que los participantes envíen mensajes para prevenir la propagación de cadenas y otros contenidos no deseados. Este grupo incluiría tanto a inquilinos como a propietarios.</p>
+
+<h3>Mejoramiento de porteros</h3>
+
+<p>La administradora informó sobre las medidas tomadas para mejorar el desempeño de los porteros, debido a quejas recibidas por falta de atención oportuna a los residentes, incluyendo la omisión de anunciar visitas y la falta de colaboración en la apertura de puertas. Se mencionó que el vigilante Gamboa sería reemplazado por Cruz, quien regresaba de vacaciones. Se indicó que Edwin Alba había renunciado a la empresa de vigilancia y que ya se había asignado a su reemplazo.</p>
+
+<h3>PQR por habitantes de calle</h3>
+
+<p>Se informó sobre la presentación de una PQR (Petición, Queja, Reclamo) ante la alcaldía debido a la presencia de habitantes de calle debajo del puente cercano al edificio. La administradora explicó que, si bien se informó a la entidad correspondiente, la única acción que pueden tomar es invitarlos a ir a los albergues, sin poder obligarlos.</p>
+
+<h3>Apertura de cuenta de ahorros</h3>
+
+<p>La administradora comunicó que se realizó la apertura de una cuenta de ahorros en Cortifín para mejorar la rentabilidad de los recursos del edificio.</p>
+
+<h3>Actualización de datos en Caja Social</h3>
+
+<p>Se informó sobre la necesidad de actualizar los datos en Caja Social. La administradora explicó que, aunque intentó realizar el trámite por sí sola, le indicaron que era necesario que Mónica y ella asistieran juntas a la entidad. Debido a problemas de agenda y a una enfermedad de la administradora, no se ha podido concretar la actualización de datos. Se espera coordinar una fecha en las próximas semanas para realizar el trámite.</p>
+
+<h3>Arreglo de andén</h3>
+
+<p>La administradora reportó que se realizó el arreglo del andén que presentaba filtraciones hacia el depósito del señor Jorge, y que el trabajo fue ejecutado correctamente, sin que se hayan presentado nuevas filtraciones de agua.</p>
+
+<h3>Reclamo ante aseguradora por ascensor</h3>
+
+<p>Se informó que se inició el reclamo ante la aseguradora por la correa dañada en la puerta del ascensor vehicular, cuyo costo de reparación fue de un millón 750 mil pesos. La administradora explicó que solicitó a la empresa Ascensores ajustar la factura con el valor del salario mínimo para evitar una deducción significativa por parte de la aseguradora, lo que haría inviable el reclamo.</p>
+
+<h3>Sondeo de sifones</h3>
+
+<p>La administradora comunicó que se contrató una empresa especializada para sondear los sifones en el sótano e imprimir peso, con un costo de un millón de pesos. Se indicó que los sifones están completamente tapados y que se destaparán todos los sifones (12 o 14) y sus respectivos pasos. Este trabajo se realizaría al día siguiente de la reunión.</p>
+
+<h3>Inundaciones en parqueaderos y depósitos</h3>
+
+<p>Se informó sobre las inundaciones ocurridas en parqueaderos y depósitos, afectando los depósitos 302 y 507. Los residentes del 302 reportaron daños en elementos de trabajo relacionados con fotografía, valorados en 750 mil pesos. La administradora propuso compensarles con 350 mil pesos, teniendo en cuenta que los elementos ya estaban en uso. Además, sugirió solicitar a la empresa de ascensores que aumente el valor de la factura para cubrir esta compensación.</p>
+
+<p>Ante esta situación, se discutió la posibilidad de que se generen reclamos adicionales en el futuro. Sin embargo, se reconoció que la obstrucción de los sifones y la consecuente inundación generaron responsabilidad por parte de la administración. Se consideró que los 750 mil pesos solicitados por los residentes del 302 correspondían al precio de elementos nuevos, por lo que se acordó reconocer una parte proporcional al uso que ya tenían.</p>
+
+<h3>Impermeabilización de jardinera</h3>
+
+<p>La administradora informó sobre la urgencia de impermeabilizar la jardinera del segundo piso, ubicada al lado del apartamento 210, debido a las filtraciones que están afectando las piezas del ascensor vehicular. Indicó que se contactó a Soluciones Integrales, quienes cotizaron el trabajo en 6 millones de pesos, logrando una negociación para reducir el costo. La administradora enfatizó la necesidad de realizar este trabajo de manera prioritaria para evitar daños mayores al ascensor.</p>
+
+<p>Joana expresó su preocupación por la situación y la necesidad de actuar con prontitud. Mauricio Mogollón sugirió obtener otras cotizaciones para comparar precios, pero resaltó la importancia de contar con una buena garantía y un proveedor confiable. La administradora se comprometió a conseguir otras dos cotizaciones, tomando como base los ítems presentados por Soluciones Integrales, y a coordinar la decisión final a través del chat del consejo.</p><h2>7. Proposiciones y varios</h2>
+
+<p>Durante el segmento de "Proposiciones y Varios", la consejera Mónica Hernández inicialmente tenía una proposición relacionada con la creación de un grupo de WhatsApp informativo para el edificio. Sin embargo, este tema fue abordado y discutido en detalle durante el informe de administración, específicamente en relación con el sistema de citofonía y la comunicación con los residentes.</p>
+
+<p>Posteriormente, se abordó la situación con Innovance, la empresa encargada del mantenimiento de los ascensores. Se mencionó que el ascensor se había dañado recientemente, lo que generó molestias a algunos residentes. Se recordó que Innovance había recibido una última oportunidad después de haber realizado reparaciones en el ascensor y de que se hubiera enviado una circular sobre el cuidado de las puertas del ascensor. La administradora, Luz Marina, explicó que el daño reciente se debió a que se mojó la correa de la puerta vehicular. Además, indicó que ya había autorizado la colocación de una nueva correa para la puerta vehicular.</p>
+
+<p>En relación con este tema, se reiteró la importancia del grupo de WhatsApp para facilitar la comunicación y evitar molestias a los residentes. Se propuso crear un grupo de difusión en lugar de un grupo donde todos puedan escribir, para evitar la propagación de mensajes no relacionados con el edificio. Se acordó que este grupo incluiría tanto a inquilinos como a propietarios.</p>
+
+<p>Finalmente, se mencionó brevemente la presentación de Camilo Vargas sobre energía solar, pero se pospuso la discusión detallada para otro momento debido a la falta de tiempo y a la necesidad de analizar la propuesta en profundidad antes de presentarla a la asamblea.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se enviará una carta a los cuatro deudores de cartera más altos, dándoles plazo hasta el 31 de octubre para ponerse al día o hacer un acuerdo de pago – <strong>Responsable:</strong> Paola (Administración)</li>
+ <li>Se realizará una revisión del movimiento bancario alrededor del día 15 de cada mes para verificar que los servicios se estén debitando correctamente y evitar retrasos en los pagos – <strong>Responsable:</strong> Angélica Caicedo (Contadora)</li>
+ <li>Se solicitarán dos cotizaciones adicionales para la impermeabilización de la jardinera del segundo piso, tomando como base los ítems de la cotización de Soluciones Integrales – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se realizará un estudio profundo sobre las propuestas de instalación de paneles solares, analizando los contratos y costos específicos, para presentar la información a la asamblea – <strong>Responsable:</strong> No especificado</li>
+ <li>Se creará un grupo de difusión de WhatsApp para comunicar información relevante a los residentes, incluyendo inquilinos y propietarios – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se contactará a la empresa de vigilancia para discutir la posibilidad de utilizar un celular a nombre de la copropiedad para la comunicación interna – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se solicitará a los vigilantes que recojan los números de teléfono y las firmas del formato de Habeas Data, apartamento por apartamento – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ <li>Se compensará a los residentes del depósito 302 con 350.000 pesos por los daños causados por la inundación – <strong>Responsable:</strong> Luz Marina (Administradora)</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Generando URL pública para Borrador.docx (RECIÉN CREADO): testsebs_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/testsebs/testsebs_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/95wQTjo6BxMmkCL
+URL pública de Borrador.docx (RECIÉN CREADO) obtenida: https://files.actasdereuniones.ai/s/95wQTjo6BxMmkCL
+Generando URL pública para Transcripcion.txt (EXISTENTE): testsebs_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/testsebs/testsebs_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/Y8oDAw44DyPt4H5
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/Y8oDAw44DyPt4H5
+Verificando si existe transcripción: consejo_Transcripcion.txt en carpeta consejo
+[2025-11-18T19:56:14.312Z] Verificando existencia del archivo consejo_Transcripcion.txt en Nextcloud carpeta consejo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo/consejo_Transcripcion.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T19:56:15.676Z] Archivo "consejo_Transcripcion.txt" EXISTE en Nextcloud en la carpeta "consejo".
+Transcripción existente encontrada: consejo. Obteniendo contenido.
+Verificando contenido existente: consejo_Contenido.txt
+[2025-11-18T19:56:16.996Z] Verificando existencia del archivo consejo_Contenido.txt en Nextcloud carpeta consejo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo/consejo_Contenido.txt
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T19:56:17.816Z] Archivo "consejo_Contenido.txt" EXISTE en Nextcloud en la carpeta "consejo".
+Contenido existente: consejo_Contenido.txt. Cargando.
+[2025-11-18T19:56:18.632Z] Contenido del archivo "consejo_Contenido.txt" obtenido de Nextcloud.
+Iniciando formatContent (VERSION FUSIONADA) para: consejo.mp4 en carpeta: consejo
+Verificando Borrador .docx existente: consejo_Borrador.docx
+[2025-11-18T19:56:18.633Z] Verificando existencia del archivo consejo_Borrador.docx en Nextcloud carpeta consejo.
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/consejo/consejo_Borrador.docx
+[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: 207, ok: true
+[2025-11-18T19:56:19.487Z] Archivo "consejo_Borrador.docx" EXISTE en Nextcloud en la carpeta "consejo".
+Borrador .docx existente. Generando URLs públicas para archivos existentes.
+Generando URL pública para Borrador.docx (EXISTENTE): consejo_Borrador.docx
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo/consejo_Borrador.docx
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/HYWT9SpwDWRTXDR
+URL pública de Borrador.docx (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/HYWT9SpwDWRTXDR
+Generando URL pública para Transcripcion.txt (EXISTENTE): consejo_Transcripcion.txt
+Compartiendo archivo existente para obtener URL pública: /Actas/consejo/consejo_Transcripcion.txt
+URL pública de archivo existente obtenida: https://files.actasdereuniones.ai/s/YTA8NEwHbmKagM9
+URL pública de Transcripcion.txt (EXISTENTE) obtenida: https://files.actasdereuniones.ai/s/YTA8NEwHbmKagM9

@@ -24,6 +24,7 @@ interface Acta {
   urlAssembly: string | null;
   idEstadoProceso: number | null;
   fechaProcesamiento: Date;
+  nombreEstado: string | null;
 }
 interface HistorialActasProps {
   reloadTrigger: boolean;
@@ -61,24 +62,24 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
       if (!silent) {
         setLoading(true);
       }
-      
+
       const result = await getActasByUser();
 
       if (result.status === 'success') {
         // Verificar si alguna acta cambió de estado 5 a 6 o 7
         const estadosAnteriores = estadosAnterioresRef.current;
         let huboCambio = false;
-        
+
         // Solo verificar cambios en las actas del usuario actual (result.data ya viene filtrado por usuario)
         result.data.forEach((acta: Acta) => {
           const estadoAnterior = estadosAnteriores[acta.id];
           const estadoActual = acta.idEstadoProceso;
-          
+
           // Si estaba en estado 5 y ahora está en 6 o 7, hubo un cambio (proceso terminó)
           if (estadoAnterior === 5 && (estadoActual === 6 || estadoActual === 7)) {
             huboCambio = true;
           }
-          
+
           // Actualizar el estado anterior solo para las actas del usuario actual
           estadosAnteriores[acta.id] = estadoActual;
         });
@@ -122,11 +123,11 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
     // Si es la primera carga, mostrar loader. Si no, actualización silenciosa
     const esPrimeraCarga = primeraCargaRef.current;
     const esActualizacion = !esPrimeraCarga || silentReload;
-    
+
     if (esPrimeraCarga) {
       primeraCargaRef.current = false;
     }
-    
+
     cargarActas(esActualizacion);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reloadTrigger, silentReload]);
@@ -154,7 +155,7 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
         if (response.ok) {
           const data = await response.json();
           const userId = data.userId;
-          
+
           if (!userId) {
             console.log('No se pudo obtener user_id para la suscripción');
             return;
@@ -222,7 +223,7 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
     if (!busqueda.trim()) {
       return actas;
     }
-    return actas.filter(acta => 
+    return actas.filter(acta =>
       acta.nombre?.toLowerCase().includes(busqueda.toLowerCase())
     );
   }, [actas, busqueda]);
@@ -238,38 +239,48 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
     setPaginaActual(1);
   }, [busqueda]);
 
-  const downloadFile = (url: string, tipo: 'acta' | 'transcripcion') => {
+  const downloadFile = (url: string, tipo: 'acta' | 'transcripcion' | 'borrador') => {
     const proxyUrl = `/api/descarga?url=${encodeURIComponent(url)}`;
-    window.open(proxyUrl, "_blank");
+
+    // Crear un elemento temporal <a> para forzar la descarga
+    // Esto suele funcionar mejor que window.open para múltiples descargas
+    const link = document.createElement('a');
+    link.href = proxyUrl;
+    link.target = '_blank';
+    link.download = url.split('/').pop() || 'archivo';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
     console.log(`Descarga iniciada a través del proxy para ${tipo}:`, url);
   };
 
-  const handleDownloadActa = async (acta: Acta) => {
+  const handleDownloadBorrador = async (acta: Acta) => {
     try {
-      if (!acta.urlTranscripcion) {
-        console.error("No se ha proporcionado la URL del acta");
+      if (!acta.urlBorrador) {
+        console.error("No se ha proporcionado la URL del borrador");
         return;
       }
 
-      // Track inicio descarga acta
+      // Track inicio descarga borrador
       if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
         window.gtag('event', 'inicio_descarga_documento', {
           event_category: 'descarga',
-          event_label: 'descarga_acta_historial',
-          tipo_documento: 'acta',
+          event_label: 'descarga_borrador_historial',
+          tipo_documento: 'borrador',
           nombre_archivo: acta.nombre
         });
       }
 
-      downloadFile(acta.urlTranscripcion, 'acta');
+      downloadFile(acta.urlBorrador, 'borrador');
     } catch (error) {
-      console.error("Error al descargar acta:", (error as Error).message);
+      console.error("Error al descargar borrador:", (error as Error).message);
     }
   };
 
   const handleDownloadTranscripcion = async (acta: Acta) => {
     try {
-      if (!acta.urlBorrador) {
+      if (!acta.urlTranscripcion) {
         console.error("No se ha proporcionado la URL de la transcripción");
         return;
       }
@@ -284,9 +295,48 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
         });
       }
 
-      downloadFile(acta.urlBorrador, 'transcripcion');
+      downloadFile(acta.urlTranscripcion, 'transcripcion');
     } catch (error) {
       console.error("Error al descargar transcripción:", (error as Error).message);
+    }
+  };
+
+  const handleDescargarAmbos = async (acta: Acta) => {
+    try {
+      // 1. Descargar Borrador (Prioridad)
+      if (acta.urlBorrador) {
+        // Track inicio descarga borrador
+        if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag('event', 'inicio_descarga_documento', {
+            event_category: 'descarga',
+            event_label: 'descarga_borrador_historial',
+            tipo_documento: 'borrador',
+            nombre_archivo: acta.nombre
+          });
+        }
+
+        downloadFile(acta.urlBorrador, 'borrador');
+      }
+
+      // 2. Descargar Transcripción (con delay)
+      const urlTranscripcion = acta.urlTranscripcion;
+      if (urlTranscripcion) {
+        setTimeout(() => {
+          // Track inicio descarga transcripción
+          if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
+            window.gtag('event', 'inicio_descarga_documento', {
+              event_category: 'descarga',
+              event_label: 'descarga_transcripcion_historial',
+              tipo_documento: 'transcripcion',
+              nombre_archivo: acta.nombre
+            });
+          }
+
+          downloadFile(urlTranscripcion, 'transcripcion');
+        }, 1500); // Esperar 1.5s entre descargas para asegurar que el navegador acepte ambas
+      }
+    } catch (error) {
+      console.error("Error al descargar archivos:", (error as Error).message);
     }
   };
 
@@ -299,13 +349,13 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
   // Convertir duración a segundos
   const duracionASegundos = (duracion: string | null): number => {
     if (!duracion) return 0;
-    
+
     // Si es un número (segundos), retornarlo
     const numero = parseFloat(duracion);
     if (!isNaN(numero) && !duracion.includes(':')) {
       return numero;
     }
-    
+
     // Si tiene formato HH:MM:SS
     if (duracion.includes(':')) {
       const partes = duracion.split(':');
@@ -316,7 +366,7 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
         return horas * 3600 + minutos * 60 + segundos;
       }
     }
-    
+
     return 0;
   };
 
@@ -373,7 +423,7 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
     try {
       const duracionSegundos = duracionASegundos(actaParaRelanzar.duracion);
       const resultado = await validarCodigo(codigoAtencion.trim().toLowerCase(), duracionSegundos);
-      
+
       if (resultado.valido && resultado.codigo) {
         setCodigoValido(true);
         setMensajeCodigo("✓ Código válido");
@@ -547,35 +597,29 @@ export default function HistorialActasComponent({ reloadTrigger, silentReload = 
     }
   };
 
-  const handleSoporteWhatsApp = (acta: Acta) => {
+  const handleSoporteWhatsApp = () => {
     const nombreUsuario = session?.user?.name || 'Usuario';
-    const nombreActa = acta.nombre || 'Sin nombre';
-    const transaccion = acta.tx || 'Sin transacción';
-    const monto = acta.costo ? `$${parseInt(acta.costo).toLocaleString('es-CO')} COP` : 'Sin monto';
-    const duracion = acta.duracion || 'N/A';
+    const emailUsuario = session?.user?.email || 'Sin email';
 
-    const mensaje = `Hola, soy ${nombreUsuario}. Necesito ayuda para poder descargar los datos del acta.
+    const mensaje = `Hola, soy ${nombreUsuario}. Necesito ayuda con mi cuenta.
 
-Información del acta:
-• Nombre: ${nombreActa}
-• Transacción: ${transaccion}
-• Monto: ${monto}
-• Duración: ${duracion}
+Información del usuario:
+• Nombre: ${nombreUsuario}
+• Email: ${emailUsuario}
 
-Por favor, ¿pueden ayudarme con la descarga?`;
+Por favor, ¿pueden ayudarme?`;
 
     const numeroWhatsApp = '573122995191'; // Sin espacios ni signos
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, '_blank');
   };
 
-  // Función para obtener el texto del estado según idEstadoProceso
-  const getEstadoTexto = (idEstadoProceso: number | null): string => {
-    if (idEstadoProceso === null) return 'Sin estado';
-    if (idEstadoProceso <= 4) return 'En pago';
-    if (idEstadoProceso === 5) return 'En generación';
-    if (idEstadoProceso === 6) return 'Generada';
-    if (idEstadoProceso === 7) return 'Entregada';
+  // Función para obtener el texto del estado desde la base de datos
+  const getEstadoTexto = (acta: Acta): string => {
+    if (acta.nombreEstado) {
+      return acta.nombreEstado;
+    }
+    if (acta.idEstadoProceso === null) return 'Sin estado';
     return 'Sin estado';
   };
 
@@ -616,7 +660,7 @@ Por favor, ¿pueden ayudarme con la descarga?`;
   }
 
   return (
-    <div className="w-full px-1 sm:px-0">
+    <div className="w-full sm:px-0">
       {/* Buscador */}
       <div className="mb-3 sm:mb-6">
         <label htmlFor="busqueda" className="block text-sm font-medium text-gray-700 mb-2">
@@ -645,6 +689,59 @@ Por favor, ¿pueden ayudarme con la descarga?`;
         </div>
       )}
 
+      {/* Cabecera con botones de soporte y refrescar */}
+      <div className="mb-4 flex justify-end gap-2 flex-shrink-0">
+        <button
+          onClick={handleSoporteWhatsApp}
+          className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-green-500 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors flex-shrink-0 shadow-sm"
+          aria-label="Contactar soporte por WhatsApp"
+          title="Contactar soporte por WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="size-5"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+          </svg>
+        </button>
+        <button
+          onClick={handleRecargarConsulta}
+          disabled={recargando}
+          className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-orange-600 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 disabled:bg-gray-100 disabled:text-gray-400 disabled:cursor-not-allowed transition-colors flex-shrink-0 shadow-sm"
+          aria-label="Refrescar actas"
+          title="Refrescar lista de actas"
+        >
+          {recargando ? (
+            <div className="animate-spin rounded-full h-5 w-5 border-2 border-orange-600 border-t-transparent"></div>
+          ) : (
+            <>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-5"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                <path d="M21 3v5h-5" />
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                <path d="M3 21v-5h5" />
+              </svg>
+
+            </>
+          )}
+        </button>
+      </div>
+
       {/* Lista de actas */}
       {actasPagina.length === 0 ? (
         <div className="text-center py-8">
@@ -655,275 +752,184 @@ Por favor, ¿pueden ayudarme con la descarga?`;
           <ul role="list" className="divide-y divide-gray-100">
             {actasPagina.map((acta) => {
               const mostrarDetalles = actasExpandidas[acta.id] || false;
-              
+
               return (
-                <li key={acta.id} className="relative p-1.5 sm:p-4 mb-2 sm:mb-0 sm:border-0 sm:rounded-none">
-                  <div className="flex flex-row items-start justify-between gap-1.5 sm:gap-6">
-                    <div className="flex min-w-0 gap-x-1.5 sm:gap-x-4 flex-1">
-                    <div className="min-w-0 flex-auto">
-                      <p className="text-sm sm:text-base font-semibold text-gray-900 break-words line-clamp-2">
-                        {acta.nombre || 'Sin nombre'}
-                      </p>
-                      <p className="mt-1 text-xs sm:text-sm text-gray-500">
-                        TX: {acta.tx || 'Sin transacción'}
-                      </p>
-                      
-                      {/* Detalles expandibles en mobile */}
-                      {mostrarDetalles && (
-                        <div className="mt-3 sm:hidden space-y-1 pt-3 border-t border-gray-200">
-                          <div className="flex items-center gap-2">
-                            <span className="font-semibold text-xs text-gray-700">Estado:</span>
-                            <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal ${getEstadoColor(acta.idEstadoProceso)}`}>
-                              {getEstadoTexto(acta.idEstadoProceso)}
-                            </span>
+                <li key={acta.id} className="relative sm:py-2 mb-2 sm:mb-0 sm:border-0 sm:rounded-none">
+                  <div className="flex flex-row items-start gap-2 sm:gap-4">
+                    <div className="flex min-w-0 flex-1 pr-2">
+                      <div className="min-w-0 flex-auto">
+                        <p className="text-sm sm:text-base font-semibold text-gray-900 break-words line-clamp-2">
+                          {acta.nombre || 'Sin nombre'}
+                        </p>
+                        <p className="mt-1 text-xs sm:text-sm text-gray-500">
+                          TX: {acta.tx || 'Sin transacción'}
+                        </p>
+
+                        {/* Detalles expandibles en mobile */}
+                        {mostrarDetalles && (
+                          <div className="mt-3 sm:hidden space-y-1 pt-3 border-t border-gray-200">
+                            <div className="flex items-center gap-2">
+                              <span className="font-semibold text-xs text-gray-700">Estado:</span>
+                              <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal ${getEstadoColor(acta.idEstadoProceso)}`}>
+                                {getEstadoTexto(acta)}
+                              </span>
+                            </div>
+                            <p className="text-xs text-gray-700">
+                              <span className="font-semibold">Duración:</span> {acta.duracion || 'N/A'}
+                            </p>
                           </div>
-                          <p className="text-xs text-gray-700">
-                            <span className="font-semibold">Duración:</span> {acta.duracion || 'N/A'}
-                          </p>
-                        </div>
-                      )}
-                      
-                      {/* Botón para expandir/colapsar en mobile */}
-                      <button
-                        onClick={() => setActasExpandidas(prev => ({ ...prev, [acta.id]: !prev[acta.id] }))}
-                        className="mt-2 sm:hidden flex items-center gap-1 text-xs text-purple-600 hover:text-purple-700"
-                      >
-                        {mostrarDetalles ? (
-                          <>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="size-4"
-                              width={24}
-                              height={24}
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polyline points="18 15 12 9 6 15" />
-                            </svg>
-                            Ocultar detalles
-                          </>
-                        ) : (
-                          <>
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="size-4"
-                              width={24}
-                              height={24}
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                            Ver detalles
-                          </>
                         )}
-                      </button>
-                    </div>
-                    </div>
-                  
-                    <div className="flex shrink-0 items-start sm:items-center justify-end gap-2 sm:gap-x-4">
-                    {/* Ocultar en mobile, mostrar en desktop */}
-                    <div className="hidden sm:flex sm:flex-col sm:items-end gap-2">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal ${getEstadoColor(acta.idEstadoProceso)}`}>
-                        {getEstadoTexto(acta.idEstadoProceso)}
-                      </span>
-                      <p className="text-xs text-gray-500">
-                        Duración: {acta.duracion || 'N/A'}
-                      </p>
-                    </div>
-                  
-                  {/* Verificar estado y mostrar botones apropiados */}
-                  {acta.idEstadoProceso !== null && acta.idEstadoProceso < 5 && acta.urlAssembly ? (
-                    /* Si está en estado < 5 y tiene urlAssembly, mostrar botones de soporte y relanzar */
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <button
-                        onClick={() => handleSoporteWhatsApp(acta)}
-                        className="group relative flex items-center justify-center w-10 h-10 text-white rounded-lg bg-green-500 hover:bg-green-400 transition-colors flex-shrink-0"
-                        aria-label="Contactar soporte por WhatsApp"
-                        title="Contactar soporte por WhatsApp"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-5"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
+
+                        {/* Botón para expandir/colapsar en mobile */}
+                        <button
+                          onClick={() => setActasExpandidas(prev => ({ ...prev, [acta.id]: !prev[acta.id] }))}
+                          className="mt-2 sm:hidden flex items-center gap-1 text-xs text-purple-600 hover:text-purple-700"
                         >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                        </svg>
-                        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                          Contactar soporte
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
-                        </span>
-                      </button>
-                      <button
-                        onClick={() => handleRelanzarActa(acta)}
-                        disabled={procesandoRelanzamiento || !puedeRelanzar(acta.fechaProcesamiento)}
-                        className={`group relative flex items-center justify-center w-10 h-10 text-white rounded-lg transition-colors flex-shrink-0 ${
-                          puedeRelanzar(acta.fechaProcesamiento) && !procesandoRelanzamiento
-                            ? 'bg-blue-600 hover:bg-blue-500'
-                            : 'bg-gray-400 cursor-not-allowed'
-                        }`}
-                        aria-label="Relanzar acta"
-                        title={puedeRelanzar(acta.fechaProcesamiento) 
-                          ? "Relanzar acta y continuar con el pago" 
-                          : "El relanzamiento solo está disponible para actas creadas hace menos de 20 horas"}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-5"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                        </svg>
-                        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                          Relanzar acta
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
-                        </span>
-                      </button>
+                          {mostrarDetalles ? (
+                            <>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-4"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polyline points="18 15 12 9 6 15" />
+                              </svg>
+                              Ocultar detalles
+                            </>
+                          ) : (
+                            <>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-4"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <polyline points="6 9 12 15 18 9" />
+                              </svg>
+                              Ver detalles
+                            </>
+                          )}
+                        </button>
+                      </div>
                     </div>
-                  ) : acta.urlBorrador && acta.urlTranscripcion ? (
-                    /* Si existen ambos links, mostrar dos botones de descarga */
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <button
-                        
-                        onClick={() => handleDownloadActa(acta)}
-                        className="group relative flex items-center justify-center w-10 h-10 text-white rounded-lg bg-blue-600 hover:bg-blue-500 transition-colors flex-shrink-0"
-                        aria-label="Descargar transcripción"
-                        title="Descargar transcripción"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-5"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                          <polyline points="14 2 14 8 20 8" />
-                          <line x1="16" y1="13" x2="8" y2="13" />
-                          <line x1="16" y1="17" x2="8" y2="17" />
-                          <polyline points="10 9 9 9 8 9" />
-                        </svg>
-                        {/* Tooltip */}
-                        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                          Descargar transcripción
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+
+                    <div className="flex shrink-0 items-start sm:items-center gap-2 sm:gap-4">
+                      {/* Ocultar en mobile, mostrar en desktop */}
+                      <div className="hidden sm:flex sm:flex-col sm:items-end gap-2">
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-normal ${getEstadoColor(acta.idEstadoProceso)}`}>
+                          {getEstadoTexto(acta)}
                         </span>
-                      </button>
-                      <button
-                      onClick={() => handleDownloadTranscripcion(acta)}
-                        className="group relative flex items-center justify-center w-10 h-10 text-white rounded-lg bg-purple-700 hover:bg-purple-600 transition-colors flex-shrink-0"
-                        aria-label="Descargar acta"
-                        title="Descargar acta de reunión"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-5"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                          <polyline points="7 10 12 15 17 10" />
-                          <line x1="12" y1="15" x2="12" y2="3" />
-                        </svg>
-                        {/* Tooltip */}
-                        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                          Descargar acta
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
-                        </span>
-                      </button>
-                    </div>
-                  ) : (
-                    /* Si no existen los links, mostrar botones de recargar y soporte */
-                    <div className="flex flex-col sm:flex-row gap-2">
-                      <button
-                        onClick={() => handleSoporteWhatsApp(acta)}
-                        className="group relative flex items-center justify-center w-10 h-10 text-white rounded-lg bg-green-500 hover:bg-green-400 transition-colors flex-shrink-0"
-                        aria-label="Contactar soporte por WhatsApp"
-                        title="Contactar soporte por WhatsApp"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="size-5"
-                          width={24}
-                          height={24}
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                        >
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214l-3.741.982l.998-3.648l-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884c2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-                        </svg>
-                        {/* Tooltip */}
-                        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                          Contactar soporte
-                          <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
-                        </span>
-                      </button>
-                      <button
-                        onClick={handleRecargarConsulta}
-                        disabled={recargando}
-                        className="group relative flex items-center justify-center w-10 h-10 text-white rounded-lg bg-orange-600 hover:bg-orange-500 disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors flex-shrink-0"
-                        aria-label="Recargar consulta"
-                        title="Recargar para verificar si ya está disponible"
-                      >
-                        {recargando ? (
-                          <div className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></div>
-                        ) : (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-5"
-                            width={24}
-                            height={24}
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
+                        <p className="text-xs text-gray-500">
+                          Duración: {acta.duracion || 'N/A'}
+                        </p>
+                      </div>
+
+                      {/* Verificar estado y mostrar botones apropiados */}
+                      <div className="flex justify-end">
+                        {acta.idEstadoProceso === 5 ? (
+                          /* Si está en estado 5 (En generación), mostrar botón morado con icono girando */
+                          <button
+                            disabled
+                            className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-purple-600 rounded-lg bg-white border border-gray-200 cursor-not-allowed transition-colors flex-shrink-0 shadow-sm"
+                            aria-label="En generación"
+                            title="El acta se está generando"
                           >
-                            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-                            <path d="M21 3v5h-5" />
-                            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-                            <path d="M3 21v-5h5" />
-                          </svg>
-                        )}
-                        {/* Tooltip */}
-                        {!recargando && (
-                          <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
-                            Recargar consulta
-                            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
-                          </span>
-                        )}
-                      </button>
-                    </div>
-                  )}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="size-5 animate-spin"
+                              width={24}
+                              height={24}
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
+                            </svg>
+                            <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                              En generación
+                              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                            </span>
+                          </button>
+                        ) : acta.idEstadoProceso !== null && acta.idEstadoProceso < 5 && acta.urlAssembly ? (
+                          /* Si está en estado < 5 y tiene urlAssembly, mostrar solo botón de relanzar */
+                          <button
+                            onClick={() => handleRelanzarActa(acta)}
+                            disabled={procesandoRelanzamiento || !puedeRelanzar(acta.fechaProcesamiento)}
+                            className={`group relative flex items-center justify-center w-10 h-10 min-w-[40px] rounded-lg transition-colors flex-shrink-0 shadow-sm ${puedeRelanzar(acta.fechaProcesamiento) && !procesandoRelanzamiento
+                              ? 'text-purple-600 bg-white border border-gray-200 hover:bg-gray-50'
+                              : 'text-gray-400 bg-gray-100 cursor-not-allowed border border-gray-200'
+                              }`}
+                            aria-label="Relanzar acta"
+                            title={puedeRelanzar(acta.fechaProcesamiento)
+                              ? "Relanzar acta y continuar con el pago"
+                              : "El relanzamiento solo está disponible para actas creadas hace menos de 20 horas"}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="size-5"
+                              width={24}
+                              height={24}
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                              Relanzar acta
+                              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                            </span>
+                          </button>
+                        ) : acta.urlBorrador && acta.urlTranscripcion ? (
+                          /* Si existen ambos links, mostrar 2 botones separados - Transcripción primero (izquierda), Borrador segundo (derecha) */
+                          <button
+                            onClick={() => handleDescargarAmbos(acta)}
+                            className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-purple-600 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors flex-shrink-0 shadow-sm"
+                            aria-label="Descargar archivos"
+                            title="Descargar Acta y Transcripción"
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="size-5"
+                              width={24}
+                              height={24}
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                              <polyline points="7 10 12 15 17 10" />
+                              <line x1="12" y1="15" x2="12" y2="3" />
+                            </svg>
+                            <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                              Descargar Todo
+                              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                            </span>
+                          </button>
+                        ) : null}
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -994,7 +1000,7 @@ Por favor, ¿pueden ayudarme con la descarga?`;
           <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
             <h3 className="text-lg font-semibold mb-4">Relanzar acta: {actaParaRelanzar.nombre}</h3>
             <p className="text-sm text-gray-600 mb-4">
-              Duración: {actaParaRelanzar.duracion} | 
+              Duración: {actaParaRelanzar.duracion} |
               Costo: ${calculatePrice(duracionASegundos(actaParaRelanzar.duracion)).toLocaleString('es-CO')} COP
             </p>
 

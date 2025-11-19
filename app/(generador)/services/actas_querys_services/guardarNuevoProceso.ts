@@ -19,6 +19,7 @@ export async function GuardarNuevoProceso(
   Industria: number | null | undefined,
   automation_mail: string | null | undefined,
   codigoAtencion?: string | null | undefined,
+  codigoReferido?: string | null | undefined,
 ) {
   try {
     // 📨 obtener usuario
@@ -42,6 +43,7 @@ export async function GuardarNuevoProceso(
       urlBorrador: urlborrador,
       idIndustria: Industria,
       codigoAtencion: codigoAtencion || null,
+      codigoReferido: codigoReferido ? codigoReferido.trim().toUpperCase() : null,
     };
 
     // 🔎 buscar si ya existe con estado <6

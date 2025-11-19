@@ -8,7 +8,7 @@ import { eq, and } from "drizzle-orm";
 
 /**
  * Busca si existe un acta con el nombre dado (sin importar el estado)
- * Retorna true si existe (duplicado), false si no existe
+ * Retorna null si no existe, o un objeto con la información completa del acta si existe
  */
 export async function BuscarAbiertoProceso(nombreActa: string) {
   try {
@@ -29,13 +29,27 @@ export async function BuscarAbiertoProceso(nombreActa: string) {
       )
       .limit(1);
 
-    // Si existe, retornar true (es duplicado)
+    // Si existe, retornar la información completa del acta
     if (actaExistente.length > 0) {
-      return true;
+      const acta = actaExistente[0];
+      return {
+        existe: true,
+        id: acta.id,
+        nombre: acta.nombre,
+        idEstadoProceso: acta.idEstadoProceso ? Number(acta.idEstadoProceso) : null,
+        fechaProcesamiento: acta.fechaProcesamiento,
+        idUsuario: acta.idUsuario,
+        urlAssembly: acta.urlAssembly,
+        duracion: acta.duracion,
+        costo: acta.costo,
+        tx: acta.tx,
+        urlTranscripcion: acta.urlTranscripcion,
+        urlBorrador: acta.urlBorrador,
+      };
     }
 
-    // No existe, retornar false (no es duplicado)
-    return false;
+    // No existe, retornar null
+    return null;
 
   } catch (error: unknown) {
     console.error("❌ Error al Buscar acta:", error);

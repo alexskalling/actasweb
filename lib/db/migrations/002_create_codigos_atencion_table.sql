@@ -27,3 +27,6 @@ COMMENT ON COLUMN public.codigos_atencion.estado IS 'Indica si el código está 
 COMMENT ON COLUMN public.codigos_atencion.descripcion IS 'Descripción opcional del código';
 
 
+
+
+
