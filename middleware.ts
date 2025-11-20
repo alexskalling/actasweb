@@ -4,10 +4,16 @@ import { getToken } from "next-auth/jwt";
 
 export async function middleware(request: NextRequest) {
   const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET });
+  const pathname = request.nextUrl.pathname;
 
-  // Si no hay sesión -> redirige al login
+  // Si estamos en la página principal (login), permitir acceso sin autenticación
+  if (pathname === "/") {
+    return NextResponse.next();
+  }
+
+  // Si no hay sesión -> redirige al login (página principal)
   if (!token) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL("/", request.url));
   }
 
   // Restricción especial: solo rol 3 puede entrar a /empresas/plataforma
@@ -23,6 +29,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|login|api|$|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|api|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

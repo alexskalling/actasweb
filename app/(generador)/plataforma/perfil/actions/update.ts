@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
@@ -26,16 +26,14 @@ export async function updateProfile(formData: FormData) {
   const tipoDocumento = formData.get("tipoDocumento")?.toString();
   const numeroDocumento = formData.get("numeroDocumento")?.toString();
 
-  // Validar teléfono si se proporciona
   if (phone) {
     const phoneRegex = /^[0-9]{10}$/;
-    const cleanPhone = phone.replace(/\s/g, '');
+    const cleanPhone = phone.replace(/\s/g, "");
     if (!phoneRegex.test(cleanPhone)) {
       throw new Error("El teléfono debe tener 10 dígitos.");
     }
   }
 
-  // Validar email si se proporciona
   if (emailFacturacion) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailFacturacion)) {
@@ -43,17 +41,17 @@ export async function updateProfile(formData: FormData) {
     }
   }
 
-  // Validar número de documento si se proporciona
   if (numeroDocumento) {
-    const cleanNumeroDoc = numeroDocumento.replace(/\s/g, '');
+    const cleanNumeroDoc = numeroDocumento.replace(/\s/g, "");
     if (cleanNumeroDoc.length < 8) {
-      throw new Error("El número de documento debe tener al menos 8 caracteres.");
+      throw new Error(
+        "El número de documento debe tener al menos 8 caracteres.",
+      );
     }
   }
 
-  // Construir objeto de actualización
   const updateFields: any = {};
-  if (phone) updateFields.telefono = phone.replace(/\s/g, '');
+  if (phone) updateFields.telefono = phone.replace(/\s/g, "");
   if (nombre) updateFields.nombre = nombre;
   if (apellido) updateFields.apellido = apellido;
   if (emailFacturacion) updateFields.email = emailFacturacion;
@@ -63,17 +61,22 @@ export async function updateProfile(formData: FormData) {
   updateFields.pais = "Colombia";
   updateFields.tipoUsuario = tipoUsuario;
   if (tipoDocumento) updateFields.tipoDocumento = tipoDocumento;
-  if (numeroDocumento) updateFields.numeroDocumento = numeroDocumento.replace(/\s/g, '');
+  if (numeroDocumento)
+    updateFields.numeroDocumento = numeroDocumento.replace(/\s/g, "");
 
-  // Verificar si todos los campos de facturación están completos
-  const hasAllBillingFields = nombre && apellido && phone && emailFacturacion && 
-                               departamento && municipio && direccion;
+  const hasAllBillingFields =
+    nombre &&
+    apellido &&
+    phone &&
+    emailFacturacion &&
+    departamento &&
+    municipio &&
+    direccion;
   if (hasAllBillingFields) {
     updateFields.tieneDatosFacturacion = 1;
   }
 
-  // Intentar actualizar idIndustria si se proporciona
-  if (industria && industria.trim() !== '') {
+  if (industria && industria.trim() !== "") {
     updateFields.idIndustria = parseInt(industria);
   }
 
@@ -83,13 +86,12 @@ export async function updateProfile(formData: FormData) {
       .set(updateFields)
       .where(eq(usuarios.email, email));
   } catch (error: any) {
-    // Si falla por columna inexistente, intentar sin idIndustria
-    if (error?.code === '42703' || error?.message?.includes('does not exist')) {
+    if (error?.code === "42703" || error?.message?.includes("does not exist")) {
       delete updateFields.idIndustria;
-  await db
-    .update(usuarios)
+      await db
+        .update(usuarios)
         .set(updateFields)
-    .where(eq(usuarios.email, email));
+        .where(eq(usuarios.email, email));
     } else {
       throw error;
     }

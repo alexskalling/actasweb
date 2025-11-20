@@ -10,7 +10,7 @@ if (!process.env.DATABASE_URL) {
   throw new Error('DATABASE_URL no está configurada en las variables de entorno');
 }
 
-const client = postgres(process.env.DATABASE_URL, {
+const client = postgres(process.env.DATABASE_URL as string, {
   ssl: 'require',
   connect_timeout: 60,
 });

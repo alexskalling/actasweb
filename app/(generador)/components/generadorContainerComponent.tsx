@@ -10,23 +10,22 @@ export default function GeneradorContainerContainer() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="w-full rounded-sm">
           <div className="flex h-full">
-            <MediaFileUploaderComponent onCheckActa={function (): void {
-              throw new Error("Function not implemented.");
-            }} />
+            <MediaFileUploaderComponent
+              onCheckActa={function (): void {
+                throw new Error("Function not implemented.");
+              }}
+            />
           </div>
         </div>
         <div className="w-full ">
           <CardContent className="flex flex-col items-center justify-center">
-
-
             <img
               src="https://actasdereuniones.ai/wp-content/uploads/2025/02/actas3.webp"
               alt="Procesador"
-              width={800} 
-              height={600} 
+              width={800}
+              height={600}
               className="object-cover"
             />
-
           </CardContent>
         </div>
       </div>

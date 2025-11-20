@@ -1,14 +1,10 @@
 import { NextResponse } from 'next/server';
 import { getBillingData } from '@/app/(generador)/services/billing/getBillingData';
 
-/**
- * Endpoint para obtener datos de facturación del usuario actual
- * Usado por componentes del cliente
- */
 export async function GET() {
   try {
     const billingData = await getBillingData();
-    
+
     if (!billingData) {
       return NextResponse.json(
         { error: 'No se encontraron datos de facturación' },

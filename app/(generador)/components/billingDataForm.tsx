@@ -3,7 +3,10 @@
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { saveBillingData } from "../services/billing/saveBillingData";
-import { getDepartamentos, getMunicipiosPorDepartamento } from "@/lib/services/getColombiaData";
+import {
+  getDepartamentos,
+  getMunicipiosPorDepartamento,
+} from "@/lib/services/getColombiaData";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 
@@ -13,11 +16,15 @@ interface BillingDataFormProps {
   onSuccess: () => void;
 }
 
-export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingDataFormProps) {
+export default function BillingDataForm({
+  isOpen,
+  onClose,
+  onSuccess,
+}: BillingDataFormProps) {
   const { data: session } = useSession();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  
+
   const [formData, setFormData] = useState({
     nombre: "",
     apellido: "",
@@ -34,16 +41,16 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
   useEffect(() => {
     if (isOpen) {
       setDepartamentos(getDepartamentos());
-      // Pre-llenar email si hay sesión
+
       if (session?.user?.email) {
-        setFormData(prev => ({ ...prev, email: session.user.email || "" }));
+        setFormData((prev) => ({ ...prev, email: session?.user?.email || "" }));
       }
       if (session?.user?.name) {
-        const nameParts = session.user.name.split(" ");
-        setFormData(prev => ({ 
-          ...prev, 
+        const nameParts = session?.user?.name.split(" ") || [];
+        setFormData((prev) => ({
+          ...prev,
           nombre: nameParts[0] || "",
-          apellido: nameParts.slice(1).join(" ") || ""
+          apellido: nameParts.slice(1).join(" ") || "",
         }));
       }
     }
@@ -52,16 +59,18 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
   useEffect(() => {
     if (formData.departamento) {
       setMunicipios(getMunicipiosPorDepartamento(formData.departamento));
-      // Resetear municipio cuando cambia el departamento
-      setFormData(prev => ({ ...prev, municipio: "" }));
+
+      setFormData((prev) => ({ ...prev, municipio: "" }));
     } else {
       setMunicipios([]);
     }
   }, [formData.departamento]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     setError(null);
   };
 
@@ -75,7 +84,9 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
       onSuccess();
       onClose();
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Error al guardar los datos");
+      setError(
+        err instanceof Error ? err.message : "Error al guardar los datos",
+      );
     } finally {
       setLoading(false);
     }
@@ -98,7 +109,7 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
             Datos de Facturación
           </h2>
           <p className="text-sm text-gray-600">
-            {session 
+            {session
               ? "Estos datos se guardarán en tu perfil y solo necesitarás llenarlos una vez."
               : "Si te registras, solo llenarás estos datos una sola vez."}
           </p>
@@ -150,7 +161,9 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
                 pattern="[0-9]{10}"
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
-              <p className="text-xs text-gray-500 mt-1">10 dígitos sin espacios</p>
+              <p className="text-xs text-gray-500 mt-1">
+                10 dígitos sin espacios
+              </p>
             </div>
 
             <div>
@@ -214,7 +227,9 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
                 className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 disabled:bg-gray-100"
               >
                 <option value="">
-                  {formData.departamento ? "Seleccione un municipio" : "Primero seleccione un departamento"}
+                  {formData.departamento
+                    ? "Seleccione un municipio"
+                    : "Primero seleccione un departamento"}
                 </option>
                 {municipios.map((mun) => (
                   <option key={mun} value={mun}>
@@ -269,4 +284,3 @@ export default function BillingDataForm({ isOpen, onClose, onSuccess }: BillingD
     </div>
   );
 }
-

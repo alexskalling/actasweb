@@ -8,10 +8,11 @@ import { getSession } from "next-auth/react";
 export default function EmailSignupBannerComponent() {
   useEffect(() => {
     const listener = async (event: MessageEvent) => {
-      if (event.data?.type === "auth-completed" && event.data?.source === "banner") {
+      if (
+        event.data?.type === "auth-completed" &&
+        event.data?.source === "banner"
+      ) {
         const session = await getSession();
-        console.log(" Sesión actualizada desde BANNER:", session);
-        // Aquí puedes actualizar estado global si lo necesitas
       }
     };
 
@@ -28,8 +29,7 @@ export default function EmailSignupBannerComponent() {
       });
     }
 
-    // Abre en una pestaña nueva
-    window.open(`/login?source=banner`, "_blank");
+    window.open(`/?source=banner`, "_blank");
   };
 
   return (

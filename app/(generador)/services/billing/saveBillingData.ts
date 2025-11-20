@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
@@ -16,12 +16,6 @@ export interface BillingDataInput {
   direccion: string;
 }
 
-/**
- * Guarda los datos de facturación del usuario
- * @param data - Datos de facturación del usuario
- * @returns Objeto con success: true si se guardó correctamente
- * @throws Error si hay problemas de validación o al guardar
- */
 export async function saveBillingData(data: BillingDataInput) {
   const session = await getServerSession(authOptions);
   const email = session?.user?.email;
@@ -30,26 +24,29 @@ export async function saveBillingData(data: BillingDataInput) {
     throw new Error("No se pudo identificar al usuario.");
   }
 
-  // Validaciones
-  if (!data.nombre || !data.apellido || !data.telefono || 
-      !data.email || !data.departamento || !data.municipio || !data.direccion) {
+  if (
+    !data.nombre ||
+    !data.apellido ||
+    !data.telefono ||
+    !data.email ||
+    !data.departamento ||
+    !data.municipio ||
+    !data.direccion
+  ) {
     throw new Error("Todos los campos son requeridos.");
   }
 
-  // Validar email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(data.email)) {
     throw new Error("El email no es válido.");
   }
 
-  // Validar teléfono (formato colombiano básico - 10 dígitos)
   const phoneRegex = /^[0-9]{10}$/;
-  const cleanPhone = data.telefono.replace(/\s/g, '');
+  const cleanPhone = data.telefono.replace(/\s/g, "");
   if (!phoneRegex.test(cleanPhone)) {
     throw new Error("El teléfono debe tener 10 dígitos.");
   }
 
-  // Actualizar datos en la base de datos
   await db
     .update(usuarios)
     .set({
@@ -61,10 +58,9 @@ export async function saveBillingData(data: BillingDataInput) {
       municipio: data.municipio,
       direccion: data.direccion,
       pais: "Colombia",
-      tieneDatosFacturacion: 1, // true
+      tieneDatosFacturacion: 1,
     })
     .where(eq(usuarios.email, email));
 
   return { success: true };
 }
-

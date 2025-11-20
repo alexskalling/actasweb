@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
 import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
@@ -6,10 +6,6 @@ import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
-/**
- * Obtiene el código de referido del usuario actual
- * @returns Código de referido o null si no existe
- */
 export async function getCodigoReferido(): Promise<string | null> {
   try {
     const mail = await getUserEmailFromSession();
@@ -37,5 +33,3 @@ export async function getCodigoReferido(): Promise<string | null> {
     return null;
   }
 }
-
-

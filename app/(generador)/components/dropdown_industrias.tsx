@@ -1,5 +1,4 @@
-// components/SelectIndustria.tsx
-'use client';
+"use client";
 
 import { useEffect, useState } from "react";
 import { Select } from "../../../components/ui/select";
@@ -16,7 +15,7 @@ export default function DropdownIndustrias({
   onSelect: (id: number | null) => void;
   value: number | null;
 }) {
-  const [industrias, setIndustrias] = useState<Industria[]>([])
+  const [industrias, setIndustrias] = useState<Industria[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -26,14 +25,14 @@ export default function DropdownIndustrias({
         setLoading(true);
         const result = await getIndustrias();
 
-        if (result.status === 'success') {
+        if (result.status === "success") {
           setIndustrias(result.data);
         } else {
-          setError(result.message || 'Error al cargar las industrias');
+          setError(result.message || "Error al cargar las industrias");
         }
       } catch (error) {
-        console.error('Error al cargar industrias:', error);
-        setError('Error al cargar las industrias');
+        console.error("Error al cargar industrias:", error);
+        setError("Error al cargar las industrias");
       } finally {
         setLoading(false);
       }
@@ -59,14 +58,14 @@ export default function DropdownIndustrias({
     );
   }
 
- const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-  const value = e.target.value === '' ? null : Number(e.target.value);
-  onSelect(value);
-};
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value === "" ? null : Number(e.target.value);
+    onSelect(value);
+  };
   return (
     <div className="w-full">
       <Select
-        value={value ?? ''}
+        value={value ?? ""}
         onChange={handleChange}
         className="mt-1 block w-full rounded-md border border-gray-300 bg-white p-2 text-sm shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
       >
@@ -80,5 +79,5 @@ export default function DropdownIndustrias({
         ))}
       </Select>
     </div>
-  )
+  );
 }

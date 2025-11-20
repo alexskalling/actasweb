@@ -6,51 +6,52 @@ import { AssemblyAI } from "assemblyai";
 import OpenAI from "openai/index.mjs";
 
 export async function obtenerClienteTranscripcion() {
+  const apiKey = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
+  if (!apiKey) {
+    throw new Error("NEXT_PUBLIC_ASSEMBLY_API_KEY no está configurada");
+  }
   return new AssemblyAI({
-    //@ts-expect-error revisar despues
-
-    apiKey: process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY,
+    apiKey: apiKey as string,
   });
 }
 export async function obtenerOpenAI() {
-  return new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) {
+    throw new Error("OPENAI_API_KEY no está configurada");
+  }
+  return new OpenAI({ apiKey: apiKey as string });
 }
-//@ts-expect-error revisar despues
 
-export async function obtenerContenidoArchivoDrive(drive, fileId) {
+export async function obtenerContenidoArchivoDrive(drive: any, fileId: string) {
   try {
-    // Obtener el archivo desde Google Drive como stream
     const archivoStream = await drive.files.get(
       {
         fileId: fileId,
-        alt: "media", // Obtiene el contenido del archivo
+        alt: "media",
       },
-      { responseType: "stream" }
+      { responseType: "stream" },
     );
 
-    // Leer el contenido del archivo desde el stream
-    const contenido = await new Promise((resolve, reject) => {
+    const contenido = await new Promise<string>((resolve, reject) => {
       let contenidoTotal = "";
       archivoStream.data
-        //@ts-expect-error revisar despues
 
-        .on("data", (chunk) => {
-          contenidoTotal += chunk; // Agregar cada fragmento al contenido total
+        .on("data", (chunk: Buffer) => {
+          contenidoTotal += chunk.toString();
         })
         .on("end", () => {
-          resolve(contenidoTotal); // Resolver con el contenido completo
+          resolve(contenidoTotal);
         })
-        //@ts-expect-error revisar despues
 
-        .on("error", (error) => {
-          reject(error); // Rechazar en caso de error
+        .on("error", (error: Error) => {
+          reject(error);
         });
     });
 
-    return contenido; // Devolver el contenido leído
+    return contenido;
   } catch (error) {
     console.error("Error al obtener el contenido del archivo:", error);
-    throw error; // Lanza el error para que pueda manejarse externamente
+    throw error;
   }
 }
 
@@ -88,9 +89,8 @@ export async function autenticarGoogleDrive() {
     universe_domain: "googleapis.com",
   };
 
-  // Configuración de la autenticación con GoogleAuth
   const auth = new google.auth.GoogleAuth({
-    credentials, // Se pasa directamente el objeto credentials
+    credentials,
     scopes: ["https://www.googleapis.com/auth/drive"],
   });
 
@@ -104,12 +104,11 @@ export async function autenticarGoogleDrive() {
 }
 
 export async function obtenerOCrearCarpeta(
-  drive: unknown,
-  nombreNormalizado: string
+  drive: any,
+  nombreNormalizado: string,
 ) {
   writeLog(`[${new Date().toISOString()}] Verificando o creando carpeta.`);
   const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
-  //@ts-expect-error revisar despues
 
   const respuestaCarpetaExistente = await drive.files.list({
     q: `name='${nombreCarpeta}' and mimeType='application/vnd.google-apps.folder' and '1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9' in parents`,
@@ -123,31 +122,25 @@ export async function obtenerOCrearCarpeta(
       mimeType: "application/vnd.google-apps.folder",
       parents: ["1vm0oIotvB4v4zAMwNYvtZzkHAIKVacQ9"],
     };
-    //@ts-expect-error revisar despues
 
     const respuestaCarpetaNueva = await drive.files.create({
       requestBody: carpetaNueva,
       fields: "id",
     });
     idCarpeta = respuestaCarpetaNueva.data.id;
-    writeLog(
-      `[${new Date().toISOString()}] Carpeta creada con ID: ${idCarpeta}.`
-    );
+    writeLog(`Carpeta creada con ID: ${idCarpeta}`);
   } else {
-    writeLog(
-      `[${new Date().toISOString()}] Carpeta existente con ID: ${idCarpeta}.`
-    );
+    writeLog(`Carpeta ya existe con ID: ${idCarpeta}`);
   }
   return idCarpeta;
 }
 
 export async function verificarArchivoExistenteant(
-  drive: unknown,
+  drive: any,
   nombreNormalizado: string,
-  idCarpeta: string
+  idCarpeta: string,
 ) {
   writeLog(`[${new Date().toISOString()}] Verificando existencia del archivo.`);
-  //@ts-expect-error revisar despues
 
   const respuestaArchivoExistente = await drive.files.list({
     q: `name='${nombreNormalizado}' and '${idCarpeta}' in parents`,
@@ -155,9 +148,7 @@ export async function verificarArchivoExistenteant(
   });
   if (respuestaArchivoExistente.data?.files?.length > 0) {
     const urlArchivoExistente = respuestaArchivoExistente.data.files[0].id;
-    writeLog(
-      `[${new Date().toISOString()}] Archivo ya existe. URL: ${urlArchivoExistente}.`
-    );
+    writeLog(`Archivo encontrado con ID: ${urlArchivoExistente}`);
     return urlArchivoExistente;
   }
   writeLog(`[${new Date().toISOString()}] Archivo no encontrado.`);
@@ -165,11 +156,9 @@ export async function verificarArchivoExistenteant(
 }
 export async function verificarArchivoExistente(
   nombreArchivo: string,
-  nombreCarpeta: string
+  nombreCarpeta: string,
 ): Promise<boolean> {
-  writeLog(
-    `[${new Date().toISOString()}] Verificando existencia del archivo ${nombreArchivo} en Nextcloud carpeta ${nombreCarpeta}.`
-  );
+  writeLog(`Verificando archivo: ${nombreArchivo} en carpeta: ${nombreCarpeta}`);
 
   const urlNextcloud = process.env.NEXTCLOUD_URL;
   const usuario = process.env.NEXTCLOUD_USER;
@@ -177,9 +166,9 @@ export async function verificarArchivoExistente(
 
   if (!usuario || !contrasena || !urlNextcloud) {
     console.error(
-      "Credenciales de Nextcloud no configuradas en variables de entorno para verificarArchivoExistenteNextcloud."
+      "Credenciales de Nextcloud no configuradas en variables de entorno para verificarArchivoExistenteNextcloud.",
     );
-    return false; // No se puede verificar sin credenciales
+    return false;
   }
 
   const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
@@ -196,71 +185,55 @@ export async function verificarArchivoExistente(
       method: "PROPFIND",
       headers: cabecerasAutenticacion,
     });
-    writeLog(
-      `[VERIFICAR ARCHIVO NEXTCLOUD] Respuesta status: ${respuestaVerificacionArchivo.status}, ok: ${respuestaVerificacionArchivo.ok}`
-    );
+    writeLog(`Verificación de archivo completada. Status: ${respuestaVerificacionArchivo.status}`);
 
     if (respuestaVerificacionArchivo.ok) {
-      writeLog(
-        `[${new Date().toISOString()}] Archivo "${nombreArchivo}" EXISTE en Nextcloud en la carpeta "${nombreCarpeta}".`
-      );
-      return true; // Archivo existe
+      writeLog(`Archivo verificado exitosamente: ${rutaCompletaArchivo}`);
+      return true;
     } else if (respuestaVerificacionArchivo.status === 404) {
-      writeLog(
-        `[${new Date().toISOString()}] Archivo "${nombreArchivo}" NO encontrado en Nextcloud en la carpeta "${nombreCarpeta}".`
-      );
-      return false; // Archivo no encontrado
+      return false;
     } else {
       writeLog(
         `[${new Date().toISOString()}] Error al verificar el archivo "${nombreArchivo}" en Nextcloud (Status ${
           respuestaVerificacionArchivo.status
-        }).`
+        }).`,
       );
-      return false; // Error al verificar (o no existe)
+      return false;
     }
   } catch (error) {
     manejarError("verificarArchivoExistenteNextcloud", error);
-    return false; // Error durante la verificación
+    return false;
   }
 }
 
 export async function crearArchivo(
-  drive: unknown,
-  archivo: string, // `archivo` es siempre un string
+  drive: any,
+  archivo: string,
   nombreNormalizado: string,
-  idCarpeta: string
+  idCarpeta: string,
 ) {
   try {
     writeLog(`[${new Date().toISOString()}] Iniciando subida de archivo.`);
 
-    // Preparación de los metadatos del archivo
     const metadataArchivo = {
       name: nombreNormalizado,
       parents: [idCarpeta],
     };
 
-    // Convertir el string a un Buffer
     const archivoContent = Buffer.from(archivo, "utf8");
 
-    // Convierte el contenido a un flujo de lectura
     const flujoArchivo = Readable.from(archivoContent);
 
-    // Definimos el objeto de media con el tipo MIME
     const media = {
-      mimeType: "application/octet-stream", // Tipo MIME genérico para un archivo binario
+      mimeType: "application/octet-stream",
       body: flujoArchivo,
     };
 
-    // Subimos el archivo a Google Drive
-    // @ts-expect-error revisar despues
     const respuestaSubidaArchivo = await drive.files.create({
       requestBody: metadataArchivo,
       media,
       fields: "id",
     });
-
-    // Asignamos permisos públicos de lectura
-    // @ts-expect-error revisar despues
 
     await drive.permissions.create({
       fileId: respuestaSubidaArchivo.data.id,
@@ -273,24 +246,18 @@ export async function crearArchivo(
     writeLog(
       `[${new Date().toISOString()}] Archivo subido con éxito. ID: ${
         respuestaSubidaArchivo.data.id
-      } y permisos de lectura pública asignados.`
+      } y permisos de lectura pública asignados.`,
     );
 
-    // Retornamos el ID del archivo subido
     return respuestaSubidaArchivo.data.id;
   } catch (error) {
-    writeLog(
-      // @ts-expect-error revisar despues
-
-      `[${new Date().toISOString()}] Error al subir archivo: ${error.message}`
-    );
     throw error;
   }
 }
 export async function guardarArchivo(
   nombreCarpeta: string,
   nombreArchivo: string,
-  transcripcion: string
+  transcripcion: string,
 ) {
   const urlNextcloud = process.env.NEXTCLOUD_URL;
   const usuario = process.env.NEXTCLOUD_USER;
@@ -298,7 +265,7 @@ export async function guardarArchivo(
 
   if (!usuario || !contrasena || !urlNextcloud) {
     console.error(
-      "Credenciales de Nextcloud no configuradas en variables de entorno."
+      "Credenciales de Nextcloud no configuradas en variables de entorno.",
     );
     return { success: false, error: "Credenciales no configuradas" };
   }
@@ -311,25 +278,22 @@ export async function guardarArchivo(
   };
 
   try {
-    // 1. Verificar si la carpeta existe
     const respuestaVerificacion = await fetch(rutaCompletaCarpeta, {
-      method: "PROPFIND", // Usamos PROPFIND para verificar la existencia
+      method: "PROPFIND",
       headers: cabecerasAutenticacion,
     });
 
     if (!respuestaVerificacion.ok) {
       if (respuestaVerificacion.status === 404) {
-        // 2. Si la carpeta no existe, crearla
         const respuestaCreacion = await fetch(rutaCompletaCarpeta, {
-          method: "MKCOL", // Usamos MKCOL para crear la carpeta
+          method: "MKCOL",
           headers: cabecerasAutenticacion,
         });
 
         if (!respuestaCreacion.ok) {
           console.error(
-            `Error al crear la carpeta ${nombreCarpeta}:`,
             respuestaCreacion.status,
-            respuestaCreacion.statusText
+            respuestaCreacion.statusText,
           );
           return {
             success: false,
@@ -338,9 +302,8 @@ export async function guardarArchivo(
         }
       } else {
         console.error(
-          `Error al verificar la carpeta ${nombreCarpeta}:`,
           respuestaVerificacion.status,
-          respuestaVerificacion.statusText
+          respuestaVerificacion.statusText,
         );
         return {
           success: false,
@@ -349,7 +312,6 @@ export async function guardarArchivo(
       }
     }
 
-    // 3. Subir el archivo
     const respuestaSubida = await fetch(rutaCompletaArchivo, {
       method: "PUT",
       headers: cabecerasAutenticacion,
@@ -358,9 +320,8 @@ export async function guardarArchivo(
 
     if (!respuestaSubida.ok) {
       console.error(
-        `Error al guardar ${nombreArchivo}.txt:`,
         respuestaSubida.status,
-        respuestaSubida.statusText
+        respuestaSubida.statusText,
       );
       return {
         success: false,
@@ -368,22 +329,19 @@ export async function guardarArchivo(
       };
     }
 
-    // --- MODIFICACIÓN: Probar endpoint de versión de la API OCS ---
-    const ocsVersionResponse = await fetch(
-      `${urlNextcloud}/ocs/v2.php/core/ хто/version`,
-      {
-        method: "GET",
-        headers: {
-          ...cabecerasAutenticacion,
-          "OCS-APIRequest": "true",
-        },
-      }
-    );
+    const ocsVersionUrl = `${urlNextcloud}/ocs/v2.php/cloud/capabilities`;
+    const ocsVersionResponse = await fetch(ocsVersionUrl, {
+      method: "GET",
+      headers: {
+        ...cabecerasAutenticacion,
+        "OCS-APIRequest": "true",
+      },
+    });
 
     if (!ocsVersionResponse.ok) {
       console.error(
         "Error al acceder al endpoint de versión de la API OCS:",
-        ocsVersionResponse
+        ocsVersionResponse,
       );
       return {
         success: false,
@@ -393,30 +351,88 @@ export async function guardarArchivo(
 
     const ocsVersionData = await ocsVersionResponse.text();
 
-    return { success: true, publicUrl: "URL_DE_PRUEBA_OCS_VERSION" }; //  URL de prueba para evitar error por falta de publicUrl en return
+    return { success: true, publicUrl: "URL_DE_PRUEBA_OCS_VERSION" };
   } catch (error) {
     console.error("Error de red:", error);
     return { success: false, error: "Error de red" };
   }
 }
 export async function manejarError(funcion: string, error: unknown) {
-  writeLog(
-    //@ts-expect-error revisar despues
+  const errorMsg = error instanceof Error ? error.message : String(error);
+  writeLog(`Error en ${funcion}: ${errorMsg}`);
 
-    `[${new Date().toISOString()}] Error en ${funcion}: ${error.message}.`
-  );
-  //@ts-expect-error revisar despues
-
-  throw new Error(`Error en ${funcion}: ${error.message}`);
+  throw new Error(`Error en ${funcion}: ${errorMsg}`);
 }
 
 export async function writeLog(message: string) {
   fs.appendFileSync("log.txt", message + "\n", "utf8");
 }
 
+export async function borrarArchivoPorUrl(
+  urlArchivo: string,
+): Promise<boolean> {
+  const urlNextcloud = process.env.NEXTCLOUD_URL;
+  const usuario = process.env.NEXTCLOUD_USER;
+  const contrasena = process.env.NEXTCLOUD_PASSWORD;
+
+  if (!usuario || !contrasena || !urlNextcloud) {
+    writeLog(
+      "Error: Credenciales de Nextcloud no configuradas para borrar archivo",
+    );
+    return false;
+  }
+
+  try {
+    const partesUrl = urlArchivo.split("/");
+    const nombreArchivo = partesUrl[partesUrl.length - 1];
+
+    if (!nombreArchivo) {
+      writeLog("Error: No se pudo extraer el nombre del archivo de la URL");
+      return false;
+    }
+
+    writeLog(`Intentando borrar archivo: ${nombreArchivo}`);
+
+    const nombreSinSufijo = nombreArchivo
+      .replace(/_Borrador\.docx$/, "")
+      .replace(/_Contenido\.txt$/, "")
+      .replace(/_Transcripcion\.txt$/, "");
+
+    const rutaArchivo = `/Actas/${nombreSinSufijo}/${nombreArchivo}`;
+
+    const rutaCompletaWebDAV = `${urlNextcloud}/remote.php/dav/files/${usuario}${rutaArchivo}`;
+
+    writeLog(`Borrando archivo en ruta: ${rutaCompletaWebDAV}`);
+
+    const cabecerasAutenticacion = {
+      Authorization: "Basic " + btoa(usuario + ":" + contrasena),
+    };
+
+    const deleteResponse = await fetch(rutaCompletaWebDAV, {
+      method: "DELETE",
+      headers: cabecerasAutenticacion,
+    });
+
+    if (
+      deleteResponse.ok ||
+      deleteResponse.status === 204 ||
+      deleteResponse.status === 404
+    ) {
+      writeLog(`Archivo borrado exitosamente o ya no existe: ${nombreArchivo}`);
+      return true;
+    } else {
+      writeLog(`Error al borrar archivo. Status: ${deleteResponse.status}`);
+      return false;
+    }
+  } catch (error) {
+    writeLog(`Error al borrar archivo por URL: ${error}`);
+    return false;
+  }
+}
+
 export async function obtenerContenidoArchivo(
   folder: string,
-  nombreArchivo: string
+  nombreArchivo: string,
 ): Promise<string | null> {
   const urlNextcloud = process.env.NEXTCLOUD_URL;
   const usuario = process.env.NEXTCLOUD_USER;
@@ -439,12 +455,10 @@ export async function obtenerContenidoArchivo(
 
       if (respuestaContenidoArchivo.ok) {
         contenidoArchivo = await respuestaContenidoArchivo.text();
-        writeLog(
-          `[${new Date().toISOString()}] Contenido del archivo "${nombreArchivo}" obtenido de Nextcloud.`
-        );
+        writeLog(`Contenido del archivo obtenido exitosamente: ${nombreArchivo}`);
       } else {
         console.error(
-          `Error al obtener contenido del archivo ${nombreArchivo} de Nextcloud: Status ${respuestaContenidoArchivo.status}, ${respuestaContenidoArchivo.statusText}`
+          `Error al obtener contenido del archivo. Status: ${respuestaContenidoArchivo.status}`,
         );
         return null;
       }
@@ -454,7 +468,7 @@ export async function obtenerContenidoArchivo(
     }
   } else {
     console.error(
-      "Credenciales de Nextcloud no configuradas para obtener contenido de archivo."
+      "Credenciales de Nextcloud no configuradas para obtener contenido de archivo.",
     );
     return null;
   }
@@ -464,66 +478,47 @@ export async function obtenerContenidoArchivo(
 
 export async function obtenerFileIdArchivo(
   nombreArchivo: string,
-  folder: string
+  folder: string,
 ): Promise<string | null> {
-  try {
-    const rutaCompleta = `${folder}/${nombreArchivo}`; // Ruta completa al archivo en Nextcloud
-    //@ts-expect-error revisar despues
+  const urlNextcloud = process.env.NEXTCLOUD_URL;
+  const usuario = process.env.NEXTCLOUD_USER;
+  const contrasena = process.env.NEXTCLOUD_PASSWORD;
 
-    const cliente = fileSystem({
-      // Inicializa tu cliente WebDAV (adapta esto a tu configuración)
-      baseUrl: process.env.NEXTCLOUD_URL,
-      auth: {
-        user: process.env.NEXTCLOUD_USER,
-        password: process.env.NEXTCLOUD_PASSWORD,
-      },
+  if (!usuario || !contrasena || !urlNextcloud) {
+    writeLog("Error: Credenciales de Nextcloud no configuradas para obtener fileId");
+    return null;
+  }
+
+  try {
+    const rutaBaseActas = `${urlNextcloud}/remote.php/dav/files/${usuario}/Actas`;
+    const rutaCompleta = `${rutaBaseActas}/${folder}/${nombreArchivo}`;
+
+    const cabecerasAutenticacion = {
+      Authorization: "Basic " + btoa(usuario + ":" + contrasena),
+      Depth: "0",
+    };
+
+    const propiedadesResponse = await fetch(rutaCompleta, {
+      method: "PROPFIND",
+      headers: cabecerasAutenticacion,
     });
 
-    // **Petición WebDAV PROPFIND para obtener el fileId**
-    const propiedadesResponse = await cliente.propFind(
-      rutaCompleta,
-      [
-        {
-          name: "fileid", // Nombre de la propiedad 'fileid' que queremos obtener (namespace 'oc')
-          namespace: "oc", // Namespace 'oc' para propiedades de Nextcloud
-        },
-      ],
-      0 // Profundidad 0: solo obtener propiedades del archivo base, no de subcarpetas
-    );
-
-    // Procesar la respuesta PROPFIND
-    if (propiedadesResponse.status === 207 && propiedadesResponse.props) {
-      // 207 Multi-Status para PROPFIND exitoso
-      // 'propiedadesResponse.props' debería contener las propiedades solicitadas
-      const fileIdProp = propiedadesResponse.props.find(
-        //@ts-expect-error revisar despues
-
-        (prop) => prop.name === "fileid" && prop.namespace === "oc"
-      );
-
-      if (fileIdProp && fileIdProp.value) {
-        return fileIdProp.value as string; // Retorna el valor de fileId como string
+    if (propiedadesResponse.ok) {
+      const xmlText = await propiedadesResponse.text();
+      const fileIdMatch = xmlText.match(/<oc:fileid>(\d+)<\/oc:fileid>/);
+      if (fileIdMatch && fileIdMatch[1]) {
+        return fileIdMatch[1];
       } else {
-        writeLog(
-          `Archivo "${nombreArchivo}" encontrado, pero la respuesta PROPFIND no contenía 'oc:fileid'.`
-        );
-        return null; // fileId no encontrado en la respuesta
+        writeLog("Error: No se encontró el ID del archivo en la respuesta XML");
+        return null;
       }
     } else {
-      writeLog(
-        `Error en petición PROPFIND para "${nombreArchivo}". Status: ${propiedadesResponse.status}`
-      );
-      return null; // Error en la petición PROPFIND
+      writeLog(`Error: No se encontró la propiedad fileid. Status: ${propiedadesResponse.status}`);
+      return null;
     }
   } catch (error) {
-    if (error) {
-      writeLog(
-        `Archivo "${nombreArchivo}" no encontrado en Nextcloud en la carpeta "${folder}".`
-      );
-      return null; // Archivo no encontrado (404 Not Found)
-    } else {
-      manejarError("obtenerFileIdArchivo", error); // Manejar otros errores
-      return null; // Error al buscar el archivo o al procesar la petición PROPFIND
-    }
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    writeLog(`Error al obtener fileId: ${errorMsg}`);
+    return null;
   }
 }

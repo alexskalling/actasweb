@@ -18,7 +18,7 @@ function uploadWithProgress(
   url: string,
   apiKey: string,
   onProgress?: (progress: number) => void,
-  signal?: AbortSignal
+  signal?: AbortSignal,
 ): Promise<Response> {
   return new Promise((resolve, reject) => {
     const xhr = new XMLHttpRequest();
@@ -31,7 +31,7 @@ function uploadWithProgress(
       });
     }
 
-    xhr.upload.onprogress = (event) => {
+    xhr.upload.onprogress = (event: ProgressEvent<EventTarget>) => {
       if (event.lengthComputable && onProgress) {
         const progress = (event.loaded / event.total) * 100;
         onProgress(progress);
@@ -82,7 +82,7 @@ async function retryUpload(
   url: string,
   apiKey: string,
   onProgress?: (progress: number) => void,
-  retries = MAX_RETRIES
+  retries = MAX_RETRIES,
 ): Promise<Response> {
   let lastError: Error | Response | null = null;
   const controller = new AbortController();
@@ -91,7 +91,7 @@ async function retryUpload(
     try {
       if (attempt > 0) {
         const delay = RETRY_DELAY * Math.pow(2, attempt - 1);
-        await new Promise((resolve) => setTimeout(resolve, delay));
+        await new Promise<void>((resolve) => setTimeout(resolve, delay));
 
         if (onProgress) {
           onProgress(0);
@@ -103,7 +103,7 @@ async function retryUpload(
         url,
         apiKey,
         onProgress,
-        controller.signal
+        controller.signal,
       );
 
       if (onProgress) {
@@ -118,7 +118,11 @@ async function retryUpload(
         throw error;
       }
 
-      if (error instanceof Response && error.status >= 400 && error.status < 500) {
+      if (
+        error instanceof Response &&
+        error.status >= 400 &&
+        error.status < 500
+      ) {
         throw error;
       }
 
@@ -130,16 +134,22 @@ async function retryUpload(
         throw error;
       }
 
-      console.warn(`Intento ${attempt + 1} fallido, reintentando...`, lastError instanceof Error ? lastError.message : `Status: ${(lastError as Response).status}`);
+      console.warn(
+        lastError instanceof Error
+          ? lastError.message
+          : `Status: ${(lastError as Response).status}`,
+      );
     }
   }
 
-  throw lastError || new Error("Error desconocido después de múltiples intentos");
+  throw (
+    lastError || new Error("Error desconocido después de múltiples intentos")
+  );
 }
 
 export async function uploadFileToAssemblyAI(
   formData: FormData,
-  onUploadProgress?: (progress: number) => void
+  onUploadProgress?: (progress: number) => void,
 ): Promise<UploadResult> {
   const ASSEMBLYAI_API_KEY = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
   const archivo = formData.get("audioFile") as File;
@@ -191,13 +201,11 @@ export async function uploadFileToAssemblyAI(
   const uploadUrl = "https://api.assemblyai.com/v2/upload";
 
   try {
-    console.log(`Iniciando subida de archivo: ${archivo.name} (${(archivo.size / 1024 / 1024).toFixed(2)} MB)`);
-
     const response = await retryUpload(
       archivo,
       uploadUrl,
       ASSEMBLYAI_API_KEY,
-      onUploadProgress
+      onUploadProgress,
     );
 
     if (!response.ok) {
@@ -225,8 +233,6 @@ export async function uploadFileToAssemblyAI(
       };
     }
 
-    console.log("✅ Archivo subido exitosamente a AssemblyAI:", uploadResult.upload_url);
-
     return {
       success: true,
       message: "Archivo subido exitosamente a AssemblyAI.",
@@ -241,10 +247,15 @@ export async function uploadFileToAssemblyAI(
 
     if (error instanceof Error) {
       if (error.message === "Timeout") {
-        errorMessage = "La subida del archivo tomó demasiado tiempo. Por favor intenta con un archivo más pequeño o verifica tu conexión.";
+        errorMessage =
+          "La subida del archivo tomó demasiado tiempo. Por favor intenta con un archivo más pequeño o verifica tu conexión.";
         errorDetails = "Timeout en la subida";
-      } else if (error.message.includes("Network error") || error.message.includes("Failed to fetch")) {
-        errorMessage = "Error de conexión. Verifica tu conexión a internet e intenta nuevamente.";
+      } else if (
+        error.message.includes("Network error") ||
+        error.message.includes("Failed to fetch")
+      ) {
+        errorMessage =
+          "Error de conexión. Verifica tu conexión a internet e intenta nuevamente.";
         errorDetails = "Error de red";
       } else if (error.message === "Upload cancelled") {
         errorMessage = "La subida fue cancelada.";

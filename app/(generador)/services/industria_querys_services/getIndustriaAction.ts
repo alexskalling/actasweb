@@ -1,7 +1,7 @@
-'use server'
+"use server";
 import { db } from "@/lib/db/db";
 import { industrias } from "@/lib/db/schema";
-import { not, eq ,asc } from "drizzle-orm";
+import { not, eq, asc } from "drizzle-orm";
 
 export async function getIndustrias() {
   try {
@@ -12,19 +12,18 @@ export async function getIndustrias() {
       })
       .from(industrias)
       .where(not(eq(industrias.id, 99)))
-      
-      .orderBy(asc(industrias.id)); 
 
-    console.log("Industrias obtenidas");
+      .orderBy(asc(industrias.id));
+
     return {
-      status: 'success',
+      status: "success",
       data: categoriaIndustria,
     };
   } catch (error) {
     console.error("❌ Error al obtener las industrias:", error);
     return {
-      status: 'error',
-      message: 'Error al obtener las industrias',
+      status: "error",
+      message: "Error al obtener las industrias",
       data: [],
     };
   }

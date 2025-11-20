@@ -61,6 +61,7 @@ export const usuarios = pgTable("usuarios", {
   tipoDocumento: text("tipo_documento"), // CC, CE, NIT, TI, PP, NIP
   numeroDocumento: text("numero_documento"),
   codigoReferido: text("codigo_referido"),
+  tipoUsuarioRol: text("tipo_usuario_rol").default("cliente"), // 'cliente', 'admin', etc.
 });
 
 export const usuariosRelations = relations(usuarios, ({ many }) => ({
@@ -96,6 +97,7 @@ export const actas = pgTable("actas", {
   costo: text("costo_acta"),
   urlTranscripcion: text("url_transcripcion_acta"),
   urlBorrador: text("url_borrador_acta"),
+  urlContenido: text("url_contenido_acta"),
   codigoAtencion: text("codigo_atencion"),
   idEstadoProceso: bigint("id_estado_proceso_acta", { mode: "number" })
     .default(1)
@@ -105,6 +107,7 @@ export const actas = pgTable("actas", {
     .references(() => usuarios.id),
   idIndustria: integer('id_industria').references(() => industrias.id),
   codigoReferido: text("codigo_referido"),
+  soporte: text("soporte"),
 });
 // Tabla: industrias
 export const industrias = pgTable('industrias', {

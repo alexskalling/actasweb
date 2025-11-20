@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
@@ -17,10 +17,6 @@ export interface BillingData {
   pais: string | null;
 }
 
-/**
- * Obtiene los datos de facturación del usuario actual
- * @returns Datos de facturación del usuario o null si no hay sesión
- */
 export async function getBillingData(): Promise<BillingData | null> {
   const session = await getServerSession(authOptions);
   const email = session?.user?.email;
@@ -59,4 +55,3 @@ export async function getBillingData(): Promise<BillingData | null> {
     pais: user.pais || "Colombia",
   };
 }
-

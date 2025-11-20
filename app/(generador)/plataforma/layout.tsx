@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -14,13 +14,11 @@ export default function PlataformLayout({
   const router = useRouter();
 
   useEffect(() => {
-    // Si no hay sesión y ya terminó de cargar, redirigir a login
     if (status === "unauthenticated") {
       window.location.href = "/api/auth/signin";
     }
   }, [session, status, router]);
 
-  // Mostrar loading mientras verifica la sesión
   if (status === "loading") {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -32,21 +30,17 @@ export default function PlataformLayout({
     );
   }
 
-  // Si no hay sesión, no mostrar nada (se redirigirá)
   if (!session) {
     return null;
   }
 
-  // Si hay sesión, mostrar el layout completo
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navbar */}
+      {}
       <NavComponent />
-      
-      {/* Contenido principal */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
-        {children}
-      </main>
+
+      {}
+      <main className="max-w-7xl mx-auto px-4 py-6">{children}</main>
     </div>
   );
 }

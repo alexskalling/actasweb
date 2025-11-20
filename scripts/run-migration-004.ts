@@ -10,7 +10,7 @@ if (!DATABASE_URL) {
 }
 
 async function runMigration() {
-  const sql = postgres(DATABASE_URL, {
+  const sql = postgres(DATABASE_URL as string, {
     ssl: 'require',
     max: 1,
   });

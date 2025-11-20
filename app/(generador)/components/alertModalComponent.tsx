@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from 'react';
+import * as React from "react";
 
 interface AlertModalProps {
   open: boolean;
@@ -11,13 +11,13 @@ interface AlertModalProps {
   currentFileName?: string;
 }
 
-export default function AlertModalComponent({ 
-  open, 
-  message, 
-  onClose, 
+export default function AlertModalComponent({
+  open,
+  message,
+  onClose,
   allowRename = false,
   onRename,
-  currentFileName = ""
+  currentFileName = "",
 }: AlertModalProps) {
   const [newName, setNewName] = React.useState("");
   const [error, setError] = React.useState("");
@@ -43,12 +43,12 @@ export default function AlertModalComponent({
       return;
     }
 
-    const extension = currentFileName.includes(".") 
+    const extension = currentFileName.includes(".")
       ? currentFileName.substring(currentFileName.lastIndexOf("."))
       : "";
-    
+
     const finalName = newName.trim() + extension;
-    
+
     if (onRename) {
       onRename(finalName);
     }
@@ -61,7 +61,7 @@ export default function AlertModalComponent({
           {allowRename ? "⚠️ Nombre duplicado ⚠️" : "⚠️ Alerta ⚠️"}
         </h2>
         <p className="text-gray-600 mb-4">{message}</p>
-        
+
         {allowRename && (
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -83,9 +83,7 @@ export default function AlertModalComponent({
                 }
               }}
             />
-            {error && (
-              <p className="text-red-500 text-sm mt-1">{error}</p>
-            )}
+            {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
           </div>
         )}
 
@@ -118,5 +116,3 @@ export default function AlertModalComponent({
     </div>
   );
 }
-
-

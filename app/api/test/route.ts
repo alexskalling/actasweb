@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { normalizarNombreArchivo } from "@/app/(generador)/services/generacion_contenido_services/utilsActions";
 
-
-
 async function getDropboxAccessToken() {
   const clientId = process.env.DROPBOX_APP_KEY;
   const clientSecret = process.env.DROPBOX_APP_SECRET;
@@ -30,11 +28,6 @@ async function getDropboxAccessToken() {
   return data.access_token as string;
 }
 
-
-
-
-
-// Tipos para la respuesta
 interface AutomationResponse {
   status: "success" | "error";
   message: string;
@@ -45,7 +38,6 @@ interface AutomationResponse {
   };
 }
 
-// Validar API key
 function validateApiKey(request: NextRequest): boolean {
   const apiKey = request.headers.get("x-api-key");
   const expectedApiKey = process.env.N8N_API_KEY;
@@ -60,7 +52,7 @@ function validateApiKey(request: NextRequest): boolean {
 
 export async function POST(request: NextRequest): Promise<NextResponse<AutomationResponse>> {
   try {
-    // 1. Validar API key
+
     if (!validateApiKey(request)) {
       return NextResponse.json(
         {
@@ -71,10 +63,9 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    // 2. Obtener JSON con pathDropbox, email y name (en lugar de archivo directamente)
     const formData = await request.formData();
 
-    const pathDropbox = formData.get("pathDropbox") as string; // si lo mandas
+    const pathDropbox = formData.get("pathDropbox") as string;
 
     if (!pathDropbox) {
       return NextResponse.json(
@@ -86,7 +77,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    // 3. Obtener enlace temporal desde Dropbox API
     const dropboxToken = await getDropboxAccessToken();
     if (!dropboxToken) {
       return NextResponse.json(
@@ -98,20 +88,9 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-
-
-
-    // 4. Extraer nombre de archivo de la ruta Dropbox
     const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
 
-    
-
-
-
-    // 6. Normalizar nombre
     const nombreNormalizado = await normalizarNombreArchivo(nombreArchivo);
-
-    
 
     return NextResponse.json(
       {

@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -60,14 +60,11 @@ export default async function RootLayout({
         </Providers>
         <Toaster position="top-center" richColors />
 
-        {/* Cargar el script de Meta Pixel */}
         <Script
           strategy="afterInteractive"
           src={`https://connect.facebook.net/en_US/fbevents.js`}
           id="meta-pixel-script"
         />
-
-        {/* Meta Pixel Inline Script */}
         <Script
           id="meta-pixel-inline"
           dangerouslySetInnerHTML={{
@@ -85,8 +82,6 @@ export default async function RootLayout({
             `,
           }}
         />
-
-        {/* Etiqueta <noscript> para usuarios sin JavaScript */}
         <noscript>
           <img
             height="1"
@@ -96,8 +91,6 @@ export default async function RootLayout({
             alt=""
           />
         </noscript>
-
-        {/* Google Analytics and Tag Manager */}
         <GoogleAnalytics gaId="G-VL70D0YN9S" />
         <GoogleTagManager gtmId="GTM-MRMG7JTJ" />
       </body>

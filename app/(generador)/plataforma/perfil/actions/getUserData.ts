@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { usuarios } from "@/lib/db/schema";
@@ -21,10 +21,6 @@ export interface UserData {
   numeroDocumento: string | null;
 }
 
-/**
- * Obtiene todos los datos del usuario actual
- * @returns Datos del usuario o null si no hay sesión
- */
 export async function getUserData(): Promise<UserData | null> {
   const session = await getServerSession(authOptions);
   const email = session?.user?.email;
@@ -33,7 +29,6 @@ export async function getUserData(): Promise<UserData | null> {
     return null;
   }
 
-  // Intentar obtener datos con todos los campos (incluyendo los nuevos)
   try {
     const user = await db
       .select({
@@ -73,10 +68,12 @@ export async function getUserData(): Promise<UserData | null> {
       numeroDocumento: user.numeroDocumento || null,
     };
   } catch (error: any) {
-    // Si falla por columna inexistente (las nuevas columnas no existen aún), intentar sin ellas
-    if (error?.code === '42703' || error?.message?.includes('does not exist') || error?.message?.includes('tipo_usuario')) {
+    if (
+      error?.code === "42703" ||
+      error?.message?.includes("does not exist") ||
+      error?.message?.includes("tipo_usuario")
+    ) {
       try {
-        // Intentar con idIndustria pero sin los nuevos campos
         const user = await db
           .select({
             nombre: usuarios.nombre,
@@ -107,12 +104,11 @@ export async function getUserData(): Promise<UserData | null> {
           municipio: user.municipio,
           pais: user.pais || "Colombia",
           idIndustria: user.idIndustria || null,
-          tipoUsuario: "natural", // Valor por defecto
+          tipoUsuario: "natural",
           tipoDocumento: null,
           numeroDocumento: null,
         };
       } catch (fallbackError: any) {
-        // Si aún falla, intentar sin idIndustria ni los nuevos campos
         const user = await db
           .select({
             nombre: usuarios.nombre,
@@ -151,4 +147,3 @@ export async function getUserData(): Promise<UserData | null> {
     throw error;
   }
 }
-

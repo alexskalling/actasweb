@@ -1,10 +1,9 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import logo from "../assets/logo-actas-ai-blanco.svg";
 import { getSession, useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -16,12 +15,12 @@ export default function NavComponent() {
 
   useEffect(() => {
     const listener = async (event: MessageEvent) => {
-      if (event.data?.type === "auth-completed" && event.data?.source === "navbar") {
+      if (
+        event.data?.type === "auth-completed" &&
+        event.data?.source === "navbar"
+      ) {
         const session = await getSession();
-        console.log("Sesión actualizada desde NAVBAR:", session);
-
         if (session) {
-          console.log("Redirigiendo a /plataforma");
           router.push("/plataforma");
         }
       }
@@ -32,17 +31,22 @@ export default function NavComponent() {
   }, [router]);
 
   const handleLoginNewTab = () => {
-    window.open(
-      `/login?source=navbar`,
-      "_blank"
-    );
+    if (pathname === "/") {
+      setMobileMenuOpen(false);
+      return;
+    }
+    router.push("/");
     setMobileMenuOpen(false);
   };
 
   return (
     <nav className="w-full h-16 bg-[#5A2D8E]">
       <div className="h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="https://actasdereuniones.ai/" rel="noopener noreferrer" className="flex items-center">
+        <a
+          href="https://actasdereuniones.ai/"
+          rel="noopener noreferrer"
+          className="flex items-center"
+        >
           <Image
             src={logo}
             className="text-white font-bold text-2xl w-28 sm:w-36 rounded"
@@ -51,22 +55,30 @@ export default function NavComponent() {
           />
         </a>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-x-4">
-          <a href="https://actasdereuniones.ai/" rel="noopener noreferrer" className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors">Inicio</a>
-          <a href="https://actasdereuniones.ai/blog/" rel="noopener noreferrer" className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors">Blog</a>
-          <a href="https://actasdereuniones.ai/contacto/" rel="noopener noreferrer" className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors">Contacto</a>
+          <a
+            href="https://actasdereuniones.ai/"
+            rel="noopener noreferrer"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+          >
+            Inicio
+          </a>
+          <a
+            href="https://actasdereuniones.ai/blog/"
+            rel="noopener noreferrer"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+          >
+            Blog
+          </a>
+          <a
+            href="https://actasdereuniones.ai/resenas/"
+            rel="noopener noreferrer"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+          >
+            Reseñas
+          </a>
 
-          {session?.user ? (
-            pathname === "/" && (
-              <Link
-                href="/plataforma"
-                className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white text-sm font-semibold transition-colors"
-              >
-                Mi Plataforma
-              </Link>
-            )
-          ) : (
+          {!session?.user && pathname !== "/" && (
             <button
               onClick={handleLoginNewTab}
               className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white text-sm font-semibold transition-colors"
@@ -76,7 +88,6 @@ export default function NavComponent() {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
           className="md:hidden text-white p-2 rounded-md hover:bg-purple-700 transition-colors"
@@ -91,7 +102,6 @@ export default function NavComponent() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#5A2D8E] border-t border-purple-700">
           <div className="px-4 pt-2 pb-4 space-y-2">
@@ -112,24 +122,14 @@ export default function NavComponent() {
               Blog
             </a>
             <a
-              href="https://actasdereuniones.ai/contacto/"
+              href="https://actasdereuniones.ai/resenas/"
               rel="noopener noreferrer"
               className="block text-white font-bold px-3 py-2 rounded hover:bg-purple-700 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contacto
+              Reseñas
             </a>
-            {session?.user ? (
-              pathname === "/" && (
-                <Link
-                  href="/plataforma"
-                  className="block rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white text-sm font-semibold text-center transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Mi Plataforma
-                </Link>
-              )
-            ) : (
+            {!session?.user && pathname !== "/" && (
               <button
                 onClick={handleLoginNewTab}
                 className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white text-sm font-semibold transition-colors"

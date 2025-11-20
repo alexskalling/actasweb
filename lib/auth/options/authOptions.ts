@@ -8,8 +8,6 @@ import AzureADProvider from "next-auth/providers/azure-ad";
 import type { NextAuthOptions } from "next-auth";
 
 export const authOptions: NextAuthOptions = {
-  // Asegurar que NextAuth use la URL correcta
-  url: process.env.NEXTAUTH_URL,
   providers: [
     AzureADProvider({
       clientId: process.env.AZURE_AD_CLIENT_ID!,
@@ -22,7 +20,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   pages: {
-    signIn: "/login",
+    signIn: "/",
   },
   callbacks: {
     async signIn({ user }) {

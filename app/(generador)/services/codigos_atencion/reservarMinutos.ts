@@ -1,31 +1,20 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { codigosAtencion } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 
-/**
- * Convierte duración en segundos a minutos, redondeando siempre hacia arriba
- */
 function segundosAMinutos(segundos: number): number {
   return Math.ceil(segundos / 60);
 }
 
-/**
- * Reserva minutos en el código de atención
- * Suma los minutos necesarios a la columna reserva
- * @param codigoId - ID del código de atención
- * @param duracionSegundos - Duración del acta en segundos
- * @returns true si se reservó correctamente, false en caso de error
- */
 export async function reservarMinutos(
   codigoId: string,
-  duracionSegundos: number
+  duracionSegundos: number,
 ): Promise<{ success: boolean; message?: string }> {
   try {
     const minutosNecesarios = segundosAMinutos(duracionSegundos);
 
-    // Obtener el código actual para verificar saldo disponible
     const codigoActual = await db
       .select({
         saldo: codigosAtencion.saldo,
@@ -42,7 +31,6 @@ export async function reservarMinutos(
       };
     }
 
-    // Verificar que aún hay saldo disponible
     const saldoDisponible = codigoActual.saldo + codigoActual.reserva;
     if (saldoDisponible < minutosNecesarios) {
       return {
@@ -51,7 +39,6 @@ export async function reservarMinutos(
       };
     }
 
-    // Sumar minutos a la reserva
     await db
       .update(codigosAtencion)
       .set({
@@ -70,5 +57,3 @@ export async function reservarMinutos(
     };
   }
 }
-
-

@@ -1,12 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useSession } from "next-auth/react";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
 import { guardarFalloPagoService } from "../services/fallos_querys_services/guardarFalloPagoService";
 import { toast } from "sonner";
-// getBillingData se llama desde el servidor, no directamente aquí
 
 const tipo = process.env.NEXT_PUBLIC_PAGO;
 
@@ -20,9 +19,10 @@ interface ePaycoOnPageComponentProps {
   onPaymentClick?: (handleOpenWidget: () => void) => void;
   nombreUsuario?: string;
   emailUsuario?: string;
+  tipoDocumento?: string | null;
+  numeroDocumento?: string | null;
 }
 
-// Declarar tipos para ePayco en window
 declare global {
   interface Window {
     ePayco?: {
@@ -40,6 +40,23 @@ const EPaycoOnPageComponent = (props: ePaycoOnPageComponentProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [checkoutHandler, setCheckoutHandler] = useState<any>(null);
   const [billingData, setBillingData] = useState<any>(null);
+  
+  // Función para verificar si ya se mostró el toast para una transacción
+  const hasToastBeenShown = (transactionId: string): boolean => {
+    if (typeof window === "undefined") return false;
+    const shown = localStorage.getItem(`toast_shown_${transactionId}`);
+    return shown === "true";
+  };
+
+  // Función para marcar que se mostró el toast para una transacción
+  const markToastAsShown = (transactionId: string): void => {
+    if (typeof window === "undefined") return;
+    localStorage.setItem(`toast_shown_${transactionId}`, "true");
+    // Limpiar después de 1 hora para evitar acumulación
+    setTimeout(() => {
+      localStorage.removeItem(`toast_shown_${transactionId}`);
+    }, 3600000);
+  };
 
   // Monto mínimo para ePayco: 5000 COP
   const MONTO_MINIMO_EPAYCO = 5000;
@@ -91,8 +108,8 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     const refPaycoToProcess = refPayco || refPaycoHash;
 
     if (epaycoResponse || refPaycoToProcess) {
-      console.log("Redirección de ePayco detectada, ref_payco:", refPaycoToProcess);
-      console.log("Datos del archivo desde URL:", { file, folder, fileid, duration });
+      
+      
 
       // Limpiar la URL inmediatamente (pero guardar los datos primero)
       const savedData = { file, folder, fileid, duration, refPayco: refPaycoToProcess };
@@ -102,7 +119,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       const verifyPayment = async () => {
         try {
           if (!refPaycoToProcess) {
-            console.log("No hay ref_payco en la URL, esperando confirmación del servidor...");
+            
             return;
           }
 
@@ -119,13 +136,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
           if (data.success && data.data) {
             const transaction = data.data;
-            console.log("Estado de transacción:", transaction);
+            
 
             if (transaction.x_response === "Aceptada" || transaction.x_cod_response === 1) {
               // Pago aprobado - procesar con los datos de la URL
               await handleEpaycoResponseFromRedirect(transaction, savedData);
             } else {
-              console.log("Pago rechazado:", transaction.x_response_reason_text);
+              
             }
           }
         } catch (error) {
@@ -139,7 +156,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
   // Función para procesar respuesta cuando ePayco redirige
   const handleEpaycoResponseFromRedirect = async (transaction: any, savedData?: { file: string | null; folder: string | null; fileid: string | null; duration: string | null; refPayco: string | null }) => {
-    console.log("Procesando respuesta de ePayco desde redirección:", transaction);
+    
 
     // Usar datos de la URL si están disponibles, sino usar props
     const file = savedData?.file || props.file;
@@ -181,7 +198,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       document.body.classList.remove('epayco-modal-open', 'modal-open');
       document.body.style.overflow = '';
     } catch (e) {
-      console.log("Error al cerrar modal:", e);
+      
     }
 
     // Actualizar estado del acta
@@ -196,9 +213,15 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         transaction.x_id_invoice || transaction.invoice || referencia,
         undefined, // NO actualizar urlTranscripcion - puede que ya esté guardada
         undefined, // NO actualizar urlborrador - puede que ya esté guardada
-        null
+        null,
+        false,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
       );
-      console.log("Acta actualizada correctamente desde redirección:", file);
+      
     } catch (updateError) {
       console.error("Error al actualizar acta:", updateError);
     }
@@ -206,11 +229,11 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     // Iniciar procesamiento del acta automáticamente
     // Si tenemos props.handlePayment disponible, usarlo, sino redirigir a la página de procesamiento
     if (props.handlePayment) {
-      console.log("Iniciando procesamiento del acta desde redirección...");
+      
       props.handlePayment();
     } else {
       // Si no tenemos handlePayment (página recargada), redirigir a la plataforma
-      console.log("Redirigiendo a plataforma para continuar procesamiento...");
+      
       window.location.href = '/plataforma';
     }
 
@@ -224,18 +247,12 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     script.async = true;
 
     script.onload = () => {
-      console.log("Script de ePayco cargado correctamente.");
+      
 
       // Configurar handler de ePayco
       if (typeof window !== "undefined" && window.ePayco?.checkout) {
         const isTestMode = process.env.NEXT_PUBLIC_EPAYCO_TEST === "true";
         const publicKey = process.env.NEXT_PUBLIC_EPAYCO_PUBLIC_KEY || "";
-
-        console.log("Configurando ePayco:", {
-          isTestMode,
-          publicKey: publicKey.substring(0, 10) + "...", // Solo mostrar primeros caracteres
-          testEnv: process.env.NEXT_PUBLIC_EPAYCO_TEST
-        });
 
         const handler = window.ePayco.checkout.configure({
           key: publicKey,
@@ -243,7 +260,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         });
 
         setCheckoutHandler(handler);
-        console.log("ePayco configurado en modo:", isTestMode ? "TEST" : "PRODUCCIÓN");
+        
       }
     };
 
@@ -261,7 +278,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
   }, []);
 
   const handleOpenCheckout = async () => {
-    console.log("🚀 handleOpenCheckout llamado", { checkoutHandler: !!checkoutHandler });
+    
     if (!checkoutHandler) {
       console.error("❌ No se ha cargado el script de ePayco. checkoutHandler es null/undefined");
       alert("Error: El sistema de pago no está listo. Por favor recarga la página.");
@@ -333,7 +350,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
     // Verificar modo test
     const isTestMode = process.env.NEXT_PUBLIC_EPAYCO_TEST === "true";
-    console.log("Iniciando pago en modo:", isTestMode ? "TEST" : "PRODUCCIÓN");
+    
 
     // Configurar datos del pago para ePayco OnPage Checkout
     const datosPago: any = {
@@ -356,18 +373,11 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       // Datos del cliente para facturación
       name_billing: `${billingDataToUse.nombre || ""} ${billingDataToUse.apellido || ""}`.trim(),
       address_billing: direccionCompleta,
-      type_doc_billing: "CC", // Por defecto Cédula de Ciudadanía
-      doc_billing: "1213123123", // Número de documento para pruebas
+      type_doc_billing: props.tipoDocumento || "CC", // Tipo de documento del cliente o CC por defecto
+      doc_billing: props.numeroDocumento || "", // Número de documento del cliente
       mobilephone_billing: billingDataToUse.telefono || "",
       email_billing: billingDataToUse.email || "",
     };
-
-    console.log("Datos de pago configurados:", {
-      invoice: referencia,
-      amount: monto,
-      isTestMode,
-      external: false
-    });
 
     // Track analytics
     if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
@@ -396,12 +406,12 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       datosPago.response = window.location.href; // Misma página, sin redirección
     }
 
-    console.log("🔍 Configuración de ePayco - Sin redirección, usando solo callback");
+    
 
     // Función para cerrar el modal de ePayco completamente
     const cerrarModalEpayco = () => {
       try {
-        console.log("🔒 Cerrando modal de ePayco...");
+        
 
         // Cerrar todos los iframes de ePayco PRIMERO
         const epaycoIframes = document.querySelectorAll('iframe[src*="epayco"], iframe[src*="checkout"], iframe[src*="secure.epayco"]');
@@ -456,7 +466,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             if (style.includes('rgba(0, 0, 0') || style.includes('rgba(0,0,0') || style.includes('position: fixed')) {
               const computedStyle = window.getComputedStyle(div);
               if (computedStyle.backgroundColor.includes('rgba(0, 0, 0') || computedStyle.backgroundColor.includes('rgba(0,0,0')) {
-                console.log("🔒 Removiendo div de blur negro:", div.id || div.className);
+                
                 div.style.display = 'none';
                 div.style.visibility = 'hidden';
                 div.style.opacity = '0';
@@ -478,7 +488,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           try {
             const computedStyle = window.getComputedStyle(el);
             if (computedStyle.position === 'fixed' && (computedStyle.backgroundColor.includes('rgba(0, 0, 0') || computedStyle.backgroundColor.includes('rgba(0,0,0'))) {
-              console.log("🔒 Removiendo elemento con z-index alto y fondo negro:", el.id || el.className);
+              
               el.style.display = 'none';
               el.style.visibility = 'hidden';
               el.style.opacity = '0';
@@ -526,9 +536,9 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           }
         });
 
-        console.log("✅ Modal de ePayco cerrado completamente");
+        
       } catch (e) {
-        console.log("⚠️ Error al cerrar modal:", e);
+        
       }
     };
 
@@ -539,7 +549,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     // Callback para manejar la respuesta en el cliente (OnPage Checkout)
     // Este callback se ejecuta cuando ePayco procesa el pago
     datosPago.onResponse = async (response: any) => {
-      console.log("✅ Respuesta de ePayco recibida via callback:", response);
+      
 
       // Marcar que el pago fue procesado
       pagoProcesado = true;
@@ -561,7 +571,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           if (pagoProcesado) {
             e.preventDefault();
             e.returnValue = '';
-            console.log("⚠️ Navegación prevenida - pago ya procesado");
+            
             return '';
           }
         };
@@ -573,7 +583,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           if (window.location.href !== currentUrl) {
             const newUrl = window.location.href;
             if (newUrl.includes('epayco.co') || newUrl.includes('ref_payco') || newUrl.includes('secure.epayco') || newUrl.includes('landingresume') || newUrl.includes('?ref_payco=')) {
-              console.log("⚠️ Redirección detectada, revirtiendo:", newUrl);
+              
               // Detener cualquier carga
               window.stop();
               // Revertir la URL inmediatamente
@@ -591,14 +601,6 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
       // Procesar respuesta
       if (response.x_response === "Aceptada" || response.x_cod_response === 1) {
-        console.log("✅ Pago aprobado - Mostrando toast...");
-        console.log("✅ Datos de transacción:", {
-          transactionId: response.x_transaction_id,
-          amount: response.x_amount,
-          invoice: response.x_id_invoice || referencia,
-          email: billingDataToUse?.email
-        });
-
         setIsLoading(false);
 
         // Reproducir sonido de éxito
@@ -628,44 +630,48 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
               oscillator2.start(audioContext.currentTime);
               oscillator2.stop(audioContext.currentTime + 0.3);
             } catch (e) {
-              console.log("Error en segundo tono:", e);
+              
             }
           }, 150);
         } catch (error) {
-          console.log("No se pudo reproducir sonido:", error);
+          
         }
 
         // Generar el acta usando handlePayment
         if (props.handlePayment) {
-          console.log("✅ Iniciando generación del acta...");
+          
           props.handlePayment();
         }
 
         // Mostrar toast con datos de la transacción (después de cerrar el modal)
-        setTimeout(() => {
-          const amount = parseFloat(response.x_amount || "0");
-          const transactionId = response.x_transaction_id || "";
+        // Solo mostrar si no se ha mostrado antes para esta transacción
+        const transactionId = response.x_transaction_id || "";
+        if (transactionId && !hasToastBeenShown(transactionId)) {
+          markToastAsShown(transactionId);
+          setTimeout(() => {
+            const amount = parseFloat(response.x_amount || "0");
 
-          toast.success("¡Pago Aprobado!", {
-            description: (
-              <div className="space-y-3 mt-2">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-gray-700">Monto:</span>
-                  <span className="text-sm font-bold text-gray-900">${amount.toLocaleString('es-CO')} COP</span>
+            toast.success("¡Pago Aprobado!", {
+              description: (
+                <div className="space-y-3 mt-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium text-gray-700">Monto:</span>
+                    <span className="text-sm font-bold text-gray-900">${amount.toLocaleString('es-CO')} COP</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium text-gray-700">Tx:</span>
+                    <span className="text-xs font-mono text-gray-600">{transactionId}</span>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-gray-700">Tx:</span>
-                  <span className="text-xs font-mono text-gray-600">{transactionId}</span>
-                </div>
-              </div>
-            ),
-            duration: Infinity, // No se cierra automáticamente
-            action: {
-              label: "Entendido",
-              onClick: () => { },
-            },
-          });
-        }, 600); // Esperar a que se cierre el modal
+              ),
+              duration: Infinity, // No se cierra automáticamente
+              action: {
+                label: "Entendido",
+                onClick: () => { },
+              },
+            });
+          }, 600); // Esperar a que se cierre el modal
+        }
 
         // Track success
         if (process.env.NEXT_PUBLIC_PAGO !== "soporte" && typeof window !== "undefined" && typeof window.gtag === "function") {
@@ -679,7 +685,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           });
         }
       } else {
-        console.log("❌ Pago rechazado:", response.x_response_reason_text);
+        
 
         // Cerrar el modal primero
         pagoProcesado = true;
@@ -701,7 +707,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             response.x_id_invoice || referencia,
             null,
             null,
-            null
+            null,
+            false,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
           );
 
           await guardarFalloPagoService({
@@ -769,7 +781,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           response.x_id_invoice || referencia,
           undefined, // NO actualizar urlTranscripcion - puede que ya esté guardada
           undefined, // NO actualizar urlborrador - puede que ya esté guardada
-          null
+          null,
+          false,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
         ).catch(err => console.error("Error al actualizar (ignorado):", err));
       }
     };
@@ -786,7 +804,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         window.history.pushState = function (...args: any[]) {
           const url = args[2]?.toString() || '';
           if (url.includes('epayco.co') || url.includes('ref_payco') || url.includes('secure.epayco')) {
-            console.log("⚠️ history.pushState interceptado:", url);
+            
             return;
           }
           return originalPushState.apply(window.history, args as any);
@@ -798,7 +816,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         window.history.replaceState = function (...args: any[]) {
           const url = args[2]?.toString() || '';
           if (url.includes('epayco.co') || url.includes('ref_payco') || url.includes('secure.epayco')) {
-            console.log("⚠️ history.replaceState interceptado:", url);
+            
             return;
           }
           return originalReplaceState.apply(window.history, args as any);
@@ -810,7 +828,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         if (window.location.href !== currentUrl) {
           const newUrl = window.location.href;
           if (newUrl.includes('epayco.co') || newUrl.includes('ref_payco') || newUrl.includes('secure.epayco') || newUrl.includes('landingresume') || newUrl.includes('?ref_payco=')) {
-            console.log("⚠️ Cambio en location.href detectado, revirtiendo:", newUrl);
+            
             window.stop();
             window.history.replaceState({}, '', currentUrl);
           }
@@ -835,25 +853,18 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     // Polling eliminado - ya no es necesario porque no iniciamos procesamiento automáticamente
 
     // Abrir checkout de ePayco
-    // ePayco OnPage Checkout abre un modal/iframe
-    console.log("🔓 Abriendo modal de ePayco con datos:", {
-      invoice: datosPago.invoice,
-      amount: datosPago.amount,
-      external: datosPago.external
-    });
 
     // Mostrar datos de tarjeta de prueba si está en modo TEST
     if (isTestMode) {
-      console.log("💳 DATOS DE TARJETA DE PRUEBA:");
-      console.log("   Número: 4575623182290326");
-      console.log("   Fecha: 12/2025");
-      console.log("   CVV: 123");
-      console.log("   Documento: 1213123123");
+      
+      
+      
+      
+      
     }
 
     try {
       checkoutHandler.open(datosPago);
-      console.log("✅ checkoutHandler.open() ejecutado");
 
       // DETECCIÓN DE CIERRE DEL MODAL (CANCELACIÓN)
       let modalDetected = false;
@@ -877,7 +888,6 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
         // Si se detectó que se abrió, y ahora no está abierto, y no se ha procesado el pago
         if (modalDetected && !open && !pagoProcesado) {
-          console.log("⚠️ Modal de ePayco cerrado por el usuario (cancelado)");
           setIsLoading(false);
           clearInterval(checkModalInterval);
         }
@@ -903,7 +913,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           return;
         }
 
-        console.log("📨 Mensaje recibido de iframe:", event.origin, event.data);
+        
 
         // ePayco puede enviar la respuesta de diferentes formas
         let response = null;
@@ -913,7 +923,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           // Formato: {event: 'onResponse', response: {...}}
           if (event.data.event === 'onResponse' && event.data.response) {
             response = event.data.response;
-            console.log("✅ Respuesta encontrada en event.data.response:", response);
+            
           } else if (event.data.type === "epayco_response") {
             response = event.data.data;
           } else if (event.data.x_response) {
@@ -938,7 +948,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
         // Si el callback onResponse no se ejecutó, usar este listener como respaldo
         if (response && (response.x_response || response.x_cod_response || response.respuesta || response.estado)) {
-          console.log("✅✅✅ RESPUESTA DE PAGO RECIBIDA VIA POSTMESSAGE:", response);
+          
 
           // Verificar si el pago fue exitoso
           const isSuccess = response.x_response === "Aceptada" ||
@@ -947,7 +957,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             response.estado === "Aceptada";
 
           if (isSuccess) {
-            console.log("✅✅✅ PAGO APROBADO - CERRANDO MODAL Y PROCESANDO...");
+            
 
             // Marcar que el pago fue procesado PRIMERO
             pagoProcesado = true;
@@ -974,7 +984,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 if (window.location.href !== currentUrl) {
                   const newUrl = window.location.href;
                   if (newUrl.includes('epayco.co') || newUrl.includes('ref_payco') || newUrl.includes('secure.epayco') || newUrl.includes('landingresume') || newUrl.includes('?ref_payco=')) {
-                    console.log("⚠️ Redirección detectada, revirtiendo:", newUrl);
+                    
                     window.stop();
                     window.history.replaceState({}, '', currentUrl);
                   }
@@ -992,7 +1002,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             const amount = response.x_amount || response.amount || response.valor || "0";
             const invoice = response.x_id_invoice || response.factura || referencia;
 
-            console.log("✅ Pago exitoso recibido:", { transactionId, amount, invoice });
+            
 
             // Remover el listener después de procesar
             window.removeEventListener("message", handleMessage);
@@ -1026,45 +1036,49 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                   oscillator2.start(audioContext.currentTime);
                   oscillator2.stop(audioContext.currentTime + 0.3);
                 } catch (e) {
-                  console.log("Error en segundo tono:", e);
+                  
                 }
               }, 150);
             } catch (error) {
-              console.log("No se pudo reproducir sonido:", error);
+              
             }
 
             // Generar el acta usando handlePayment
             if (props.handlePayment) {
-              console.log("✅ Iniciando generación del acta...");
+              
               props.handlePayment();
             }
 
             // Mostrar toast con datos de la transacción (después de cerrar el modal)
-            setTimeout(() => {
-              const amountNum = parseFloat(amount || "0");
+            // Solo mostrar si no se ha mostrado antes para esta transacción
+            if (transactionId && !hasToastBeenShown(transactionId)) {
+              markToastAsShown(transactionId);
+              setTimeout(() => {
+                const amountNum = parseFloat(amount || "0");
 
-              toast.success("¡Pago Aprobado!", {
-                description: (
-                  <div className="space-y-3 mt-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Monto:</span>
-                      <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
+                toast.success("¡Pago Aprobado!", {
+                  description: (
+                    <div className="space-y-3 mt-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-700">Monto:</span>
+                        <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-700">Tx:</span>
+                        <span className="text-xs font-mono text-gray-600">{transactionId}</span>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Tx:</span>
-                      <span className="text-xs font-mono text-gray-600">{transactionId}</span>
-                    </div>
-                  </div>
-                ),
-                duration: Infinity, // No se cierra automáticamente
-                action: {
-                  label: "Entendido",
-                  onClick: () => { },
-                },
-              });
-            }, 600); // Esperar a que se cierre el modal
+                  ),
+                  duration: Infinity, // No se cierra automáticamente
+                  action: {
+                    label: "Entendido",
+                    onClick: () => { },
+                  },
+                });
+              }, 600); // Esperar a que se cierre el modal
+            }
           } else {
-            console.log("❌ Pago rechazado:", response);
+            
 
             // Extraer datos de la respuesta
             const transactionIdRejected = response.x_transaction_id || response.transactionId || response.ref_payco || "";
@@ -1095,7 +1109,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 invoiceRejected || "",
                 null,
                 null,
-                null
+                null,
+                false,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
               ).catch(err => console.error("Error al actualizar (ignorado):", err));
 
               await guardarFalloPagoService({
@@ -1204,11 +1224,6 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       <Button
         className="w-full rounded-sm bg-green-700 hover:bg-green-800 disabled:bg-green-500"
         onClick={() => {
-          console.log("🔘 Botón Pagar clickeado", {
-            isLoading,
-            checkoutHandler: !!checkoutHandler,
-            onPaymentClick: !!props.onPaymentClick
-          });
           if (props.onPaymentClick) {
             props.onPaymentClick(handleOpenCheckout);
           } else {

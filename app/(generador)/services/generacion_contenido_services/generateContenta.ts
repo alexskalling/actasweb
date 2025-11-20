@@ -15,12 +15,12 @@ export async function generateContenta(
   folder: string,
   file: string,
   fileid: string,
-  transcipcion: string
+  transcipcion: string,
 ) {
   const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
   const nombreTranscripcion = `${file.replace(
     /\.[^/.]+$/,
-    ""
+    "",
   )}_Transcripcion.txt`;
 
   try {
@@ -30,7 +30,7 @@ export async function generateContenta(
       writeLog(`Contenido existente: ${nombreContenido}. Cargando.`);
       const contenidoExistente = await obtenerContenidoArchivo(
         folder,
-        nombreContenido
+        nombreContenido,
       );
       return { status: "success", content: contenidoExistente };
     }
@@ -39,9 +39,7 @@ export async function generateContenta(
     let contenidoTranscripcion = transcipcion;
 
     if (!contenidoTranscripcion) {
-      writeLog(
-        `Transcripción no proporcionada como parámetro. Verificando transcripción existente: ${nombreTranscripcion}`
-      );
+      writeLog(`Transcripción no proporcionada, buscando archivo: ${nombreTranscripcion}`);
       if (!(await verificarArchivoExistente(nombreTranscripcion, folder))) {
         writeLog(`Transcripción no encontrada: ${nombreTranscripcion}`);
         return {
@@ -49,13 +47,11 @@ export async function generateContenta(
           message: "Transcripción no encontrada en Nextcloud.",
         };
       }
-      writeLog(
-        `Transcripción encontrada: ${nombreTranscripcion}. Obteniendo contenido.`
-      );
-      contenidoTranscripcion = await obtenerContenidoArchivo(
+      writeLog(`Transcripción encontrada, leyendo contenido: ${nombreTranscripcion}`);
+      contenidoTranscripcion = (await obtenerContenidoArchivo(
         folder,
-        nombreTranscripcion
-      ) as string;
+        nombreTranscripcion,
+      )) as string;
       if (!contenidoTranscripcion) {
         return {
           status: "error",
@@ -71,7 +67,7 @@ export async function generateContenta(
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 3;
-    let modelNameOrdenDelDia = "gemini-2.0-flash"; // Puedes mantener este modelo inicial
+    let modelNameOrdenDelDia = "gemini-2.0-flash";
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
@@ -88,23 +84,18 @@ export async function generateContenta(
             contenidoTranscripcion,
             "",
             0,
-            ""
+            "",
           ),
         });
-        break; // Si la llamada es exitosa, sal del bucle
+        break;
       } catch (error) {
-        console.error(
-          `Error al generar el Orden del Día (intento ${retryCountOrdenDelDia + 1
-          }):`,
-          error
-        );
         retryCountOrdenDelDia++;
         if (retryCountOrdenDelDia > 1) {
           modelNameOrdenDelDia = "gemini-2.5-flash";
         }
         if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
           console.error(
-            "Máximo número de intentos alcanzado al generar el Orden del Día."
+            "Máximo número de intentos alcanzado al generar el Orden del Día.",
           );
           return {
             status: "error",
@@ -112,7 +103,7 @@ export async function generateContenta(
               "Error al generar el Orden del Día después de varios intentos.",
           };
         }
-        await new Promise((resolve) => setTimeout(resolve, 5000)); // Espera antes de reintentar
+        await new Promise<void>((resolve) => setTimeout(resolve, 5000));
       }
     }
 
@@ -130,29 +121,30 @@ export async function generateContenta(
 
     try {
       const ordenDelDiaJSON = JSON.parse(jsonCleaned);
-      
-      // Validar que el cierre esté presente
-      const tieneCierre = ordenDelDiaJSON.some((item: { nombre: string; }) => 
-        item.nombre && item.nombre.toLowerCase().includes('cierre')
+
+      const tieneCierre = ordenDelDiaJSON.some(
+        (item: { nombre: string }) =>
+          item.nombre && item.nombre.toLowerCase().includes("cierre"),
       );
-      
+
       if (!tieneCierre) {
         ordenDelDiaJSON.push({
           id: ordenDelDiaJSON.length,
           nombre: "Cierre",
           esLecturaActaAnterior: false,
-          discutido: true
+          discutido: true,
         });
       }
 
-      // Crear caché de transcripción en Gemini para reducir tokens por llamada
-      const cachedContentId = await crearCacheGeminiTranscripcion(contenidoTranscripcion);
+      const cachedContentId = await crearCacheGeminiTranscripcion(
+        contenidoTranscripcion,
+      );
 
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
         contenidoTranscripcion,
-        cachedContentId
+        cachedContentId,
       );
 
       const contenidoFormato = contenido
@@ -190,9 +182,8 @@ async function procesarOrdenDelDia(
   ordenDelDiaJSON: any,
   folder: string,
   contenidoTranscripcion: string,
-  cachedContentId?: string
+  cachedContentId?: string,
 ) {
- 
   let contenido = "";
 
   let index = 0;
@@ -201,7 +192,9 @@ async function procesarOrdenDelDia(
   let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
-    const nombreTemaNormalizado = String((tema as { nombre: string })?.nombre ?? "")
+    const nombreTemaNormalizado = String(
+      (tema as { nombre: string })?.nombre ?? "",
+    )
       .trim()
       .toLowerCase();
     const promptType =
@@ -214,16 +207,18 @@ async function procesarOrdenDelDia(
     let responseTema;
     retryCount = 0;
 
-    // Límites por tipo para permitir desarrollo suficiente
     const maxTokensPorTipo: Record<string, number> = {
       Cabecera: 12000,
       Contenido: 20000,
       Cierre: 12000,
     };
 
-    // Fuente para el tema: si se indicó que no fue discutido, pasa vacío; de lo contrario, usa la transcripción completa (cacheada externamente por el proveedor si aplica)
-    // EXCEPCIONES: El cierre y la cabecera siempre necesitan la transcripción completa
-    const contenidoTemaFuente = (tema )?.discutido === false && nombreTemaNormalizado !== "cierre" && nombreTemaNormalizado !== "cabecera" ? "" : contenidoTranscripcion;
+    const contenidoTemaFuente =
+      tema?.discutido === false &&
+      nombreTemaNormalizado !== "cierre" &&
+      nombreTemaNormalizado !== "cabecera"
+        ? ""
+        : contenidoTranscripcion;
 
     while (retryCount < maxRetries) {
       try {
@@ -240,17 +235,12 @@ async function procesarOrdenDelDia(
             contenidoTemaFuente,
             promptType !== "Cierre" ? JSON.stringify(ordenDelDiaJSON) : "",
             index,
-            ""
+            "",
           ),
         });
         contenido += responseTema.text.trim();
         break;
       } catch (error) {
-        console.error(
-          `Error al procesar tema ${tema.nombre} (intento ${retryCount + 1}):` +
-          error
-        );
-
         retryCount++;
         if (retryCount > 1) {
           modelName = "gemini-2.5-flash";
@@ -258,13 +248,13 @@ async function procesarOrdenDelDia(
 
         if (retryCount >= maxRetries) {
           console.error(
-            "Máximo número de intentos alcanzado, no se pudo procesar el tema."
+            "Máximo número de intentos alcanzado, no se pudo procesar el tema.",
           );
           contenido += `[Error: No se pudo procesar ${tema.nombre}. Máximo número de intentos alcanzado.]`;
           break;
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 5000));
+        await new Promise<void>((resolve) => setTimeout(resolve, 5000));
       }
     }
     index++;
@@ -275,22 +265,24 @@ async function procesarOrdenDelDia(
   return contenido;
 }
 
-// Crea caché de transcripción en Gemini y devuelve el ID (name)
-async function crearCacheGeminiTranscripcion(transcripcion: string): Promise<string | undefined> {
+async function crearCacheGeminiTranscripcion(
+  transcripcion: string,
+): Promise<string | undefined> {
   try {
     if (!transcripcion || transcripcion.trim().length === 0) return undefined;
-    const apiKey = process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GEMINI || "";
+    const apiKey =
+      process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GEMINI || "";
     if (!apiKey) return undefined;
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
     const cachedContentApi: any = (model as any).cachedContent?.();
     if (!cachedContentApi || typeof cachedContentApi.create !== "function") {
       return undefined;
     }
     const res = await cachedContentApi.create({
       contents: [{ role: "user", parts: [{ text: transcripcion }] }],
-      ttl: "1h", 
+      ttl: "1h",
     });
     const name = res?.cachedContent?.name;
     if (name) writeLog(`[Gemini Cache] creado: ${name}`);
@@ -391,7 +383,7 @@ Si la transcripción no contiene un "Orden del Día" explícito:
 
     Antes de entregar el resultado final, verifica que no haya duplicados en la lista. Si un tema ya está en la lista (o ha sido combinado), no lo repitas.
 
-elnombre del tema ebe ser corto y claro eplcicativo pero dejar el dearollo de los temas en el contenido no exageres con el titulo de los temas se puntual y claro 
+elnombre del tema ebe ser corto y claro eplcicativo pero dejar el dearollo de los temas en el contenido no exageres con el titulo de los temas se puntual y claro
     Elementos Obligatorios:
 
 El JSON siempre debe comenzar con:
@@ -715,7 +707,7 @@ async function getUserPromt(
   content: string,
   ordendeldia: string,
   numeracion: number,
-  contenidoActa: string
+  contenidoActa: string,
 ) {
   let userPromt = "";
 
@@ -737,7 +729,7 @@ Procesa el contenido de la variable ${content} como la transcripción de la reun
 
 Si la transcripción menciona explícitamente un "orden del día":
 Utilízalo como base.
-SE muy meticulos con el nombre del orden del dia y revisa que no se solape con otros temas que no sean del orden del dia 
+SE muy meticulos con el nombre del orden del dia y revisa que no se solape con otros temas que no sean del orden del dia
 Revisa la transcripción para identificar temas importantes que no estén en el orden del día explícito e inclúyelos, manteniendo el orden cronológico de la discusión. No elimines ningún punto del orden del día explícito.
 
 **1. Manejo Prioritario de "Lectura del acta anterior":**
@@ -803,7 +795,6 @@ Orden Cronológico: Mantén el orden cronológico original de los temas, incluso
       return userPromt;
     case "Cabecera":
       userPromt = `
-      
 
 GENERA UNA CABECERA DE ACTA EN FORMATO HTML
 INSTRUCCIONES ESTRICTAS:
@@ -879,7 +870,6 @@ Redactar el contenido del tema especificado del acta de reunión basado en la tr
 
 📝 Instrucciones Generales:
 
-
 Desarrollo del tema:
 
 Proceso de búsqueda:
@@ -912,7 +902,7 @@ Extracción de subtemas:
 - No inventes subtemas que no estén en la transcripción
 - Organiza el contenido por subtemas si existen
 🔹 Evitar redundancias y contenido duplicado
-al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa}). de manera estricta y si ya se hablo del tema que stoy por redactar lo omito no quiero reduncandcia de temas o de contenidos repetidos 
+al momento de desarolar un tema revisa el contenido ya generado (${contenidoActa}). de manera estricta y si ya se hablo del tema que stoy por redactar lo omito no quiero reduncandcia de temas o de contenidos repetidos
 
     Al generar contenido para el tema en curso, se debe referenciar y analizar activamente el contenido ya generado (${contenidoActa}). La información nueva debe complementar lo existente sin repetir conceptos, frases o datos previamente discutidos o escritos en el acta, y sin anticipar o duplicar información de secciones posteriores del orden del día.
     Garantiza que cada nueva pieza de información añada valor y no duplique lo ya consignado. Si un dato ya ha sido mencionado, no lo repitas. La única excepción es si una referencia breve es esencial para la coherencia del punto actual, pero nunca debe implicar la repetición de párrafos o detalles ya documentados.
@@ -952,7 +942,7 @@ Evitar redundancias: No se debe repetir información que ya se haya dado en otro
 
     Se debe evitar la redundancia mencionando la relación con otros puntos del orden del día sin repetir la información detallada.
     La narrativa debe ser fluida y natural, evitando una estructura fragmentada o un uso excesivo de listas, y respetando siempre la cronología estricta de la discusión tal como aparece en la reunión. Cada párrafo debe fluir naturalmente hacia el siguiente, sin parecer una lista de puntos.
-    
+
     EVITA estructuras tipo lista de supermercado. En lugar de usar viñetas o listas numeradas, desarrolla el contenido de manera narrativa y fluida, conectando las ideas con transiciones naturales. Solo usa listas cuando sea absolutamente necesario para votaciones o enumeraciones específicas.
 
 Formato profesional y legibilidad:
@@ -1116,7 +1106,6 @@ Si la transcripción menciona que la reunión finalizó a las 18:30 y se llegaro
 
 La respuesta en HTML debe generarse así:
 
-
     <h2>Cierre de la Reunión</h2>
     <p><strong>Hora de finalización:</strong> 18:30</p>
 
@@ -1130,15 +1119,11 @@ La respuesta en HTML debe generarse así:
     <h3>Firma de los asistentes:</h3>
     <p>[Espacio para firmas]</p>
 
-
     no agrege nada mas que no se ala hora del cierre y los acuerdos alcanzados nada de agreadados u ananlisis no pedidos
-
 
 Transcripción a analizar:
 
-
 ${content}
-
 
 Genera la respuesta en HTML siguiendo la estructura indicada. `;
       return userPromt;

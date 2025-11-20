@@ -85,6 +85,46 @@ export default function ActaEmail({ name, url, transcription, file }: ActaEmailP
 
           <div
             style={{
+              background: "#fff3cd",
+              color: "#222",
+              borderRadius: 8,
+              padding: "18px 20px",
+              fontSize: 15,
+              fontWeight: 500,
+              textAlign: "left",
+              border: "1px solid #ffc107",
+              marginBottom: 20,
+            }}
+          >
+            <h3 style={{ color: "#856404", fontWeight: 700, fontSize: 18, marginBottom: 8 }}>
+              ⭐ ¡Tu opinión es importante!
+            </h3>
+            <div style={{ marginBottom: 12 }}>
+              <span style={{ color: "#333" }}>
+                ¿Te gustó nuestro servicio? Ayúdanos compartiendo tu experiencia y deja una valoración.
+              </span>
+            </div>
+            <a
+              href="https://actasdereuniones.ai/resenas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                background: "#a259e6",
+                color: "#fff",
+                padding: "10px 20px",
+                borderRadius: 6,
+                textDecoration: "none",
+                fontWeight: 600,
+                fontSize: 14,
+              }}
+            >
+              Dejar una valoración →
+            </a>
+          </div>
+
+          <div
+            style={{
               background: "#f3e8ff",
               color: "#222",
               borderRadius: 8,
@@ -109,7 +149,7 @@ export default function ActaEmail({ name, url, transcription, file }: ActaEmailP
             </div>
             <div>
               <span style={{ color: "#222" }}>
-                • <strong style={{ color: "#a259e6" }}>Leonardo:</strong> +57 301 242 2098
+                • <strong style={{ color: "#a259e6" }}>Sebastián:</strong> +57 312 299 5191
               </span>
               <br />
               <span style={{ color: "#222" }}>

@@ -15,7 +15,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import { usuarios } from '../lib/db/schema';
 import { isNull, or, eq } from 'drizzle-orm';
 
-const client = postgres(process.env.DATABASE_URL, {
+const client = postgres(process.env.DATABASE_URL as string, {
   ssl: 'require',
   connect_timeout: 60,
 });

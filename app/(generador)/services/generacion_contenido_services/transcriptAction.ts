@@ -13,13 +13,13 @@ interface TranscripcionResult {
   status: "success" | "error";
   content?: string;
   message?: string;
-  yaExistia?: boolean; // Indica si la transcripción ya existía
+  yaExistia?: boolean;
 }
 
 export async function transcripAction(
   folder: string,
   file: string,
-  urlAssembly: string
+  urlAssembly: string,
 ): Promise<TranscripcionResult> {
   const nombreTranscripcion = generateTranscriptionFilename(file);
   const nextcloudUser = process.env.NEXTCLOUD_USER;
@@ -34,19 +34,22 @@ export async function transcripAction(
 
   try {
     if (await verificarTranscripcionExistente(nombreTranscripcion, folder)) {
-      const resultado = await obtenerTranscripcionExistente(nombreTranscripcion, folder);
+      const resultado = await obtenerTranscripcionExistente(
+        nombreTranscripcion,
+        folder,
+      );
       return { ...resultado, yaExistia: true };
     }
 
     const textoTranscripcion = await realizarTranscripcionAssemblyAI(
       folder,
       file,
-      urlAssembly
+      urlAssembly,
     );
     await guardarTranscripcionEnNextcloud(
       folder,
       nombreTranscripcion,
-      textoTranscripcion
+      textoTranscripcion,
     );
 
     return { status: "success", content: textoTranscripcion, yaExistia: false };
@@ -65,24 +68,20 @@ function generateTranscriptionFilename(file: string): string {
 
 async function verificarTranscripcionExistente(
   nombreTranscripcion: string,
-  folder: string
+  folder: string,
 ): Promise<boolean> {
-  writeLog(
-    `Verificando si existe transcripción: ${nombreTranscripcion} en carpeta ${folder}`
-  );
+  writeLog(`Verificando si existe transcripción: ${nombreTranscripcion}`);
   return await verificarArchivoExistente(nombreTranscripcion, folder);
 }
 
 async function obtenerTranscripcionExistente(
   folder: string,
-  nombreTranscripcion: string
+  nombreTranscripcion: string,
 ): Promise<TranscripcionResult> {
-  writeLog(
-    `Transcripción existente encontrada: ${nombreTranscripcion}. Obteniendo contenido.`
-  );
+  writeLog(`Obteniendo transcripción existente: ${nombreTranscripcion}`);
   const contenidoTranscripcion = await obtenerContenidoArchivo(
     folder,
-    nombreTranscripcion
+    nombreTranscripcion,
   );
 
   return { status: "success", content: contenidoTranscripcion as string };
@@ -91,7 +90,7 @@ async function obtenerTranscripcionExistente(
 async function realizarTranscripcionAssemblyAI(
   folder: string,
   file: string,
-  urlAssembly: string
+  urlAssembly: string,
 ): Promise<string> {
   writeLog(`Iniciando transcripción con AssemblyAI para: ${file}`);
   const clienteTranscripcion = await obtenerClienteTranscripcion();
@@ -111,11 +110,9 @@ async function realizarTranscripcionAssemblyAI(
 async function guardarTranscripcionEnNextcloud(
   folder: string,
   nombreTranscripcion: string,
-  textoTranscripcion: string
+  textoTranscripcion: string,
 ): Promise<void> {
-  writeLog(
-    `Guardando transcripción: ${nombreTranscripcion} en carpeta ${folder}`
-  );
+  writeLog(`Guardando transcripción: ${nombreTranscripcion}`);
   await guardarArchivo(folder, nombreTranscripcion, textoTranscripcion);
   writeLog(`Transcripción guardada: ${nombreTranscripcion}`);
 }

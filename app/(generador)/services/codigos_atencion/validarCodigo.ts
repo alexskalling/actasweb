@@ -1,4 +1,4 @@
-'use server';
+"use server";
 
 import { db } from "@/lib/db/db";
 import { codigosAtencion } from "@/lib/db/schema";
@@ -16,28 +16,17 @@ export interface ValidacionCodigoResult {
   minutosNecesarios?: number;
 }
 
-/**
- * Convierte duración en segundos a minutos, redondeando siempre hacia arriba
- * Ejemplo: 661 segundos (11 min 1 seg) → 12 minutos
- */
 function segundosAMinutos(segundos: number): number {
   return Math.ceil(segundos / 60);
 }
 
-/**
- * Valida un código de atención y verifica si tiene suficiente saldo
- * @param codigo - Código a validar (se formatea automáticamente)
- * @param duracionSegundos - Duración del acta en segundos
- * @returns Resultado de la validación con mensaje apropiado
- */
 export async function validarCodigo(
   codigo: string,
-  duracionSegundos: number
+  duracionSegundos: number,
 ): Promise<ValidacionCodigoResult> {
   try {
-    // Formatear código: minúsculas y sin espacios
     const codigoFormateado = codigo.trim().toLowerCase();
-    
+
     if (!codigoFormateado) {
       return {
         valido: false,
@@ -45,7 +34,6 @@ export async function validarCodigo(
       };
     }
 
-    // Buscar código en la base de datos (solo activos)
     const codigoEncontrado = await db
       .select({
         id: codigosAtencion.id,
@@ -58,8 +46,8 @@ export async function validarCodigo(
       .where(
         and(
           eq(codigosAtencion.codigo, codigoFormateado),
-          eq(codigosAtencion.estado, true)
-        )
+          eq(codigosAtencion.estado, true),
+        ),
       )
       .then((res) => res[0]);
 
@@ -70,13 +58,8 @@ export async function validarCodigo(
       };
     }
 
-    // Calcular minutos necesarios (redondeando hacia arriba)
     const minutosNecesarios = segundosAMinutos(duracionSegundos);
 
-    // Verificar si hay suficiente saldo disponible
-    // El saldo disponible es: saldo - reserva (lo que realmente está libre)
-    // Ejemplo: saldo=100, reserva=67 → disponible=33
-    // Si necesito 50 minutos, NO puedo generar porque 33 < 50
     const saldoDisponible = codigoEncontrado.saldo - codigoEncontrado.reserva;
 
     if (saldoDisponible < minutosNecesarios) {
@@ -93,7 +76,6 @@ export async function validarCodigo(
       };
     }
 
-    // Código válido y con saldo suficiente
     return {
       valido: true,
       mensaje: "Código válido",
@@ -113,4 +95,3 @@ export async function validarCodigo(
     };
   }
 }
-

@@ -37,21 +37,17 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ estado: null, message: 'Acta no encontrada' });
     }
 
-    return NextResponse.json({ 
+    return NextResponse.json({
       estado: actaEncontrada[0].idEstadoProceso,
       nombre: actaEncontrada[0].nombre
     });
 
   } catch (error) {
     console.error('Error al verificar estado del acta:', error);
-    return NextResponse.json({ 
+    return NextResponse.json({
       error: 'Error al verificar estado',
       details: error instanceof Error ? error.message : 'Error desconocido'
     }, { status: 500 });
   }
 }
-
-
-
-
 

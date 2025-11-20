@@ -4,11 +4,12 @@ import { GuardarNuevoProceso } from "@/app/(generador)/services/actas_querys_ser
 import { parseBuffer } from "music-metadata";
 import { processAction } from "@/app/(generador)/services/generacion_contenido_services/processAction";
 import { BuscarExistenteProceso } from "@/app/(generador)/services/actas_querys_services/buscarExistente.proceso";
+import { calculatePrice } from "@/app/(generador)/utils/price";
 
 async function getMediaDuration(buffer: Buffer): Promise<number> {
   try {
     const metadata = await parseBuffer(buffer, undefined, { duration: true });
-    return metadata.format.duration || 0; // en segundos
+    return metadata.format.duration || 0;
   } catch (err) {
     console.error("Error leyendo duración real:", err);
     return 0;
@@ -43,13 +44,6 @@ async function getDropboxAccessToken() {
 }
 
 
-const calculatePrice = (durationInSeconds: number): number => {
-  const segments = Math.ceil(durationInSeconds / 60 / 15);
-  return segments * 2500;
-};
-
-
-// Tipos para la respuesta
 interface AutomationResponse {
   status: "success" | "error";
   message: string;
@@ -84,12 +78,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    // 2. Obtener JSON con pathDropbox, email y name (en lugar de archivo directamente)
     const formData = await request.formData();
 
     const email = formData.get("email") as string;
     const name = formData.get("name") as string;
-    const pathDropbox = formData.get("pathDropbox") as string; // si lo mandas
+    const pathDropbox = formData.get("pathDropbox") as string;
 
     if (!pathDropbox) {
       return NextResponse.json(
@@ -121,21 +114,19 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         },
         body: JSON.stringify({ path: pathDropbox }),
       });
-    
+
       if (!res.ok) {
         throw new Error(`Error al obtener enlace temporal de Dropbox: ${res.status} - ${await res.text()}`);
       }
-    
+
       const data = await res.json();
       return data.link as string;
     }
 
     const fileDownloadUrl = await getTemporaryLink();
 
-    // 4. Extraer nombre de archivo de la ruta Dropbox
     const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
 
-    // 5. Validar extensión permitida
     const allowedExtensions = [
       ".wav", ".mp3", ".m4a", ".aac", ".ogg", ".wma", ".flac",
       ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm",
@@ -151,13 +142,9 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-
-
-    // 6. Normalizar nombre
     const nombreNormalizado = await normalizarNombreArchivo(nombreArchivo);
     const nombreCarpeta = nombreNormalizado.replace(/\.[^/.]+$/, "");
 
-    // 7. Descargar archivo directamente usando fetch y convertir a buffer para subir a AssemblyAI
     console.log("🔗 Dropbox download URL:", fileDownloadUrl);
     const fileRes = await fetch(fileDownloadUrl);
     if (!fileRes.ok) {
@@ -178,7 +165,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       .toISOString()
       .substr(11, 8);
 
-    // 8. Subir a AssemblyAI
     const assemblyApiKey = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
     if (!assemblyApiKey) {
       return NextResponse.json(
@@ -195,10 +181,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       if (error instanceof Error && error.message === "DUPLICATE_ACTA") {
         return NextResponse.json(
           { status: "error", message: "Ya existe un acta con ese nombre." },
-          { status: 409 } // Conflict
+          { status: 409 }
         );
       }
-      throw error; 
+      throw error;
     }
 
     const uploadRes = await fetch("https://api.assemblyai.com/v2/upload", {
@@ -223,27 +209,30 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     const uploadData = await uploadRes.json();
     const uploadUrl = uploadData.upload_url;
 
-    // 9. Guardar proceso en DB
     try {
       const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
        await GuardarNuevoProceso(
-        nombreNormalizado,
-        4,
-        formattedDuration,
-        calculatePrice(durationInSeconds),
-        "",
-        uploadUrl,
-        tipo,
-        "",
-        "",
-        99,
-        email || "automation@skalling.com"
+        nombreNormalizado, // 1. nombreActa
+        4, // 2. idEstadoProceso
+        formattedDuration, // 3. duracion
+        calculatePrice(durationInSeconds), // 4. costo
+        "", // 5. tx
+        uploadUrl, // 6. urlAssembly
+        tipo, // 7. referencia
+        "", // 8. urlTranscripcion
+        "", // 9. urlborrador
+        "", // 10. urlContenido
+        99, // 11. Industria
+        email || "automation@skalling.com", // 12. automation_mail
+        undefined, // 13. codigoAtencion
+        undefined, // 14. codigoReferido
+        undefined, // 15. soporte
+        undefined, // 16. idUsuarioSoporte
       );
     } catch (error) {
       console.warn("Error al guardar proceso, continuando con el procesamiento:", error);
     }
 
-    // 10. Procesar archivo
     console.log("archivo: " + nombreArchivo)
     const processResult = await processAction(
       nombreCarpeta,
@@ -263,7 +252,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
 
-    // 11. Retornar respuesta
     return NextResponse.json(
       {
         status: "success",
@@ -300,5 +288,4 @@ export async function GET(): Promise<NextResponse> {
     { status: 200 }
   );
 }
-
 

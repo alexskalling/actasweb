@@ -12,26 +12,24 @@ import {
 export async function formatContent(
   folder: string,
   file: string,
-  contenidoActa: string
+  contenidoActa: string,
 ) {
   const nombreNormalizado = file;
   const nombreBorradorDocx = `${nombreNormalizado.replace(
     /\.[^/.]+$/,
-    ""
+    "",
   )}_Borrador.docx`;
   const nombreTranscripcionTxt = `${nombreNormalizado.replace(
     /\.[^/.]+$/,
-    ""
+    "",
   )}_Transcripcion.txt`;
   const nombreContenidoTxt = `${nombreNormalizado.replace(
     /\.[^/.]+$/,
-    ""
+    "",
   )}_Contenido.txt`;
 
   try {
-    writeLog(
-      `Iniciando formatContent (VERSION FUSIONADA) para: ${nombreNormalizado} en carpeta: ${folder}`
-    );
+    writeLog(`Iniciando formateo de contenido para: ${file}`);
 
     const urlNextcloud = process.env.NEXTCLOUD_URL;
     const usuario = process.env.NEXTCLOUD_USER;
@@ -44,64 +42,71 @@ export async function formatContent(
     const rutaCarpetaActa = `${rutaBaseActas}/${folder}`;
     const rutaArchivoBorrador = `/Actas/${folder}/${nombreBorradorDocx}`;
     const rutaArchivoTranscripcion = `/Actas/${folder}/${nombreTranscripcionTxt}`;
+    const rutaArchivoContenido = `/Actas/${folder}/${nombreContenidoTxt}`;
 
     writeLog(`Verificando Borrador .docx existente: ${nombreBorradorDocx}`);
     if (await verificarArchivoExistente(nombreBorradorDocx, folder)) {
-      writeLog(
-        `Borrador .docx existente. Generando URLs públicas para archivos existentes.`
-      );
+      writeLog(`Borrador .docx encontrado: ${nombreBorradorDocx}`);
 
-      writeLog(
-        `Generando URL pública para Borrador.docx (EXISTENTE): ${nombreBorradorDocx}`
-      );
+      writeLog(`Obteniendo URL pública del borrador`);
       const publicUrlBorrador = await obtenerUrlPublicaArchivoExistente(
         rutaArchivoBorrador,
         urlNextcloud,
         usuario,
-        contrasena
+        contrasena,
       );
       if (!publicUrlBorrador) {
-        throw new Error(
-          `No se pudo obtener URL pública para Borrador.docx (EXISTENTE): ${nombreBorradorDocx}`
-        );
+        throw new Error("No se pudo obtener URL pública del borrador");
       }
-      writeLog(
-        `URL pública de Borrador.docx (EXISTENTE) obtenida: ${publicUrlBorrador}`
-      );
+      writeLog(`URL pública del borrador obtenida: ${publicUrlBorrador}`);
 
-      writeLog(
-        `Generando URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
-      );
+      writeLog(`Obteniendo URL pública de la transcripción`);
       const publicUrlTranscripcion = await obtenerUrlPublicaArchivoExistente(
         rutaArchivoTranscripcion,
         urlNextcloud,
         usuario,
-        contrasena
+        contrasena,
       );
       if (!publicUrlTranscripcion) {
-        throw new Error(
-          `No se pudo obtener URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
-        );
+        throw new Error("No se pudo obtener URL pública de la transcripción");
       }
-      writeLog(
-        `URL pública de Transcripcion.txt (EXISTENTE) obtenida: ${publicUrlTranscripcion}`
-      );
+      writeLog(`URL pública de la transcripción obtenida: ${publicUrlTranscripcion}`);
 
       const fileIdFromUrlBorrador =
         obtenerFileIdDeUrlPublica(publicUrlBorrador);
       if (!fileIdFromUrlBorrador) {
         throw new Error(
-          "No se pudo extraer fileId de la publicUrl de Borrador.docx (EXISTENTE)."
+          "No se pudo extraer fileId de la publicUrl de Borrador.docx (EXISTENTE).",
         );
       }
       const fileIdFromUrlTranscripcion = obtenerFileIdDeUrlPublica(
-        publicUrlTranscripcion
+        publicUrlTranscripcion,
       );
       if (!fileIdFromUrlTranscripcion) {
         throw new Error(
-          "No se pudo extraer fileId de la publicUrl de Transcripcion.txt (EXISTENTE)."
+          "No se pudo extraer fileId de la publicUrl de Transcripcion.txt (EXISTENTE).",
         );
       }
+
+      writeLog(`Obteniendo URL pública del contenido`);
+      const publicUrlContenido = await obtenerUrlPublicaArchivoExistente(
+        rutaArchivoContenido,
+        urlNextcloud,
+        usuario,
+        contrasena,
+      );
+      if (!publicUrlContenido) {
+        writeLog(`Advertencia: No se pudo obtener URL pública del contenido`);
+      } else {
+        writeLog(`URL pública del contenido obtenida: ${publicUrlContenido}`);
+      }
+
+      const fileIdFromUrlContenido = publicUrlContenido
+        ? obtenerFileIdDeUrlPublica(publicUrlContenido)
+        : null;
+      const baseUrlDescargaDirectaContenido = fileIdFromUrlContenido
+        ? `${urlNextcloud}/s/${fileIdFromUrlContenido}/download`
+        : null;
 
       const baseUrlDescargaDirectaBorrador = `${urlNextcloud}/s/${fileIdFromUrlBorrador}/download`;
       const baseUrlDescargaDirectaTranscripcion = `${urlNextcloud}/s/${fileIdFromUrlTranscripcion}/download`;
@@ -112,19 +117,20 @@ export async function formatContent(
           "Borrador .docx ya existente. URLs de descarga pública generadas.",
         transcripcion: `${baseUrlDescargaDirectaTranscripcion}/${nombreTranscripcionTxt}`,
         acta: `${baseUrlDescargaDirectaBorrador}/${nombreBorradorDocx}`,
+        contenido: baseUrlDescargaDirectaContenido
+          ? `${baseUrlDescargaDirectaContenido}/${nombreContenidoTxt}`
+          : null,
       };
     } else {
-      writeLog(
-        `Borrador .docx NO existente. Generando Borrador .docx y URLs públicas.`
-      );
+      writeLog(`Borrador .docx no existe, se creará uno nuevo`);
 
       let actaHTMLContent = contenidoActa;
       if (!actaHTMLContent) {
         writeLog(`Contenido del acta no proporcionado. Leyendo _Contenido.txt`);
-        actaHTMLContent = await obtenerContenidoArchivo(
+        actaHTMLContent = (await obtenerContenidoArchivo(
           folder,
-          nombreContenidoTxt
-        ) as string;
+          nombreContenidoTxt,
+        )) as string;
         if (!actaHTMLContent) {
           return {
             status: "error",
@@ -140,64 +146,72 @@ export async function formatContent(
       const archivoGuardado = await guardarArchivoNextcloudDocx(
         folder,
         nombreBorradorDocx,
-        actaHTMLContent
+        actaHTMLContent,
       );
       if (!archivoGuardado) {
         throw new Error("Error al guardar el archivo .docx en Nextcloud.");
       }
       writeLog(`Borrador .docx guardado exitosamente.`);
 
-      writeLog(
-        `Generando URL pública para Borrador.docx (RECIÉN CREADO): ${nombreBorradorDocx}`
-      );
+      writeLog(`Obteniendo URL pública del borrador recién creado`);
       const publicUrlBorrador = await obtenerUrlPublicaArchivoExistente(
         rutaArchivoBorrador,
         urlNextcloud,
         usuario,
-        contrasena
+        contrasena,
       );
       if (!publicUrlBorrador) {
-        throw new Error(
-          `No se pudo obtener URL pública para Borrador.docx (RECIÉN CREADO): ${nombreBorradorDocx}`
-        );
+        throw new Error("No se pudo obtener URL pública del borrador");
       }
-      writeLog(
-        `URL pública de Borrador.docx (RECIÉN CREADO) obtenida: ${publicUrlBorrador}`
-      );
+      writeLog(`URL pública del borrador obtenida: ${publicUrlBorrador}`);
 
-      writeLog(
-        `Generando URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
-      );
+      writeLog(`Obteniendo URL pública de la transcripción`);
       const publicUrlTranscripcion = await obtenerUrlPublicaArchivoExistente(
         rutaArchivoTranscripcion,
         urlNextcloud,
         usuario,
-        contrasena
+        contrasena,
       );
       if (!publicUrlTranscripcion) {
-        throw new Error(
-          `No se pudo obtener URL pública para Transcripcion.txt (EXISTENTE): ${nombreTranscripcionTxt}`
-        );
+        throw new Error("No se pudo obtener URL pública de la transcripción");
       }
-      writeLog(
-        `URL pública de Transcripcion.txt (EXISTENTE) obtenida: ${publicUrlTranscripcion}`
-      );
+      writeLog(`URL pública de la transcripción obtenida: ${publicUrlTranscripcion}`);
 
       const fileIdFromUrlBorrador =
         obtenerFileIdDeUrlPublica(publicUrlBorrador);
       if (!fileIdFromUrlBorrador) {
         throw new Error(
-          "No se pudo extraer fileId de la publicUrl de Borrador.docx (RECIÉN CREADO)."
+          "No se pudo extraer fileId de la publicUrl de Borrador.docx (RECIÉN CREADO).",
         );
       }
       const fileIdFromUrlTranscripcion = obtenerFileIdDeUrlPublica(
-        publicUrlTranscripcion
+        publicUrlTranscripcion,
       );
       if (!fileIdFromUrlTranscripcion) {
         throw new Error(
-          "No se pudo extraer fileId de la publicUrl de Transcripcion.txt (EXISTENTE)."
+          "No se pudo extraer fileId de la publicUrl de Transcripcion.txt (EXISTENTE).",
         );
       }
+
+      writeLog(`Obteniendo URL pública del contenido`);
+      const publicUrlContenido = await obtenerUrlPublicaArchivoExistente(
+        rutaArchivoContenido,
+        urlNextcloud,
+        usuario,
+        contrasena,
+      );
+      if (!publicUrlContenido) {
+        writeLog(`Advertencia: No se pudo obtener URL pública del contenido`);
+      } else {
+        writeLog(`URL pública del contenido obtenida: ${publicUrlContenido}`);
+      }
+
+      const fileIdFromUrlContenido = publicUrlContenido
+        ? obtenerFileIdDeUrlPublica(publicUrlContenido)
+        : null;
+      const baseUrlDescargaDirectaContenido = fileIdFromUrlContenido
+        ? `${urlNextcloud}/s/${fileIdFromUrlContenido}/download`
+        : null;
 
       const baseUrlDescargaDirectaBorrador = `${urlNextcloud}/s/${fileIdFromUrlBorrador}/download`;
       const baseUrlDescargaDirectaTranscripcion = `${urlNextcloud}/s/${fileIdFromUrlTranscripcion}/download`;
@@ -208,6 +222,9 @@ export async function formatContent(
           "Borrador .docx generado y guardado. URLs de descarga pública generadas.",
         transcripcion: `${baseUrlDescargaDirectaTranscripcion}/${nombreTranscripcionTxt}`,
         acta: `${baseUrlDescargaDirectaBorrador}/${nombreBorradorDocx}`,
+        contenido: baseUrlDescargaDirectaContenido
+          ? `${baseUrlDescargaDirectaContenido}/${nombreContenidoTxt}`
+          : null,
       };
     }
   } catch (error) {
@@ -240,7 +257,7 @@ async function obtenerUrlPublicaArchivoExistente(
   rutaArchivoCompartir: string,
   urlNextcloud: string,
   usuario: string,
-  contrasena: string
+  contrasena: string,
 ): Promise<string | null> {
   const cabecerasAutenticacion = {
     Authorization: "Basic " + btoa(usuario + ":" + contrasena),
@@ -249,26 +266,20 @@ async function obtenerUrlPublicaArchivoExistente(
   };
 
   try {
-    writeLog(
-      `Compartiendo archivo existente para obtener URL pública: ${rutaArchivoCompartir}`
-    );
-    const shareResponse = await fetch(
-      `${urlNextcloud}/ocs/v2.php/apps/files_sharing/api/v1/shares`,
-      {
-        method: "POST",
-        headers: cabecerasAutenticacion,
-        body: new URLSearchParams({
-          path: rutaArchivoCompartir,
-          shareType: "3",
-          permissions: "1",
-        }),
-      }
-    );
+    writeLog(`Obteniendo URL pública para archivo: ${rutaArchivoCompartir}`);
+    const shareUrl = `${urlNextcloud}/ocs/v2.php/apps/files_sharing/api/v1/shares`;
+    const shareResponse = await fetch(shareUrl, {
+      method: "POST",
+      headers: cabecerasAutenticacion,
+      body: new URLSearchParams({
+        path: rutaArchivoCompartir,
+        shareType: "3",
+        permissions: "1",
+      }),
+    });
 
     if (!shareResponse.ok) {
-      console.error(
-        `Error al compartir archivo existente en Nextcloud: Status ${shareResponse.status}, ${shareResponse.statusText}`
-      );
+      console.error(`Error al obtener URL pública. Status: ${shareResponse.status} ${shareResponse.statusText}`);
       return null;
     }
 
@@ -282,13 +293,11 @@ async function obtenerUrlPublicaArchivoExistente(
 
       if (urlElement) {
         publicUrlNextcloud = urlElement.textContent;
-        writeLog(
-          `URL pública de archivo existente obtenida: ${publicUrlNextcloud}`
-        );
+        writeLog(`URL pública obtenida: ${publicUrlNextcloud}`);
       } else {
         console.error(
           "Elemento <url> no encontrado en la respuesta XML al compartir archivo existente:",
-          xmlDoc
+          xmlDoc,
         );
         return null;
       }
@@ -304,15 +313,11 @@ async function obtenerUrlPublicaArchivoExistente(
   }
 }
 
-
-
 function limpiarHTMLParaDocx(htmlContent: string): string {
   if (!htmlContent) return "";
 
   let cleanedHTML = htmlContent;
 
-  // Limpieza no destructiva: preservar estructura y formato útil
-  // 1) Quitar fences y marcadores de exportación
   cleanedHTML = cleanedHTML
     .replace(/```(?:html)?/gi, "")
     .replace(/\[Text Wrapping Break\]/g, "");
@@ -344,24 +349,19 @@ function limpiarHTMLParaDocx(htmlContent: string): string {
 async function guardarArchivoNextcloudDocx(
   folder: string,
   nombreActaDocx: string,
-  textoActa: string
+  textoActa: string,
 ): Promise<boolean> {
-
   const actaContent = limpiarHTMLParaDocx(textoActa);
 
   writeLog(`Preparando guardado .docx en Nextcloud: ${nombreActaDocx}`);
-  writeLog(
-    `Contenido de actaContent justo antes de htmlToDocx: ${actaContent}`
-  );
+  writeLog(`Iniciando proceso de guardado`);
 
   writeLog(`VERSION DE NODE.JS EN DOCKER: ${process.version}`);
   writeLog(`SISTEMA OPERATIVO EN DOCKER: ${process.platform} ${process.arch}`);
   writeLog(`VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:`);
   writeLog(`  NEXTCLOUD_URL: ${process.env.NEXTCLOUD_URL}`);
   writeLog(`  NEXTCLOUD_USER: ${process.env.NEXTCLOUD_USER}`);
-  writeLog(
-    `  (Contraseña de Nextcloud definida: ${!!process.env.NEXTCLOUD_PASSWORD})`
-  );
+  writeLog(`  NEXTCLOUD_PASSWORD: ${process.env.NEXTCLOUD_PASSWORD ? "***" : "NO CONFIGURADO"}`);
   writeLog(`CONTENIDO HTML JUSTO ANTES DE htmlToDocx: ${actaContent}`);
 
   try {
@@ -369,14 +369,10 @@ async function guardarArchivoNextcloudDocx(
     const options = {
       header: false,
       footer: false,
-      pageNumber: false
+      pageNumber: false,
     };
 
-
-
     const docxBuffer = await htmlToDocx(actaContent, null, options);
-
-
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -398,8 +394,6 @@ async function guardarArchivoNextcloudDocx(
       "Content-Length": contentLength.toString(),
     };
 
-
-
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
       headers: cabecerasAutenticacion,
@@ -409,11 +403,9 @@ async function guardarArchivoNextcloudDocx(
     if (!respuestaGuardado.ok) {
       const errorText = await respuestaGuardado.text();
       console.error(
-        `Error al guardar .docx en Nextcloud: Status ${respuestaGuardado.status}, ${respuestaGuardado.statusText}, Body: ${errorText}`
       );
       return false;
     }
-
 
     return true;
   } catch (error) {

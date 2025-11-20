@@ -1,9 +1,14 @@
-import LoginPopup from "@/components/ui/loginPopup";
+'use client';
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
-  return (
-    <main className="min-h-screen bg-purple-950 flex items-center justify-center px-4">
-      <LoginPopup />
-    </main>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace('/');
+  }, [router]);
+
+  return null;
 }
