@@ -28,6 +28,7 @@ export async function getActasByUser() {
           fechaProcesamiento: actas.fechaProcesamiento,
           nombreEstado: estadosProceso.nombre,
           emailUsuario: usuarios.email,
+          telefonoUsuario: usuarios.telefono,
           idUsuario: actas.idUsuario,
         })
         .from(actas)

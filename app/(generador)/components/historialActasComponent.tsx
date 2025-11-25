@@ -34,6 +34,7 @@ interface Acta {
   fechaProcesamiento: Date;
   nombreEstado: string | null;
   emailUsuario?: string | null;
+  telefonoUsuario?: string | null;
   idUsuario?: string | null;
 }
 interface HistorialActasProps {
@@ -1064,26 +1065,68 @@ Por favor, ¿pueden ayudarme?`;
           <ul role="list" className="divide-y divide-gray-100">
             {actasPagina.map((acta) => {
               const mostrarDetalles = actasExpandidas[acta.id] || false;
+              
+              // Lógica para mostrar en verde: tiene tx (pagada), ha pasado más de 1 hora y no está completada
+              const mostrarEnVerde = isSupportUser && 
+                acta.tx && 
+                acta.idEstadoProceso !== null && 
+                acta.idEstadoProceso < 6 &&
+                (() => {
+                  const fechaProcesamiento = new Date(acta.fechaProcesamiento);
+                  const ahora = new Date();
+                  const diferenciaHoras = (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
+                  return diferenciaHoras > 1;
+                })();
 
               return (
                 <li
                   key={acta.id}
-                  className="relative sm:py-2 mb-2 sm:mb-0 sm:border-0 sm:rounded-none"
+                  className={`relative sm:py-2 mb-2 sm:mb-0 sm:border-0 sm:rounded-none ${mostrarEnVerde ? 'bg-green-50 border-l-4 border-green-500 pl-2' : ''}`}
                 >
                   <div className="flex flex-row items-start gap-2 sm:gap-4">
                     <div className="flex min-w-0 flex-1 pr-2">
                       <div className="min-w-0 flex-auto">
-                        <p className="text-sm sm:text-base font-semibold text-gray-900 break-words line-clamp-2">
+                        <p className={`text-sm sm:text-base font-semibold break-words line-clamp-2 ${mostrarEnVerde ? 'text-green-700' : 'text-gray-900'}`}>
                           {acta.nombre || "Sin nombre"}
                         </p>
-                        <p className="mt-1 text-xs sm:text-sm text-gray-500">
-                          TX: {acta.tx || "Sin transacción"}
-                          {isSupportUser && acta.emailUsuario && (
-                            <span className="ml-2 text-purple-600 font-medium">
-                              • {acta.emailUsuario}
-                            </span>
+                        <div className="mt-1 space-y-1">
+                          <p className="text-xs sm:text-sm text-gray-500">
+                            TX: {acta.tx || "Sin transacción"}
+                            {isSupportUser && acta.emailUsuario && (
+                              <span className="ml-2 text-purple-600 font-medium">
+                                • {acta.emailUsuario}
+                              </span>
+                            )}
+                          </p>
+                          {isSupportUser && (
+                            <>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                {acta.telefonoUsuario ? (
+                                  <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
+                                    (acta.idEstadoProceso !== null && acta.idEstadoProceso >= 4 && acta.idEstadoProceso <= 9)
+                                      ? 'bg-green-200 text-green-700'
+                                      : 'bg-gray-200 text-gray-700'
+                                  }`}>
+                                    📞 {acta.telefonoUsuario}
+                                  </span>
+                                ) : (
+                                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-500">
+                                    📞 Sin teléfono
+                                  </span>
+                                )}
+                                <p className="text-xs text-gray-400">
+                                  Creado: {new Date(acta.fechaProcesamiento).toLocaleString('es-CO', {
+                                    year: 'numeric',
+                                    month: '2-digit',
+                                    day: '2-digit',
+                                    hour: '2-digit',
+                                    minute: '2-digit'
+                                  })}
+                                </p>
+                              </div>
+                            </>
                           )}
-                        </p>
+                        </div>
 
                         {}
                         {mostrarDetalles && (
