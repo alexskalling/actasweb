@@ -49,6 +49,7 @@ export async function processAction(
 
       if (idUsuarioActa) {
         user_id = idUsuarioActa;
+        console.log(`[processAction] Usando idUsuarioActa proporcionado: ${user_id}`);
       } else {
         const mail = await getUserEmailFromSession();
 
@@ -70,8 +71,10 @@ export async function processAction(
             ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
             : "a817fffe-bc7e-4e29-83f7-b512b039e817";
         }
+        console.log(`[processAction] Usando user_id de sesión: ${user_id}`);
       }
 
+      console.log(`[processAction] Buscando acta con nombre: ${file}, user_id: ${user_id}`);
       const actaEncontrada = await db
         .select({
           duracion: actas.duracion,
@@ -82,6 +85,9 @@ export async function processAction(
 
       if (actaEncontrada?.duracion) {
         duracionMinutos = convertirDuracionAMinutos(actaEncontrada.duracion);
+        console.log(`[processAction] Duración encontrada: ${actaEncontrada.duracion}, minutos: ${duracionMinutos}`);
+      } else {
+        console.log(`[processAction] No se encontró acta con nombre: ${file} y user_id: ${user_id}`);
       }
     } catch (error) {
       console.error("Error al obtener duración:", error);
@@ -110,10 +116,12 @@ export async function processAction(
     ) {
       try {
         if (duracionMinutos <= 0) {
+          console.log(`[processAction] Duración no encontrada en primera búsqueda, intentando segunda búsqueda...`);
           let user_id;
 
           if (idUsuarioActa) {
             user_id = idUsuarioActa;
+            console.log(`[processAction] Segunda búsqueda usando idUsuarioActa: ${user_id}`);
           } else {
             const mail = await getUserEmailFromSession();
 
@@ -135,8 +143,10 @@ export async function processAction(
                 ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
                 : "a817fffe-bc7e-4e29-83f7-b512b039e817";
             }
+            console.log(`[processAction] Segunda búsqueda usando user_id de sesión: ${user_id}`);
           }
 
+          console.log(`[processAction] Segunda búsqueda - nombre: ${file}, user_id: ${user_id}`);
           const actaEncontrada = await db
             .select({
               duracion: actas.duracion,
@@ -149,6 +159,9 @@ export async function processAction(
             duracionMinutos = convertirDuracionAMinutos(
               actaEncontrada.duracion,
             );
+            console.log(`[processAction] Duración encontrada en segunda búsqueda: ${actaEncontrada.duracion}, minutos: ${duracionMinutos}`);
+          } else {
+            console.log(`[processAction] No se encontró acta en segunda búsqueda con nombre: ${file} y user_id: ${user_id}`);
           }
         }
 

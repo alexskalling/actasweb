@@ -28,6 +28,7 @@ export async function getActasByUser() {
           fechaProcesamiento: actas.fechaProcesamiento,
           nombreEstado: estadosProceso.nombre,
           emailUsuario: usuarios.email,
+          idUsuario: actas.idUsuario,
         })
         .from(actas)
         .leftJoin(estadosProceso, eq(actas.idEstadoProceso, estadosProceso.id))

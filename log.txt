@@ -2950,3 +2950,477 @@ Obteniendo URL pública del contenido
 Obteniendo URL pública para archivo: /Actas/reunionluz1232312/reunionluz1232312_Contenido.txt
 URL pública obtenida: https://files.actasdereuniones.ai/s/4EcXGoedSQtfQyz
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/4EcXGoedSQtfQyz
+Iniciando reenvío de correo para acta ID: 11ec0a1e-7133-48ea-b20c-ee41e08f4894
+Enviando correo a: survanmkr@gmail.com
+Verificando si existe transcripción: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Obteniendo transcripción existente: audio_asamblea_extraordinaria_cooprofesores
+Verificando si existe transcripción: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Obteniendo transcripción existente: audio_asamblea_extraordinaria_cooprofesores
+Verificando si existe transcripción: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Obteniendo transcripción existente: audio_asamblea_extraordinaria_cooprofesores
+Verificando contenido existente: audio_asamblea_extraordinaria_cooprofesores_Contenido.txt
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Contenido.txt en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: audio_asamblea_extraordinaria_cooprofesores.mp3
+Transcripción no proporcionada, buscando archivo: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Transcripción encontrada, leyendo contenido: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+Generando Orden del Día con Gemini para: audio_asamblea_extraordinaria_cooprofesores.mp3
+Guardando contenido en Nextcloud: audio_asamblea_extraordinaria_cooprofesores_Contenido.txt
+Contenido guardado: audio_asamblea_extraordinaria_cooprofesores_Contenido.txt
+Iniciando formateo de contenido para: audio_asamblea_extraordinaria_cooprofesores.mp3
+Verificando Borrador .docx existente: audio_asamblea_extraordinaria_cooprofesores_Borrador.docx
+Verificando archivo: audio_asamblea_extraordinaria_cooprofesores_Borrador.docx en carpeta: audio_asamblea_extraordinaria_cooprofesores
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: audio_asamblea_extraordinaria_cooprofesores_Borrador.docx
+Preparando guardado .docx en Nextcloud: audio_asamblea_extraordinaria_cooprofesores_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Asamblea Extraordinaria de Copropietarios</h1>
+ <p><strong>Fecha:</strong> 22 de noviembre de 2025</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: 9:17</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> Amparo Ruiz de Ojeda</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Amparo Ruiz de Ojeda - 404, Torre B</li>
+ <li>Magdalena - [CARGO NO ESPECIFICADO]</li>
+ <li>Marta Arisa - Torre B, Apartamento 401</li>
+ <li>Rufina Niño Pinto - Torre D</li>
+ <li>Sandra Rodríguez - Apartamento B-104</li>
+ <li>Luz Karime Chaparro Domínguez - B-402</li>
+ <li>Ruth Bell Rueda - Ingeniero civil</li>
+ <li>César Carías Telles - Torre A, Apartamento 3-0-2</li>
+ <li>Juan Acevedo - [CARGO NO ESPECIFICADO]</li>
+ <li>Javi Ramírez - Torre B</li>
+ <li>Henry Navas - Torre B, Apartamento 301</li>
+ <li>Marta Fanador - Torre B</li>
+ <li>Diego Serrano - Impertel</li>
+ <li>Jorge Cala - Impercala SAS</li>
+ <li>Andrés Vargas - Soluciones Innovadoras AB SAS</li>
+ <li>Arley Peña - A Arquitectura</li>
+ <li>Sergio Alberto Benavides Corzo - Arquitecto</li>
+ <li>Elizabeth - [CARGO NO ESPECIFICADO]</li>
+ <li>Mónica Carreño - Torre A 501</li>
+ <li>Arturo - [CARGO NO ESPECIFICADO]</li>
+ <li>Yuri Marcela Borges Hernández - Doctora</li>
+ <li>Oscarime chaparro domínguez - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Verificación del quórum</li>
+ <li>Elección del Presidente y Secretario de la Asamblea</li>
+ <li>Votación del tratamiento de datos personales</li>
+ <li>Lectura y aprobación del acta anterior, reglamento de participación y revisión de poderes</li>
+ <li>Lectura y aprobación del orden del día</li>
+ <li>Lectura y aprobación del reglamento de participación en la presente asamblea</li>
+ <li>Nombramiento de la Comisión encargada para verificar la presente acta</li>
+ <li>Exposición de empresas de impermeabilización e interventores de obra, análisis, revisión y toma de decisiones sobre la impermeabilización de las cuatro torres, valor total de la obra y aprobación de cuota extraordinaria para la impermeabilización y demás temas relacionados</li>
+ <li>Aprobación de cuota extraordinaria</li>
+ <li>Definición del número de cuotas</li>
+ </ol>
+</header>
+<h2>1. Verificación del quórum</h2>
+
+<p>Inicialmente, se realizó la verificación del quórum, determinándose que existía el quórum decisorio necesario para dar continuidad a la asamblea. Posteriormente, tras el retiro de una persona, se volvió a verificar el quórum, estableciéndose que el coeficiente era del 63.31%, lo cual seguía permitiendo la continuación de la asamblea.</p>
+
+<p>Más adelante en la reunión, se solicitó una nueva verificación del quórum para continuar con el proceso de votaciones. En ese momento, se informó que el coeficiente era del 64.56%, pero que tras el retiro de una persona con un coeficiente del 1.25, el quórum había descendido al 63.31%. A pesar de esta disminución, se confirmó que aún se contaba con el quórum necesario para seguir adelante con la asamblea.</p>
+
+<p>Finalmente, se solicitó una última verificación del quórum para continuar con las votaciones, indicándose que el coeficiente era del 65.81%.</p><h2>2. Elección del Presidente y Secretario de la Asamblea</h2>
+
+<p>Una vez verificado el quórum, se procedió con el segundo punto del orden del día: la elección del Presidente y Secretario de la Asamblea. Se invitó a los asistentes a postularse para ambos cargos.</p>
+
+<p>Inicialmente, se realizó una prueba de votación para familiarizar a los asistentes con el uso de los controles electrónicos proporcionados por la empresa Controles. Se explicó el funcionamiento de los controles, indicando que cada uno tiene un costo de 220 mil pesos en caso de daño o pérdida. Durante la prueba, se proyectaron los números de los controles en pantalla para que los asistentes pudieran verificar que su voto había sido registrado correctamente.</p>
+
+<p>Posteriormente, se llevó a cabo la votación para el tratamiento de datos personales, donde los asistentes debían elegir entre las opciones "público" y "privado". Se explicó que, si ganaba la opción "público", la información grabada en audio y video durante la asamblea estaría disponible para cualquier persona que la solicitara a la administración. Si ganaba la opción "privado", la información solo reposaría en la administración y no estaría accesible al público. Con un coeficiente del 47.12%, ganó la opción 1 "público".</p>
+
+<p>A continuación, se retomó el tema central de la elección del Presidente y Secretario de la Asamblea. Se solicitó a los interesados en postularse que indicaran su nombre, torre y apartamento.</p>
+
+<p>La señora Amparo Ruiz de Ojeda, del apartamento 404 de la Torre B, fue postulada para el cargo de Presidenta de la Asamblea. Al no haber más candidatos, se sometió su nombre a votación.</p>
+
+<h3>Votación: Elección de Presidente de la Asamblea</h3>
+<ol>
+<li><strong>Amparo Ruiz de Ojeda:</strong> Aprueba</li>
+</ol>
+
+<p>Con un coeficiente del 61.99%, la señora Amparo Ruiz de Ojeda fue elegida Presidenta de la Asamblea de manera unánime.</p>
+
+<p>Seguidamente, se abrió la postulación para el cargo de Secretario o Secretaria de la Asamblea. La administradora se postuló para el cargo, indicando su disposición a elaborar el acta y dar continuidad a la asamblea. Al no haber más candidatos, se sometió su nombre a votación.</p>
+
+<h3>Votación: Elección de Secretario de la Asamblea</h3>
+<ol>
+<li><strong>Administradora:</strong> Aprueba</li>
+</ol>
+
+<p>Con un coeficiente del 61.99%, la administradora fue aprobada como Secretaria de la Asamblea.</p>
+
+<p>Finalmente, la señora Amparo Ruiz de Ojeda aceptó el cargo de Presidenta y la administradora aceptó el cargo de Secretaria, agradeciendo la confianza depositada en ellas.</p><h2>3. Votación del tratamiento de datos personales</h2>
+
+<p>Tras la prueba de votación, se procedió a la votación formal sobre el tratamiento de datos personales. Se explicó que, de acuerdo con la ley 1581 de 2012, la empresa Controles fue contratada para la prestación del servicio logístico de la asamblea, cuyo desarrollo sería grabado en audio y video. Por lo tanto, se requería la autorización de consentimiento para el tratamiento de datos personales, los cuales serían entregados a la administración de la entidad contratante para fines administrativos y legales.</p>
+
+<p>Se presentaron dos opciones para el tratamiento de datos personales: la opción 1, "público", y la opción 2, "privado". Se aclaró que si la opción "público" ganaba, cualquier persona podría solicitar a la administración la información grabada en audio y video. Si ganaba la opción "privado", la información solo reposaría en la administración y no estaría accesible al público.</p>
+
+<p>Durante la votación, se mostró en pantalla el número de control y el coeficiente asignado a cada control, permitiendo a los asistentes verificar los coeficientes cargados, especialmente aquellos que tenían poderes. Se recordó a los asistentes que, en caso de equivocarse al marcar una respuesta, podían borrarla oprimiendo el botón rojo y cambiarla por la opción deseada mientras la votación estuviera abierta.</p>
+
+<p>Posteriormente, se preguntó si se podía mostrar el porcentaje cargado a cada control para verificar los poderes, pero no se indica si se procedió a mostrar esta información.</p>
+
+<p>Finalmente, se cerró la votación y se anunciaron los resultados:</p>
+
+<h3>Votación: Tratamiento de datos personales</h3>
+<p>Con un coeficiente del 47.12%, ganó la opción 1 "público", y con el 14.87% la opción 2 "privado".</p>
+
+<p><strong>Decisión:</strong> Los datos serán tratados de manera pública.</p>
+
+<p>Tras el anuncio de los resultados, se dio paso a la elección de Presidente y Secretario de la Asamblea.</p>
+
+<p>Durante la discusión, el señor Arturo intervino, manifestando que cuando se le otorga un poder, es quien recibe el poder quien toma las decisiones, ya que se le delega esa potestad. En ese sentido, es quien ejerce el derecho al voto en representación de quien le dio el poder, debiendo haber unidad de criterio. Se indicó que no hay margen para que la persona que recibe el poder consulte a quien se lo otorgó, ya que este último cedió su derecho al voto.</p>
+<h2>4. Lectura y aprobación del acta anterior, reglamento de participación y revisión de poderes</h2>
+
+<p>Durante la asamblea, se procedió a la lectura y aprobación del acta anterior, así como a la revisión de poderes y el reglamento de participación.</p>
+
+<p>La señora Magdalena dio lectura a los artículos del Reglamento de Convivencia de Propiedad Horizontal, específicamente el capítulo 12 sobre disposiciones varias, artículo 29, referente a la Asamblea General de Copropietarios. Se enfatizó que solo están habilitados para tener voz y voto en la asamblea aquellos copropietarios que se encuentren a paz y salvo por todo concepto con la administración. Además, se recordó que cualquier copropietario puede ser representado por otra persona mediante la presentación de un poder autenticado, y que una misma persona solo podrá representar máximo a cuatro unidades residenciales, incluyendo la suya.</p>
+
+<p>Se revisó un informe jurídico donde se identificaron algunos apartamentos con situaciones pendientes. Se mencionó el caso del apartamento 303, bloque A, cuya situación estaba en revisión. También se mencionó el apartamento 404, bloque D, donde se indicó que debían deshabilitar un poder para que solo saliera el voto del propietario. Adicionalmente, se mencionó el apartamento 301, bloque C, cuyo poder había sido firmado incorrectamente, pero ya había sido corregido.</p>
+
+<p>La señora Marta Arisa expresó su preocupación sobre la certeza de que los pagos realizados por algunos copropietarios estuvieran efectivamente ingresando al conjunto, ya que no se habían recibido los estados financieros del mes de octubre. También se discutió el caso del apartamento 302 del bloque D, donde se había realizado un embargo y se estaban realizando pagos, pero existía una diferencia en la liquidación de la obligación.</p>
+
+<p>Se aclaró el proceso de votación y se confirmó que el quórum presente era suficiente para continuar con la asamblea. Se procedió a la votación del tratamiento de datos personales, donde se consultó a los asistentes si aprobaban que los datos grabados en audio y video fueran tratados de manera pública o privada.</p>
+
+<h3>Votación: Tratamiento de datos personales</h3>
+<ol>
+<li><strong>[No se registra el voto individual]</strong></li>
+</ol>
+<p>Con un coeficiente del 47.12%, ganó la opción 1 (público) y con el 14.87% la opción 2 (privado). Por lo tanto, se determinó que los datos serían tratados de manera pública.</p>
+
+<p>Don Arturo manifestó que cuando se le otorga un poder, es la persona que recibe el poder quien toma las decisiones, ya que se le está delegando esa potestad. Se enfatizó que debe haber unidad de criterio y que la persona que recibe el poder es quien ejerce el derecho al voto en representación de quien se lo otorgó.</p>
+<h2>5. Lectura y aprobación del orden del día</h2>
+
+<p>La señora Amparo Ruiz de Ojeda, Presidenta de la Asamblea, procedió a dar lectura al orden del día propuesto para la asamblea extraordinaria de copropietarios. El orden del día incluyó los siguientes puntos:</p>
+
+<ol>
+<li>Llamado a lista y verificación del quórum.</li>
+<li>Elección del presidente y secretario de la Asamblea.</li>
+<li>Lectura y aprobación del orden del día.</li>
+<li>Lectura y aprobación del reglamento de participación en la presente asamblea.</li>
+<li>Nombramiento de la comisión encargada para verificar la presente acta.</li>
+<li>Exposición de empresas de impermeabilización, interventores de obra, análisis, revisión y toma de decisiones sobre la impermeabilización de las cuatro torres, valor total de la obra, aprobación de cuota extraordinaria para la impermeabilización y demás temas relacionados.</li>
+<li>Clausura.</li>
+</ol>
+
+<p>La Presidenta señaló que los dos primeros puntos ya habían sido tratados.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación del orden del día.</p>
+
+<h3>Votación: Aprobación del orden del día</h3>
+<ol>
+<li><strong>Participantes:</strong> Aprobación unánime</li>
+</ol>
+
+<p>Con un coeficiente del 61.99%, se aprobó el orden del día.</p>
+<h2>6. Lectura y aprobación del reglamento de participación en la presente asamblea</h2>
+
+<p>La presidenta de la Asamblea, la señora Amparo Ruiz de Ojeda, procedió a la lectura del reglamento de participación en la asamblea. Magdalena proyectó el documento en pantalla para que todos los asistentes pudieran seguir la lectura.</p>
+
+<p>El reglamento establecía los siguientes puntos:</p>
+
+<ol>
+<li>Podrán participar en la Asamblea General Extraordinaria solo los copropietarios o a quien ellos deleguen.</li>
+<li>La Asamblea General Extraordinaria sesionará a partir de la hora fijada y se dará un límite de espera de una hora para efectos de conformar el quórum.</li>
+<li>Todo asistente deberá mantener el respeto y el buen uso del vocabulario en las intervenciones que se realicen durante el desarrollo de la asamblea.</li>
+<li>El asistente a la asamblea que desee hacer uso de la palabra deberá solicitarla previamente a la presidenta levantando la mano.</li>
+<li>El uso de la palabra sobre el tema debe ser sobre el tema o el numeral del orden del día.</li>
+<li>El tiempo y orden de intervención será definido por la presidencia de la Asamblea, cada intervención que se otorgue no podrá excederse más de tres minutos.</li>
+</ol>
+
+<p>La señora Amparo Ruiz de Ojeda sugirió agregar un punto adicional al reglamento, indicando que en el momento en que cada uno intervenga para opinar o para cuestionar, por favor no olvidar su nombre completo y su torre.</p>
+
+<h3>Votación: Aprobación del reglamento de participación en la presente asamblea</h3>
+<ol>
+<li><strong>[No se lista votación individual]:</strong> No se listan los votantes individuales debido a que hay más de 20 votantes.</li>
+</ol>
+<p><strong>Resultado:</strong> Con un coeficiente del 65.81%, la opción 1 (aprueba) fue la ganadora.</p>
+<p><strong>Decisión:</strong> Quedó aprobado el reglamento de la presente asamblea.</p>
+<h2>7. Nombramiento de la Comisión encargada para verificar la presente acta</h2>
+
+<p>En el desarrollo de la asamblea, se procedió al nombramiento de la comisión encargada de verificar la presente acta. La señora Amparo Ruiz de Ojeda, en su rol de Presidenta de la Asamblea, dirigió este punto del orden del día, invitando a los asistentes a postularse para dicha comisión.</p>
+
+<p>En respuesta al llamado, las señoras Sandra Rodríguez, Luz Karime Chaparro Domínguez y Marta Ariza presentaron sus nombres para integrar la comisión. Específicamente, la señora Sandra Rodríguez es del apartamento B-104, la señora Luz Karime Chaparro Domínguez del B-402, y la señora Marta Ariza del apartamento B-401.</p>
+
+<p>Posteriormente, se sometió a votación la aprobación de las candidatas propuestas. Se presentaron tres opciones: 1) Aprueba, 2) No aprueba, y 3) Voto en blanco.</p>
+
+<h3>Votación: Aprobación de la Comisión encargada para verificar la presente acta</h3>
+<ol>
+<li><strong>Sandra Rodríguez:</strong> A favor</li>
+<li><strong>Luz Karime Chaparro Domínguez:</strong> A favor</li>
+<li><strong>Marta Ariza:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> Con un coeficiente del 64.49% se aprobó la comisión por la opción 1 (aprueba), y un 1.32% votó en blanco.</p>
+
+<p>En consecuencia, la señora Presidenta declaró que las tres señoras postuladas quedaban designadas como comisionadas para verificar el acta de la presente reunión.</p>
+<h2>8. Exposición de empresas de impermeabilización e interventores de obra, análisis, revisión y toma de decisiones sobre la impermeabilización de las cuatro torres, valor total de la obra y aprobación de cuota extraordinaria para la impermeabilización y demás temas relacionados</h2>
+
+<p>La asamblea abordó la exposición de diversas empresas de impermeabilización e interventores de obra, el análisis y la revisión de propuestas, la toma de decisiones sobre la impermeabilización de las cuatro torres, el valor total de la obra y la aprobación de una cuota extraordinaria para la impermeabilización y temas relacionados.</p>
+
+<h3>Presentación de interventoría técnica</h3>
+
+<p>Ruth Bell Rueda, ingeniero civil especialista en Gerencia de proyectos y tecnólogo en interiorismo y decoración de espacios, presentó su propuesta de interventoría técnica para la obra de impermeabilización de las cubiertas de las cuatro torres del conjunto residencial Coprofesores. El objetivo general de la interventoría es garantizar el control técnico, administrativo y de calidad durante la obra, asegurando el cumplimiento de especificaciones, seguridad y correcta ejecución.</p>
+
+<p>El alcance de la interventoría se divide en tres fases: previa, de ejecución y de cierre. En la fase previa se realiza la revisión técnica del contratista y los documentos de obra, la validación de los requisitos y la programación, y se elabora el acta de inicio. Durante la fase de ejecución, se lleva a cabo la supervisión diaria de la calidad de la obra, el levantamiento de la bitácora, comités e informes ejecutivos semanales, informes mensuales y la revisión de las actas de pago del contratista. En la fase de cierre, se realiza la revisión documental de toda la obra, la verificación de pendientes y PQR, y la elaboración del acta de recibo final del contrato de obra.</p>
+
+<p>El equipo propuesto por la ingeniera Rueda incluye dos opciones: la primera, con ella como único miembro del equipo, y la segunda, con ella y un profesional HSQ (coordinador de altura). El plazo de ejecución, de acuerdo con el pliego de condiciones del contrato de obra, sería de 90 días calendario. Las garantías del contrato de interventoría serían la de cumplimiento, la de salarios y prestaciones, y otras que requiera el conjunto. La metodología se basa en la supervisión presencial, seguimiento documental, control de resultados e informes periódicos.</p>
+
+<p>La ingeniera Rueda mencionó su experiencia relevante en la interventoría de trabajos de impermeabilización en conjuntos residenciales como Sendero de Miraflores, edificio Parma y Amo Apartamentos uno.</p>
+
+<p>El valor de las propuestas es de 9 millones de pesos para la opción 1 (solo el ingeniero civil) y de 14 millones 325 mil pesos para la opción 2 (ingeniero civil y profesional HSQ), ambos para los 90 días. La forma de pago es por actas mes vencido.</p>
+
+<p>En respuesta a preguntas de los asistentes, la ingeniera Rueda aclaró que los APU (análisis de precios unitarios) son el soporte de los valores de las actividades a ejecutar por el contratista y que ella se encargaría de revisarlos. También aseguró que, en caso de encontrar que una póliza no se ajusta o que un material no corresponde a lo contratado, ella lo haría saber directamente y velaría por el cumplimiento de los pliegos de condiciones.</p>
+
+<p>César Carías Telles (torre A, apartamento 302) expresó su preocupación por la necesidad de contar con un profesional de alturas HSQ, dado que los edificios tienen cinco pisos, y preguntó sobre la responsabilidad en caso de accidentes. También sugirió realizar una socialización del proyecto en cada apartamento y preguntó sobre el valor de la interventoría en relación con el valor del contrato general.</p>
+
+<p>La ingeniera Rueda respondió que el SISO debe estar en el contrato, pero es importante que el contratista tenga una persona SST dentro de su personal. En cuanto a la socialización, sugirió utilizar grupos de difusión, carteleras o una interpelación. Aclaró que el valor de la interventoría depende de la dedicación y el personal, no de un porcentaje del valor de la obra.</p>
+
+<p>La señora Acevedo preguntó sobre la experiencia de la ingeniera Rueda en techos de mimbre con manto asfáltico y teja de asbesto, y sugirió presentar informes semanales en lugar de mensuales. También propuso utilizar las escaleras para el acceso en lugar de las terrazas.</p>
+
+<p>La ingeniera Rueda respondió que se harían informes ejecutivos semanales y que la validación de pliegos también hace parte de la interventoría. Estuvo de acuerdo en que es mejor ingresar por fuera para no depender de terceros.</p>
+
+<p>Javier Ramírez (torre B) preguntó si se intervendrían los domos ubicados encima de las calaveras, a lo que se respondió que se había presentado un siniestro ante la aseguradora HDI y se estaba a la espera de una resolución. Se acordó incluir los domos en las presentaciones de los proyectos.</p>
+
+<p>Henry Navas (torre B, apartamento 301) manifestó su acuerdo en que se haga la intervención en los domos. Otra asistente mencionó filtraciones en los primeros pisos y sugirió incluir todos los arreglos en las propuestas y esperar el reintegro de la póliza.</p>
+
+<p>Marta Fanador (torre B) preguntó sobre el horario de la ingeniera Rueda, a lo que respondió que haría visitas diarias de entre una y dos horas, en horarios variables para supervisar el trabajo.</p>
+
+<p>Luz Karime Chaparro Domínguez (torre B) solicitó que se especificara en el contrato que, si la demora es culpa del contratista, este cubriría los costos de la interventoría.</p>
+
+<h3>Presentación empresa Impertel</h3>
+
+<p>Diego Serrano, en representación de Impertel, presentó la propuesta de su empresa, destacando sus 40 años de experiencia en el mercado de las impermeabilizaciones y su equipo de 80 empleados, incluyendo 10 ingenieros y 5 sisos. Se realizó una inspección con un dron para evaluar el estado de los techos, identificando la presencia de tejas de ternit y tejas de barro en las diferentes torres.</p>
+
+<p>Juan Acevedo aclaró que la torre C tiene teja de Eternit, la torre D tiene medio apartamento en teja de barro, la torre A tiene tejas de barro y la torre B tiene tejas de barro.</p>
+
+<p>La duración de la obra se estimó en 60 días hábiles, aproximadamente tres meses, debido a la necesidad de impermeabilizar cada área el mismo día en que se desbarata. Se propuso un horario de ingreso al conjunto a las 6:30 de la mañana para optimizar el tiempo de trabajo.</p>
+
+<p>Se mencionó que algunos domos están corridos y que la cotización incluye el arreglo de dilataciones, la instalación de manto Faberglass, la vulcanización del manto, la aplicación de Goldenso a los bajantes y la instalación de tejas de barro, así como el cambio de las tejas partidas. No se incluye la impermeabilización de los bajantes internos.</p>
+
+<p>Juan Acevedo aclaró que las torres C y D tienen drenaje hacia afuera, mientras que las torres A y B tienen drenajes internos.</p>
+
+<p>La cotización incluye el sistema de impermeabilización de las cuatro torres (ocho apartamentos) y la portería, totalizando 1.320 metros cuadrados. Se ofrecen pólizas de manejo, anticipo (opcional), calidad y estabilidad, cumplimiento, responsabilidad civil y pago de salarios y prestaciones sociales, así como una carta de garantía.</p>
+
+<p>Se describió el proceso de trabajo, que incluye la instalación de sistemas de seguridad, el desmonte de la teja de barro y la teja de Eternit, la fumigación, la aplicación de emulsión asfáltica, la instalación de manto 500 y la reinstalación de las tejas. Se destacó la importancia de armar un anclaje desde la parte inferior con un lazo por encima, debido a la falta de anclajes en la parte superior.</p>
+
+<p>En respuesta a preguntas, se aclaró que no se realizan trabajos por goteras individuales, sino que se debe impermeabilizar todo el apartamento. Se indicó que, en caso de que un apartamento ya haya sido arreglado, se debe volver a hacer para garantizar la continuidad del sistema. Se confirmó que se dejan las tejas de barro donde ya existen y se reemplazan las tejas de Eternit partidas por nuevas tejas de fibrocemento.</p>
+
+<p>Se mencionó que la ley 1968 de 2019 prohíbe el uso de asbesto en Colombia y que ahora se utiliza fibrocemento. Se estimó que el cambio de tejas de fibrocemento podría costar alrededor de 3 millones de pesos.</p>
+
+<p>Se explicó que, antes de iniciar la obra, se realizan actas de vecindad para documentar el estado de los apartamentos y entregarlos en las mismas condiciones al finalizar la obra. Se reconoció que los domos deben ser corridos para realizar el trabajo y que se colocarán flanches en las esquinas para evitar filtraciones.</p>
+
+<p>Se ofrece una garantía de cinco años respaldada por contrato. Se indicó que, si se decide realizar la obra, se requiere un plazo de 15 a 20 días para realizar las actas de vecindad y preparar todo lo relacionado con la seguridad.</p>
+
+<p>En respuesta a una pregunta sobre la posibilidad de bajar el precio, se indicó que lo mínimo serían 120 millones de pesos, pero se ofreció un descuento del 5%, resultando en un valor de 118.500.000 pesos. Finalmente, se ajustó el valor a 117.500.000 pesos.</p>
+
+<p>Se presentaron cartas de aseguradoras que certifican que nunca se ha hecho efectiva una póliza de la empresa en 40 años. Se recomendó priorizar el sistema de gestión de la empresa al tomar la decisión.</p>
+
+<p>Se desaconsejó el uso de tejas termoacústicas, ya que no ofrecen la misma garantía que las tejas de barro y machimbre.</p>
+
+<h3>Presentación empresa Soluciones Innovadoras AB SAS</h3>
+
+<p>El ingeniero Andrés Vargas, de Soluciones Innovadoras AB SAS, presentó la cotización para la impermeabilización de las cuatro torres. La empresa se especializa en la ejecución de proyectos de impermeabilización de terrazas y tiene experiencia en varios sectores, incluyendo la Fuerza Aérea, alcaldías y el sector privado.</p>
+
+<p>El objeto de la cotización incluye la instalación de elementos de seguridad, el desmonte de la teja, la limpieza general, la reparación de juntas y dilataciones, la instalación de manto fiberglass, el tratamiento de canales y bajantes, la reinstalación de las tejas, la limpieza final y la disposición del escombro.</p>
+
+<p>En la visita realizada, se encontraron tejas partidas, filtraciones, daños internos en apartamentos y bajantes deteriorados. Se propuso trabajar torre por torre, bajando todas las tejas, limpiando, retirando residuos, aplicando imprimante y reparando juntas con Sikaflex.</p>
+
+<p>El manto Fiberclass a utilizar es de 10 metros por 1 metro y de 2 a 2.5 milímetros de grosor, aplicado con soplete. Se destacan sus beneficios como impermeabilizante total, resistencia, durabilidad, aislamiento termoacústico, versatilidad y estabilidad climática.</p>
+
+<p>Para el tratamiento de canales y bajantes, se aplicará Sika Unigoldenso. Se reutilizarán las tejas que estén en buen estado y se retirarán los escombros a un centro de acopio adecuado.</p>
+
+<p>El proyecto cumple con el decreto 1072 de 2015 en seguridad y salud en el trabajo. El personal estará afiliado a ARL, salud, pensión y caja de compensación. Se ofrecen pólizas de garantía de responsabilidad y cumplimiento, supervisión continua, reuniones de obra, cronograma detallado y garantía de estabilidad y del producto.</p>
+
+<p>La garantía del producto es la que ofrece el fabricante, mientras que la garantía de instalación cubre posibles fallos en traslapos. El valor del proyecto es de 116 millones 605 mil 280 pesos, con condiciones de pago de 30% inicial, 60% avance de obra y 10% al final. El tiempo de la obra es de 60 días hábiles.</p>
+
+<p>Magdalena comentó que esta cotización ya había sido revisada y que inicialmente estaba por 87 millones 536 mil pesos. El ingeniero Vargas explicó que el aumento se debe a que no se había contabilizado el metraje de la terraza ni se habían contemplado algunos factores como las pólizas y el auxiliar de SST. Se confirmó que el valor de la propuesta se mantendrá hasta el 30 de enero.</p>
+
+<p>Juan Acevedo solicitó claridad sobre las diferencias entre las torres con teja de barro y las torres con teja de ternit. Se confirmó que se contabilizarán los metros cuadrados de cada tipo de teja.</p>
+
+<p>Se preguntó sobre el arreglo de los domos, a lo que se respondió que se aplica higodenso y se restauran los canales. Se indicó que, en caso de que los domos sufran daños durante la obra, se repondrán. La propuesta solo incluye la cubierta, no los arreglos internos de los apartamentos.</p>
+
+<p>Se describieron las etapas del proyecto: inicio, planeación, ejecución, avance, entregas parciales y cierre. Se mencionó que se colocarán plásticos en los pisos y paredes y se tapará la entrada de los patios con polisombra. Se solicitó a los habitantes de los quintos pisos permitir el acceso a los patios para realizar el trabajo.</p>
+
+<p>En respuesta a una pregunta sobre la garantía de que el trabajo se resuelva en el día, se indicó que se colocarán plásticos para evitar filtraciones en caso de lluvia. Se reiteró que se cuenta con pólizas de cumplimiento que cubren posibles daños.</p>
+
+<p>Se ofreció un descuento máximo de 110 millones de pesos.</p>
+
+<h3>Presentación empresa Impercala SAS</h3>
+
+<p>Jorge Cala, representante de Impercala SAS, presentó la propuesta de su empresa, especializada en impermeabilizaciones tanto en caliente como en teja de barro, piscinas y tanques. Se evidenció que las torres A y B tienen teja de barro y teja de ternit, mientras que las torres C y D tienen una parte con teja de barro y otra con teja de ternit. Se destacó que la torre C parece haber sido intervenida previamente o no tener teja.</p>
+
+<p>Se revisaron las canales, algunas de las cuales presentan corrosión. La cotización incluye la instalación de elementos de seguridad, la desinstalación de la teja de barro y la teja de ternit, la reparación y el suministro de machimbre, el arreglo de dilataciones, el suministro de igol para las canales, la emulsión asfáltica, el suministro de manto asfáltico con poliéster, la vulcanización, la reinstalación de la teja de ternit y la teja de barro, el reemplazo de las tejas partidas y el aseo y recogida de escombros.</p>
+
+<p>Se aclaró que se retirará la teja de ternit y la de barro para impermeabilizar el machimbre. Luego, se reinstalarán las tejas, reemplazando las que estén partidas. Se utilizará fibrocemento en lugar de asbesto para las tejas de ternit.</p>
+
+<p>La cotización detalla los costos por ítem, incluyendo la instalación de elementos de seguridad, la desinstalación de las tejas, el arreglo de dilataciones, la impermeabilización con manto XT, el suministro y la aplicación de Egon Dexton Plus en las canales, la instalación de la teja eterna y la teja de barro, y el aseo y recogida de escombros, dando un total de 168 millones 907 mil 503 pesos.</p>
+
+<p>Se ofrece una garantía de 10 años por parte del fabricante Faberglass. Se recomienda realizar mantenimientos continuos cada 24 meses, especialmente en las canales. Se ofrecen pólizas de cumplimiento, buen manejo del anticipo, responsabilidad civil, calidad y salarios y prestaciones sociales, así como una carta de garantía y un estudio fotográfico con dron.</p>
+
+<p>Se mostró un ejemplo de un trabajo similar, donde se levantó toda la teja, se impermeabilizó y se instaló nuevamente. Se lavó toda la teja para quitarle los residuos y se reforzaron las alfagías y las canales. Se deja un camino señalizado para facilitar los mantenimientos futuros.</p>
+
+<p>En respuesta a preguntas, se aclaró que no se realizan trabajos por goteras individuales, sino que se debe impermeabilizar todo el apartamento. Se indicó que, en caso de que un apartamento ya haya sido arreglado, se debe volver a hacer para garantizar la continuidad del sistema. Se confirmó que se dejan las tejas de barro donde ya existen y se reemplazan las tejas de Eternit partidas.</p>
+
+<p>Se mencionó que, al lavar la teja, se lavan también las alfagías y se restauran con sicafil para protegerlas. Se ofrecen facilidades para el acceso a los domos y se incluye la revisión y el mantenimiento de los mismos.</p>
+
+<p>Se ofrece un descuento del 4% si se inicia el trabajo pronto. Se requiere un anticipo del 50%. Se estima un plazo de 90 días para la ejecución de la obra.</p>
+
+<p>Se presentaron cartas de aseguradoras que certifican que nunca se ha hecho efectiva una póliza de la empresa en 40 años. Se destacó la importancia del sistema de gestión de la empresa.</p>
+
+<h3>Propuesta de A Arquitectura</h3>
+
+<p>Arley Peña, representante legal de A Arquitectura, presentó su empresa, dedicada a todo tipo de mantenimiento e impermeabilización de cubiertas en sistema caliente o sistema frío. Destacó sus 10 años de experiencia en la copropiedad, sus certificaciones avaladas por la ARL Sura y su enfoque en la seguridad.</p>
+
+<p>Se describió el sistema de trabajo, que incluye la instalación de sistemas de anclajes, líneas de vida horizontales o verticales, la presencia de un inspector siso 100% en obra y la certificación de los operarios en trabajo en alturas. Se retiran las tejas por áreas, protegiendo la superficie con plásticos en caso de lluvia.</p>
+
+<p>Se contempla el cambio del machimbre por la parte superior, debido a que suele estar dañado. Se instala un manto asfáltico de la marca Faberglass XT, vulcanizado y reforzado con emulsión asfáltica. Se impermeabilizan las canales con dos manos de goldenso y una mano de alumol, que protege el material del sol. Se reinstalan las tejas, reemplazando las de ternit partidas.</p>
+
+<p>La oferta es de 202.229.993 pesos. Se justifica el precio más alto por la garantía de calidad y la inclusión del cambio de machimbre.</p>
+
+<p>En respuesta a preguntas, se confirmó que el machimbre se cambia por la parte superior y se deja inmunizado. Se ofrece un 5% de descuento, resultando en un valor de 190 millones de pesos sin cambiar el machimbre.</p>
+
+<p>Se explicó que la vulcanización del manto incluye el sello y el refuerzo con emulsión asfáltica y Goldenso Plus. Se contemplan los metros cuadrados en el pliego de condiciones.</p>
+
+<p>Se requiere un 20% de anticipo. Se estima un plazo de 90 días para la ejecución de la obra, trabajando con dos cuadrillas simultáneamente.</p>
+
+<p>Tras la presentación de las propuestas, se abrió un espacio para la discusión y la toma de decisiones. Se mencionó la necesidad de tener en cuenta la ley 675, que limita la imposición de expensas extraordinarias a cuatro veces el valor de las expensas necesarias mensuales.</p>
+
+<p>Se presentaron inquietudes sobre la inclusión del machimbre en las cotizaciones, ya que algunos asistentes consideraron que se trata de una zona privada y que su arreglo debería ser responsabilidad de cada propietario. Se sugirió buscar otra opinión de un interventor que no estuviera vinculado a ninguna de las empresas de impermeabilización.</p>
+
+<p>Se propuso realizar una consulta a un abogado especializado en propiedad horizontal para determinar si el machimbre forma parte de las zonas comunes y si es posible demandar a los propietarios de los quintos pisos que no pagaron la administración completa durante años.</p>
+
+<p>Se mencionó que se cuenta con 18 millones de pesos del fondo de imprevistos y que se podrían destinar a la impermeabilización. Se sugirió también utilizar los recursos recuperados de un proceso judicial.</p>
+
+<p>Se realizó una proyección de los ingresos que se podrían obtener con la imposición de una cuota extraordinaria equivalente a cuatro expensas comunes, resultando en un total de 75 millones 408 mil pesos. Se calculó que, si se elige la propuesta más económica (110 millones), faltarían 8 millones por cubrir.</p>
+
+<p>Se propuso aprobar la cuota extraordinaria y definir el número de cuotas y las fechas de pago. Se sugirió también realizar una consulta legal sobre la responsabilidad del mantenimiento del machimbre.</p>
+
+<p>Finalmente, se sometió a votación la aprobación de una cuota extraordinaria equivalente a cuatro expensas comunes para la impermeabilización de los techos de las cuatro torres. También se votó el número de cuotas en que se pagaría dicha cuota.</p>
+
+<h3>Votación: Aprobación de cuota extraordinaria por cuatro expensas comunes para impermeabilización de techos de las cuatro torres</h3>
+<ol>
+<li>Con un coeficiente del 38%, se aprueba de manera unánime.</li>
+</ol>
+
+<p><strong>Resultado:</strong> La propuesta fue aprobada de manera unánime.</p>
+
+<h3>Votación: Aprobación del número de cuotas para cuota extraordinaria de ahorro a partir del mes de diciembre de 2025</h3>
+<ol>
+<li>Opción 1: Cuatro cuotas</li>
+<li>Opción 2: Cinco cuotas</li>
+</ol>
+
+<p><strong>Resultado:</strong> Con un coeficiente del 24.72%, gana la opción 2, que establece cinco cuotas a partir de diciembre de 2025.</p>
+
+<p>Se acordó revisar el tema con la administración para determinar en qué banco se abrirá una cuenta exclusiva para este dinero y cómo se realizará la facturación.</p>
+<h2>9. Aprobación de cuota extraordinaria</h2>
+
+<p>Durante la reunión, se abordó el tema de la aprobación de una cuota extraordinaria destinada a la impermeabilización de las cuatro torres del conjunto residencial. La discusión se centró en la necesidad de obtener los fondos necesarios para llevar a cabo las obras de reparación e impermeabilización, considerando las diferentes propuestas presentadas por las empresas especializadas.</p>
+
+<p>Se mencionó que, de acuerdo con la ley 675, la imposición de expensas extraordinarias cuya cuantía total durante la vigencia presupuestal supere cuatro veces el valor de las expensas necesarias mensuales requiere una mayoría calificada del 70% de los coeficientes de copropiedad. Sin embargo, se reconoció que el quórum presente en la asamblea no alcanzaba dicho porcentaje, lo que limitaba la posibilidad de aprobar una cuota que excediera ese límite.</p>
+
+<p>En este contexto, se propuso someter a votación la aprobación de una cuota extraordinaria que no superara las cuatro expensas comunes mensuales, con el objetivo de iniciar un ahorro que permitiera financiar las obras de impermeabilización. Se destacó la importancia de destinar los fondos recaudados de manera específica a este proyecto, garantizando su correcta aplicación y evitando su uso para otros fines.</p>
+
+<p>Durante la discusión, se plantearon diferentes opciones en cuanto al número de cuotas en que se dividiría el pago de la cuota extraordinaria. Se propusieron cuatro y cinco cuotas, a partir del mes de diciembre de 2025. Finalmente, se sometió a votación la elección entre estas dos opciones.</p>
+
+<h3>Votación: Aprobación del número de cuotas para la cuota extraordinaria</h3>
+<ol>
+<li><strong>Opción 1 (4 cuotas):</strong> 24.72% de los coeficientes</li>
+<li><strong>Opción 2 (5 cuotas):</strong> 38% de los coeficientes</li>
+</ol>
+<p><strong>Resultado:</strong> Con un coeficiente del 38%, gana la opción 2, estableciendo que la cuota extraordinaria se pagará en 5 cuotas a partir de diciembre de 2025.</p>
+
+<p><strong>Decisión:</strong> Se aprueba el cobro de una cuota extraordinaria por un valor máximo de cuatro expensas comunes mensuales, destinada específicamente a la impermeabilización de los techos de las cuatro torres, pagadera en cinco cuotas a partir de diciembre de 2025.</p>
+
+<p>Asimismo, se acordó revisar con la administración en qué banco se abrirá la cuenta exclusiva para el depósito de este dinero, que deberá estar separado de los fondos de administración ordinarios.</p>
+<h2>10. Definición del número de cuotas</h2>
+
+<p>Durante la asamblea, se abordó la necesidad de definir el número de cuotas para la cuota extraordinaria destinada a la impermeabilización de las cuatro torres. Se consideró la legislación vigente, específicamente la Ley 675, que establece un límite para las expensas extraordinarias.</p>
+
+<p>Se mencionó que el artículo 46 de la Ley 675 exige una mayoría calificada del 70% de los coeficientes de copropiedad para la imposición de expensas extraordinarias cuya cuantía total durante la vigencia presupuestal supere cuatro veces el valor de las expensas necesarias mensuales. Dado que el quórum presente no alcanzaba el 70%, se determinó que cualquier decisión debía ajustarse a este límite.</p>
+
+<p>En la discusión, se plantearon diferentes perspectivas sobre cómo proceder. Algunos asistentes sugirieron que, dado que no se alcanzaba el quórum del 70%, no se podía aprobar ninguna cuota extraordinaria que excediera las cuatro expensas comunes mensuales. Otros propusieron que se aprobara una cuota que estuviera dentro de ese límite, con el fin de comenzar a recaudar fondos para el proyecto de impermeabilización.</p>
+
+<p>Se presentaron cálculos sobre el monto máximo que se podría recaudar con una cuota extraordinaria limitada a cuatro expensas comunes mensuales, estimándose en 75.75 millones 408 pesos. Se discutió cómo este monto se comparaba con el costo total de las propuestas presentadas y cómo se podría cubrir la diferencia.</p>
+
+<p>Algunos asistentes expresaron su preocupación por la situación financiera de algunos copropietarios y la posibilidad de que no pudieran pagar una cuota extraordinaria, incluso si estuviera dentro del límite legal. Se mencionó la existencia de deudores morosos y la necesidad de considerar su situación al tomar decisiones sobre las cuotas.</p>
+
+<p>Se propuso que, en lugar de aprobar una cuota extraordinaria que pudiera resultar difícil de pagar para algunos, se exploraran otras alternativas, como la búsqueda de financiamiento externo o la priorización de las obras a realizar. Sin embargo, otros asistentes argumentaron que era importante comenzar a ahorrar lo antes posible para poder llevar a cabo el proyecto de impermeabilización.</p>
+
+<p>Finalmente, se sometió a votación la propuesta de aprobar una cuota extraordinaria limitada a cuatro expensas comunes mensuales, con el fin de comenzar a recaudar fondos para el proyecto de impermeabilización. También se sometió a votación el número de cuotas en las que se pagaría dicha cuota extraordinaria.</p>
+
+<h3>Votación: Aprobación de cuota extraordinaria por cuatro expensas comunes para impermeabilización de techos de las cuatro torres</h3>
+<ol>
+<li>Con un coeficiente del 38%, la votación fue unánime a favor de la opción 1 (aprueba).</li>
+</ol>
+
+<p><strong>Resultado:</strong> La propuesta fue aprobada de manera unánime.</p>
+
+<h3>Votación: Aprobación del número de cuotas para la cuota extraordinaria de ahorro a partir del mes de diciembre de 2025</h3>
+<ol>
+<li>Opción 1: 4 cuotas a partir de diciembre.</li>
+<li>Opción 2: 5 cuotas a partir de diciembre.</li>
+</ol>
+
+<p><strong>Resultado:</strong> Con un coeficiente del 24.72%, gana la opción 2, que establece 5 cuotas a partir de diciembre de 2025.</p>
+
+<p><strong>Decisión:</strong> Se aprobó el cobro de una cuota extraordinaria equivalente a cuatro expensas comunes mensuales, pagadera en cinco cuotas a partir de diciembre de 2025. Se especificó que esta cuota estaría destinada exclusivamente a la impermeabilización de los techos de las cuatro torres.</p>
+
+<p>Se acordó que la administración revisaría las opciones disponibles para abrir una cuenta bancaria exclusiva para este fondo, con el fin de garantizar la transparencia y el control de los recursos. También se acordó que se informaría a los copropietarios sobre los procedimientos para realizar los pagos y sobre la posibilidad de pagar en menos cuotas, en caso de que así lo desearan.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 21:17</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Aprobación de la cuota extraordinaria para la impermeabilización de techos de las cuatro torres, equivalente a cuatro expensas comunes por coeficiente. – <strong>Responsable:</strong> No especificado</li>
+ <li>El pago de la cuota extraordinaria se realizará en cinco cuotas a partir de diciembre de 2025. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/fqiGW7GZnDp7MLs
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/fqiGW7GZnDp7MLs
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/aJABEfEcmPGAb9M
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/aJABEfEcmPGAb9M
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/audio_asamblea_extraordinaria_cooprofesores/audio_asamblea_extraordinaria_cooprofesores_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/zYmcrCkxfFSwyix
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/zYmcrCkxfFSwyix

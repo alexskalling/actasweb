@@ -19,7 +19,7 @@ export async function sendActaEmail(
     console.log("Archivo: ", file);
 
     const data = await resend.emails.send({
-      from: "guillermoalvarado@skalling.com",
+      from: "gestion@actasdereuniones.ai",
       to: email,
       subject: "Tu acta está lista" + file,
       react: React.createElement(ActaEmail, {

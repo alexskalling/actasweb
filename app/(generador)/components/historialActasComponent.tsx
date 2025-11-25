@@ -34,6 +34,7 @@ interface Acta {
   fechaProcesamiento: Date;
   nombreEstado: string | null;
   emailUsuario?: string | null;
+  idUsuario?: string | null;
 }
 interface HistorialActasProps {
   reloadTrigger: boolean;
@@ -823,6 +824,7 @@ export default function HistorialActasComponent({
         session?.user?.name || "",
         false,
         codigoFinal || undefined,
+        actaParaRelanzar.idUsuario || undefined,
       )
         .then((result) => {
           if (result.status === "success") {
