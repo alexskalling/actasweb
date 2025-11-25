@@ -404,7 +404,7 @@ export default function BottomSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8">
       <div className="h-full">
-        <TipsCarousel />
+        <ReferralProgramCard />
       </div>
       <div className="h-full">
         <GoogleReviewCard />
@@ -412,10 +412,9 @@ export default function BottomSection() {
       <div className="h-full">
         <HorasBagsCard />
       </div>
-      {/* ReferralProgramCard removido - ahora se usa HorasBagsCard */}
-      {/* <div className="h-full">
-        <ReferralProgramCard />
-      </div> */}
     </div>
   );
 }
+
+// Exportar TipsCarousel para usarlo en otro lugar
+export { TipsCarousel };

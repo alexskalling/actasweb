@@ -7,7 +7,7 @@ import Image from "next/image";
 
 import MediaFileUploaderComponent from "../components/mediaFileUploaderComponent";
 import HistorialActasComponent from "../components/historialActasComponent";
-import BottomSection from "../components/bottomSection";
+import BottomSection, { TipsCarousel } from "../components/bottomSection";
 import SoporteSelectorComponent from "../components/soporteSelectorComponent";
 
 import { useSession, signOut } from "next-auth/react";
@@ -380,9 +380,14 @@ export default function PlataformaPage() {
 
           {}
           {!isSupportUser && (
-            <div className="mt-8">
-              <BottomSection />
-            </div>
+            <>
+              <div className="mt-8">
+                <BottomSection />
+              </div>
+              <div className="mt-8">
+                <TipsCarousel />
+              </div>
+            </>
           )}
         </div>
       </main>
