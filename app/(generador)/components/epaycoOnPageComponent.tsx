@@ -648,29 +648,29 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         const transactionId = response.x_transaction_id || "";
         if (transactionId && !hasToastBeenShown(transactionId)) {
           markToastAsShown(transactionId);
-          setTimeout(() => {
-            const amount = parseFloat(response.x_amount || "0");
+        setTimeout(() => {
+          const amount = parseFloat(response.x_amount || "0");
 
-            toast.success("¡Pago Aprobado!", {
-              description: (
-                <div className="space-y-3 mt-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700">Monto:</span>
-                    <span className="text-sm font-bold text-gray-900">${amount.toLocaleString('es-CO')} COP</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-gray-700">Tx:</span>
-                    <span className="text-xs font-mono text-gray-600">{transactionId}</span>
-                  </div>
+          toast.success("¡Pago Aprobado!", {
+            description: (
+              <div className="space-y-3 mt-2">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium text-gray-700">Monto:</span>
+                  <span className="text-sm font-bold text-gray-900">${amount.toLocaleString('es-CO')} COP</span>
                 </div>
-              ),
-              duration: Infinity, // No se cierra automáticamente
-              action: {
-                label: "Entendido",
-                onClick: () => { },
-              },
-            });
-          }, 600); // Esperar a que se cierre el modal
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium text-gray-700">Tx:</span>
+                  <span className="text-xs font-mono text-gray-600">{transactionId}</span>
+                </div>
+              </div>
+            ),
+            duration: Infinity, // No se cierra automáticamente
+            action: {
+              label: "Entendido",
+              onClick: () => { },
+            },
+          });
+        }, 600); // Esperar a que se cierre el modal
         }
 
         // Track success
@@ -1053,29 +1053,29 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             // Solo mostrar si no se ha mostrado antes para esta transacción
             if (transactionId && !hasToastBeenShown(transactionId)) {
               markToastAsShown(transactionId);
-              setTimeout(() => {
-                const amountNum = parseFloat(amount || "0");
+            setTimeout(() => {
+              const amountNum = parseFloat(amount || "0");
 
-                toast.success("¡Pago Aprobado!", {
-                  description: (
-                    <div className="space-y-3 mt-2">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700">Monto:</span>
-                        <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-gray-700">Tx:</span>
-                        <span className="text-xs font-mono text-gray-600">{transactionId}</span>
-                      </div>
+              toast.success("¡Pago Aprobado!", {
+                description: (
+                  <div className="space-y-3 mt-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700">Monto:</span>
+                      <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
                     </div>
-                  ),
-                  duration: Infinity, // No se cierra automáticamente
-                  action: {
-                    label: "Entendido",
-                    onClick: () => { },
-                  },
-                });
-              }, 600); // Esperar a que se cierre el modal
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium text-gray-700">Tx:</span>
+                      <span className="text-xs font-mono text-gray-600">{transactionId}</span>
+                    </div>
+                  </div>
+                ),
+                duration: Infinity, // No se cierra automáticamente
+                action: {
+                  label: "Entendido",
+                  onClick: () => { },
+                },
+              });
+            }, 600); // Esperar a que se cierre el modal
             }
           } else {
             

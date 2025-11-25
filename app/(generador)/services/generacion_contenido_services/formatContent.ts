@@ -269,13 +269,13 @@ async function obtenerUrlPublicaArchivoExistente(
     writeLog(`Obteniendo URL pública para archivo: ${rutaArchivoCompartir}`);
     const shareUrl = `${urlNextcloud}/ocs/v2.php/apps/files_sharing/api/v1/shares`;
     const shareResponse = await fetch(shareUrl, {
-      method: "POST",
-      headers: cabecerasAutenticacion,
-      body: new URLSearchParams({
-        path: rutaArchivoCompartir,
-        shareType: "3",
-        permissions: "1",
-      }),
+        method: "POST",
+        headers: cabecerasAutenticacion,
+        body: new URLSearchParams({
+          path: rutaArchivoCompartir,
+          shareType: "3",
+          permissions: "1",
+        }),
     });
 
     if (!shareResponse.ok) {

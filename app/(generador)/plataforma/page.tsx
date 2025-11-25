@@ -208,11 +208,8 @@ export default function PlataformaPage() {
                         user_name: session?.user?.name,
                       });
 
-                      const callbackUrl =
-                        process.env.NEXT_PUBLIC_AMBIENTE_URL ||
-                        "https://generador.actas.com";
-
-                      signOut({ callbackUrl });
+                      // Cerrar sesión y redirigir a la página principal sin callbackUrl
+                      signOut({ callbackUrl: "/" });
                     }}
                     className="group relative flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-500 transition-colors"
                     title="Cerrar sesión"

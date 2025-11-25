@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { getCodigoReferido } from "../services/referidos/getCodigoReferido";
 import { contarReferidos } from "../services/referidos/contarReferidos";
+import HorasBagsCard from "./horasBagsCard";
 
 const tips = [
   {
@@ -409,8 +410,12 @@ export default function BottomSection() {
         <GoogleReviewCard />
       </div>
       <div className="h-full">
-        <ReferralProgramCard />
+        <HorasBagsCard />
       </div>
+      {/* ReferralProgramCard removido - ahora se usa HorasBagsCard */}
+      {/* <div className="h-full">
+        <ReferralProgramCard />
+      </div> */}
     </div>
   );
 }

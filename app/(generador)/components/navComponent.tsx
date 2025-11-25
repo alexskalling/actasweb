@@ -59,21 +59,21 @@ export default function NavComponent() {
           <a
             href="https://actasdereuniones.ai/"
             rel="noopener noreferrer"
-            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-[#4A2575] transition-colors"
           >
             Inicio
           </a>
           <a
             href="https://actasdereuniones.ai/blog/"
             rel="noopener noreferrer"
-            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-[#4A2575] transition-colors"
           >
             Blog
           </a>
           <a
             href="https://actasdereuniones.ai/resenas/"
             rel="noopener noreferrer"
-            className="text-white font-bold px-2 py-1 rounded hover:bg-purple-700 transition-colors"
+            className="text-white font-bold px-2 py-1 rounded hover:bg-[#4A2575] transition-colors"
           >
             Reseñas
           </a>
@@ -81,7 +81,7 @@ export default function NavComponent() {
           {!session?.user && pathname !== "/" && (
             <button
               onClick={handleLoginNewTab}
-              className="rounded-sm bg-purple-600 hover:bg-purple-700 px-3 py-2 text-white text-sm font-semibold transition-colors"
+              className="rounded-sm bg-[#5A2D8E] hover:bg-[#4A2575] px-3 py-2 text-white text-sm font-semibold transition-colors"
             >
               Iniciar sesión
             </button>
@@ -90,7 +90,7 @@ export default function NavComponent() {
 
         <button
           type="button"
-          className="md:hidden text-white p-2 rounded-md hover:bg-purple-700 transition-colors"
+          className="md:hidden text-white p-2 rounded-md hover:bg-[#4A2575] transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -103,12 +103,12 @@ export default function NavComponent() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#5A2D8E] border-t border-purple-700">
+        <div className="md:hidden bg-[#5A2D8E] border-t border-[#4A2575]">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <a
               href="https://actasdereuniones.ai/"
               rel="noopener noreferrer"
-              className="block text-white font-bold px-3 py-2 rounded hover:bg-purple-700 transition-colors"
+              className="block text-white font-bold px-3 py-2 rounded hover:bg-[#4A2575] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Inicio
@@ -116,7 +116,7 @@ export default function NavComponent() {
             <a
               href="https://actasdereuniones.ai/blog/"
               rel="noopener noreferrer"
-              className="block text-white font-bold px-3 py-2 rounded hover:bg-purple-700 transition-colors"
+              className="block text-white font-bold px-3 py-2 rounded hover:bg-[#4A2575] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
@@ -124,7 +124,7 @@ export default function NavComponent() {
             <a
               href="https://actasdereuniones.ai/resenas/"
               rel="noopener noreferrer"
-              className="block text-white font-bold px-3 py-2 rounded hover:bg-purple-700 transition-colors"
+              className="block text-white font-bold px-3 py-2 rounded hover:bg-[#4A2575] transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Reseñas

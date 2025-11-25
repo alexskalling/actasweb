@@ -2385,3 +2385,568 @@ URL pública obtenida: https://files.actasdereuniones.ai/s/Ka2A5bcRD773p2X
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/Ka2A5bcRD773p2X
 Actualizando acta con nuevas URLs...
 Relanzamiento completado exitosamente para acta: reunionluz11.aac
+Verificando si existe transcripción: reunionluz_Transcripcion.txt
+Verificando archivo: reunionluz_Transcripcion.txt en carpeta: reunionluz
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Transcripcion.txt
+Obteniendo transcripción existente: reunionluz
+Verificando contenido existente: reunionluz_Contenido.txt
+Verificando archivo: reunionluz_Contenido.txt en carpeta: reunionluz
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Contenido.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Contenido.txt
+Contenido existente: reunionluz_Contenido.txt. Cargando.
+Contenido del archivo obtenido exitosamente: reunionluz_Contenido.txt
+Iniciando formateo de contenido para: reunionluz.aac
+Verificando Borrador .docx existente: reunionluz_Borrador.docx
+Verificando archivo: reunionluz_Borrador.docx en carpeta: reunionluz
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Borrador.docx
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz/reunionluz_Borrador.docx
+Borrador .docx encontrado: reunionluz_Borrador.docx
+Obteniendo URL pública del borrador
+Obteniendo URL pública para archivo: /Actas/reunionluz/reunionluz_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/RK9bo6cN7QmaqLJ
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/RK9bo6cN7QmaqLJ
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/reunionluz/reunionluz_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/D83Ejo8MBYdsX3m
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/D83Ejo8MBYdsX3m
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/reunionluz/reunionluz_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/me4S4YJwNbooGpN
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/me4S4YJwNbooGpN
+Verificando si existe transcripción: reunionluz1212_Transcripcion.txt
+Verificando archivo: reunionluz1212_Transcripcion.txt en carpeta: reunionluz1212
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1212/reunionluz1212_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: reunionluz1212.aac
+Guardando transcripción: reunionluz1212_Transcripcion.txt
+Transcripción guardada: reunionluz1212_Transcripcion.txt
+Verificando contenido existente: reunionluz1212_Contenido.txt
+Verificando archivo: reunionluz1212_Contenido.txt en carpeta: reunionluz1212
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1212/reunionluz1212_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: reunionluz1212.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: reunionluz1212.aac
+Guardando contenido en Nextcloud: reunionluz1212_Contenido.txt
+Contenido guardado: reunionluz1212_Contenido.txt
+Iniciando formateo de contenido para: reunionluz1212.aac
+Verificando Borrador .docx existente: reunionluz1212_Borrador.docx
+Verificando archivo: reunionluz1212_Borrador.docx en carpeta: reunionluz1212
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1212/reunionluz1212_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: reunionluz1212_Borrador.docx
+Preparando guardado .docx en Nextcloud: reunionluz1212_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión de Consejo Conjunto Transversal 42</h1>
+ <p><strong>Fecha:</strong> 6 de Noviembre de 2025</p>
+ <p><strong>Hora:</strong> Inicio: Buenas noches - Cierre: 7.41</p>
+ <p><strong>Lugar:</strong> Transversal 42</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Jorge Roballo - Asesor</li>
+ <li>Carlos Rama - Asesor</li>
+ <li>Juan Carlos - [CARGO NO ESPECIFICADO]</li>
+ <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+ <li>Víctor - [CARGO NO ESPECIFICADO]</li>
+ <li>Gloria - [CARGO NO ESPECIFICADO]</li>
+ <li>Alejandro - [CARGO NO ESPECIFICADO]</li>
+ <li>David - [CARGO NO ESPECIFICADO]</li>
+ <li>Patricia - Casa 10</li>
+ <li>Manuel - [CARGO NO ESPECIFICADO]</li>
+ <li>Noel - [CARGO NO ESPECIFICADO]</li>
+ <li>Clarita - [CARGO NO ESPECIFICADO]</li>
+ <li>Luz Marina - [CARGO NO ESPECIFICADO]</li>
+ <li>Gladys - [CARGO NO ESPECIFICADO]</li>
+ <li>Jairo Hurtado - Vecino</li>
+ <li>Paula - [CARGO NO ESPECIFICADO]</li>
+ <li>Urbina - [CARGO NO ESPECIFICADO]</li>
+ <li>Luney - [CARGO NO ESPECIFICADO]</li>
+ <li>Jonathan - [CARGO NO ESPECIFICADO]</li>
+ <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+ <li>Mateo - [CARGO NO ESPECIFICADO]</li>
+ <li>Fre - [CARGO NO ESPECIFICADO]</li>
+ <li>Corná - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Aprobación y modificación del orden del día</li>
+ <li>Verificación grupo asesor presente</li>
+ <li>Lectura y aprobación del acta de la reunión anterior</li>
+ <li>Informe contable</li>
+ <li>Informe de administración</li>
+ <li>Automatización puerta peatonal</li>
+ <li>Sistema de gestión y seguridad en el trabajo</li>
+ <li>Diálogo sobre decretos laborales</li>
+ <li>Seguridad del conjunto</li>
+ <li>Proposiciones y varios</li>
+ </ol>
+</header>
+
+<h2>1. Aprobación y modificación del orden del día</h2>
+
+<p>Al inicio de la reunión del Consejo Conjunto Transversal 42, se presentó el orden del día propuesto para su aprobación y posible modificación. Los temas incluidos fueron: verificación del grupo asesor presente, lectura y aprobación del acta de la reunión anterior, informe contable, informe de administración, diálogo sobre decretos laborales, seguridad del conjunto, automatización de la puerta peatonal, sistema de gestión y seguridad en el trabajo, proposiciones y varios, y cierre de la reunión.</p>
+
+<p>Se consultó a los asistentes sobre su conformidad con el orden del día propuesto, dando paso a la verificación del grupo asesor presente.</p>
+<h2>2. Verificación grupo asesor presente</h2>
+
+<p>Se procedió a la verificación de la asistencia del grupo asesor. De los tres miembros que componen el grupo asesor del conjunto, se constató la presencia de dos personas: Jorge Roballo y Carlos Rama.</p><h2>3. Lectura y aprobación del acta de la reunión anterior</h2>
+
+<p>Durante la reunión, se procedió a la lectura del acta de la reunión anterior. Tras la lectura, se abrió un espacio para comentarios y posibles modificaciones al documento.</p><h2>4. Informe contable</h2>
+
+<p>Durante la reunión, se abordó el informe contable correspondiente al 30 de octubre de 2025. Se revisaron los saldos, la cartera, las cuentas por pagar, la inversión en CDT y la reserva legal.</p>
+
+<h3>Saldos</h3>
+
+<p>Inicialmente, se discutió sobre un saldo de 12 mil pesos que, según se indicó, ya había sido consignado en octubre, quedando un saldo de 8 mil pesos correspondientes a hojas. En los estados financieros se observó una utilidad de casi 3 millones de pesos, arrastrando 17 millones de pesos de infracciones de años anteriores, lo que resulta en un total de cerca de 20 millones de pesos de utilidad al cierre de septiembre.</p>
+
+<p>Se mencionó que al 30 de octubre quedaban 29 millones 446 pesos en la cuenta de ahorros. Tras el pago de 2 millones 661 pesos de seguridad social para fiscales, el saldo restante era de 27 millones de pesos.</p>
+
+<p>Se propuso invertir 10 millones de pesos en un CDT a tres meses, considerando que ese es el monto aproximado necesario para el pago de cesantías en febrero. Se sugirió abrir el CDT en Banco Caja Social, aprovechando la visita programada a GNV.</p>
+
+<h3>Cartera</h3>
+
+<p>Se informó sobre una cartera de casi 14 millones de pesos. Se mencionó una conversación con Mauricio, quien indicó estar trabajando en el Llano y que realizaría un abono importante próximamente. Respecto a Víctor, se señaló que había consignado el mes de septiembre, no así el mes de octubre, pero que había consignado 3 millones 300 y se comprometió a ser más juicioso en adelante.</p>
+
+<p>Se destacó que la casa 14 no ha realizado ningún abono, y se solicitó al grupo asesor que indicara si se debía enviar el caso a un profesional del derecho. Se mencionó una conversación con doña Gloria, quien prometió realizar una consignación. Se consideró enviar una última carta a la casa 14, dándoles plazo hasta el 15 del mes en curso para que se pusieran al día, advirtiéndoles que, de lo contrario, se entregaría el caso a un abogado para iniciar un cobro coactivo jurídico. En este sentido, se planteó la posibilidad de incluir el nombre del abogado en la carta para dar mayor seriedad al requerimiento.</p>
+
+<p>Se informó que la casa 13 había pagado hasta diciembre, incluyendo un saldo pendiente de 90 mil pesos de septiembre, debido a un aumento en la cuota de administración. Se indicó que faltaba un pago de la casa 10, correspondiente a Patricia, pero que los 105 mil pesos adeudados se ajustarían para ponerla al día. Se mencionó que doña Gloria Mercedes se había puesto al día, pero que su estado de salud era delicado.</p>
+
+<p>Se comentó que don Manuel quedaría debiendo 90 mil pesos, y se mencionó la dificultad para que consignara en la cuenta de vivienda, sugiriendo la posibilidad de saltar esa cuenta. Se planteó la necesidad de preguntar si la salud pagaría la incapacidad de Noel, sugiriendo la posibilidad de un derecho de petición o una tutela. Se mencionó la necesidad de matricular las cuentas y domiciliar los pagos, indicando que los servicios de agua, luz y teléfono ya se estaban pagando por la cuenta de vivienda.</p>
+
+<h3>Cuentas por pagar</h3>
+
+<p>Se indicó que no se estaban generando costos por el cobro de agua, luz y teléfono a través de la cuenta de vivienda, ya que las cuentas están exentas del 4 por mil hasta movimientos de 16 millones de pesos mensuales. Se mencionó que el servicio de contabilidad no generaría costos adicionales si no fuera prestado por Luz Marina.</p>
+
+<h3>Inversión en CDT</h3>
+
+<p>Se propuso abrir dos CDT: uno con 5 millones de pesos, afecto a la reserva legal, y otro con 10 millones de pesos, con el objetivo de generar intereses y tener disponibilidad para el pago de cesantías en febrero. Se sugirió calcular la cifra precisa para cerrar diciembre con el valor exacto de la reserva legal, y redimir el CDT en tres meses, en febrero. Se mencionó que en Santa Fe se habían invertido 15 millones de pesos a seis meses, generando 560 mil pesos de intereses. Se estimó que este año se habían ganado alrededor de dos millones y pico de intereses.</p>
+
+<h3>Reserva legal</h3>
+
+<p>Se constató que la reserva legal tenía un saldo de 5 millones y fracción, pero que en la cuenta de ahorros solo había 200 mil 002 pesos. Se señaló que esta cuenta no estaba generando intereses significativos, con ganancias de solo 978 pesos. Se propuso abrir un CDT con los 5 millones de pesos correspondientes a la reserva legal.</p>
+
+<p>Finalmente, se acordó abrir los dos CDT propuestos y se pospuso la discusión sobre las primas y el seguro para enero, cuando se solicitarían las cotizaciones correspondientes.</p>
+
+<p>Se solicitó identificar el origen de un saldo pendiente que, según se indicó, ya había sido pagado por Gloria Mercedes, correspondiente a la casa 13. Se mencionó que la casa 13 había pagado hasta diciembre.</p><h2>5. Informe de administración</h2>
+
+<p>Durante la reunión, se abordaron varios aspectos relacionados con el informe de administración, incluyendo la gestión de correspondencia con los residentes y la automatización de la puerta peatonal.</p>
+
+<h3>Carta a casa 14</h3>
+
+<p>Se discutió el caso de la casa 14, que no ha realizado abonos a su deuda. Se mencionó que se ha estado en comunicación con la señora Gloria, quien ha manifestado su intención de realizar un pago. Sin embargo, ante la falta de acción concreta, se consideró la posibilidad de enviar una última carta, estableciendo como fecha límite el 15 del mes en curso. En caso de no recibir respuesta, se procedería a remitir el caso a un profesional del derecho para iniciar un cobro coactivo jurídico. Se sugirió incluir en la carta el nombre del abogado para enfatizar la seriedad de la situación.</p>
+
+<h3>Automatización puerta peatonal</h3>
+
+<p>Se retomó el tema de la automatización de la puerta peatonal, destacando la importancia de implementar un sistema de acceso con tarjeta digital para mejorar la seguridad y la comodidad de los residentes. Se mencionó que se han presentado problemas con el sistema biométrico actual, lo que ha generado la necesidad de buscar alternativas más eficientes. Se hizo referencia a la dificultad que algunos residentes, especialmente los de mayor edad, tienen para acceder al conjunto, así como a los riesgos asociados con la espera prolongada en la puerta peatonal, especialmente en condiciones climáticas adversas.</p>
+
+<p>Se indicó que se ha buscado la opción más económica para la automatización, pero se reconoció la necesidad de evaluar otras cotizaciones y opciones disponibles. Se mencionó la posibilidad de contactar a Juan Carlos para obtener asesoramiento adicional. Se discutió la importancia de instalar un brazo y una chapa adecuados para garantizar el correcto funcionamiento de la puerta.</p>
+
+<p>Se hizo referencia a la experiencia en otros conjuntos residenciales, donde se han implementado sistemas de acceso automatizados con diferentes tecnologías, como tarjetas o chips. Se destacó la importancia de considerar la seguridad al automatizar la puerta, evitando que personas no autorizadas puedan ingresar al conjunto.</p>
+
+<p>Finalmente, se acordó buscar una cotización en firme antes de que termine noviembre para autorizar la instalación de un sistema electrónico con tarjeta o chip para los residentes.</p><h2>6. Automatización puerta peatonal</h2>
+
+<p>Durante la reunión, se abordó el tema de la automatización de la puerta peatonal, destacando la necesidad de mejorar el acceso para los residentes y reducir los riesgos asociados con la espera prolongada en la puerta, especialmente en condiciones climáticas adversas o situaciones de emergencia.</p>
+
+<p>Se mencionó que la propuesta más económica encontrada hasta el momento implica el uso de tarjetas de acceso. Esta opción se considera necesaria debido a problemas con el sistema biométrico y a la necesidad de agilizar el acceso peatonal.</p>
+
+<p>Se discutieron los inconvenientes actuales, como la demora de algunos vecinos al entrar y sacar sus vehículos, lo que genera congestión y obliga a otros residentes a esperar en la puerta peatonal, exponiéndose a riesgos y molestias. Se enfatizó la importancia de facilitar el acceso a personas mayores y en situaciones de emergencia, como la llegada de ambulancias.</p>
+
+<p>Se exploraron diferentes opciones de acceso, incluyendo tarjetas y chips, y se compararon los costos de diferentes proveedores. Se mencionó una cotización de 5.6 millones de pesos y se hizo referencia a un proveedor utilizado en un edificio en Alhambra.</p>
+
+<p>Se contrastó la situación actual con otros conjuntos residenciales donde el portero controla la apertura y cierre de la puerta, pero se reconoció que este sistema no es viable en el Conjunto Transversal 42 debido a la ubicación de la portería y las múltiples puertas de acceso.</p>
+
+<p>Se discutieron los riesgos de automatizar completamente la puerta, como la posibilidad de intrusiones si la puerta no cierra correctamente. Se mencionó la importancia de contar con un sistema de seguridad confiable y la necesidad de que los residentes asuman la responsabilidad en caso de incidentes.</p>
+
+<p>Se hizo referencia a la situación de seguridad en el barrio y a la necesidad de tomar precauciones ante posibles robos y situaciones de riesgo.</p>
+
+<p>Finalmente, se acordó buscar una cotización en firme antes de que termine noviembre para autorizar la instalación de un sistema electrónico con tarjeta o chip. Se enfatizó que la instalación no solo implica el dispositivo de acceso, sino también un brazo hidráulico para asegurar el correcto funcionamiento de la puerta.</p><h2>7. Sistema de gestión y seguridad en el trabajo</h2>
+
+<p>Durante la reunión, se abordó el tema del sistema de gestión y seguridad en el trabajo, destacando la necesidad de cumplir con la normatividad vigente en esta materia. Se mencionó que el conjunto tiene empleados propios, lo que implica la obligatoriedad de implementar un sistema de seguridad y salud en el trabajo.</p>
+
+<h3>Cumplimiento normativo</h3>
+
+<p>Se señaló que la norma exige el cumplimiento de varios puntos por parte de los empleadores, y que actualmente se está incumpliendo con muchos de ellos. En este contexto, se mencionó el riesgo de que, ante un accidente laboral, la ARL (Aseguradora de Riesgos Laborales) solicite el sistema de gestión de seguridad y salud en el trabajo. Se aclaró que este sistema es requerido por el Ministerio del Trabajo y que se debe realizar un reporte anual sobre su cumplimiento.</p>
+
+<p>Se presentó una cotización para la implementación del sistema, la cual fue considerada excesivamente cara, ascendiendo a un millón ochocientos mil pesos, divididos en tres etapas de seiscientos mil pesos cada una. Ante esto, se propuso explorar otras opciones, como consultar con las compañías de seguridad si ofrecen este servicio o si pueden brindar asesoría al respecto.</p>
+
+<p>Se sugirió contactar a Jason para evaluar si puede ofrecer un asesor externo o si la empresa de vigilancia tiene un servicio similar que pueda ser contratado. La señora Gladys insistió en la necesidad de cumplir con las normas.</p>
+
+<h3>Programa de evacuación, primeros auxilios y operación contra incendios</h3>
+
+<p>Se mencionó la importancia de contar con un programa de evacuación, capacitación en primeros auxilios y operación contra incendios. Se hizo referencia a un árbol que contenía información sobre etapas y horarios de capacitación para todos los residentes. Se enfatizó que esta capacitación no solo debe ser para los empleados, sino para todos los residentes.</p>
+
+<p>Se planteó la dificultad de capacitar a todos los residentes, especialmente a las personas mayores, y se cuestionó la efectividad de la capacitación teórica sin una aplicación práctica. Se propuso la realización de una reunión un sábado por la mañana en una zona verde para capacitar a todos los residentes en temas como evacuación, primeros auxilios y manejo de extintores.</p>
+
+<p>Se criticó la práctica de cumplir con los requisitos de forma, pero no de fondo, y se sugirió motivar a los vecinos a participar en una capacitación práctica. Se mencionó que, en caso de una inspección, las autoridades suelen dar un plazo para cumplir con los requisitos faltantes.</p>
+
+<p>Se expresó la preocupación de que la propiedad horizontal, al tener más de tres empleados en portería, pueda ser objeto de fiscalización por parte del Ministerio de Trabajo. Se planteó la posibilidad de esperar a una eventual visita de las autoridades antes de tomar medidas al respecto.</p>
+
+<p>Se sugirió estudiar la posibilidad de contratar una empresa de vigilancia en caso de que se intensifique la fiscalización. Se mencionó la importancia de preguntar a Positiva (ARL) sobre capacitaciones y el sistema de gestión, y la posibilidad de cambiar de ARL en caso de no obtener respuesta.</p>
+
+<p>Finalmente, se acordó escribir en el acta que se discutieron las insinuaciones y escritos de la señora Gladys, y que se buscará transmitir la idea a la asamblea de realizar una reunión un sábado por la mañana para capacitar a los residentes. También se estudiará la posibilidad de contratar una empresa de vigilancia si es necesario.</p><h2>8. Diálogo sobre decretos laborales</h2>
+
+<p>La reunión abordó el tema del cumplimiento de los decretos laborales por parte del conjunto, conforme a las normas establecidas en Colombia para los servicios prestados en propiedades horizontales.</p>
+
+<h3>Cumplimiento normativo</h3>
+
+<p>Se discutió la necesidad de asegurar el cumplimiento de las normas laborales vigentes, considerando que el conjunto tiene empleados propios (porteros y toderos). Se mencionó que la propiedad horizontal, al tener más de tres empleados en portería, podría ser objeto de fiscalización por parte del Ministerio de Trabajo.</p>
+
+<p>Se señaló que, en caso de una visita del Ministerio de Trabajo, la autoridad podría dar un plazo razonable para cumplir con los requerimientos. Sin embargo, se planteó la posibilidad de que, al actuar como si fueran una empresa de vigilancia, se requiera la contratación de una empresa de vigilancia para evitar posibles multas.</p>
+
+<p>Se indicó que, incluso con la contratación de una empresa de vigilancia, la propiedad horizontal seguiría siendo corresponsable con la comunidad.</p>
+
+<p>Se propuso preguntar a Positiva (ARL) sobre el tema y, en caso de no obtener respuesta, considerar cambiarse a Sura, que ofrece más acompañamiento en estos temas.</p>
+
+<h3>Horarios personal</h3>
+
+<p>Doña Gladys preguntó sobre los horarios del personal y el cumplimiento del decreto correspondiente. Se explicó que el primer turno trabaja 12 horas diarias, con 6 horas de noche y 6 horas de día, seguido de dos días de descanso. Se indicó que este esquema se repite a lo largo del mes, sumando 744 horas en meses de 31 días y 720 horas en meses de 30 días.</p>
+
+<p>Se aclaró que, aunque se ha intentado ajustar los horarios para cumplir con la ley, los únicos que pueden trabajar 60 horas semanales son las empresas de vigilancia. Se reconoció que se está infringiendo la ley, ya que el promedio de horas trabajadas por semana supera las 42 horas permitidas.</p>
+
+<p>Se mencionó que, para compensar las horas extras, se podría dar un día compensatorio a los empleados, lo que implicaría contratar a otra persona para cubrir esos días. Se señaló la necesidad de analizar el presupuesto para determinar si es viable contratar una empresa de vigilancia que cumpla con todos los requisitos legales.</p>
+
+<p>Se acordó elaborar un cuadro detallado con los horarios y pagos actuales para presentarlo en la próxima asamblea, junto con un análisis de los costos de contratar una empresa de vigilancia.</p>
+
+<h3>Compensatorios</h3>
+
+<p>Se discutió la posibilidad de otorgar días compensatorios remunerados a los empleados para cumplir con el máximo de horas permitidas por la ley. Sin embargo, se reconoció que esto implicaría contratar a una persona adicional para cubrir esos días, lo que generaría costos adicionales.</p>
+
+<p>Se concluyó que se analizará la viabilidad de esta opción y se presentará una propuesta detallada en la próxima asamblea.</p><h2>9. Seguridad del conjunto</h2>
+
+<p>Durante la reunión, se abordaron varios aspectos relacionados con la seguridad del conjunto, incluyendo el retiro de cables de ETB, el daño en la cerca, el control digital, la revisión de la UPS, el censo de mascotas y el manejo de las mismas.</p>
+
+<h3>Retiro cables ETB</h3>
+
+<p>Se informó que personal de ETB realizó el retiro de cables en el conjunto. La administración indicó haber solicitado la identificación adecuada antes de permitir el ingreso del personal, previniendo así posibles problemas de seguridad. Don Urbina conversó con los técnicos de ETB durante el proceso.</p>
+
+<h3>Daño cerca</h3>
+
+<p>Se mencionó que el daño en la cerca existía previamente y requiere mantenimiento. Se recordó que la reparación anterior fue gestionada y pagada por la casa 1, pero no se solicitó garantía ni póliza por el trabajo realizado.</p>
+
+<h3>Control digital</h3>
+
+<p>Se expresó preocupación por el funcionamiento del control digital, señalando que, a pesar de haber transcurrido tres meses desde su implementación, aún no está operando correctamente. Se solicitó a Fresia y Cornelio que revisen el sistema para asegurar su correcto funcionamiento. Se mencionó que Juan Carlos no ha podido realizar el reconocimiento de la huella debido a dificultades para movilizarse.</p>
+
+<h3>Revisión UPS</h3>
+
+<p>Se reportó que la UPS presenta problemas, ya que se apaga cuando hay cortes de luz y no reinicia automáticamente. Se solicitó revisar la UPS para asegurar su correcto funcionamiento en caso de fallas eléctricas.</p>
+
+<h3>Censo mascotas</h3>
+
+<p>Se recordó la necesidad de realizar el censo de mascotas. Se mencionó que Juan Carlos se encuentra afectado por la pérdida de su mascota, Juana.</p>
+
+<h3>Manejo de mascotas</h3>
+
+<p>Se discutió el manejo de mascotas, específicamente el caso del perro de doña Luney, que está generando molestias a los vecinos Mauricio y Gloria al hacer sus necesidades frente a sus casas. Se acordó incluir una anotación en el acta sobre el manejo adecuado de mascotas y notificar a doña Luney sobre la situación.</p><h2>10. Proposiciones y varios</h2>
+
+<p>Durante el punto de "Proposiciones y Varios", se abordaron temas adicionales que surgieron durante la reunión.</p>
+
+<h3>Reuniones virtuales</h3>
+
+<p>Se retomó la discusión sobre la modalidad de las reuniones, planteando la posibilidad de realizarlas de forma virtual. Se mencionó la dificultad de algunos asistentes para trasladarse, como es el caso de Clarita, residente del Galán, cuyo desplazamiento podría verse afectado por factores como el costo del transporte y la seguridad en horarios nocturnos. Se expresó preocupación sobre la seguridad en la zona y los riesgos asociados con los desplazamientos nocturnos.</p>
+
+<p>Sin embargo, se manifestaron reservas sobre la efectividad de las reuniones virtuales. Se argumentó que la comunicación a través de cámaras puede ser engañosa y que la falta de contacto personal dificulta la interacción y la transparencia. Se citó el ejemplo de audiencias judiciales y reuniones en otros edificios, donde la presencialidad se considera fundamental para garantizar la seriedad y el compromiso de los participantes.</p>
+
+<p>En relación con este punto, se mencionó la necesidad de considerar la seguridad de los residentes al salir de las reuniones, especialmente en horarios nocturnos. Se hizo referencia a incidentes de inseguridad en la zona y a la importancia de tomar precauciones para evitar riesgos.</p>
+
+<p>Finalmente, se concluyó que se seguirán explorando opciones para facilitar la participación de todos los residentes en las reuniones, pero se mantendrá la preferencia por la presencialidad siempre que sea posible, priorizando la seguridad y la efectividad de la comunicación.</p>
+
+<h3>Censo de mascotas y manejo de mascotas</h3>
+
+<p>Se recordó la necesidad de realizar el censo de mascotas y establecer instrucciones claras para su manejo dentro del conjunto residencial. Se mencionó un incidente específico relacionado con el perro de doña Luney, que, según se informó, estaba causando molestias a los vecinos, particularmente a don Mauricio, al hacer sus necesidades frente a su casa. Se indicó que se le escribiría a doña Luney sobre este tema.</p>
+
+<h3>Sistema de colaboración con IA para actas</h3>
+
+<p>Se mencionó la exploración de un sistema de colaboración con inteligencia artificial (IA) para la elaboración de actas. Se indicó que este sistema ofrece la transcripción y el resumen de la reunión a partir de la grabación, con un costo de 10 mil pesos por cada 15 minutos de grabación. Se informó que se han montado dos actas de prueba para evaluar su funcionamiento y se espera tener resultados pronto. Se aclaró que la utilización de este sistema no exime a la administración de su obligación de elaborar las actas correspondientes.</p>
+
+<h3>Control digital</h3>
+
+<p>Se expresó preocupación por el control digital, mencionando que no está funcionando correctamente. Se solicitó que se revise el tema del control digital, ya que se considera que no se está cumpliendo con su función. Se mencionó que Juan Carlos no ha podido realizar el reconocimiento de la huella debido a dificultades para caminar. Se solicitó a Fres que revise la UPS para verificar su funcionamiento.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 7:41 PM</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se dará plazo hasta el 15 al profesional de derecho para el caso de la casa 14, y se le comunicará a la propietaria. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se abrirán dos CDT, uno con el saldo de la reserva legal y otro con 10 millones de pesos, buscando opciones de inversión a corto plazo. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará una cotización en firme para la automatización de la puerta peatonal, buscando una solución con tarjeta o chip. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se contactará a Jason para evaluar si la compañía de seguridad puede ofrecer el servicio de sistema de gestión y seguridad en el trabajo. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará un cuadro comparativo de costos entre mantener el esquema actual de personal y contratar una empresa de vigilancia, incluyendo los costos asociados a los días compensatorios remunerados. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará a Fresia que revise el estado de la UPS para asegurar el funcionamiento continuo de las cámaras de seguridad. – <strong>Responsable:</strong> Luz Marina</li>
+ <li>Se escribirá a Doña Luney sobre el control de su mascota, que está incomodando a los vecinos. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/reunionluz1212/reunionluz1212_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/jrodYqtzcoL6oJ8
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/jrodYqtzcoL6oJ8
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/reunionluz1212/reunionluz1212_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/rroMpFGRHKMAk8P
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/rroMpFGRHKMAk8P
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/reunionluz1212/reunionluz1212_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/bcD77R9JXqn9x53
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/bcD77R9JXqn9x53
+Verificando si existe transcripción: reunionluz1232312_Transcripcion.txt
+Verificando archivo: reunionluz1232312_Transcripcion.txt en carpeta: reunionluz1232312
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1232312/reunionluz1232312_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: reunionluz1232312.aac
+Guardando transcripción: reunionluz1232312_Transcripcion.txt
+Transcripción guardada: reunionluz1232312_Transcripcion.txt
+Verificando contenido existente: reunionluz1232312_Contenido.txt
+Verificando archivo: reunionluz1232312_Contenido.txt en carpeta: reunionluz1232312
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1232312/reunionluz1232312_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: reunionluz1232312.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: reunionluz1232312.aac
+Guardando contenido en Nextcloud: reunionluz1232312_Contenido.txt
+Contenido guardado: reunionluz1232312_Contenido.txt
+Iniciando formateo de contenido para: reunionluz1232312.aac
+Verificando Borrador .docx existente: reunionluz1232312_Borrador.docx
+Verificando archivo: reunionluz1232312_Borrador.docx en carpeta: reunionluz1232312
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluz1232312/reunionluz1232312_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: reunionluz1232312_Borrador.docx
+Preparando guardado .docx en Nextcloud: reunionluz1232312_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v24.10.0
+SISTEMA OPERATIVO EN DOCKER: darwin arm64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión de Consejo Conjunto Transversal 42</h1>
+ <p><strong>Fecha:</strong> 6 de noviembre de 2025</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: 7.41 esperando</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Jorge Roballo - Asesor</li>
+ <li>Carlos Rama - Asesor</li>
+ <li>Juan Carlos - [CARGO NO ESPECIFICADO]</li>
+ <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+ <li>Víctor - [CARGO NO ESPECIFICADO]</li>
+ <li>Gloria - [CARGO NO ESPECIFICADO]</li>
+ <li>Patricia - [CARGO NO ESPECIFICADO]</li>
+ <li>Manuel - [CARGO NO ESPECIFICADO]</li>
+ <li>Noel - [CARGO NO ESPECIFICADO]</li>
+ <li>Luz Marina - [CARGO NO ESPECIFICADO]</li>
+ <li>Gladys - [CARGO NO ESPECIFICADO]</li>
+ <li>Clarita - [CARGO NO ESPECIFICADO]</li>
+ <li>Alejandro - [CARGO NO ESPECIFICADO]</li>
+ <li>David - [CARGO NO ESPECIFICADO]</li>
+ <li>Paula - [CARGO NO ESPECIFICADO]</li>
+ <li>Jairo Hurtado - Vecino</li>
+ <li>Inmaga - [CARGO NO ESPECIFICADO]</li>
+ <li>Gloria Mercedes - [CARGO NO ESPECIFICADO]</li>
+ <li>Urbina - [CARGO NO ESPECIFICADO]</li>
+ <li>Jonathan - [CARGO NO ESPECIFICADO]</li>
+ <li>Luney - [CARGO NO ESPECIFICADO]</li>
+ <li>Mauricio - [CARGO NO ESPECIFICADO]</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Aprobación y modificación del orden del día</li>
+ <li>Verificación grupo asesor presente</li>
+ <li>Lectura y aprobación del acta anterior</li>
+ <li>Informe contable</li>
+ <li>Informe de administración</li>
+ <li>Diálogo sobre decretos laborales</li>
+ <li>Seguridad del conjunto</li>
+ <li>Proposiciones y varios</li>
+ <li>Fin de la reunión</li>
+ </ol>
+</header>
+<h2>1. Aprobación y modificación del orden del día</h2>
+
+<p>Al inicio de la reunión del Consejo Conjunto Transversal 42, se presentó el orden del día propuesto. Este incluía los siguientes puntos: aprobación y modificación del orden del día, verificación del grupo asesor presente, lectura y aprobación del acta de la reunión anterior, informe contable a 30 de, informe de administración, diálogo sobre decretos laborales de cumplimiento por parte del conjunto, seguridad del conjunto, proposiciones y varios, y fin de la reunión.</p>
+
+<p>Se consultó a los asistentes sobre su conformidad con el orden del día propuesto.</p><h2>2. Verificación grupo asesor presente</h2>
+
+<p>Al inicio de la reunión, se verificó la presencia de dos de los tres miembros del grupo asesor del conjunto: Jorge Roballo y Carlos Rama. En consecuencia, se procedió a continuar con la reunión.</p><h2>3. Lectura y aprobación del acta anterior</h2>
+
+<p>Durante la reunión, se procedió a la lectura del acta de la reunión anterior. Tras la lectura, se abrió un espacio para comentarios y posibles modificaciones.</p><h2>4. Informe contable</h2>
+
+<p>Durante la reunión, se abordó el informe contable correspondiente al 30 de octubre de 2025. Se revisaron diversos aspectos financieros, incluyendo saldos, cartera, cuentas por pagar, la apertura de un CDT y la reserva legal.</p>
+
+<h3>Saldos</h3>
+
+<p>Inicialmente, se consultó a Juan Carlos sobre la revisión del informe contable. Se mencionó una discrepancia sobre un saldo de 12 mil pesos que, según se indicó, ya había sido consignado en octubre, quedando un saldo de 8 mil pesos correspondientes a hoja. Se aclaró que los estados financieros mostraban una utilidad de casi 3 millones de pesos, arrastrando 17 millones de pesos de infracciones de años anteriores, lo que resultaba en un total de cerca de 20 millones de pesos de utilidad al cierre de septiembre.</p>
+
+<p>Se discutió el saldo disponible en la cuenta de ahorros a octubre, que ascendía a 29.446.000 pesos. Tras el pago de 2.661.000 pesos por seguridad social y parafiscales, el saldo restante se situaba en 27 millones de pesos a 30 de octubre.</p>
+
+<p>Se propuso destinar 10 millones de pesos a un CDT a tres meses, considerando que este monto sería necesario para el pago de cesantías en febrero. Jorge sugirió que se podría encontrar con Juan Carlos para abrir el CDT en el Banco Caja Social.</p>
+
+<h3>Cartera</h3>
+
+<p>Se informó sobre una cartera de casi 14 millones de pesos. Se mencionó que Mauricio está trabajando en el Llano y que se espera un abono importante de su parte. Respecto a Víctor, se indicó que consignó en septiembre, no así en octubre, pero que en este último mes consignó 3.300.000 pesos y se comprometió a ser más constante en sus pagos.</p>
+
+<p>Se destacó la situación de la casa 14, que no ha realizado abonos. Se planteó la posibilidad de enviar el caso a un profesional del derecho, aunque se mencionó una conversación con Gloria, quien aseguró que realizarían el pago. Se acordó enviar una última carta a la casa 14, dándoles plazo hasta el 15 del mes en curso, tras lo cual se remitiría el caso a un abogado para iniciar un cobro coactivo jurídico. Se enfatizó la necesidad de que el grupo asesor dé respuestas sobre este tema.</p>
+
+<p>Se mencionó que la casa 13 ya pagó un saldo pendiente de 90 mil pesos y que incluso adelantaron pagos hasta diciembre. Se indicó que la casa 10, perteneciente a Patricia, también realizó un pago pendiente. Se ajustaron los pagos para que todos estuvieran al día.</p>
+
+<p>Se comentó sobre la posibilidad de que la EPS pague la incapacidad de Noel, sugiriendo la presentación de un derecho de petición o una tutela. Además, se planteó la necesidad de matricular las cuentas y domiciliarlas.</p>
+
+<h3>Cuentas por pagar</h3>
+
+<p>Se informó que los servicios de agua, luz y teléfono se están pagando a través de una cuenta de vivienda, sin generar costos adicionales por 4 por mil o comisiones. Se mencionó que se logró reducir el costo del servicio telefónico y se detallaron los montos pagados por los servicios de acueducto y energía.</p>
+
+<p>Se compararon los costos del software de contabilidad actual con otras opciones, como Daytona y CISCO. Se mencionó que Daytona tiene un costo mensual de 89 mil pesos, mientras que CISCO asciende a 2.500.000 pesos anuales, más 600.000 a 650.000 pesos adicionales.</p>
+
+<p>Se consultó si había más temas pendientes en la parte financiera para evitar mezclar temas en el acta.</p>
+
+<h3>Apertura de CDT</h3>
+
+<p>Se propuso la apertura de dos CDT: uno con 5 millones de pesos destinados a la reserva legal y otro con 10 millones de pesos, con el objetivo de generar intereses y tener disponibilidad para el pago de cesantías en febrero. Se sugirió calcular la cifra precisa para cerrar el saldo a diciembre y redimirlo en tres meses. Se mencionó un caso en Santa Fe donde se obtuvieron 560 mil pesos de intereses por un CDT de 15 millones a seis meses.</p>
+
+<h3>Reserva legal</h3>
+
+<p>Se constató que la reserva legal, que asciende a cinco millones y fracción, no está en una cuenta de ahorros, sino que solo hay 200.002 pesos en la cuenta destinada para ello. Se indicó que los intereses generados en esta cuenta fueron de 978 pesos. Se propuso abrir un CDT con los 5 millones de pesos correspondientes a la reserva legal para generar rendimientos.</p>
+
+<p>Finalmente, se acordó abrir los dos CDT y se pospuso la discusión sobre las primas y el seguro para enero, cuando se solicitarán cotizaciones.</p><h2>5. Informe de administración</h2>
+
+<p>Durante la reunión, se abordaron varios aspectos relacionados con el informe de administración, incluyendo la carta a la casa 14 y la automatización de la puerta peatonal.</p>
+
+<h3>Carta a casa 14</h3>
+
+<p>En relación con la casa 14, se mencionó que no ha realizado abonos y se espera la indicación del grupo asesor para determinar si se envía el caso a un profesional de derecho. Se consideró enviar una última carta dándole plazo hasta el 15 del mes en curso, indicando que, de no haber respuesta, se entregará el caso al abogado. Se sugirió incluir el nombre del abogado en la carta para enfatizar la seriedad del asunto.</p>
+
+<h3>Automatización puerta peatonal</h3>
+
+<p>Se discutió la automatización de la puerta peatonal como una solución más económica ante los problemas con el sistema biométrico y las quejas de los residentes. Se busca implementar un sistema de acceso con tarjeta digital para facilitar la entrada y salida, especialmente para los residentes mayores y en situaciones de emergencia. Se mencionó que algunos vecinos tardan mucho en abrir y cerrar los garajes, lo que genera congestión y riesgos en la puerta peatonal. Se busca una cotización en firme antes de que termine noviembre para autorizar la instalación de un aparato electrónico con tarjeta o chip. Se aclaró que no solo se trata del aparato, sino también de un brazo para que la puerta funcione correctamente y una chapa para asegurar el cierre.</p>
+
+<p>Además, se comentó sobre incidentes de seguridad en el barrio y la necesidad de estar alerta ante posibles robos. Se mencionó la importancia de tener una cotización en firme para la automatización de la puerta peatonal y se comparó con otros conjuntos donde el portero abre automáticamente, pero se corre el riesgo de que entren intrusos.</p><h2>6. Diálogo sobre decretos laborales</h2>
+
+<p>La reunión abordó el tema del cumplimiento de los decretos laborales por parte del conjunto, conforme a las normas establecidas en Colombia para los servicios prestados en propiedades horizontales.</p>
+
+<h3>Cumplimiento normativo</h3>
+
+<p>Se discutió la necesidad de cumplir con 61 puntos que la norma exige a los empleadores, señalando que actualmente se está incumpliendo con varios de ellos. Se mencionó el riesgo de que, en caso de un accidente laboral de alguno de los empleados, se solicite el sistema de gestión de seguridad y salud en el trabajo, lo cual compete al Ministerio del Trabajo y requiere un reporte anual de cumplimiento.</p>
+
+<p>Se presentó una cotización para implementar el sistema de gestión, la cual fue considerada excesivamente cara (un millón ochocientos mil pesos en tres etapas de seiscientos mil pesos cada una). Se propuso que se averigüe si las compañías de seguridad tienen este sistema y cómo podrían ayudar al conjunto.</p>
+
+<p>Se mencionó el decreto 720, que incluye el programa de evacuación, primeros auxilios y operación contra incendios. Se sugirió que este programa sea para todos los residentes y no solo para los empleados.</p>
+
+<p>Se planteó la dificultad práctica de implementar estas medidas, ya que no hay una persona que pueda capacitar a los residentes casa por casa ni que esté presente las 24 horas en caso de un siniestro. Se propuso realizar una reunión un sábado por la mañana en una zona verde para capacitar a todos los residentes.</p>
+
+<p>Se expresó la preocupación de que se esté cumpliendo de forma pero no de fondo, y que se esté botando la plata. Se mencionó que, en caso de una inspección, las autoridades dan un plazo para cumplir con los requisitos.</p>
+
+<p>Se concluyó que se transmitirá la idea a la asamblea para realizar una reunión con todos los residentes para recibir instrucción sobre evacuación, primeros auxilios y manejo de extintores. También se estudiará la posibilidad de contratar una empresa de vigilancia en caso de que se intensifique la fiscalización.</p>
+
+<p>Se acordó solicitar una segunda comunicación a Positiva para que atienda el tema de los tres empleados del conjunto, o considerar cambiarlos de ARL.</p>
+
+<h3>Sistema de gestión y seguridad en el trabajo</h3>
+
+<p>Se retomó la discusión sobre la cotización del sistema de gestión y seguridad en el trabajo, la cual fue calificada como exagerada. Se propuso contactar a Jason para que averigüe si un asesor externo puede ofrecer este servicio a un costo menor.</p>
+
+<p>Se mencionó que el sistema de gestión implica determinar una especie de vigía de salud, encargado de recibir las capacitaciones y representar al conjunto en estos temas. Sin embargo, se cuestionó la efectividad práctica de esta figura, dada la dificultad de reunir a los residentes para las capacitaciones.</p>
+
+<h3>Horarios del personal</h3>
+
+<p>Se abordó el tema de los horarios del personal, en relación con el decreto correspondiente. Se explicó que el primer turno trabaja 12 horas diarias, incluyendo 6 horas de noche, y que los otros dos turnos trabajan 6 horas diarias. Se indicó que en los meses de 31 días se trabajan 744 horas, y en los meses de 30 días se trabajan 720 horas.</p>
+
+<p>Se aclaró que los únicos que pueden trabajar 60 horas a la semana son las empresas de vigilancia, y que el conjunto está infringiendo la ley. Se mencionó que, para compensar las horas extras, se les daría a los empleados un día compensatorio, lo cual implicaría contratar a otra persona para reemplazarlos.</p>
+
+<p>Se concluyó que es necesario hacer un cuadro para que se dé cuenta cómo es que están trabajando y cómo se les está pagando. Se aclaró que, para que trabajen las horas máximas permitidas por la ley, es necesario darles días compensatorios remunerados, lo cual implica contratar a una persona para reemplazarlos.</p>
+
+<h3>Posibilidad de contratar empresa de vigilancia</h3>
+
+<p>Se planteó la posibilidad de contratar una empresa de vigilancia para evitar problemas legales y de seguridad. Se mencionó que la empresa de vigilancia tiene su amparo, su licencia, su supervisión y toda su historia, y que el conjunto no tendría nada que ver.</p>
+
+<p>Se indicó que es necesario hacer el cálculo para presentar la información a la asamblea, mostrando cuánto costaría contratar una empresa de vigilancia y cuáles son los problemas que se pueden evitar.</p><h2>7. Seguridad del conjunto</h2>
+
+<p>La discusión sobre la seguridad del conjunto se centró en varios aspectos, incluyendo la apertura de la puerta peatonal, el sistema de control digital y la revisión de la Unidad Permanente de Control (UPC).</p>
+
+<h3>Apertura puerta peatonal</h3>
+
+<p>Se retomó la discusión sobre la automatización de la puerta peatonal, mencionada previamente en el informe de administración. Se busca una solución más económica debido a problemas con el sistema biométrico y tutelas relacionadas. La propuesta es instalar un sistema de acceso con tarjeta digital para residentes. Se destacó la urgencia de esta mejora debido a la lentitud de algunos vecinos al entrar y sacar vehículos, y a la incomodidad de los residentes que deben esperar en la puerta peatonal, especialmente personas mayores o en situaciones de emergencia.</p>
+
+<p>Se mencionó que se había encontrado una opción más económica, pero se consideró importante obtener otras cotizaciones. Se comparó con sistemas en otros conjuntos, donde el portero baja a abrir o se utilizan sistemas automatizados con botones, pero se reconoció que estos últimos pueden ser vulnerables si no se supervisan adecuadamente.</p>
+
+<p>Se acordó buscar una cotización en firme antes de que termine noviembre para autorizar la instalación de un sistema electrónico con tarjeta o chip para los residentes, incluyendo la instalación de un brazo para asegurar el correcto funcionamiento de la puerta.</p>
+
+<h3>Sistema de control digital</h3>
+
+<p>Se planteó la necesidad de que el sistema de control digital esté en funcionamiento. Se recordó que, a pesar de haber transcurrido tres meses desde su implementación, aún no está operando correctamente. Se solicitó que se revise el dispositivo y se asegure su funcionamiento, ya que no se está cumpliendo con el objetivo previsto.</p>
+
+<h3>Revisión de la UPC</h3>
+
+<p>Se consultó sobre el estado de la revisión de la Unidad Permanente de Control (UPC). Se mencionó que las grabaciones de las cámaras están disponibles, pero el sistema se bloquea cuando hay cortes de luz y no se reinicia automáticamente. Se identificó la necesidad de revisar la fuente de alimentación (UPS) para asegurar que el sistema funcione correctamente en caso de fallas eléctricas.</p>
+
+<p>Se solicitó a Fresa y Corná que revisen la UPS para asegurar su correcto funcionamiento y evitar interrupciones en el sistema de vigilancia.</p><h2>8. Proposiciones y varios</h2>
+
+<p>Durante el segmento de "Proposiciones y varios", se abordaron diversos temas, incluyendo el censo de mascotas, la instrucción para el manejo de mascotas, un sistema de colaboración con IA para la elaboración de actas, y la posibilidad de realizar reuniones virtuales.</p>
+
+<h3>Censo de mascotas</h3>
+
+<p>Se mencionó que Doña Ga había solicitado el censo de mascotas. Se comentó que Juan Carlos expresó pesar por la pérdida de su mascota, Juana, reconociendo el fuerte vínculo emocional que se desarrolla con los animales y el dolor que causa su partida.</p>
+
+<h3>Instrucción para el manejo de mascotas</h3>
+
+<p>Se discutió la necesidad de establecer instrucciones claras para el manejo de mascotas, debido a que el perro de doña Luney estaba causando molestias a los vecinos, particularmente a don Mauricio, al hacer sus necesidades frente a su casa. Se acordó incluir una anotación en el acta dirigida a doña Luney, solicitándole que controle a su perro para evitar incomodar a los vecinos. Se mencionó que Jonathan se había ofrecido a hablar con ella al respecto.</p>
+
+<h3>Sistema de colaboración con IA para actas</h3>
+
+<p>Se exploró la posibilidad de utilizar un sistema de colaboración con Inteligencia Artificial (IA) para agilizar la elaboración de actas. Se mencionó que este sistema cobra 10 mil pesos por cada 15 minutos de grabación y que ya se habían montado dos actas de prueba para evaluar su funcionamiento. Se destacó que el sistema genera el acta con la presentación y todo lo que se dijo, lo cual podría ser útil para complementar la información. Se planeaba revisar estas actas de prueba para determinar su viabilidad.</p>
+
+<h3>Reuniones virtuales</h3>
+
+<p>Se planteó la discusión sobre la viabilidad de realizar reuniones virtuales, considerando la dificultad de algunos miembros para asistir presencialmente. Se mencionó la preocupación de Clarita por la seguridad al trasladarse a las reuniones. Sin embargo, se expresaron reservas sobre la efectividad de las reuniones virtuales, argumentando que la comunicación a través de cámaras puede ser impersonal y prestarse a malas interpretaciones. Se hizo referencia a la complejidad de las audiencias virtuales, como en el caso de Álvaro Uribe, y se defendió la importancia de las reuniones presenciales para mantener una comunicación clara y directa.</p><h2>9. Fin de la reunión</h2>
+
+<p>Este tema estaba previsto en el orden del día pero no fue abordado durante la reunión.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 19:41</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se dará plazo hasta el 15 del mes en curso a la casa 14 para ponerse al día con los pagos, de lo contrario se entregará el caso a un profesional del derecho. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se abrirán dos CDT, uno con los fondos de la reserva legal y otro con 10 millones de pesos, buscando generar intereses y tener disponibilidad para el pago de cesantías. – <strong>Responsable:</strong> Luz Marina y Jorge Roballo</li>
+ <li>Se solicitará una cotización en firme para la automatización de la puerta peatonal con acceso mediante tarjeta o chip. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se contactará a Jason para evaluar la posibilidad de obtener un servicio de asesoría externa en el sistema de gestión y seguridad en el trabajo. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará un censo de mascotas y se elaborará un manual de manejo de mascotas para el conjunto. – <strong>Responsable:</strong> No especificado</li>
+ <li>Se verificará el estado de la UPS para asegurar el correcto funcionamiento de las cámaras de seguridad. – <strong>Responsable:</strong> Fre y Luz Marina</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/reunionluz1232312/reunionluz1232312_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/ZazXgNjGRynaNmb
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/ZazXgNjGRynaNmb
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/reunionluz1232312/reunionluz1232312_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/XeWFeyHEkzHLbfn
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/XeWFeyHEkzHLbfn
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/reunionluz1232312/reunionluz1232312_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/4EcXGoedSQtfQyz
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/4EcXGoedSQtfQyz

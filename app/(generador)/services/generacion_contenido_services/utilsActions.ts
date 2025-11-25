@@ -331,11 +331,11 @@ export async function guardarArchivo(
 
     const ocsVersionUrl = `${urlNextcloud}/ocs/v2.php/cloud/capabilities`;
     const ocsVersionResponse = await fetch(ocsVersionUrl, {
-      method: "GET",
-      headers: {
-        ...cabecerasAutenticacion,
-        "OCS-APIRequest": "true",
-      },
+        method: "GET",
+        headers: {
+          ...cabecerasAutenticacion,
+          "OCS-APIRequest": "true",
+        },
     });
 
     if (!ocsVersionResponse.ok) {
@@ -519,6 +519,6 @@ export async function obtenerFileIdArchivo(
   } catch (error) {
     const errorMsg = error instanceof Error ? error.message : String(error);
     writeLog(`Error al obtener fileId: ${errorMsg}`);
-    return null;
+      return null;
   }
 }

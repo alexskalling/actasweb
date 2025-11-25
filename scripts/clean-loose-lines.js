@@ -60,3 +60,5 @@ console.log(`Cleaning loose lines in: ${targetDir}`);
 const count = processDirectory(targetDir);
 console.log(`Cleaned ${count} files`);
 
+
+
