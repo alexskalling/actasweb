@@ -1,14 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useSession } from "next-auth/react";
 
 export default function HorasBagsCard() {
+  const { data: session } = useSession();
+
   const handleContactarWhatsApp = () => {
-    const numeroWhatsApp = "573122995191";
-    const mensaje = encodeURIComponent(
-      "Hola, estoy interesado en comprar una bolsa de horas para mis actas. ¿Me pueden dar más información sobre los planes disponibles?",
-    );
-    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+    const nombreUsuario = session?.user?.name || "Usuario";
+    const numeroWhatsApp = "56945871929"; // Guillermo
+    const mensaje = `Hola Guillermo, soy ${nombreUsuario}. Estoy interesado en comprar una bolsa de horas para mis actas. ¿Me puedes ayudar con el proceso de compra?`;
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, "_blank");
   };
 
