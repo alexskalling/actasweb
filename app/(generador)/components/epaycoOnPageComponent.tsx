@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import React, { useEffect, useState, useRef } from "react";
 import { useSession } from "next-auth/react";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
+import { getUserId } from "../services/user/getUserId";
 import { guardarFalloPagoService } from "../services/fallos_querys_services/guardarFalloPagoService";
 import { toast } from "sonner";
 
@@ -311,11 +312,18 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     setIsLoading(true);
 
 
-    const userId = billingDataToUse.id;
-    const timestamp = Date.now();
-    const referencia = `${tipo}${props.file}-${userId}-${timestamp}`;
+    const userId = await getUserId();
 
-    const refPaycoParaPolling = referencia;
+    if (!userId) {
+      console.error("❌ No se pudo obtener el ID del usuario para el pago.");
+      toast.error("Error de autenticación", {
+        description: "No se pudo verificar tu sesión. Por favor, recarga la página e inicia sesión de nuevo.",
+        duration: 5000,
+      });
+      setIsLoading(false);
+      return;
+    }
+    const referencia = `${props.file}`;
 
 
     if (!props.costo || props.costo <= 0) {
@@ -370,6 +378,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       doc_billing: props.numeroDocumento || "", 
       mobilephone_billing: billingDataToUse.telefono || "",
       email_billing: billingDataToUse.email || "",
+      extra1: userId,
     };
 
     // Track analytics

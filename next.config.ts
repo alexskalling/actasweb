@@ -4,13 +4,11 @@ const nextConfig = {
     serverActions: {
       bodySizeLimit: "5gb",
     },
+    serverComponentsExternalPackages: ["@react-email/render", "@google/generative-ai"],
   },
   images: {
     domains: ['lh3.googleusercontent.com'],
   },
-  serverExternalPackages: ['@google/generative-ai'],
-  // Configuración para Turbopack
-  turbopack: {},
 };
 
 export default nextConfig;
