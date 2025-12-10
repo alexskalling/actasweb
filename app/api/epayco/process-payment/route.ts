@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
         undefined,
         email,
         codigoReferidoExistente || undefined,
-        undefined, // soporte
+        undefined,
         userId,
       );
     } catch (error) {

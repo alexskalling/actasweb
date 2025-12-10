@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ActualizarProceso } from '@/app/(generador)/services/actas_querys_services/actualizarProceso';
-import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
 import { actas } from '@/lib/db/schema';
 import { and, eq } from 'drizzle-orm';
