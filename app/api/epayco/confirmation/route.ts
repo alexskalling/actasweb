@@ -95,9 +95,7 @@ export async function POST(request: NextRequest) {
 
     if (response === 'Aceptada' || response === '1') {
 
-      try {
-
-        let codigoReferidoExistente: string | null = null;
+      let codigoReferidoExistente: string | null = null;
         try {
           const actaExistente = await db
             .select({
@@ -121,6 +119,7 @@ export async function POST(request: NextRequest) {
 
         }
 
+      try {       
         await ActualizarProceso(
           fileName,
           5,

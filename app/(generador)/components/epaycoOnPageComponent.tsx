@@ -648,6 +648,24 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         // Mostrar toast con datos de la transacción (después de cerrar el modal)
         // Solo mostrar si no se ha mostrado antes para esta transacción
         const transactionId = response.x_transaction_id || "";
+        await ActualizarProceso(
+          props.file,
+          undefined,
+          undefined,
+          undefined,
+          transactionId,
+          undefined,
+          props.file,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+        );
         if (transactionId && !hasToastBeenShown(transactionId)) {
           markToastAsShown(transactionId);
         setTimeout(() => {
