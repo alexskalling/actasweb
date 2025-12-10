@@ -3,9 +3,10 @@ import { ActualizarProceso } from '@/app/(generador)/services/actas_querys_servi
 import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
 import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
-import { actas } from "@/lib/db/schema";
-import { eq, and } from "drizzle-orm";
+import { actas } from '@/lib/db/schema';
+import { and, eq } from 'drizzle-orm';
 import crypto from 'crypto';
+import { getActaStatusByName } from '@/app/(generador)/services/actas_querys_services/getActaStatusByName';
 
 function validateEpaycoSignature(formData: FormData): boolean {
   const pKey = process.env.EPAYCO_P_KEY || process.env.P_KEY;
@@ -56,20 +57,22 @@ export async function POST(request: NextRequest) {
     }
 
     let fileName = "";
+    let userIdFromInvoice = "";
+
     if (invoice) {
       const tipo = process.env.NEXT_PUBLIC_PAGO || "acta";
-
       let withoutTipo = invoice;
       if (invoice.startsWith(tipo)) {
         withoutTipo = invoice.substring(tipo.length);
       }
 
       const lastDashIndex = withoutTipo.lastIndexOf('-');
-      if (lastDashIndex > 0) {
+      const secondToLastDashIndex = withoutTipo.lastIndexOf('-', lastDashIndex - 1);
 
-        fileName = withoutTipo.substring(0, lastDashIndex);
+      if (secondToLastDashIndex > 0) {
+        fileName = withoutTipo.substring(0, secondToLastDashIndex);
+        userIdFromInvoice = withoutTipo.substring(secondToLastDashIndex + 1, lastDashIndex);
       } else {
-
         fileName = withoutTipo;
       }
     }
@@ -83,17 +86,37 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
+    // El user_id ahora se extrae de la factura.
+    // getUserEmailFromSession() no es fiable en un webhook.
+    const user_id = userIdFromInvoice;
+
+    if (!user_id) {
+      console.error('No se pudo extraer el user_id de la referencia:', invoice);
+      // Devolvemos una respuesta exitosa a ePayco para que no siga reintentando,
+      // pero registramos el error para una revisión manual.
+      return NextResponse.json({ message: "Confirmación recibida pero sin user_id en la factura." });
+    }
+
+    // 1. Verificar el estado actual del acta ANTES de procesar cualquier cosa.
+    const idEstadoProcesoActual = await getActaStatusByName(fileName, user_id);
+
+    // 2. Si el acta ya fue procesada (estado 5 o superior), ignorar esta notificación.
+    // Esto previene que una notificación de "Rechazada" que llegue tarde sobrescriba una "Aceptada".
+    if (idEstadoProcesoActual && idEstadoProcesoActual >= 5) {
+      console.log(`Notificación para el acta "${fileName}" ignorada porque ya fue procesada. Estado actual: ${idEstadoProcesoActual}.`);
+      return NextResponse.json({
+        x_cod_response: 1,
+        x_response: 'Aceptada',
+        x_response_reason_text: 'Transacción ya procesada anteriormente.'
+      });
+    }
+
     if (response === 'Aceptada' || response === '1') {
 
       try {
 
         let codigoReferidoExistente: string | null = null;
         try {
-          const mail = await getUserEmailFromSession();
-          const user_id = !mail
-            ? 'a817fffe-bc7e-4e29-83f7-b512b039e817'
-            : (await getUserIdByEmail(mail)) || 'a817fffe-bc7e-4e29-83f7-b512b039e817';
-
           const actaExistente = await db
             .select({
               codigoReferido: actas.codigoReferido,
@@ -198,4 +221,3 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   return POST(request);
 }
-

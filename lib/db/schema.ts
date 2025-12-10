@@ -168,3 +168,15 @@ export const actasRelations = relations(actas, ({ one }) => ({
     references: [industrias.id],
   }),
 }));
+
+export const schema = {
+  estadosProceso,
+  usuarios,
+  codigosAtencion,
+  actas,
+  industrias,
+  fallosActa,
+  empresas,
+  agentesEmpresa,
+  ...actasRelations,
+};

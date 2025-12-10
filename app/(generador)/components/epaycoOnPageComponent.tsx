@@ -310,14 +310,14 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
     setIsLoading(true);
 
-    // Generar referencia única
-    const referencia = `${tipo}${props.file}-${Math.floor(Math.random() * 90000 + 10000)}`;
 
-    // Guardar referencia para polling
+    const userId = billingDataToUse.id;
+    const timestamp = Date.now();
+    const referencia = `${tipo}${props.file}-${userId}-${timestamp}`;
+
     const refPaycoParaPolling = referencia;
 
-    // ePayco espera el monto sin decimales para COP
-    // Validar que el costo sea válido
+
     if (!props.costo || props.costo <= 0) {
       console.error("❌ Costo inválido:", props.costo);
       toast.error("Error", {
@@ -330,7 +330,6 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
     const montoRedondeado = Math.round(props.costo);
 
-    // Validar monto mínimo (ePayco requiere mínimo 5000 COP)
     if (montoRedondeado < MONTO_MINIMO_EPAYCO) {
       console.error("❌ Monto muy bajo:", montoRedondeado);
       toast.error("Error", {
@@ -341,40 +340,34 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       return;
     }
 
-    // ePayco OnPage Checkout acepta el monto como número o string
-    // Usar número para evitar problemas de formato
+
     const monto = montoRedondeado;
 
-    // Construir dirección completa
+
     const direccionCompleta = `${billingDataToUse.direccion || ""}, ${billingDataToUse.municipio || ""}, ${billingDataToUse.departamento || ""}`.trim();
 
     // Verificar modo test
     const isTestMode = process.env.NEXT_PUBLIC_EPAYCO_TEST === "true";
     
 
-    // Configurar datos del pago para ePayco OnPage Checkout
     const datosPago: any = {
-      // Información del producto
       name: `Acta ${props.file}`,
       description: `Procesamiento de acta: ${props.file}`,
       invoice: referencia,
 
-      // Información de pago
       currency: "COP",
-      amount: monto.toString(), // ePayco puede requerir string
+      amount: monto.toString(),
       tax_base: monto.toString(),
       tax: "0",
 
-      // Configuración OnPage Checkout
       country: "CO",
       lang: "es",
-      external: false, // false = checkout de ePayco (modal), true = formulario propio
+      external: false, 
 
-      // Datos del cliente para facturación
       name_billing: `${billingDataToUse.nombre || ""} ${billingDataToUse.apellido || ""}`.trim(),
       address_billing: direccionCompleta,
-      type_doc_billing: props.tipoDocumento || "CC", // Tipo de documento del cliente o CC por defecto
-      doc_billing: props.numeroDocumento || "", // Número de documento del cliente
+      type_doc_billing: props.tipoDocumento || "CC", 
+      doc_billing: props.numeroDocumento || "", 
       mobilephone_billing: billingDataToUse.telefono || "",
       email_billing: billingDataToUse.email || "",
     };
@@ -1259,4 +1252,3 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 };
 
 export default EPaycoOnPageComponent;
-

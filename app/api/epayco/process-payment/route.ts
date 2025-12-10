@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ActualizarProceso } from '@/app/(generador)/services/actas_querys_services/actualizarProceso';
 import { processAction } from '@/app/(generador)/services/generacion_contenido_services/processAction';
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/lib/auth/options/authOptions';
+import { getUserIdByEmail } from '@/lib/auth/session/getIdOfEmail';
+import { getReferralCodeByActaName } from '../../../(generador)/services/referidos/getReferralCodeByActaName';
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,26 +13,35 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Falta el nombre del archivo' }, { status: 400 });
     }
 
-    const session = await getServerSession(authOptions);
+    let userId;
+    if (email) {
+      userId = await getUserIdByEmail(email);
+    }
+
+    if (!userId) {
+      console.error('No se pudo encontrar el ID de usuario para el email:', email);
+    }
 
     try {
+      const codigoReferidoExistente = await getReferralCodeByActaName(file, userId!);
+
       await ActualizarProceso(
         file,
         5,
         undefined,
         parseFloat(amount || "0"),
         transactionId || "",
-        undefined,
+        fileid,
         invoice || "",
         undefined,
         undefined,
         null,
         false,
         undefined,
-        undefined,
-        undefined,
-        undefined,
-        undefined,
+        email,
+        codigoReferidoExistente || undefined,
+        undefined, // soporte
+        userId,
       );
     } catch (error) {
       console.error('Error al actualizar acta:', error);
@@ -41,7 +50,7 @@ export async function POST(request: NextRequest) {
 
     if (folder && fileid) {
       try {
-        const result = await processAction(folder, file, fileid, email || '', name || '');
+        const result = await processAction(folder, file, fileid, email || '', name || '', false, undefined, userId);
         return NextResponse.json({
           success: true,
           message: 'Pago procesado y acta en proceso',
@@ -70,4 +79,3 @@ export async function POST(request: NextRequest) {
     }, { status: 500 });
   }
 }
-
