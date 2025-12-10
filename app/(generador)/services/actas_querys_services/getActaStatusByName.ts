@@ -5,7 +5,7 @@ import { actas } from "@/lib/db/schema";
 import { and, eq } from "drizzle-orm";
 
 export async function getActaStatusByName(fileName: string, userId: string): Promise<number | null> {
-  if (!fileName || !userId) {
+  if (!fileName || !userId || userId === 'undefined') {
     console.error("[getActaStatusByName] El nombre del archivo o el ID de usuario no fue proporcionado.");
     return null;
   }
