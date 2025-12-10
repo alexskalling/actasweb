@@ -665,10 +665,7 @@ export default function MediaFileUploaderComponent({
         let urlAssemblyFinal = urlAssembly;
         if (!urlAssemblyFinal && selectedFile) {
           setUploadStatus("Subiendo archivo a AssemblyAI...");
-          // Crear FormData con el archivo
-          const formData = new FormData();
-          formData.append("audioFile", selectedFile);
-          const uploadResult = await uploadFileToAssemblyAI(formData);
+          const uploadResult = await uploadFileToAssemblyAI(selectedFile);
           if (uploadResult.success && uploadResult.uploadUrl) {
             urlAssemblyFinal = uploadResult.uploadUrl;
             setUrlAssembly(urlAssemblyFinal);
@@ -1420,12 +1417,9 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     setFolder(nombreCarpeta);
 
     const formData = new FormData();
-    formData.append("audioFile", selectedFile);
-    formData.append("nombreCarpeta", nombreCarpeta);
-    formData.append("nombreNormalizado", nombreNormalizado);
 
     try {
-      const result = await uploadFileToAssemblyAI(formData, (progress) => {
+      const result = await uploadFileToAssemblyAI(selectedFile, (progress) => {
         const progressRounded = Math.round(progress);
         setUploadProgress(progressRounded);
 
@@ -1439,7 +1433,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         }
       });
 
-      if (result.success) {
+      if (result.success && result.uploadUrl) {
         setUploadStatus("Archivo listo para ser procesado");
         setUrlAssembly(result.uploadUrl || null);
 
@@ -1707,8 +1701,11 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           event_label: selectedFile.type,
           value: selectedFile.size,
         });
-      } else {
-        setUploadStatus(result.error || "Error al subir el archivo");
+      } else { // Error en la carga directa
+        // AQUÍ: Se muestra el mensaje de error de la subida, incluyendo el de timeout.
+        // 'result.error' contendrá el mensaje "Timeout durante la subida del archivo a AssemblyAI."
+        // que viene desde 'assemblyActions.ts'.
+        setUploadStatus(result.message || "Error al subir el archivo");
         setCalculando(false);
         setUploadProgress(0);
         setProcesando(false);
@@ -1719,7 +1716,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           event_label: result.error || "Unknown error",
         });
       }
-    } catch (error) {
+    } catch (error) { // Error al obtener la URL de carga o en la lógica previa
       setUploadStatus(`Error de red o al procesar la petición: ${error}`);
       console.error("Error al subir:", error);
       setCalculando(false);
