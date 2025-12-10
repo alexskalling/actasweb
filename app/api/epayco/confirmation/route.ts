@@ -84,22 +84,15 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
-    // El user_id ahora se extrae de la factura.
-    // getUserEmailFromSession() no es fiable en un webhook.
     const user_id = userIdFromInvoice;
 
     if (!user_id) {
       console.error('No se pudo extraer el user_id de la referencia:', invoice);
-      // Devolvemos una respuesta exitosa a ePayco para que no siga reintentando,
-      // pero registramos el error para una revisión manual.
       return NextResponse.json({ message: "Confirmación recibida pero sin user_id en la factura." });
     }
 
-    // 1. Verificar el estado actual del acta ANTES de procesar cualquier cosa.
     const idEstadoProcesoActual = await getActaStatusByName(fileName, user_id);
 
-    // 2. Si el acta ya fue procesada (estado 5 o superior), ignorar esta notificación.
-    // Esto previene que una notificación de "Rechazada" que llegue tarde sobrescriba una "Aceptada".
     if (idEstadoProcesoActual && idEstadoProcesoActual >= 5) {
       console.log(`Notificación para el acta "${fileName}" ignorada porque ya fue procesada. Estado actual: ${idEstadoProcesoActual}.`);
       return NextResponse.json({
