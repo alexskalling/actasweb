@@ -7,6 +7,7 @@ interface ConfirmRelanzarModalProps {
   onClose: () => void;
   onConfirm: () => void;
   loading?: boolean;
+  message?: string;
 }
 
 export default function ConfirmRelanzarModalComponent({
@@ -14,6 +15,7 @@ export default function ConfirmRelanzarModalComponent({
   onClose,
   onConfirm,
   loading = false,
+  message = "Esto borrará el contenido y borrador actual para generar uno nuevo desde la transcripción. ¿Deseas continuar?",
 }: ConfirmRelanzarModalProps) {
   if (!open) return null;
 
@@ -23,10 +25,7 @@ export default function ConfirmRelanzarModalComponent({
         <h2 className="text-lg font-bold text-gray-800 mb-4">
           ⚠️ Confirmar relanzamiento
         </h2>
-        <p className="text-gray-600 mb-6">
-          Esto borrará el contenido y borrador actual para generar uno nuevo
-          desde la transcripción. ¿Deseas continuar?
-        </p>
+        <p className="text-gray-600 mb-6">{message}</p>
 
         <div className="flex gap-3 justify-end">
           <button

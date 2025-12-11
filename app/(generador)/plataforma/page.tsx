@@ -30,7 +30,7 @@ export default function PlataformaPage() {
   const [usuarioSoporteSeleccionado, setUsuarioSoporteSeleccionado] =
     useState<UsuarioEncontrado | null>(null);
   const [tipoAtencionSoporte, setTipoAtencionSoporte] = useState<
-    "acta_nueva" | "regeneracion_total" | null
+    "acta_nueva" | "regeneracion_total" | "generar_desde_contenido" | null
   >(null);
   const [idTransaccionSoporte, setIdTransaccionSoporte] = useState<string>("");
   const [idUsuarioSoporte, setIdUsuarioSoporte] = useState<string | null>(null);

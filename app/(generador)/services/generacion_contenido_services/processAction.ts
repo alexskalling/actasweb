@@ -1,6 +1,7 @@
 "use server";
 import { formatContent } from "./formatContent";
 import { generateContenta } from "./generateContenta";
+import { refineContentAction } from "./refineContentAction";
 import { transcripAction } from "./transcriptAction";
 import { ActualizarProceso } from "../actas_querys_services/actualizarProceso";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
@@ -21,6 +22,7 @@ export async function processAction(
   automation?: boolean,
   codigoAtencion?: string,
   idUsuarioActa?: string,
+  tipoAtencion?: "acta_nueva" | "regeneracion_total" | null,
 ) {
   try {
     const convertirDuracionAMinutos = (
@@ -204,10 +206,24 @@ export async function processAction(
       };
     }
 
+    // Refinar el contenido generado por la IA
+    console.log("[processAction] Iniciando refinamiento de contenido...");
+    const refinedContentResult = await refineContentAction(folder, file);
+
+    let contenidoParaFormatear: string;
+
+    if (refinedContentResult.status === "success" && refinedContentResult.content) {
+      console.log("[processAction] Usando contenido refinado para generar el borrador.");
+      contenidoParaFormatear = refinedContentResult.content;
+    } else {
+      console.warn(`[processAction] ADVERTENCIA: No se pudo refinar el contenido, se usará el contenido original. Motivo: ${refinedContentResult.message}`);
+      contenidoParaFormatear = contenido.content as string;
+    }
+
     const formato = await formatContent(
       folder,
       file,
-      contenido.content as string,
+      contenidoParaFormatear,
     );
     if (formato?.status !== "success") {
       return {

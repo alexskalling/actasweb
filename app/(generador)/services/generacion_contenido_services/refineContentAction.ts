@@ -65,11 +65,14 @@ export async function refineContentAction(
 
     writeLog(`[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.`);
 
-    // 3. Enviar a la IA para refinar
-    const { text: contenidoRefinado } = await generateText({
-      model: google("gemini-1.5-pro-latest"),
-      system: `Eres un editor experto y analista de contenido. Tu tarea es comparar dos documentos: una transcripción de reunión y un borrador de acta generado a partir de ella. Debes refinar el borrador del acta para eliminar todas las redundancias, corregir la ubicación de la información y asegurar que cada detalle esté en la sección temática correcta, siguiendo el flujo lógico y cronológico de la transcripción original. El resultado final debe ser un acta impecable, coherente y sin información duplicada, en formato HTML.`,
-      prompt: `Por favor, refina el siguiente borrador de acta usando la transcripción como la fuente de verdad.
+    // 3. Enviar a la IA para refinar con lógica de reintentos
+    let contenidoRefinado = "";
+    const maxRetries = 2;
+    let attempt = 1;
+    const modelsToTry = ["gemini-2.0-flash", "gemini-2.0-pro"];
+
+    const systemPrompt = `Eres un editor experto y analista de contenido. Tu tarea es comparar dos documentos: una transcripción de reunión y un borrador de acta generado a partir de ella. Debes refinar el borrador del acta para eliminar todas las redundancias, corregir la ubicación de la información y asegurar que cada detalle esté en la sección temática correcta, siguiendo el flujo lógico y cronológico de la transcripción original. El resultado final debe ser un acta impecable, coherente y sin información duplicada, en formato HTML.`;
+    const userPrompt = `Por favor, refina el siguiente borrador de acta usando la transcripción como la fuente de verdad.
 
 ### TRANSCRIPCIÓN ORIGINAL (Fuente de Verdad):
 ---
@@ -85,11 +88,29 @@ Tu tarea es:
 1.  **Eliminar Redundancias:** Si un mismo punto se menciona en varias secciones del borrador, consolídalo en la sección más apropiada según la transcripción.
 2.  **Reubicar Información:** Si un detalle está en un tema incorrecto, muévelo a donde corresponde cronológicamente.
 3.  **Asegurar Coherencia:** El acta refinada debe leerse de forma fluida y lógica.
-4.  **Mantener el Formato:** Devuelve el resultado final únicamente en formato HTML, sin añadir comentarios ni texto introductorio.`,
-    });
+4.  **Mantener el Formato:** Devuelve el resultado final únicamente en formato HTML, sin añadir comentarios ni texto introductorio.`;
+
+    while (attempt <= maxRetries && !contenidoRefinado) {
+      const modelName = modelsToTry[attempt - 1];
+      writeLog(`[REFINAMIENTO] Intento ${attempt}/${maxRetries} usando el modelo: ${modelName}`);
+      try {
+        const { text } = await generateText({
+          model: google(modelName),
+          system: systemPrompt,
+          prompt: userPrompt,
+        });
+        contenidoRefinado = text;
+      } catch (error) {
+        writeLog(`[REFINAMIENTO] Error en el intento ${attempt} con ${modelName}: ${error instanceof Error ? error.message : String(error)}`);
+        attempt++;
+        if (attempt <= maxRetries) {
+          await new Promise(resolve => setTimeout(resolve, 2000)); // Esperar 2 segundos antes de reintentar
+        }
+      }
+    }
 
     if (!contenidoRefinado || contenidoRefinado.trim() === "") {
- return { status: "error", message: "La IA devolvió un contenido refinado vacío." };
+ return { status: "error", message: "La IA devolvió un contenido refinado vacío después de varios intentos." };
     }
 
     writeLog(`[REFINAMIENTO] Contenido refinado recibido. Guardando en: ${nombreContenidoRefinado}`);
