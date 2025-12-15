@@ -25,45 +25,68 @@ interface RefineResult {
  */
 export async function refineContentAction(
   folder: string,
-  file: string,
+  file: string
 ): Promise<RefineResult> {
   const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
-  const nombreTranscripcion = `${file.replace(/\.[^/.]+$/, "")}_Transcripcion.txt`;
+  const nombreTranscripcion = `${file.replace(
+    /\.[^/.]+$/,
+    ""
+  )}_Transcripcion.txt`;
   const nombreContenidoRefinado = `${file.replace(
     /\.[^/.]+$/,
-    "",
+    ""
   )}_Contenido_Refinado.txt`;
 
   try {
     writeLog(`[REFINAMIENTO] Iniciando proceso para: ${file}`);
 
     // 1. Verificar y obtener el contenido del acta generada
-    const contenidoActaExiste = await verificarArchivoExistente(nombreContenido, folder);
+    const contenidoActaExiste = await verificarArchivoExistente(
+      nombreContenido,
+      folder
+    );
     if (!contenidoActaExiste) {
- return { status: "error", message: `El archivo de contenido '${nombreContenido}' no existe.` };
+      return {
+        status: "error",
+        message: `El archivo de contenido '${nombreContenido}' no existe.`,
+      };
     }
-    const contenidoActa = await obtenerContenidoArchivo(folder, nombreContenido);
+    const contenidoActa = await obtenerContenidoArchivo(
+      folder,
+      nombreContenido
+    );
     if (!contenidoActa) {
- return { status: "error", message: `El archivo de contenido '${nombreContenido}' está vacío.` };
+      return {
+        status: "error",
+        message: `El archivo de contenido '${nombreContenido}' está vacío.`,
+      };
     }
 
     // 2. Verificar y obtener la transcripción original
     const contenidoTranscripcionExiste = await verificarArchivoExistente(
- nombreTranscripcion,
- folder,
- );
+      nombreTranscripcion,
+      folder
+    );
     if (!contenidoTranscripcionExiste) {
- return { status: "error", message: `El archivo de transcripción '${nombreTranscripcion}' no existe.` };
+      return {
+        status: "error",
+        message: `El archivo de transcripción '${nombreTranscripcion}' no existe.`,
+      };
     }
     const contenidoTranscripcion = await obtenerContenidoArchivo(
       folder,
-      nombreTranscripcion,
+      nombreTranscripcion
     );
     if (!contenidoTranscripcion) {
- return { status: "error", message: `El archivo de transcripción '${nombreTranscripcion}' está vacío.` };
+      return {
+        status: "error",
+        message: `El archivo de transcripción '${nombreTranscripcion}' está vacío.`,
+      };
     }
 
-    writeLog(`[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.`);
+    writeLog(
+      `[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.`
+    );
 
     // 3. Enviar a la IA para refinar con lógica de reintentos
     let contenidoRefinado = "";
@@ -88,11 +111,15 @@ Tu tarea es:
 1.  **Eliminar Redundancias:** Si un mismo punto se menciona en varias secciones del borrador, consolídalo en la sección más apropiada según la transcripción.
 2.  **Reubicar Información:** Si un detalle está en un tema incorrecto, muévelo a donde corresponde cronológicamente.
 3.  **Asegurar Coherencia:** El acta refinada debe leerse de forma fluida y lógica.
-4.  **Mantener el Formato:** Devuelve el resultado final únicamente en formato HTML, sin añadir comentarios ni texto introductorio.`;
+4.  **Mantener el Formato:** Devuelve el resultado final únicamente en formato HTML, sin añadir comentarios ni texto introductorio.
+5.  **Verificar Exactitud:** Asegúrate de que todos los puntos reflejen fielmente los detalles de la transcripción.
+6.  **Coesionar:** Asegúrate de que el acta refinada sea cohesiva y los puntos desarrollados y el orden del dia esten en sintonia.`;
 
     while (attempt <= maxRetries && !contenidoRefinado) {
       const modelName = modelsToTry[attempt - 1];
-      writeLog(`[REFINAMIENTO] Intento ${attempt}/${maxRetries} usando el modelo: ${modelName}`);
+      writeLog(
+        `[REFINAMIENTO] Intento ${attempt}/${maxRetries} usando el modelo: ${modelName}`
+      );
       try {
         const { text } = await generateText({
           model: google(modelName),
@@ -101,29 +128,45 @@ Tu tarea es:
         });
         contenidoRefinado = text;
       } catch (error) {
-        writeLog(`[REFINAMIENTO] Error en el intento ${attempt} con ${modelName}: ${error instanceof Error ? error.message : String(error)}`);
+        writeLog(
+          `[REFINAMIENTO] Error en el intento ${attempt} con ${modelName}: ${
+            error instanceof Error ? error.message : String(error)
+          }`
+        );
         attempt++;
         if (attempt <= maxRetries) {
-          await new Promise(resolve => setTimeout(resolve, 2000)); // Esperar 2 segundos antes de reintentar
+          await new Promise((resolve) => setTimeout(resolve, 2000)); // Esperar 2 segundos antes de reintentar
         }
       }
     }
 
     if (!contenidoRefinado || contenidoRefinado.trim() === "") {
- return { status: "error", message: "La IA devolvió un contenido refinado vacío después de varios intentos." };
+      return {
+        status: "error",
+        message:
+          "La IA devolvió un contenido refinado vacío después de varios intentos.",
+      };
     }
 
-    writeLog(`[REFINAMIENTO] Contenido refinado recibido. Guardando en: ${nombreContenidoRefinado}`);
+    writeLog(
+      `[REFINAMIENTO] Contenido refinado recibido. Guardando en: ${nombreContenidoRefinado}`
+    );
 
     // 4. Guardar el nuevo contenido refinado
     await guardarArchivo(folder, nombreContenidoRefinado, contenidoRefinado);
 
     return {
       status: "success",
-      message: "El contenido del acta ha sido refinado y guardado exitosamente.",
+      message:
+        "El contenido del acta ha sido refinado y guardado exitosamente.",
       content: contenidoRefinado,
     };
   } catch (error) {
- return { status: "error", message: `Error al refinar el contenido del acta: ${error instanceof Error ? error.message : String(error)}` };
+    return {
+      status: "error",
+      message: `Error al refinar el contenido del acta: ${
+        error instanceof Error ? error.message : String(error)
+      }`,
+    };
   }
 }
