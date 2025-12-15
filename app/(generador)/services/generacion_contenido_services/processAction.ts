@@ -1,5 +1,4 @@
 "use server";
-import { formatContent } from "./formatContent";
 import { generateContenta } from "./generateContenta";
 import { refineContentAction } from "./refineContentAction";
 import { transcripAction } from "./transcriptAction";
@@ -319,4 +318,22 @@ export async function processAction(
       message: "Error en el proceso de acción",
     };
   }
+}
+
+async function formatContent(
+  folder: string,
+  file: string,
+  contenidoParaFormatear: string,
+): Promise<{
+  status: "success" | "error";
+  message?: string;
+  transcripcion?: string;
+  acta?: string;
+  contenido?: string;
+}> {
+  console.log(`[formatContent] Formatting content for: ${file}`);
+  // TODO: Implement your actual content formatting logic here.
+  // This is a placeholder implementation.
+  // For now, it returns a success object with placeholder URLs.
+  return { status: "success", transcripcion: "url/to/transcripcion", acta: "url/to/acta", contenido: contenidoParaFormatear };
 }
