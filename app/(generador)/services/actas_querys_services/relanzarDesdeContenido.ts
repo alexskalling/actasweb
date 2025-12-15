@@ -160,7 +160,11 @@ export async function relanzarDesdeContenido(idActa: string) {
       message: "Borrador de acta regenerado exitosamente desde el contenido",
     };
   } catch (error) {
-    writeLog(`Error en relanzarDesdeContenido: ${error}`);
+    let errorMessage = "Error desconocido";
+    if (error instanceof Error) {
+      errorMessage = `Error en relanzarDesdeContenido: ${error.message}. Stack: ${error.stack}`;
+    }
+    writeLog(errorMessage);
     return {
       status: "error",
       message: `Error al relanzar acta desde contenido: ${error instanceof Error ? error.message : "Error desconocido"}`,

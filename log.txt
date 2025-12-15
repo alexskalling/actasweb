@@ -5082,3 +5082,825 @@ Relanzamiento desde contenido completado exitosamente para acta: 2025-12-11-07.4
 Iniciando reenvío de correo para acta ID: d968d00d-7937-4c03-b04a-0730404acf4c
 Enviando correo a: sebastianrestrepo@skalling.com
 Correo reenviado exitosamente para acta ID: d968d00d-7937-4c03-b04a-0730404acf4c
+Iniciando relanzamiento desde contenido para acta ID: 2f2dea5f-816c-4854-a551-2b61c6b35dd3
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025, File: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Borrando borrador existente: https://files.actasdereuniones.ai/s/3ccMPkTWmjya9nK/download/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Intentando borrar archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Error al borrar archivo por URL: TypeError: fetch failed
+Advertencia: No se pudo borrar el borrador existente, continuando...
+Leyendo contenido existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Error en obtenerContenidoArchivoNextcloud: fetch failed
+Error: No se pudo leer el contenido existente
+Iniciando relanzamiento desde contenido para acta ID: 2f2dea5f-816c-4854-a551-2b61c6b35dd3
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025, File: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Borrando borrador existente: https://files.actasdereuniones.ai/s/3ccMPkTWmjya9nK/download/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Intentando borrar archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Error al borrar archivo por URL: TypeError: fetch failed
+Advertencia: No se pudo borrar el borrador existente, continuando...
+Leyendo contenido existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Error en obtenerContenidoArchivoNextcloud: fetch failed
+Error: No se pudo leer el contenido existente
+Iniciando relanzamiento desde contenido para acta ID: 2f2dea5f-816c-4854-a551-2b61c6b35dd3
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025, File: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Borrando borrador existente: https://files.actasdereuniones.ai/s/3ccMPkTWmjya9nK/download/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Intentando borrar archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Archivo borrado exitosamente o ya no existe: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Leyendo contenido existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Contenido del archivo obtenido exitosamente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Formateando contenido y generando nuevo borrador...
+Iniciando formateo de contenido para: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Verificando Borrador .docx existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Verificando archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx en carpeta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Preparando guardado .docx en Nextcloud: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Reunión de Consejo de la Agrupación de Vivienda La Rabia</h1>
+<p><strong>Fecha:</strong> 20 de mayo de 2025</p>
+<p><strong>Hora:</strong> Inicio: 9 y 30 de la mañana - Cierre: 12 y 4</p>
+<p><strong>Lugar:</strong> Consejo 930 metros</p>
+<p><strong>Moderador:</strong> Liliana Jiménez</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Nubia Pinzón - [CARGO NO ESPECIFICADO]</li>
+<li>Liliana Jiménez - Presidente</li>
+<li>María Teresa Palacios - [CARGO NO ESPECIFICADO]</li>
+<li>Néstor Dueñas - [CARGO NO ESPECIFICADO]</li>
+<li>Elena Mesa - Revisora Fiscal</li>
+<li>Elena Segura Mesa - [CARGO NO ESPECIFICADO]</li>
+<li>Adriana Aguilar - Administradora</li>
+<li>Gisela - [CARGO NO ESPECIFICADO]</li>
+<li>Ángela Jacobi - Consejera</li>
+<li>José Gómez - [CARGO NO ESPECIFICADO]</li>
+<li>Carlos Yule - [CARGO NO ESPECIFICADO]</li>
+<li>Pinzón - [CARGO NO ESPECIFICADO]</li>
+<li>Álvaro - [CARGO NO ESPECIFICADO]</li>
+<li>Camilo - Guarda</li>
+<li>Carlos Duarte - [CARGO NO ESPECIFICADO]</li>
+<li>Ángel - [CARGO NO ESPECIFICADO]</li>
+<li>Mireia - [CARGO NO ESPECIFICADO]</li>
+<li>Ricardo Cañón - [CARGO NO ESPECIFICADO]</li>
+<li>Alejandra Reyes - Arrendataria</li>
+<li>Julián - [CARGO NO ESPECIFICADO]</li>
+<li>Estefanía - [CARGO NO ESPECIFICADO]</li>
+<li>Milena Olarte - [CARGO NO ESPECIFICADO]</li>
+<li>Ana María Toro - [CARGO NO ESPECIFICADO]</li>
+<li>Adriana Castillo - [CARGO NO ESPECIFICADO]</li>
+<li>Luz Elvira Sánchez - [CARGO NO ESPECIFICADO]</li>
+<li>Nancy - [CARGO NO ESPECIFICADO]</li>
+<li>Shirley Barajas - [CARGO NO ESPECIFICADO]</li>
+<li>Margarita - [CARGO NO ESPECIFICADO]</li>
+<li>Germán González - Arquitecto</li>
+<li>Elkin - Toder<h2>1. Verificación de quórum</h2>
+
+<p>La administradora, Adriana Aguilar, informó que se contaba con la asistencia de la señora Nubia Pinzón, la señora Liliana Jiménez, la señora María Teresa Palacios, el señor Néstor Dueñas, la señora revisora fiscal Elena Mesa, Elena Segura Mesa y la suscrita administradora Adriana Aguilar.</p>
+
+<p>Con base en la asistencia mencionada, se determinó que existía quórum suficiente para deliberar, cumpliendo con el requisito de 4 de 7 miembros presentes.</p><h2>2. Nombramiento de presidente y secretario</h2>
+
+<p>En el segundo punto del orden del día, se procedió al nombramiento del presidente y secretario de la reunión. Se designó a la señora Liliana Jiménez como presidente y a la administración, representada por la administradora Adriana Aguilar, como secretaria.</p>
+<h2>3. Lectura y modificaciones al acta anterior</h2>
+
+<p>Inicialmente, se abordó el tercer punto del orden del día, referente a la lectura y posibles modificaciones del acta anterior. Se identificó la necesidad de realizar ajustes en las fechas y en el número de asistentes registrados en el acta previa.</p>
+
+<p>Durante la revisión, se señaló que el acta indicaba la presencia de cinco de los siete miembros, mientras que la lista detallaba a los siete asistentes. Se enfatizó la importancia de nombrar a todos los asistentes y registrar su asistencia de manera individual, indicando "sí" o "no" al lado de cada nombre.</p>
+
+<p>Asimismo, se mencionó que en el acta se hacía referencia al tema de las 80 tejas del apartamento 1500, lo cual se consideró incorrecto, ya que este tema había sido tratado en un acta anterior. Se aclaró que la información debía basarse en las grabaciones de la reunión actual.</p>
+
+<p>En relación con el tema de las tejas, se citó textualmente una intervención de la señora Liliana, quien, según la grabación, mencionó que se había hablado con José Gómez sobre el número de tejas, que inicialmente eran 86, luego 80, después 40 y finalmente 50. Se indicó que en el acta anterior se había acordado verificar el número exacto de tejas y solicitar una propuesta definitiva a Germán. Se recordó que el señor José había manifestado que no solicitaba el cambio de las tejas, sino que se pegaran con cinta para solucionar el problema. Se concluyó que se había acordado esperar la nueva propuesta del arquitecto, a lo cual el señor José había asentido.</p>
+
+<p>Se expresó la opinión de que el señor José no había esperado y había actuado por su cuenta. No obstante, se enfatizó que lo anterior era una afirmación basada en hechos y no una simple opinión.</p>
+<h2>4. Informe contable financiero</h2>
+
+<p>Durante la reunión, se presentó el informe contable financiero correspondiente a los meses de marzo y abril. Se destacó que, a pesar de la ausencia de Gisela en las últimas dos reuniones debido a la situación crítica de salud de su madre, ella ha continuado trabajando en los cierres de mes, con el apoyo de Elena Mesa en el cierre de abril.</p>
+
+<p>En cuanto a las cifras clave, se informó que el efectivo y equivalentes terminaron en marzo con 192.481.562,30 pesos y en abril con 178.340.047,30 pesos. La cartera aumentó de 27.359.000 a 31.716.090 pesos. Se mencionó que aún está pendiente la representación de la DIAN en otros deudores. La póliza se está amortizando mensualmente, quedando en abril un valor de prima de 40.614.710 pesos.</p>
+
+<p>En relación con las cuentas por pagar, se informó que se quedaron debiendo 2.225.182 pesos, principalmente a la empresa de acueducto y por retención en la fuente, la cual ya fue firmada. Se mencionaron ingresos recibidos por anticipado por 33.313.155,78 pesos, correspondientes a la cuota extraordinaria. El saldo de esta cuota extraordinaria, con los rendimientos, ascendió a 18.557.502,78 pesos, subiendo casi un millón.</p>
+
+<p>En cuanto al patrimonio, se detalló que el fondo de reserva de asesoría jurídica, destinado a temas del espacio público, es de 3.252.245 pesos. Hay un saldo de mantenimiento de obra del 2020 de 507.479,20 pesos. El resultado del ejercicio de este mes arrojó excedentes por 4.108.716,61 pesos, y los excedentes acumulados suman 58. El saldo del fondo de imprevistos es de 55.000.858,27 pesos, incluyendo la reserva a 31 de diciembre y lo causado este año, ya ajustado. Los rendimientos financieros de la cuenta donde está la reserva y excedentes de ejercicios anteriores alcanzan los 150.283.000 pesos.</p>
+
+<p>En cuanto al presupuesto, se identificaron algunas cifras que superan lo proyectado, como el acueducto (aunque por poco, 24.000 pesos), el lavado de cajas de aguas negras (que ya ejecutó lo del año), reparaciones eléctricas (255.500 pesos), insumos de jardinería (700.832 pesos), fumigación de zonas comunes (202.100 pesos), el cargo de extintores (también ya ejecutado lo del año), soporte de software contable (ya ejecutado), BE Data (también ya ejecutado), y elementos de aseo de cafetería (244.000 pesos). Los gastos de asamblea superaron lo presupuestado, costando 2.503.702 pesos frente a un presupuesto de 2.160.000 pesos. Los activos menores de cuatro salarios mínimos se ejecutaron en 204.000 pesos en marzo, y los costos y gastos de ejercicios anteriores suman 645.300 pesos. El excedente neto acumulado es de 3.406.447 pesos.</p>
+
+<p>Doña Elena Mesa sugirió que el gasto de cafetería, destinado a los chicos de vigilancia y aseo (aproximadamente 120.000 pesos mensuales), se abra en una cuenta especial dentro del presupuesto para que no se interprete erróneamente como gastos de la administración.</p>
+
+<p>En su informe, la revisora fiscal destacó que los activos disminuyeron a 250.51.557.672,98 pesos debido a que la póliza se terminó de pagar. El pasivo también disminuyó a 20.35.538.937,78 pesos, y el patrimonio a 216.735,20 pesos. El flujo de caja presenta un flujo positivo de 42.735.449,42 pesos. Los informes se presentaron de acuerdo con las normas de información financiera. La cartera aumentó, pero la cartera sin vencer representa el 35% del total, y la cartera corriente (de 1 a 30 días) suma el 22,45%, lo que significa que el 57% del total de la cartera es casi corriente.</p>
+
+<p>Se mencionó que la información exógena debe presentarse en junio, y se requerirán las cédulas de todos los propietarios para ello. Se solicitó a Isela que ayude con el listado que tiene en Milenio, en Excel, verificando las cédulas de los propietarios antes del 28 de mayo.</p>
+<h2>5. Informe de cartera y acuerdos de pago</h2>
+
+<p>La administradora presenta un informe detallado sobre la cartera y los acuerdos de pago, mencionando que Gisela envió el informe contable financiero a pesar de estar en una situación familiar delicada. Se destaca que la cartera aumentó de 27 millones 359 a 31 millones 716.90.</p>
+
+<h3>Carteras preocupantes</h3>
+
+<p>Se identifican dos carteras como preocupantes: la de Adriana Castillo (apartamento 1302) y la de Luz Elvira Sánchez (apartamento 3401). Se informa que se consultó con un abogado sobre las opciones disponibles para estos casos.</p>
+
+<p>En el caso de Adriana Castillo, se menciona que está solicitando que se le aplique el artículo de la Constitución en derecho de igualdad, ya que a otros dos inmuebles se les condonó el 50%. Se le indicó que esto debe ser tratado en la asamblea. El abogado sugiere que, basándose en el acta de la asamblea donde se discutió su caso, ella puede solicitar a la contadora que liquide los intereses por separado y aplique todos los abonos a capital para tener una cifra exacta para presentar en la próxima asamblea. Se menciona que Adriana Castillo ha estado abonando y está solicitando que se le mande a capital.</p>
+
+<p>Respecto a Luz Elvira Sánchez, se indica que tiene un problema mental y que las hijas no aparecen. El abogado recomienda realizar el debido proceso, citándola a comité de convivencia y a todos los que tengan a su alrededor, para poder iniciar una ejecución, salvaguardando la responsabilidad de la copropiedad. Se menciona que ya van 5 millones 509 de deuda.</p>
+
+<h3>Acuerdos de pago</h3>
+
+<p>La administradora informa que actualmente tiene tres acuerdos de pago. Uno de la vivienda que está en dos millones, aunque no se especifica si ya se cubrió con un abono de 4 millones. Otro de Estefanía, que está abonando cinco cuotas de ocho y está cumpliendo. Y el tercero de Milena Olarte, que lo acaba de pedir.</p>
+
+<p>Se discute el acuerdo de pago del apartamento 4212, donde Ana María Toro (Davivienda) debe dos millones treinta mil doscientos. Se propone que pague la administración de mayo más el 10% de la deuda de enero a abril, más la administración corriente. A partir de junio, se adicionarían a las administraciones corrientes la sexta parte de la deuda de febrero a abril. Se solicita que se le congelen los intereses con ese primer pago. Se aclara que los intereses están en el saldo anterior, pero de ahí en adelante, si cumple con los pagos, no se generarán más intereses. Si no cumple, se reliquidará la deuda.</p>
+
+<p>Se aclara que el acuerdo de pago de Estefanía tiene ocho cuotas, va en la quinta y lo está cumpliendo. Al 30 de abril tenía una deuda de millón 970 mil 200.</p>
+
+<p>Se menciona el caso de Nancy, quien hizo un abono grande de 4 millones, pero no volvió a abonar y ahorita tiene 2 millones 15 mil de deuda. Se indica que se le ajustó todo lo que se le había amortizado al abogado, se le reversó y se le cargó a buena cuenta.</p>
+
+<h3>Estado de cuenta detallado</h3>
+
+<p>Se menciona que Milena Patricia Olarte, con una deuda de 3 millones 362, tiene un tema pendiente con Comité de Convivencia por los perritos. Ella dice que nunca le llega la cuenta de cobro y está pidiendo un estado de cuenta detallado para empezar a pagar, ya que hasta el 31 de diciembre estaba al día. Solicita que se le proporcione un estado de cuenta detallado que muestre las cuotas, los intereses y el total adeudado de este año.</p>
+
+<h3>Carteras gigantes</h3>
+
+<p>Se identifican tres carteras como "gigantes": las de Adriana Castillo, Luz Elvira Sánchez y Milena Patricia Olarte. Se señala que estas carteras, al no moverse, son las que están incrementando la cartera cada mes, sumando casi dos millones de pesos.</p>
+<h2>6. Aspectos legales</h2>
+
+<p>En relación con los aspectos legales, se abordaron los siguientes puntos:</p>
+
+<ul>
+ <li>Formalización del contrato con la administración</li>
+ <li>Acta de asamblea</li>
+ <li>Carta redactada por el señor Ángel</li>
+ <li>Reuniones del 2 y 23 de abril</li>
+ <li>Tareas del comité de convivencia</li>
+ <li>Observancia del programa contable</li>
+ <li>Circulares informativas</li>
+ <li>Servicio por canales dispuestos</li>
+ <li>Seguimiento de garantías con el arquitecto Germán González</li>
+ <li>Queja de servicio del guarda del señor Pinzón</li>
+</ul>
+
+<p>Se formalizó el contrato con la administración por un período de tres meses, comprendido entre el 1 de abril y el 30 de junio, incluyendo la respectiva póliza. Se indicó que la póliza se emitió de inmediato tras la firma del contrato. Sin embargo, la radicación de la actualización ante la Secretaría de Gobierno fue inicialmente denegada debido a un problema con la fecha y la asignación del abogado. Se explicó que estas asignaciones se realizan los miércoles, por lo que se debía esperar para verificar si se podía obtener la aprobación. A pesar de la corta duración del contrato, se aseguró que todo estaba en orden.</p>
+
+<p>En cuanto al acta de asamblea, se informó que se cumplió con la formalización de todos los requisitos, incluyendo su registro en el libro correspondiente. Además, se colaboró en la elaboración de las actas del comité de convivencia.</p>
+
+<p>Se informó al consejo que la carta redactada por el señor Ángel contenía un punto, el cuarto, que no fue considerado amable. Esto generó malestar entre los señores Arias. Se solicitó a la señora Carrasco que redactara una carta explicando que ya se había contestado el derecho de petición, pero el señor Ángel insistió en que no se hiciera nada al respecto, contando con el apoyo de la señora Mireia. Se sugirió aclarar este tema para evitar mayores inconvenientes.</p>
+
+<p>Se explicó que la señora Alejandra Reyes comentó al comité que su esposo, Ricardo Cañón, había escuchado al señor Arias reunirse con personas y referirse a ella de manera despectiva. Se interpretó que el comité se refería a esto al solicitar respeto al señor Arias. Se consideró que la redacción del punto cuarto de la carta no era recíproca, ya que solo se inclinaba hacia una parte, lo que generó molestia. Se propuso una aclaración en la que se indicara que el respeto debía ser mutuo.</p>
+
+<p>Se mencionó que los señores Arias habían presentado los mismos argumentos en tres ocasiones, solicitando respeto sin ofrecerlo. Se recordó un incidente en el que los señores Arias habían utilizado términos fuertes, generando conflictos. Se sugirió que la molestia radicaba en la falta de reciprocidad en el respeto y que la solución era una aclaración en la que se estableciera que el respeto debía ser mutuo.</p>
+
+<p>Se informó sobre el cumplimiento de las reuniones del 2 y el 23 de abril, una para responder a los derechos de petición del propietario del apartamento 1501 y la otra para entregar los informes financieros del mes de marzo. También se atendieron y cumplieron las tareas del comité de convivencia de las reuniones del 4 y 10 de abril, elaborando las actas correspondientes.</p>
+
+<p>Se mencionó la observancia del programa contable, la atención a las citas de la consejera y presidente, señora Juliana Jiménez, para pagos de proveedores y temas puntuales de la copropiedad. Se enviaron circulares informativas sobre el racionamiento de agua y su posterior levantamiento, junto con otras recomendaciones. Se cumplió con el servicio a través de los canales dispuestos, gestionando correos electrónicos y respondiendo a las solicitudes de arrendatarios y propietarios, como la expedición de paz y salvos. Se continuó el seguimiento de las garantías con el arquitecto Germán González sobre la ejecución de los arreglos, aunque se reportaron nuevas filtraciones y goteras debido al aumento de las lluvias.</p>
+
+<p>Se indicó que no se había presentado la queja de servicio del guarda del señor Pinzón, ni la del señor Jule, consejero, debido a la recomendación de esperar al consejo. Sin embargo, se describieron las quejas recibidas. El señor José Gómez se quejó de que no se le avisaba cuando llegaban domicilios o visitas, y que el citófono no contestaba. La señora Ángela Jacobi, también consejera, expresó su inconformidad con el señor Pinzón, quien, según ella, mostraba mala actitud y respondía de mala gana. Además, se mencionó que el señor Pinzón tomaba nota de la hora de llegada y salida de la señora Liliana Servicio, lo que la hacía sentir perseguida. También se le había visto invitando al todero a tomar tinto con la puerta abierta, lo que generaba inseguridad.</p>
+
+<p>Se sugirió escuchar la versión del señor Jule antes de tomar medidas, y se propuso un taller de servicio al cliente para mejorar la actitud de los guardas. Se recordó que el señor Pinzón estaba próximo a pensionarse y que era importante no afectar su hoja de vida. Se mencionó que el señor Jule era considerado una persona seria, y que antes de la queja del señor José Gómez, no se habían presentado inconvenientes con él.</p>
+
+<p>Se propuso que, así como se sugería un taller para los empleados, también se considerara un taller para la comunidad sobre cómo comportarse con el personal de servicio. Se recordó que el señor Estefan había maltratado al personal en el pasado. Se sugirió que el comité de convivencia trabajara en este tema y que se promoviera un buen trato mutuo.</p>
+
+<p>Se reiteró que todos los informes de la administración, así como las contestaciones del señor José Gómez en sus tutelas, forman parte del cuerpo del acta.</p>
+<h2>7. Quejas de servicio del guarda</h2>
+
+<p>Durante la reunión, se abordaron quejas relacionadas con el servicio de los guardas, específicamente en referencia al señor Pinzón y al señor Jule. La administradora indicó que se había recibido una queja formal del consejero José Gómez sobre el servicio del señor Jule, así como una queja sobre el señor Pinzón.</p>
+
+<h3>Sr. Pinzón</h3>
+
+<p>Se mencionó una queja de la señora Ángela Jacobi, también consejera, sobre el comportamiento del señor Pinzón. La señora Jacobi expresó su inconformidad con la actitud del guarda, indicando que este mostraba mala cara, abría o cerraba la puerta de mala gana, y a veces no contestaba su saludo o lo hacía entre dientes. Consideraba que esta situación era molesta y que no reflejaba el nivel de servicio esperado para alguien en su posición. Propuso realizar una encuesta de servicio a los propietarios para evaluar su nivel de satisfacción y, en caso de obtener resultados negativos, aplicar un llamado de atención formal o tomar otras medidas correctivas. Si la encuesta resultara positiva, sugirió igualmente ofrecer un taller de servicio al cliente para mejorar la comunicación verbal y no verbal de todos los colaboradores.</p>
+
+<p>Adicionalmente, se comentó que el señor Pinzón había sido visto invitando a Carlos, el "toderito", a tomar tinto frente a la portería con la puerta abierta en varias ocasiones, lo cual generaba preocupación por la seguridad del área. También se mencionó que el señor Pinzón tenía días en los que no saludaba y que su lenguaje corporal denotaba molestia.</p>
+
+<h3>Sr. Jule</h3>
+
+<p>El consejero José Gómez presentó una queja formal sobre el comportamiento del señor Carlos Yule, mencionando que era la tercera vez en dos semanas que se presentaban problemas con el ingreso de visitas o domicilios a su apartamento. Alegó que el guarda daba excusas, como afirmar que había marcado varias veces y el citófono no sonaba. El señor Gómez solicitó que se revisara el citófono y se realimentara al colaborador para mejorar la prestación del servicio.</p>
+
+<p>En relación con esta queja, se sugirió que la administración debía escuchar la versión del señor Jule antes de tomar medidas, ya que existía un antecedente de reclamo en el que la forma en que se le dijeron las cosas no fue la más amable. Se propuso que, en primera instancia, se realizara un llamado de atención interno y, si la situación persistía, se escalara el caso a la empresa de vigilancia.</p>
+
+<h3>Taller de servicio al cliente</h3>
+
+<p>Se planteó la necesidad de ofrecer un taller de servicio al cliente para los guardas, con el objetivo de mejorar su actitud y la calidad de su atención. Se sugirió que la señora Ángela Jacobi, quien había propuesto la idea, podría dictar el taller. También se mencionó la importancia de que la comunidad se comporte de manera adecuada con el personal de servicio, promoviendo un trato respetuoso y cordial.</p>
+
+<p>Se enfatizó la importancia de no afectar las hojas de vida de los guardas y de tener cuidado al realizar quejas, priorizando la bondad y el buen servicio que hayan prestado en el pasado. Se destacó que el señor Jule era considerado una persona seria y que, antes de tomar cualquier medida, era fundamental escuchar su versión de los hechos.</p>
+
+<p>Finalmente, se acordó que la administración escucharía al señor Jule para conocer su versión de los hechos y se consideraría la posibilidad de realizar un taller de servicio al cliente para los guardas.</p>
+
+<h2>8. Ajuste de la póliza</h2>
+
+<p>Durante la reunión, se abordó el tema del ajuste de la póliza de la copropiedad. Se mencionó que el avalúo actual está por debajo del valor real del inmueble, lo que implica que la propiedad está infraasegurada. Se destacó la importancia de realizar el ajuste necesario para evitar riesgos financieros en caso de siniestros.</p>
+
+<p>Se indicó que en el mes de marzo, el incremento en la póliza representaría un costo adicional de aproximadamente 4 millones de pesos. Este ajuste se debe realizar hasta el mes de diciembre. Se mencionó que se solicitó a Margarita una actualización de la cotización, ya que el valor puede disminuir a medida que avanza la fecha de vencimiento de la póliza.</p>
+
+<p>Se enfatizó que, debido a las recientes lluvias y posibles reclamaciones por daños en los techos, es fundamental mantener la póliza al día. Se consideró que el tema de la póliza es innegociable, ya que no se pueden asumir riesgos innecesarios.</p>
+
+<p>Se analizó la situación y se determinó que no hay otra alternativa más que realizar el ajuste de la póliza. Se hizo hincapié en la necesidad de estar al día con los seguros para tener la oportunidad de recibir los pagos correspondientes en caso de ser necesario.</p>
+
+<p>La señora Nubia Pinzón comentó sobre la importancia de revisar los cubrimientos de los seguros, ya que las aseguradoras tienden a protegerse para evitar realizar los pagos. Se destacó la necesidad de estar al día con todos los requisitos para tener la oportunidad de recibir los pagos en caso de siniestros.</p>
+
+<h3>Votación: Aprobación del ajuste de la póliza</h3>
+<ol>
+<li><strong>Nubia Pinzón:</strong> A favor</li>
+<li><strong>Liliana Jiménez:</strong> A favor</li>
+<li><strong>María Teresa Palacios:</strong> A favor</li>
+<li><strong>Néstor Dueñas:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada por unanimidad con 4 votos a favor.</p>
+
+<p>En consecuencia, se dio la orden de realizar el ajuste de la póliza, dado que ya se analizó la situación y no hay otra vía posible. Se determinó que no se pueden tomar riesgos, ya que las consecuencias podrían ser significativas.</p>
+<h2>9. Mantenimiento del chute de basuras</h2>
+
+<p>Durante la reunión, se abordó la solicitud del señor José Gómez con respecto a la mitigación de olores provenientes del chute de basuras correspondiente al bloque 1, que conecta con su apartamento.</p>
+
+<h3>Mitigación de olores</h3>
+
+<p>Se consideró que, dado que el acceso al chute se encuentra dentro del área privada del apartamento del señor Gómez, la administración podría ofrecerle la limpieza de su puerta con una escoba por parte del todero, con la autorización previa del propietario para ingresar a su propiedad. Además, se sugirió enviar una comunicación a todo el conjunto con recomendaciones para el manejo adecuado de las basuras y la desinfección de los chutes.</p>
+
+<p>Se mencionó que anteriormente se realizaba la limpieza y desinfección de los chutes de forma regular, pero se suspendió debido a quejas sobre el ingreso del personal de aseo a las propiedades privadas. Se propuso realizar una invitación a todos los propietarios para que cada uno realice la desinfección individual de su chute, utilizando productos como agua de romero o mezclas antibacteriales.</p>
+
+<h3>Limpieza del ducto</h3>
+
+<p>Se discutió la dificultad de realizar una limpieza profunda del ducto debido a su diseño y a la falta de acceso para una persona. Se mencionó que, en caso de desprendimiento de láminas, sería necesario soldarlas, pero no hay espacio suficiente para que alguien pueda ingresar al ducto.</p>
+
+<h3>Invitación a la comunidad</h3>
+
+<p>Se planteó la posibilidad de organizar una brigada de limpieza con la participación de todos los propietarios, donde cada uno limpie su propio chute y se coordine la limpieza del área de recepción de basuras en la parte inferior del edificio. Se destacó la importancia de recordar a la comunidad el correcto manejo de las basuras, incluyendo el uso de bolsas resistentes y el cierre adecuado de las mismas.</p>
+
+<p>Se hizo hincapié en que la acumulación de residuos en el ducto se debe, en parte, a que algunos residentes echan la basura suelta o en bolsas abiertas, lo que provoca que los residuos se dispersen y generen malos olores. Se sugirió enviar circulares informativas recordando las normas de manejo de basuras.</p>
+
+<p>Se propuso que, para el caso específico del señor Gómez, se le solicite al todero que realice una limpieza de su puerta del chute, previa autorización del propietario. Se enfatizó la necesidad de comunicar a todo el conjunto la recomendación de mantener limpios y desinfectados los chutes.</p>
+
+<p>Se concluyó que es fundamental abordar el problema de los olores desde diferentes frentes, incluyendo la limpieza individual de los chutes, la mejora en el manejo de las basuras por parte de los residentes y la posible realización de una brigada de limpieza comunitaria.</p><h2>10. Seguimiento humedades y arreglo tejado</h2>
+
+<p>Durante la reunión, se abordó el tema del seguimiento de las humedades y el arreglo del tejado, mencionándose un gasto significativo relacionado con este último.</p>
+
+<p>Se indicó que el gasto para arreglar el tejado del señor José ascendió a más de 4 millones de pesos, específicamente 4 millones 200 mil pesos. Se justificó este gasto como necesario y se mencionó que no estaba previsto en el presupuesto.</p>
+
+<p>Se destacó que el proveedor contratado ofreció la opción más asequible y completa, incluyendo una garantía de 18 meses. Además, se especificó que si es necesario cambiar alguna teja, la copropiedad se encargará de comprarla, mientras que el proveedor se encargará de la instalación y la mano de obra sin costo adicional.</p>
+
+<p>También se mencionó que la empresa contratada cuenta con la certificación para el manejo de residuos de asbesto.</p>
+
+<p>Adicionalmente, se informó que ya se envió la encuesta sobre las humedades y se espera iniciar las visitas la semana entrante, dependiendo de la recepción de las respuestas.</p>
+
+<p>En relación con el apartamento del señor José, se mencionó que el gasto se realizó para arreglar el tejado, y que este cuenta con una garantía de 18 meses. Se indicó que, entre todas las cotizaciones, se eligió la más asequible y completa, y que si hay que cambiar alguna teja, la copropiedad la compra y el señor la instala, incluyendo la mano de obra en el valor.</p><h2>11. Mantenimiento del muro y árboles</h2>
+
+<p>Durante la reunión, se abordó el tema del mantenimiento del muro y los árboles, incluyendo el concepto de la pared, la cita con el señor de los avisos y la compensación de árboles.</p>
+
+<h3>Concepto de la pared</h3>
+
+<p>Se discutió el concepto de la pared y se mencionó un concepto del IDGER (Instituto Distrital de Gestión de Riesgos y Cambio Climático) que indica que la alcaldía realizará el seguimiento y que no hay peligro inminente, pero que es obligación de la copropiedad hacer el mantenimiento del muro. Se mencionó que el IDGER tomó fotos para su reporte.</p>
+
+<p>Se indicó que se pidieron cotizaciones para el arreglo del muro, con un promedio de 3.044.400 pesos. La señora Liliana ofreció su experiencia para revisar las cotizaciones y evaluar si el todero podría realizar alguna parte del trabajo.</p>
+
+<p>Se hizo hincapié en la importancia de dejar trazabilidad de las reparaciones del muro, pero también de abordar la causalidad del problema, refiriéndose a los árboles que siguen creciendo y que tienen contacto con las redes eléctricas. Se sugirió pedir a ENEL que intervenga los árboles, ya que tocan la zeta eléctrica de la copropiedad.</p>
+
+<h3>Cita con el señor de los avisos</h3>
+
+<p>Se informó que se tenía una cita programada a las 11:00 a.m. con el señor de los avisos para cotizar una pancarta o un aviso para el muro, dentro de los avisos que se deben instalar del CCTV. Se sugirió aprovechar para hacer un mural en la pared.</p>
+
+<h3>Compensación de árboles</h3>
+
+<p>Se discutió el estado de las compensaciones de árboles pendientes, tanto de talas recientes como anteriores. Se mencionó que la poda no exigía compensaciones, pero la tala sí. Se indicó que al solicitar el estado de cuenta a la secretaría, se informó que La Rábida no debía nada, pero se estaba esperando el cierre de los expedientes. Se mencionó que se había pedido a Alejandra que retirara árboles secos para poder sembrar otros en su lugar.</p>
+
+<p>La señora María Teresa preguntó sobre el estado de las compensaciones pendientes, tanto de las talas recientes como de las anteriores. Se mencionó que la empresa de paisajismo debía incluir el tema de las compensaciones que estaban pendientes.</p>
+
+<p>Se indicó que la tala del romero tenía una compensación de 8 árboles, y el total de todos eran 21. Se mencionó que la contratación de la empresa incluía el cumplimiento de todo lo dictaminado, incluyendo las compensaciones. Se cuestionó por qué no se había realizado la compensación.</p>
+
+<p>Se aclaró que se había solicitado a la Secretaría del Ambiente el estado de cuenta para ir a pagar, y que se había recibido un oficio donde se indicaba que no se debía nada. Se mencionó que se había hablado con Alejandra para que se pagara o se entregaran los árboles, pero se indicó que no se debía nada.</p>
+
+<p>Se mencionó que la compensación se podía realizar mediante la plantación de árboles dentro del predio, siguiendo los lineamientos técnicos establecidos en el manual de Sivicultura Urbana para Bogotá.</p>
+
+<p>Se concluyó que era importante cerrar los expedientes y tener claro que si no se debía nada, se cerraba el expediente. Se mencionó que se iba a solicitar una certificación de estado al día en el cumplimiento de los expedientes para poderlos cerrar.</p><h2>12. Deterioro de fachadas y comunicación</h2>
+
+<p>Durante la reunión, se abordó el tema del deterioro de las fachadas del conjunto residencial y la necesidad de mejorar la comunicación con los residentes al respecto. Se identificaron varios aspectos clave que requerían atención y seguimiento.</p>
+
+<p>Uno de los puntos principales de la discusión fue el deterioro de las fachadas en las áreas donde se instalaron los tubos para canalizar el agua. Se mencionó que, en lugar de solucionar el problema, los tubos habían provocado marcas de agua y la aparición de lama en las paredes. El señor Néstor Dueñas había tomado fotos de este deterioro y las había enviado para su consideración.</p>
+
+<p>Además, se señaló el estado general de las fachadas, incluyendo la entrada al bloque 7, como un problema que afectaba la estética del conjunto. Se reconoció la necesidad de encontrar una solución efectiva para abordar este deterioro y mejorar la apariencia de las fachadas.</p>
+
+<p>En cuanto a la comunicación con los residentes, se mencionó que el señor Néstor Dueñas había presentado una comunicación escrita con sus inquietudes, pero que esta no había sido contestada. La administradora explicó que la comunicación se iba a tocar en la asamblea, pero que, antes de entrar a la asamblea, la señora Liliana Jiménez le había indicado que la carta debía ser estudiada bien porque contenía varias cositas y no se podían tratar de carreras allá. La señora Jiménez le dijo a la administradora que la tuviera ahí cuando hablara en proposiciones y varios y que podía pedirle el acta. La administradora tocó el tema de los andenes y le preguntó al señor Dueñas si podía tocar ese tema acá, a lo que él respondió afirmativamente. Sin embargo, el resto de la comunicación, que contenía temas que el señor Dueñas estaba contando y narrando, no se trató en ese momento.</p>
+
+<p>La administradora explicó que la señora Liliana Jiménez le aclaró que la comunicación no era para tratar en la asamblea, sino que tocaba analizarla, por lo que la carta quedó ahí y se contestaría después. La administradora mencionó que estaba preparando una respuesta con números, personas puntuales y fechas de intervención, buscando inclusive el anterior proveedor que había ayudado en otro tema similar, para entregarle al señor Dueñas un informe detallado. Sin embargo, esta respuesta aún no se había concretado.</p>
+
+<p>Durante la discusión, se generó un debate sobre el proceso de comunicación y la responsabilidad de dar respuesta a las inquietudes de los residentes. Se planteó la necesidad de establecer un canal de comunicación efectivo y transparente para mantener informados a los residentes sobre las acciones que se están llevando a cabo para solucionar los problemas del conjunto.</p>
+
+<p>Finalmente, se acordó priorizar el letrero y obtener las cotizaciones necesarias para tomar decisiones al respecto. También se planteó la posibilidad de presentar una tutela para que se atienda la causalidad del problema del muro y se eviten implicaciones económicas futuras.</p>
+
+<p>En cuanto a los próximos pasos, se determinó que la administradora debía continuar trabajando en la respuesta a la comunicación del señor Dueñas, incluyendo información detallada sobre las acciones que se están llevando a cabo para solucionar los problemas de las fachadas. Además, se acordó buscar alternativas para mejorar la comunicación con los residentes y mantenerlos informados sobre los avances en este tema.</p><h2>13. Proposiciones y varios</h2>
+
+<p>Durante la sección de Proposiciones y Varios, se abordaron diversos temas adicionales que no estaban contemplados en los puntos anteriores del orden del día. Estos incluyeron la revisión del estado de las compensaciones de árboles, el deterioro de las fachadas, la comunicación con los propietarios y otros asuntos varios.</p>
+
+<h3>Estado de las compensaciones de árboles</h3>
+
+<p>Se discutió el estado de las compensaciones pendientes por la tala de árboles, específicamente el romerón. Se recordó que en el momento de la tala se había establecido un plan de manejo que incluía la compensación mediante la siembra de nuevos árboles. Sin embargo, surgió confusión sobre si esta compensación se había realizado o no.</p>
+
+<p>La administradora indicó que había solicitado un estado de cuenta a la secretaría y que le habían informado que la agrupación no debía nada. Sin embargo, se mencionó que era necesario esperar a que se cerraran los expedientes para tener una confirmación definitiva.</p>
+
+<p>Se señaló que el contrato con la empresa de paisajismo incluía el cumplimiento del plan de manejo y la entrega de las fichas de cierre. No obstante, no estaba claro si la compensación estaba incluida en el contrato o si se había acordado por separado.</p>
+
+<p>María Teresa manifestó la importancia de cumplir con la obligación moral de compensar la tala del árbol, independientemente de si existía una obligación legal o no. Se sugirió revisar la resolución de la compensación para determinar si se podía realizar en otro lugar o si debía ser dentro del predio.</p>
+
+<p>Finalmente, se acordó revisar el contrato con la empresa de paisajismo y la resolución de la tala para determinar las obligaciones pendientes y tomar las medidas necesarias para cumplir con la compensación.</p>
+
+<h3>Deterioro de fachadas y comunicación</h3>
+
+<p>Néstor Dueñas presentó fotos que evidenciaban el deterioro de las fachadas, especialmente en las áreas donde se habían instalado tubos para solucionar problemas de humedad. Señaló que, en lugar de solucionar el problema, los tubos estaban causando marcas de agua y la proliferación de lama.</p>
+
+<p>Se recordó que Néstor había enviado una comunicación a la administración planteando este problema, pero que no había recibido respuesta. La administradora explicó que la comunicación no se había leído en la asamblea porque contenía varios temas que requerían un análisis más detallado. Se había acordado contestar la comunicación después de analizarla, pero aún no se había hecho.</p>
+
+<p>Se acordó priorizar la respuesta a la comunicación de Néstor, incluyendo información sobre las gestiones realizadas para solucionar el problema de las fachadas y las posibles soluciones.</p>
+
+<h3>Ajuste de la póliza</h3>
+
+<p>Se analizó la necesidad de ajustar la póliza debido a que el avalúo había dado más alto. Se determinó que era necesario realizar el ajuste para cubrir el valor real de la propiedad y evitar riesgos en caso de siniestro. Se aprobó realizar el ajuste de la póliza hasta diciembre, lo que implicaba un incremento en el valor de la prima.</p>
+
+<h3>Votación: Aprobación del ajuste de la póliza</h3>
+<ol>
+<li><strong>Nubia Pinzón:</strong> A favor</li>
+<li><strong>Liliana Jiménez:</strong> A favor</li>
+<li><strong>María Teresa Palacios:</strong> A favor</li>
+<li><strong>Néstor Dueñas:</strong> A favor</li>
+</ol>
+<p><strong>Resultado:</strong> La propuesta fue aprobada con 4 votos a favor.</p>
+
+<h3>Mantenimiento del chute de basuras</h3>
+
+<p>Se mencionó que el señor José Gómez había solicitado el arreglo del chute de basuras debido a los malos olores. Se recordó que el acceso al chute se encuentra dentro de su propiedad privada y que, por lo tanto, no era responsabilidad de la administración realizar el arreglo.</p>
+
+<p>Se sugirió ofrecer al señor Gómez la posibilidad de que el todero realizara una limpieza de su puerta del chute, con la advertencia de que debía autorizar la entrada del todero para evitar problemas posteriores.</p>
+
+<p>Además, se propuso enviar una comunicación a todos los propietarios recordando el correcto manejo de las basuras y la importancia de utilizar bolsas adecuadas para evitar derrames y malos olores.</p>
+
+<h3>Seguimiento humedades y arreglo tejado</h3>
+
+<p>Se informó que se había realizado el arreglo del tejado del señor José Gómez, con una garantía de 18 meses. Se mencionó que se había contratado una empresa que contaba con la certificación para el manejo de residuos de asbesto.</p>
+
+<p>Además, se comentó que se había enviado una encuesta a los propietarios para programar las visitas de seguimiento a las humedades. Se recordó que el arreglo de las humedades era responsabilidad del conjunto, siempre y cuando se reportaran a tiempo.</p>
+
+<h3>Mantenimiento del muro y árboles</h3>
+
+<p>Se informó sobre el concepto del IDGER en relación con el muro, indicando que no había peligro inminente de caída, pero que era obligación del conjunto realizar el mantenimiento. Se mencionó que la alcaldía realizaría el seguimiento del mantenimiento del muro.</p>
+
+<p>Se señaló la necesidad de obtener otras dos cotizaciones para el arreglo del muro, además de la ya existente. Se propuso revisar con la señora Liliana Jiménez los materiales a utilizar y la posibilidad de realizar parte del trabajo con el todero.</p>
+
+<p>Se reiteró la importancia de abordar la causalidad del problema, que eran los árboles que estaban afectando el muro. Se sugirió solicitar a ENEL que realizara una poda adecuada de los árboles para evitar que siguieran dañando el muro y las redes eléctricas.</p>
+
+<p>Finalmente, se informó que se tenía una cita con el señor de los avisos para cotizar una pancarta o aviso para el muro, dentro de los avisos que se debían instalar del CCTV.</p>
+
+<p>Con esto, se dio por concluida la sección de Proposiciones y Varios.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 12:04</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se verificará realmente el número de tejas y se hablará con Germán para que saque la propuesta definitiva – <strong>Responsable:</strong> No especificado</li>
+ <li>Isela ayudará con el listado que tiene en Milenio, en Excel, con la verificación de las cédulas de los propietarios – <strong>Responsable:</strong> Isela</li>
+ <li>Adriana tratará el último acuerdo de pagos – <strong>Responsable:</strong> Adriana</li>
+ <li>Se contestará el correo sobre el acuerdo de pago del apartamento 4212, indicando que la primera cuota es clara y que a partir de junio se pagará el millón ochocientos más la administración en seis cuotas – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará a Isela un estado de cuenta detallado para Milena Patricia Olarte (apartamento 7501) – <strong>Responsable:</strong> Isela</li>
+ <li>Se realizará una reunión del caso de Luz Elvira Sánchez (apartamento 3401) con el Comité de Convivencia y el consejo – <strong>Responsable:</strong> No especificado</li>
+ <li>Se hará el ajuste de la póliza debido al aumento del avalúo – <strong>Responsable:</strong> No especificado</li>
+ <li>Se le solicitará al todero que le haga la limpieza de lo que es su puertica con la escoba como un sondeo o algo así al señor José Gómez – <strong>Responsable:</strong> No especificado</li>
+ <li>Se hará una comunicación para todo el conjunto con la recomendación de esto, la invitación de seguir mando sus puertos y desinfecciones – <strong>Responsable:</strong> No especificado</li>
+ <li>Se priorizará el letrero – <strong>Responsable:</strong> Adriana</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/XiiWWMGLYsPnzZw
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/XiiWWMGLYsPnzZw
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/yF44AWmii6Nctn7
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/yF44AWmii6Nctn7
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/b3zJzswFCQa73ro
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/b3zJzswFCQa73ro
+Actualizando acta con la nueva URL del borrador...
+Relanzamiento desde contenido completado exitosamente para acta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Iniciando relanzamiento desde transcripción para acta ID: 2f2dea5f-816c-4854-a551-2b61c6b35dd3
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025, File: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Borrando borrador: https://files.actasdereuniones.ai/s/XiiWWMGLYsPnzZw/download/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Intentando borrar archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Archivo borrado exitosamente o ya no existe: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Borrando contenido: https://files.actasdereuniones.ai/s/a4PQJsWxYDbjYrr/download/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Intentando borrar archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Archivo borrado exitosamente o ya no existe: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Leyendo transcripción: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Transcripcion.txt
+Generando nuevo contenido desde transcripción...
+Verificando contenido existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Verificando archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt en carpeta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Guardando contenido en Nextcloud: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Contenido guardado: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+Formateando contenido y generando borrador...
+Iniciando formateo de contenido para: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Verificando Borrador .docx existente: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Verificando archivo: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx en carpeta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Preparando guardado .docx en Nextcloud: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Reunión de Consejo</h1>
+ <p><strong>Fecha:</strong> 20 de mayo de 2025</p>
+ <p><strong>Hora:</strong> Inicio: 9 y 30 de la mañana - Cierre: 12 y 4</p>
+ <p><strong>Lugar:</strong> Agrupación de Vivienda La Rabia, consejo 930 metros</p>
+ <p><strong>Moderador:</strong> Liliana Jiménez</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Nubia Pinzón - [CARGO NO ESPECIFICADO]</li>
+ <li>Liliana Jiménez - Presidente</li>
+ <li>María Teresa Palacios - [CARGO NO ESPECIFICADO]</li>
+ <li>Néstor Dueñas - [CARGO NO ESPECIFICADO]</li>
+ <li>Elena Mesa - Revisora Fiscal</li>
+ <li>Elena Segura Mesa - [CARGO NO ESPECIFICADO]</li>
+ <li>Adriana Aguilar - Administradora</li>
+ <li>Gisela - [CARGO NO ESPECIFICADO]</li>
+ <li>Ángel - [CARGO NO ESPECIFICADO]</li>
+ <li>Mireia - [CARGO NO ESPECIFICADO]</li>
+ <li>Alejandra Reyes - Arrendataria</li>
+ <li>Ricardo Cañón - [CARGO NO ESPECIFICADO]</li>
+ <li>Jairo - [CARGO NO ESPECIFICADO]</li>
+ <li>Ángela Jacobi - Consejera</li>
+ <li>Liliana Servicio - [CARGO NO ESPECIFICADO]</li>
+ <li>Carlos Yule - Guarda</li>
+ <li>José Gómez - [CARGO NO ESPECIFICADO]</li>
+ <li>Álvaro - [CARGO NO ESPECIFICADO]</li>
+ <li>Camilo - Guarda</li>
+ <li>Carlos Duarte - [CARGO NO ESPECIFICADO]</li>
+ <li>Estefan - [CARGO NO ESPECIFICADO]</li>
+ <li>Milena Olarte - [CARGO NO ESPECIFICADO]</li>
+ <li>Ana María Toro - [CARGO NO ESPECIFICADO]</li>
+ <li>Adriana Castillo - [CARGO NO ESPECIFICADO]</li>
+ <li>Luz Elvira Sánchez - [CARGO NO ESPECIFICADO]</li>
+ <li>Nancy - [CARGO NO ESPECIFICADO]</li>
+ <li>Chirley Barajas - [CARGO NO ESPECIFICADO]</li>
+ <li>Margarita - [CARGO NO ESPECIFICADO]</li>
+ <li>Elkin - Toder
+<h2>1. Verificación de quórum</h2>
+
+<p>Al inicio de la reunión, la administradora, Adriana Aguilar, constató la asistencia de los siguientes miembros: Nubia Pinzón, Liliana Jiménez, María Teresa Palacios, Néstor Dueñas y la revisora fiscal Elena Mesa (Elena Segura Mesa). Se determinó que, con la presencia de 4 de 7 miembros, existía quórum suficiente para deliberar.</p>
+<h2>2. Nombramiento de presidente y secretario</h2>
+
+<p>En el segundo punto del orden del día, se procedió al nombramiento del presidente y secretario de la reunión. Se propuso a la señora Liliana Jiménez como presidente y a la administración como secretaria, siguiendo la metodología habitual.</p><h2>3. Lectura y modificaciones al acta anterior</h2>
+
+<p>En el desarrollo de este punto, se procedió a la revisión del acta anterior, identificándose la necesidad de realizar ajustes en las fechas y en el número de asistentes registrados. Se señaló que, si bien se mencionan cinco de los siete miembros presentes en el acta, la lista incluye a los siete miembros, requiriendo una aclaración sobre la asistencia de cada uno.</p>
+
+<p>Asimismo, se observó una discrepancia en relación con el tema de las tejas del apartamento 1500, indicándose que este asunto fue tratado en un acta anterior y no en la que se estaba revisando. La señora Liliana Jiménez, basándose en la grabación de la reunión anterior, recordó que se discutió la verificación del número exacto de tejas y la propuesta definitiva de Germán, mencionando que el señor José Gómez había confirmado que esperaría la propuesta del arquitecto.</p>
+
+<p>Tras la discusión, se acordó revisar la grabación del acta anterior para confirmar los detalles mencionados y realizar las modificaciones necesarias en cuanto a fechas y número de asistentes.</p>
+<h2>4. Informe contable financiero</h2>
+
+<p>Durante la reunión, se presentó el informe contable financiero correspondiente a los meses de marzo y abril. Se destacó la situación financiera general, así como detalles específicos sobre efectivo, cartera, cuentas por pagar y otros aspectos relevantes.</p>
+
+<h3>Efectivo y equivalentes</h3>
+<p>Se informó que el efectivo y equivalentes al final del mes de marzo ascendían a 192.481.562,30 pesos, mientras que al cierre de abril disminuyeron a 178.340.047,30 pesos.</p>
+
+<h3>Cartera</h3>
+<p>Se indicó que la cartera aumentó de 27.359.000 pesos en marzo a 31.716.090 pesos en abril.</p>
+
+<h3>Otros deudores</h3>
+<p>Se mencionó que el rubro de otros deudores está relacionado con la devolución de la DIAN, la cual aún no se ha concretado.</p>
+
+<h3>Amortización de póliza</h3>
+<p>Se comunicó que la póliza se está amortizando mensualmente y que, al valor de la prima de abril, quedan 40.614.710 pesos por amortizar. Se ampliaría la información al respecto más adelante.</p>
+
+<h3>Cuentas por pagar</h3>
+<p>Se informó que las cuentas por pagar ascendieron a 2.225.182 pesos, correspondientes principalmente a la empresa de acueducto y a la retención en la fuente, la cual ya fue firmada.</p>
+
+<h3>Ingresos recibidos por anticipado</h3>
+<p>Se reportaron ingresos recibidos por anticipado por un total de 33.313.155,78 pesos.</p>
+
+<h3>Saldo de cuota extraordinaria</h3>
+<p>Se señaló que el saldo de la cuota extraordinaria, destinada a un fin específico, continúa aumentando debido a los rendimientos, alcanzando los 18.557.502,78 pesos.</p>
+
+<h3>Fondo de reserva de asesoría jurídica</h3>
+<p>Se indicó que el fondo de reserva de asesoría jurídica, proveniente de años anteriores y destinado a temas relacionados con el espacio público, se mantiene en 3.252.245 pesos.</p>
+
+<h3>Saldo de mantenimiento de obra</h3>
+<p>Se informó sobre un saldo de mantenimiento de obra del año 2020 por 507.479,20 pesos.</p>
+
+<h3>Excedentes del ejercicio</h3>
+<p>Se reportaron excedentes del ejercicio por 4.108.716,61 pesos.</p>
+
+<h3>Excedentes acumulados</h3>
+<p>Se informó sobre los excedentes acumulados, cuyo monto no se especificó en este segmento.</p>
+
+<h3>Saldo del fondo de imprevistos</h3>
+<p>Se comunicó que el saldo del fondo de imprevistos es de 55.000.858,27 pesos, incluyendo la reserva al 31 de diciembre y lo causado en el presente año, ya ajustado.</p>
+
+<h3>Rendimientos financieros</h3>
+<p>Se reportaron rendimientos financieros de la cuenta donde se encuentra la reserva y los excedentes de ejercicios anteriores, por un total de 150.283.000 pesos.</p>
+
+<h3>Ajuste al fondo de reserva</h3>
+<p>Se mencionó que se realizó un ajuste a la cuota del fondo de reserva correspondiente a este año.</p>
+
+<h3>Presupuesto</h3>
+<p>En cuanto al presupuesto, se identificaron algunas cifras que superan lo proyectado, como en el caso del acueducto (con una diferencia de 24.000 pesos), el lavado de cajas de aguas negras (donde ya se ejecutó prácticamente todo el presupuesto anual) y las reparaciones eléctricas (con un excedente de 255.500 pesos). También se mencionaron los insumos de jardinería (700.832 pesos), la fumigación de zonas comunes (202.100 pesos) y el cargo de extintores (donde también se ejecutó el presupuesto anual). Se señaló que algunos rubros, como el soporte de software contable y la BE Data, ya se ejecutaron en su totalidad y no se volverán a ejecutar. Los elementos de aseo de cafetería superan el presupuesto en 244.000 pesos, y los gastos de asamblea, presupuestados en 2.160.000 pesos, ascendieron a 2.503.702 pesos. Finalmente, se indicó que se ejecutaron 204.000 pesos en activos menores de cuatro salarios mínimos (en marzo) y 645.300 pesos en costos y gastos de ejercicios anteriores.</p>
+
+<p>Se informó que, tras estos movimientos, el excedente neto acumulado del mes fue de 4.108.000 pesos, resultando en un excedente neto acumulado total de 3.406.447 pesos.</p>
+
+<p>La señora Elena Mesa, revisora fiscal, hizo una acotación sobre el gasto de cafetería, sugiriendo que se abra una cuenta especial dentro del presupuesto para reflejar que este gasto corresponde al suministro a los chicos de vigilancia y aseo, y no a la cafetería de la copropiedad.</p>
+
+<h3>Ecuación contable</h3>
+<p>En relación con la ecuación contable, se informó que los activos disminuyeron en 250.51.557.672,98 pesos debido a que la póliza se terminó de pagar. El pasivo también disminuyó en 20.35.538.937,78 pesos, y el patrimonio en 216.735,20 pesos. Se reiteró el excedente acumulado del ejercicio.</p>
+
+<h3>Caja menor</h3>
+<p>Se verificó la caja menor, confirmando que los recibos están en orden.</p>
+
+<h3>Conciliaciones bancarias</h3>
+<p>Se confirmó que las conciliaciones bancarias están correctamente hechas, con los valores en extracto iguales a los valores en libros y sin partidas conciliatorias.</p>
+
+<h3>Cartera (aumento, consignaciones)</h3>
+<p>Se reiteró que la cartera aumentó en un 15,93%, equivalente a 4.357.000 pesos. Se indicó que no hay consignaciones sin identificar.</p>
+
+<h3>Cuentas por pagar</h3>
+<p>Se confirmó que las cuentas por pagar están correctas.</p>
+
+<h3>Ejecución presupuestal</h3>
+<p>Se reiteró que algunos gastos ya se ejecutaron en el 100% del presupuesto (recargo, extintores, lavado de caja de agua, mantenimiento, incluso fendazos) y otros van por encima (acueducto de alcantarillado, reparaciones eléctricas, insumos, jardines, fumigación, protección de datos a data, insumos para SEO y cafetería y compra de activos menores).</p>
+
+<h3>Flujo de caja</h3>
+<p>Se informó que los impuestos se han presentado y pagado oportunamente, y que el flujo de caja presenta un flujo positivo de 42.735.449,42 pesos.</p>
+
+<h3>Valor disponible de fondo imprevisto</h3>
+<p>Se indicó que hay un mayor valor en el fondo de imprevisto, ascendiendo a 58 millones de pesos, y que en la fiducia hay 101.213.004 pesos. Se mencionaron las cuentas por pagar, los ingresos recibidos por anticipado y el fondo de reserva para asesoría jurídica, resultando en un flujo de 42.735.449,42 pesos.</p>
+
+<h3>Informes según normas financieras</h3>
+<p>Se confirmó que los informes están presentados de acuerdo con las normas de información financiera.</p>
+
+<h3>Información exógena</h3>
+<p>Se consultó sobre la fecha de presentación de la información exógena, inicialmente mencionada como mayo, pero se aclaró que es en junio. Debido a que la página de la DIAN está colapsada, se requiere la información lo más pronto posible, específicamente las cédulas de todos los propietarios (el documento de identificación, no solo el número). Se estableció como fecha límite el 28 de mayo para la entrega de esta información.</p>
+
+<p>Se mencionó que Isela puede ayudar con el listado que tiene en Milenio, utilizando la clave de administrador para bajar el archivo y verificar las cédulas de los propietarios.</p>
+
+<h3>Listado de documentos de propietarios</h3>
+<p>Se estableció que Adriana entregará el listado a más tardar el 28 de mayo, con la colaboración de Isela para obtener la información de Milenio.</p>
+<h2>5. Acuerdos de pago</h2>
+
+<p>Durante la reunión, se abordaron los acuerdos de pago existentes y las nuevas solicitudes presentadas por algunos propietarios. La administradora, Adriana Aguilar, proporcionó información detallada sobre el estado actual de los acuerdos y las gestiones realizadas para facilitar el cumplimiento de las obligaciones financieras por parte de los residentes.</p>
+
+<h3>Vivienda</h3>
+
+<p>Se mencionó un acuerdo de pago relacionado con una vivienda cuya deuda ascendía a dos millones de pesos. Se indicó que, tras un abono de cuatro millones, la situación podría estar resuelta, aunque no se confirmó si la deuda había sido completamente cubierta.</p>
+
+<h3>Estefanía</h3>
+
+<p>Se informó sobre el caso de Estefanía, quien está cumpliendo con un acuerdo de pago que contempla ocho cuotas, encontrándose al día con el pago de la quinta cuota. Al 30 de abril, su deuda ascendía a un millón 970 mil 200 pesos.</p>
+
+<h3>Milena Olarte</h3>
+
+<p>Se discutió la situación de Milena Olarte, quien tiene un acuerdo de pago en curso. Además de su deuda, se mencionó que tiene un tema pendiente con el Comité de Convivencia relacionado con sus mascotas. La administradora indicó haber conversado con ella en dos oportunidades, y Milena Olarte manifestó no recibir las cuentas de cobro. A pesar de esto, se le recordó que, según la ley 675, las copropiedades no están obligadas a facturar las cuotas de administración, siendo la cuenta de cobro un mero recordatorio. Milena Olarte solicitó un estado de cuenta detallado para ponerse al día con sus pagos, ya que se encuentra fuera de Colombia. Su deuda asciende a 7 millones 501 pesos.</p>
+
+<h3>Ana María Toro (Apartamento 4212)</h3>
+
+<p>Se presentó una nueva solicitud de acuerdo de pago por parte de Ana María Toro, propietaria del apartamento 4212. La administradora informó haber enviado la propuesta al consejo para su conocimiento. La propuesta consiste en un pago inicial correspondiente a la administración del mes de mayo, más el 10% de la deuda acumulada de febrero a abril, y la administración corriente. A partir de junio, se adicionarían a las administraciones corrientes la sexta parte de la deuda restante. Ana María Toro solicitó que se congelen los intereses con el primer pago. La deuda total del apartamento 4212 asciende a dos millones treinta mil doscientos pesos, por lo que el 10% inicial correspondería a doscientos tres mil doscientos pesos.</p>
+
+<p>Se aclaró que la aprobación de este acuerdo de pago queda sujeta a la decisión del Consejo en la próxima reunión. Se enfatizó la importancia de que la propietaria demuestre su intención de pago para poder congelar los intereses. En caso de incumplimiento, se reliquidaría la deuda.</p>
+
+<h3>Carteras preocupantes (Adriana Castillo, Luz Elvira Sánchez)</h3>
+
+<p>Se abordó la situación de dos carteras consideradas preocupantes: las de Adriana Castillo y Luz Elvira Sánchez. La administradora informó haber consultado con un abogado sobre las opciones disponibles para gestionar estas deudas. En el caso de Adriana Castillo, se mencionó que estaba solicitando que se le aplicara el artículo de la Constitución en derecho de igualdad, argumentando que a otros inmuebles se les había condonado el 50% de la deuda. Se le indicó que las decisiones de la asamblea se deben resolver en la asamblea. El abogado sugirió que, con base en el acta de la asamblea, Adriana Castillo podría solicitar a la contadora que liquide los intereses por separado y aplique todos los abonos a capital, para tener una cifra exacta y presentarla en la próxima asamblea. Se mencionó que Adriana Castillo realizó un abono reciente y solicitó que se aplicara a capital.</p>
+
+<p>En cuanto a Luz Elvira Sánchez, se indicó que tiene un problema de salud mental. El abogado sugirió que, para poder iniciar un proceso jurídico, es necesario haber realizado el debido proceso, citándola a comité de convivencia y documentando los intentos de ayuda y las propuestas realizadas. Se mencionó que la deuda de Luz Elvira Sánchez asciende a 5 millones 509 mil pesos.</p>
+
+<h3>Milena Patricia Olarte (seguimiento)</h3>
+
+<p>Se retomó el caso de Milena Patricia Olarte, cuya deuda asciende a 3 millones 362 mil pesos. Además de su situación financiera, se mencionó que tiene un tema pendiente con el Comité de Convivencia relacionado con sus mascotas. La administradora informó haber conversado con ella en dos oportunidades, y Milena Olarte manifestó no recibir las cuentas de cobro. A pesar de esto, se le recordó que, según la ley 675, las copropiedades no están obligadas a facturar las cuotas de administración, siendo la cuenta de cobro un mero recordatorio. Milena Olarte solicitó un estado de cuenta detallado para ponerse al día con sus pagos, ya que se encuentra fuera de Colombia. Su deuda asciende a 7 millones 500 pesos.</p>
+
+<h3>Nancy (Banco Davivienda)</h3>
+
+<p>Se mencionó el caso de Nancy, quien tiene una deuda de 2 millones 15 mil pesos con el Banco Davivienda. Se recordó que Nancy había realizado un abono grande de 4 millones de pesos, pero no volvió a abonar. Se indicó que, al igual que en ocasiones anteriores, será necesario recordarle que debe cumplir con sus obligaciones.</p>
+
+<h3>Chirley Barajas 128</h3>
+
+<p>Se informó sobre la situación de Chirley Barajas 128, propietaria del apartamento arrendado a Alejandra Reyes, quien debe un millón 61 mil pesos, incluyendo la administración y el arriendo. Se indicó que se le enviará un comunicado informándole que se iniciará nuevamente el proceso de cobro. Se destacó la buena relación actual con la arrendataria, Alejandra Reyes.</p><h2>6. Aspectos legales</h2>
+
+<p>Durante la reunión, se abordaron diversos aspectos legales relacionados con la administración y el funcionamiento de la copropiedad.</p>
+
+<h3>Contrato con la administración</h3>
+
+<p>Se formalizó el contrato con la administración por un período de tres meses, del 1 de abril al 30 de junio, incluyendo la respectiva póliza. Se indicó que la póliza se emitió de inmediato tras la firma del contrato. Sin embargo, la radicación de la actualización ante la Secretaría de Gobierno fue inicialmente negada debido a un problema con la fecha y la asignación del abogado. Se mencionó que estas asignaciones se realizan los miércoles, por lo que se debe esperar para verificar si se puede resolver el problema. A pesar de la negación inicial, se enfatizó que en el acta constan los tres meses de duración del contrato.</p>
+
+<h3>Acta de asamblea</h3>
+
+<p>Se informó que se cumplió con la formalización del acta de asamblea, la cual se encuentra en el libro correspondiente. Además, se colaboró con la elaboración de las actas del comité de convivencia.</p>
+
+<h3>Carta del señor Ángel</h3>
+
+<p>Se informó al consejo que la carta redactada por el señor Ángel contenía un punto, el cuarto, que no fue considerado amable. Este punto generó molestia en los señores Arias. Se solicitó a la señora Carrasco que redactara una carta explicando que ya se había contestado el derecho de petición, pero el señor Ángel insistió en que no se hiciera nada al respecto, contando con el apoyo de la señora Mireia. Se sugirió aclarar este tema para evitar futuros inconvenientes.</p>
+
+<p>Se explicó que la señora Alejandra Reyes comentó al comité que su esposo, Ricardo Cañón, escuchó al señor Arias reunirse con otras personas y referirse a ella de manera despectiva. El comité incluyó en la carta un punto solicitando respeto mutuo. Sin embargo, el señor Arias interpretó que este punto lo acusaba de maltrato, cuando él considera que ha sido al contrario. Se sugirió que la redacción debió ser recíproca, instando a ambas partes a evitar malos tratos. Se propuso una comunicación conjunta lamentando el incidente y recordando que el respeto debe ser mutuo.</p>
+
+<p>Se mencionó que los señores Arias han presentado los mismos argumentos en varias ocasiones, pidiendo respeto pero sin ofrecerlo. Se recordó un incidente anterior en el que los señores Arias utilizaron un lenguaje fuerte. Se sugirió que el problema radica en la redacción de la carta y que una aclaración podría resolver el conflicto.</p>
+
+<h3>Reuniones del 2 y 23</h3>
+
+<p>Se informó sobre el cumplimiento de las reuniones del 2 y 23 de abril. La primera reunión se realizó para responder a los derechos de petición del propietario del apartamento 1501, mientras que la segunda se destinó a la entrega de informes financieros correspondientes al mes de marzo.</p>
+
+<h3>Tareas del comité de convivencia</h3>
+
+<p>Se indicó que se atendieron y cumplieron las tareas del comité de convivencia de las reuniones del 4 y 10 de abril, elaborando las actas correspondientes. Se reiteró que este informe corresponde únicamente al mes de abril.</p>
+
+<h3>Programa contable</h3>
+
+<p>Se mencionó la observancia del programa contable y la atención a las citas de la consejera y presidente, señora Juliana Jiménez, para tratar temas relacionados con pagos a proveedores y asuntos puntuales de la copropiedad.</p>
+
+<h3>Citas con consejera y presidente</h3>
+
+<p>Se mencionó la observancia del programa contable y la atención a las citas de la consejera y presidente, señora Juliana Jiménez, para tratar temas relacionados con pagos a proveedores y asuntos puntuales de la copropiedad.</p>
+
+<h3>Circulares sobre racionamiento de agua</h3>
+
+<p>Se informó que se enviaron circulares relacionadas con el racionamiento de agua. El 11 de abril se anunció el fin del racionamiento y se enviaron recomendaciones e información adicional.</p>
+
+<h3>Servicio por canales dispuestos</h3>
+
+<p>Se indicó que se cumplió con el servicio a través de los canales dispuestos.</p>
+
+<h3>Gestión de correo electrónico</h3>
+
+<p>Se informó sobre la ejecución de actividades de gestión de correo electrónico, respondiendo a las solicitudes de arrendatarios y propietarios, como la expedición de paz y salvos.</p>
+
+<h3>Seguimiento de garantías con arquitecto</h3>
+
+<p>Se continuó el seguimiento de las garantías con el arquitecto Germán González sobre la ejecución de los arreglos. Se mencionó que, debido al aumento de las lluvias, surgieron nuevas notificaciones de filtraciones y goteras.</p>
+
+<h3>Queja de servicio del guarda (Sr. Pinzón, Sr. Jule)</h3>
+
+<p>Se informó que no se ha presentado formalmente la queja sobre el servicio del guarda, siguiendo la recomendación de esperar al consejo. Sin embargo, se recibieron quejas sobre el señor Pinzón el 18 de abril de 2025 y otra del señor José Gómez sobre el señor Jule. La queja del señor Gómez se refiere a que no se le avisa cuando llegan domicilios o visitas y que el citófono no contesta.</p>
+
+<p>Se mencionó que la señora Ángela Jacobi, también consejera, expresó su inconformidad con el señor Pinzón, indicando que él hace mala cara, abre o cierra de mala gana, y contesta de mala gana o entre dientes. Se propuso realizar una encuesta de servicio para evaluar el nivel de satisfacción de los propietarios y, en caso de obtener resultados negativos, realizar un llamado de atención formal o incluso ofrecer un taller de servicio al cliente.</p>
+
+<p>Se informó que el señor Pinzón ha sido encontrado invitando a tomar tinto al todero Carlos en la portería con la puerta abierta. Se sugirió que la empresa de vigilancia proporcione instrucciones claras sobre el diligenciamiento de la minuta y que se escuchen ambas partes antes de tomar decisiones.</p>
+
+<p>Se propuso escuchar la versión del señor Jule y buscar un taller de servicio al cliente, posiblemente impartido por la señora Ángela. Se destacó la importancia de no afectar las hojas de vida de los guardas y de considerar su trayectoria antes de tomar medidas drásticas. Se sugirió que también se realice un taller sobre cómo la comunidad debe comportarse con el personal de servicio.</p>
+
+<h3>Minutas</h3>
+
+<p>Se mencionó que los guardas están utilizando inteligencia artificial para diligenciar las minutas y que envían pantallazos de las mismas.</p><h2>7. Ajuste de la póliza</h2>
+
+<p>Durante la reunión, se abordó el tema del ajuste de la póliza del conjunto residencial. Se mencionó que, debido a un avalúo más alto, era necesario realizar un ajuste en el presupuesto para cubrir el incremento en el costo de la póliza. Se indicó que el avalúo actual estaba dos mil millones por debajo del valor real y que la póliza estaba próxima a vencer.</p>
+
+<p>Se discutió la importancia de tener la póliza al día, especialmente ante la reciente temporada de lluvias y posibles reclamaciones por daños en los techos. Se enfatizó que el tema de la póliza era innegociable, ya que no contar con una cobertura adecuada podría acarrear graves consecuencias financieras para la copropiedad.</p>
+
+<p>Se informó que en marzo el incremento de la póliza sería de aproximadamente cuatro millones de pesos, y se solicitó a Margarita que actualizara la cotización, ya que el valor podría disminuir a medida que pasara el tiempo. Sin embargo, se aclaró que la actualización se realizaría desde el momento de la notificación y no desde diciembre.</p>
+
+<p><strong>Decisión:</strong> Se aprobó realizar el ajuste necesario en el presupuesto para cubrir el incremento en el costo de la póliza, con el fin de mantener la cobertura adecuada y evitar riesgos financieros para la copropiedad.</p><h2>8. Arreglo del chute (solicitud del señor Gómez)</h2>
+
+<p>Se abordó la solicitud del señor Gómez respecto al arreglo del chute de basuras, motivada por la presencia de malos olores en su apartamento.</p>
+
+<p>Durante la discusión, se consideró que, si bien el ducto del chute es un área común, el acceso al mismo desde el apartamento del señor Gómez es un área privada. En este sentido, se sugirió que la administración podría ofrecer al señor Gómez la limpieza del chute desde su acceso privado.</p>
+
+<p>Se mencionó la práctica habitual de realizar el mantenimiento de los chutes desde la parte inferior, lavando los ductos. Sin embargo, se reconoció que esta práctica se había interrumpido debido a las restricciones de acceso a los apartamentos.</p>
+
+<p>Se planteó la dificultad de realizar reparaciones en el recubrimiento del chute debido a la complejidad de acceder al espacio y realizar soldaduras. Se destacó que el acceso al chute es muy difícil.</p>
+
+<p>Ante la solicitud del señor Gómez, se propusieron las siguientes acciones:</p>
+
+<ul>
+ <li>Ofrecer al señor Gómez que Elkin, el todero, realice una limpieza de su acceso al chute con una escoba.</li>
+ <li>Enviar una comunicación a todos los copropietarios con recomendaciones sobre el manejo adecuado de las basuras, incluyendo el uso de bolsas resistentes y el cierre adecuado de las mismas.</li>
+ <li>Recordar la importancia de no arrojar elementos sueltos o bolsas rotas por el chute, ya que esto contribuye a la acumulación de residuos y la generación de malos olores.</li>
+ <li>Invitar a los propietarios a realizar la desinfección de sus accesos al chute con productos antibacteriales y aromatizantes.</li>
+</ul>
+
+<p>Se sugirió que, para el caso particular del señor Gómez, se le solicite autorización para que el todero realice la limpieza de su acceso al chute, advirtiéndole sobre la responsabilidad por cualquier daño que pudiera ocurrir durante la intervención.</p>
+
+<p>Se mencionó la posibilidad de organizar una brigada de limpieza y desinfección del chute con la participación de los propietarios, coordinando la limpieza desde los accesos individuales y la limpieza final en la parte inferior.</p>
+
+<p>Se hizo referencia a la costumbre del señor Gómez de presentar diferentes versiones de sus solicitudes, lo que dificulta la gestión de sus requerimientos.</p>
+
+<p>Se recordó que ya se han enviado circulares sobre el manejo de basuras, incluyendo una del año anterior sobre el manejo de jeringas, pero se reconoció la necesidad de reforzar estas comunicaciones.</p>
+
+<p>Se comentó que el señor Gómez también había solicitado el arreglo de la bisagra de la puerta del chute, la reparación de la malla de la cancha, el mantenimiento general y la solicitud de grabaciones de reuniones, pero que estas últimas no se le han proporcionado debido a la situación legal actual.</p>
+
+<p>Se concluyó que la solicitud del señor Gómez se enmarca dentro de sus funciones como administrador del conjunto, especialmente en lo contemplado en el artículo 51, numeral 7 de la ley 675 del 2001 y en concordancia con el artículo 78 del reglamento de propiedad horizontal.</p><h2>9. Encuesta de humedades</h2>
+
+<p>Se informa que el tema de la encuesta de humedades fue abordado durante la reunión. Se menciona que el día anterior se envió la encuesta de humedades y se espera iniciar las visitas la semana entrante, dependiendo de la recepción de las respuestas.</p>
+
+<p>Se indica que Adriana tiene el correo electrónico lleno de información relacionada con la encuesta.</p>
+
+<p>Posteriormente, se aborda una pregunta informativa sobre el tema de las humedades, a partir del caso particular de uno de los asistentes. Se plantea la duda sobre si existe la posibilidad de tener un retroactivo por gastos asumidos en la reparación de humedades en un apartamento, dado que se asumió el gasto sin pensar que fuera obligación del conjunto. Se aclara que, en caso de existir un reporte anterior sin respuesta, se podría considerar la situación, pero no aplica en este caso.</p>
+
+<p>Se recomienda hacer seguimiento al tema, ya que los arreglos son recientes y, en caso de presentarse nuevamente, se deberá reparar.</p><h2>10. Concepto de la pared</h2>
+
+<p>Durante la reunión, se abordó el tema del concepto de la pared, específicamente en relación con un informe del IDGER (Instituto Distrital de Gestión de Riesgos y Cambio Climático) y las acciones a seguir para su mantenimiento y reparación.</p>
+
+<p>Se mencionó que el IDGER realizó una visita y emitió un reporte indicando que, si bien existen fisuras en la pared, no hay peligro inminente de colapso. Sin embargo, el instituto determinó que es obligación de la copropiedad realizar el mantenimiento necesario y presentar los informes correspondientes a las visitas periódicas de la alcaldía. Se enfatizó que el archivo de estos mantenimientos quedará en la alcaldía, lo que hace aún más obligatorio realizar las reparaciones.</p>
+
+<p>Se discutió una cotización inicial de 3.044.400 pesos para las reparaciones, que incluye un grafil o con segmentos de malla soldada para las fisuras transversales y un rezane con un producto inyectado en las grietas. La administradora expresó su intención de buscar cotizaciones adicionales para garantizar la transparencia en el proceso.</p>
+
+<p>La señora Liliana sugirió revisar si el todero podría realizar parte del trabajo, utilizando materiales adecuados. Se mencionó la importancia de dejar trazabilidad de las reparaciones realizadas en el muro.</p>
+
+<p>Se planteó la necesidad de abordar la causalidad del problema, que se atribuye al crecimiento de los árboles cercanos y su contacto con las redes eléctricas. Se propuso solicitar a ENEL (Empresa de Energía de Bogotá) que intervenga los árboles para evitar futuros daños al muro y a la infraestructura eléctrica.</p>
+
+<p>Adicionalmente, se mencionó que se tenía una cita programada con un proveedor para cotizar una pancarta o aviso para el muro, dentro de los avisos que se deben instalar, relacionados con el sistema de CCTV (Circuito Cerrado de Televisión).</p>
+
+<p>En relación con este tema, la señora María Teresa sugirió la posibilidad de proceder con una tutela para que la Secretaría atienda la causalidad del problema, es decir, el manejo forestal adecuado de los árboles, y así evitar que la inversión en la reparación del muro se vea comprometida por causas externas.</p><h2>11. Pancarta y avisos para el muro</h2>
+
+<p>Durante la reunión, se mencionó brevemente el tema de la pancarta y los avisos para el muro. La administradora indicó que tenía una cita programada con el proveedor para cotizar una pancarta o un aviso para el muro, así como otros avisos relacionados con el sistema de CCTV.</p>
+
+<p>Adicionalmente, se sugirió la posibilidad de crear un mural en el muro, aunque se reconoció que el muro exterior ya es utilizado para este propósito y que las señoras del conjunto suelen limpiar las pintadas al día siguiente.</p>
+
+<p>Se acordó priorizar este tema, especialmente en lo que respecta al letrero, con el fin de salvaguardar los intereses del conjunto. Se espera obtener las cotizaciones necesarias para su análisis y posterior toma de decisiones.</p>
+<h2>12. Compensación de árboles</h2>
+
+<p>Durante la sección de "Proposiciones y Varios", la señora María Teresa Palacios preguntó sobre el estado de las compensaciones pendientes por la tala de árboles, tanto las recientes como las anteriores. Específicamente, se refirió a los dos árboles talados recientemente y a la falta de cuidado del árbol que estaba rebrotando, así como al estado general de las compensaciones gestionadas por la empresa de paisajismo.</p>
+
+<p>La administradora, Adriana Aguilar, respondió que las podas no exigían compensaciones, pero las talas sí. Explicó que había solicitado a la secretaría un estado de cuenta y le informaron que la agrupación no debía nada. Sin embargo, Alejandra, de la empresa de paisajismo, le sugirió esperar a que se cerraran los expedientes y luego pedir una certificación de cierre. Adriana Aguilar mencionó que se había pedido a Alejandra que retirara los árboles secos para poder sembrar algo en su lugar.</p>
+
+<p>La señora Liliana Jiménez intervino para aclarar que la tala del romero sí requería compensación. Adriana Aguilar confirmó que no tenía ese expediente en su posesión, pero Liliana Jiménez indicó que debía estar dentro del paquete recibido de Marleny. María Teresa Palacios insistió en que se aclarara si la empresa contratada había incluido en su gestión el tema de las compensaciones pendientes.</p>
+
+<p>Se debatió si la empresa de paisajismo debía encargarse de todo el proceso, incluyendo las compensaciones, o solo entregar las fichas de cierre y disposición. Se mencionó que en el contrato se especificaba que la empresa debía cumplir con el plan, pero las compensaciones se habían dejado para un acuerdo aparte. Don Ángel incluso había ofrecido plantas para la compensación.</p>
+
+<p>María Teresa Palacios insistió en la necesidad de cerrar los expedientes y preguntó si existía una certificación de que no se debía nada. Adriana Aguilar reiteró que tenía un oficio de la Secretaría del Ambiente que indicaba que no se debía nada, pero que Alejandra le había aconsejado esperar a la siguiente actividad para pedir el cierre de los expedientes.</p>
+
+<p>Se recordó que la tala del romero tenía una compensación de 8 árboles, y el total de todos los árboles talados sumaba 21. Se cuestionó por qué la empresa no había realizado la compensación, dado que el contrato incluía el cumplimiento del plan. Se mencionó que la empresa había dado una cotización aparte para la siembra de los árboles.</p>
+
+<p>Adriana Aguilar explicó que había solicitado el estado de cuenta para evitar deudas pendientes y que la Secretaría del Ambiente había respondido que no se debía nada. Sin embargo, se acordó que era necesario cerrar los expedientes para evitar problemas futuros.</p>
+
+<p>María Teresa Palacios enfatizó la obligación moral de compensar la tala del romero, independientemente de si existía una multa o no. Se mencionó que se había enviado un enlace con información sobre cómo realizar la compensación.</p>
+
+<p>Se aclaró que la compensación del romero debía realizarse dentro del predio, siguiendo los lineamientos técnicos establecidos en el manual de Sivicultura Urbana para Bogotá. Se debatió si era posible sembrar 21 romerones en el predio y se sugirió que podían ser árboles nativos.</p>
+
+<p>Finalmente, se acordó que Adriana Aguilar debía contactar a Alejandra para aclarar el estado de las compensaciones pendientes y cerrar los expedientes correspondientes.</p>
+<h2>13. Fotos del deterioro de fachadas</h2>
+
+<p>Durante la reunión, se mencionó que Néstor Dueñas había tomado fotos del deterioro de las fachadas. Se especificó que el deterioro se encuentra en las áreas donde se instalaron los tubos, los cuales no resolvieron el problema de filtración de agua, sino que trasladaron el agua a otras áreas, generando marcas de agua y la aparición de lama.</p>
+
+<p>Se indicó que Néstor Dueñas había tomado fotos de la entrada del bloque 7, mostrando el estado general de las fachadas.</p>
+
+<p>Se reconoció que el tema principal planteado por Néstor Dueñas es el deterioro de las fachadas en las áreas donde se instalaron los tubos, que no solucionaron el problema de filtración de agua, sino que trasladaron el agua a otras áreas, generando marcas de agua y la aparición de lama.</p>
+
+<p>Se mencionó que la comunicación de Néstor Dueñas sobre este tema se iba a tratar en la asamblea, pero Liliana Jiménez sugirió que se estudiara bien la carta, ya que contenía varios puntos que requerían análisis. Se acordó que la administración prepararía una respuesta con números, personas puntuales y fechas de intervención, buscando incluso al anterior proveedor que había ayudado en otros temas similares.</p>
+
+<p>Se indicó que se priorizaría la elaboración de un letrero y se sugirió la posibilidad de presentar una tutela para que la Secretaría atendiera la causalidad del problema y realizara un manejo forestal adecuado para evitar que la inversión del conjunto se viera afectada por causas externas.</p>
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 12:04</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se solicitará a Isela un listado con la verificación de las cédulas de los propietarios al 31 de diciembre de 2024 – <strong>Responsable:</strong> Adriana Aguilar e Isela</li>
+ <li>Se contestará el correo de Ana María Toro con la propuesta de acuerdo de pago, indicando que la primera cuota es clara y a partir de junio se dividirá el millón ochocientos en seis cuotas, restando el diez por ciento ya pagado – <strong>Responsable:</strong> No especificado</li>
+ <li>Se solicitará a la contadora que liquide los intereses por aparte y aplique todos los abonos a capital para Adriana Castillo, con el fin de tener la cifra exacta para presentar en la próxima asamblea – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una reunión del caso de Luz Elvira Sánchez, citando al comité de convivencia y a sus allegados, dejando un acta de que se le quería ayudar y qué propuesta se le hizo – <strong>Responsable:</strong> No especificado</li>
+ <li>Se ajustará el presupuesto para cubrir el incremento de la póliza, debido al avalúo más alto – <strong>Responsable:</strong> No especificado</li>
+ <li>Se realizará una comunicación para todo el conjunto con la recomendación de seguir lavando sus chuts y desinfecciones – <strong>Responsable:</strong> No especificado</li>
+ <li>Se priorizará el letrero y se obtendrán otras cotizaciones para el arreglo del muro – <strong>Responsable:</strong> Adriana Aguilar</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/Q3oKWaH2MeQsE3r
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/Q3oKWaH2MeQsE3r
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/tFzn38cj2L89s2R
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/tFzn38cj2L89s2R
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025/la_rabida_lr_rc_acta_070_20052025_finan_abril_2025_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/KqtjnpKP9djbJP6
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/KqtjnpKP9djbJP6
+Actualizando acta con nuevas URLs...
+Relanzamiento completado exitosamente para acta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
