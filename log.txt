@@ -5904,3 +5904,95 @@ URL pública obtenida: https://files.actasdereuniones.ai/s/KqtjnpKP9djbJP6
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/KqtjnpKP9djbJP6
 Actualizando acta con nuevas URLs...
 Relanzamiento completado exitosamente para acta: la_rabida_lr_rc_acta_070_20052025_finan_abril_2025.mp3
+Iniciando relanzamiento desde transcripción para acta ID: 6845f961-87d8-483a-ae2c-6fb247c8b010
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: 251201_001, File: 251201_001.mp3
+Borrando borrador: https://files.actasdereuniones.ai/s/Wf78CRXWdoR9y4A/download/251201_001_Borrador.docx
+Intentando borrar archivo: 251201_001_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Borrador.docx
+Archivo borrado exitosamente o ya no existe: 251201_001_Borrador.docx
+Borrando contenido: https://files.actasdereuniones.ai/s/54D9d9zf5c2zxJD/download/251201_001_Contenido.txt
+Intentando borrar archivo: 251201_001_Contenido.txt
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Archivo borrado exitosamente o ya no existe: 251201_001_Contenido.txt
+Leyendo transcripción: 251201_001_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: 251201_001_Transcripcion.txt
+Generando nuevo contenido desde transcripción...
+Verificando contenido existente: 251201_001_Contenido.txt
+Verificando archivo: 251201_001_Contenido.txt en carpeta: 251201_001
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: 251201_001.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 251201_001.mp3
+Error al generar contenido: Error al generar el Orden del Día después de varios intentos.
+Iniciando relanzamiento desde transcripción para acta ID: 6845f961-87d8-483a-ae2c-6fb247c8b010
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: 251201_001, File: 251201_001.mp3
+Borrando borrador: https://files.actasdereuniones.ai/s/Wf78CRXWdoR9y4A/download/251201_001_Borrador.docx
+Intentando borrar archivo: 251201_001_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Borrador.docx
+Archivo borrado exitosamente o ya no existe: 251201_001_Borrador.docx
+Borrando contenido: https://files.actasdereuniones.ai/s/54D9d9zf5c2zxJD/download/251201_001_Contenido.txt
+Intentando borrar archivo: 251201_001_Contenido.txt
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Archivo borrado exitosamente o ya no existe: 251201_001_Contenido.txt
+Leyendo transcripción: 251201_001_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: 251201_001_Transcripcion.txt
+Generando nuevo contenido desde transcripción...
+Verificando contenido existente: 251201_001_Contenido.txt
+Verificando archivo: 251201_001_Contenido.txt en carpeta: 251201_001
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: 251201_001.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 251201_001.mp3
+Error al generar contenido: Error al generar el Orden del Día después de varios intentos.
+Iniciando relanzamiento desde transcripción para acta ID: 6845f961-87d8-483a-ae2c-6fb247c8b010
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: 251201_001, File: 251201_001.mp3
+Borrando borrador: https://files.actasdereuniones.ai/s/Wf78CRXWdoR9y4A/download/251201_001_Borrador.docx
+Intentando borrar archivo: 251201_001_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Borrador.docx
+Archivo borrado exitosamente o ya no existe: 251201_001_Borrador.docx
+Borrando contenido: https://files.actasdereuniones.ai/s/54D9d9zf5c2zxJD/download/251201_001_Contenido.txt
+Intentando borrar archivo: 251201_001_Contenido.txt
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Archivo borrado exitosamente o ya no existe: 251201_001_Contenido.txt
+Leyendo transcripción: 251201_001_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: 251201_001_Transcripcion.txt
+Generando nuevo contenido desde transcripción...
+Verificando contenido existente: 251201_001_Contenido.txt
+Verificando archivo: 251201_001_Contenido.txt en carpeta: 251201_001
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: 251201_001.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 251201_001.mp3
+Error al generar contenido: Error al generar el Orden del Día después de varios intentos.
+Iniciando relanzamiento desde transcripción para acta ID: 6845f961-87d8-483a-ae2c-6fb247c8b010
+[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...
+Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...
+Folder: 251201_001, File: 251201_001.mp3
+Borrando borrador: https://files.actasdereuniones.ai/s/Wf78CRXWdoR9y4A/download/251201_001_Borrador.docx
+Intentando borrar archivo: 251201_001_Borrador.docx
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Borrador.docx
+Archivo borrado exitosamente o ya no existe: 251201_001_Borrador.docx
+Borrando contenido: https://files.actasdereuniones.ai/s/54D9d9zf5c2zxJD/download/251201_001_Contenido.txt
+Intentando borrar archivo: 251201_001_Contenido.txt
+Borrando archivo en ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Archivo borrado exitosamente o ya no existe: 251201_001_Contenido.txt
+Leyendo transcripción: 251201_001_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: 251201_001_Transcripcion.txt
+Generando nuevo contenido desde transcripción...
+Verificando contenido existente: 251201_001_Contenido.txt
+Verificando archivo: 251201_001_Contenido.txt en carpeta: 251201_001
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/251201_001/251201_001_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: 251201_001.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: 251201_001.mp3
+Error al generar contenido: Error al generar el Orden del Día después de varios intentos.

@@ -5,6 +5,7 @@ import { actas } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { borrarArchivoPorUrl } from "../generacion_contenido_services/utilsActions";
 import { obtenerContenidoArchivo } from "../generacion_contenido_services/utilsActions";
+import { formatContent } from "../generacion_contenido_services/formatContent";
 import { ActualizarProceso } from "./actualizarProceso";
 import { ActualizarProcesoPorId } from "./actualizarProcesoPorId";
 import { writeLog } from "../generacion_contenido_services/utilsActions";
@@ -169,22 +170,4 @@ export async function relanzarDesdeContenido(idActa: string) {
       message: `Error al relanzar acta desde contenido: ${error instanceof Error ? error.message : "Error desconocido"}`,
     };
   }
-}
-
-async function formatContent(
-  folder: string,
-  file: string,
-  contenidoExistente: string,
-): Promise<{
-  status: "success" | "error";
-  message?: string;
-  transcripcion?: string;
-  acta?: string;
-  contenido?: string;
-}> {
-  console.log(`[formatContent] Formatting content for: ${file}`);
-  // TODO: Implement your actual content formatting logic here.
-  // This is a placeholder implementation.
-  // For now, it returns a success object with placeholder URLs.
-  return { status: "success", transcripcion: "url/to/transcripcion", acta: "url/to/acta", contenido: contenidoExistente };
 }
