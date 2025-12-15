@@ -3516,3 +3516,86 @@ Obteniendo URL pública del contenido
 Obteniendo URL pública para archivo: /Actas/aud-20250929-wa0041/aud-20250929-wa0041_Contenido.txt
 URL pública obtenida: https://files.actasdereuniones.ai/s/5Sbk8cHSgCndnAN
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/5Sbk8cHSgCndnAN
+Verificando si existe transcripción: aud-20250929-wa00411_Transcripcion.txt
+Verificando archivo: aud-20250929-wa00411_Transcripcion.txt en carpeta: aud-20250929-wa00411
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aud-20250929-wa00411/aud-20250929-wa00411_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: aud-20250929-wa00411.m4a
+Guardando transcripción: aud-20250929-wa00411_Transcripcion.txt
+Transcripción guardada: aud-20250929-wa00411_Transcripcion.txt
+Verificando contenido existente: aud-20250929-wa00411_Contenido.txt
+Verificando archivo: aud-20250929-wa00411_Contenido.txt en carpeta: aud-20250929-wa00411
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aud-20250929-wa00411/aud-20250929-wa00411_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: aud-20250929-wa00411.m4a
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: aud-20250929-wa00411.m4a
+Guardando contenido en Nextcloud: aud-20250929-wa00411_Contenido.txt
+Contenido guardado: aud-20250929-wa00411_Contenido.txt
+Iniciando formateo de contenido para: aud-20250929-wa00411.m4a
+Verificando Borrador .docx existente: aud-20250929-wa00411_Borrador.docx
+Verificando archivo: aud-20250929-wa00411_Borrador.docx en carpeta: aud-20250929-wa00411
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/aud-20250929-wa00411/aud-20250929-wa00411_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: aud-20250929-wa00411_Borrador.docx
+Preparando guardado .docx en Nextcloud: aud-20250929-wa00411_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+<h1 style="text-align: center;">Acta de la Reunión</h1>
+<p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+<p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+<p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+<p><strong>Moderador:</strong> Dr. Mauricio</p>
+<p><strong>Asistentes:</strong></p>
+<ul>
+<li>Sandra - [CARGO NO ESPECIFICADO]</li>
+<li>Dr. Mauricio - Presidente</li>
+<li>Juan - [CARGO NO ESPECIFICADO]</li>
+<li>Juan - [CARGO NO ESPECIFICADO]</li>
+</ul>
+<h2>Orden del Día</h2>
+<ol>
+<li>Novedad importante para el consejo</li>
+<li>Orden de participación: Dr. Mauricio, Sr. Juan, Sra. Juan</li>
+</ol>
+</header>
+<h2>1. Novedad importante para el consejo</h2>
+
+<p>Inicialmente, se introduce el tema de una novedad importante para el consejo. Sin embargo, la discusión se desvía hacia la organización de la participación de los asistentes, específicamente el Dr. Mauricio, el Sr. Juan y la Sra. Juan.</p>
+<h2>2. Orden de participación: Dr. Mauricio, Sr. Juan, Sra. Juan</h2>
+
+<p>En relación con el orden de participación en la reunión, se establece que, tras una interrupción inicial, se dará la palabra al Dr. Mauricio, seguido por el Sr. Juan y, posteriormente, la Sra. Juan.</p>
+
+<div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>Se dará la palabra al doctor Mauricio, seguido por el señor Juan y la señora Juan – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/aud-20250929-wa00411/aud-20250929-wa00411_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/PcqanTpGfir6pYR
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/PcqanTpGfir6pYR
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/aud-20250929-wa00411/aud-20250929-wa00411_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/6fsJpbPNqG3DkaF
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/6fsJpbPNqG3DkaF
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/aud-20250929-wa00411/aud-20250929-wa00411_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/QC3Yw4cgmbJtJAD
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/QC3Yw4cgmbJtJAD

@@ -55,7 +55,8 @@ export async function POST(request: NextRequest) {
     }
 
     let fileName = "";
-    let userIdFromInvoice = "";
+
+    const user_id = formData.get('x_extra1') as string;
 
     if (invoice) {
       const tipo = process.env.NEXT_PUBLIC_PAGO || "acta";
@@ -63,16 +64,8 @@ export async function POST(request: NextRequest) {
       if (invoice.startsWith(tipo)) {
         withoutTipo = invoice.substring(tipo.length);
       }
-
       const lastDashIndex = withoutTipo.lastIndexOf('-');
-      const secondToLastDashIndex = withoutTipo.lastIndexOf('-', lastDashIndex - 1);
-
-      if (secondToLastDashIndex > 0) {
-        fileName = withoutTipo.substring(0, secondToLastDashIndex);
-        userIdFromInvoice = withoutTipo.substring(secondToLastDashIndex + 1, lastDashIndex);
-      } else {
-        fileName = withoutTipo;
-      }
+      fileName = lastDashIndex > 0 ? withoutTipo.substring(0, lastDashIndex) : withoutTipo;
     }
 
     if (!fileName) {
@@ -83,8 +76,6 @@ export async function POST(request: NextRequest) {
         x_response_reason_text: 'Referencia inválida'
       }, { status: 400 });
     }
-
-    const user_id = userIdFromInvoice;
 
     if (!user_id) {
       console.error('No se pudo extraer el user_id de la referencia:', invoice);
@@ -104,9 +95,7 @@ export async function POST(request: NextRequest) {
 
     if (response === 'Aceptada' || response === '1') {
 
-      try {
-
-        let codigoReferidoExistente: string | null = null;
+      let codigoReferidoExistente: string | null = null;
         try {
           const actaExistente = await db
             .select({
@@ -130,6 +119,7 @@ export async function POST(request: NextRequest) {
 
         }
 
+      try {       
         await ActualizarProceso(
           fileName,
           5,
