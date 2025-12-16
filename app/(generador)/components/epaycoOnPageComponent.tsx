@@ -41,6 +41,9 @@ const EPaycoOnPageComponent = (props: ePaycoOnPageComponentProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [checkoutHandler, setCheckoutHandler] = useState<any>(null);
   const [billingData, setBillingData] = useState<any>(null);
+  const processingTransactions = useRef(new Set<string>()).current;
+
+  const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   
   // Función para verificar si ya se mostró el toast para una transacción
   const hasToastBeenShown = (transactionId: string): boolean => {
@@ -552,14 +555,25 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     // Este callback se ejecuta cuando ePayco procesa el pago
     datosPago.onResponse = async (response: any) => {
       
+      const transactionId = response.x_transaction_id || "";
+      if (!transactionId) return;
+
+      if (processingTransactions.has(transactionId)) {
+        await sleep(2000);
+        if (hasToastBeenShown(transactionId)) {
+          return;
+        }
+      }
+      processingTransactions.add(transactionId);
 
       // Marcar que el pago fue procesado
       pagoProcesado = true;
       modalCerrado = true;
 
-      // Cerrar el modal INMEDIATAMENTE (ANTES de procesar)
-      cerrarModalEpayco();
-
+      try {
+        // Cerrar el modal INMEDIATAMENTE (ANTES de procesar)
+        cerrarModalEpayco();
+      
       // Polling ya no es necesario - se eliminó
 
       // Limpiar listeners (handleMessage se define más abajo)
@@ -647,7 +661,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
         // Mostrar toast con datos de la transacción (después de cerrar el modal)
         // Solo mostrar si no se ha mostrado antes para esta transacción
-        const transactionId = response.x_transaction_id || "";
+        
         await ActualizarProceso(
           props.file,
           undefined,
@@ -810,6 +824,9 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           undefined,
         ).catch(err => console.error("Error al actualizar (ignorado):", err));
       }
+      } finally {
+        processingTransactions.delete(transactionId);
+      }
     };
 
 
@@ -969,13 +986,22 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         // Si el callback onResponse no se ejecutó, usar este listener como respaldo
         if (response && (response.x_response || response.x_cod_response || response.respuesta || response.estado)) {
           
+          const transactionId = response.x_transaction_id || response.transactionId || response.ref_payco || "";
+          if (!transactionId) return;
+
+          if (processingTransactions.has(transactionId)) {
+            await sleep(2000);
+            if (hasToastBeenShown(transactionId)) {
+              return;
+            }
+          }
+          processingTransactions.add(transactionId);
 
           // Verificar si el pago fue exitoso
           const isSuccess = response.x_response === "Aceptada" ||
             response.x_cod_response === 1 ||
             response.respuesta === "Aceptada" ||
             response.estado === "Aceptada";
-
           if (isSuccess) {
             
 
@@ -983,125 +1009,124 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             pagoProcesado = true;
             modalCerrado = true;
 
-            // Esperar un momento antes de cerrar para que ePayco termine de procesar
-            setTimeout(() => {
-              cerrarModalEpayco();
-            }, 500);
-
-            // Prevenir cualquier navegación/redirección
-            if (typeof window !== "undefined") {
-              const currentUrl = window.location.href;
-
-              const preventNavigation = (e: BeforeUnloadEvent) => {
-                e.preventDefault();
-                e.returnValue = '';
-                return '';
-              };
-
-              window.addEventListener('beforeunload', preventNavigation);
-
-              let checkInterval = setInterval(() => {
-                if (window.location.href !== currentUrl) {
-                  const newUrl = window.location.href;
-                  if (newUrl.includes('epayco.co') || newUrl.includes('ref_payco') || newUrl.includes('secure.epayco') || newUrl.includes('landingresume') || newUrl.includes('?ref_payco=')) {
-                    
-                    window.stop();
-                    window.history.replaceState({}, '', currentUrl);
-                  }
-                }
-              }, 5);
-
-              setTimeout(() => {
-                clearInterval(checkInterval);
-                window.removeEventListener('beforeunload', preventNavigation);
-              }, 15000);
-            }
-
-            // Extraer datos de la respuesta
-            const transactionId = response.x_transaction_id || response.transactionId || response.ref_payco || "";
-            const amount = response.x_amount || response.amount || response.valor || "0";
-            const invoice = response.x_id_invoice || response.factura || referencia;
-
-            
-
-            // Remover el listener después de procesar
-            window.removeEventListener("message", handleMessage);
-
-            setIsLoading(false);
-
-            // Reproducir sonido de éxito
             try {
-              const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-              const oscillator = audioContext.createOscillator();
-              const gainNode = audioContext.createGain();
-              oscillator.connect(gainNode);
-              gainNode.connect(audioContext.destination);
-              oscillator.frequency.value = 600;
-              oscillator.type = "sine";
-              gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-              gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-              oscillator.start(audioContext.currentTime);
-              oscillator.stop(audioContext.currentTime + 0.3);
-
+              // Esperar un momento antes de cerrar para que ePayco termine de procesar
               setTimeout(() => {
-                try {
-                  const oscillator2 = audioContext.createOscillator();
-                  const gainNode2 = audioContext.createGain();
-                  oscillator2.connect(gainNode2);
-                  gainNode2.connect(audioContext.destination);
-                  oscillator2.frequency.value = 800;
-                  oscillator2.type = "sine";
-                  gainNode2.gain.setValueAtTime(0.3, audioContext.currentTime);
-                  gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-                  oscillator2.start(audioContext.currentTime);
-                  oscillator2.stop(audioContext.currentTime + 0.3);
-                } catch (e) {
-                  
-                }
-              }, 150);
-            } catch (error) {
-              
-            }
+                cerrarModalEpayco();
+              }, 500);
 
-            // Generar el acta usando handlePayment
-            if (props.handlePayment) {
-              
-              props.handlePayment();
-            }
+              // Prevenir cualquier navegación/redirección
+              if (typeof window !== "undefined") {
+                const currentUrl = window.location.href;
 
-            // Mostrar toast con datos de la transacción (después de cerrar el modal)
-            // Solo mostrar si no se ha mostrado antes para esta transacción
-            if (transactionId && !hasToastBeenShown(transactionId)) {
-              markToastAsShown(transactionId);
-            setTimeout(() => {
-              const amountNum = parseFloat(amount || "0");
+                const preventNavigation = (e: BeforeUnloadEvent) => {
+                  e.preventDefault();
+                  e.returnValue = '';
+                  return '';
+                };
 
-              toast.success("¡Pago Aprobado!", {
-                description: (
-                  <div className="space-y-3 mt-2">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Monto:</span>
-                      <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
+                window.addEventListener('beforeunload', preventNavigation);
+
+                let checkInterval = setInterval(() => {
+                  if (window.location.href !== currentUrl) {
+                    const newUrl = window.location.href;
+                    if (newUrl.includes('epayco.co') || newUrl.includes('ref_payco') || newUrl.includes('secure.epayco') || newUrl.includes('landingresume') || newUrl.includes('?ref_payco=')) {
+                      
+                      window.stop();
+                      window.history.replaceState({}, '', currentUrl);
+                    }
+                  }
+                }, 5);
+
+                setTimeout(() => {
+                  clearInterval(checkInterval);
+                  window.removeEventListener('beforeunload', preventNavigation);
+                }, 15000);
+              }
+
+              // Extraer datos de la respuesta
+              const amount = response.x_amount || response.amount || response.valor || "0";
+
+              // Remover el listener después de procesar
+              window.removeEventListener("message", handleMessage);
+
+              setIsLoading(false);
+
+              // Reproducir sonido de éxito
+              try {
+                const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                oscillator.frequency.value = 600;
+                oscillator.type = "sine";
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.3);
+
+                setTimeout(() => {
+                  try {
+                    const oscillator2 = audioContext.createOscillator();
+                    const gainNode2 = audioContext.createGain();
+                    oscillator2.connect(gainNode2);
+                    gainNode2.connect(audioContext.destination);
+                    oscillator2.frequency.value = 800;
+                    oscillator2.type = "sine";
+                    gainNode2.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                    oscillator2.start(audioContext.currentTime);
+                    oscillator2.stop(audioContext.currentTime + 0.3);
+                  } catch (e) {
+                    
+                  }
+                }, 150);
+              } catch (error) {
+                
+              }
+
+              // Generar el acta usando handlePayment
+              if (props.handlePayment) {
+                
+                props.handlePayment();
+              }
+
+              // Mostrar toast con datos de la transacción (después de cerrar el modal)
+              // Solo mostrar si no se ha mostrado antes para esta transacción
+              if (transactionId && !hasToastBeenShown(transactionId)) {
+                markToastAsShown(transactionId);
+              setTimeout(() => {
+                const amountNum = parseFloat(amount || "0");
+
+                toast.success("¡Pago Aprobado!", {
+                  description: (
+                    <div className="space-y-3 mt-2">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-700">Monto:</span>
+                        <span className="text-sm font-bold text-gray-900">${amountNum.toLocaleString('es-CO')} COP</span>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium text-gray-700">Tx:</span>
+                        <span className="text-xs font-mono text-gray-600">{transactionId}</span>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700">Tx:</span>
-                      <span className="text-xs font-mono text-gray-600">{transactionId}</span>
-                    </div>
-                  </div>
-                ),
-                duration: Infinity, // No se cierra automáticamente
-                action: {
-                  label: "Entendido",
-                  onClick: () => { },
-                },
-              });
-            }, 600); // Esperar a que se cierre el modal
+                  ),
+                  duration: Infinity, // No se cierra automáticamente
+                  action: {
+                    label: "Entendido",
+                    onClick: () => { },
+                  },
+                });
+              }, 600); // Esperar a que se cierre el modal
+              }
+            } finally {
+              processingTransactions.delete(transactionId);
             }
           } else {
             
 
             // Extraer datos de la respuesta
-            const transactionIdRejected = response.x_transaction_id || response.transactionId || response.ref_payco || "";
             const amountRejected = response.x_amount || response.amount || response.valor || "0";
             const invoiceRejected = response.x_id_invoice || response.factura || referencia;
 
@@ -1112,78 +1137,82 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
               cerrarModalEpayco();
             }, 500);
 
-            setIsLoading(false);
-
-            // Remover el listener después de procesar
-            window.removeEventListener("message", handleMessage);
-
-            // Actualizar acta a rechazado
             try {
-              await ActualizarProceso(
-                props.file,
-                9, // Estado: Rechazado
-                undefined,
-                parseFloat(amountRejected || "0"),
-                transactionIdRejected || "",
-                undefined,
-                invoiceRejected || "",
-                null,
-                null,
-                null,
-                false,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-                undefined,
-              ).catch(err => console.error("Error al actualizar (ignorado):", err));
+              setIsLoading(false);
 
-              await guardarFalloPagoService({
-                nombreActa: props.file,
-                detalleFallo: {
-                  'event_category': 'error',
-                  'event_label': response.x_response || 'Unknown status',
-                  'transaction_id': transactionIdRejected || '',
-                  'file_name': props.file,
-                  'duration': props.duration,
-                  'error_message': response.x_response_reason_text || response.x_response_reason || 'Pago rechazado'
-                }
-              }).catch(err => console.error("Error al guardar fallo (ignorado):", err));
+              // Remover el listener después de procesar
+              window.removeEventListener("message", handleMessage);
 
-              // Mostrar toast de error
-              setTimeout(() => {
-                const motivo = response.x_response_reason_text || response.x_response_reason || 'Razón desconocida';
-                toast.error("Pago Rechazado", {
-                  description: (
-                    <div className="space-y-2 mt-2">
-                      <p className="text-sm text-gray-700">
-                        Tu transacción fue rechazada. No se generará ningún acta.
-                      </p>
-                      <div className="pt-2 border-t border-gray-200">
-                        <p className="text-xs font-medium text-gray-600">Motivo:</p>
-                        <p className="text-xs text-gray-800 mt-1">{motivo}</p>
+              // Actualizar acta a rechazado
+              try {
+                await ActualizarProceso(
+                  props.file,
+                  9, // Estado: Rechazado
+                  undefined,
+                  parseFloat(amountRejected || "0"),
+                  transactionId || "",
+                  undefined,
+                  invoiceRejected || "",
+                  null,
+                  null,
+                  null,
+                  false,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                ).catch(err => console.error("Error al actualizar (ignorado):", err));
+
+                await guardarFalloPagoService({
+                  nombreActa: props.file,
+                  detalleFallo: {
+                    'event_category': 'error',
+                    'event_label': response.x_response || 'Unknown status',
+                    'transaction_id': transactionId || '',
+                    'file_name': props.file,
+                    'duration': props.duration,
+                    'error_message': response.x_response_reason_text || response.x_response_reason || 'Pago rechazado'
+                  }
+                }).catch(err => console.error("Error al guardar fallo (ignorado):", err));
+
+                // Mostrar toast de error
+                setTimeout(() => {
+                  const motivo = response.x_response_reason_text || response.x_response_reason || 'Razón desconocida';
+                  toast.error("Pago Rechazado", {
+                    description: (
+                      <div className="space-y-2 mt-2">
+                        <p className="text-sm text-gray-700">
+                          Tu transacción fue rechazada. No se generará ningún acta.
+                        </p>
+                        <div className="pt-2 border-t border-gray-200">
+                          <p className="text-xs font-medium text-gray-600">Motivo:</p>
+                          <p className="text-xs text-gray-800 mt-1">{motivo}</p>
+                        </div>
                       </div>
-                    </div>
-                  ),
-                  duration: Infinity,
-                  action: {
-                    label: "Entendido",
-                    onClick: () => { },
-                  },
-                });
-              }, 600);
-            } catch (error) {
-              console.error("❌ Error al procesar rechazo:", error);
-              setTimeout(() => {
-                toast.error("Pago Rechazado", {
-                  description: "Tu transacción fue rechazada. Por favor, intenta nuevamente.",
-                  duration: Infinity,
-                  action: {
-                    label: "Entendido",
-                    onClick: () => { },
-                  },
-                });
-              }, 600);
+                    ),
+                    duration: Infinity,
+                    action: {
+                      label: "Entendido",
+                      onClick: () => { },
+                    },
+                  });
+                }, 600);
+              } catch (error) {
+                console.error("❌ Error al procesar rechazo:", error);
+                setTimeout(() => {
+                  toast.error("Pago Rechazado", {
+                    description: "Tu transacción fue rechazada. Por favor, intenta nuevamente.",
+                    duration: Infinity,
+                    action: {
+                      label: "Entendido",
+                      onClick: () => { },
+                    },
+                  });
+                }, 600);
+              }
+            } finally {
+              processingTransactions.delete(transactionId);
             }
           }
         }

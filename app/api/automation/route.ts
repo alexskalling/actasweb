@@ -176,7 +176,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       );
     }
     try {
-      await BuscarExistenteProceso(nombreNormalizado, email);
+      await BuscarExistenteProceso(nombreNormalizado);
     } catch (error) {
       if (error instanceof Error && error.message === "DUPLICATE_ACTA") {
         return NextResponse.json(

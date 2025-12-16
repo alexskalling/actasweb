@@ -6,7 +6,6 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import AlertModalComponent from "./alertModalComponent";
-import DropdownIndustrias from "@/app/(generador)/components/dropdown_industrias";
 import ProgressBarComponent from "./progressBarComponent";
 import UploadDropzoneComponent from "./uploadDropzoneComponent";
 import EPaycoOnPageComponent from "./epaycoOnPageComponent";
@@ -51,7 +50,11 @@ interface MediaSelectorProps {
     nombre: string | null;
     email: string | null;
   } | null;
-  tipoAtencionSoporte?: "acta_nueva" | "regeneracion_total" | null;
+  tipoAtencionSoporte?:
+    | "acta_nueva"
+    | "regeneracion_total"
+    | "generar_desde_contenido"
+    | null;
   idTransaccionSoporte?: string;
   idUsuarioSoporte?: string | null;
   onPrecioCalculado?: (precio: number | null) => void;
@@ -99,11 +102,13 @@ export default function MediaFileUploaderComponent({
   const [pendingOriginalName, setPendingOriginalName] =
     React.useState<string>("");
   const [originalFileName, setOriginalFileName] = React.useState<string | null>(
-    null,
+    null
   );
   const [industriaId, setIndustriaId] = React.useState<number | null>(null);
   const [tipoDocumento, setTipoDocumento] = React.useState<string | null>(null);
-  const [numeroDocumento, setNumeroDocumento] = React.useState<string | null>(null);
+  const [numeroDocumento, setNumeroDocumento] = React.useState<string | null>(
+    null
+  );
   const lastAnimRef = React.useRef<SVGAnimateElement | null>(null);
   const [animacionTerminada, setAnimacionTerminada] = React.useState(false);
 
@@ -117,9 +122,9 @@ export default function MediaFileUploaderComponent({
     id: string;
     codigo: string;
   } | null>(null);
-  
+
   const [idActaExistente, setIdActaExistente] = React.useState<string | null>(
-    null,
+    null
   );
 
   const [actaParaRelanzar, setActaParaRelanzar] = React.useState<{
@@ -185,7 +190,7 @@ export default function MediaFileUploaderComponent({
   };
 
   const handleFileSelect = async (
-    event: React.ChangeEvent<HTMLInputElement>,
+    event: React.ChangeEvent<HTMLInputElement>
   ) => {
     if (disabled) {
       return;
@@ -202,20 +207,24 @@ export default function MediaFileUploaderComponent({
       if (file.size > MAX_FILE_SIZE) {
         const fileSizeMB = (file.size / 1024 / 1024).toFixed(2);
         const maxSizeMB = (MAX_FILE_SIZE / 1024 / 1024).toFixed(0);
-        setError(`El archivo es demasiado grande (${fileSizeMB} MB). Tamaño máximo permitido: ${maxSizeMB} MB`);
+        setError(
+          `El archivo es demasiado grande (${fileSizeMB} MB). Tamaño máximo permitido: ${maxSizeMB} MB`
+        );
         clearSelection();
         return;
       }
 
       if (file.size === 0) {
-        setError("El archivo seleccionado está vacío. Por favor selecciona un archivo válido.");
+        setError(
+          "El archivo seleccionado está vacío. Por favor selecciona un archivo válido."
+        );
         clearSelection();
         return;
       }
 
       if (!file.name || file.name.trim() === "") {
         setError(
-          "El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo.",
+          "El archivo seleccionado no tiene un nombre válido. Por favor selecciona otro archivo."
         );
         clearSelection();
         return;
@@ -231,7 +240,7 @@ export default function MediaFileUploaderComponent({
 
     if (isIOS && !file) {
       setError(
-        "Por favor selecciona un archivo válido. En iPhone, asegúrate de seleccionar desde 'Archivos' o usar la opción 'Grabar'.",
+        "Por favor selecciona un archivo válido. En iPhone, asegúrate de seleccionar desde 'Archivos' o usar la opción 'Grabar'."
       );
       return;
     }
@@ -247,12 +256,12 @@ export default function MediaFileUploaderComponent({
       try {
         const resultadoBusqueda = await buscarActaPorNombreYUsuario(
           nombreNormalizado,
-          usuarioSoporteSeleccionado.id,
+          usuarioSoporteSeleccionado.id
         );
 
         if (resultadoBusqueda.status === "error") {
           setModalMessage(
-            resultadoBusqueda.message || "Error al validar el acta",
+            resultadoBusqueda.message || "Error al validar el acta"
           );
           setIsDuplicateModal(false);
           setShowModal(true);
@@ -269,7 +278,7 @@ export default function MediaFileUploaderComponent({
           setDuplicado(false);
         } else {
           setModalMessage(
-            "Error al validar el acta. Por favor, intenta nuevamente.",
+            "Error al validar el acta. Por favor, intenta nuevamente."
           );
           setIsDuplicateModal(false);
           setShowModal(true);
@@ -280,7 +289,7 @@ export default function MediaFileUploaderComponent({
       } catch (error) {
         console.error("Error al validar acta para regeneración total:", error);
         setModalMessage(
-          "Error al validar el acta. Por favor, intenta nuevamente.",
+          "Error al validar el acta. Por favor, intenta nuevamente."
         );
         setIsDuplicateModal(false);
         setShowModal(true);
@@ -291,85 +300,89 @@ export default function MediaFileUploaderComponent({
     } else {
       setIdActaExistente(null);
 
-    try {
+      try {
         const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
 
-      if (actaExistente) {
-        const estado = actaExistente.idEstadoProceso;
+        if (actaExistente) {
+          const estado = actaExistente.idEstadoProceso;
 
-        if (estado && estado > 4) {
-          setPendingFile(file);
-          setPendingOriginalName(nombreNormalizado);
-            setModalMessage(
-              "Nombre de acta ocupado, Por favor usa otro nombre.",
-            );
-          setIsDuplicateModal(true);
-          setShowModal(true);
-          return;
-        }
-
-        if (estado === 4) {
-            const fechaProcesamiento = new Date(
-              actaExistente.fechaProcesamiento,
-            );
-          const ahora = new Date();
-            const diferenciaHoras =
-              (ahora.getTime() - fechaProcesamiento.getTime()) /
-              (1000 * 60 * 60);
-
-          if (diferenciaHoras < 20) {
-              if (actaExistente.urlAssembly && actaExistente.duracion && actaExistente.idUsuario) {
-              setActaParaRelanzar({
-                id: actaExistente.id,
-                nombre: actaExistente.nombre,
-                idEstadoProceso: actaExistente.idEstadoProceso,
-                fechaProcesamiento: fechaProcesamiento,
-                idUsuario: actaExistente.idUsuario,
-                urlAssembly: actaExistente.urlAssembly,
-                duracion: actaExistente.duracion,
-              });
-
-              return;
-            } else {
-              setPendingFile(file);
-              setPendingOriginalName(nombreNormalizado);
-                setModalMessage(
-                  "Nombre de acta ocupado, Por favor usa otro nombre.",
-                );
-              setIsDuplicateModal(true);
-              setShowModal(true);
-              return;
-            }
-          } else {
+          if (estado && estado > 4) {
             setPendingFile(file);
             setPendingOriginalName(nombreNormalizado);
-              setModalMessage(
-                "Nombre de acta ocupado, Por favor usa otro nombre.",
-              );
+            setModalMessage(
+              "Nombre de acta ocupado, Por favor usa otro nombre."
+            );
             setIsDuplicateModal(true);
             setShowModal(true);
             return;
           }
-        }
 
-        setPendingFile(file);
-        setPendingOriginalName(nombreNormalizado);
-        setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
-        setIsDuplicateModal(true);
-        setShowModal(true);
-        return;
-      } else {
-        setDuplicado(false);
-      }
-    } catch (error: unknown) {
-      console.error("Error al ejecutar BuscarAbiertoProceso:", error);
+          if (estado === 4) {
+            const fechaProcesamiento = new Date(
+              actaExistente.fechaProcesamiento
+            );
+            const ahora = new Date();
+            const diferenciaHoras =
+              (ahora.getTime() - fechaProcesamiento.getTime()) /
+              (1000 * 60 * 60);
+
+            if (diferenciaHoras < 20) {
+              if (
+                actaExistente.urlAssembly &&
+                actaExistente.duracion &&
+                actaExistente.idUsuario
+              ) {
+                setActaParaRelanzar({
+                  id: actaExistente.id,
+                  nombre: actaExistente.nombre,
+                  idEstadoProceso: actaExistente.idEstadoProceso,
+                  fechaProcesamiento: fechaProcesamiento,
+                  idUsuario: actaExistente.idUsuario,
+                  urlAssembly: actaExistente.urlAssembly,
+                  duracion: actaExistente.duracion,
+                });
+
+                return;
+              } else {
+                setPendingFile(file);
+                setPendingOriginalName(nombreNormalizado);
+                setModalMessage(
+                  "Nombre de acta ocupado, Por favor usa otro nombre."
+                );
+                setIsDuplicateModal(true);
+                setShowModal(true);
+                return;
+              }
+            } else {
+              setPendingFile(file);
+              setPendingOriginalName(nombreNormalizado);
+              setModalMessage(
+                "Nombre de acta ocupado, Por favor usa otro nombre."
+              );
+              setIsDuplicateModal(true);
+              setShowModal(true);
+              return;
+            }
+          }
+
+          setPendingFile(file);
+          setPendingOriginalName(nombreNormalizado);
+          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
+          setIsDuplicateModal(true);
+          setShowModal(true);
+          return;
+        } else {
+          setDuplicado(false);
+        }
+      } catch (error: unknown) {
+        console.error("Error al ejecutar BuscarAbiertoProceso:", error);
         setModalMessage(
-          "Error al verificar el nombre del acta. Por favor intenta nuevamente.",
+          "Error al verificar el nombre del acta. Por favor intenta nuevamente."
         );
-      setIsDuplicateModal(false);
-      setShowModal(true);
-      clearSelection();
-      return;
+        setIsDuplicateModal(false);
+        setShowModal(true);
+        clearSelection();
+        return;
       }
     }
 
@@ -385,7 +398,7 @@ export default function MediaFileUploaderComponent({
     ) {
       setError(
         "Por favor selecciona un archivo de audio o video válido. Formatos permitidos: " +
-          allowedExtensions.join(", "),
+          allowedExtensions.join(", ")
       );
 
       track("error_validacion_archivo", {
@@ -412,8 +425,8 @@ export default function MediaFileUploaderComponent({
     const media =
       file.type.startsWith("audio/") ||
       fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
-      ? new Audio(url)
-      : document.createElement("video");
+        ? new Audio(url)
+        : document.createElement("video");
     media.src = url;
     media.onloadedmetadata = () => {
       setDuration(media.duration);
@@ -513,7 +526,7 @@ export default function MediaFileUploaderComponent({
 
         if (estado && estado > 4) {
           setModalMessage(
-            "Este nombre también está ocupado. Por favor usa otro nombre.",
+            "Este nombre también está ocupado. Por favor usa otro nombre."
           );
           setIsDuplicateModal(true);
           setPendingOriginalName(nombreNormalizado);
@@ -527,7 +540,11 @@ export default function MediaFileUploaderComponent({
             (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
 
           if (diferenciaHoras < 20) {
-            if (actaExistente.urlAssembly && actaExistente.duracion && actaExistente.idUsuario) {
+            if (
+              actaExistente.urlAssembly &&
+              actaExistente.duracion &&
+              actaExistente.idUsuario
+            ) {
               setActaParaRelanzar({
                 id: actaExistente.id,
                 nombre: actaExistente.nombre,
@@ -546,7 +563,7 @@ export default function MediaFileUploaderComponent({
         }
 
         setModalMessage(
-          "Este nombre también está ocupado. Por favor usa otro nombre.",
+          "Este nombre también está ocupado. Por favor usa otro nombre."
         );
         setIsDuplicateModal(true);
         setPendingOriginalName(nombreNormalizado);
@@ -571,8 +588,8 @@ export default function MediaFileUploaderComponent({
       const media =
         pendingFile.type.startsWith("audio/") ||
         fileExtension.match(/\.(wav|mp3|m4a|aac|ogg|wma|flac)$/i)
-        ? new Audio(url)
-        : document.createElement("video");
+          ? new Audio(url)
+          : document.createElement("video");
       media.src = url;
       media.onloadedmetadata = () => {
         setDuration(media.duration);
@@ -587,7 +604,7 @@ export default function MediaFileUploaderComponent({
     } catch (error: unknown) {
       console.error("Error al renombrar archivo:", error);
       setModalMessage(
-        "Error al procesar el nuevo nombre. Por favor intenta nuevamente.",
+        "Error al procesar el nuevo nombre. Por favor intenta nuevamente."
       );
       setIsDuplicateModal(false);
     }
@@ -616,7 +633,7 @@ export default function MediaFileUploaderComponent({
 
     if (tipoAtencionSoporte === "regeneracion_total" && !idActaExistente) {
       alert(
-        "Error: No se encontró un acta válido para regenerar. Por favor, verifica que el archivo seleccionado corresponde a un acta pagado del usuario.",
+        "Error: No se encontró un acta válido para regenerar. Por favor, verifica que el archivo seleccionado corresponde a un acta pagado del usuario."
       );
       return;
     }
@@ -631,7 +648,7 @@ export default function MediaFileUploaderComponent({
     try {
       if (tipoAtencionSoporte === "regeneracion_total" && idActaExistente) {
         setUploadStatus("Regenerando acta existente...");
-        
+
         try {
           const updateResult = await ActualizarProcesoPorId(
             idActaExistente,
@@ -648,14 +665,14 @@ export default function MediaFileUploaderComponent({
             idUsuarioSoporte,
             undefined,
             undefined,
-            "regeneracion total",
+            "regeneracion total"
           );
 
           if (updateResult.status === "success") {
             onCheckActa?.();
           } else {
             console.warn(
-              "Advertencia: No se pudo actualizar el estado a 5, continuando con la regeneración...",
+              "Advertencia: No se pudo actualizar el estado a 5, continuando con la regeneración..."
             );
           }
         } catch (error) {
@@ -671,7 +688,7 @@ export default function MediaFileUploaderComponent({
             setUrlAssembly(urlAssemblyFinal);
           } else {
             throw new Error(
-              uploadResult.message || "Error al subir archivo a AssemblyAI",
+              uploadResult.message || "Error al subir archivo a AssemblyAI"
             );
           }
         }
@@ -687,7 +704,7 @@ export default function MediaFileUploaderComponent({
           carpetaParaProcesar,
           usuarioSoporteSeleccionado.email || "",
           usuarioSoporteSeleccionado.nombre || "Usuario",
-          idUsuarioSoporte,
+          idUsuarioSoporte
         );
 
         if (result.status === "success") {
@@ -696,13 +713,19 @@ export default function MediaFileUploaderComponent({
           setUploadStatus("Acta regenerada exitosamente");
           onCheckActa?.();
         } else {
-          setUploadStatus(`Error: ${result.message || "Error al regenerar el acta"}`);
-          alert(`Error al regenerar el acta: ${result.message || "Error desconocido"}`);
+          setUploadStatus(
+            `Error: ${result.message || "Error al regenerar el acta"}`
+          );
+          alert(
+            `Error al regenerar el acta: ${
+              result.message || "Error desconocido"
+            }`
+          );
         }
       } else {
         const soporteValue = "acta nueva";
         const txValue = idTransaccionSoporte || "";
-        
+
         await ActualizarProceso(
           nombreParaProcesar,
           5,
@@ -719,7 +742,7 @@ export default function MediaFileUploaderComponent({
           undefined,
           undefined,
           soporteValue,
-          usuarioSoporteSeleccionado.id,
+          usuarioSoporteSeleccionado.id
         );
 
         onCheckActa?.();
@@ -741,14 +764,24 @@ export default function MediaFileUploaderComponent({
           setUploadStatus("Acta generada exitosamente");
           onCheckActa?.();
         } else {
-          setUploadStatus(`Error: ${result.message || "Error al generar el acta"}`);
-          alert(`Error al generar el acta: ${result.message || "Error desconocido"}`);
+          setUploadStatus(
+            `Error: ${result.message || "Error al generar el acta"}`
+          );
+          alert(
+            `Error al generar el acta: ${result.message || "Error desconocido"}`
+          );
         }
       }
     } catch (error) {
       console.error("Error al generar acta:", error);
-      setUploadStatus(`Error: ${error instanceof Error ? error.message : "Error desconocido"}`);
-      alert(`Error al generar el acta: ${error instanceof Error ? error.message : "Error desconocido"}`);
+      setUploadStatus(
+        `Error: ${error instanceof Error ? error.message : "Error desconocido"}`
+      );
+      alert(
+        `Error al generar el acta: ${
+          error instanceof Error ? error.message : "Error desconocido"
+        }`
+      );
     } finally {
       setProcesando(false);
     }
@@ -767,7 +800,12 @@ export default function MediaFileUploaderComponent({
         const resultadoValidacion = await validarCodigo(codigoFinal, duration);
         if (!resultadoValidacion.valido) {
           setProcesando(false);
-          alert(`Error: ${resultadoValidacion.mensaje || "Código inválido o saldo insuficiente"}`);
+          alert(
+            `Error: ${
+              resultadoValidacion.mensaje ||
+              "Código inválido o saldo insuficiente"
+            }`
+          );
           setCodigoValido(false);
           setMensajeCodigo(resultadoValidacion.mensaje || "Código inválido");
           setCodigoValidado(null);
@@ -794,13 +832,13 @@ export default function MediaFileUploaderComponent({
       try {
         const reservaResult = await reservarMinutos(
           codigoValidado.id,
-          duration,
+          duration
         );
         if (!reservaResult.success) {
           setProcesando(false);
           alert(
             "Error al reservar minutos: " +
-              (reservaResult.message || "Error desconocido"),
+              (reservaResult.message || "Error desconocido")
           );
           return;
         }
@@ -859,7 +897,7 @@ export default function MediaFileUploaderComponent({
         undefined, // automation_mail
         codigoReferidoFinal || null, // codigoReferido
         undefined, // soporte
-        undefined, // idUsuarioActa
+        undefined // idUsuarioActa
       );
 
       onCheckActa?.();
@@ -874,14 +912,14 @@ export default function MediaFileUploaderComponent({
       session?.user?.email || "",
       session?.user?.name || "",
       false,
-      codigoFinal || undefined,
+      codigoFinal || undefined
     );
     if (result.status === "success") {
       setActa(result.acta ?? null);
       setTranscripcion(result.transcripcion ?? null);
       onCheckActa?.();
       setUploadStatus(
-        "Todo listo, tu borrador de acta está listo para ser descargado.",
+        "Todo listo, tu borrador de acta está listo para ser descargado."
       );
       setProcesando(false);
 
@@ -939,7 +977,7 @@ export default function MediaFileUploaderComponent({
       console.error("Error al validar código:", error);
       setCodigoValido(false);
       setMensajeCodigo(
-        "Error al validar el código. Por favor, intenta nuevamente.",
+        "Error al validar el código. Por favor, intenta nuevamente."
       );
       setCodigoValidado(null);
     } finally {
@@ -958,7 +996,6 @@ export default function MediaFileUploaderComponent({
     }
   };
 
-
   React.useEffect(() => {
     if (onPrecioCalculado && isSupportUser) {
       if (duration > 0 && selectedFile) {
@@ -971,7 +1008,7 @@ export default function MediaFileUploaderComponent({
   }, [duration, selectedFile, isSupportUser, onPrecioCalculado]);
 
   const tipoAtencionAnteriorRef = React.useRef<
-    "acta_nueva" | "regeneracion_total" | null
+    "acta_nueva" | "regeneracion_total" | "generar_desde_contenido" | null
   >(tipoAtencionSoporte);
 
   React.useEffect(() => {
@@ -1056,7 +1093,7 @@ export default function MediaFileUploaderComponent({
       const duracionSegundos = duracionASegundos(actaParaRelanzar.duracion);
       const resultado = await validarCodigo(
         codigoAtencionRelanzamiento.trim().toLowerCase(),
-        duracionSegundos,
+        duracionSegundos
       );
 
       if (resultado.valido && resultado.codigo) {
@@ -1075,7 +1112,7 @@ export default function MediaFileUploaderComponent({
       console.error("Error al validar código:", error);
       setCodigoValidoRelanzamiento(false);
       setMensajeCodigoRelanzamiento(
-        "Error al validar el código. Por favor, intenta nuevamente.",
+        "Error al validar el código. Por favor, intenta nuevamente."
       );
       setCodigoValidadoRelanzamiento(null);
     } finally {
@@ -1084,7 +1121,7 @@ export default function MediaFileUploaderComponent({
   };
 
   const handleCodigoChangeRelanzamiento = (
-    e: React.ChangeEvent<HTMLInputElement>,
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const valor = e.target.value;
     setCodigoAtencionRelanzamiento(valor);
@@ -1109,7 +1146,7 @@ export default function MediaFileUploaderComponent({
       !/^[A-Z0-9]{7}$/.test(codigoNormalizado)
     ) {
       setMensajeCodigoReferido(
-        "El código debe tener 7 caracteres alfanuméricos",
+        "El código debe tener 7 caracteres alfanuméricos"
       );
       setCodigoReferidoValido(false);
       return;
@@ -1128,14 +1165,14 @@ export default function MediaFileUploaderComponent({
       } else {
         setCodigoReferidoValido(false);
         setMensajeCodigoReferido(
-          resultado.mensaje || "Código de referido no válido",
+          resultado.mensaje || "Código de referido no válido"
         );
       }
     } catch (error) {
       console.error("Error al validar código de referido:", error);
       setCodigoReferidoValido(false);
       setMensajeCodigoReferido(
-        "Error al validar el código. Por favor, intenta nuevamente.",
+        "Error al validar el código. Por favor, intenta nuevamente."
       );
     } finally {
       setValidandoCodigoReferido(false);
@@ -1143,7 +1180,7 @@ export default function MediaFileUploaderComponent({
   };
 
   const handleCodigoReferidoChange = (
-    e: React.ChangeEvent<HTMLInputElement>,
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const valor = e.target.value
       .toUpperCase()
@@ -1168,7 +1205,7 @@ export default function MediaFileUploaderComponent({
   };
 
   const handlePaymentRelanzamiento = async (
-    codigoAtencionUsado?: string | null,
+    codigoAtencionUsado?: string | null
   ) => {
     if (
       !actaParaRelanzar ||
@@ -1189,16 +1226,16 @@ export default function MediaFileUploaderComponent({
       try {
         const resultadoValidacion = await validarCodigo(
           codigoFinal,
-          duracionSegundos,
+          duracionSegundos
         );
         if (!resultadoValidacion.valido) {
           alert(
             resultadoValidacion.mensaje ||
-              "Código inválido o saldo insuficiente",
+              "Código inválido o saldo insuficiente"
           );
           setCodigoValidoRelanzamiento(false);
           setMensajeCodigoRelanzamiento(
-            resultadoValidacion.mensaje || "Código inválido",
+            resultadoValidacion.mensaje || "Código inválido"
           );
           setCodigoValidadoRelanzamiento(null);
           return;
@@ -1219,13 +1256,13 @@ export default function MediaFileUploaderComponent({
         try {
           const reservaResult = await reservarMinutos(
             codigoValidadoRelanzamiento.id,
-            duracionSegundos,
+            duracionSegundos
           );
           if (!reservaResult.success) {
             setProcesandoRelanzamiento(false);
             alert(
               "Error al reservar minutos: " +
-                (reservaResult.message || "Error desconocido"),
+                (reservaResult.message || "Error desconocido")
             );
             return;
           }
@@ -1253,7 +1290,7 @@ export default function MediaFileUploaderComponent({
         undefined, // automation_mail
         undefined, // codigoReferido
         undefined, // soporte
-        undefined, // idUsuarioActa
+        undefined // idUsuarioActa
       );
 
       cerrarModalRelanzamiento();
@@ -1268,18 +1305,18 @@ export default function MediaFileUploaderComponent({
         session?.user?.name || "",
         false,
         codigoFinal || undefined,
-        actaParaRelanzar.idUsuario || undefined,
+        actaParaRelanzar.idUsuario || undefined
       )
         .then((result) => {
-        if (result.status === "success") {
-          onCheckActa?.();
-        } else {
-          console.error("Error al procesar el acta:", result.message);
-        }
+          if (result.status === "success") {
+            onCheckActa?.();
+          } else {
+            console.error("Error al procesar el acta:", result.message);
+          }
         })
         .catch((error) => {
-        console.error("Error al procesar el acta:", error);
-      });
+          console.error("Error al procesar el acta:", error);
+        });
     } catch (error) {
       console.error("Error al relanzar acta:", error);
       alert("Error al relanzar el acta. Por favor, intenta nuevamente.");
@@ -1307,7 +1344,9 @@ Información del acta:
 El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 COP. Por favor, ¿pueden ayudarme con el pago?`;
 
     const numeroWhatsApp = "56945871929";
-    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+      mensaje
+    )}`;
     window.open(urlWhatsApp, "_blank");
   };
 
@@ -1330,7 +1369,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     setCalculando(true);
     setError(null);
     setUploadStatus(
-      "Subiendo archivo, asi lo tendremos listo para ser procesado...",
+      "Subiendo archivo, asi lo tendremos listo para ser procesado..."
     );
     setUploadProgress(0);
 
@@ -1350,67 +1389,71 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     const nombreCarpeta = folder || nombreNormalizado.replace(/\.[^/.]+$/, "");
 
     if (!(isSupportUser && tipoAtencionSoporte === "regeneracion_total")) {
-    try {
-      const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
+      try {
+        const actaExistente = await BuscarAbiertoProceso(nombreNormalizado);
 
-      if (actaExistente) {
-        const estado = actaExistente.idEstadoProceso;
+        if (actaExistente) {
+          const estado = actaExistente.idEstadoProceso;
 
-        if (estado && estado > 4) {
+          if (estado && estado > 4) {
+            setPendingFile(selectedFile);
+            setPendingOriginalName(nombreNormalizado);
+            setModalMessage(
+              "Nombre de acta ocupado, Por favor usa otro nombre."
+            );
+            setIsDuplicateModal(true);
+            setShowModal(true);
+            setCalculando(false);
+            return;
+          }
+
+          if (estado === 4) {
+            const fechaProcesamiento = new Date(
+              actaExistente.fechaProcesamiento
+            );
+            const ahora = new Date();
+            const diferenciaHoras =
+              (ahora.getTime() - fechaProcesamiento.getTime()) /
+              (1000 * 60 * 60);
+
+            if (diferenciaHoras < 20) {
+              if (
+                actaExistente.urlAssembly &&
+                actaExistente.duracion &&
+                actaExistente.idUsuario
+              ) {
+                setActaParaRelanzar({
+                  id: actaExistente.id,
+                  nombre: actaExistente.nombre,
+                  idEstadoProceso: actaExistente.idEstadoProceso,
+                  fechaProcesamiento: fechaProcesamiento,
+                  idUsuario: actaExistente.idUsuario,
+                  urlAssembly: actaExistente.urlAssembly,
+                  duracion: actaExistente.duracion,
+                });
+                setCalculando(false);
+                return;
+              }
+            }
+          }
+
           setPendingFile(selectedFile);
           setPendingOriginalName(nombreNormalizado);
-            setModalMessage(
-              "Nombre de acta ocupado, Por favor usa otro nombre.",
-            );
+          setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
           setIsDuplicateModal(true);
           setShowModal(true);
           setCalculando(false);
           return;
         }
-
-        if (estado === 4) {
-            const fechaProcesamiento = new Date(
-              actaExistente.fechaProcesamiento,
-            );
-          const ahora = new Date();
-            const diferenciaHoras =
-              (ahora.getTime() - fechaProcesamiento.getTime()) /
-              (1000 * 60 * 60);
-
-          if (diferenciaHoras < 20) {
-              if (actaExistente.urlAssembly && actaExistente.duracion && actaExistente.idUsuario) {
-              setActaParaRelanzar({
-                id: actaExistente.id,
-                nombre: actaExistente.nombre,
-                idEstadoProceso: actaExistente.idEstadoProceso,
-                fechaProcesamiento: fechaProcesamiento,
-                idUsuario: actaExistente.idUsuario,
-                urlAssembly: actaExistente.urlAssembly,
-                duracion: actaExistente.duracion,
-              });
-              setCalculando(false);
-              return;
-            }
-          }
-        }
-
-        setPendingFile(selectedFile);
-        setPendingOriginalName(nombreNormalizado);
-        setModalMessage("Nombre de acta ocupado, Por favor usa otro nombre.");
-        setIsDuplicateModal(true);
+      } catch (error: unknown) {
+        console.error("Error al verificar duplicado antes de subir:", error);
+        setModalMessage(
+          "Error al verificar el nombre del acta. Por favor intenta nuevamente."
+        );
+        setIsDuplicateModal(false);
         setShowModal(true);
         setCalculando(false);
         return;
-      }
-    } catch (error: unknown) {
-      console.error("Error al verificar duplicado antes de subir:", error);
-        setModalMessage(
-          "Error al verificar el nombre del acta. Por favor intenta nuevamente.",
-        );
-      setIsDuplicateModal(false);
-      setShowModal(true);
-      setCalculando(false);
-      return;
       }
     }
 
@@ -1448,7 +1491,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
               if (isSupportUser) {
                 if (!usuarioSoporteSeleccionado) {
                   setModalMessage(
-                    "Error: Debe seleccionar un usuario para crear el acta.",
+                    "Error: Debe seleccionar un usuario para crear el acta."
                   );
                   setShowModal(true);
                   setCalculando(false);
@@ -1456,7 +1499,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 }
                 if (!tipoAtencionSoporte) {
                   setModalMessage(
-                    "Error: Debe seleccionar un tipo de atención.",
+                    "Error: Debe seleccionar un tipo de atención."
                   );
                   setShowModal(true);
                   setCalculando(false);
@@ -1464,7 +1507,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 }
                 if (!idUsuarioSoporte) {
                   setModalMessage(
-                    "Error: No se pudo obtener el ID del usuario de soporte.",
+                    "Error: No se pudo obtener el ID del usuario de soporte."
                   );
                   setShowModal(true);
                   setCalculando(false);
@@ -1482,17 +1525,17 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 if (!idUsuarioSoporte || typeof idUsuarioSoporte !== "string") {
                   console.error(
                     "❌ [ERROR] idUsuarioSoporte inválido:",
-                    idUsuarioSoporte,
+                    idUsuarioSoporte
                   );
                   setModalMessage(
-                    "Error: No se pudo obtener el ID del usuario de soporte.",
+                    "Error: No se pudo obtener el ID del usuario de soporte."
                   );
                   setShowModal(true);
                   setCalculando(false);
                   return;
                 }
                 codigoAtencionParaGuardar = idUsuarioSoporte;
-                
+
                 if (tipoAtencionSoporte === "acta_nueva") {
                   soporteParaGuardar = "acta nueva";
                 } else if (tipoAtencionSoporte === "regeneracion_total") {
@@ -1500,35 +1543,35 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 } else {
                   console.error(
                     "❌ [ERROR] tipoAtencionSoporte inválido:",
-                    tipoAtencionSoporte,
+                    tipoAtencionSoporte
                   );
                   setModalMessage("Error: Tipo de atención inválido.");
                   setShowModal(true);
                   setCalculando(false);
                   return;
                 }
-                
+
                 if (
                   soporteParaGuardar &&
                   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
-                    soporteParaGuardar,
+                    soporteParaGuardar
                   )
                 ) {
                   console.error(
                     "❌ [ERROR] soporteParaGuardar es un UUID cuando debería ser 'acta nueva' o 'regeneracion total':",
-                    soporteParaGuardar,
+                    soporteParaGuardar
                   );
                   setModalMessage("Error: Tipo de atención inválido.");
                   setShowModal(true);
                   setCalculando(false);
                   return;
                 }
-                
+
                 txValue =
                   tipoAtencionSoporte === "acta_nueva"
                     ? idTransaccionSoporte || ""
                     : undefined;
-                
+
                 if (
                   !usuarioSoporteSeleccionado ||
                   !usuarioSoporteSeleccionado.id ||
@@ -1536,17 +1579,17 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR] usuarioSoporteSeleccionado.id inválido:",
-                    usuarioSoporteSeleccionado,
+                    usuarioSoporteSeleccionado
                   );
                   setModalMessage(
-                    "Error: No se pudo obtener el ID del usuario seleccionado.",
+                    "Error: No se pudo obtener el ID del usuario seleccionado."
                   );
                   setShowModal(true);
                   setCalculando(false);
                   return;
                 }
                 idUsuarioParaActa = usuarioSoporteSeleccionado.id;
-                
+
                 if (
                   !soporteParaGuardar ||
                   (soporteParaGuardar !== "acta nueva" &&
@@ -1554,7 +1597,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR] soporteParaGuardar tiene valor incorrecto:",
-                    soporteParaGuardar,
+                    soporteParaGuardar
                   );
                   setModalMessage("Error: Tipo de atención inválido.");
                   setShowModal(true);
@@ -1567,10 +1610,10 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR] idUsuarioParaActa inválido:",
-                    idUsuarioParaActa,
+                    idUsuarioParaActa
                   );
                   setModalMessage(
-                    "Error: ID del usuario seleccionado inválido.",
+                    "Error: ID del usuario seleccionado inválido."
                   );
                   setShowModal(true);
                   setCalculando(false);
@@ -1582,7 +1625,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR] codigoAtencionParaGuardar inválido:",
-                    codigoAtencionParaGuardar,
+                    codigoAtencionParaGuardar
                   );
                   setModalMessage("Error: ID del usuario de soporte inválido.");
                   setShowModal(true);
@@ -1599,7 +1642,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR FINAL] soporteParaGuardar inválido:",
-                    soporteParaGuardar,
+                    soporteParaGuardar
                   );
                   setModalMessage("Error: Tipo de atención inválido.");
                   setShowModal(true);
@@ -1612,10 +1655,10 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR FINAL] idUsuarioParaActa inválido:",
-                    idUsuarioParaActa,
+                    idUsuarioParaActa
                   );
                   setModalMessage(
-                    "Error: ID del usuario seleccionado inválido.",
+                    "Error: ID del usuario seleccionado inválido."
                   );
                   setShowModal(true);
                   setCalculando(false);
@@ -1627,7 +1670,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 ) {
                   console.error(
                     "❌ [ERROR FINAL] codigoAtencionParaGuardar inválido:",
-                    codigoAtencionParaGuardar,
+                    codigoAtencionParaGuardar
                   );
                   setModalMessage("Error: ID del usuario de soporte inválido.");
                   setShowModal(true);
@@ -1635,14 +1678,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                   return;
                 }
               }
-              
+
               if (
                 isSupportUser &&
                 tipoAtencionSoporte === "regeneracion_total"
               ) {
               } else {
-
-              await GuardarNuevoProceso(
+                await GuardarNuevoProceso(
                   nombreParaGuardar, // 1. nombreActa
                   4, // 2. idEstadoProceso
                   ensureDurationFormat(duration), // 3. duracion
@@ -1658,33 +1700,33 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                   codigoAtencionParaGuardar || null, // 13. codigoAtencion
                   null, // 14. codigoReferido
                   soporteParaGuardar, // 15. soporte
-                  idUsuarioParaActa, // 16. idUsuarioSoporte
-              );
+                  idUsuarioParaActa // 16. idUsuarioSoporte
+                );
 
-              onCheckActa?.();
+                onCheckActa?.();
               }
             }
           } catch (error: unknown) {
             if (isSupportUser && tipoAtencionSoporte === "regeneracion_total") {
             } else {
-            const msg = error instanceof Error ? error.message : "";
+              const msg = error instanceof Error ? error.message : "";
 
-            if (
-              msg.includes("duplicate key value") ||
-              msg.includes("actas_nombre_acta_key") ||
-              msg.includes("23505") ||
-              msg.includes("DUPLICATE_ACTA")
-            ) {
+              if (
+                msg.includes("duplicate key value") ||
+                msg.includes("actas_nombre_acta_key") ||
+                msg.includes("23505") ||
+                msg.includes("DUPLICATE_ACTA")
+              ) {
                 setModalMessage(
-                  "Nombre de acta ocupado, Por favor usa otro nombre.",
+                  "Nombre de acta ocupado, Por favor usa otro nombre."
                 );
-              setShowModal(true);
-              clearSelection();
-            } else {
+                setShowModal(true);
+                clearSelection();
+              } else {
                 setModalMessage(
-                  "Ocurrió un error al crear el acta. Intenta nuevamente.",
+                  "Ocurrió un error al crear el acta. Intenta nuevamente."
                 );
-              setShowModal(true);
+                setShowModal(true);
               }
             }
           }
@@ -1701,7 +1743,8 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           event_label: selectedFile.type,
           value: selectedFile.size,
         });
-      } else { // Error en la carga directa
+      } else {
+        // Error en la carga directa
         // AQUÍ: Se muestra el mensaje de error de la subida, incluyendo el de timeout.
         // 'result.error' contendrá el mensaje "Timeout durante la subida del archivo a AssemblyAI."
         // que viene desde 'assemblyActions.ts'.
@@ -1716,7 +1759,8 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           event_label: result.error || "Unknown error",
         });
       }
-    } catch (error) { // Error al obtener la URL de carga o en la lógica previa
+    } catch (error) {
+      // Error al obtener la URL de carga o en la lógica previa
       setUploadStatus(`Error de red o al procesar la petición: ${error}`);
       console.error("Error al subir:", error);
       setCalculando(false);
@@ -1846,16 +1890,16 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
   }, []);
 
   const verifyBillingData = React.useCallback(async () => {
-      setCheckingBillingData(true);
-      try {
-        const check = await checkBillingData();
-        setHasBillingData(check.hasCompleteData);
-      } catch (error) {
-        console.error("Error al verificar datos de facturación:", error);
-        setHasBillingData(false);
-      } finally {
-        setCheckingBillingData(false);
-      }
+    setCheckingBillingData(true);
+    try {
+      const check = await checkBillingData();
+      setHasBillingData(check.hasCompleteData);
+    } catch (error) {
+      console.error("Error al verificar datos de facturación:", error);
+      setHasBillingData(false);
+    } finally {
+      setCheckingBillingData(false);
+    }
   }, []);
 
   React.useEffect(() => {
@@ -2125,7 +2169,11 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                     </div>
                     {mensajeCodigoReferido && (
                       <p
-                        className={`mt-2 text-xs ${codigoReferidoValido ? "text-green-600" : "text-red-600"}`}
+                        className={`mt-2 text-xs ${
+                          codigoReferidoValido
+                            ? "text-green-600"
+                            : "text-red-600"
+                        }`}
                       >
                         {mensajeCodigoReferido}
                       </p>
@@ -2142,20 +2190,20 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 {selectedFile !== null &&
                   acta === null &&
                   transcripcion === null && (
-                  <Button
-                    className="w-full rounded-sm"
-                    variant="outline"
-                    onClick={() => {
+                    <Button
+                      className="w-full rounded-sm"
+                      variant="outline"
+                      onClick={() => {
                         track("cancel_button_click", {
                           event_category: "engagement",
                           event_label: "cancel_button_clicked",
-                      });
-                      clearSelection();
-                    }}
-                  >
-                    Cancelar
-                  </Button>
-                )}
+                        });
+                        clearSelection();
+                      }}
+                    >
+                      Cancelar
+                    </Button>
+                  )}
 
                 {uploadProgress === 100 &&
                   selectedFile !== null &&
@@ -2209,9 +2257,9 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                           className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white disabled:bg-gray-400 disabled:cursor-not-allowed"
                           onClick={handleGenerateSoporte}
                           disabled={
-                            procesando || 
-                            !usuarioSoporteSeleccionado || 
-                            !tipoAtencionSoporte || 
+                            procesando ||
+                            !usuarioSoporteSeleccionado ||
+                            !tipoAtencionSoporte ||
                             !idUsuarioSoporte ||
                             (tipoAtencionSoporte === "acta_nueva" &&
                               !idTransaccionSoporte?.trim()) ||
@@ -2244,7 +2292,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                                   <strong>
                                     $
                                     {calculatePrice(duration).toLocaleString(
-                                      "es-CO",
+                                      "es-CO"
                                     )}{" "}
                                     COP
                                   </strong>
@@ -2297,7 +2345,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                                       onPaymentClick={(
                                         handleOpenWidget:
                                           | (() => void)
-                                          | undefined,
+                                          | undefined
                                       ) => {
                                         if (handleOpenWidget) {
                                           handleOpenWidget();
@@ -2311,7 +2359,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                                       className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
                                       onClick={() =>
                                         handlePayment(
-                                          codigoValidado?.codigo || null,
+                                          codigoValidado?.codigo || null
                                         )
                                       }
                                       disabled={procesando}
@@ -3105,127 +3153,131 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         actaParaRelanzar.urlAssembly &&
         actaParaRelanzar.nombre &&
         actaParaRelanzar.duracion && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto">
               <h3 className="text-lg font-semibold mb-4">
                 Relanzar acta: {actaParaRelanzar.nombre}
               </h3>
-            <p className="text-sm text-gray-600 mb-4">
+              <p className="text-sm text-gray-600 mb-4">
                 Duración: {actaParaRelanzar.duracion} | Costo: $
                 {calculatePrice(
-                  duracionASegundos(actaParaRelanzar.duracion),
+                  duracionASegundos(actaParaRelanzar.duracion)
                 ).toLocaleString("es-CO")}{" "}
                 COP
-            </p>
+              </p>
 
               {}
-            <div className="mb-4">
-              <label className="flex items-center gap-2 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={tieneCodigoAtencionRelanzamiento}
-                  onChange={(e) => {
-                    setTieneCodigoAtencionRelanzamiento(e.target.checked);
-                    if (!e.target.checked) {
+              <div className="mb-4">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={tieneCodigoAtencionRelanzamiento}
+                    onChange={(e) => {
+                      setTieneCodigoAtencionRelanzamiento(e.target.checked);
+                      if (!e.target.checked) {
                         setCodigoAtencionRelanzamiento("");
-                      setCodigoValidoRelanzamiento(false);
-                      setCodigoValidadoRelanzamiento(null);
+                        setCodigoValidoRelanzamiento(false);
+                        setCodigoValidadoRelanzamiento(null);
                         setMensajeCodigoRelanzamiento("");
-                    }
-                  }}
-                  className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
-                />
+                      }
+                    }}
+                    className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
+                  />
                   <span className="text-sm text-gray-700">
                     ¿Tienes código de atención?
                   </span>
-              </label>
-            </div>
+                </label>
+              </div>
 
               {}
-            {tieneCodigoAtencionRelanzamiento && (
-              <div className="mb-4 space-y-2">
-                <div className="flex gap-2">
-                  <input
-                    type="text"
-                    value={codigoAtencionRelanzamiento}
-                    onChange={handleCodigoChangeRelanzamiento}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        e.preventDefault();
-                        handleValidarCodigoRelanzamiento();
-                      }
-                    }}
-                    placeholder="Ingresa el código"
-                    className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none text-sm"
-                  />
-                  <Button
-                    onClick={handleValidarCodigoRelanzamiento}
+              {tieneCodigoAtencionRelanzamiento && (
+                <div className="mb-4 space-y-2">
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={codigoAtencionRelanzamiento}
+                      onChange={handleCodigoChangeRelanzamiento}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          handleValidarCodigoRelanzamiento();
+                        }
+                      }}
+                      placeholder="Ingresa el código"
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none text-sm"
+                    />
+                    <Button
+                      onClick={handleValidarCodigoRelanzamiento}
                       disabled={
                         validandoCodigoRelanzamiento ||
                         !codigoAtencionRelanzamiento.trim()
                       }
-                    className="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
-                  >
+                      className="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-700 text-white rounded-md disabled:bg-gray-400 disabled:cursor-not-allowed"
+                    >
                       {validandoCodigoRelanzamiento
                         ? "Validando..."
                         : "Validar"}
-                  </Button>
-                </div>
-                {mensajeCodigoRelanzamiento && (
+                    </Button>
+                  </div>
+                  {mensajeCodigoRelanzamiento && (
                     <p
-                      className={`text-sm ${codigoValidoRelanzamiento ? "text-green-600" : "text-red-600"}`}
+                      className={`text-sm ${
+                        codigoValidoRelanzamiento
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
                     >
-                    {mensajeCodigoRelanzamiento}
-                  </p>
-                )}
-              </div>
-            )}
+                      {mensajeCodigoRelanzamiento}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {}
               {!tieneCodigoAtencionRelanzamiento ||
               !codigoValidoRelanzamiento ? (
-              <EPaycoOnPageComponent
+                <EPaycoOnPageComponent
                   costo={calculatePrice(
-                    duracionASegundos(actaParaRelanzar.duracion),
+                    duracionASegundos(actaParaRelanzar.duracion)
                   )}
-                file={actaParaRelanzar.nombre}
-                folder={actaParaRelanzar.nombre.replace(/\.[^/.]+$/, "")}
-                fileid={actaParaRelanzar.urlAssembly}
+                  file={actaParaRelanzar.nombre}
+                  folder={actaParaRelanzar.nombre.replace(/\.[^/.]+$/, "")}
+                  fileid={actaParaRelanzar.urlAssembly}
                   duration={duracionASegundos(
-                    actaParaRelanzar.duracion,
+                    actaParaRelanzar.duracion
                   ).toString()}
-                handlePayment={() => handlePaymentRelanzamiento()}
+                  handlePayment={() => handlePaymentRelanzamiento()}
                   tipoDocumento={tipoDocumento}
                   numeroDocumento={numeroDocumento}
-                nombreUsuario={session?.user?.name || undefined}
-                emailUsuario={session?.user?.email || undefined}
-              />
-            ) : (
-              <Button
-                className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
+                  nombreUsuario={session?.user?.name || undefined}
+                  emailUsuario={session?.user?.email || undefined}
+                />
+              ) : (
+                <Button
+                  className="w-full rounded-sm bg-purple-600 hover:bg-purple-700 text-white"
                   onClick={() =>
                     handlePaymentRelanzamiento(
-                      codigoValidadoRelanzamiento?.codigo || null,
+                      codigoValidadoRelanzamiento?.codigo || null
                     )
                   }
-                disabled={procesandoRelanzamiento}
-              >
+                  disabled={procesandoRelanzamiento}
+                >
                   {procesandoRelanzamiento
                     ? "Generando acta..."
                     : "Generar con código"}
-              </Button>
-            )}
+                </Button>
+              )}
 
-            <button
-              onClick={cerrarModalRelanzamiento}
-              disabled={procesandoRelanzamiento}
-              className="mt-4 w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Cancelar
-            </button>
+              <button
+                onClick={cerrarModalRelanzamiento}
+                disabled={procesandoRelanzamiento}
+                className="mt-4 w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Cancelar
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
     </>
   );
 }

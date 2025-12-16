@@ -19,6 +19,7 @@ import { reenviarCorreoActa } from "../services/actas_querys_services/reenviarCo
 import { getUsuarioDeActa } from "../services/actas_querys_services/getUsuarioDeActa";
 import { calculatePrice } from "../utils/price";
 import { getUserData } from "../plataforma/perfil/actions/getUserData";
+import { relanzarDesdeContenido } from "../services/actas_querys_services/relanzarDesdeContenido";
 
 interface Acta {
   id: string;
@@ -84,6 +85,14 @@ export default function HistorialActasComponent({
     actaParaRelanzarDesdeTranscripcion,
     setActaParaRelanzarDesdeTranscripcion,
   ] = useState<Acta | null>(null);
+  const [
+    actaParaRelanzarDesdeContenido,
+    setActaParaRelanzarDesdeContenido,
+  ] = useState<Acta | null>(null);
+  const [
+    procesandoRelanzamientoDesdeContenido,
+    setProcesandoRelanzamientoDesdeContenido,
+  ] = useState(false);
   const [
     procesandoRelanzamientoDesdeTranscripcion,
     setProcesandoRelanzamientoDesdeTranscripcion,
@@ -314,7 +323,7 @@ export default function HistorialActasComponent({
     document.body.removeChild(link);
 
   };
-
+//necesito aqui para los usuarios con permisos para relanzar desde transcripcion tambien tengan un boton para relanzar desde contenido 
   const handleDownloadBorrador = async (acta: Acta) => {
     try {
       if (!acta.urlBorrador) {
@@ -547,6 +556,75 @@ export default function HistorialActasComponent({
     setProcesandoRelanzamientoDesdeTranscripcion(false);
   };
 
+  const handleRelanzarDesdeContenido = (acta: Acta) => {
+    setActaParaRelanzarDesdeContenido(acta);
+  };
+
+  const cerrarModalRelanzamientoDesdeContenido = () => {
+    setActaParaRelanzarDesdeContenido(null);
+    setProcesandoRelanzamientoDesdeContenido(false);
+  };
+
+  const handleConfirmarRelanzamientoDesdeContenido = async () => {
+    if (!actaParaRelanzarDesdeContenido) {
+      return;
+    }
+
+    setProcesandoRelanzamientoDesdeContenido(true);
+    cerrarModalRelanzamientoDesdeContenido();
+
+    try {
+      // Actualizar estado a 5 (En generación)
+      await ActualizarProcesoPorId(
+        actaParaRelanzarDesdeContenido.id,
+        5,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        "regeneracion desde contenido",
+      );
+
+      await cargarActas(true);
+
+      toast.success("Regeneración de borrador iniciada", {
+        description:
+          "El borrador se está regenerando. Se actualizará automáticamente cuando esté listo.",
+        duration: 5000,
+      });
+
+      // Iniciar proceso en background
+      relanzarDesdeContenido(actaParaRelanzarDesdeContenido.id)
+        .then((resultado) => {
+          if (resultado.status === "success") {
+            cargarActas(true);
+          } else {
+            toast.error("Error en regeneración", {
+              description: resultado.message || "Error al regenerar el borrador",
+              duration: 5000,
+            });
+            cargarActas(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error al regenerar desde contenido:", error);
+          toast.error("Error", {
+            description: "Ocurrió un error al regenerar el borrador.",
+            duration: 5000,
+          });
+          cargarActas(true);
+        });
+    } catch (error) {
+      // ... manejo de error ...
+    }
+  };
   const handleConfirmarRelanzamientoDesdeTranscripcion = async () => {
     if (!actaParaRelanzarDesdeTranscripcion) {
       return;
@@ -1348,6 +1426,28 @@ Por favor, ¿pueden ayudarme?`;
                               </span>
                             </button>
                           )}
+                        {isSupportUser &&
+                          acta.idEstadoProceso !== null &&
+                          acta.idEstadoProceso > 4 && (
+                            <button
+                              onClick={() =>
+                                handleRelanzarDesdeContenido(acta)
+                              }
+                              className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-cyan-600 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors flex-shrink-0 shadow-sm"
+                              aria-label="Relanzar desde contenido"
+                              title="Relanzar desde contenido"
+                            >
+                              <svg xmlns="http://www.w3.org/2000/svg" className="size-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                <path d="m12 12-4-4 4-4" />
+                                <path d="M8 12h12" />
+                              </svg>
+                              <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs font-medium text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+                                Relanzar desde contenido
+                                <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-1 w-2 h-2 bg-gray-900 rotate-45"></span>
+                              </span>
+                            </button>
+                          )}
                         {}
                         {isSupportUser && acta.idEstadoProceso === 6 && (
                           <button
@@ -1573,6 +1673,16 @@ Por favor, ¿pueden ayudarme?`;
         onClose={cerrarModalRelanzamientoDesdeTranscripcion}
         onConfirm={handleConfirmarRelanzamientoDesdeTranscripcion}
         loading={procesandoRelanzamientoDesdeTranscripcion}
+        message="Esto borrará la transcripción y el borrador actuales para generar unos nuevos. ¿Deseas continuar?"
+      />
+
+      {}
+      <ConfirmRelanzarModalComponent
+        open={actaParaRelanzarDesdeContenido !== null}
+        onClose={cerrarModalRelanzamientoDesdeContenido}
+        onConfirm={handleConfirmarRelanzamientoDesdeContenido}
+        loading={procesandoRelanzamientoDesdeContenido}
+        message="Esto borrará el borrador actual para generar uno nuevo desde el contenido. ¿Deseas continuar?"
       />
 
       {}

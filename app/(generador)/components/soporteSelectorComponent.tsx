@@ -8,9 +8,7 @@ import {
 
 interface SoporteSelectorProps {
   onUsuarioSeleccionado?: (usuario: UsuarioEncontrado | null) => void;
-  onTipoAtencionSeleccionado?: (
-    tipo: "acta_nueva" | "regeneracion_total" | null,
-  ) => void;
+  onTipoAtencionSeleccionado?: (tipo: "acta_nueva" | "regeneracion_total" | null) => void;
   onIdTransaccionCambiado?: (idTransaccion: string) => void;
   precioActa?: number | null;
 }
@@ -21,9 +19,7 @@ export default function SoporteSelectorComponent({
   onIdTransaccionCambiado,
   precioActa = null,
 }: SoporteSelectorProps) {
-  const [tipoAtencion, setTipoAtencion] = useState<
-    "acta_nueva" | "regeneracion_total" | null
-  >(null);
+  const [tipoAtencion, setTipoAtencion] = useState<"acta_nueva" | "regeneracion_total" | null>(null);
   const [busquedaEmail, setBusquedaEmail] = useState("");
   const [usuariosEncontrados, setUsuariosEncontrados] = useState<
     UsuarioEncontrado[]
@@ -105,7 +101,7 @@ export default function SoporteSelectorComponent({
   };
 
   const handleCambiarTipoAtencion = (
-    tipo: "acta_nueva" | "regeneracion_total",
+    tipo: "acta_nueva" | "regeneracion_total"
   ) => {
     setTipoAtencion(tipo);
     onTipoAtencionSeleccionado?.(tipo);
