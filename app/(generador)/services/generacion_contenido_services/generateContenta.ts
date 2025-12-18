@@ -67,7 +67,7 @@ export async function generateContenta(
     let responseGeminiOrdenDelDia;
     let retryCountOrdenDelDia = 0;
     const maxRetriesOrdenDelDia = 3;
-    let modelNameOrdenDelDia = "gemini-2.0-flash";
+    let modelNameOrdenDelDia = "gemini-2.5-flash";
 
     while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
       try {
