@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { ActualizarProceso } from '@/app/(generador)/services/actas_querys_services/actualizarProceso';
-import { getUserEmailFromSession } from "@/lib/auth/session/getEmailSession";
-import { getUserIdByEmail } from "@/lib/auth/session/getIdOfEmail";
 import { db } from "@/lib/db/db";
-import { actas } from "@/lib/db/schema";
-import { eq, and } from "drizzle-orm";
+import { actas } from '@/lib/db/schema';
+import { and, eq } from 'drizzle-orm';
 import crypto from 'crypto';
+import { getActaStatusByName } from '@/app/(generador)/services/actas_querys_services/getActaStatusByName';
 
 function validateEpaycoSignature(formData: FormData): boolean {
   const pKey = process.env.EPAYCO_P_KEY || process.env.P_KEY;
@@ -56,22 +55,17 @@ export async function POST(request: NextRequest) {
     }
 
     let fileName = "";
+
+    const user_id = formData.get('x_extra1') as string;
+
     if (invoice) {
       const tipo = process.env.NEXT_PUBLIC_PAGO || "acta";
-
       let withoutTipo = invoice;
       if (invoice.startsWith(tipo)) {
         withoutTipo = invoice.substring(tipo.length);
       }
-
       const lastDashIndex = withoutTipo.lastIndexOf('-');
-      if (lastDashIndex > 0) {
-
-        fileName = withoutTipo.substring(0, lastDashIndex);
-      } else {
-
-        fileName = withoutTipo;
-      }
+      fileName = lastDashIndex > 0 ? withoutTipo.substring(0, lastDashIndex) : withoutTipo;
     }
 
     if (!fileName) {
@@ -83,17 +77,26 @@ export async function POST(request: NextRequest) {
       }, { status: 400 });
     }
 
+    if (!user_id) {
+      console.error('No se pudo extraer el user_id de la referencia:', invoice);
+      return NextResponse.json({ message: "Confirmación recibida pero sin user_id en la factura." });
+    }
+
+    const idEstadoProcesoActual = await getActaStatusByName(fileName, user_id);
+
+    if (idEstadoProcesoActual && idEstadoProcesoActual >= 5) {
+      console.log(`Notificación para el acta "${fileName}" ignorada porque ya fue procesada. Estado actual: ${idEstadoProcesoActual}.`);
+      return NextResponse.json({
+        x_cod_response: 1,
+        x_response: 'Aceptada',
+        x_response_reason_text: 'Transacción ya procesada anteriormente.'
+      });
+    }
+
     if (response === 'Aceptada' || response === '1') {
 
-      try {
-
-        let codigoReferidoExistente: string | null = null;
+      let codigoReferidoExistente: string | null = null;
         try {
-          const mail = await getUserEmailFromSession();
-          const user_id = !mail
-            ? 'a817fffe-bc7e-4e29-83f7-b512b039e817'
-            : (await getUserIdByEmail(mail)) || 'a817fffe-bc7e-4e29-83f7-b512b039e817';
-
           const actaExistente = await db
             .select({
               codigoReferido: actas.codigoReferido,
@@ -116,6 +119,7 @@ export async function POST(request: NextRequest) {
 
         }
 
+      try {       
         await ActualizarProceso(
           fileName,
           5,
@@ -198,4 +202,3 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest) {
   return POST(request);
 }
-

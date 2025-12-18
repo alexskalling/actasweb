@@ -148,11 +148,10 @@ async function retryUpload(
 }
 
 export async function uploadFileToAssemblyAI(
-  formData: FormData,
+  archivo: File,
   onUploadProgress?: (progress: number) => void,
 ): Promise<UploadResult> {
   const ASSEMBLYAI_API_KEY = process.env.NEXT_PUBLIC_ASSEMBLY_API_KEY;
-  const archivo = formData.get("audioFile") as File;
 
   if (!ASSEMBLYAI_API_KEY) {
     console.error("Error: API Key de AssemblyAI no configurada.");
@@ -248,8 +247,8 @@ export async function uploadFileToAssemblyAI(
     if (error instanceof Error) {
       if (error.message === "Timeout") {
         errorMessage =
-          "La subida del archivo tomó demasiado tiempo. Por favor intenta con un archivo más pequeño o verifica tu conexión.";
-        errorDetails = "Timeout en la subida";
+          "La subida tardó demasiado y se agotó el tiempo de espera. Por favor, verifica tu conexión a internet e intenta de nuevo.";
+        errorDetails = "Timeout durante la subida del archivo a AssemblyAI.";
       } else if (
         error.message.includes("Network error") ||
         error.message.includes("Failed to fetch")
