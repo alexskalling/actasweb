@@ -24,18 +24,6 @@ interface ePaycoOnPageComponentProps {
   numeroDocumento?: string | null;
 }
 
-declare global {
-  interface Window {
-    ePayco?: {
-      checkout?: {
-        configure: (config: { key: string; test: boolean }) => {
-          open: (data: any) => void;
-        };
-      };
-    };
-  }
-}
-
 const EPaycoOnPageComponent = (props: ePaycoOnPageComponentProps) => {
   const { data: session } = useSession();
   const [isLoading, setIsLoading] = useState(false);

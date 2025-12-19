@@ -21036,3 +21036,1987 @@ URL pública obtenida: https://files.actasdereuniones.ai/s/ryPPkye5qxqHcAz
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/ryPPkye5qxqHcAz
 Actualizando acta con nuevas URLs...
 Relanzamiento completado exitosamente para acta: mateo_ossa_p._consejo_monteleone_15_dic.m4a
+Verificando si existe transcripción: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+Verificando archivo: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt en carpeta: mateo_ossa_p._consejo_porto_vitta_10_dic
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: mateo_ossa_p._consejo_porto_vitta_10_dic.m4a
+Guardando transcripción: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+Transcripción guardada: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+[DIAGNOSE] Attempting to list available models...
+[DIAGNOSE] API Response Status: 200
+[DIAGNOSE] Available Models: {
+  "models": [
+    {
+      "name": "models/embedding-gecko-001",
+      "version": "001",
+      "displayName": "Embedding Gecko",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 1024,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedText",
+        "countTextTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-2.5-flash",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash",
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-pro",
+      "version": "2.5",
+      "displayName": "Gemini 2.5 Pro",
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash Experimental",
+      "description": "Gemini 2.0 Flash Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash",
+      "description": "Gemini 2.0 Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash 001",
+      "description": "Stable version of Gemini 2.0 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in January of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp-image-generation",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "description": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite 001",
+      "description": "Stable version of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite",
+      "description": "Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview-02-05",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview 02-05",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-exp-1206",
+      "version": "2.5-exp-03-25",
+      "displayName": "Gemini Experimental 1206",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-tts",
+      "version": "gemini-2.5-flash-exp-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Flash Preview TTS",
+      "description": "Gemini 2.5 Flash Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.5-pro-preview-tts",
+      "version": "gemini-2.5-pro-preview-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Pro Preview TTS",
+      "description": "Gemini 2.5 Pro Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemma-3-1b-it",
+      "version": "001",
+      "displayName": "Gemma 3 1B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-4b-it",
+      "version": "001",
+      "displayName": "Gemma 3 4B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-12b-it",
+      "version": "001",
+      "displayName": "Gemma 3 12B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-27b-it",
+      "version": "001",
+      "displayName": "Gemma 3 27B",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e4b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E4B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e2b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E2B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemini-flash-latest",
+      "version": "Gemini Flash Latest",
+      "displayName": "Gemini Flash Latest",
+      "description": "Latest release of Gemini Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-flash-lite-latest",
+      "version": "Gemini Flash-Lite Latest",
+      "displayName": "Gemini Flash-Lite Latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-pro-latest",
+      "version": "Gemini Pro Latest",
+      "displayName": "Gemini Pro Latest",
+      "description": "Latest release of Gemini Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-image-preview",
+      "version": "2.0",
+      "displayName": "Nano Banana",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1
+    },
+    {
+      "name": "models/gemini-2.5-flash-image",
+      "version": "2.0",
+      "displayName": "Nano Banana",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-09-2025",
+      "version": "Gemini 2.5 Flash Preview 09-2025",
+      "displayName": "Gemini 2.5 Flash Preview Sep 2025",
+      "description": "Gemini 2.5 Flash Preview Sep 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite-preview-09-2025",
+      "version": "2.5-preview-09-25",
+      "displayName": "Gemini 2.5 Flash-Lite Preview Sep 2025",
+      "description": "Preview release (Septempber 25th, 2025) of Gemini 2.5 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-preview",
+      "version": "3-pro-preview-11-2025",
+      "displayName": "Gemini 3 Pro Preview",
+      "description": "Gemini 3 Pro Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-flash-preview",
+      "version": "3-flash-preview-12-2025",
+      "displayName": "Gemini 3 Flash Preview",
+      "description": "Gemini 3 Flash Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-image-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/nano-banana-pro-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-robotics-er-1.5-preview",
+      "version": "1.5-preview",
+      "displayName": "Gemini Robotics-ER 1.5 Preview",
+      "description": "Gemini Robotics-ER 1.5 Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-computer-use-preview-10-2025",
+      "version": "Gemini 2.5 Computer Use Preview 10-2025",
+      "displayName": "Gemini 2.5 Computer Use Preview 10-2025",
+      "description": "Gemini 2.5 Computer Use Preview 10-2025",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/deep-research-pro-preview-12-2025",
+      "version": "deepthink-exp-05-20",
+      "displayName": "Deep Research Pro Preview (Dec-12-2025)",
+      "description": "Preview release (December 12th, 2025) of Deep Research Pro",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/embedding-001",
+      "version": "001",
+      "displayName": "Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/text-embedding-004",
+      "version": "004",
+      "displayName": "Text Embedding 004",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp-03-07",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental 03-07",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-001",
+      "version": "001",
+      "displayName": "Gemini Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ]
+    },
+    {
+      "name": "models/aqa",
+      "version": "001",
+      "displayName": "Model that performs Attributed Question Answering.",
+      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+      "inputTokenLimit": 7168,
+      "outputTokenLimit": 1024,
+      "supportedGenerationMethods": [
+        "generateAnswer"
+      ],
+      "temperature": 0.2,
+      "topP": 1,
+      "topK": 40
+    },
+    {
+      "name": "models/imagen-4.0-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 (Preview)",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 Ultra (Preview)",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Ultra",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-fast-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Fast",
+      "description": "Vertex served Imagen 4.0 Fast model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/veo-2.0-generate-001",
+      "version": "2.0",
+      "displayName": "Veo 2",
+      "description": "Vertex served Veo 2 model. Access to this model requires billing to be enabled on the associated Google Cloud Platform account. Please visit https://console.cloud.google.com/billing to enable it.",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3",
+      "description": "Veo 3",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-fast-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3 fast",
+      "description": "Veo 3 fast",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.1-generate-preview",
+      "version": "3.1",
+      "displayName": "Veo 3.1",
+      "description": "Veo 3.1",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    }
+  ],
+  "nextPageToken": "Ch9tb2RlbHMvdmVvLTMuMS1nZW5lcmF0ZS1wcmV2aWV3"
+}
+Verificando contenido existente: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Verificando archivo: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt en carpeta: mateo_ossa_p._consejo_porto_vitta_10_dic
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: mateo_ossa_p._consejo_porto_vitta_10_dic.m4a
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: mateo_ossa_p._consejo_porto_vitta_10_dic.m4a
+[Attempt 1/3] Generando Orden del Día con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Cabecera con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Autorización para grabar la sesión con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Revisión del Análisis de Vulnerabilidad y Seguridad con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Evaluación del Contrato de Seguridad con Miro con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Propuestas y Cotizaciones para Mejoras de Seguridad con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Presupuesto y Financiación de Mejoras de Seguridad con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Gestión de Cartera y Estado Financiero con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Mantenimiento y Obras Pendientes con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Personal de Apoyo para Temporada de Diciembre con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Temas Varios y Próxima Reunión con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Cierre con modelo models/gemini-2.5-flash
+Guardando contenido en Nextcloud: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Contenido guardado: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+[REFINAMIENTO] Iniciando proceso para: mateo_ossa_p._consejo_porto_vitta_10_dic.m4a
+Verificando archivo: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt en carpeta: mateo_ossa_p._consejo_porto_vitta_10_dic
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Contenido del archivo obtenido exitosamente: mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+Verificando archivo: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt en carpeta: mateo_ossa_p._consejo_porto_vitta_10_dic
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.
+[REFINAMIENTO] Intento 1/2 usando el modelo: gemini-2.0-flash
+[REFINAMIENTO] Error en el intento 1 con gemini-2.0-flash: Not Found
+[REFINAMIENTO] Intento 2/2 usando el modelo: gemini-2.0-pro
+[REFINAMIENTO] Error en el intento 2 con gemini-2.0-pro: Not Found
+Iniciando formateo de contenido para: mateo_ossa_p._consejo_porto_vitta_10_dic.m4a
+Verificando Borrador .docx existente: mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx
+Verificando archivo: mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx en carpeta: mateo_ossa_p._consejo_porto_vitta_10_dic
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx
+Preparando guardado .docx en Nextcloud: mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de Reunión sobre Seguridad y Análisis de Vulnerabilidad del Edificio</h1>
+ <p><strong>Fecha:</strong> 10 de diciembre de 2023</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: 7:56 PM</p>
+ <p><strong>Lugar:</strong> Puerto Vita</p>
+ <p><strong>Moderador:</strong> Miguel - Administración</p>
+ <p><strong>Asistentes:</strong></p>
+ <ul>
+ <li>Don Luis - Consejero</li>
+ <li>Doña Clara Correa - Consejera</li>
+ <li>Don Jorge - Presidente del Consejo</li>
+ <li>Nelson - Representante de Miro Seguridad</li>
+ <li>Juan David Gutierrez - Director de Riesgos de Miro Seguridad</li>
+ <li>Mateo - Administración</li>
+ <li>Fabio - Consejero</li>
+ <li>Alfredo - Consejero</li>
+ </ul>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Autorización para grabar la sesión</li>
+ <li>Revisión del Análisis de Vulnerabilidad y Seguridad</li>
+ <li>Evaluación del Contrato de Seguridad con Miro</li>
+ <li>Propuestas y Cotizaciones para Mejoras de Seguridad</li>
+ <li>Presupuesto y Financiación de Mejoras de Seguridad</li>
+ <li>Gestión de Cartera y Estado Financiero</li>
+ <li>Mantenimiento y Obras Pendientes</li>
+ <li>Personal de Apoyo para Temporada de Diciembre</li>
+ <li>Temas Varios y Próxima Reunión</li>
+ </ol>
+</header><h2>1. Autorización para grabar la sesión</h2>
+
+La sesión dio inicio con una solicitud formal por parte de la persona que dirigía la reunión. Se pidió a los asistentes que otorgaran su autorización para grabar la totalidad del encuentro. El propósito de esta grabación fue especificado claramente, indicando que su uso sería exclusivo para la elaboración y verificación del acta correspondiente. Tras la formulación de la pregunta a los participantes sobre su parecer, se constató la conformidad general con la propuesta, lo que permitió proceder con el registro de la sesión sin objeciones.<h2>2. Revisión del Análisis de Vulnerabilidad y Seguridad</h2>
+
+La reunión inició con la presentación del informe de gestión de riesgo, actualizado por los representantes de Miro, el señor Miguel y el señor Juan David Gutiérrez, director de riesgos de la compañía, a raíz de los sucesos del 22 de noviembre. Se informó que el análisis se enmarca en la norma ISO 31000 para la gestión de riesgos y abarca la ubicación geográfica de la unidad, así como un análisis del entorno personal. Este estudio identificó riesgos habituales como intentos de intrusión, hurto, situaciones relacionadas con la gestión vehicular y la presencia de personas sospechosas.
+
+El informe detalló seis riesgos específicos para el conjunto residencial: hurto, secuestro, suplantación, agresión, extorsión e intrusión. Se indicó que la responsabilidad de implementar las recomendaciones recae en el edificio y la administración, dado que son quienes gestionan los recursos. El señor Jorge expresó su descontento con esta postura, manifestando que la empresa de seguridad parecía "lavarse las manos" de su responsabilidad.
+
+<h3>Informe de gestión de riesgo (ISO 31000, riesgos identificados)</h3>
+
+El informe de Miro, basado en la norma ISO 31000, identificó los riesgos mencionados y sus posibles impactos. Sin embargo, el señor Jorge criticó la naturaleza genérica del informe, señalando que no ofrecía soluciones concretas ni asumía responsabilidades por parte de la empresa de seguridad, lo que generaba "resquemores" entre los asistentes. Se destacó que la reunión tenía como objetivo principal buscar soluciones para minimizar riesgos futuros.
+
+<h3>Control y capacitación de porteros (uso de celular, rutinas, tiempos de respuesta)</h3>
+
+El señor Jorge manifestó una profunda inquietud respecto al desempeño de los porteros, enfatizando que su rol principal es la seguridad y no el de recepcionistas. Relató incidentes donde la apertura de la puerta vehicular tardó 45 y 22 segundos, respectivamente, y observó a vigilantes utilizando sus teléfonos celulares en la garita, lo que, a su juicio, los distraía de sus funciones. Subrayó que la inversión en tecnología es ineficaz si el factor humano no está consciente de su responsabilidad.
+
+La señora Clara Correa corroboró estas observaciones, mencionando que en ocasiones ha esperado más de un minuto para que le abran la puerta. Se discutió la conveniencia de mantener a los mismos guardias, con el señor Juan David Gutiérrez de Miro señalando que la rotación podría ser ventajosa para evitar la "confianza" que, en su experiencia, puede comprometer la seguridad. No obstante, reconoció que la rotación podría generar incomodidades entre los residentes.
+
+Nelson de Miro afirmó que los vigilantes reciben capacitaciones mensuales y ofreció reforzar estos programas. El señor Jorge insistió en la necesidad de que los vigilantes cambien sus rutinas, ya que la predictibilidad de estas facilita la observación por parte de posibles intrusos.
+
+<h3>Fallas en la vigilancia durante la intrusión del 22 de noviembre (versiones de vigilantes, videos, reflector, luz encendida)</h3>
+
+El señor Fabio cuestionó vehementemente cómo tres individuos pudieron ingresar y salir por la puerta principal del conjunto sin ser detectados por los vigilantes. Se hizo referencia a los videos de seguridad, donde se observó al vigilante John Baker dentro de la portería, dando la espalda a las cámaras, entrando al baño y calentando comida mientras los intrusos cruzaban. En el momento de la salida de los sujetos, el vigilante Freddy estaba saliendo de un cuarto de aseo, hablando por celular. Los vigilantes, en sus versiones, afirmaron no haber visto a los intrusos.
+
+Se mencionaron como posibles factores que obstruyeron la visual de los vigilantes un reflector y la luz encendida en la portería. Sin embargo, el señor Fabio rechazó categóricamente estas explicaciones, calificándolas de "bobadas" y exigiendo conclusiones profesionales y no meras versiones de los implicados. Se recordó que la administración había instruido previamente a los vigilantes a no salir de la portería bajo ninguna circunstancia, lo que generó un debate sobre la pertinencia de esta instrucción en situaciones específicas, como la necesidad de verificar un vehículo sospechoso.
+
+El señor Fabio insistió en que la empresa de seguridad debía reconocer una falla en su equipo y en el personal asignado, argumentando que la ausencia de conclusiones claras impedía la toma de correctivos y la mitigación de riesgos futuros. Se reveló que Freddy estaba hablando por celular debido a una situación personal delicada, ya que su madre había fallecido un mes antes y vivía solo con su padre.
+
+<h3>Pruebas de confiabilidad a vigilantes</h3>
+
+El señor Juan David Gutiérrez informó que se realizaron pruebas de confiabilidad a los cuatro vigilantes involucrados, a través de un tercero acreditado ante la Superintendencia. Estas pruebas se enfocaron en descartar cualquier participación directa, entrega de información, omisiones o lucro económico relacionado con los hechos. Según el informe del tercero, se descartó la participación directa del personal de vigilancia en la intrusión. A pesar de este resultado, el señor Fabio expresó escepticismo sobre la utilidad de las pruebas si, aun así, se consideraba la rotación de los vigilantes.
+
+<h3>Rotación y evaluación de desempeño de vigilantes</h3>
+
+El señor Juan David Gutiérrez sugirió que la decisión sobre la rotación de los vigilantes debe ser tomada por la comunidad, reconociendo que esta medida podría generar incomodidades. Propuso una rotación escalonada, comenzando con los vigilantes más antiguos, para evitar un impacto abrupto en el servicio. Asimismo, enfatizó la importancia de la evaluación de desempeño individual de cada persona, solicitando la participación activa de la administración y el consejo para recolectar información de los residentes que sirva como insumo para estas evaluaciones. Se planteó que, si un portero no se adapta al perfil requerido, debería ser reubicado en otro servicio.
+
+<h3>Aportes de la empresa de seguridad (supervisión, antecedentes, asesoría, capacitación)</h3>
+
+El señor Nelson de Miro detalló los aportes que la empresa está realizando para mejorar la seguridad:
+<ul>
+ <li><strong>Supervisión:</strong> Un supervisor realiza rondas internas durante el día para apoyar la vigilancia, especialmente en ausencia de un rondero diurno.</li>
+ <li><strong>Antecedentes:</strong> Ofrecimiento de apoyo en la toma de antecedentes para empleados de reformas o en otras situaciones que lo requieran.</li>
+ <li><strong>Ampliación de puntos de marcación:</strong> Instalación de puntos adicionales para una mayor cobertura de control.</li>
+ <li><strong>Pruebas de confiabilidad:</strong> Realización de pruebas a los vigilantes para descartar cualquier complicidad en los incidentes.</li>
+ <li><strong>Asesoría en seguridad:</strong> Ofrecimiento de visitas de asesoría en seguridad para los apartamentos que lo consideren necesario, sin obligación de adquirir productos o servicios de Miro.</li>
+ <li><strong>Actualización del análisis de riesgos:</strong> Presentación del informe de análisis de vulnerabilidad y riesgos.</li>
+ <li><strong>Capacitación y recertificación:</strong> Implementación de cursos específicos en seguridad residencial para los vigilantes.</li>
+ <li><strong>Capacitación para copropietarios:</strong> Ofrecimiento de programas de capacitación en seguridad para los residentes.</li>
+ <li><strong>Selección de personal:</strong> El personal asignado para la temporada de diciembre cuenta con formación en seguridad residencial y experiencia previa dentro de la organización.</li>
+</ul>
+El señor Fabio cuestionó la ausencia de un aporte económico directo por parte de Miro para solucionar el problema, a lo que Nelson respondió que los recursos económicos ya se habían entregado recientemente y que los aportes de la empresa se centraban en servicios y asesoría.
+
+<h3>Recomendaciones de seguridad identificadas en el análisis</h3>
+
+El informe de Miro incluyó una serie de recomendaciones para mejorar la seguridad del conjunto, derivadas del análisis de vulnerabilidad:
+<ul>
+ <li>Implementar herramientas de seguridad electrónica en cada apartamento con monitoreo a distancia y CCTV, destacando que el apartamento afectado no tenía su alarma activada.</li>
+ <li>Considerar la implementación de un servicio de vigilancia rondero durante el día, ya que actualmente solo se dispone de este servicio en la noche y fines de semana.</li>
+ <li>Fomentar el autocuidado por parte de propietarios y residentes, asegurando puertas y ventanas al salir y no dejando elementos de valor expuestos en los parqueaderos.</li>
+ <li>Evaluar la instalación de una cerca eléctrica en todo el perímetro del conjunto, complementando la concertina existente.</li>
+ <li>Realizar mantenimiento y reparación de la malla eslabonada perimetral en los puntos deteriorados.</li>
+ <li>Instalar concertinas en el sector de la calle 34, identificado como un "punto muerto".</li>
+ <li>Instalar tres cámaras adicionales: una sobre el perímetro con falencias y dos en la zona verde de la quebrada, para identificar posibles accesos.</li>
+ <li>Colocar un muro de refuerzo debajo de la malla perimetral para evitar excavaciones.</li>
+ <li>Evaluar la posibilidad de aumentar la altura de las puertas vehiculares para prevenir saltos.</li>
+ <li>Actualizar las cámaras perimetrales con tecnología de cruce de líneas y detección de movimiento, que generen alarmas sonoras y visuales para el personal de vigilancia.</li>
+ <li>Mejorar la iluminación en los perímetros con reflectores, especialmente en zonas oscuras.</li>
+ <li>Considerar la contratación de un operador de monitoreo exclusivo para las cámaras, dada la multiplicidad de funciones del portero.</li>
+ <li>Reforzar el manejo de llamadas para prevenir extorsiones.</li>
+ <li>Abordar el tema de agresiones entre habitantes de la unidad.</li>
+ <li>Instalar un sistema de control de acceso electrónico con lector de cédulas para verificar la identidad de los visitantes y registrar su información de manera verídica.</li>
+ <li>Eliminar estructuras que faciliten el acceso, como la escalera en el apartamento 101, que fue utilizada por los intrusos para saltar a la terraza.</li>
+ <li>Instalar un seto vivo al frente de la quebrada para quitar visibilidad hacia los apartamentos.</li>
+</ul>
+Durante la discusión sobre el lector de cédulas, se aclaró que este sistema permite registrar información verídica de los visitantes, pero no tiene interacción directa con bases de datos policiales, lo que limitaría su ventaja en la detección de antecedentes. También se mencionó la posibilidad de implementar cámaras con inteligencia artificial que activan alarmas y luces pregrabadas ante intrusiones.
+
+El señor Jorge insistió en que, a pesar de las recomendaciones tecnológicas, la falla principal fue humana, y que las acciones deben enfocarse en evitar que los vigilantes vuelvan a fallar. Se destacó la necesidad de identificar dónde se falló y qué acciones concretas se tomarán para corregirlo, como el relevo durante las comidas o la capacitación constante.
+
+Finalmente, los representantes de Miro se despidieron de la reunión, concluyendo así la exposición y discusión de su análisis de vulnerabilidad y seguridad.<h2>3. Evaluación del Contrato de Seguridad con Miro</h2>
+
+<p>La reunión abordó una evaluación exhaustiva del contrato de seguridad con la empresa Miro, motivada por los recientes eventos del 22 de noviembre. La discusión se centró en la efectividad del servicio de vigilancia y la responsabilidad de la compañía ante la intrusión.</p>
+
+<h3>Informe de la administración respecto al evento</h3>
+<p>El administrador, señor Mateo, explicó que el informe de la administración se basaba en la información proporcionada por la empresa de seguridad Miro, quienes son los expertos en la materia. Sin embargo, los consejeros expresaron insatisfacción con las explicaciones recibidas, señalando que las preguntas formuladas por el consejo ya habían sido planteadas por la administración sin obtener respuestas concluyentes.</p>
+<p>Durante la intervención de los representantes de Miro, el señor Juan David Gutiérrez, director de riesgos de la compañía, presentó la versión de los vigilantes, quienes afirmaron <strong>no haber visualizado a los intrusos</strong> ni al momento de su ingreso ni de su salida. Se mencionó que uno de los vigilantes, John, estaba en movimiento dentro de la portería, realizando actividades como ir al baño o calentar alimentos, mientras que el otro, Freddy, salía de un cuarto de aseo. Los asistentes, particularmente el señor Jorge, cuestionaron la validez de estas explicaciones, calificándolas de "bobadita" y exigiendo "conclusiones profesionales" sobre las fallas del sistema de seguridad, argumentando que sin ellas no sería posible implementar correctivos efectivos. El señor Jorge manifestó: "Si no tenemos conclusiones, no somos capaces de tomar correctivo".</p>
+<p>El señor Juan David informó que se realizaron <strong>pruebas de confiabilidad</strong> a los cuatro vigilantes a través de un tercero acreditado ante la Superintendencia. Estas pruebas, que incluyeron poligrafía, tuvieron como objetivo descartar la participación directa, la entrega de información, omisiones o lucro económico por parte del personal de seguridad. Según el informe del tercero, se <strong>descartó la participación directa</strong> del esquema de vigilancia en los hechos.</p>
+<p>A pesar de los resultados de las pruebas, los consejeros insistieron en la necesidad de identificar las fallas. El señor Juan David reconoció que el vigilante que calentaba el microondas y el que hablaba por celular incurrieron en una <strong>"omisión directa"</strong>. Propuso la implementación de <strong>evaluaciones de desempeño individual</strong> para cada vigilante, con la participación de la administración y el consejo para recolectar información. Asimismo, sugirió una <strong>rotación escalonada del personal</strong>, comenzando con los vigilantes más antiguos, para evitar la "comodidad" y la "confianza" que, según los asistentes, habían contribuido a la vulnerabilidad.</p>
+<p>El señor Nelson, por parte de Miro, detalló los aportes de la empresa para mejorar la seguridad, incluyendo el aumento de la supervisión diurna, apoyo en la toma de antecedentes para empleados y reformas, ampliación de puntos de marcación, las pruebas de confiabilidad realizadas, asesoría de seguridad para apartamentos, actualización del análisis de riesgos, y capacitación o recertificación de los vigilantes en seguridad residencial, además de ofrecer capacitación a los copropietarios. Sin embargo, el administrador, señor Mateo, indicó que <strong>económicamente Miro no aportaría nada</strong>, ya que los recursos recientes se habían destinado a la reinversión.</p>
+<p>El señor Juan David también consideró "preocupante" el nivel de vigilancia y la tranquilidad con la que actuaron los intrusos, sugiriendo que el informe de Miro se hiciera llegar al fiscal instructor del caso para que se profundizara la investigación, incluyendo la solicitud de historiales de mensajería y supervisión.</p>
+
+<h3>Penalidad por terminación anticipada del contrato</h3>
+<p>El administrador, señor Mateo, informó que la terminación anticipada del contrato con Miro implicaría el pago de una <strong>penalidad de aproximadamente 20 millones de pesos</strong>. Esta penalidad se debe a un contrato de reinversión firmado por tres años más, extendiéndose hasta el año 2027. Un asistente sugirió la posibilidad de que una nueva empresa de seguridad pudiera asumir el costo de esta penalidad como parte de una nueva contratación.</p>
+
+<h3>Propuesta de carta de reclamación a Miro</h3>
+<p>El señor Carlos propuso formalmente enviar una <strong>carta de reclamación a Miro</strong>. El objetivo de esta comunicación sería exigir una explicación por escrito sobre la causa exacta de la intrusión del 22 de noviembre, dado que, a pesar de la reunión y las insistencias, la empresa no había proporcionado conclusiones claras sobre cómo tres individuos lograron ingresar y salir sin ser detectados por los dos vigilantes presentes.</p>
+
+<h3>Respuesta de Miro sobre no determinación de responsabilidad</h3>
+<p>El administrador, señor Mateo, comunicó que Miro ya había emitido una respuesta oficial a los cuatro apartamentos afectados de los primeros pisos. En dicha comunicación, la empresa de seguridad manifestó que <strong>"durante el análisis de los hechos ocurridos no es posible determinar responsabilidad por parte de amigos de seguridad"</strong>. El señor Carlos criticó esta postura, señalando que los contratos de seguridad suelen ser de "modo de resultados", lo que exime a las empresas de responsabilidad directa por hurtos.</p>
+
+<h3>Falta de evidencia de capacitación de vigilantes</h3>
+<p>La señora Lady, de la administración, expresó que <strong>no posee evidencias de las capacitaciones</strong> mensuales que Miro afirma impartir a los vigilantes. Manifestó que el personal de seguridad nunca ha informado sobre su asistencia a capacitaciones y que, en su percepción, la formación se limita a las visitas del supervisor. El señor Jorge, por su parte, denunció que, incluso después del incidente, los vigilantes continúan mostrando un "relajamiento" en sus funciones, citando como ejemplo la presencia de jardineros cargando celulares dentro de la portería, lo cual contraviene las directrices establecidas. Se concluyó que, a pesar de las medidas físicas y las capacitaciones, la <strong>falta de compromiso humano</strong> por parte de los vigilantes sigue siendo una falencia crítica en el servicio. El señor Jorge afirmó: "El guardia falló, punto", enfatizando la necesidad de identificar la causa de la falla para evitar futuras repeticiones.</p><h2>4. Propuestas y Cotizaciones para Mejoras de Seguridad</h2>
+
+<p>La reunión se centró en la revisión y evaluación de diversas propuestas y cotizaciones destinadas a fortalecer la seguridad de la copropiedad, con base en el análisis de vulnerabilidad presentado previamente. Los participantes analizaron las recomendaciones de la empresa de seguridad y otras alternativas para mitigar riesgos.</p>
+
+<h3>Iluminación Perimetral (Luces con Sensor)</h3>
+<p>Se discutió la necesidad de mejorar la iluminación en los perímetros del conjunto, especialmente en zonas oscuras. La administración informó que ya se han instalado tres luces con sensor de movimiento en puntos específicos (una en una esquina, otra en la parte trasera y una en el gimnasio), las cuales cuentan con infrarrojo. Sin embargo, se identificó la necesidad de instalar iluminación adicional en otros sectores. Se estimó un costo aproximado de <strong>2 millones de pesos</strong> para estas mejoras adicionales en iluminación.</p>
+
+<h3>Cámaras de Seguridad (Adicionales, Reemplazo Perimetrales, Tecnología con Cruce de Línea y Detección de Movimiento, DVR)</h3>
+<p>La empresa de seguridad recomendó la instalación de tres cámaras adicionales: una en el perímetro con falencias y dos en la zona verde de la quebrada, para identificar posibles accesos. Se cotizó la instalación de estas dos cámaras adicionales en el sector sur con enfoque a la quebrada en <strong>1.2 millones de pesos</strong> por un proveedor y <strong>1.1 millones de pesos</strong> por otro, sin mucha variación. Además, se planteó la necesidad de reemplazar las cámaras perimetrales existentes por tecnología más avanzada que incluya cruce de línea y detección de movimiento, generando alarmas sonoras y visuales para el personal de vigilancia. Para esta migración tecnológica, que implica el cambio de monitor y switches, Miro cotizó <strong>42.2 millones de pesos</strong>, con la advertencia de posibles variaciones. Otras empresas presentaron cotizaciones de <strong>35 millones</strong> y <strong>39 millones de pesos</strong>. Se mencionó que para instalar cámaras adicionales, sería necesario ampliar la capacidad del DVR de la copropiedad, cuyo costo se estima en <strong>1.5 millones de pesos</strong>, y el costo promedio de cada cámara es de <strong>323 mil pesos</strong>, variando según el cableado.</p>
+
+<h3>Malla Perimetral y Concertinas (Reparación, Instalación)</h3>
+<p>Se abordó la importancia de realizar mantenimiento y reparación a la malla eslabonada perimetral, la cual presenta deterioro en algunos puntos. Asimismo, se propuso la instalación de concertinas en toda la copropiedad, abarcando 60 metros lineales, incluyendo la parte superior del frente del parque y la zona de la portería. El costo total estimado para la reparación de la malla y la instalación de las concertinas asciende a <strong>6.2 millones de pesos</strong>. Se destacó que Miro cotizó la instalación de concertinas y malla electrosoldada en <strong>43 millones de pesos</strong>.</p>
+
+<h3>Cerca Eléctrica o Sensores Infrarrojos (Cortina Inalámbrica)</h3>
+<p>Se evaluaron dos opciones para reforzar la seguridad perimetral. La instalación de una cerca eléctrica que cubra toda la zona adyacente a la portería (derecha e izquierda) y un mantenimiento a la existente, con un costo de <strong>30 a 31 millones de pesos</strong>. Como alternativa, se presentó un sistema de cortina inalámbrica con sensores infrarrojos, que no electrifica pero envía información inmediata a la portería en caso de intrusión, generando una alarma sonora. Esta tecnología, que reconoce animales y personas, fue considerada más confiable y adecuada para zonas cercanas a la quebrada donde no se permite electrificación. La cotización para este sistema de cortina perimetral, que incluye seis sensores (dos para una zona y cuatro para otra), paneles de alarma y una sirena en portería, es de <strong>16 millones de pesos</strong>. Se solicitó conseguir dos cotizaciones adicionales para este sistema de sensores infrarrojos, aunque se reconoció la urgencia de su implementación.</p>
+
+<h3>Operador de Monitoreo de Cámaras</h3>
+<p>Se analizó la posibilidad de contar con una persona dedicada exclusivamente al monitoreo de las cámaras. Se presentaron dos opciones: adecuar un espacio locativo para un operario 24 horas, con un costo mensual de <strong>14 millones de pesos</strong>, o contratar un monitoreo remoto con una empresa externa (Empresa Carcel) por <strong>8 millones de pesos mensuales</strong>. La administración sugirió descartar estas opciones debido a su alto costo mensual, considerándolas fuera del presupuesto actual.</p>
+
+<h3>Altura de Puertas Vehiculares</h3>
+<p>La empresa de seguridad recomendó evaluar la posibilidad de aumentar la altura de las puertas vehiculares para prevenir saltos por parte de intrusos.</p>
+
+<h3>Eliminación de Estructuras que Facilitan Acceso (Escalera en Apartamento 101)</h3>
+<p>Se hizo hincapié en la existencia de una escalera en el predio privado del apartamento 101, la cual facilitó el acceso de los intrusos. Se consideró fundamental que esta estructura sea retirada, y se propuso enviar una carta de solicitud al propietario por parte del consejo de administración.</p>
+
+<h3>Control de Acceso Electrónico (Lector de Cédulas)</h3>
+<p>Se propuso la instalación de un sistema de control de acceso electrónico con lector de cédulas para registrar de manera verídica la información de las personas que ingresan. El costo de este sistema se estimó en <strong>9 millones de pesos</strong>. Sin embargo, se expresó escepticismo sobre su efectividad, ya que, aunque proporciona información real, no tiene interacción con bases de datos policiales y un ladrón podría presentar una cédula falsa, cumpliendo con el protocolo sin garantizar la seguridad.</p>
+
+<h3>Seto Vivo en Quebrada</h3>
+<p>Se planteó la instalación de un seto vivo (papiros grandes) al frente de la quebrada para bloquear la visibilidad hacia los apartamentos y disuadir posibles intrusiones. El costo de 60 unidades de papiros grandes se cotizó en <strong>1 millón de pesos</strong>. Se destacó que esta especie es adecuada para zonas húmedas y que se buscaría adquirir plantas ya desarrolladas para un efecto inmediato.</p>
+
+<p>Finalmente, el consejo de administración acordó presentar a los propietarios una propuesta consolidada de mejoras de seguridad que incluye la instalación de concertinas, el arreglo de la malla perimetral, la implementación de la malla inalámbrica con sensores infrarrojos, la adición de cámaras de seguridad y la mejora de la iluminación. El costo total estimado para este paquete de mejoras asciende a aproximadamente <strong>31 millones de pesos</strong>. Se determinó que la administración elaborará una circular detallada, indicando el monto correspondiente a cada apartamento según su coeficiente, y se encargará de recoger las firmas de autorización de los propietarios para proceder con la facturación antes de finalizar diciembre. Se enfatizó que la abstención de un solo propietario impediría la ejecución de los trabajos de seguridad propuestos.</p><h2>5. Presupuesto y Financiación de Mejoras de Seguridad</h2>
+
+<p>La reunión abordó el tema del presupuesto y la financiación de las mejoras de seguridad propuestas, con el objetivo de cuantificar las inversiones necesarias y definir el mecanismo para su recolección. El administrador, señor Mateo, presentó un resumen de los puntos identificados en el informe de seguridad, señalando que inicialmente se estimaron 17 ítems, incluyendo cámaras, iluminación, refuerzos y obras de cemento, con un costo total aproximado de <strong>170 millones de pesos</strong> según las cotizaciones de diversos proveedores.</p>
+
+<p>Se discutió la capacidad del consejo para aprobar una cuota adicional. Se recordó que, por estatutos, el consejo solo puede determinar una cuota adicional hasta un monto muy limitado, siendo necesaria una asamblea general para decisiones de mayor envergadura. El señor Mateo indicó que, de los 13 puntos inicialmente considerados de las recomendaciones de Miro, se descartaron tres ítems que no podían ser definidos por el consejo: el sistema de control de acceso electrónico con lector de cédulas, la altura de las puertas vehiculares y la barrera entre apartamentos (específicamente entre el 101 y el 102), dejando <strong>10 puntos</strong> para la discusión.</p>
+
+<h3>Costos de las Propuestas de Seguridad</h3>
+
+<p>Durante la evaluación de las propuestas, se presentaron los siguientes costos específicos:</p>
+<ul>
+ <li><strong>Operador de monitoreo 24 horas:</strong> Se cotizó en <strong>14 millones de pesos mensuales</strong>. Esta opción fue descartada para una implementación inmediata debido a su alto costo recurrente.</li>
+ <li><strong>Monitoreo remoto con un tercero (Empresa Carcel):</strong> Se cotizó en <strong>8 millones de pesos mensuales</strong>, también descartado por razones presupuestarias.</li>
+ <li><strong>Instalación de dos cámaras adicionales:</strong> Ubicadas en el sector sur con enfoque hacia la quebrada, Miro cotizó <strong>1.2 millones de pesos</strong>, mientras que otros proveedores ofrecieron <strong>1.1 millones de pesos</strong>.</li>
+ <li><strong>Reparación y mantenimiento de la malla eslabonada perimetral y concertinas:</strong> Para 60 metros lineales, el costo asciende a <strong>6.2 millones de pesos</strong>. Esta medida fue considerada de gran importancia.</li>
+ <li><strong>Reemplazo de cámaras perimetrales por tecnología avanzada:</strong> Se propuso migrar a cámaras con cruce de línea y detección de movimiento, que generan alarmas para el personal de vigilancia. Esta mejora implicaría el cambio de monitor y switches. Miro cotizó <strong>42.2 millones de pesos</strong>, con la advertencia de posibles variaciones. Otras empresas presentaron cotizaciones de <strong>35 millones</strong> y <strong>39 millones de pesos</strong>.</li>
+ <li><strong>Cerca eléctrica:</strong> La opción más económica se cotizó entre <strong>30 y 31 millones de pesos</strong>, cubriendo toda la zona perimetral (lado derecho e izquierdo de la portería) e incluyendo el mantenimiento de la cerca existente.</li>
+ <li><strong>Sensores infrarrojos (cortina inalámbrica):</strong> Como alternativa a la cerca eléctrica, se presentó un sistema de cortina perimetral inalámbrica con sensores y paneles de alarma en portería. Este sistema, que reconoce animales y personas, se cotizó en <strong>16 millones de pesos</strong> para 60 metros lineales (seis sensores). Esta propuesta fue bien recibida por su confiabilidad y por ser adecuada para zonas donde no se permite electrificación.</li>
+ <li><strong>Iluminación adicional:</strong> Se estimó un costo de aproximadamente <strong>2 millones de pesos</strong> para la instalación de reflectores con sensor de movimiento en áreas oscuras, como el sector de la piscina y cerca de la portería.</li>
+ <li><strong>Actualización del DVR:</strong> Para soportar las cámaras adicionales, se requeriría un DVR con un costo aproximado de <strong>1.5 millones de pesos</strong>.</li>
+ <li><strong>Seto vivo (papiros) en la quebrada:</strong> Se propuso la instalación de 60 unidades grandes de papiros para bloquear la visibilidad hacia el interior de la copropiedad, con un costo de <strong>1 millón de pesos</strong>.</li>
+</ul>
+
+<h3>Propuesta de Cuota Adicional y Autorización para Facturar</h3>
+
+<p>Los participantes buscaron identificar los ítems más urgentes y viables para una implementación inmediata. Se propuso un paquete de mejoras que incluye la instalación de concertinas, el arreglo de la malla perimetral, la implementación de la malla inalámbrica con sensores infrarrojos, la adición de cámaras con la actualización del DVR, la mejora de la iluminación y la instalación del seto vivo en la quebrada. El costo total estimado para este paquete de mejoras asciende a aproximadamente <strong>32 millones de pesos</strong>.</p>
+
+<p>Se acordó que el administrador enviará una circular a todos los propietarios detallando la propuesta de mejoras de seguridad, los costos asociados y la contribución individual que correspondería a cada apartamento, calculada según su coeficiente. La circular solicitará la <strong>autorización para facturar esta cuota adicional antes del 20 de diciembre</strong>. Se enfatizó que la aprobación de esta iniciativa requiere el consentimiento de todos los propietarios, ya que la abstención de uno solo impediría la ejecución de los trabajos.</p><h2>6. Gestión de Cartera y Estado Financiero</h2>
+
+<p>La administración presentó un informe detallado sobre la situación financiera de la copropiedad, haciendo énfasis en la gestión de cartera y el estado actual de las finanzas. Se destacó la preocupación por el incremento en los saldos deudores de algunos apartamentos y el impacto en la liquidez de la caja.</p>
+
+<h3>Apartamentos con deudas de administración</h3>
+<p>Se informó que varios apartamentos presentan deudas significativas por concepto de cuotas de administración. El caso más crítico corresponde al <strong>apartamento 301</strong>, propiedad de la señora Sonia Bedoya, cuya deuda asciende a <strong>diez millones trescientos mil pesos ($10.300.000)</strong>, incluyendo la facturación de diciembre. Esta situación representa cinco cuotas de administración impagas, considerando que la cuota mensual es de un millón ochocientos mil pesos ($1.800.000). Se señaló que esta es la primera vez en casi tres años que la cartera de este apartamento alcanza un monto tan elevado.</p>
+<p>Asimismo, el <strong>apartamento 401</strong>, a nombre del señor William Aran, registra una deuda de dos cuotas de administración. Otros apartamentos, identificados como el <strong>1201, 1801 y 1401</strong>, han perdido el beneficio del descuento por pronto pago debido a la acumulación de multas. Adicionalmente, el apartamento de la señora María Elena debe una cuota de administración y, de no realizar el pago en diciembre, también entrará en proceso de cobro jurídico.</p>
+
+<h3>Proceso de cobro jurídico</h3>
+<p>La administración explicó el procedimiento establecido para la gestión de la cartera morosa. Inicialmente, se realizan llamadas y se envían cartas a los deudores. Posteriormente, se les invita a firmar acuerdos de pago. En caso de incumplimiento de estos acuerdos, se procede con el cobro jurídico. Se confirmó que el apartamento 301 ya ha sido remitido a cobro jurídico, habiéndose enviado la primera carta a finales de noviembre.</p>
+<p>En relación con el apartamento 301, la señora Sonia Bedoya había intentado establecer acuerdos de pago, comprometiéndose a abonar dos millones de pesos, pero estos no se materializaron ni se firmó el último acuerdo propuesto. La señora Bedoya argumentó dificultades económicas y la intención de vender su apartamento, aunque la venta no se ha concretado. Ante esta situación, la administración recibió la instrucción de proceder con el cobro jurídico de manera inmediata.</p>
+
+<h3>Pagos a proveedores</h3>
+<p>La administración informó que los pagos a los proveedores Miro Seguridad y Biobur, correspondientes a las cuotas adeudadas, ya fueron realizados.</p>
+
+<h3>Estado de servicios públicos</h3>
+<p>Se verificó que todos los servicios públicos de la copropiedad se encuentran al día, ya que sus pagos se gestionan mediante débito automático.</p>
+
+<h3>Déficit en caja</h3>
+<p>La situación financiera actual de la copropiedad presenta un déficit en caja, generado principalmente por los pagos realizados a los proveedores. Este déficit afecta directamente la liquidez disponible. Se aclaró que, si bien la reserva de la copropiedad se mantiene totalmente cubierta y no ha sido utilizada, los gastos han superado el presupuesto en un <strong>5%</strong>, lo que equivale a aproximadamente <strong>treinta y cinco millones de pesos ($35.000.000)</strong>. Este sobrecosto ha contribuido al déficit actual, dejando a la administración en una posición de incumplimiento con algunos proveedores.</p>
+
+<h3>Acuerdos de pago</h3>
+<p>Se reiteró que, aunque se han intentado establecer acuerdos de pago con los deudores, como en el caso del apartamento 301, la falta de cumplimiento y formalización de estos acuerdos ha llevado a la necesidad de escalar los procesos a cobro jurídico. La administración mencionó que, a pesar de tener obras por ejecutar y algunas subejecuciones presupuestarias en áreas como la piscina que han compensado parcialmente, la situación de cartera sigue siendo un desafío que requiere atención.</p><h2>7. Mantenimiento y Obras Pendientes</h2>
+
+La reunión abordó el estado de diversas tareas de mantenimiento y obras pendientes en la copropiedad, así como la revisión de trabajos ya ejecutados.
+
+<h3>Mantenimiento de Fachada</h3>
+<p>En relación con el mantenimiento de la fachada, el administrador, señor Mateo, informó que, tras una consulta con la empresa "Altura", se determinó que la copropiedad no requiere un mantenimiento integral de la fachada en el momento actual. En su lugar, se recomendó enfocar los esfuerzos en la revisión y sellado de la ventanería.</p>
+
+<h3>Reparación de Grieta en Piso</h3>
+<p>El señor Jorge planteó la situación de una grieta en el piso de su apartamento, la cual, según su intervención, aún no ha sido reparada. Recordó haber presentado previamente fotografías y haber ofrecido cubrir los costos de la limpieza del piso con "esponjas mágicas". El administrador, señor Mateo, reconoció la existencia del problema y la necesidad de una intervención significativa, indicando que el asunto está documentado.</p>
+
+<h3>Cambio de Lámina en Subestación (Trabajo de Salamanca)</h3>
+<p>Se discutió el trabajo realizado por la empresa Salamanca, específicamente el cambio de una lámina grande en la subestación. El administrador, señor Mateo, explicó que esta obra fue aprobada por el consejo de administración aproximadamente dos reuniones atrás, en octubre, debido a que la lámina anterior estaba causando daños a los vehículos. El costo de este trabajo ascendió a <strong>3.900.000 pesos</strong>. El señor Luis inquirió sobre la realización de trabajos adicionales con Salamanca, a lo que el administrador respondió que, si bien debía revisar, no tenía registro de trabajos recientes con dicha empresa, señalando que la última intervención significativa fue hace más de un año, antes de la asamblea.</p><h2>8. Personal de Apoyo para Temporada de Diciembre</h2>
+
+<p>La reunión abordó el tema del personal de apoyo requerido para la temporada de fin de año. Se solicitó a los representantes de la empresa de seguridad Miro que presentaran sus recomendaciones y el perfil del personal que sería asignado para este periodo.</p>
+
+<p>Los representantes de Miro explicaron que el personal seleccionado para la temporada de diciembre no consiste necesariamente en nuevas contrataciones. Por lo general, se trata de individuos que forman parte de un grupo disponible, con experiencia en diversos servicios de vigilancia y que rotan por diferentes unidades de negocio, incluyendo el sector residencial. Se aseguró que este personal cuenta con la formación previa necesaria para desempeñar sus funciones.</p>
+
+<p>Durante la discusión, se planteó una inquietud respecto a la fecha de inicio del servicio de este personal adicional. Se indicó que la contratación propuesta abarcaba desde el <strong>23 de diciembre hasta el 12 o 13 de enero</strong>, extendiéndose hasta las 6:00 AM. Sin embargo, algunos asistentes expresaron preocupación de que el 23 de diciembre podría ser una fecha de inicio tardía, considerando que muchos residentes, especialmente aquellos con calendarios escolares tipo B, suelen salir de la ciudad entre el 12 y el 15 de diciembre. Se recordó que el año anterior, el periodo de contratación fue más corto en enero debido a la duración del puente festivo, mientras que este año el puente se extiende hasta el 13 de enero.</p>
+
+<p>Se confirmó que la duración habitual del contrato para este tipo de apoyo es de un mes, y se hizo una breve mención al presupuesto ya establecido para esta partida.</p><h2>9. Temas Varios y Próxima Reunión</h2>
+
+<p>Durante este punto del orden del día, se abordaron diversas cuestiones de interés para la copropiedad, así como la planificación de futuras reuniones.</p>
+
+<h3>Caso Doña Caterina (multa y fumigación)</h3>
+<p>La administración informó sobre la solicitud de la señora Caterina, quien deseaba conversar acerca de una multa impuesta y el costo de una fumigación, ascendente a <strong>300.000 pesos</strong>, que ella solicitaba fuera asumido por la copropiedad debido a la presencia de cucarachas. La señora Caterina también requirió una copia del acta de agosto, donde se habría tomado la decisión pertinente. La administración le comunicó que el presupuesto para fumigación fue aprobado en asamblea para realizarse una vez al año, y que su solicitud actual no se ajustaba a dicho plan. Se le indicó que el tema de la reunión era extenso y que su caso sería considerado en un espacio posterior.</p>
+
+<h3>Vacaciones de la Administración</h3>
+<p>El administrador informó a los presentes sobre su período de vacaciones, el cual comprenderá la última semana de diciembre y la primera semana de enero, con su regreso programado para el <strong>13 de enero</strong>. Se aseguró que la empresa continuará operando sin interrupciones durante su ausencia, garantizando la continuidad de los servicios.</p>
+
+<h3>Fecha de Próxima Asamblea</h3>
+<p>En relación con la planificación de futuras reuniones, se propuso celebrar una sesión a finales de enero, específicamente entre los días <strong>19 y 23</strong>, con el objetivo de definir la fecha exacta de la próxima asamblea. Se sugirió que la asamblea podría realizarse alrededor del <strong>18 o 19 de febrero</strong>, lo que permitiría un plazo de aproximadamente quince días para la emisión de las citaciones correspondientes a los copropietarios.</p><div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> 7:56 PM</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>El Consejo de Administración enviará una carta formal a Miro solicitando conclusiones claras sobre la causa del incidente de seguridad del 22 de noviembre. – <strong>Responsable:</strong> Consejo de Administración</li>
+ <li>Se preparará una propuesta detallada de mejoras de seguridad para los co-propietarios, incluyendo la instalación de concertina, reparación de malla perimetral, sistema de sensores infrarrojos (cortina inalámbrica), cámaras adicionales, iluminación perimetral y un seto vivo en la quebrada. – <strong>Responsable:</strong> Mateo</li>
+ <li>La administración recolectará las autorizaciones de los co-propietarios para la facturación de la cuota extraordinaria destinada a las mejoras de seguridad propuestas. – <strong>Responsable:</strong> Administración</li>
+ <li>Se contratará personal de seguridad adicional para cubrir el periodo del 23 de diciembre al 12 o 13 de enero. – <strong>Responsable:</strong> Administración</li>
+ <li>Se iniciarán los procesos de cobro jurídico para el apartamento 301 y se dará seguimiento a las demás cuentas de administración en mora (1201, 1801, 1401, Doña María Elena). – <strong>Responsable:</strong> Administración</li>
+ <li>Se revisará y atenderá la grieta en el piso del apartamento del Dr. Jorge. – <strong>Responsable:</strong> Administración</li>
+ <li>Se abordará la solicitud de Doña Caterina referente a la multa y la fumigación. – <strong>Responsable:</strong> Administración</li>
+ <li>La próxima reunión se programará para la penúltima semana de enero (entre el 19 y el 23 de enero) para definir la fecha de la asamblea general, tentativamente para el 18 o 19 de febrero. – <strong>Responsable:</strong> Administración</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/gaoC7YbJFFzH5d6
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/gaoC7YbJFFzH5d6
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/WY3Jn65MDYtoT2H
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/WY3Jn65MDYtoT2H
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/mateo_ossa_p._consejo_porto_vitta_10_dic/mateo_ossa_p._consejo_porto_vitta_10_dic_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/bTjdnBkJgjSWGTp
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/bTjdnBkJgjSWGTp
+Verificando si existe transcripción: test5_Transcripcion.txt
+Verificando archivo: test5_Transcripcion.txt en carpeta: test5
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: test5.mp3
+Guardando transcripción: test5_Transcripcion.txt
+Transcripción guardada: test5_Transcripcion.txt
+[DIAGNOSE] Attempting to list available models...
+[DIAGNOSE] API Response Status: 200
+[DIAGNOSE] Available Models: {
+  "models": [
+    {
+      "name": "models/embedding-gecko-001",
+      "version": "001",
+      "displayName": "Embedding Gecko",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 1024,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedText",
+        "countTextTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-2.5-flash",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash",
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-pro",
+      "version": "2.5",
+      "displayName": "Gemini 2.5 Pro",
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash Experimental",
+      "description": "Gemini 2.0 Flash Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash",
+      "description": "Gemini 2.0 Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash 001",
+      "description": "Stable version of Gemini 2.0 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in January of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp-image-generation",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "description": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite 001",
+      "description": "Stable version of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite",
+      "description": "Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview-02-05",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview 02-05",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-exp-1206",
+      "version": "2.5-exp-03-25",
+      "displayName": "Gemini Experimental 1206",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-tts",
+      "version": "gemini-2.5-flash-exp-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Flash Preview TTS",
+      "description": "Gemini 2.5 Flash Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.5-pro-preview-tts",
+      "version": "gemini-2.5-pro-preview-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Pro Preview TTS",
+      "description": "Gemini 2.5 Pro Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemma-3-1b-it",
+      "version": "001",
+      "displayName": "Gemma 3 1B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-4b-it",
+      "version": "001",
+      "displayName": "Gemma 3 4B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-12b-it",
+      "version": "001",
+      "displayName": "Gemma 3 12B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-27b-it",
+      "version": "001",
+      "displayName": "Gemma 3 27B",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e4b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E4B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e2b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E2B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemini-flash-latest",
+      "version": "Gemini Flash Latest",
+      "displayName": "Gemini Flash Latest",
+      "description": "Latest release of Gemini Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-flash-lite-latest",
+      "version": "Gemini Flash-Lite Latest",
+      "displayName": "Gemini Flash-Lite Latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-pro-latest",
+      "version": "Gemini Pro Latest",
+      "displayName": "Gemini Pro Latest",
+      "description": "Latest release of Gemini Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-image-preview",
+      "version": "2.0",
+      "displayName": "Nano Banana",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1
+    },
+    {
+      "name": "models/gemini-2.5-flash-image",
+      "version": "2.0",
+      "displayName": "Nano Banana",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-09-2025",
+      "version": "Gemini 2.5 Flash Preview 09-2025",
+      "displayName": "Gemini 2.5 Flash Preview Sep 2025",
+      "description": "Gemini 2.5 Flash Preview Sep 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite-preview-09-2025",
+      "version": "2.5-preview-09-25",
+      "displayName": "Gemini 2.5 Flash-Lite Preview Sep 2025",
+      "description": "Preview release (Septempber 25th, 2025) of Gemini 2.5 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-preview",
+      "version": "3-pro-preview-11-2025",
+      "displayName": "Gemini 3 Pro Preview",
+      "description": "Gemini 3 Pro Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-flash-preview",
+      "version": "3-flash-preview-12-2025",
+      "displayName": "Gemini 3 Flash Preview",
+      "description": "Gemini 3 Flash Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-image-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/nano-banana-pro-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-robotics-er-1.5-preview",
+      "version": "1.5-preview",
+      "displayName": "Gemini Robotics-ER 1.5 Preview",
+      "description": "Gemini Robotics-ER 1.5 Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-computer-use-preview-10-2025",
+      "version": "Gemini 2.5 Computer Use Preview 10-2025",
+      "displayName": "Gemini 2.5 Computer Use Preview 10-2025",
+      "description": "Gemini 2.5 Computer Use Preview 10-2025",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/deep-research-pro-preview-12-2025",
+      "version": "deepthink-exp-05-20",
+      "displayName": "Deep Research Pro Preview (Dec-12-2025)",
+      "description": "Preview release (December 12th, 2025) of Deep Research Pro",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/embedding-001",
+      "version": "001",
+      "displayName": "Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/text-embedding-004",
+      "version": "004",
+      "displayName": "Text Embedding 004",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp-03-07",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental 03-07",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-001",
+      "version": "001",
+      "displayName": "Gemini Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ]
+    },
+    {
+      "name": "models/aqa",
+      "version": "001",
+      "displayName": "Model that performs Attributed Question Answering.",
+      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+      "inputTokenLimit": 7168,
+      "outputTokenLimit": 1024,
+      "supportedGenerationMethods": [
+        "generateAnswer"
+      ],
+      "temperature": 0.2,
+      "topP": 1,
+      "topK": 40
+    },
+    {
+      "name": "models/imagen-4.0-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 (Preview)",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 Ultra (Preview)",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Ultra",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-fast-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Fast",
+      "description": "Vertex served Imagen 4.0 Fast model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/veo-2.0-generate-001",
+      "version": "2.0",
+      "displayName": "Veo 2",
+      "description": "Vertex served Veo 2 model. Access to this model requires billing to be enabled on the associated Google Cloud Platform account. Please visit https://console.cloud.google.com/billing to enable it.",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3",
+      "description": "Veo 3",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-fast-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3 fast",
+      "description": "Veo 3 fast",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.1-generate-preview",
+      "version": "3.1",
+      "displayName": "Veo 3.1",
+      "description": "Veo 3.1",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    }
+  ],
+  "nextPageToken": "Ch9tb2RlbHMvdmVvLTMuMS1nZW5lcmF0ZS1wcmV2aWV3"
+}
+Verificando contenido existente: test5_Contenido.txt
+Verificando archivo: test5_Contenido.txt en carpeta: test5
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: test5.mp3
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: test5.mp3
+[Attempt 1/3] Generando Orden del Día con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Cabecera con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Incumplimiento de registro de ingreso por personal de Megativo con modelo models/gemini-2.5-flash
+[Attempt 1/3] Generando tema Cierre con modelo models/gemini-2.5-flash
+Guardando contenido en Nextcloud: test5_Contenido.txt
+Contenido guardado: test5_Contenido.txt
+[REFINAMIENTO] Iniciando proceso para: test5.mp3
+Verificando archivo: test5_Contenido.txt en carpeta: test5
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Contenido.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Contenido.txt
+Contenido del archivo obtenido exitosamente: test5_Contenido.txt
+Verificando archivo: test5_Transcripcion.txt en carpeta: test5
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Transcripcion.txt
+Verificación de archivo completada. Status: 207
+Archivo verificado exitosamente: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Transcripcion.txt
+Contenido del archivo obtenido exitosamente: test5_Transcripcion.txt
+[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.
+[REFINAMIENTO] Intento 1/2 usando el modelo: gemini-2.0-flash
+[REFINAMIENTO] Error en el intento 1 con gemini-2.0-flash: Not Found
+[REFINAMIENTO] Intento 2/2 usando el modelo: gemini-2.0-pro
+[REFINAMIENTO] Error en el intento 2 con gemini-2.0-pro: Not Found
+Iniciando formateo de contenido para: test5.mp3
+Verificando Borrador .docx existente: test5_Borrador.docx
+Verificando archivo: test5_Borrador.docx en carpeta: test5
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/test5/test5_Borrador.docx
+Verificación de archivo completada. Status: 404
+Borrador .docx no existe, se creará uno nuevo
+Usando contenido del acta proporcionado como parámetro.
+Guardando Borrador .docx en Nextcloud: test5_Borrador.docx
+Preparando guardado .docx en Nextcloud: test5_Borrador.docx
+Iniciando proceso de guardado
+VERSION DE NODE.JS EN DOCKER: v22.16.0
+SISTEMA OPERATIVO EN DOCKER: win32 x64
+VARIABLES DE ENTORNO IMPORTANTES EN DOCKER:
+  NEXTCLOUD_URL: https://files.actasdereuniones.ai
+  NEXTCLOUD_USER: gestor
+  NEXTCLOUD_PASSWORD: ***
+CONTENIDO HTML JUSTO ANTES DE htmlToDocx: <header>
+ <h1 style="text-align: center;">Acta de Reunión sobre Incumplimiento de Registro de Ingreso por Personal de Megativo</h1>
+ <p><strong>Fecha:</strong> [FECHA NO ESPECIFICADA]</p>
+ <p><strong>Hora:</strong> Inicio: [HORA DE INICIO] - Cierre: [HORA DE CIERRE]</p>
+ <p><strong>Lugar:</strong> [UBICACIÓN NO ESPECIFICADA]</p>
+ <p><strong>Moderador:</strong> [NO ESPECIFICADO]</p>
+ <p><strong>Asistentes:</strong></p>
+ <h2>Orden del Día</h2>
+ <ol>
+ <li>Incumplimiento de registro de ingreso por personal de Megativo</li>
+ </ol>
+</header><h2>1. Incumplimiento de registro de ingreso por personal de Megativo</h2>
+
+<p>La reunión abordó el punto relativo al incumplimiento del registro de ingreso por parte del personal de la empresa Megativo. Se informó que dicho personal hace caso omiso a la consigna establecida para marcar su entrada a las instalaciones, lo cual impide que las demás unidades tengan conocimiento de su presencia en el lugar.</p><div class="reunion-cierre">
+ <h2>Cierre de la Reunión</h2>
+ <p><strong>Hora de finalización:</strong> No especificada</p>
+
+ <h3>Acuerdos alcanzados:</h3>
+ <ul>
+ <li>No se identificaron acuerdos explícitos ni acciones a seguir en la transcripción proporcionada. – <strong>Responsable:</strong> No especificado</li>
+ </ul>
+
+ <h3>Firma de los asistentes:</h3>
+ <p>[Espacio para firmas]</p>
+</div>
+Borrador .docx guardado exitosamente.
+Obteniendo URL pública del borrador recién creado
+Obteniendo URL pública para archivo: /Actas/test5/test5_Borrador.docx
+URL pública obtenida: https://files.actasdereuniones.ai/s/kjc2Fpat7Nnpot4
+URL pública del borrador obtenida: https://files.actasdereuniones.ai/s/kjc2Fpat7Nnpot4
+Obteniendo URL pública de la transcripción
+Obteniendo URL pública para archivo: /Actas/test5/test5_Transcripcion.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/r3onbzSG8icCGpW
+URL pública de la transcripción obtenida: https://files.actasdereuniones.ai/s/r3onbzSG8icCGpW
+Obteniendo URL pública del contenido
+Obteniendo URL pública para archivo: /Actas/test5/test5_Contenido.txt
+URL pública obtenida: https://files.actasdereuniones.ai/s/kDcnNRRRcPQnZMB
+URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/kDcnNRRRcPQnZMB
