@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useSession } from "next-auth/react";
 import { ActualizarProceso } from "../services/actas_querys_services/actualizarProceso";
 import { getUserId } from "../services/user/getUserId";
@@ -88,7 +88,16 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     const hashParams = new URLSearchParams(hash.replace('#', ''));
     const refPaycoHash = hashParams.get('ref_payco') || hashParams.get('x_ref_payco');
 
-    const refPaycoToProcess = refPayco || refPaycoHash;
+    let refPaycoToProcess = refPayco || refPaycoHash;
+
+    if (!refPaycoToProcess && epaycoResponse && epaycoResponse.includes('/response/pse/')) {
+      const parts = epaycoResponse.split('/');
+      let possibleId = parts[parts.length - 1];
+      if (possibleId) {
+        possibleId = possibleId.split('?')[0];
+        refPaycoToProcess = possibleId;
+      }
+    }
 
     if (epaycoResponse || refPaycoToProcess) {
       const savedData = { file, folder, fileid, duration, refPayco: refPaycoToProcess };
@@ -352,14 +361,31 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
       });
     }
 
-    const baseUrl = typeof window !== "undefined"
+    let baseUrl = typeof window !== "undefined"
       ? (process.env.NEXT_PUBLIC_NGROK_URL || window.location.origin)
       : "";
+
+    if (baseUrl && baseUrl.includes('localhost')) {
+      baseUrl = baseUrl.replace('localhost', '127.0.0.1');
+    }
+
+    if (baseUrl && !baseUrl.startsWith('http')) {
+      baseUrl = `https://${baseUrl}`;
+    }
+    
+    if (baseUrl.endsWith('/')) {
+      baseUrl = baseUrl.slice(0, -1);
+    }
+    if(process.env.NEXT_PUBLIC_NGROK_URL && process.env.NEXT_PUBLIC_EPAYCO_TEST === "true"){
+      baseUrl = process.env.NEXT_PUBLIC_NGROK_URL;
+    }
+
     const urlConfirmacion = `${baseUrl}/api/epayco/confirmation`;
 
     datosPago.confirmation = urlConfirmacion;
     if (typeof window !== "undefined") {
-      datosPago.response = window.location.href;
+      // Reconstruir URL de respuesta para asegurar formato válido y coincidencia con baseUrl
+      datosPago.response = `${baseUrl}${window.location.pathname}${window.location.search}`;
     }
 
     const cerrarModalEpayco = () => {
