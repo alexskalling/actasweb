@@ -199,7 +199,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         parseFloat(transaction.x_amount || transaction.amount),
         transaction.x_transaction_id || transaction.transaction_id,
         undefined,
-        transaction.x_id_invoice || transaction.invoice || referencia,
+        transaction.x_id_invoice || transaction.x_id_factura || transaction.invoice || referencia,
         undefined,
         undefined,
         null,
@@ -634,7 +634,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           parseFloat(normalizedResponse.x_amount || normalizedResponse.amount || "0"),
           transactionId,
           undefined,
-          normalizedResponse.x_id_invoice || normalizedResponse.invoice || props.file,
+          normalizedResponse.x_id_invoice || normalizedResponse.x_id_factura || normalizedResponse.invoice || props.file,
           undefined,
           undefined,
           null,
@@ -699,7 +699,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             parseFloat(response.x_amount || "0"),
             response.x_transaction_id || "",
             undefined,
-            response.x_id_invoice || referencia,
+            response.x_id_invoice || response.x_id_factura || referencia,
             null,
             null,
             null,
@@ -769,7 +769,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           parseFloat(response.x_amount || "0"),
           response.x_transaction_id || "",
           undefined,
-          response.x_id_invoice || referencia,
+          response.x_id_invoice || response.x_id_factura || referencia,
           undefined,
           undefined,
           null,
@@ -1044,7 +1044,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             }
           } else {
             const amountRejected = response.x_amount || response.amount || response.valor || "0";
-            const invoiceRejected = response.x_id_invoice || response.factura || referencia;
+            const invoiceRejected = response.x_id_invoice || response.x_id_factura || response.factura || referencia;
 
             pagoProcesado = true;
             modalCerrado = true;
