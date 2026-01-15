@@ -2,7 +2,6 @@
 
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   manejarError,
   writeLog,
@@ -11,12 +10,34 @@ import {
   obtenerContenidoArchivo,
 } from "./utilsActions";
 
+async function pruebaGoogleGemini() {
+  try {
+    console.log("=== PRUEBA GOOGLE GEMINI (gemini-2.0-flash SIN safetySettings) ===");
+    const response = await generateText({
+      model: google("gemini-2.0-flash"),
+      prompt: "¿Quién fue el presidente de Colombia en el año 2000?",
+    });
+    
+    console.log("✅ RESPUESTA PRUEBA:");
+    console.log("Texto:", response.text);
+    console.log("FinishReason:", response.finishReason);
+    console.log("Usage:", response.usage);
+    console.log("Estructura completa:", JSON.stringify(response, null, 2));
+    return response.text;
+  } catch (error) {
+    console.error("❌ ERROR EN PRUEBA:", error);
+    throw error;
+  }
+}
+
 export async function generateContenta(
   folder: string,
   file: string,
   fileid: string,
   transcipcion: string,
 ) {
+  await pruebaGoogleGemini();
+  
   const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
   const nombreTranscripcion = `${file.replace(
     /\.[^/.]+$/,
@@ -73,10 +94,18 @@ export async function generateContenta(
       try {
         responseGeminiOrdenDelDia = await generateText({
           model: google(modelNameOrdenDelDia),
+          providerOptions: {
+            google: {
+              safetySettings: [
+                { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
+              ],
+            },
+          },
           maxTokens: 20000,
           temperature: 0,
-          frequencyPenalty: 0.6,
-          presencePenalty: 0.3,
           system: await getSystemPromt("Orden"),
           prompt: await getUserPromt(
             "Orden",
@@ -90,17 +119,19 @@ export async function generateContenta(
         break;
       } catch (error) {
         retryCountOrdenDelDia++;
+        const errorMsg = error instanceof Error ? error.message : String(error);
+        const statusCode = (error as any)?.statusCode;
+        console.error(`[OrdenDía] Intento ${retryCountOrdenDelDia}/${maxRetriesOrdenDelDia} | Modelo: ${modelNameOrdenDelDia} | Error: ${errorMsg}${statusCode ? ` | Status: ${statusCode}` : ''}`);
+        
         if (retryCountOrdenDelDia > 1) {
           modelNameOrdenDelDia = "gemini-2.5-flash";
         }
+        
         if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
-          console.error(
-            "Máximo número de intentos alcanzado al generar el Orden del Día.",
-          );
+          console.error(`[OrdenDía] FALLÓ después de ${maxRetriesOrdenDelDia} intentos. Último error: ${errorMsg}`);
           return {
             status: "error",
-            message:
-              "Error al generar el Orden del Día después de varios intentos.",
+            message: `Error al generar el Orden del Día: ${errorMsg}`,
           };
         }
         await new Promise<void>((resolve) => setTimeout(resolve, 5000));
@@ -108,9 +139,50 @@ export async function generateContenta(
     }
 
     if (!responseGeminiOrdenDelDia) {
+      console.error("[OrdenDía] ERROR: No se recibió respuesta del modelo");
       return {
         status: "error",
         message: "Error al generar el Orden del Día: respuesta vacía.",
+      };
+    }
+
+    if (!responseGeminiOrdenDelDia.text || responseGeminiOrdenDelDia.text.trim().length === 0) {
+      const raw = (responseGeminiOrdenDelDia as any).rawResponse;
+      console.error(`[OrdenDía] ERROR: Respuesta vacía`);
+      console.error(`FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`);
+      console.error(`Usage:`, responseGeminiOrdenDelDia.usage);
+      console.error(`Warnings:`, responseGeminiOrdenDelDia.warnings || []);
+      
+      if (raw) {
+        console.error(`RawResponse completo:`, JSON.stringify(raw, null, 2));
+        const blockReason = raw?.promptFeedback?.blockReason;
+        const safetyRatings = raw?.candidates?.[0]?.safetyRatings;
+        const candidateFinishReason = raw?.candidates?.[0]?.finishReason;
+        const content = raw?.candidates?.[0]?.content;
+        
+        if (blockReason) {
+          console.error(`🚫 BLOQUEADO POR: ${blockReason}`);
+        }
+        if (safetyRatings && safetyRatings.length > 0) {
+          const blocked = safetyRatings.filter((r: any) => r.probability === 'HIGH' || r.probability === 'MEDIUM');
+          if (blocked.length > 0) {
+            console.error(`🚫 BLOQUEADO POR SAFETY:`, blocked.map((r: any) => `${r.category}:${r.probability}`).join(', '));
+          }
+        }
+        if (candidateFinishReason) {
+          console.error(`Candidate finishReason: ${candidateFinishReason}`);
+        }
+        if (content) {
+          console.error(`Content parts:`, content.parts || 'N/A');
+        }
+      } else {
+        console.error(`No hay rawResponse disponible`);
+        console.error(`[OrdenDía] Estructura completa respuesta:`, JSON.stringify(responseGeminiOrdenDelDia, null, 2));
+      }
+      
+      return {
+        status: "error",
+        message: `Error: Respuesta vacía. FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`,
       };
     }
 
@@ -136,15 +208,10 @@ export async function generateContenta(
         });
       }
 
-      const cachedContentId = await crearCacheGeminiTranscripcion(
-        contenidoTranscripcion,
-      );
-
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
         contenidoTranscripcion,
-        cachedContentId,
       );
 
       const contenidoFormato = contenido
@@ -162,11 +229,13 @@ export async function generateContenta(
 
       return { status: "success", content: contenidoFormato };
     } catch (jsonError) {
+      const jsonErrorMsg = jsonError instanceof Error ? jsonError.message : String(jsonError);
+      console.error(`[OrdenDía] ERROR JSON: ${jsonErrorMsg} | Longitud texto: ${jsonCleaned.length} | Primeros 200 chars: ${jsonCleaned.substring(0, 200)}`);
       manejarError("generateContenta - Error JSON", jsonError);
       writeLog(`Error JSON parse: . JSON Text: ${jsonCleaned}`);
       return {
         status: "error",
-        message: "Error al procesar el Orden del Día (JSON inválido).",
+        message: `Error al procesar el Orden del Día (JSON inválido): ${jsonErrorMsg}`,
       };
     }
   } catch (error) {
@@ -182,7 +251,6 @@ async function procesarOrdenDelDia(
   ordenDelDiaJSON: any,
   folder: string,
   contenidoTranscripcion: string,
-  cachedContentId?: string,
 ) {
   let contenido = "";
 
@@ -224,10 +292,18 @@ async function procesarOrdenDelDia(
       try {
         responseTema = await generateText({
           model: google(modelName),
+          providerOptions: {
+            google: {
+              safetySettings: [
+                { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
+                { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
+              ],
+            },
+          },
           maxTokens: maxTokensPorTipo[promptType] ?? 2000,
           temperature: 0,
-          frequencyPenalty: 0.6,
-          presencePenalty: 0.3,
           system: await getSystemPromt(promptType),
           prompt: await getUserPromt(
             promptType,
@@ -242,15 +318,17 @@ async function procesarOrdenDelDia(
         break;
       } catch (error) {
         retryCount++;
+        const errorMsg = error instanceof Error ? error.message : String(error);
+        const statusCode = (error as any)?.statusCode;
+        console.error(`[Tema:${tema.nombre}] Intento ${retryCount}/${maxRetries} | Modelo: ${modelName} | Error: ${errorMsg}${statusCode ? ` | Status: ${statusCode}` : ''}`);
+        
         if (retryCount > 1) {
           modelName = "gemini-2.5-flash";
         }
 
         if (retryCount >= maxRetries) {
-          console.error(
-            "Máximo número de intentos alcanzado, no se pudo procesar el tema.",
-          );
-          contenido += `[Error: No se pudo procesar ${tema.nombre}. Máximo número de intentos alcanzado.]`;
+          console.error(`[Tema:${tema.nombre}] FALLÓ después de ${maxRetries} intentos. Último error: ${errorMsg}`);
+          contenido += `[Error: No se pudo procesar ${tema.nombre}. Error: ${errorMsg}]`;
           break;
         }
 
@@ -265,33 +343,6 @@ async function procesarOrdenDelDia(
   return contenido;
 }
 
-async function crearCacheGeminiTranscripcion(
-  transcripcion: string,
-): Promise<string | undefined> {
-  try {
-    if (!transcripcion || transcripcion.trim().length === 0) return undefined;
-    const apiKey =
-      process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GEMINI || "";
-    if (!apiKey) return undefined;
-    const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-    const cachedContentApi: any = (model as any).cachedContent?.();
-    if (!cachedContentApi || typeof cachedContentApi.create !== "function") {
-      return undefined;
-    }
-    const res = await cachedContentApi.create({
-      contents: [{ role: "user", parts: [{ text: transcripcion }] }],
-      ttl: "1h",
-    });
-    const name = res?.cachedContent?.name;
-    if (name) writeLog(`[Gemini Cache] creado: ${name}`);
-    return name;
-  } catch (e) {
-    console.warn("No se pudo crear caché en Gemini (opcional):", e);
-    return undefined;
-  }
-}
 
 async function getSystemPromt(tipo: string) {
   let systemPromt = "";
