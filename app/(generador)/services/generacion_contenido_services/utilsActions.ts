@@ -359,7 +359,8 @@ export async function guardarArchivo(
 }
 export async function manejarError(funcion: string, error: unknown) {
   const errorMsg = error instanceof Error ? error.message : String(error);
-  writeLog(`Error en ${funcion}: ${errorMsg}`);
+  const stack = error instanceof Error ? error.stack : 'No stack trace';
+  writeLog(`Error en ${funcion}: ${errorMsg}\nStack: ${stack}\nError Object: ${JSON.stringify(error)}`);
 
   throw new Error(`Error en ${funcion}: ${errorMsg}`);
 }
@@ -454,13 +455,14 @@ export async function obtenerContenidoArchivo(
       });
 
       if (respuestaContenidoArchivo.ok) {
-        contenidoArchivo = await respuestaContenidoArchivo.text();
+        const contenido = await respuestaContenidoArchivo.text();
         writeLog(`Contenido del archivo obtenido exitosamente: ${nombreArchivo}`);
+        return contenido;
       } else {
-        console.error(
-          `Error al obtener contenido del archivo. Status: ${respuestaContenidoArchivo.status}`,
+        // Si el archivo no se encuentra (404) u otro error, lanzamos una excepción.
+        throw new Error(
+          `No se pudo obtener el contenido del archivo '${nombreArchivo}'. Status: ${respuestaContenidoArchivo.status}`,
         );
-        return null;
       }
     } catch (error) {
       manejarError("obtenerContenidoArchivoNextcloud", error);
@@ -473,7 +475,6 @@ export async function obtenerContenidoArchivo(
     return null;
   }
 
-  return contenidoArchivo;
 }
 
 export async function obtenerFileIdArchivo(
@@ -520,5 +521,36 @@ export async function obtenerFileIdArchivo(
     const errorMsg = error instanceof Error ? error.message : String(error);
     writeLog(`Error al obtener fileId: ${errorMsg}`);
       return null;
+  }
+}
+
+export async function diagnoseAndListModels() {
+  const apiKey =
+    process.env.GOOGLE_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+  if (!apiKey) {
+    writeLog("[DIAGNOSE] No GOOGLE_API_KEY found.");
+    return;
+  }
+
+  writeLog("[DIAGNOSE] Attempting to list available models...");
+
+  try {
+    const response = await fetch(
+      "https://generativelanguage.googleapis.com/v1beta/models",
+      {
+        method: "GET",
+        headers: {
+          "x-goog-api-key": apiKey,
+          "Content-Type": "application/json",
+        },
+      },
+    );
+
+    const data = await response.json();
+
+    writeLog(`[DIAGNOSE] API Response Status: ${response.status}`);
+    writeLog(`[DIAGNOSE] Available Models: ${JSON.stringify(data, null, 2)}`);
+  } catch (error) {
+    manejarError("diagnoseAndListModels", error);
   }
 }

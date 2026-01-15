@@ -1,6 +1,7 @@
 "use server";
 import { generateContenta } from "./generateContenta";
 import { refineContentAction } from "./refineContentAction";
+import { formatContent } from "./formatContent";
 import { transcripAction } from "./transcriptAction";
 import { ActualizarProceso } from "../actas_querys_services/actualizarProceso";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
@@ -44,37 +45,29 @@ export async function processAction(
       return 0;
     };
 
-    let duracionMinutos = 0;
-    try {
-      let user_id;
-
+    const getUserId = async (): Promise<string> => {
       if (idUsuarioActa) {
-        user_id = idUsuarioActa;
-        console.log(`[processAction] Usando idUsuarioActa proporcionado: ${user_id}`);
-      } else {
-        const mail = await getUserEmailFromSession();
-
-        if (mail) {
-          try {
-            user_id = await getUserIdByEmail(mail);
-            if (!user_id) {
-              user_id = automation
-                ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-                : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-            }
-          } catch (error) {
-            user_id = automation
-              ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-              : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-          }
-        } else {
-          user_id = automation
-            ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-            : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-        }
-        console.log(`[processAction] Usando user_id de sesión: ${user_id}`);
+        console.log(`[getUserId] Usando idUsuarioActa proporcionado: ${idUsuarioActa}`);
+        return idUsuarioActa;
       }
 
+      const mail = await getUserEmailFromSession();
+      if (mail) {
+        const userIdFromDb = await getUserIdByEmail(mail).catch(() => null);
+        if (userIdFromDb) {
+          console.log(`[getUserId] Usando user_id de sesión: ${userIdFromDb}`);
+          return userIdFromDb;
+        }
+      }
+
+      const fallbackId = automation ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5" : "a817fffe-bc7e-4e29-83f7-b512b039e817";
+      console.log(`[getUserId] Usando fallback id: ${fallbackId}`);
+      return fallbackId;
+    };
+
+    let duracionMinutos = 0;
+    try {
+      const user_id = await getUserId();
       console.log(`[processAction] Buscando acta con nombre: ${file}, user_id: ${user_id}`);
       const actaEncontrada = await db
         .select({
@@ -117,36 +110,7 @@ export async function processAction(
     ) {
       try {
         if (duracionMinutos <= 0) {
-          console.log(`[processAction] Duración no encontrada en primera búsqueda, intentando segunda búsqueda...`);
-          let user_id;
-
-          if (idUsuarioActa) {
-            user_id = idUsuarioActa;
-            console.log(`[processAction] Segunda búsqueda usando idUsuarioActa: ${user_id}`);
-          } else {
-            const mail = await getUserEmailFromSession();
-
-            if (mail) {
-              try {
-                user_id = await getUserIdByEmail(mail);
-                if (!user_id) {
-                  user_id = automation
-                    ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-                    : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-                }
-              } catch (error) {
-                user_id = automation
-                  ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-                  : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-              }
-            } else {
-              user_id = automation
-                ? "7ac85184-20a5-4a44-a8a3-bd1aaad138d5"
-                : "a817fffe-bc7e-4e29-83f7-b512b039e817";
-            }
-            console.log(`[processAction] Segunda búsqueda usando user_id de sesión: ${user_id}`);
-          }
-
+          const user_id = await getUserId();
           console.log(`[processAction] Segunda búsqueda - nombre: ${file}, user_id: ${user_id}`);
           const actaEncontrada = await db
             .select({
@@ -318,22 +282,4 @@ export async function processAction(
       message: "Error en el proceso de acción",
     };
   }
-}
-
-async function formatContent(
-  folder: string,
-  file: string,
-  contenidoParaFormatear: string,
-): Promise<{
-  status: "success" | "error";
-  message?: string;
-  transcripcion?: string;
-  acta?: string;
-  contenido?: string;
-}> {
-  console.log(`[formatContent] Formatting content for: ${file}`);
-  // TODO: Implement your actual content formatting logic here.
-  // This is a placeholder implementation.
-  // For now, it returns a success object with placeholder URLs.
-  return { status: "success", transcripcion: "url/to/transcripcion", acta: "url/to/acta", contenido: contenidoParaFormatear };
 }

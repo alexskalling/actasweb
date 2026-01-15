@@ -8,6 +8,7 @@ import {
   guardarArchivo,
   verificarArchivoExistente,
   obtenerContenidoArchivo,
+  diagnoseAndListModels,
 } from "./utilsActions";
 
 async function pruebaGoogleGemini() {
@@ -36,8 +37,8 @@ export async function generateContenta(
   fileid: string,
   transcipcion: string,
 ) {
-  await pruebaGoogleGemini();
-  
+  // El paso de diagnóstico ya no es necesario, lo podemos eliminar.
+  await diagnoseAndListModels();
   const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
   const nombreTranscripcion = `${file.replace(
     /\.[^/.]+$/,
@@ -85,58 +86,24 @@ export async function generateContenta(
     }
 
     writeLog(`Generando Orden del Día con Gemini para: ${file}`);
-    let responseGeminiOrdenDelDia;
-    let retryCountOrdenDelDia = 0;
-    const maxRetriesOrdenDelDia = 3;
-    let modelNameOrdenDelDia = "gemini-2.5-flash";
-
-    while (retryCountOrdenDelDia < maxRetriesOrdenDelDia) {
-      try {
-        responseGeminiOrdenDelDia = await generateText({
-          model: google(modelNameOrdenDelDia),
-          providerOptions: {
-            google: {
-              safetySettings: [
-                { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
-              ],
-            },
-          },
-          maxTokens: 20000,
-          temperature: 0,
-          system: await getSystemPromt("Orden"),
-          prompt: await getUserPromt(
-            "Orden",
-            "Orden",
-            contenidoTranscripcion,
-            "",
-            0,
-            "",
-          ),
-        });
-        break;
-      } catch (error) {
-        retryCountOrdenDelDia++;
-        const errorMsg = error instanceof Error ? error.message : String(error);
-        const statusCode = (error as any)?.statusCode;
-        console.error(`[OrdenDía] Intento ${retryCountOrdenDelDia}/${maxRetriesOrdenDelDia} | Modelo: ${modelNameOrdenDelDia} | Error: ${errorMsg}${statusCode ? ` | Status: ${statusCode}` : ''}`);
-        
-        if (retryCountOrdenDelDia > 1) {
-          modelNameOrdenDelDia = "gemini-2.5-flash";
-        }
-        
-        if (retryCountOrdenDelDia >= maxRetriesOrdenDelDia) {
-          console.error(`[OrdenDía] FALLÓ después de ${maxRetriesOrdenDelDia} intentos. Último error: ${errorMsg}`);
-          return {
-            status: "error",
-            message: `Error al generar el Orden del Día: ${errorMsg}`,
-          };
-        }
-        await new Promise<void>((resolve) => setTimeout(resolve, 5000));
-      }
-    }
+    const responseGeminiOrdenDelDia = await generateTextWithRetry(
+      "Orden del Día",
+      {
+        maxTokens: 20000,
+        temperature: 0,
+        frequencyPenalty: 0.6,
+        presencePenalty: 0.3,
+        system: await getSystemPromt("Orden"),
+        prompt: await getUserPromt(
+          "Orden",
+          "Orden",
+          contenidoTranscripcion,
+          "",
+          0,
+          "",
+        ),
+      },
+    );
 
     if (!responseGeminiOrdenDelDia) {
       console.error("[OrdenDía] ERROR: No se recibió respuesta del modelo");
@@ -255,9 +222,6 @@ async function procesarOrdenDelDia(
   let contenido = "";
 
   let index = 0;
-  let modelName = "gemini-2.0-flash";
-  const maxRetries = 3;
-  let retryCount = 0;
 
   for (const tema of ordenDelDiaJSON) {
     const nombreTemaNormalizado = String(
@@ -272,9 +236,6 @@ async function procesarOrdenDelDia(
           ? "Cierre"
           : "Contenido";
 
-    let responseTema;
-    retryCount = 0;
-
     const maxTokensPorTipo: Record<string, number> = {
       Cabecera: 12000,
       Contenido: 20000,
@@ -288,24 +249,15 @@ async function procesarOrdenDelDia(
         ? ""
         : contenidoTranscripcion;
 
-    while (retryCount < maxRetries) {
-      try {
-        responseTema = await generateText({
-          model: google(modelName),
-          providerOptions: {
-            google: {
-              safetySettings: [
-                { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
-                { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
-              ],
-            },
-          },
+    // El bucle while aquí es redundante porque generateTextWithRetry ya maneja los reintentos.
+    // Lo simplificamos a una sola llamada.
+    try {
+        let responseTema;
+        responseTema = await generateTextWithRetry(`tema ${tema.nombre}`, {
           maxTokens: maxTokensPorTipo[promptType] ?? 2000,
           temperature: 0,
           system: await getSystemPromt(promptType),
-          prompt: await getUserPromt(
+          prompt: await getUserPromt( // Asegúrate que getUserPromt no esté dentro del retry si no cambia
             promptType,
             tema.nombre,
             contenidoTemaFuente,
@@ -314,26 +266,19 @@ async function procesarOrdenDelDia(
             "",
           ),
         });
-        contenido += responseTema.text.trim();
-        break;
-      } catch (error) {
-        retryCount++;
-        const errorMsg = error instanceof Error ? error.message : String(error);
-        const statusCode = (error as any)?.statusCode;
-        console.error(`[Tema:${tema.nombre}] Intento ${retryCount}/${maxRetries} | Modelo: ${modelName} | Error: ${errorMsg}${statusCode ? ` | Status: ${statusCode}` : ''}`);
-        
-        if (retryCount > 1) {
-          modelName = "gemini-2.5-flash";
-        }
 
-        if (retryCount >= maxRetries) {
-          console.error(`[Tema:${tema.nombre}] FALLÓ después de ${maxRetries} intentos. Último error: ${errorMsg}`);
-          contenido += `[Error: No se pudo procesar ${tema.nombre}. Error: ${errorMsg}]`;
-          break;
+        if (responseTema) {
+          contenido += responseTema.text.trim();
+        } else {
+          // generateTextWithRetry devolvió null, indicando un fallo tras los reintentos.
+          console.error(
+            `Máximo número de intentos alcanzado, no se pudo procesar el tema: ${tema.nombre}.`,
+          );
+          contenido += `[Error: No se pudo procesar ${tema.nombre}. Máximo número de intentos alcanzado.]`;
         }
-
-        await new Promise<void>((resolve) => setTimeout(resolve, 5000));
-      }
+    } catch (error) {
+        manejarError(`procesarOrdenDelDia - tema ${tema.nombre}`, error);
+        contenido += `[Error: Fallo inesperado al procesar ${tema.nombre}.]`;
     }
     index++;
   }
@@ -343,6 +288,85 @@ async function procesarOrdenDelDia(
   return contenido;
 }
 
+async function crearCacheGeminiTranscripcion(
+  transcripcion: string,
+): Promise<string | undefined> {
+  try {
+    if (!transcripcion || transcripcion.trim().length === 0) return undefined;
+    const apiKey =
+      process.env.GOOGLE_API_KEY || process.env.GOOGLE_API_KEY_GEMINI || "";
+    if (!apiKey) return undefined;
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+    const cachedContentApi: any = (model as any).cachedContent?.();
+    if (!cachedContentApi || typeof cachedContentApi.create !== "function") {
+      return undefined;
+    }
+    const res = await cachedContentApi.create({
+      contents: [{ role: "user", parts: [{ text: transcripcion }] }],
+      ttl: "1h",
+    });
+    const name = res?.cachedContent?.name;
+    if (name) writeLog(`[Gemini Cache] creado: ${name}`);
+    return name;
+  } catch (e) {
+    console.warn("No se pudo crear caché en Gemini (opcional):", e);
+    return undefined;
+  }
+}
+
+async function generateTextWithRetry(
+  contextLog: string,
+  options: any,
+  initialModel = "models/gemini-2.5-flash",
+) {
+  let retryCount = 0;
+  const maxRetries = 3;
+  let modelName = initialModel;
+
+  while (retryCount < maxRetries) {
+    try {
+      writeLog(`[Attempt ${retryCount + 1}/${maxRetries}] Generando ${contextLog} con modelo ${modelName}`);
+      const result = await generateText({
+        ...options,
+        model: google(modelName),
+      });
+      return result;
+    } catch (error) {
+      retryCount++;
+      
+      // Extraer y registrar más detalles del error de la API
+      let errorMessage = error instanceof Error ? error.message : String(error);
+      if (error && typeof error === 'object' && 'cause' in error) {
+        const cause = (error as any).cause;
+        errorMessage += ` | Causa: ${cause?.message || JSON.stringify(cause)}`;
+      }
+      manejarError(`generateTextWithRetry - ${contextLog} (Intento ${retryCount})`, new Error(errorMessage));
+
+      // Cambiar a un modelo potencialmente más robusto en el último intento
+      if (retryCount === maxRetries - 1) {
+        const newModel = "models/gemini-2.5-pro";
+        writeLog(`Último intento para ${contextLog}, cambiando a ${newModel}.`);
+        modelName = newModel;
+      }
+
+      if (retryCount >= maxRetries) {
+        console.error(
+          `Máximo número de intentos alcanzado al generar ${contextLog}.`,
+        );
+        return null; // Devolver null para indicar el fallo
+      }
+
+      // Esperar antes de reintentar
+      const delay = 5000 * retryCount; // Espera incremental
+      writeLog(`Esperando ${delay}ms antes del siguiente intento.`);
+      await new Promise<void>((resolve) => setTimeout(resolve, delay));
+    }
+  }
+
+  return null;
+}
 
 async function getSystemPromt(tipo: string) {
   let systemPromt = "";
