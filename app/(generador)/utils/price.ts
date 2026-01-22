@@ -11,7 +11,7 @@
  */
 export function calculatePrice(durationInSeconds: number): number {
   const minutes = Math.ceil(durationInSeconds / 60);
-  const precioCalculado = minutes * 170;
+  const precioCalculado = minutes * 250;
   // Si el precio es menor a 5000, se establece en 5000 como mínimo
   return precioCalculado < 5000 ? 5000 : precioCalculado;
 }

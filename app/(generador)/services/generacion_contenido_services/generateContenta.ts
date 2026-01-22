@@ -2,7 +2,6 @@
 
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   manejarError,
   writeLog,
@@ -11,6 +10,26 @@ import {
   obtenerContenidoArchivo,
   diagnoseAndListModels,
 } from "./utilsActions";
+
+async function pruebaGoogleGemini() {
+  try {
+    console.log("=== PRUEBA GOOGLE GEMINI (gemini-2.0-flash SIN safetySettings) ===");
+    const response = await generateText({
+      model: google("gemini-2.0-flash"),
+      prompt: "¿Quién fue el presidente de Colombia en el año 2000?",
+    });
+    
+    console.log("✅ RESPUESTA PRUEBA:");
+    console.log("Texto:", response.text);
+    console.log("FinishReason:", response.finishReason);
+    console.log("Usage:", response.usage);
+    console.log("Estructura completa:", JSON.stringify(response, null, 2));
+    return response.text;
+  } catch (error) {
+    console.error("❌ ERROR EN PRUEBA:", error);
+    throw error;
+  }
+}
 
 export async function generateContenta(
   folder: string,
@@ -101,51 +120,62 @@ export async function generateContenta(
         },
       );
 
-      if (!responseGeminiOrdenDelDia) {
-        continue;
-      }
-
-      const text = responseGeminiOrdenDelDia.text;
-      const startIndex = text.indexOf("[");
-      const endIndex = text.lastIndexOf("]");
-
-      let jsonCleaned = "";
-      if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
-        jsonCleaned = text.substring(startIndex, endIndex + 1);
-      } else {
-        jsonCleaned = text
-          .trim()
-          .replace(/^`+|`+$/g, "")
-          .replace(/^json/i, "");
-      }
-      lastJsonText = jsonCleaned;
-
-      try {
-        ordenDelDiaJSON = JSON.parse(jsonCleaned);
-      } catch (jsonError) {
-        lastJsonError = jsonError;
-        writeLog(
-          `Error JSON parse en intento ${intentosJson}: ${jsonError instanceof Error ? jsonError.message : String(jsonError)}`,
-        );
-      }
-    }
-
-    if (!ordenDelDiaJSON) {
-      if (lastJsonError) {
-        manejarError(
-          "generateContenta - Error JSON tras reintentos",
-          lastJsonError,
-        );
-        writeLog(`Error JSON parse final. JSON Text: ${lastJsonText}`);
-      }
+    if (!responseGeminiOrdenDelDia) {
+      console.error("[OrdenDía] ERROR: No se recibió respuesta del modelo");
       return {
         status: "error",
-        message:
-          "Error al generar el Orden del Día: No se pudo obtener un JSON válido tras varios intentos.",
+        message: "Error al generar el Orden del Día: respuesta vacía.",
       };
     }
 
+    if (!responseGeminiOrdenDelDia.text || responseGeminiOrdenDelDia.text.trim().length === 0) {
+      const raw = (responseGeminiOrdenDelDia as any).rawResponse;
+      console.error(`[OrdenDía] ERROR: Respuesta vacía`);
+      console.error(`FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`);
+      console.error(`Usage:`, responseGeminiOrdenDelDia.usage);
+      console.error(`Warnings:`, responseGeminiOrdenDelDia.warnings || []);
+      
+      if (raw) {
+        console.error(`RawResponse completo:`, JSON.stringify(raw, null, 2));
+        const blockReason = raw?.promptFeedback?.blockReason;
+        const safetyRatings = raw?.candidates?.[0]?.safetyRatings;
+        const candidateFinishReason = raw?.candidates?.[0]?.finishReason;
+        const content = raw?.candidates?.[0]?.content;
+        
+        if (blockReason) {
+          console.error(`🚫 BLOQUEADO POR: ${blockReason}`);
+        }
+        if (safetyRatings && safetyRatings.length > 0) {
+          const blocked = safetyRatings.filter((r: any) => r.probability === 'HIGH' || r.probability === 'MEDIUM');
+          if (blocked.length > 0) {
+            console.error(`🚫 BLOQUEADO POR SAFETY:`, blocked.map((r: any) => `${r.category}:${r.probability}`).join(', '));
+          }
+        }
+        if (candidateFinishReason) {
+          console.error(`Candidate finishReason: ${candidateFinishReason}`);
+        }
+        if (content) {
+          console.error(`Content parts:`, content.parts || 'N/A');
+        }
+      } else {
+        console.error(`No hay rawResponse disponible`);
+        console.error(`[OrdenDía] Estructura completa respuesta:`, JSON.stringify(responseGeminiOrdenDelDia, null, 2));
+      }
+      
+      return {
+        status: "error",
+        message: `Error: Respuesta vacía. FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`,
+      };
+    }
+
+    const jsonCleaned = responseGeminiOrdenDelDia.text
+      .trim()
+      .replace(/^`+|`+$/g, "")
+      .replace(/^json/i, "");
+
     try {
+      const ordenDelDiaJSON = JSON.parse(jsonCleaned);
+
       const tieneCierre = ordenDelDiaJSON.some(
         (item: { nombre: string }) =>
           item.nombre && item.nombre.toLowerCase().includes("cierre"),
@@ -160,15 +190,10 @@ export async function generateContenta(
         });
       }
 
-      const cachedContentId = await crearCacheGeminiTranscripcion(
-        contenidoTranscripcion,
-      );
-
       const contenido = await procesarOrdenDelDia(
         ordenDelDiaJSON,
         folder,
         contenidoTranscripcion,
-        cachedContentId,
       );
 
       const contenidoFormato = contenido
@@ -185,11 +210,14 @@ export async function generateContenta(
       writeLog(`Contenido guardado: ${nombreContenido}`);
 
       return { status: "success", content: contenidoFormato };
-    } catch (error) {
-      manejarError("generateContenta - Error Procesamiento", error);
+    } catch (jsonError) {
+      const jsonErrorMsg = jsonError instanceof Error ? jsonError.message : String(jsonError);
+      console.error(`[OrdenDía] ERROR JSON: ${jsonErrorMsg} | Longitud texto: ${jsonCleaned.length} | Primeros 200 chars: ${jsonCleaned.substring(0, 200)}`);
+      manejarError("generateContenta - Error JSON", jsonError);
+      writeLog(`Error JSON parse: . JSON Text: ${jsonCleaned}`);
       return {
         status: "error",
-        message: "Error al procesar el contenido del Orden del Día.",
+        message: `Error al procesar el Orden del Día (JSON inválido): ${jsonErrorMsg}`,
       };
     }
   } catch (error) {
@@ -205,7 +233,6 @@ async function procesarOrdenDelDia(
   ordenDelDiaJSON: any,
   folder: string,
   contenidoTranscripcion: string,
-  cachedContentId?: string,
 ) {
   let contenido = "";
 
@@ -244,8 +271,6 @@ async function procesarOrdenDelDia(
         responseTema = await generateTextWithRetry(`tema ${tema.nombre}`, {
           maxTokens: maxTokensPorTipo[promptType] ?? 2000,
           temperature: 0,
-          frequencyPenalty: 0.6,
-          presencePenalty: 0.3,
           system: await getSystemPromt(promptType),
           prompt: await getUserPromt( // Asegúrate que getUserPromt no esté dentro del retry si no cambia
             promptType,
