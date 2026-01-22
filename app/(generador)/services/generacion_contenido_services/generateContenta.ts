@@ -67,40 +67,85 @@ export async function generateContenta(
     }
 
     writeLog(`Generando Orden del Día con Gemini para: ${file}`);
-    const responseGeminiOrdenDelDia = await generateTextWithRetry(
-      "Orden del Día",
-      {
-        maxTokens: 20000,
-        temperature: 0,
-        frequencyPenalty: 0.6,
-        presencePenalty: 0.3,
-        system: await getSystemPromt("Orden"),
-        prompt: await getUserPromt(
-          "Orden",
-          "Orden",
-          contenidoTranscripcion,
-          "",
-          0,
-          "",
-        ),
-      },
-    );
+    
+    let ordenDelDiaJSON: any = null;
+    let intentosJson = 0;
+    const maxIntentosJson = 3;
+    let lastJsonError: any = null;
+    let lastJsonText = "";
 
-    if (!responseGeminiOrdenDelDia) {
+    while (intentosJson < maxIntentosJson && !ordenDelDiaJSON) {
+      intentosJson++;
+      if (intentosJson > 1) {
+        writeLog(
+          `Reintentando generación de Orden del Día (Intento ${intentosJson}/${maxIntentosJson}) por error JSON.`,
+        );
+      }
+
+      const responseGeminiOrdenDelDia = await generateTextWithRetry(
+        `Orden del Día (Intento ${intentosJson})`,
+        {
+          maxTokens: 20000,
+          temperature: 0.1,
+          frequencyPenalty: 0.6,
+          presencePenalty: 0.3,
+          system: await getSystemPromt("Orden"),
+          prompt: await getUserPromt(
+            "Orden",
+            "Orden",
+            contenidoTranscripcion,
+            "",
+            0,
+            "",
+          ),
+        },
+      );
+
+      if (!responseGeminiOrdenDelDia) {
+        continue;
+      }
+
+      const text = responseGeminiOrdenDelDia.text;
+      const startIndex = text.indexOf("[");
+      const endIndex = text.lastIndexOf("]");
+
+      let jsonCleaned = "";
+      if (startIndex !== -1 && endIndex !== -1 && endIndex > startIndex) {
+        jsonCleaned = text.substring(startIndex, endIndex + 1);
+      } else {
+        jsonCleaned = text
+          .trim()
+          .replace(/^`+|`+$/g, "")
+          .replace(/^json/i, "");
+      }
+      lastJsonText = jsonCleaned;
+
+      try {
+        ordenDelDiaJSON = JSON.parse(jsonCleaned);
+      } catch (jsonError) {
+        lastJsonError = jsonError;
+        writeLog(
+          `Error JSON parse en intento ${intentosJson}: ${jsonError instanceof Error ? jsonError.message : String(jsonError)}`,
+        );
+      }
+    }
+
+    if (!ordenDelDiaJSON) {
+      if (lastJsonError) {
+        manejarError(
+          "generateContenta - Error JSON tras reintentos",
+          lastJsonError,
+        );
+        writeLog(`Error JSON parse final. JSON Text: ${lastJsonText}`);
+      }
       return {
         status: "error",
-        message: "Error al generar el Orden del Día: respuesta vacía.",
+        message:
+          "Error al generar el Orden del Día: No se pudo obtener un JSON válido tras varios intentos.",
       };
     }
 
-    const jsonCleaned = responseGeminiOrdenDelDia.text
-      .trim()
-      .replace(/^`+|`+$/g, "")
-      .replace(/^json/i, "");
-
     try {
-      const ordenDelDiaJSON = JSON.parse(jsonCleaned);
-
       const tieneCierre = ordenDelDiaJSON.some(
         (item: { nombre: string }) =>
           item.nombre && item.nombre.toLowerCase().includes("cierre"),
@@ -140,12 +185,11 @@ export async function generateContenta(
       writeLog(`Contenido guardado: ${nombreContenido}`);
 
       return { status: "success", content: contenidoFormato };
-    } catch (jsonError) {
-      manejarError("generateContenta - Error JSON", jsonError);
-      writeLog(`Error JSON parse: . JSON Text: ${jsonCleaned}`);
+    } catch (error) {
+      manejarError("generateContenta - Error Procesamiento", error);
       return {
         status: "error",
-        message: "Error al procesar el Orden del Día (JSON inválido).",
+        message: "Error al procesar el contenido del Orden del Día.",
       };
     }
   } catch (error) {
