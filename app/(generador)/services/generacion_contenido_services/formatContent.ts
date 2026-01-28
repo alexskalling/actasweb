@@ -142,6 +142,49 @@ export async function formatContent(
         writeLog(`Usando contenido del acta proporcionado como parámetro.`);
       }
 
+      // Validar HTML antes de intentar guardar
+      writeLog(`Validando HTML completo antes de guardar...`);
+      const validacion = validarHTMLCompleto(actaHTMLContent);
+      
+      if (!validacion.esValido) {
+        writeLog(`[VALIDACIÓN HTML] HTML inicial tiene errores, intentando reparar...`);
+        writeLog(`[VALIDACIÓN HTML] Errores detectados: ${validacion.errores.join("; ")}`);
+        
+        // Intentar reparar HTML desbalanceado
+        const { htmlReparado, reparacionesRealizadas } = repararHTMLDesbalanceado(actaHTMLContent);
+        
+        if (reparacionesRealizadas.length > 0) {
+          writeLog(`[AUTO-REPARACIÓN HTML] Reparaciones realizadas:`);
+          reparacionesRealizadas.forEach((rep) => writeLog(`  - ${rep}`));
+          
+          // Validar nuevamente el HTML reparado
+          const validacionReparado = validarHTMLCompleto(htmlReparado);
+          
+          if (validacionReparado.esValido) {
+            writeLog(`[AUTO-REPARACIÓN HTML] ✓ HTML reparado exitosamente`);
+            actaHTMLContent = htmlReparado;
+          } else {
+            const mensajeError = `HTML no se pudo reparar completamente:\n${validacionReparado.errores.join("\n")}`;
+            writeLog(`[ERROR VALIDACIÓN HTML] ${mensajeError}`);
+            writeLog(`[HTML] Longitud: ${actaHTMLContent.length} caracteres`);
+            writeLog(`[HTML] Últimos 500 caracteres: ${actaHTMLContent.slice(-500)}`);
+            throw new Error(mensajeError);
+          }
+        } else {
+          const mensajeError = `HTML incompleto o malformado detectado:\n${validacion.errores.join("\n")}`;
+          writeLog(`[ERROR VALIDACIÓN HTML] ${mensajeError}`);
+          writeLog(`[HTML] Longitud: ${actaHTMLContent.length} caracteres`);
+          writeLog(`[HTML] Últimos 500 caracteres: ${actaHTMLContent.slice(-500)}`);
+          throw new Error(mensajeError);
+        }
+      }
+      
+      if (validacion.advertencias.length > 0) {
+        writeLog(`[ADVERTENCIAS HTML] ${validacion.advertencias.join(", ")}`);
+      }
+      
+      writeLog(`HTML validado correctamente: ${actaHTMLContent.length} caracteres, estructura completa`);
+
       writeLog(`Guardando Borrador .docx en Nextcloud: ${nombreBorradorDocx}`);
       const archivoGuardado = await guardarArchivoNextcloudDocx(
         folder,
@@ -313,6 +356,139 @@ async function obtenerUrlPublicaArchivoExistente(
   }
 }
 
+interface ValidacionHTML {
+  esValido: boolean;
+  errores: string[];
+  advertencias: string[];
+}
+
+function validarHTMLCompleto(htmlContent: string): ValidacionHTML {
+  const resultado: ValidacionHTML = {
+    esValido: true,
+    errores: [],
+    advertencias: [],
+  };
+
+  if (!htmlContent || htmlContent.trim().length === 0) {
+    resultado.esValido = false;
+    resultado.errores.push("El contenido HTML está vacío");
+    return resultado;
+  }
+
+  // Verificar que no termine en medio de una etiqueta
+  const ultimosCaracteres = htmlContent.trim().slice(-50);
+  if (ultimosCaracteres.includes("<") && !ultimosCaracteres.endsWith(">")) {
+    const posicionUltimoMenor = ultimosCaracteres.lastIndexOf("<");
+    const fragmentoIncompleto = ultimosCaracteres.slice(posicionUltimoMenor);
+    resultado.esValido = false;
+    resultado.errores.push(
+      `HTML truncado: termina en medio de una etiqueta: "${fragmentoIncompleto}"`,
+    );
+  }
+
+  // Verificar balance de comillas en atributos
+  const comillas = (htmlContent.match(/"/g) || []).length;
+  if (comillas % 2 !== 0) {
+    resultado.esValido = false;
+    resultado.errores.push(
+      "HTML incompleto: número impar de comillas - posible atributo sin cerrar",
+    );
+  }
+
+  // Verificar balance de etiquetas comunes
+  const etiquetasParaValidar = [
+    "header",
+    "h1",
+    "h2",
+    "h3",
+    "p",
+    "ul",
+    "ol",
+    "li",
+    "div",
+    "strong",
+  ];
+
+  for (const etiqueta of etiquetasParaValidar) {
+    const aperturas = (
+      htmlContent.match(new RegExp(`<${etiqueta}[\\s>]`, "gi")) || []
+    ).length;
+    const cierres = (
+      htmlContent.match(new RegExp(`</${etiqueta}>`, "gi")) || []
+    ).length;
+
+    if (aperturas !== cierres) {
+      resultado.esValido = false;
+      resultado.errores.push(
+        `Etiquetas <${etiqueta}> desbalanceadas: ${aperturas} aperturas vs ${cierres} cierres`,
+      );
+    }
+  }
+
+  // Verificar que haya una estructura mínima esperada
+  if (!htmlContent.includes("<header>")) {
+    resultado.advertencias.push(
+      "No se encontró etiqueta <header> - posible contenido incompleto",
+    );
+  }
+
+  // Verificar que no haya etiquetas huérfanas al final
+  const patronEtiquetaHuerfana = /<(h[1-6]|p|li|div|strong)[^>]*>[^<]*$/i;
+  if (patronEtiquetaHuerfana.test(htmlContent.trim())) {
+    const match = htmlContent.trim().match(patronEtiquetaHuerfana);
+    if (match) {
+      resultado.esValido = false;
+      resultado.errores.push(
+        `HTML truncado: etiqueta sin cerrar al final: "${match[0].slice(0, 50)}..."`,
+      );
+    }
+  }
+
+  return resultado;
+}
+
+function repararHTMLDesbalanceado(htmlContent: string): {
+  htmlReparado: string;
+  reparacionesRealizadas: string[];
+} {
+  let html = htmlContent;
+  const reparaciones: string[] = [];
+
+  // Contar etiquetas para reparar
+  const etiquetasParaReparar = [
+    { tag: "ul", selfClosing: false },
+    { tag: "ol", selfClosing: false },
+    { tag: "li", selfClosing: false },
+    { tag: "p", selfClosing: false },
+    { tag: "div", selfClosing: false },
+    { tag: "strong", selfClosing: false },
+    { tag: "h1", selfClosing: false },
+    { tag: "h2", selfClosing: false },
+    { tag: "h3", selfClosing: false },
+  ];
+
+  for (const { tag } of etiquetasParaReparar) {
+    const aperturas = (
+      html.match(new RegExp(`<${tag}[\\s>]`, "gi")) || []
+    ).length;
+    const cierres = (html.match(new RegExp(`</${tag}>`, "gi")) || []).length;
+
+    if (aperturas > cierres) {
+      const faltantes = aperturas - cierres;
+      const tagsDeCierre = `</${tag}>`.repeat(faltantes);
+      html += tagsDeCierre;
+      reparaciones.push(
+        `Agregados ${faltantes} </${tag}> al final del documento`,
+      );
+    }
+  }
+
+  return {
+    htmlReparado: html,
+    reparacionesRealizadas: reparaciones,
+  };
+}
+
 function limpiarHTMLParaDocx(htmlContent: string): string {
   if (!htmlContent) return "";
 
@@ -372,7 +548,9 @@ async function guardarArchivoNextcloudDocx(
       pageNumber: false,
     };
 
+    writeLog(`[DOCX] Convirtiendo HTML a DOCX...`);
     const docxBuffer = await htmlToDocx(actaContent, null, options);
+    writeLog(`[DOCX] Conversión exitosa, tamaño buffer: ${Buffer.byteLength(docxBuffer as unknown as string)} bytes`);
 
     const usuario = process.env.NEXTCLOUD_USER;
     const contrasena = process.env.NEXTCLOUD_PASSWORD;
@@ -394,6 +572,7 @@ async function guardarArchivoNextcloudDocx(
       "Content-Length": contentLength.toString(),
     };
 
+    writeLog(`[NEXTCLOUD] Guardando archivo en: ${rutaCompletaArchivoDocx}`);
     const respuestaGuardado = await fetch(rutaCompletaArchivoDocx, {
       method: "PUT",
       headers: cabecerasAutenticacion,
@@ -402,14 +581,25 @@ async function guardarArchivoNextcloudDocx(
 
     if (!respuestaGuardado.ok) {
       const errorText = await respuestaGuardado.text();
-      console.error(
-      );
+      const errorMsg = `Error al guardar en Nextcloud - Status: ${respuestaGuardado.status} ${respuestaGuardado.statusText}`;
+      writeLog(`[ERROR NEXTCLOUD] ${errorMsg}`);
+      writeLog(`[ERROR NEXTCLOUD] Response body: ${errorText.slice(0, 500)}`);
+      writeLog(`[ERROR NEXTCLOUD] Ruta: ${rutaCompletaArchivoDocx}`);
+      writeLog(`[ERROR NEXTCLOUD] Tamaño contenido: ${contentLength} bytes`);
+      console.error(errorMsg);
+      console.error("Response body:", errorText);
       return false;
     }
 
+    writeLog(`[NEXTCLOUD] Archivo guardado exitosamente`);
     return true;
   } catch (error) {
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    writeLog(`[ERROR] Error en guardarArchivoNextcloudDocx: ${errorMsg}`);
     console.error("Error en guardarArchivoNextcloudDocx:", error);
+    if (error instanceof Error && error.stack) {
+      writeLog(`[ERROR] Stack trace: ${error.stack}`);
+    }
     return false;
   }
 }

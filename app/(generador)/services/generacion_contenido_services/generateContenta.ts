@@ -2,6 +2,7 @@
 
 import { google } from "@ai-sdk/google";
 import { generateText } from "ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   manejarError,
   writeLog,
@@ -86,39 +87,24 @@ export async function generateContenta(
     }
 
     writeLog(`Generando Orden del Día con Gemini para: ${file}`);
-    
-    let ordenDelDiaJSON: any = null;
-    let intentosJson = 0;
-    const maxIntentosJson = 3;
-    let lastJsonError: any = null;
-    let lastJsonText = "";
-
-    while (intentosJson < maxIntentosJson && !ordenDelDiaJSON) {
-      intentosJson++;
-      if (intentosJson > 1) {
-        writeLog(
-          `Reintentando generación de Orden del Día (Intento ${intentosJson}/${maxIntentosJson}) por error JSON.`,
-        );
-      }
-
-      const responseGeminiOrdenDelDia = await generateTextWithRetry(
-        `Orden del Día (Intento ${intentosJson})`,
-        {
-          maxTokens: 20000,
-          temperature: 0.1,
-          frequencyPenalty: 0.6,
-          presencePenalty: 0.3,
-          system: await getSystemPromt("Orden"),
-          prompt: await getUserPromt(
-            "Orden",
-            "Orden",
-            contenidoTranscripcion,
-            "",
-            0,
-            "",
-          ),
-        },
-      );
+    const responseGeminiOrdenDelDia = await generateTextWithRetry(
+      "Orden del Día",
+      {
+        maxTokens: 40000,
+        temperature: 0,
+        frequencyPenalty: 0.6,
+        presencePenalty: 0.3,
+        system: await getSystemPromt("Orden"),
+        prompt: await getUserPromt(
+          "Orden",
+          "Orden",
+          contenidoTranscripcion,
+          "",
+          0,
+          "",
+        ),
+      },
+    );
 
     if (!responseGeminiOrdenDelDia) {
       console.error("[OrdenDía] ERROR: No se recibió respuesta del modelo");
@@ -126,6 +112,14 @@ export async function generateContenta(
         status: "error",
         message: "Error al generar el Orden del Día: respuesta vacía.",
       };
+    }
+
+    // Logging de diagnóstico para detectar truncamiento
+    writeLog(`[OrdenDía] finishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`);
+    writeLog(`[OrdenDía] usage: ${JSON.stringify(responseGeminiOrdenDelDia.usage)}`);
+    
+    if (responseGeminiOrdenDelDia.finishReason === 'length') {
+      console.warn('[OrdenDía] ADVERTENCIA: La respuesta se detuvo por límite de tokens (length). El JSON podría estar truncado.');
     }
 
     if (!responseGeminiOrdenDelDia.text || responseGeminiOrdenDelDia.text.trim().length === 0) {
@@ -168,10 +162,88 @@ export async function generateContenta(
       };
     }
 
-    const jsonCleaned = responseGeminiOrdenDelDia.text
+    let jsonCleaned = responseGeminiOrdenDelDia.text
       .trim()
       .replace(/^`+|`+$/g, "")
       .replace(/^json/i, "");
+
+    // Función auxiliar para validar si el JSON está completo
+    const isValidJSON = (str: string): boolean => {
+      // Verificar que no haya strings sin terminar
+      const stringMatches = str.match(/"/g);
+      if (stringMatches && stringMatches.length % 2 !== 0) {
+        console.error('[Validación JSON] Número impar de comillas - JSON incompleto');
+        return false;
+      }
+      
+      // Verificar que los corchetes estén balanceados
+      let bracketCount = 0;
+      for (const char of str) {
+        if (char === '[') bracketCount++;
+        if (char === ']') bracketCount--;
+      }
+      
+      if (bracketCount !== 0) {
+        console.error('[Validación JSON] Corchetes no balanceados - JSON incompleto');
+        return false;
+      }
+      
+      return true;
+    };
+
+    // Función auxiliar para intentar reparar JSON truncado
+    const intentarRepararJSON = (jsonStr: string): string => {
+      let reparado = jsonStr;
+      
+      // Si termina con una coma, removerla
+      if (reparado.trim().endsWith(',')) {
+        reparado = reparado.trim().slice(0, -1);
+      }
+      
+      // Contar corchetes abiertos vs cerrados
+      const abiertos = (reparado.match(/\[/g) || []).length;
+      const cerrados = (reparado.match(/\]/g) || []).length;
+      
+      // Si tiene comillas impares, remover el último objeto incompleto
+      const comillas = (reparado.match(/"/g) || []).length;
+      if (comillas % 2 !== 0) {
+        writeLog('[Reparación JSON] Detectado string sin cerrar, removiendo último objeto incompleto...');
+        // Encontrar la última coma antes del objeto incompleto
+        const ultimaComa = reparado.lastIndexOf(',');
+        if (ultimaComa > 0) {
+          reparado = reparado.substring(0, ultimaComa);
+        }
+      }
+      
+      // Agregar corchetes de cierre faltantes
+      const faltantes = Math.max(0, abiertos - (reparado.match(/\]/g) || []).length);
+      if (faltantes > 0) {
+        writeLog(`[Reparación JSON] Agregando ${faltantes} corchete(s) de cierre faltante(s)`);
+        reparado += ']'.repeat(faltantes);
+      }
+      
+      return reparado;
+    };
+
+    // Validar y reparar JSON si es necesario
+    if (!isValidJSON(jsonCleaned)) {
+      writeLog('[OrdenDía] JSON incompleto detectado, intentando reparar...');
+      const jsonReparado = intentarRepararJSON(jsonCleaned);
+      
+      if (isValidJSON(jsonReparado)) {
+        writeLog('[OrdenDía] JSON reparado exitosamente');
+        jsonCleaned = jsonReparado;
+      } else {
+        console.error('[OrdenDía] No se pudo reparar el JSON automáticamente');
+        console.error(`Longitud texto: ${jsonCleaned.length}`);
+        console.error(`Primeros 200 chars: ${jsonCleaned.substring(0, 200)}`);
+        console.error(`Últimos 200 chars: ${jsonCleaned.substring(Math.max(0, jsonCleaned.length - 200))}`);
+        return {
+          status: "error",
+          message: 'Error: JSON incompleto y no se pudo reparar automáticamente. La transcripción puede ser demasiado larga.',
+        };
+      }
+    }
 
     try {
       const ordenDelDiaJSON = JSON.parse(jsonCleaned);
@@ -212,12 +284,21 @@ export async function generateContenta(
       return { status: "success", content: contenidoFormato };
     } catch (jsonError) {
       const jsonErrorMsg = jsonError instanceof Error ? jsonError.message : String(jsonError);
-      console.error(`[OrdenDía] ERROR JSON: ${jsonErrorMsg} | Longitud texto: ${jsonCleaned.length} | Primeros 200 chars: ${jsonCleaned.substring(0, 200)}`);
+      console.error(`[OrdenDía] ERROR JSON: ${jsonErrorMsg}`);
+      console.error(`Longitud texto: ${jsonCleaned.length}`);
+      console.error(`Primeros 200 chars: ${jsonCleaned.substring(0, 200)}`);
+      console.error(`Últimos 200 chars: ${jsonCleaned.substring(Math.max(0, jsonCleaned.length - 200))}`);
+      
+      // Si el error es de truncamiento, sugerir aumento de maxTokens
+      if (jsonErrorMsg.includes('Unterminated string') || jsonErrorMsg.includes('Unexpected end')) {
+        console.error('[OrdenDía] DIAGNÓSTICO: La respuesta parece estar truncada. Considera aumentar maxTokens.');
+      }
+      
       manejarError("generateContenta - Error JSON", jsonError);
       writeLog(`Error JSON parse: . JSON Text: ${jsonCleaned}`);
       return {
         status: "error",
-        message: `Error al procesar el Orden del Día (JSON inválido): ${jsonErrorMsg}`,
+        message: `Error al procesar el Orden del Día (JSON ${jsonErrorMsg.includes('Unterminated') || jsonErrorMsg.includes('Unexpected end') ? 'incompleto/truncado' : 'inválido'}): ${jsonErrorMsg}`,
       };
     }
   } catch (error) {
@@ -252,9 +333,9 @@ async function procesarOrdenDelDia(
           : "Contenido";
 
     const maxTokensPorTipo: Record<string, number> = {
-      Cabecera: 12000,
-      Contenido: 20000,
-      Cierre: 12000,
+      Cabecera: 15000,
+      Contenido: 40000,
+      Cierre: 15000,
     };
 
     const contenidoTemaFuente =
@@ -283,6 +364,13 @@ async function procesarOrdenDelDia(
         });
 
         if (responseTema) {
+          // Verificar si la respuesta fue truncada por límite de tokens
+          if (responseTema.finishReason === 'length') {
+            const advertencia = `ADVERTENCIA: El tema "${tema.nombre}" fue truncado por límite de tokens. El contenido podría estar incompleto.`;
+            writeLog(`[TRUNCAMIENTO] ${advertencia}`);
+            console.warn(`[${tema.nombre}]`, advertencia);
+          }
+          
           contenido += responseTema.text.trim();
         } else {
           // generateTextWithRetry devolvió null, indicando un fallo tras los reintentos.

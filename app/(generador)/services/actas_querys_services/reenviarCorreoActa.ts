@@ -4,7 +4,7 @@ import { db } from "@/lib/db/db";
 import { actas, usuarios } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { sendActaEmail } from "@/app/Emails/actions/sendEmails";
-import { ActualizarProceso } from "./actualizarProceso";
+import { ActualizarProcesoPorId } from "./actualizarProcesoPorId";
 import { writeLog } from "../generacion_contenido_services/utilsActions";
 
 export async function reenviarCorreoActa(idActa: string) {
@@ -90,8 +90,8 @@ export async function reenviarCorreoActa(idActa: string) {
     }
 
 
-    const resultadoActualizacion = await ActualizarProceso(
-      actaConUsuario.nombre, // 1. nombre
+    const resultadoActualizacion = await ActualizarProcesoPorId(
+      idActa, // 1. idActa (usamos el ID directamente en lugar de buscar por nombre)
       7, // 2. idEstadoProceso
       undefined, // 3. duracion
       undefined, // 4. costo
@@ -101,12 +101,11 @@ export async function reenviarCorreoActa(idActa: string) {
       undefined, // 8. urlTranscripcion
       undefined, // 9. urlborrador
       undefined, // 10. urlContenido
-      false, // 11. automation
+      undefined, // 11. automation
       undefined, // 12. codigoAtencion
       undefined, // 13. automation_mail
       undefined, // 14. codigoReferido
       undefined, // 15. soporte
-      undefined, // 16. idUsuarioActa
     );
 
     if (resultadoActualizacion.status !== "success") {
