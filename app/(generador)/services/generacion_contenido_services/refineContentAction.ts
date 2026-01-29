@@ -122,7 +122,7 @@ Tu tarea es:
       );
       try {
         const { text } = await generateText({
-          model: google(modelName),
+          model: google(modelName) as any,
           system: systemPrompt,
           prompt: userPrompt,
         });

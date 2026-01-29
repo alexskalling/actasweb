@@ -4,10 +4,19 @@ const nextConfig = {
     serverActions: {
       bodySizeLimit: "5gb",
     },
-    serverComponentsExternalPackages: ["@react-email/render", "@google/generative-ai"],
   },
+  serverExternalPackages: ["@react-email/render", "@google/generative-ai"],
   images: {
-    domains: ['lh3.googleusercontent.com', 'actasdereuniones.ai'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'actasdereuniones.ai',
+      },
+    ],
   },
 };
 

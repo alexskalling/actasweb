@@ -12,25 +12,7 @@ import {
   diagnoseAndListModels,
 } from "./utilsActions";
 
-async function pruebaGoogleGemini() {
-  try {
-    console.log("=== PRUEBA GOOGLE GEMINI (gemini-2.0-flash SIN safetySettings) ===");
-    const response = await generateText({
-      model: google("gemini-2.0-flash"),
-      prompt: "¿Quién fue el presidente de Colombia en el año 2000?",
-    });
-    
-    console.log("✅ RESPUESTA PRUEBA:");
-    console.log("Texto:", response.text);
-    console.log("FinishReason:", response.finishReason);
-    console.log("Usage:", response.usage);
-    console.log("Estructura completa:", JSON.stringify(response, null, 2));
-    return response.text;
-  } catch (error) {
-    console.error("❌ ERROR EN PRUEBA:", error);
-    throw error;
-  }
-}
+
 
 export async function generateContenta(
   folder: string,
@@ -433,7 +415,7 @@ async function generateTextWithRetry(
       writeLog(`[Attempt ${retryCount + 1}/${maxRetries}] Generando ${contextLog} con modelo ${modelName}`);
       const result = await generateText({
         ...options,
-        model: google(modelName),
+        model: google(modelName) as any,
       });
       return result;
     } catch (error) {
