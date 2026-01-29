@@ -7,7 +7,7 @@ const nextConfig = {
     serverComponentsExternalPackages: ["@react-email/render", "@google/generative-ai"],
   },
   images: {
-    domains: ['lh3.googleusercontent.com'],
+    domains: ['lh3.googleusercontent.com', 'actasdereuniones.ai'],
   },
 };
 

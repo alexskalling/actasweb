@@ -238,13 +238,68 @@ export default function PlataformaPage() {
                 </div>
               </div>
 
-              {}
+              {/* Formulario de Edición */}
               {showEditForm && (
                 <div className="mt-3 sm:mt-4 flex justify-center border-t border-gray-100 pt-4">
                   <EditProfileForm onClose={() => setShowEditForm(false)} />
                 </div>
               )}
             </div>
+
+            {/* Banner de Actualización */}
+            <div className="order-1 lg:col-span-12 bg-gradient-to-r from-purple-900 via-purple-800 to-purple-900 border border-purple-700/50 p-6 sm:p-8 rounded-2xl shadow-xl overflow-hidden relative group">
+              {/* Decoración de fondo */}
+              <div className="absolute top-0 right-0 -mt-10 -mr-10 size-40 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-all duration-700"></div>
+              <div className="absolute bottom-0 left-0 -mb-10 -ml-10 size-60 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-all duration-700"></div>
+
+              <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex-1 space-y-4 text-center md:text-left">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-200 text-xs font-bold uppercase tracking-wider animate-pulse">
+                    <span className="size-2 bg-purple-400 rounded-full"></span>
+                    Próxima Actualización
+                  </div>
+                  
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                    ¡Se viene una <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">gran actualización</span> con cosas muy buenas!
+                  </h2>
+                  
+                  <p className="text-purple-100/90 text-sm sm:text-lg leading-relaxed max-w-2xl">
+                    Estaremos en ventana de actualización el día de hoy a las <span className="font-bold text-white bg-purple-700/50 px-2 py-0.5 rounded">4:00 PM</span>. 
+                    Avisaremos del restablecimiento del servicio apenas terminemos.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                    <a 
+                      href="https://www.instagram.com/p/DUE-AfCDTRd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 bg-white text-purple-900 font-bold rounded-xl hover:bg-purple-50 transition-all duration-300 transform hover:-translate-y-1 shadow-lg"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-pink-600">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                      Ver novedades en Instagram
+                    </a>
+                    <span className="text-purple-300 text-xs sm:text-sm italic">
+                      ¡No te pierdas de lo que viene!
+                    </span>
+                  </div>
+                </div>
+
+                <div className="relative group/img flex-shrink-0">
+                  <Image
+                    src="https://actasdereuniones.ai/wp-content/uploads/2026/01/aviso.webp"
+                    alt="Aviso de actualización"
+                    width={300}
+                    height={300}
+                    className="w-full h-auto max-w-[200px] sm:max-w-[280px] object-contain transition-transform duration-500 group-hover/img:scale-110 drop-shadow-2xl"
+                  />
+                </div>
+              </div>
+            </div>
+
 
             {}
             <div className="order-2 lg:order-1 lg:col-span-8 bg-white border border-gray-200 p-4 rounded-lg shadow-sm">
