@@ -260,13 +260,20 @@ export default function PlataformaPage() {
                   </div>
                   
                   <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                    ¡Se viene una <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">gran actualización</span> con cosas muy buenas!
+                    ¡Estamos <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-200 to-indigo-200">evolucionando para ti</span>! 🚀
                   </h2>
                   
                   <p className="text-purple-100/90 text-sm sm:text-lg leading-relaxed max-w-2xl">
-                    Estaremos en ventana de actualización el día de hoy a las <span className="font-bold text-white bg-purple-700/50 px-2 py-0.5 rounded">4:00 PM</span>. 
-                    Avisaremos del restablecimiento del servicio apenas terminemos.
+                    Este <span className="font-bold text-white">jueves 29 de enero</span> desde las <span className="font-bold text-white bg-purple-700/50 px-2 py-0.5 rounded">4:00 PM</span>, 
+                    haremos una pausa breve para instalar la actualización más potente hasta la fecha.
                   </p>
+
+                  <div className="bg-purple-950/40 border-l-4 border-purple-400 p-4 rounded-r-xl space-y-2">
+                    <p className="text-white font-bold text-sm sm:text-base">¿Cuándo volvemos?</p>
+                    <p className="text-purple-100/90 text-xs sm:text-sm">
+                      Estimamos entre 2 y 4 horas, pero la verdad es que todo el equipo de <strong>Actas de Reuniones</strong> está trabajando a toda marcha para que sea mucho, mucho antes.
+                    </p>
+                  </div>
 
                   <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
                     <a 
@@ -282,8 +289,8 @@ export default function PlataformaPage() {
                       </svg>
                       Ver novedades en Instagram
                     </a>
-                    <span className="text-purple-300 text-xs sm:text-sm italic">
-                      ¡No te pierdas de lo que viene!
+                    <span className="text-purple-300 text-xs sm:text-sm italic text-center sm:text-left">
+                      Te avisaremos por correo e Instagram cuando el sistema esté listo. ✨
                     </span>
                   </div>
                 </div>
