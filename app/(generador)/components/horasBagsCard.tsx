@@ -8,7 +8,7 @@ export default function HorasBagsCard() {
 
   const handleContactarWhatsApp = () => {
     const nombreUsuario = session?.user?.name || "Usuario";
-    const numeroWhatsApp = "56945871929"; // Guillermo
+    const numeroWhatsApp = "56945871929";
     const mensaje = `Hola Guillermo, soy ${nombreUsuario}. Estoy interesado en comprar una bolsa de horas para mis actas. ¿Me puedes ayudar con el proceso de compra?`;
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, "_blank");

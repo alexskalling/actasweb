@@ -32,7 +32,7 @@ const EPaycoOnPageComponent = (props: ePaycoOnPageComponentProps) => {
   const processingTransactions = useRef(new Set<string>()).current;
 
   const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-  
+
   const hasToastBeenShown = (transactionId: string): boolean => {
     if (typeof window === "undefined") return false;
     const shown = localStorage.getItem(`toast_shown_${transactionId}`);
@@ -194,7 +194,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     try {
       await ActualizarProceso(
         file,
-        5, // idEstadoProceso aprobado
+        5,
         undefined,
         parseFloat(transaction.x_amount || transaction.amount),
         transaction.x_transaction_id || transaction.transaction_id,
@@ -372,7 +372,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
     if (baseUrl && !baseUrl.startsWith('http')) {
       baseUrl = `https://${baseUrl}`;
     }
-    
+
     if (baseUrl.endsWith('/')) {
       baseUrl = baseUrl.slice(0, -1);
     }
@@ -384,7 +384,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
     datosPago.confirmation = urlConfirmacion;
     if (typeof window !== "undefined") {
-      // Reconstruir URL de respuesta para asegurar formato válido y coincidencia con baseUrl
+
       datosPago.response = `${baseUrl}${window.location.pathname}${window.location.search}`;
     }
 
@@ -533,13 +533,13 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
     datosPago.onResponse = async (response: any) => {
       let normalizedResponse = response;
-      
+
       if (response && response.data && (response.data.x_response || response.data.x_cod_response)) {
         normalizedResponse = response.data;
       } else if (response && response.transaction) {
         normalizedResponse = response.transaction;
       }
-      
+
       const transactionId = normalizedResponse.x_transaction_id || normalizedResponse.transaction_id || response.x_transaction_id || "";
       if (!transactionId) {
         console.warn("⚠️ No se encontró transaction_id en la respuesta de ePayco:", response);
@@ -559,7 +559,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
 
       try {
         cerrarModalEpayco();
-      
+
       if (typeof window !== "undefined") {
         const currentUrl = window.location.href;
 
@@ -663,7 +663,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                 </div>
               </div>
             ),
-            duration: Infinity, // No se cierra automáticamente
+            duration: Infinity,
             action: {
               label: "Entendido",
               onClick: () => { },
@@ -879,7 +879,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           'secure.epayco',
           'new-checkout.epayco'
         ];
-        
+
         if (event.origin &&
           !epaycoOrigins.some(origin => event.origin.includes(origin)) &&
           event.origin !== window.location.origin) {
@@ -1031,7 +1031,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                       </div>
                     </div>
                   ),
-                  duration: Infinity, // No se cierra automáticamente
+                  duration: Infinity,
                   action: {
                     label: "Entendido",
                     onClick: () => { },
@@ -1140,16 +1140,16 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
             dialog.addEventListener('close', async () => {
               if (!pagoProcesado) {
                 await sleep(1000);
-                
+
                 const urlParams = new URLSearchParams(window.location.search);
                 const refPayco = urlParams.get('ref_payco') || urlParams.get('x_ref_payco');
-                
+
                 if (refPayco) {
                   try {
                     const verifyUrl = `https://api.secure.epayco.co/v1/transaction/response.json?ref_payco=${refPayco}&public_key=${process.env.NEXT_PUBLIC_EPAYCO_PUBLIC_KEY}`;
                     const response = await fetch(verifyUrl);
                     const data = await response.json();
-                    
+
                     if (data.success && data.data) {
                       const transaction = data.data;
                       if (transaction.x_response === "Aceptada" || transaction.x_cod_response === 1) {
@@ -1182,7 +1182,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
                           const verifyUrl = `https://api.secure.epayco.co/v1/transaction/response.json?ref_payco=${refPayco}&public_key=${process.env.NEXT_PUBLIC_EPAYCO_PUBLIC_KEY}`;
                           const response = await fetch(verifyUrl);
                           const data = await response.json();
-                          
+
                           if (data.success && data.data) {
                             const transaction = data.data;
                             if (transaction.x_response === "Aceptada" || transaction.x_cod_response === 1) {

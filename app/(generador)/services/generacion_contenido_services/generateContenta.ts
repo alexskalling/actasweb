@@ -18,7 +18,7 @@ async function pruebaGoogleGemini() {
       model: google("gemini-2.0-flash"),
       prompt: "¿Quién fue el presidente de Colombia en el año 2000?",
     });
-    
+
     console.log("✅ RESPUESTA PRUEBA:");
     console.log("Texto:", response.text);
     console.log("FinishReason:", response.finishReason);
@@ -37,7 +37,7 @@ export async function generateContenta(
   fileid: string,
   transcipcion: string,
 ) {
-  // El paso de diagnóstico ya no es necesario, lo podemos eliminar.
+
   await diagnoseAndListModels();
   const nombreContenido = `${file.replace(/\.[^/.]+$/, "")}_Contenido.txt`;
   const nombreTranscripcion = `${file.replace(
@@ -119,14 +119,14 @@ export async function generateContenta(
       console.error(`FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`);
       console.error(`Usage:`, responseGeminiOrdenDelDia.usage);
       console.error(`Warnings:`, responseGeminiOrdenDelDia.warnings || []);
-      
+
       if (raw) {
         console.error(`RawResponse completo:`, JSON.stringify(raw, null, 2));
         const blockReason = raw?.promptFeedback?.blockReason;
         const safetyRatings = raw?.candidates?.[0]?.safetyRatings;
         const candidateFinishReason = raw?.candidates?.[0]?.finishReason;
         const content = raw?.candidates?.[0]?.content;
-        
+
         if (blockReason) {
           console.error(`🚫 BLOQUEADO POR: ${blockReason}`);
         }
@@ -146,7 +146,7 @@ export async function generateContenta(
         console.error(`No hay rawResponse disponible`);
         console.error(`[OrdenDía] Estructura completa respuesta:`, JSON.stringify(responseGeminiOrdenDelDia, null, 2));
       }
-      
+
       return {
         status: "error",
         message: `Error: Respuesta vacía. FinishReason: ${responseGeminiOrdenDelDia.finishReason || 'N/A'}`,
@@ -249,15 +249,13 @@ async function procesarOrdenDelDia(
         ? ""
         : contenidoTranscripcion;
 
-    // El bucle while aquí es redundante porque generateTextWithRetry ya maneja los reintentos.
-    // Lo simplificamos a una sola llamada.
     try {
         let responseTema;
         responseTema = await generateTextWithRetry(`tema ${tema.nombre}`, {
           maxTokens: maxTokensPorTipo[promptType] ?? 2000,
           temperature: 0,
           system: await getSystemPromt(promptType),
-          prompt: await getUserPromt( // Asegúrate que getUserPromt no esté dentro del retry si no cambia
+          prompt: await getUserPromt(
             promptType,
             tema.nombre,
             contenidoTemaFuente,
@@ -270,7 +268,7 @@ async function procesarOrdenDelDia(
         if (responseTema) {
           contenido += responseTema.text.trim();
         } else {
-          // generateTextWithRetry devolvió null, indicando un fallo tras los reintentos.
+
           console.error(
             `Máximo número de intentos alcanzado, no se pudo procesar el tema: ${tema.nombre}.`,
           );
@@ -335,8 +333,7 @@ async function generateTextWithRetry(
       return result;
     } catch (error) {
       retryCount++;
-      
-      // Extraer y registrar más detalles del error de la API
+
       let errorMessage = error instanceof Error ? error.message : String(error);
       if (error && typeof error === 'object' && 'cause' in error) {
         const cause = (error as any).cause;
@@ -344,7 +341,6 @@ async function generateTextWithRetry(
       }
       manejarError(`generateTextWithRetry - ${contextLog} (Intento ${retryCount})`, new Error(errorMessage));
 
-      // Cambiar a un modelo potencialmente más robusto en el último intento
       if (retryCount === maxRetries - 1) {
         const newModel = "models/gemini-2.5-pro";
         writeLog(`Último intento para ${contextLog}, cambiando a ${newModel}.`);
@@ -355,11 +351,10 @@ async function generateTextWithRetry(
         console.error(
           `Máximo número de intentos alcanzado al generar ${contextLog}.`,
         );
-        return null; // Devolver null para indicar el fallo
+        return null;
       }
 
-      // Esperar antes de reintentar
-      const delay = 5000 * retryCount; // Espera incremental
+      const delay = 5000 * retryCount;
       writeLog(`Esperando ${delay}ms antes del siguiente intento.`);
       await new Promise<void>((resolve) => setTimeout(resolve, delay));
     }

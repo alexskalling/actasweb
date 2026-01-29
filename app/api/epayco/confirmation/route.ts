@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
         x_response_reason_text: 'Transacción ya procesada anteriormente.'
       });
     }
-    
+
     console.log('[DEBUG] Respuesta de ePayco (x_response):', response);
 
     if (response === 'Aceptada' || response === '1') {
@@ -127,13 +127,13 @@ export async function POST(request: NextRequest) {
       try {
         console.log('[DEBUG] Actualizando proceso a estado 5 (aprobado)...');
         await actualizarEstadoProcesoService(fileName, user_id, 5);
-        
+
         console.log('[DEBUG] Guardando datos de la transacción...');
         await guardarTransaccionService(
-          fileName, 
-          user_id, 
-          transactionId, 
-          parseFloat(amount), 
+          fileName,
+          user_id,
+          transactionId,
+          parseFloat(amount),
           invoice
         );
 
@@ -142,8 +142,7 @@ export async function POST(request: NextRequest) {
         if (actaParaProcesar && actaParaProcesar.urlAssembly) {
           console.log('[DEBUG] Iniciando procesamiento del acta en background...');
           const folder = actaParaProcesar.nombre?.replace(/\.[^/.]+$/, "") || "";
-          
-          // No usamos await para que se ejecute en segundo plano
+
           processAction(
             folder,
             actaParaProcesar.nombre || '',
@@ -151,7 +150,7 @@ export async function POST(request: NextRequest) {
             actaParaProcesar.emailUsuario || '',
             actaParaProcesar.nombreUsuario || '',
             false,
-            undefined, // codigoAtencion no aplica aquí
+            undefined,
             user_id
           );
         }
@@ -178,7 +177,7 @@ export async function POST(request: NextRequest) {
       console.log('[DEBUG] Procesando pago RECHAZADO/PENDIENTE.');
       try {
         console.log('[DEBUG] Actualizando proceso a estado 9 (rechazado)...');
-        // Usamos el nuevo servicio especializado, pasando el user_id
+
         await actualizarEstadoProcesoService(fileName, user_id, 9);
         console.log('[DEBUG] Proceso actualizado exitosamente para pago rechazado.');
       } catch (updateError: any) {

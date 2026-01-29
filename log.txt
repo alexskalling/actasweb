@@ -23895,3 +23895,884 @@ Obteniendo URL pública del contenido
 Obteniendo URL pública para archivo: /Actas/test11/test11_Contenido.txt
 URL pública obtenida: https://files.actasdereuniones.ai/s/fC6PNz74mF2bSbG
 URL pública del contenido obtenida: https://files.actasdereuniones.ai/s/fC6PNz74mF2bSbG
+Verificando si existe transcripción: reunionluztest_Transcripcion.txt
+Verificando archivo: reunionluztest_Transcripcion.txt en carpeta: reunionluztest
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluztest/reunionluztest_Transcripcion.txt
+Verificación de archivo completada. Status: 404
+Iniciando transcripción con AssemblyAI para: reunionluztest.aac
+Guardando transcripción: reunionluztest_Transcripcion.txt
+Transcripción guardada: reunionluztest_Transcripcion.txt
+[DIAGNOSE] Attempting to list available models...
+[DIAGNOSE] API Response Status: 200
+[DIAGNOSE] Available Models: {
+  "models": [
+    {
+      "name": "models/embedding-gecko-001",
+      "version": "001",
+      "displayName": "Embedding Gecko",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 1024,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedText",
+        "countTextTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-2.5-flash",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash",
+      "description": "Stable version of Gemini 2.5 Flash, our mid-size multimodal model that supports up to 1 million tokens, released in June of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-pro",
+      "version": "2.5",
+      "displayName": "Gemini 2.5 Pro",
+      "description": "Stable release (June 17th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash Experimental",
+      "description": "Gemini 2.0 Flash Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash",
+      "description": "Gemini 2.0 Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash 001",
+      "description": "Stable version of Gemini 2.0 Flash, our fast and versatile multimodal model for scaling across diverse tasks, released in January of 2025.",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-exp-image-generation",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "description": "Gemini 2.0 Flash (Image Generation) Experimental",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "bidiGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-001",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite 001",
+      "description": "Stable version of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite",
+      "version": "2.0",
+      "displayName": "Gemini 2.0 Flash-Lite",
+      "description": "Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview-02-05",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview 02-05",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.0-flash-lite-preview",
+      "version": "preview-02-05",
+      "displayName": "Gemini 2.0 Flash-Lite Preview",
+      "description": "Preview release (February 5th, 2025) of Gemini 2.0 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 40,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-exp-1206",
+      "version": "2.5-exp-03-25",
+      "displayName": "Gemini Experimental 1206",
+      "description": "Experimental release (March 25th, 2025) of Gemini 2.5 Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-tts",
+      "version": "gemini-2.5-flash-exp-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Flash Preview TTS",
+      "description": "Gemini 2.5 Flash Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemini-2.5-pro-preview-tts",
+      "version": "gemini-2.5-pro-preview-tts-2025-05-19",
+      "displayName": "Gemini 2.5 Pro Preview TTS",
+      "description": "Gemini 2.5 Pro Preview TTS",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 16384,
+      "supportedGenerationMethods": [
+        "countTokens",
+        "generateContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2
+    },
+    {
+      "name": "models/gemma-3-1b-it",
+      "version": "001",
+      "displayName": "Gemma 3 1B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-4b-it",
+      "version": "001",
+      "displayName": "Gemma 3 4B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-12b-it",
+      "version": "001",
+      "displayName": "Gemma 3 12B",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3-27b-it",
+      "version": "001",
+      "displayName": "Gemma 3 27B",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e4b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E4B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemma-3n-e2b-it",
+      "version": "001",
+      "displayName": "Gemma 3n E2B",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 2048,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64
+    },
+    {
+      "name": "models/gemini-flash-latest",
+      "version": "Gemini Flash Latest",
+      "displayName": "Gemini Flash Latest",
+      "description": "Latest release of Gemini Flash",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-flash-lite-latest",
+      "version": "Gemini Flash-Lite Latest",
+      "displayName": "Gemini Flash-Lite Latest",
+      "description": "Latest release of Gemini Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-pro-latest",
+      "version": "Gemini Pro Latest",
+      "displayName": "Gemini Pro Latest",
+      "description": "Latest release of Gemini Pro",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite",
+      "version": "001",
+      "displayName": "Gemini 2.5 Flash-Lite",
+      "description": "Stable version of Gemini 2.5 Flash-Lite, released in July of 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-image",
+      "version": "2.0",
+      "displayName": "Nano Banana",
+      "description": "Gemini 2.5 Flash Preview Image",
+      "inputTokenLimit": 32768,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1
+    },
+    {
+      "name": "models/gemini-2.5-flash-preview-09-2025",
+      "version": "Gemini 2.5 Flash Preview 09-2025",
+      "displayName": "Gemini 2.5 Flash Preview Sep 2025",
+      "description": "Gemini 2.5 Flash Preview Sep 2025",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-flash-lite-preview-09-2025",
+      "version": "2.5-preview-09-25",
+      "displayName": "Gemini 2.5 Flash-Lite Preview Sep 2025",
+      "description": "Preview release (Septempber 25th, 2025) of Gemini 2.5 Flash-Lite",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-preview",
+      "version": "3-pro-preview-11-2025",
+      "displayName": "Gemini 3 Pro Preview",
+      "description": "Gemini 3 Pro Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-flash-preview",
+      "version": "3-flash-preview-12-2025",
+      "displayName": "Gemini 3 Flash Preview",
+      "description": "Gemini 3 Flash Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-3-pro-image-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/nano-banana-pro-preview",
+      "version": "3.0",
+      "displayName": "Nano Banana Pro",
+      "description": "Gemini 3 Pro Image Preview",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 32768,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens",
+        "batchGenerateContent"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 1,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-robotics-er-1.5-preview",
+      "version": "1.5-preview",
+      "displayName": "Gemini Robotics-ER 1.5 Preview",
+      "description": "Gemini Robotics-ER 1.5 Preview",
+      "inputTokenLimit": 1048576,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/gemini-2.5-computer-use-preview-10-2025",
+      "version": "Gemini 2.5 Computer Use Preview 10-2025",
+      "displayName": "Gemini 2.5 Computer Use Preview 10-2025",
+      "description": "Gemini 2.5 Computer Use Preview 10-2025",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/deep-research-pro-preview-12-2025",
+      "version": "deepthink-exp-05-20",
+      "displayName": "Deep Research Pro Preview (Dec-12-2025)",
+      "description": "Preview release (December 12th, 2025) of Deep Research Pro",
+      "inputTokenLimit": 131072,
+      "outputTokenLimit": 65536,
+      "supportedGenerationMethods": [
+        "generateContent",
+        "countTokens"
+      ],
+      "temperature": 1,
+      "topP": 0.95,
+      "topK": 64,
+      "maxTemperature": 2,
+      "thinking": true
+    },
+    {
+      "name": "models/embedding-001",
+      "version": "001",
+      "displayName": "Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/text-embedding-004",
+      "version": "004",
+      "displayName": "Text Embedding 004",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp-03-07",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental 03-07",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-exp",
+      "version": "exp-03-07",
+      "displayName": "Gemini Embedding Experimental",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 8192,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens"
+      ]
+    },
+    {
+      "name": "models/gemini-embedding-001",
+      "version": "001",
+      "displayName": "Gemini Embedding 001",
+      "description": "Obtain a distributed representation of a text.",
+      "inputTokenLimit": 2048,
+      "outputTokenLimit": 1,
+      "supportedGenerationMethods": [
+        "embedContent",
+        "countTextTokens",
+        "countTokens",
+        "asyncBatchEmbedContent"
+      ]
+    },
+    {
+      "name": "models/aqa",
+      "version": "001",
+      "displayName": "Model that performs Attributed Question Answering.",
+      "description": "Model trained to return answers to questions that are grounded in provided sources, along with estimating answerable probability.",
+      "inputTokenLimit": 7168,
+      "outputTokenLimit": 1024,
+      "supportedGenerationMethods": [
+        "generateAnswer"
+      ],
+      "temperature": 0.2,
+      "topP": 1,
+      "topK": 40
+    },
+    {
+      "name": "models/imagen-4.0-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 (Preview)",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-preview-06-06",
+      "version": "01",
+      "displayName": "Imagen 4 Ultra (Preview)",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4",
+      "description": "Vertex served Imagen 4.0 model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-ultra-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Ultra",
+      "description": "Vertex served Imagen 4.0 ultra model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/imagen-4.0-fast-generate-001",
+      "version": "001",
+      "displayName": "Imagen 4 Fast",
+      "description": "Vertex served Imagen 4.0 Fast model",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predict"
+      ]
+    },
+    {
+      "name": "models/veo-2.0-generate-001",
+      "version": "2.0",
+      "displayName": "Veo 2",
+      "description": "Vertex served Veo 2 model. Access to this model requires billing to be enabled on the associated Google Cloud Platform account. Please visit https://console.cloud.google.com/billing to enable it.",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3",
+      "description": "Veo 3",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.0-fast-generate-001",
+      "version": "3.0",
+      "displayName": "Veo 3 fast",
+      "description": "Veo 3 fast",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.1-generate-preview",
+      "version": "3.1",
+      "displayName": "Veo 3.1",
+      "description": "Veo 3.1",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    },
+    {
+      "name": "models/veo-3.1-fast-generate-preview",
+      "version": "3.1",
+      "displayName": "Veo 3.1 fast",
+      "description": "Veo 3.1 fast",
+      "inputTokenLimit": 480,
+      "outputTokenLimit": 8192,
+      "supportedGenerationMethods": [
+        "predictLongRunning"
+      ]
+    }
+  ],
+  "nextPageToken": "CiRtb2RlbHMvdmVvLTMuMS1mYXN0LWdlbmVyYXRlLXByZXZpZXc="
+}
+Verificando contenido existente: reunionluztest_Contenido.txt
+Verificando archivo: reunionluztest_Contenido.txt en carpeta: reunionluztest
+[VERIFICAR ARCHIVO NEXTCLOUD] Ruta: https://files.actasdereuniones.ai/remote.php/dav/files/gestor/Actas/reunionluztest/reunionluztest_Contenido.txt
+Verificación de archivo completada. Status: 404
+Generando contenido para: reunionluztest.aac
+Usando transcripción proporcionada como parámetro.
+Generando Orden del Día con Gemini para: reunionluztest.aac
+[Attempt 1/3] Generando Orden del Día con modelo models/gemini-2.5-flash
+Error en generateTextWithRetry - Orden del Día (Intento 1): Penalty is not enabled for models/gemini-2.5-flash | Causa: undefined
+Stack: Error: Penalty is not enabled for models/gemini-2.5-flash | Causa: undefined
+    at generateTextWithRetry (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:2105:277)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContenta (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:1925:43)
+    at async processAction (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:4462:27)
+    at async executeActionAndPrepareForRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:3143)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:958
+    at async handleAction (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:34:23875)
+    at async renderToHTMLOrFlightImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:41:41714)
+    at async doRender (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8111:28)
+    at async AppPageRouteModule.handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:43:63162)
+    at async handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8317:32)
+    at async handler (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8688:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1413:9)
+    at async DevServer.renderPageComponent (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1465:24)
+    at async DevServer.renderToResponseImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1515:32)
+    at async DevServer.pipeImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1021:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+Error Object: {}
+Esperando 5000ms antes del siguiente intento.
+[Attempt 2/3] Generando Orden del Día con modelo models/gemini-2.5-flash
+Error en generateTextWithRetry - Orden del Día (Intento 2): Penalty is not enabled for models/gemini-2.5-flash | Causa: undefined
+Stack: Error: Penalty is not enabled for models/gemini-2.5-flash | Causa: undefined
+    at generateTextWithRetry (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:2105:277)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContenta (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:1925:43)
+    at async processAction (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:4462:27)
+    at async executeActionAndPrepareForRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:3143)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:958
+    at async handleAction (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:34:23875)
+    at async renderToHTMLOrFlightImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:41:41714)
+    at async doRender (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8111:28)
+    at async AppPageRouteModule.handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:43:63162)
+    at async handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8317:32)
+    at async handler (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8688:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1413:9)
+    at async DevServer.renderPageComponent (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1465:24)
+    at async DevServer.renderToResponseImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1515:32)
+    at async DevServer.pipeImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1021:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+Error Object: {}
+Último intento para Orden del Día, cambiando a models/gemini-2.5-pro.
+Esperando 10000ms antes del siguiente intento.
+[Attempt 3/3] Generando Orden del Día con modelo models/gemini-2.5-pro
+Error en generateTextWithRetry - Orden del Día (Intento 3): Penalty is not enabled for models/gemini-2.5-pro | Causa: undefined
+Stack: Error: Penalty is not enabled for models/gemini-2.5-pro | Causa: undefined
+    at generateTextWithRetry (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:2105:277)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async generateContenta (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:1925:43)
+    at async processAction (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/[root-of-the-server]__a4d2c946._.js:4462:27)
+    at async executeActionAndPrepareForRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:3143)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:36:958
+    at async handleAction (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:34:23875)
+    at async renderToHTMLOrFlightImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:41:41714)
+    at async doRender (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8111:28)
+    at async AppPageRouteModule.handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/app-page-turbo.runtime.dev.js:43:63162)
+    at async handleResponse (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8317:32)
+    at async handler (/Users/akizuki/Proyectos/Skalling/actasweb/.next/dev/server/chunks/ssr/b7266_next_dist_ea0c0c49._.js:8688:20)
+    at async DevServer.renderToResponseWithComponentsImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1413:9)
+    at async DevServer.renderPageComponent (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1465:24)
+    at async DevServer.renderToResponseImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1515:32)
+    at async DevServer.pipeImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:1021:25)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:394:17)
+    at async DevServer.handleRequestImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/akizuki/Proyectos/Skalling/actasweb/node_modules/.pnpm/next@16.0.10_@babel+core@7.28.5_@opentelemetry+api@1.9.0_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+Error Object: {}

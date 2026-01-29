@@ -1,4 +1,4 @@
-/// <reference path="epayco.d.ts" />
+
 
 declare global {
   interface Window {

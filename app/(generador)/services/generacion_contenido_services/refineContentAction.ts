@@ -16,13 +16,6 @@ interface RefineResult {
   content?: string;
 }
 
-/**
- * Compara el contenido del acta generada con la transcripción original para
- * eliminar redundancias y asegurar que la información esté correctamente ubicada.
- * @param folder - La carpeta del acta.
- * @param file - El nombre base del archivo del acta.
- * @returns Un objeto con el estado del proceso y el contenido refinado.
- */
 export async function refineContentAction(
   folder: string,
   file: string
@@ -40,7 +33,6 @@ export async function refineContentAction(
   try {
     writeLog(`[REFINAMIENTO] Iniciando proceso para: ${file}`);
 
-    // 1. Verificar y obtener el contenido del acta generada
     const contenidoActaExiste = await verificarArchivoExistente(
       nombreContenido,
       folder
@@ -62,7 +54,6 @@ export async function refineContentAction(
       };
     }
 
-    // 2. Verificar y obtener la transcripción original
     const contenidoTranscripcionExiste = await verificarArchivoExistente(
       nombreTranscripcion,
       folder
@@ -88,7 +79,6 @@ export async function refineContentAction(
       `[REFINAMIENTO] Contenido y transcripción leídos. Enviando a IA para comparación.`
     );
 
-    // 3. Enviar a la IA para refinar con lógica de reintentos
     let contenidoRefinado = "";
     const maxRetries = 2;
     let attempt = 1;
@@ -135,7 +125,7 @@ Tu tarea es:
         );
         attempt++;
         if (attempt <= maxRetries) {
-          await new Promise((resolve) => setTimeout(resolve, 2000)); // Esperar 2 segundos antes de reintentar
+          await new Promise((resolve) => setTimeout(resolve, 2000));
         }
       }
     }
@@ -152,7 +142,6 @@ Tu tarea es:
       `[REFINAMIENTO] Contenido refinado recibido. Guardando en: ${nombreContenidoRefinado}`
     );
 
-    // 4. Guardar el nuevo contenido refinado
     await guardarArchivo(folder, nombreContenidoRefinado, contenidoRefinado);
 
     return {

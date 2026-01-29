@@ -459,7 +459,7 @@ export async function obtenerContenidoArchivo(
         writeLog(`Contenido del archivo obtenido exitosamente: ${nombreArchivo}`);
         return contenido;
       } else {
-        // Si el archivo no se encuentra (404) u otro error, lanzamos una excepción.
+
         throw new Error(
           `No se pudo obtener el contenido del archivo '${nombreArchivo}'. Status: ${respuestaContenidoArchivo.status}`,
         );

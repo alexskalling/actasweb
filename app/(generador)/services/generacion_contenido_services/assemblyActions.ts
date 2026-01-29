@@ -197,19 +197,17 @@ export async function uploadFileToAssemblyAI(
     };
   }
 
-  const uploadUrl = "https://api.assemblyai.com/v2/upload";
-
   try {
-    const response = await retryUpload(
-      archivo,
-      uploadUrl,
-      ASSEMBLYAI_API_KEY,
-      onUploadProgress,
-    );
+    const response = await fetch("/api/assembly/upload", {
+      method: "POST",
+      body: archivo,
+      headers: {
+        "Content-Type": "application/octet-stream",
+      },
+    });
 
     if (!response.ok) {
       const errorDetails = await response.text().catch(() => "Sin detalles");
-      console.error(`Error al subir archivo: ${response.status}`, errorDetails);
 
       return {
         success: false,
@@ -222,7 +220,7 @@ export async function uploadFileToAssemblyAI(
 
     const uploadResult = await response.json();
 
-    if (!uploadResult.upload_url) {
+    if (!uploadResult.success || !uploadResult.upload_url) {
       return {
         success: false,
         message: "La respuesta del servidor no contiene la URL de subida.",

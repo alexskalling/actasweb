@@ -1,5 +1,5 @@
 interface EpaycoCheckoutOptions {
-  // Propiedades estándar de ePayco
+
   external: boolean;
   amount: number;
   tax: string;

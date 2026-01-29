@@ -46,7 +46,7 @@ export default async function RootLayout({
   const isGeneradorDomain = hostname === "generador.actasdereuniones.ai";
 
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <head>
         {!isGeneradorDomain && (
           <meta name="robots" content="noindex, nofollow" />
@@ -54,6 +54,7 @@ export default async function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         <Providers>
           {children}

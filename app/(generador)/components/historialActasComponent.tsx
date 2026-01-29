@@ -1,6 +1,12 @@
 "use client";
 
-import { useEffect, useState, useMemo, useCallback, useRef } from "react";
+import React, {
+  useEffect,
+  useState,
+  useMemo,
+  useCallback,
+  useRef,
+} from "react";
 import { useSession } from "next-auth/react";
 import { getActasByUser } from "../services/actas_querys_services/getActasByUser";
 import { createClient } from "@/utils/client";
@@ -46,7 +52,7 @@ interface HistorialActasProps {
 
 const ACTAS_POR_PAGINA = 5;
 
-export default function HistorialActasComponent({
+const HistorialActasComponent = React.memo(function HistorialActasComponent({
   reloadTrigger,
   silentReload = false,
   isSupportUser = false,
@@ -85,10 +91,8 @@ export default function HistorialActasComponent({
     actaParaRelanzarDesdeTranscripcion,
     setActaParaRelanzarDesdeTranscripcion,
   ] = useState<Acta | null>(null);
-  const [
-    actaParaRelanzarDesdeContenido,
-    setActaParaRelanzarDesdeContenido,
-  ] = useState<Acta | null>(null);
+  const [actaParaRelanzarDesdeContenido, setActaParaRelanzarDesdeContenido] =
+    useState<Acta | null>(null);
   const [
     procesandoRelanzamientoDesdeContenido,
     setProcesandoRelanzamientoDesdeContenido,
@@ -194,7 +198,10 @@ export default function HistorialActasComponent({
             setNumeroDocumento(userData.numeroDocumento);
           }
         } catch (error) {
-          console.error("Error al cargar datos de documento del usuario:", error);
+          console.error(
+            "Error al cargar datos de documento del usuario:",
+            error,
+          );
         }
       }
     };
@@ -238,14 +245,12 @@ export default function HistorialActasComponent({
                 filter: `id_usuario=eq.${userId}`,
               },
               (payload) => {
-
                 if (cargarActasRef.current) {
                   cargarActasRef.current(true);
                 }
               },
             )
-            .subscribe((status) => {
-            });
+            .subscribe((status) => {});
 
           subscriptionRef.current = channel;
         }
@@ -321,9 +326,8 @@ export default function HistorialActasComponent({
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-
   };
-//necesito aqui para los usuarios con permisos para relanzar desde transcripcion tambien tengan un boton para relanzar desde contenido 
+
   const handleDownloadBorrador = async (acta: Acta) => {
     try {
       if (!acta.urlBorrador) {
@@ -449,7 +453,6 @@ export default function HistorialActasComponent({
     return 0;
   };
 
-
   const puedeRelanzar = (fechaProcesamiento: Date): boolean => {
     const ahora = new Date();
     const fechaCreacion = new Date(fechaProcesamiento);
@@ -574,7 +577,7 @@ export default function HistorialActasComponent({
     cerrarModalRelanzamientoDesdeContenido();
 
     try {
-      // Actualizar estado a 5 (En generación)
+
       await ActualizarProcesoPorId(
         actaParaRelanzarDesdeContenido.id,
         5,
@@ -600,14 +603,14 @@ export default function HistorialActasComponent({
         duration: 5000,
       });
 
-      // Iniciar proceso en background
       relanzarDesdeContenido(actaParaRelanzarDesdeContenido.id)
         .then((resultado) => {
           if (resultado.status === "success") {
             cargarActas(true);
           } else {
             toast.error("Error en regeneración", {
-              description: resultado.message || "Error al regenerar el borrador",
+              description:
+                resultado.message || "Error al regenerar el borrador",
               duration: 5000,
             });
             cargarActas(true);
@@ -622,7 +625,7 @@ export default function HistorialActasComponent({
           cargarActas(true);
         });
     } catch (error) {
-      // ... manejo de error ...
+
     }
   };
   const handleConfirmarRelanzamientoDesdeTranscripcion = async () => {
@@ -634,11 +637,13 @@ export default function HistorialActasComponent({
     cerrarModalRelanzamientoDesdeTranscripcion();
 
     try {
-      // PRIMERO: Actualizar estado a 5 (En generación) INMEDIATAMENTE en la base de datos
-      console.log(`[REGENERACION] Actualizando estado a 5 para acta: ${actaParaRelanzarDesdeTranscripcion.id}`);
+
+      console.log(
+        `[REGENERACION] Actualizando estado a 5 para acta: ${actaParaRelanzarDesdeTranscripcion.id}`,
+      );
       const resultadoEstado = await ActualizarProcesoPorId(
         actaParaRelanzarDesdeTranscripcion.id,
-        5, // Estado 5: En generación
+        5,
         undefined,
         undefined,
         undefined,
@@ -654,18 +659,22 @@ export default function HistorialActasComponent({
       );
 
       if (resultadoEstado.status !== "success") {
-        console.error(`[REGENERACION] Error al actualizar estado: ${resultadoEstado.message}`);
+        console.error(
+          `[REGENERACION] Error al actualizar estado: ${resultadoEstado.message}`,
+        );
         toast.error("Error", {
-          description: "No se pudo actualizar el estado del acta. Por favor, intenta nuevamente.",
+          description:
+            "No se pudo actualizar el estado del acta. Por favor, intenta nuevamente.",
           duration: 5000,
         });
         setProcesandoRelanzamientoDesdeTranscripcion(false);
         return;
       }
 
-      console.log(`[REGENERACION] Estado actualizado a 5 exitosamente. Recargando actas...`);
-      
-      // Recargar actas INMEDIATAMENTE para mostrar el estado 5 (En generación)
+      console.log(
+        `[REGENERACION] Estado actualizado a 5 exitosamente. Recargando actas...`,
+      );
+
       await cargarActas(true);
 
       toast.success("Regeneración iniciada", {
@@ -674,20 +683,21 @@ export default function HistorialActasComponent({
         duration: 5000,
       });
 
-      // Ahora iniciar el proceso completo de regeneración en background
-      console.log(`[REGENERACION] Iniciando proceso completo de regeneración...`);
+      console.log(
+        `[REGENERACION] Iniciando proceso completo de regeneración...`,
+      );
       relanzarDesdeTranscripcion(actaParaRelanzarDesdeTranscripcion.id)
         .then((resultado) => {
           console.log(`[REGENERACION] Proceso completado:`, resultado.status);
           if (resultado.status === "success") {
-            // Recargar actas nuevamente cuando termine para mostrar el estado final
+
             cargarActas(true);
           } else {
             toast.error("Error en regeneración", {
               description: resultado.message || "Error al regenerar el acta",
               duration: 5000,
             });
-            // Recargar actas para actualizar el estado
+
             cargarActas(true);
           }
         })
@@ -698,7 +708,7 @@ export default function HistorialActasComponent({
               "Error al regenerar el acta. Por favor, intenta nuevamente.",
             duration: 5000,
           });
-          // Recargar actas para actualizar el estado
+
           cargarActas(true);
         })
         .finally(() => {
@@ -995,7 +1005,9 @@ Por favor, ¿pueden ayudarme?`;
     <div className="w-full sm:px-0">
       {}
       <div className="mb-3 sm:mb-6">
-        <div className={`grid grid-cols-1 ${isSupportUser ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-3 sm:gap-4`}>
+        <div
+          className={`grid grid-cols-1 ${isSupportUser ? "sm:grid-cols-3" : "sm:grid-cols-2"} gap-3 sm:gap-4`}
+        >
           {}
           <div>
             <label
@@ -1067,8 +1079,7 @@ Por favor, ¿pueden ayudarme?`;
               No se encontraron actas
               {busqueda && " con ese nombre"}
               {busqueda && isSupportUser && busquedaCorreo && " o"}
-              {isSupportUser && busquedaCorreo && " con ese correo"}
-              .
+              {isSupportUser && busquedaCorreo && " con ese correo"}.
             </p>
           ) : (
             <p>
@@ -1143,28 +1154,32 @@ Por favor, ¿pueden ayudarme?`;
           <ul role="list" className="divide-y divide-gray-100">
             {actasPagina.map((acta) => {
               const mostrarDetalles = actasExpandidas[acta.id] || false;
-              
-              // Lógica para mostrar en verde: tiene tx (pagada), ha pasado más de 1 hora y no está completada
-              const mostrarEnVerde = isSupportUser && 
-                acta.tx && 
-                acta.idEstadoProceso !== null && 
+
+              const mostrarEnVerde =
+                isSupportUser &&
+                acta.tx &&
+                acta.idEstadoProceso !== null &&
                 acta.idEstadoProceso < 6 &&
                 (() => {
                   const fechaProcesamiento = new Date(acta.fechaProcesamiento);
                   const ahora = new Date();
-                  const diferenciaHoras = (ahora.getTime() - fechaProcesamiento.getTime()) / (1000 * 60 * 60);
+                  const diferenciaHoras =
+                    (ahora.getTime() - fechaProcesamiento.getTime()) /
+                    (1000 * 60 * 60);
                   return diferenciaHoras > 1;
                 })();
 
               return (
                 <li
                   key={acta.id}
-                  className={`relative sm:py-2 mb-2 sm:mb-0 sm:border-0 sm:rounded-none ${mostrarEnVerde ? 'bg-green-50 border-l-4 border-green-500 pl-2' : ''}`}
+                  className={`relative sm:py-2 mb-2 sm:mb-0 sm:border-0 sm:rounded-none ${mostrarEnVerde ? "bg-green-50 border-l-4 border-green-500 pl-2" : ""}`}
                 >
                   <div className="flex flex-row items-start gap-2 sm:gap-4">
                     <div className="flex min-w-0 flex-1 pr-2">
                       <div className="min-w-0 flex-auto">
-                        <p className={`text-sm sm:text-base font-semibold break-words line-clamp-2 ${mostrarEnVerde ? 'text-green-700' : 'text-gray-900'}`}>
+                        <p
+                          className={`text-sm sm:text-base font-semibold break-words line-clamp-2 ${mostrarEnVerde ? "text-green-700" : "text-gray-900"}`}
+                        >
                           {acta.nombre || "Sin nombre"}
                         </p>
                         <div className="mt-1 space-y-1">
@@ -1180,11 +1195,15 @@ Por favor, ¿pueden ayudarme?`;
                             <>
                               <div className="flex items-center gap-2 flex-wrap">
                                 {acta.telefonoUsuario ? (
-                                  <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
-                                    (acta.idEstadoProceso !== null && acta.idEstadoProceso >= 4 && acta.idEstadoProceso <= 9)
-                                      ? 'bg-green-200 text-green-700'
-                                      : 'bg-gray-200 text-gray-700'
-                                  }`}>
+                                  <span
+                                    className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${
+                                      acta.idEstadoProceso !== null &&
+                                      acta.idEstadoProceso >= 4 &&
+                                      acta.idEstadoProceso <= 9
+                                        ? "bg-green-200 text-green-700"
+                                        : "bg-gray-200 text-gray-700"
+                                    }`}
+                                  >
                                     📞 {acta.telefonoUsuario}
                                   </span>
                                 ) : (
@@ -1193,12 +1212,15 @@ Por favor, ¿pueden ayudarme?`;
                                   </span>
                                 )}
                                 <p className="text-xs text-gray-400">
-                                  Creado: {new Date(acta.fechaProcesamiento).toLocaleString('es-CO', {
-                                    year: 'numeric',
-                                    month: '2-digit',
-                                    day: '2-digit',
-                                    hour: '2-digit',
-                                    minute: '2-digit'
+                                  Creado:{" "}
+                                  {new Date(
+                                    acta.fechaProcesamiento,
+                                  ).toLocaleString("es-CO", {
+                                    year: "numeric",
+                                    month: "2-digit",
+                                    day: "2-digit",
+                                    hour: "2-digit",
+                                    minute: "2-digit",
                                   })}
                                 </p>
                               </div>
@@ -1430,14 +1452,23 @@ Por favor, ¿pueden ayudarme?`;
                           acta.idEstadoProceso !== null &&
                           acta.idEstadoProceso > 4 && (
                             <button
-                              onClick={() =>
-                                handleRelanzarDesdeContenido(acta)
-                              }
+                              onClick={() => handleRelanzarDesdeContenido(acta)}
                               className="group relative flex items-center justify-center w-10 h-10 min-w-[40px] text-cyan-600 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition-colors flex-shrink-0 shadow-sm"
                               aria-label="Relanzar desde contenido"
                               title="Relanzar desde contenido"
                             >
-                              <svg xmlns="http://www.w3.org/2000/svg" className="size-5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="size-5"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                                 <path d="m12 12-4-4 4-4" />
                                 <path d="M8 12h12" />
@@ -1696,4 +1727,8 @@ Por favor, ¿pueden ayudarme?`;
       />
     </div>
   );
-}
+});
+
+HistorialActasComponent.displayName = "HistorialActasComponent";
+
+export default HistorialActasComponent;

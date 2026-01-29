@@ -416,5 +416,4 @@ export default function BottomSection() {
   );
 }
 
-// Exportar TipsCarousel para usarlo en otro lugar
 export { TipsCarousel };

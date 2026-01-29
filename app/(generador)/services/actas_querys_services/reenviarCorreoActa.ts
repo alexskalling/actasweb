@@ -89,24 +89,23 @@ export async function reenviarCorreoActa(idActa: string) {
       };
     }
 
-
     const resultadoActualizacion = await ActualizarProceso(
-      actaConUsuario.nombre, // 1. nombre
-      7, // 2. idEstadoProceso
-      undefined, // 3. duracion
-      undefined, // 4. costo
-      undefined, // 5. tx
-      undefined, // 6. urlAssembly
-      undefined, // 7. referencia
-      undefined, // 8. urlTranscripcion
-      undefined, // 9. urlborrador
-      undefined, // 10. urlContenido
-      false, // 11. automation
-      undefined, // 12. codigoAtencion
-      undefined, // 13. automation_mail
-      undefined, // 14. codigoReferido
-      undefined, // 15. soporte
-      undefined, // 16. idUsuarioActa
+      actaConUsuario.nombre,
+      7,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      false,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
     );
 
     if (resultadoActualizacion.status !== "success") {

@@ -4,7 +4,6 @@ import { db } from "@/lib/db/db";
 import { actas } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
 
-
 export async function getReferralCodeByActaName(fileName: string, userId: string): Promise<string | null> {
   if (!fileName || !userId) {
     console.error("[getReferralCodeByActaName] El nombre del archivo o el ID de usuario no fueron proporcionados.");

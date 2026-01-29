@@ -29,7 +29,9 @@ async function getDropboxAccessToken() {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
-      "Authorization": "Basic " + Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
+      Authorization:
+        "Basic " +
+        Buffer.from(`${clientId}:${clientSecret}`).toString("base64"),
     },
     body: new URLSearchParams({
       grant_type: "refresh_token",
@@ -42,7 +44,6 @@ async function getDropboxAccessToken() {
   const data = await res.json();
   return data.access_token as string;
 }
-
 
 interface AutomationResponse {
   status: "success" | "error";
@@ -59,14 +60,18 @@ function validateApiKey(request: NextRequest): boolean {
   const expectedApiKey = process.env.N8N_API_KEY;
 
   if (!expectedApiKey) {
-    console.error("N8N_API_KEY no está configurado en las variables de entorno");
+    console.error(
+      "N8N_API_KEY no está configurado en las variables de entorno",
+    );
     return false;
   }
 
   return apiKey === expectedApiKey;
 }
 
-export async function POST(request: NextRequest): Promise<NextResponse<AutomationResponse>> {
+export async function POST(
+  request: NextRequest,
+): Promise<NextResponse<AutomationResponse>> {
   try {
     if (!validateApiKey(request)) {
       return NextResponse.json(
@@ -74,7 +79,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: "API key inválida o no proporcionada",
         },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -88,9 +93,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       return NextResponse.json(
         {
           status: "error",
-          message: "No se proporcionó la ruta del archivo en Dropbox (pathDropbox).",
+          message:
+            "No se proporcionó la ruta del archivo en Dropbox (pathDropbox).",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -101,22 +107,27 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: "Token de Dropbox no configurado en variables de entorno.",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     async function getTemporaryLink() {
-      const res = await fetch("https://api.dropboxapi.com/2/files/get_temporary_link", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${dropboxToken}`,
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://api.dropboxapi.com/2/files/get_temporary_link",
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${dropboxToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ path: pathDropbox }),
         },
-        body: JSON.stringify({ path: pathDropbox }),
-      });
+      );
 
       if (!res.ok) {
-        throw new Error(`Error al obtener enlace temporal de Dropbox: ${res.status} - ${await res.text()}`);
+        throw new Error(
+          `Error al obtener enlace temporal de Dropbox: ${res.status} - ${await res.text()}`,
+        );
       }
 
       const data = await res.json();
@@ -128,8 +139,20 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
     const nombreArchivo = pathDropbox.split("/").pop() || "archivo";
 
     const allowedExtensions = [
-      ".wav", ".mp3", ".m4a", ".aac", ".ogg", ".wma", ".flac",
-      ".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv", ".webm",
+      ".wav",
+      ".mp3",
+      ".m4a",
+      ".aac",
+      ".ogg",
+      ".wma",
+      ".flac",
+      ".mp4",
+      ".avi",
+      ".mov",
+      ".wmv",
+      ".flv",
+      ".mkv",
+      ".webm",
     ];
     const ext = "." + nombreArchivo.split(".").pop()?.toLowerCase();
     if (!allowedExtensions.includes(ext)) {
@@ -138,7 +161,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: `Tipo de archivo no permitido. Extensiones permitidas: ${allowedExtensions.join(", ")}`,
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -154,7 +177,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: `Error al descargar archivo desde Dropbox: ${fileRes.status} - ${errText}`,
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -172,7 +195,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: "Falta API Key de AssemblyAI",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
     try {
@@ -181,19 +204,22 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
       if (error instanceof Error && error.message === "DUPLICATE_ACTA") {
         return NextResponse.json(
           { status: "error", message: "Ya existe un acta con ese nombre." },
-          { status: 409 }
+          { status: 409 },
         );
       }
       throw error;
     }
 
-    const uploadRes = await fetch("https://api.assemblyai.com/v2/upload", {
-      method: "POST",
-      headers: {
-        Authorization: assemblyApiKey,
+    const uploadRes = await fetch(
+      `${process.env.NEXT_PUBLIC_AMBIENTE_URL || "http://localhost:3000"}/api/assembly/upload`,
+      {
+        method: "POST",
+        body: buffer,
+        headers: {
+          "Content-Type": "application/octet-stream",
+        },
       },
-      body: buffer,
-    });
+    );
 
     if (!uploadRes.ok) {
       const errorText = await uploadRes.text();
@@ -202,45 +228,58 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: `Error al subir archivo a AssemblyAI: ${uploadRes.status} - ${errorText}`,
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     const uploadData = await uploadRes.json();
+    if (!uploadData.success) {
+      return NextResponse.json(
+        {
+          status: "error",
+          message: uploadData.error || "Error en subida",
+        },
+        { status: 500 },
+      );
+    }
     const uploadUrl = uploadData.upload_url;
 
     try {
-      const tipo = process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
-       await GuardarNuevoProceso(
-        nombreNormalizado, // 1. nombreActa
-        4, // 2. idEstadoProceso
-        formattedDuration, // 3. duracion
-        calculatePrice(durationInSeconds), // 4. costo
-        "", // 5. tx
-        uploadUrl, // 6. urlAssembly
-        tipo, // 7. referencia
-        "", // 8. urlTranscripcion
-        "", // 9. urlborrador
-        "", // 10. urlContenido
-        99, // 11. Industria
-        email || "automation@skalling.com", // 12. automation_mail
-        undefined, // 13. codigoAtencion
-        undefined, // 14. codigoReferido
-        undefined, // 15. soporte
-        undefined, // 16. idUsuarioSoporte
+      const tipo =
+        process.env.NEXT_PUBLIC_PAGO === "soporte" ? "soporte" : "acta";
+      await GuardarNuevoProceso(
+        nombreNormalizado,
+        4,
+        formattedDuration,
+        calculatePrice(durationInSeconds),
+        "",
+        uploadUrl,
+        tipo,
+        "",
+        "",
+        "",
+        99,
+        email || "automation@skalling.com",
+        undefined,
+        undefined,
+        undefined,
+        undefined,
       );
     } catch (error) {
-      console.warn("Error al guardar proceso, continuando con el procesamiento:", error);
+      console.warn(
+        "Error al guardar proceso, continuando con el procesamiento:",
+        error,
+      );
     }
 
-    console.log("archivo: " + nombreArchivo)
+    console.log("archivo: " + nombreArchivo);
     const processResult = await processAction(
       nombreCarpeta,
       nombreArchivo,
       uploadUrl,
       email || "automation@skalling.com",
       name || "Usuario automatizado",
-      true
+      true,
     );
     if (processResult.status !== "success") {
       return NextResponse.json(
@@ -248,7 +287,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           status: "error",
           message: `Error en el procesamiento: ${processResult.message}`,
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -260,10 +299,10 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
           transcription: processResult.transcripcion as string,
           draft: processResult.acta as string,
           fileId: nombreNormalizado,
-          duracion_acta: formattedDuration
+          duracion_acta: formattedDuration,
         },
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error("Error en el endpoint de automatización:", error);
@@ -273,7 +312,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<Automatio
         status: "error",
         message: "Error interno del servidor",
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -285,7 +324,6 @@ export async function GET(): Promise<NextResponse> {
       message: "Endpoint de automatización funcionando correctamente",
       timestamp: new Date().toISOString(),
     },
-    { status: 200 }
+    { status: 200 },
   );
 }
-

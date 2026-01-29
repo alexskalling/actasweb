@@ -14,11 +14,10 @@ export async function relanzarDesdeContenido(idActa: string) {
   try {
     writeLog(`Iniciando relanzamiento desde contenido para acta ID: ${idActa}`);
 
-    // PRIMERO: Actualizar estado a 5 (En generación) INMEDIATAMENTE
     writeLog(`[PRIORIDAD] Actualizando estado a 5 (En generación) ANTES de cualquier otra operación...`);
     const resultadoEstadoInicial = await ActualizarProcesoPorId(
       idActa,
-      5, // Estado 5: En generación
+      5,
       undefined,
       undefined,
       undefined,
@@ -43,7 +42,6 @@ export async function relanzarDesdeContenido(idActa: string) {
 
     writeLog(`Estado actualizado exitosamente a 5 (En generación). Continuando con el proceso...`);
 
-    // Ahora obtener los datos del acta
     const actaEncontrada = await db
       .select({
         id: actas.id,
@@ -128,22 +126,22 @@ export async function relanzarDesdeContenido(idActa: string) {
 
     writeLog(`Actualizando acta con la nueva URL del borrador...`);
     const resultadoActualizacion = await ActualizarProceso(
-      file, // 1. nombre
-      6, // 2. idEstadoProceso
-      undefined, // 3. duracion
-      undefined, // 4. costo
-      undefined, // 5. tx
-      undefined, // 6. urlAssembly
-      undefined, // 7. referencia
-      undefined, // 8. urlTranscripcion (no se toca)
-      formatoResult.acta, // 9. urlborrador (la nueva)
-      undefined, // 10. urlContenido (no se toca)
-      false, // 11. automation
-      undefined, // 12. codigoAtencion
-      undefined, // 13. automation_mail
-      undefined, // 14. codigoReferido
-      "regeneracion desde contenido", // 15. soporte
-      actaEncontrada.idUsuario || undefined, // 16. idUsuarioActa - Usuario dueño del acta
+      file,
+      6,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      formatoResult.acta,
+      undefined,
+      false,
+      undefined,
+      undefined,
+      undefined,
+      "regeneracion desde contenido",
+      actaEncontrada.idUsuario || undefined,
     );
 
     if (resultadoActualizacion.status !== "success") {

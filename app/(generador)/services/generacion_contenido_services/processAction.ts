@@ -169,7 +169,6 @@ export async function processAction(
       };
     }
 
-    // Refinar el contenido generado por la IA
     console.log("[processAction] Iniciando refinamiento de contenido...");
     const refinedContentResult = await refineContentAction(folder, file);
 
@@ -220,22 +219,22 @@ export async function processAction(
           : undefined;
 
       const resultado = await ActualizarProceso(
-        file, // 1. nombre
-        6, // 2. idEstadoProceso
-        undefined, // 3. duracion
-        undefined, // 4. costo
-        txValue, // 5. tx
-        undefined, // 6. urlAssembly
-        undefined, // 7. referencia
-        urlTranscripcion, // 8. urlTranscripcion
-        urlBorrador, // 9. urlborrador
-        formato.contenido || null, // 10. urlContenido
-        automation, // 11. automation
-        codigoAtencion || null, // 12. codigoAtencion
-        automation ? email : null, // 13. automation_mail
-        undefined, // 14. codigoReferido
-        undefined, // 15. soporte
-        idUsuarioActa || undefined, // 16. idUsuarioActa
+        file,
+        6,
+        undefined,
+        undefined,
+        txValue,
+        undefined,
+        undefined,
+        urlTranscripcion,
+        urlBorrador,
+        formato.contenido || null,
+        automation,
+        codigoAtencion || null,
+        automation ? email : null,
+        undefined,
+        undefined,
+        idUsuarioActa || undefined,
       );
 
       if (resultado.status !== "success") {
@@ -250,22 +249,22 @@ export async function processAction(
       await sendActaEmail(email, name, urlBorrador, urlTranscripcion, file);
 
       await ActualizarProceso(
-        file, // 1. nombre
-        7, // 2. idEstadoProceso
-        undefined, // 3. duracion
-        undefined, // 4. costo
-        undefined, // 5. tx
-        undefined, // 6. urlAssembly
-        undefined, // 7. referencia
-        undefined, // 8. urlTranscripcion
-        undefined, // 9. urlborrador
-        undefined, // 10. urlContenido
-        automation, // 11. automation
-        undefined, // 12. codigoAtencion
-        automation ? email : null, // 13. automation_mail
-        undefined, // 14. codigoReferido
-        undefined, // 15. soporte
-        idUsuarioActa || undefined, // 16. idUsuarioActa
+        file,
+        7,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        automation,
+        undefined,
+        automation ? email : null,
+        undefined,
+        undefined,
+        idUsuarioActa || undefined,
       );
     }
 

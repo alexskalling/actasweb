@@ -18,7 +18,7 @@ export async function guardarTransaccionService(
 
     const updated = await db
       .update(actas)
-      .set({ 
+      .set({
         tx: tx,
         costo: costo.toString(),
         referencia: referencia,

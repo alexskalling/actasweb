@@ -883,21 +883,21 @@ export default function MediaFileUploaderComponent({
     try {
       await ActualizarProceso(
         nombreParaProcesar,
-        5, // idEstadoProceso
-        undefined, // duracion
-        undefined, // costo
-        codigoFinal ? "pago con codigo" : undefined, // tx
-        undefined, // urlAssembly
-        undefined, // referencia
-        undefined, // urlTranscripcion
-        undefined, // urlborrador
-        undefined, // urlContenido
-        null, // automation
-        codigoAtencionUsado || null, // codigoAtencion
-        undefined, // automation_mail
-        codigoReferidoFinal || null, // codigoReferido
-        undefined, // soporte
-        undefined // idUsuarioActa
+        5,
+        undefined,
+        undefined,
+        codigoFinal ? "pago con codigo" : undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        null,
+        codigoAtencionUsado || null,
+        undefined,
+        codigoReferidoFinal || null,
+        undefined,
+        undefined
       );
 
       onCheckActa?.();
@@ -1276,21 +1276,21 @@ export default function MediaFileUploaderComponent({
 
       await ActualizarProceso(
         actaParaRelanzar.nombre,
-        5, // idEstadoProceso
-        undefined, // duracion
-        undefined, // costo
-        codigoFinal ? "pago con codigo" : undefined, // tx
-        undefined, // urlAssembly
-        undefined, // referencia
-        undefined, // urlTranscripcion
-        undefined, // urlborrador
-        undefined, // urlContenido
-        false, // automation
-        codigoFinal || undefined, // codigoAtencion
-        undefined, // automation_mail
-        undefined, // codigoReferido
-        undefined, // soporte
-        undefined // idUsuarioActa
+        5,
+        undefined,
+        undefined,
+        codigoFinal ? "pago con codigo" : undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        false,
+        codigoFinal || undefined,
+        undefined,
+        undefined,
+        undefined,
+        undefined
       );
 
       cerrarModalRelanzamiento();
@@ -1685,22 +1685,22 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
               ) {
               } else {
                 await GuardarNuevoProceso(
-                  nombreParaGuardar, // 1. nombreActa
-                  4, // 2. idEstadoProceso
-                  ensureDurationFormat(duration), // 3. duracion
-                  calculatePrice(duration), // 4. costo
-                  txValue || "", // 5. tx
-                  result.uploadUrl || "", // 6. urlAssembly
-                  "", // 7. referencia
-                  "", // 8. urlTranscripcion
-                  "", // 9. urlborrador
-                  "", // 10. urlContenido
-                  industriaId || 99, // 11. Industria
-                  "", // 12. automation_mail
-                  codigoAtencionParaGuardar || null, // 13. codigoAtencion
-                  null, // 14. codigoReferido
-                  soporteParaGuardar, // 15. soporte
-                  idUsuarioParaActa // 16. idUsuarioSoporte
+                  nombreParaGuardar,
+                  4,
+                  ensureDurationFormat(duration),
+                  calculatePrice(duration),
+                  txValue || "",
+                  result.uploadUrl || "",
+                  "",
+                  "",
+                  "",
+                  "",
+                  industriaId || 99,
+                  "",
+                  codigoAtencionParaGuardar || null,
+                  null,
+                  soporteParaGuardar,
+                  idUsuarioParaActa
                 );
 
                 onCheckActa?.();
@@ -1744,10 +1744,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
           value: selectedFile.size,
         });
       } else {
-        // Error en la carga directa
-        // AQUÍ: Se muestra el mensaje de error de la subida, incluyendo el de timeout.
-        // 'result.error' contendrá el mensaje "Timeout durante la subida del archivo a AssemblyAI."
-        // que viene desde 'assemblyActions.ts'.
+
         setUploadStatus(result.message || "Error al subir el archivo");
         setCalculando(false);
         setUploadProgress(0);
@@ -1760,7 +1757,7 @@ El monto es menor a $5,000 COP y ePayco solo acepta pagos superiores a $5,000 CO
         });
       }
     } catch (error) {
-      // Error al obtener la URL de carga o en la lógica previa
+
       setUploadStatus(`Error de red o al procesar la petición: ${error}`);
       console.error("Error al subir:", error);
       setCalculando(false);
